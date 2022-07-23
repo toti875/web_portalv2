@@ -4,7 +4,7 @@ import { useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { LockIcon } from '../../assets/images/LockIcon';
-import { formatCCYAddress } from '../../helpers';
+
 import { alertPush, selectCurrencies, selectUserInfo, selectWalletAddress } from '../../modules';
 import { DepositCrypto } from '../DepositCrypto';
 import { DepositFiat } from '../DepositFiat';
@@ -58,7 +58,7 @@ const WalletDepositBodyComponent = props => {
 			? intl.formatMessage({ id: addressDepositError.message[0] })
 			: intl.formatMessage({ id: 'page.body.wallets.tabs.deposit.ccy.message.error' });
 
-		const walletAddress = formatCCYAddress(wallet.currency, selectedWalletAddress);
+		const walletAddress = null;
 
 		const buttonLabel = `
               ${translate('page.body.wallets.tabs.deposit.ccy.button.generate')} ${wallet.currency.toUpperCase()} ${translate(
