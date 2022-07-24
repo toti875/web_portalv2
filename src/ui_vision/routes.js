@@ -49,6 +49,8 @@ import Alerts from "./views/Pages/Alerts";
 import Charts from "./views/Pages/Charts.js";
 import Pricing from "./views/Pages/Pricing.js";
 import Overview from "./views/Pages/Profile/Overview.js";
+import Limite from "./views/Pages/Profile/Limite.js";
+import Perfil from "./views/Pages/Profile/Perfil.js";
 
 import Projects from "./views/Pages/Profile/Projects.js";
 import Teams from "./views/Pages/Profile/Teams.js";
@@ -110,6 +112,20 @@ const dashRoutes = [
                 secondaryNavbar: true,
                 path: "/pages/profile/overview",
                 component: Overview,
+                layout: "/admin",
+              },
+              {
+                name: "Profile Overview",
+                secondaryNavbar: true,
+                path: "/pages/profile/perfil",
+                component: Perfil,
+                layout: "/admin",
+              },
+              {
+                name: "Limites Operacionais",
+                secondaryNavbar: true,
+                path: "/pages/profile/limite",
+                component: Limite,
                 layout: "/admin",
               },
               {

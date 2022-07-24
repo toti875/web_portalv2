@@ -466,7 +466,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 
 					<Route path="/admin/dashboard/crm" component={Default} />
 					<Route path="/admin/dashboard/default" component={Default} />
-					<Route path="/admin/pages/profile/overview" component={Default} />
+			
 					<Route path="/admin/pages/profile/wallets" component={Default} />
 					<Route path="/admin/ecommerce/orders/order-list" component={Default} />
 
@@ -503,7 +503,9 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/orders" component={OrdersTabScreen} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/history" component={HistoryScreen} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/confirm" component={ConfirmScreen} />
-					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={Profile} />
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/pages/profile/overview" component={Default} />
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/pages/profile/perfil" component={Default} />
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/pages/profile/limite" component={Default} />
 					{/* <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets" component={WalletsScreen} /> */}
 					<PrivateRoute
 						loading={userLoading}

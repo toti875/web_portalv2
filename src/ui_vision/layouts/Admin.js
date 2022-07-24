@@ -128,20 +128,7 @@ export default function Dashboard(props) {
   return (
     <>
       <ChakraProvider theme={theme} resetCss={false} overflowX='hidden'>
-        <SidebarContext.Provider
-          value={{
-            sidebarWidth,
-            setSidebarWidth,
-            toggleSidebar,
-            setToggleSidebar,
-          }}>
-          <Sidebar
-            routes={routes}
-            logoText={"FORTEM ASSETS"}
-            display='flex'
-            sidebarVariant={sidebarVariant}
-            {...rest}
-          />
+
           <MainPanel
             ref={mainPanel}
             w={{
@@ -189,7 +176,7 @@ export default function Dashboard(props) {
               onTransparent={() => setSidebarVariant("transparent")}
             />
           </MainPanel>
-        </SidebarContext.Provider>
+
       </ChakraProvider>
     </>
   );

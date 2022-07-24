@@ -7,6 +7,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
 import { logoutFetch, selectUserLoggedIn } from '../../modules';
 
+import { ProfileActiveStepAction } from 'containers/ProfileActiveStepAction';
+
 
 const Logo = require('../../assets/images/logo_branca_bandeira_verde.svg');
 
@@ -19,6 +21,8 @@ export const Header: React.FC = () => {
 	const [activeItemDrop, setActiveItemDrop] = React.useState('');
 
 	const dispatch = useDispatch();
+
+	
 
 	const setStateActiveNow = (nameActive: string) => {
 		setActiveNow(nameActive);
@@ -125,7 +129,7 @@ export const Header: React.FC = () => {
 		return (
 			isLoggedIn && (
 				<Link
-					to="/profile"
+					to="/admin/pages/profile/overview"
 					onClick={() => {
 						setStateActiveNow('account');
 						setActiveItemDrop('profile');
@@ -136,6 +140,7 @@ export const Header: React.FC = () => {
 						<FormattedMessage id={'page.header.navbar.profile'} />
 					</div>
 				</Link>
+				
 			)
 		);
 	};
@@ -166,15 +171,16 @@ export const Header: React.FC = () => {
 		return (
 			isLoggedIn && (
 				<Link
-					to="/referral"
+					to="/admin/pages/profile/overview"
 					onClick={() => {
 						setStateActiveNow('account');
-						setActiveItemDrop('referral');
+						setActiveItemDrop('kyc');
 					}}
 				>
-					<div className={classActiveItemDrop('referral')}>
-						<FaUserPlus className="header__right-menu__dropdown__wrap__content__title__icon mr-2" />
-						<FormattedMessage id={'page.header.navbar.referral'} />
+					<div className={classActiveItemDrop('kyc')}>
+						<FaUserCircle className="header__right-menu__dropdown__wrap__content__title__icon mr-2" />
+						< ProfileActiveStepAction />
+						{/*<FormattedMessage id={'page.header.navbar.profile'} />*/}
 					</div>
 				</Link>
 			)
