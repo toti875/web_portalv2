@@ -99,11 +99,6 @@ import Default from "../../ui_vision/layouts/Admin"
 
 
 
-
-
-
-
-
 interface ReduxProps {
 	colorTheme: string;
 	currentMarket?: Market;

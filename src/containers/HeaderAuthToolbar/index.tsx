@@ -29,32 +29,32 @@ export const HeaderAuthToolbar: React.FC = () => {
 	};
 
 	const classActiveItemDrop = (nameItem: string) =>
-		classNames('header__right-menu__dropdown__wrap__content__title d-flex align-items-center', {
-			'header__right-menu__dropdown__wrap__content__title--active': activeItemDrop === nameItem,
+		classNames('subheader__right-menu__dropdown__wrap__content__title d-flex align-items-center', {
+			'subheader__right-menu__dropdown__wrap__content__title--active': activeItemDrop === nameItem,
 		});
 
 	const classLinkActive = (nameActive: string) => {
-		return classNames('header__left-menu__dropdown__wrap', {
-			'header__left-menu__dropdown__wrap--active': activeNow === nameActive,
+		return classNames('subheader__left-menu__dropdown__wrap', {
+			'subheader__left-menu__dropdown__wrap--active': activeNow === nameActive,
 		});
 	};
 
 	const classLinkActiveTitleDrop = (nameActive: string) => {
-		return classNames('header__right-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center', {
-			'header__right-menu__dropdown__wrap__dropbtn--active': activeNow === nameActive,
+		return classNames('subheader__right-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center', {
+			'subheader__right-menu__dropdown__wrap__dropbtn--active': activeNow === nameActive,
 		});
 	};
 
 	const renderWalletLink = () => {
-		const classItemTitle = classNames('header__right-menu__item__title', {
-			'header__right-menu__item__title--active': activeNow === 'Wallet',
+		const classItemTitle = classNames('subheader__right-menu__item__title', {
+			'subheader__right-menu__item__title--active': activeNow === 'Wallet',
 		});
 
 		return (
 			isLoggedIn && (
-				<div className="header__right-menu__item ">
+				<div className="subheader__right-menu__item ">
 					<div className={classItemTitle} onClick={() => setStateActiveNow('Wallet')}>
-						<Link to="/wallets">My Wallets</Link>
+						<Link to="/wallets">Wallets</Link>
 					</div>
 				</div>
 			)
@@ -62,13 +62,13 @@ export const HeaderAuthToolbar: React.FC = () => {
 	};
 
 	const renderDashboardLink = () => {
-		const classItemTitle = classNames('header__right-menu__item__title', {
-			'header__right-menu__item__title--active': activeNow === 'Dashboard',
+		const classItemTitle = classNames('subheader__right-menu__item__title', {
+			'subheader__right-menu__item__title--active': activeNow === 'Dashboard',
 		});
 
 		return (
 			isLoggedIn && (
-				<div className="header__right-menu__item ">
+				<div className="subheader__right-menu__item ">
 					<div className={classItemTitle} onClick={() => setStateActiveNow('Dashboard')}>
 						<Link to="/dashboard">Dashboard</Link>
 					</div>
@@ -81,12 +81,12 @@ export const HeaderAuthToolbar: React.FC = () => {
 		return (
 			isLoggedIn && (
 			
-				<div className="header__right-menu__dropdown__wrap">
+				<div className="subheader__right-menu__dropdown__wrap">
 					<span className={classLinkActiveTitleDrop('orders')}>
 						{translate('page.body.homepage.header.orders')}
-						<div className="header__right-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div>
+						<div className="subheader__right-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div>
 					</span>
-					<div className="header__right-menu__dropdown__wrap__content">
+					<div className="subheader__right-menu__dropdown__wrap__content">
 						<Link
 							to="/orders"
 							onClick={() => {
@@ -107,7 +107,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 							}}
 						>
 							<div className={classActiveItemDrop('history')}>
-								<FaHistory className="header__right-menu__dropdown__wrap__content__title__icon mr-2" />
+								<FaHistory className="subheader__right-menu__dropdown__wrap__content__title__icon mr-2" />
 								{translate('page.body.homepage.header.history')}
 							</div>
 						</Link>
@@ -122,12 +122,12 @@ export const HeaderAuthToolbar: React.FC = () => {
 		return (
 			isLoggedIn && (
 			
-				<div className="header__right-menu__dropdown__wrap">
+				<div className="subheader__right-menu__dropdown__wrap">
 					<span className={classLinkActiveTitleDrop('digitalassets')}>
 						{translate('page.body.homepage.header.digitalassets')}
-						<div className="header__right-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div>
+						<div className="subheader__right-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div>
 					</span>
-					<div className="header__right-menu__dropdown__wrap__content">
+					<div className="subheader__right-menu__dropdown__wrap__content">
 						<Link
 							to="/tokens"
 							onClick={() => {
@@ -148,7 +148,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 							}}
 						>
 							<div className={classActiveItemDrop('crypto')}>
-								<FaHistory className="header__right-menu__dropdown__wrap__content__title__icon mr-2" />
+								<FaHistory className="subheader__right-menu__dropdown__wrap__content__title__icon mr-2" />
 								{translate('page.body.homepage.header.crypto')}
 							</div>
 						</Link>
@@ -173,8 +173,8 @@ export const HeaderAuthToolbar: React.FC = () => {
 					setActiveItemDrop('');
 				}}
 			>
-				<div className="header__right-menu__dropdown__wrap__content__title d-flex align-items-center">
-					<FaSignOutAlt className="header__right-menu__dropdown__wrap__content__title__icon mr-2" />
+				<div className="subheader__right-menu__dropdown__wrap__content__title d-flex align-items-center">
+					<FaSignOutAlt className="subheader__right-menu__dropdown__wrap__content__title__icon mr-2" />
 					<FormattedMessage id={'page.body.profile.content.action.logout'} />
 				</div>
 			</Link>
@@ -192,7 +192,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 					}}
 				>
 					<div className={classActiveItemDrop('profile')}>
-						<FaUserCircle className="header__right-menu__dropdown__wrap__content__title__icon mr-2" />
+						<FaUserCircle className="subheader__right-menu__dropdown__wrap__content__title__icon mr-2" />
 						<FormattedMessage id={'page.header.navbar.profile'} />
 					</div>
 				</Link>
@@ -204,12 +204,12 @@ export const HeaderAuthToolbar: React.FC = () => {
 		return (
 			isLoggedIn && (
 				<>
-					<div className="header__right-menu__dropdown__wrap">
+					<div className="subheader__right-menu__dropdown__wrap">
 						<span className={classLinkActiveTitleDrop('account')}>
 							{translate('page.body.homepage.header.account')}
-							<div className="header__right-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div>
+							<div className="subheader__right-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div>
 						</span>
-						<div className="header__right-menu__dropdown__wrap__content header__right-menu__dropdown__wrap__content--account">
+						<div className="subheader__right-menu__dropdown__wrap__content subheader__right-menu__dropdown__wrap__content--account">
 							{renderProfileLink()}
 							{renderReferralLink()}
 							{renderLogout()}
@@ -231,7 +231,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 					}}
 				>
 					<div className={classActiveItemDrop('referral')}>
-						<FaUserPlus className="header__right-menu__dropdown__wrap__content__title__icon mr-2" />
+						<FaUserPlus className="subheader__right-menu__dropdown__wrap__content__title__icon mr-2" />
 						<FormattedMessage id={'page.header.navbar.referral'} />
 					</div>
 				</Link>
@@ -250,19 +250,19 @@ export const HeaderAuthToolbar: React.FC = () => {
 	const translate = (key: string) => intl.formatMessage({ id: key });
 
 	const renderUnLogin = () => {
-		const classLinkActiveLogin = classNames('header__right-menu__item__title', {
-			'header__right-menu__item__title--active': activeNow === 'login',
+		const classLinkActiveLogin = classNames('subheader__right-menu__item__title', {
+			'subheader__right-menu__item__title--active': activeNow === 'login',
 		});
 
-		const classLinkActiveRegister = classNames('header__right-menu__item__title header__right-menu__item__title--btn ', {
-			'header__right-menu__item__title--btn--active': activeNow === 'register',
+		const classLinkActiveRegister = classNames('subheader__right-menu__item__title subheader__right-menu__item__title--btn ', {
+			'subheader__right-menu__item__title--btn--active': activeNow === 'register',
 		});
 
 		return (
 			!isLoggedIn && (
 				<>
 					<div
-						className="header__right-menu__item flex-shrink-0 custom-poiter"
+						className="subheader__right-menu__item flex-shrink-0 custom-poiter"
 						onClick={e => {
 							redirectSingIn();
 							setStateActiveNow('login');
@@ -273,7 +273,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 						</div>
 					</div>
 					<div
-						className="header__right-menu__item flex-shrink-0 custom-poiter"
+						className="subheader__right-menu__item flex-shrink-0 custom-poiter"
 						onClick={e => {
 							redirectSingUp();
 							setStateActiveNow('register');
@@ -289,13 +289,14 @@ export const HeaderAuthToolbar: React.FC = () => {
 	return (
 		isLoggedIn && (
 			<>
-		<div className="sub-headerDesktop-screen">
-			<div className="container-header">
-				<nav className="header d-flex flex-row justify-content-between align-items-center">
-					<div className="header__left-menu d-flex flex-row align-items-center">
+		<div className="subheaderDesktop-screen">
+			<div className="container-subheader">
+				<nav className="subheader d-flex flex-row justify-content-between align-items-center">
+					<div className="subheader__left-menu d-flex flex-row align-items-center">
 					
 						{renderUnLogin()}
 						{renderDashboardLink()}
+						{renderDigitalAsstesTab()}
 						{renderWalletLink()}
 						{renderOrderTab()}
 					
@@ -305,7 +306,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 
 					</div>
 
-					<div className="header__right-menu d-flex align-items-center flex-row">
+					<div className="subheader__right-menu d-flex align-items-center flex-row">
 						{renderUnLogin()}
 						{renderWalletLink()}
 						{renderOrderTab()}

@@ -358,8 +358,8 @@ export const pt = {
 	'page.body.profile.header.accountActivity.content.result': 'Result',
 	'page.body.profile.header.accountActivity.content.userAgent': 'User Agent',
 
-	'page.body.profile.content.action.login': 'Login',
-	'page.body.profile.content.action.logout': 'Logout',
+	'page.body.profile.content.action.login': 'Entrar',
+	'page.body.profile.content.action.logout': 'Sair',
 	'page.body.profile.content.action.request2fa': 'Request QR code for 2FA',
 	'page.body.profile.content.action.enable2fa': 'Enable 2FA',
 	'page.body.profile.content.action.login.2fa': 'Login with 2FA',
@@ -880,14 +880,14 @@ export const pt = {
 	'stake.detail.myAssets.available': 'Available',
 	'stake.detail.myAssets.totalBalance': 'Total Balance',
 
-	'page.body.homegape.header.button2' : 'Sign In',
-	'page.body.homegape.header.button3' : 'Register',
-	'page.body.homepage.header.orders' : 'My Orders',
-	'page.body.homepage.header.digitalassets' : 'Digital Assets',
+	'page.body.homegape.header.button2' : 'Entrar',
+	'page.body.homegape.header.button3' : 'Criar conta',
+	'page.body.homepage.header.orders' : 'Minhas ordens',
+	'page.body.homepage.header.digitalassets' : 'Investimentos',
 	'page.body.homepage.header.account' : 'My Account',
 	'page.body.homepage.header.openOrder' : 'Open Order',
 	'page.body.homepage.header.tokens' : 'Tokens',
-	'page.body.homepage.header.history' : 'History',
+	'page.body.homepage.header.history' : 'Histórico',
 	'page.body.homepage.header.crypto' : 'Cryptocurrencies',
 
 

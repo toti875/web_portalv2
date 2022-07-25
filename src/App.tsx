@@ -35,7 +35,9 @@ const CustomizationContainer = React.lazy(() =>
 );
 const FooterContainer = React.lazy(() => import('./containers/Footer').then(({ Footer }) => ({ default: Footer })));
 const HeaderContainer = React.lazy(() => import('./containers/Header').then(({ Header }) => ({ default: Header })));
+const HeaderNavbarContainer = React.lazy(() => import('./containers/HeaderNavbar').then(({ HeaderNavbar }) => ({ default: HeaderNavbar })));
 const HeaderAuthToolbarContainer = React.lazy(() => import('./containers/HeaderAuthToolbar').then(({ HeaderAuthToolbar }) => ({ default: HeaderAuthToolbar })));
+
 const SidebarContainer = React.lazy(() => import('./containers/Sidebar').then(({ Sidebar }) => ({ default: Sidebar })));
 const SBToggler = React.lazy(() =>
 	import('./containers/SideBarToggle').then(({ SideBarToggle }) => ({ default: SideBarToggle })),

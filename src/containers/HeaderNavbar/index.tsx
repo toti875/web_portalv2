@@ -10,9 +10,9 @@ import { logoutFetch, selectUserLoggedIn } from '../../modules';
 import { ProfileActiveStepAction } from 'containers/ProfileActiveStepAction';
 
 
-const Logo = require('../../assets/images/logo_branca_bandeira_verde.svg');
+//const Logo = require('../../assets/images/logo_branca_bandeira_verde.svg');
 
-export const Header: React.FC = () => {
+export const HeaderNavbar: React.FC = () => {
 	const history = useHistory();
 	const intl = useIntl();
 
@@ -30,13 +30,13 @@ export const Header: React.FC = () => {
 	};
 
 	const classActiveItemDrop = (nameItem: string) =>
-		classNames('header__right-menu__dropdown__wrap__content__title d-flex align-items-center', {
-			'header__right-menu__dropdown__wrap__content__title--active': activeItemDrop === nameItem,
+		classNames('header2__right-menu__dropdown__wrap__content__title d-flex align-items-center', {
+			'header2__right-menu__dropdown__wrap__content__title--active': activeItemDrop === nameItem,
 		});
 
 	const classLinkActive = (nameActive: string) => {
 		return classNames('header__left-menu__dropdown__wrap', {
-			'header__left-menu__dropdown__wrap--active': activeNow === nameActive,
+			'header2__left-menu__dropdown__wrap--active': activeNow === nameActive,
 		});
 	};
 
@@ -235,32 +235,27 @@ export const Header: React.FC = () => {
 		);
 	};
 
-	return (
+	return ( 
 	
-		<div className="headerDesktop-screen">
-			<div className="container-header">
-				<nav className="header d-flex flex-row justify-content-between align-items-center">
-					<div className="header__left-menu d-flex flex-row align-items-center">
-						<div className="header__left-menu__logo" onClick={() => setStateActiveNow('')}>
-							<Link to="/">
-								<img src={Logo} alt="" />
-							</Link>
-						</div>
-						<div className="header__left-menu__dropdown flex-shrink-0">
+		<div className="headerDesktop-screen2">
+			<div className="container-header2">
+				<nav className="header2 d-flex flex-row justify-content-between align-items-center">
+					<div className="header2__left-menu d-flex flex-row align-items-center">
+						<div className="header2__left-menu__dropdown flex-shrink-0">
 							<div className={classLinkActive('markets')} onClick={() => setStateActiveNow('markets')}>
 								<Link
 									to="/markets"
-									className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
+									className="header2__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
 								>
 									Exchange Pro
 								</Link>
 							</div>
 						</div>
-						<div className="header__left-menu__dropdown flex-shrink-0 ">
+						<div className="header2__left-menu__dropdown flex-shrink-0 ">
 							<div className={classLinkActive('ieo')} onClick={() => setStateActiveNow('ieo')}>
 								<Link
 									to="/ieo"
-									className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
+									className="header2__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
 								>
 									Tokens
 								</Link>

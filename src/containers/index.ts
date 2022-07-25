@@ -7,6 +7,7 @@ export * from './Footer';
 export * from './GeetestCaptcha';
 export * from './Header';
 export * from './HeaderAuthToolbar';
+export * from './HeaderNavbar';
 export * from './HistoryElement';
 export * from './LegalDocuments';
 export * from './MarketDepth';
