@@ -51,7 +51,7 @@ export const Header: React.FC = () => {
 			isLoggedIn && (
 				<div className="header__right-menu__item ">
 					<div className={classItemTitle} onClick={() => setStateActiveNow('Wallet')}>
-						<Link to="/wallets">My Wallets</Link>
+						<Link to="/wallets">Wallets</Link>
 					</div>
 				</div>
 			)
