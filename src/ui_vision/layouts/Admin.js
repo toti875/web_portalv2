@@ -127,7 +127,7 @@ export default function Dashboard(props) {
   // Chakra Color Mode
   return (
     <>
-      <ChakraProvider theme={theme} resetCss={false} overflowX='hidden'>
+      <ChakraProvider theme={theme} resetCss={true} overflowX='hidden'>
 
           <MainPanel
             ref={mainPanel}
@@ -160,7 +160,7 @@ export default function Dashboard(props) {
                 </PanelContainer>
               </PanelContent>
             ) : null}
-            <Footer />
+            {/*<Footer />
             <Portal>
               <FixedPlugin fixed={fixed} onOpen={onOpen} />
             </Portal>
@@ -174,7 +174,7 @@ export default function Dashboard(props) {
               }}
               onOpaque={() => setSidebarVariant("opaque")}
               onTransparent={() => setSidebarVariant("transparent")}
-            />
+            />*/}
           </MainPanel>
 
       </ChakraProvider>

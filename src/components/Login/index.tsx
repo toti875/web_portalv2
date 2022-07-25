@@ -118,7 +118,7 @@ const Login = React.memo((props: LogInProps) => {
 			}}
 		>
 			<div className="cr-sign-in-form__bottom-section-password" onClick={() => props.onForgotPassword(email)}>
-				{props.forgotPasswordLabel || 'Forgot your password?'}
+				{'Esqueceu sua senha?'}
 			</div>
 			<div
 				id="click-to-register"
@@ -130,7 +130,7 @@ const Login = React.memo((props: LogInProps) => {
 				}}
 				onClick={onSignUp}
 			>
-				Free Register
+				Criar nova conta
 			</div>
 		</div>
 	);
@@ -140,7 +140,7 @@ const Login = React.memo((props: LogInProps) => {
 			<span>
 				{intl.formatMessage({ id: 'page.header.signIN.noAccountYet' })}
 				<span onClick={() => history.push('/signup')} className="pg-sign-in-screen__register-button">
-					Register
+					Cadastrar
 				</span>
 			</span>
 		</div>
@@ -171,7 +171,7 @@ const Login = React.memo((props: LogInProps) => {
 									wordSpacing: '2px',
 								}}
 							>
-								Bem vindo à Fortem Financial
+								ACESSAR MINHA CONTA
 							</div>
 						</div>
 					</div>
@@ -216,9 +216,9 @@ const Login = React.memo((props: LogInProps) => {
 					<div className={emailGroupClass}>
 						<FormInput
 							type="email"
-							label={emailLabel || 'Email'}
+							label={emailLabel || 'Digite seu email'}
 							placeholder={emailPlaceholder}
-							defaultLabel="Email"
+							defaultLabel="Digite seu e-mail"
 							handleChangeInput={handleChangeEmail}
 							inputValue={email}
 							handleFocusInput={() => handleFieldFocus('email')}
@@ -252,7 +252,7 @@ const Login = React.memo((props: LogInProps) => {
 							size="lg"
 							variant="primary"
 						>
-							{isLoading ? 'Loading...' : labelSignIn ? labelSignIn : 'Sign in'}
+							{isLoading ? 'Loading...' : labelSignIn ? labelSignIn : 'Entrar'}
 						</Button>
 					</div>
 					{!isMobileDevice && renderForgotButton}

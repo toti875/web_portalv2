@@ -230,12 +230,12 @@ export const ProfileSecurity: React.FC<ProfileSecurityProps> = () => {
 				<div className="td-pg-profile__inner">
 					<div className="td-pg-profile__security__row-item">
 						<div className="td-pg-profile__security__item__left">
-							<div className="td-pg-profile__security__row-item__title">Enable Two Factor </div>
+							<div className="td-pg-profile__security__row-item__title">Duplo Fator de Autenticação (2FA) </div>
 							<div
 								className="td-pg-profile__security__row-item__action"
 								onClick={user.otp ? handleShow2Fa : handleNavigateTo2fa}
 							>
-								{user.otp ? 'Off' : 'On'}
+								{user.otp ? 'Desativar' : 'Habilitar'}
 							</div>
 						</div>
 						<div className="td-pg-profile__security__item__right">
@@ -245,9 +245,9 @@ export const ProfileSecurity: React.FC<ProfileSecurityProps> = () => {
 					</div>
 					<div className="td-pg-profile__security__row-item">
 						<div className="td-pg-profile__security__item__left">
-							<div className="td-pg-profile__security__row-item__title">Change Password</div>
+							<div className="td-pg-profile__security__row-item__title">Alterar Senha</div>
 							<div className="td-pg-profile__security__row-item__action" onClick={handleShowChange}>
-								Change
+								Alterar
 							</div>
 						</div>
 						<div className="td-pg-profile__security__item__right"></div>

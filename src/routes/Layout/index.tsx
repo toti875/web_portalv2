@@ -95,22 +95,9 @@ import {
 } from '../../screens';
 
 
-
-//import Home from "../../views/Pages/Profile/Ow.js";
-
-//import Overview from "../../ui_vision/views/Pages/Profile/Overview";
-
-//import Default from '../../views/Dashboard/Default.js';
-
-//import Default from '../../vision-ui/src/views/Dashboard/Default.js'
-//import Default from '../../views/Dashboard/Default'
-
-import Dashboard from "../../ui_vision/views/Pages/Profile/Overview"
-
 import Default from "../../ui_vision/layouts/Admin"
 
 
-import Profile from "../../ui_vision/views/Pages/Profile/Overview"
 
 
 
@@ -503,6 +490,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/orders" component={OrdersTabScreen} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/history" component={HistoryScreen} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/confirm" component={ConfirmScreen} />
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={ProfileScreen} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/pages/profile/overview" component={Default} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/pages/profile/perfil" component={Default} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/pages/profile/limite" component={Default} />

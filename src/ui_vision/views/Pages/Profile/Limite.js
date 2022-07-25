@@ -315,7 +315,7 @@ function Limite() {
           {/* Account Status */}
           <Card
             p='16px'
-            h='620px'
+            h='760px'
             maxW={{ sm: "325px", md: "725px", lg: "980px", xl: "100%" }}
             w='100%'
             >
@@ -325,12 +325,13 @@ function Limite() {
               </Text>
             </CardHeader>
             <CardBody w='100%'>
-              <Flex w='100%' direction={{ sm: "column", md: "row" }}>
                 <ProfileVerification />   
-              </Flex>
-
+            </CardBody>
+            <CardBody w='100%'>
+                <ProfileVerificationLabels />    
             </CardBody>
           </Card>
+s
           
 
     </Flex>

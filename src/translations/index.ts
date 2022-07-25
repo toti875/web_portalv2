@@ -1,11 +1,11 @@
 import { en } from './en';
 import { pt } from './pt';
 
-export type LangType = typeof pt;
+export type LangType = typeof en;
 
 
 export const languageMap = {
-	default: pt,
+	default: en,
 	en,
 	pt,
 	

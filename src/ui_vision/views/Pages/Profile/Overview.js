@@ -93,7 +93,7 @@ import {
 } from "../../../variables/charts";
 
 import { selectUserActivity, selectUserInfo } from 'modules';
-import { ProfileAccountActivity, ProfileActiveStep, ProfileAuthDetails, Profile2FA, ProfileAnnouncement, ProfileApiKeys, ProfileTwoFactorAuth, ProfileSecurity, ProfileVerification } from 'containers';
+import { ProfileAccountActivity, ProfileActiveStep, ProfileAuthDetails, Profile2FA, ProfileAnnouncement, ProfileApiKeys, ProfileTwoFactorAuth, ProfileSecurity, ProfileVerification, ProfileVerificationLabels } from 'containers';
 import { localeDate, setDocumentTitle } from 'helpers';
 
 import { WalletListScreen } from 'screens';
@@ -165,7 +165,7 @@ const GetUserLoginInformation = () => {
 	return (
 		
 						<div>
-							<span>Last login time: {time} </span>
+							<span>Útimo login: {time} </span>
 							<span>IP : {ip} </span>
 						</div>
 	
@@ -427,7 +427,7 @@ function Profile() {
             gridArea={{ xl: "1 / 1 / 2 / 2", "2xl": "auto" }}>
             <CardHeader p='12px 5px' mb='12px'>
               <Text fontSize='lg' color='#fff' fontWeight='bold'>
-                Account Status
+                Status da Conta
               </Text>
             </CardHeader>
             <Grid w='100%'>
@@ -448,14 +448,16 @@ function Profile() {
             gridArea={{ xl: "2 / 1 / 3 / 3", "2xl": "auto" }}>
             <CardHeader p='12px 5px' mb='12px'>
               <Text fontSize='lg' color='#fff' fontWeight='bold'>
-                Profile Verification
+                Limites Operacionais
               </Text>
             </CardHeader>
             <Grid w='100%' >
             <Flex w='100%'  h='100%' direction={{ sm: "column", md: "row" }}>
               <ProfileVerification />   
-                
-              </Flex>
+            </Flex>
+            <CardBody>
+              <ProfileVerificationLabels />
+            </CardBody>
             </Grid>
           </Card>
       </Grid>
@@ -476,7 +478,7 @@ function Profile() {
           gridArea={{ xl: "1 / 1 / 2 / 2", "2xl": "auto" }}>
           <CardHeader p='12px 5px' mb='12px'>
             <Text fontSize='lg' color='#fff' fontWeight='bold'>
-              Security
+              Segurança
             </Text>
           </CardHeader>
           <Flex direction='column' h='400px'>
@@ -489,7 +491,7 @@ function Profile() {
           gridArea={{ xl: "1 / 1 / 2 / 2", "2xl": "auto" }}>
           <CardHeader p='12px 5px' mb='12px'>
             <Text fontSize='lg' color='#fff' fontWeight='bold'>
-              My API Keys
+              Gerenciamento de API
             </Text>
           </CardHeader>
           <Flex direction='column' h='400px'>
@@ -506,155 +508,21 @@ function Profile() {
           gridArea={{ xl: "1 / 2 / 2 / 3", "2xl": "auto" }}>
           <CardHeader p='12px 5px' mb='12px'>
             <Text fontSize='lg' color='#fff' fontWeight='bold'>
-              Profile Information
+              Últimas atividades
             </Text>
           </CardHeader>
-          <CardBody px='5px'>
-              <Flex direction='column'>
-                <Text fontSize='10px' color={"gray.400"} mb='20px'>
-                  ACCOUNT
-                </Text>
-                <Flex align='center' mb='20px'>
-                  <DarkMode>
-                    <Switch colorScheme='brand' me='10px' defaultChecked />
-                  </DarkMode>
-                  <Text
-                    noOfLines={1}
-                    fontSize='sm'
-                    color={"gray.400"}
-                    fontWeight='400'>
-                    Email me when someone follows me
-                  </Text>
-                </Flex>
-                <Flex align='center' mb='20px'>
-                  <DarkMode>
-                    <Switch colorScheme='brand' me='10px' defaultChecked />
-                  </DarkMode>
-                  <Text
-                    noOfLines={1}
-                    fontSize='sm'
-                    color={"gray.400"}
-                    fontWeight='400'>
-                    Email me when someone answers on my post
-                  </Text>
-                </Flex>
-                <Flex align='center' mb='20px'>
-                  <DarkMode>
-                    <Switch colorScheme='brand' me='10px' defaultChecked />
-                  </DarkMode>
-                  <Text
-                    noOfLines={1}
-                    fontSize='sm'
-                    color={"gray.400"}
-                    fontWeight='400'>
-                    Email me when someone mentions me
-                  </Text>
-                </Flex>
-                <Text fontSize='10px' color={"gray.400"} m='6px 0px 20px 0px'>
-                  APPLICATION
-                </Text>
-                <Flex align='center' mb='20px'>
-                  <DarkMode>
-                    <Switch colorScheme='brand' me='10px' />
-                  </DarkMode>
-                  <Text
-                    noOfLines={1}
-                    fontSize='sm'
-                    color={"gray.400"}
-                    fontWeight='400'>
-                    New launches and projects
-                  </Text>
-                </Flex>
-                <Flex align='center' mb='20px'>
-                  <DarkMode>
-                    <Switch colorScheme='brand' me='10px' defaultChecked />
-                  </DarkMode>
-                  <Text
-                    noOfLines={1}
-                    fontSize='sm'
-                    color={"gray.400"}
-                    fontWeight='400'>
-                    Monthly product changes
-                  </Text>
-                </Flex>
-                <Flex align='center' mb='20px'>
-                  <DarkMode>
-                    <Switch colorScheme='brand' me='10px' />
-                  </DarkMode>
-                  <Text
-                    noOfLines={1}
-                    fontSize='sm'
-                    color={"gray.400"}
-                    fontWeight='400'>
-                    Subscribe to newsletter
-                  </Text>
-                </Flex>
-              </Flex>
-            </CardBody>
-        </Card>
-      </Grid>
-
-
-      <Grid
-        templateColumns={{
-          sm: "1fr",
-          xl: "repeat(2, 1fr)",
-          "2xl": "1fr 2fr 1.2fr",
-        }}
-        gap='10px'
-        mb='24px'>
-
-        {/* Spot Margin */}
-        <Card
-          maxW={{ sm: "325px", md: "725px", lg: "980px" }}
-          h={{ sm: "270px", lg: "350px", xl: "410px" }}
-          gridArea={{ xl: "1 / 1 / 2 / 2", "2xl": "auto" }}>
-          <CardHeader p='12px 5px' mb='12px'>
-            <Text fontSize='lg' color='#fff' fontWeight='bold'>
-              Spot Margin Settings
-            </Text>
-          </CardHeader>
-          <Flex direction='column' h='400px'>
-        
-          </Flex>
-        </Card>
-
-
-        {/* Account Activity */}
-        <Card
-          p='16px'
-          maxH={{ md: "410px" }}
-          maxW={{ sm: "325px", md: "725px", lg: "980px" }}
-          gridArea={{ xl: "1 / 2 / 2 / 3", "2xl": "auto" }}>
-          <CardHeader p='12px 5px' mb='12px'>
-            <Text fontSize='lg' color='#fff' fontWeight='bold'>
-              Account Activity
-            </Text>
-          </CardHeader>
-          <CardBody px='5px'>
-              <Flex direction='column'>
+          <CardBody px='5px' w='100%'>
+              <Flex direction='row'>
                 <Text fontSize='10px' color={"gray.400"} mb='20px'>
                 <ProfileAccountActivity/>
                 </Text>
-                
+
               </Flex>
             </CardBody>
         </Card>
-         {/* Fees */}
-        <Card
-          maxW={{ sm: "325px", md: "725px", lg: "980px" }}
-          h={{ sm: "270px", lg: "350px", xl: "410px" }}
-          gridArea={{ xl: "1 / 1 / 2 / 2", "2xl": "auto" }}>
-          <CardHeader p='12px 5px' mb='12px'>
-            <Text fontSize='lg' color='#fff' fontWeight='bold'>
-              Fees
-            </Text>
-          </CardHeader>
-          <Flex direction='column' h='400px'>
-
-          </Flex>
-        </Card>
       </Grid>
+
+
     </Flex>
   );
 }

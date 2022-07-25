@@ -123,7 +123,7 @@ const dashRoutes = [
               },
               {
                 name: "Limites Operacionais",
-                secondaryNavbar: true,
+                secondaryNavbar: false,
                 path: "/pages/profile/limite",
                 component: Limite,
                 layout: "/admin",

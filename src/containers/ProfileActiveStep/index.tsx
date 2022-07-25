@@ -42,7 +42,7 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 
 	return (
 		<div>
-			<span>Just a few more steps and you’re good to go!</span>
+			<span>Inicie a sua jornada de investimentos</span>
 			<div className="td-pg-profile__active-step__content d-flex">
 				<div className="td-pg-profile__active-step__content__item">
 					<span
@@ -52,7 +52,7 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 					>
 						{isLoggedIn ? svgActive : '1'}
 					</span>
-					<h5 className="td-pg-profile__active-step__content__item__title">Register Account</h5>
+					<h5 className="td-pg-profile__active-step__content__item__title">Criação da conta</h5>
 				</div>
 				<div className="td-pg-profile__active-step__content__item">
 					<span
@@ -64,7 +64,7 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 					</span>
 					<h5 className="td-pg-profile__active-step__content__item__title">2FA</h5>
 					<span className="td-pg-profile--color--second td-pg-profile__active-step__content__item__desc">
-						Secure your account with two- factor authentication！
+						Aumente a segurança da sua conta com o duplo fato de auteticação!
 					</span>
 					{!user.otp ? (
 						<Button
@@ -72,7 +72,7 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 							className="td-pg-profile__active-step__content__item__action mt-3"
 							onClick={handleNavigateTo2fa}
 						>
-							Active
+							Ativar
 						</Button>
 					) : null}
 				</div>
@@ -84,9 +84,9 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 					>
 						{isExistBalance ? svgActive : '3'}
 					</span>
-					<h5 className="td-pg-profile__active-step__content__item__title">Deposit Funds</h5>
+					<h5 className="td-pg-profile__active-step__content__item__title">Deposite</h5>
 					<span className="td-pg-profile--color--second td-pg-profile__active-step__content__item__desc">
-						Add cash or crypto funds to your wallet and start trading right away
+						Deposite crypto ou reais e inicie seus investimentos
 					</span>
 					{user.otp && !isExistBalance ? (
 						<Button

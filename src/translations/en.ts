@@ -10,9 +10,9 @@ export const en = {
 	'page.header.navbar.openOrders': 'Orders',
 	'page.header.navbar.history': 'History',
 
-	'page.header.navbar.profile': 'Profile',
-	'page.header.navbar.referral': 'Referral',
-	'page.header.navbar.logout': 'Logout',
+	'page.header.navbar.profile': 'Meu Perfil',
+	'page.header.navbar.referral': 'Indique',
+	'page.header.navbar.logout': 'Sair',
 
 	'page.sidebar.group.text': 'Fee Group:',
 	'page.sidebar.group.value': 'Base',
@@ -369,6 +369,7 @@ export const en = {
 	/* Profile - verification */
 	'page.body.profile.verification.email.title': 'Email address',
 	'page.body.profile.verification.email.subtitle': 'Withdrawal allowed',
+	'page.body.profile.verification.email.functionality': 'Withdrawal allowed',
 	'page.body.profile.verification.email.rejected.tooltip': 'Your email was rejected',
 	'page.body.profile.verification.phone.title': 'Verify Phone number',
 	'page.body.profile.verification.phone.subtitle': 'To allow Deposits and Trades',

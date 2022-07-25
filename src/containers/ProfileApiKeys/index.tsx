@@ -52,7 +52,7 @@ export const ProfileApiKeys: React.FC<ProfileApiKeysProps> = () => {
 			'Status',
 			translate('page.body.profile.apiKeys.table.header.created'),
 			translate('page.body.profile.apiKeys.table.header.updated'),
-			'Action',
+			'Remover',
 		];
 	};
 
@@ -304,7 +304,7 @@ export const ProfileApiKeys: React.FC<ProfileApiKeysProps> = () => {
 			
 				<div className="td-pg-profile__content__item__header__action">
 					<button type="button" className="td-pg-profile--radius btn btn-success" onClick={handleCreateKeyClick}>
-						Create new
+						Criar
 					</button>
 				</div>
 			</div>

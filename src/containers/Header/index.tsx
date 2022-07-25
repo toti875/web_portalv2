@@ -132,10 +132,10 @@ export const Header: React.FC = () => {
 					to="/admin/pages/profile/overview"
 					onClick={() => {
 						setStateActiveNow('account');
-						setActiveItemDrop('profile');
+						setActiveItemDrop('perfil');
 					}}
 				>
-					<div className={classActiveItemDrop('profile')}>
+					<div className={classActiveItemDrop('perfil')}>
 						<FaUserCircle className="header__right-menu__dropdown__wrap__content__title__icon mr-2" />
 						<FormattedMessage id={'page.header.navbar.profile'} />
 					</div>
@@ -152,6 +152,7 @@ export const Header: React.FC = () => {
 					<div className="header__right-menu__dropdown__wrap">
 						<span className={classLinkActiveTitleDrop('account')}>
 							<FaUserCircle className="header__right-menu__dropdown__wrap__content__title__icon mr-2" />
+							Jeferson Martin
 							{/*{translate('page.body.homepage.header.account')}*/}
 							<div className="header__right-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div>
 						</span>
@@ -251,7 +252,7 @@ export const Header: React.FC = () => {
 									to="/markets"
 									className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
 								>
-									Markets
+									Exchange Pro
 								</Link>
 							</div>
 						</div>
@@ -261,7 +262,7 @@ export const Header: React.FC = () => {
 									to="/ieo"
 									className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
 								>
-									New Listings
+									Tokens
 								</Link>
 							</div>
 						</div>
@@ -271,14 +272,14 @@ export const Header: React.FC = () => {
 									to="/fortem-token"
 									className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
 								>
-									Fortem Token
+									Token Fortem
 								</Link>
 							</div>
 						</div>
 						<div className="header__left-menu__dropdown flex-shrink-0  ">
 							<div className="header__left-menu__dropdown__wrap">
 								<span className={classLinkActiveTitleDrop('More')}>
-									More
+									Mais
 									<div className="header__left-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div>
 								</span>
 								<div className="header__left-menu__dropdown__wrap__content">
@@ -292,7 +293,7 @@ export const Header: React.FC = () => {
 									>
 										<div className={classActiveItemDrop('for-issuers')}>
 											<FaGift className="header__left-menu__dropdown__wrap__content__title__icon mr-2" />
-											For issuers
+											Emissores
 										</div>
 									</Link>
 									<Link
@@ -305,7 +306,7 @@ export const Header: React.FC = () => {
 									>
 										<div className={classActiveItemDrop('for-investors')}>
 											<FaGift className="header__left-menu__dropdown__wrap__content__title__icon mr-2" />
-											For investors
+											Investidores
 										</div>
 									</Link>
 									<Link
@@ -366,7 +367,7 @@ export const Header: React.FC = () => {
 						<div className="header__left-menu__dropdown flex-shrink-0  ">
 							<div className="header__left-menu__dropdown__wrap">
 								<span className={classLinkActiveTitleDrop('Learn')}>
-									Learn
+									Aprenda
 									<div className="header__left-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div>
 								</span>
 								<div className="header__left-menu__dropdown__wrap__content">
@@ -405,7 +406,7 @@ export const Header: React.FC = () => {
 									to=""
 									className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
 								>
-									News
+									Notícias
 								</Link>
 							</div>
 						</div>
@@ -415,7 +416,7 @@ export const Header: React.FC = () => {
 									to=""
 									className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
 								>
-									Help
+									Ajuda
 								</Link>
 							</div>
 						</div>

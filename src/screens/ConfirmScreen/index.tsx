@@ -50,7 +50,7 @@ class ConfirmComponent extends React.Component<Props> {
 			case 'address':
 				return <Address />;
 			default:
-				return 'Something went wrong';
+				return ( <div> {step} </div>);
 		}
 	};
 	

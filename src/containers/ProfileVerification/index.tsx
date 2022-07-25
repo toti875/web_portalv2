@@ -13,12 +13,6 @@ import { CheckIcon } from '../../assets/images/kyc/CheckIcon';
 import { ClocksIcon } from '../../assets/images/kyc/ClocksIcon';
 import { CrossIcon } from '../../assets/images/kyc/CrossIcon';
 
-import { Flex, Text } from "@chakra-ui/react";
-
-import Card from '../../ui_vision/components/Card/Card';
-import CardHeader from '../../ui_vision/components/Card/CardHeader';
-import CardBody from '../../ui_vision/components/Card/CardBody';
-
 interface ReduxProps {
 	labels: Label[];
 }
@@ -39,7 +33,7 @@ type Props = DispatchProps & ProfileVerificationProps & ReduxProps;
 
 class ProfileVerificationComponent extends React.Component<Props, State> {
 	public state = {
-		isMouseTooltipVisible: true,
+		isMouseTooltipVisible: false,
 	};
 
 	public componentDidMount() {
@@ -52,41 +46,25 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 		switch (targetLabelStatus) {
 			case 'verified':
 				return (
-
-			
-					  <Flex direction='row'>
-							<Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
-
-					<div className="pg-profile-page-verification__progress-bar__step pg-profile-page-verification__progress-bar__step--verified">
+					<div className="pg-profile-page-verification2__progress-bar__step pg-profile-page-verification2__progress-bar__step--verified">
 						<FormattedMessage id={`page.body.profile.verification.progress.level`} />
 						<span>&nbsp;{index + 1}</span>
 						<CheckIcon />
 					</div>
-					</Text>
-			  </Flex>
-
 				);
 			case 'drafted':
 			case 'pending':
 			case 'submitted':
 				return (
-				
-					  <Flex direction='row'>
-							<Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
-
-					<div className="pg-profile-page-verification__progress-bar__step pg-profile-page-verification__progress-bar__step--pending">
+					<div className="pg-profile-page-verification2__progress-bar__step pg-profile-page-verification2__progress-bar__step--pending">
 						<FormattedMessage id={`page.body.profile.verification.progress.level`} />
 						<span>&nbsp;{index + 1}</span>
 						<ClocksIcon />
 					</div>
-					</Text>
-			  </Flex>
-		
-
 				);
 			case 'rejected':
 				return (
-					<div className="pg-profile-page-verification__progress-bar__step pg-profile-page-verification__progress-bar__step--rejected">
+					<div className="pg-profile-page-verification2__progress-bar__step pg-profile-page-verification2__progress-bar__step--rejected">
 						<FormattedMessage id={`page.body.profile.verification.progress.level`} />
 						<span>&nbsp;{index + 1}</span>
 						<CrossIcon />
@@ -94,49 +72,26 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 				);
 			case 'blocked':
 				return (
-	
-					  <Flex direction='row'>
-							<Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
-
-							<div className="pg-profile-page-verification__progress-bar__step pg-profile-page-verification__progress-bar__step--blocked">
+					<div className="pg-profile-page-verification2__progress-bar__step pg-profile-page-verification2__progress-bar__step--blocked">
 						<FormattedMessage id={`page.body.profile.verification.progress.level`} />
 						<span>&nbsp;{index + 1}</span>
 					</div>
-					</Text>
-			  </Flex>
-		
-
-
 				);
 			default:
 				return (
-
-	
-					  <Flex direction='row'>
-							<Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
-
-							<div className="pg-profile-page-verification__progress-bar__step pg-profile-page-verification__progress-bar__step--active">
+					<div className="pg-profile-page-verification2__progress-bar__step pg-profile-page-verification2__progress-bar__step--active">
 						<FormattedMessage id={`page.body.profile.verification.progress.level`} />
 						<span>&nbsp;{index + 1}</span>
 					</div>
-					</Text>
-			  </Flex>
-
-	
-
-
-
 				);
 		}
 	};
 
 	public renderProgressBar(labels: Label[]) {
 		return (
-
-			<div className="pg-profile-page-verification__progress-bar">
-					{kycSteps().map((step, index) => this.renderProgressBarStep(step, index, labels))}
+			<div className="pg-profile-page-verification2__progress-bar">
+				{kycSteps().map((step, index) => this.renderProgressBarStep(step, index, labels))}
 			</div>
-
 		);
 	}
 
@@ -144,134 +99,63 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 		const { isMouseTooltipVisible } = this.state;
 		const targetLabelStatus = this.handleCheckLabel(labels, labelToCheck);
 
-		const tooltipClass = classnames('pg-profile-page-verification__step__tooltip tooltip-hover', {
+		const tooltipClass = classnames('pg-profile-page-verification2__step__tooltip tooltip-hover', {
 			'tooltip-hover--visible': isMouseTooltipVisible,
 		});
 
 		switch (targetLabelStatus) {
-			
-			
-			
-			
 			case 'verified':
 				return (
-
-					<Flex direction='row' mt={{ sm: "150px", md: "100px" }}>
-					<Card
-						height="520px"
-						width="360px"
-						backgroundColor="gray.600"
-					>
-						{/*
-						<CardHeader  mb='12px'>
-						
-						<div className="pg-profile-page-verification__step__info__title">
-								<span>{index + 1}.&nbsp;</span>
-								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
-							</div>
-							{this.renderProgressBar(labels)}
-						</CardHeader>
-				*/}
-						<CardBody>
+					<div key={index} className="pg-profile-page-verification2__step pg-profile-page-verification2__step--verified">
+						<div className="pg-profile-page-verification2__step__info">
+							<div className="pg-profile-page-verification2__step__info__title">
 					
-					<div key={index} className="pg-profile-page-verification__step pg-profile-page-verification__step--verified">
-						<div className="pg-profile-page-verification__step__info">
-							<div className="pg-profile-page-verification__step__info__title">
-								<div>Nível {index+1} </div>
 								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
-							
 							</div>
-							<div className="pg-profile-page-verification__step__info__subtitle">
-								
+							<div className="pg-profile-page-verification2__step__info__subtitle">
 								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle`} />
 							</div>
 						</div>
-						<div className="pg-profile-page-verification__step__label pg-profile-page-verification__step__label--verified">
+						<div className="pg-profile-page-verification2__step__label pg-profile-page-verification2__step__label--verified">
 							<FormattedMessage id="page.body.profile.verification.verified" />
 							<CheckBigIcon />
 						</div>
 					</div>
-
-					</CardBody>
-				</Card>			
-              
-			</Flex>
 				);
 			case 'drafted':
 			case 'pending':
 			case 'submitted':
-				
 				return (
-					<Flex direction='row' mt={{ sm: "150px", md: "100px" }}>
-					<Card
-						height="520px"
-						width="360px"
-						backgroundColor="gray.600"
-					>
-						{/*
-						<CardHeader  mb='12px'>
-						
-						<div className="pg-profile-page-verification__step__info__title">
-								<span>{index + 1}.&nbsp;</span>
+					<div key={index} className="pg-profile-page-verification2__step pg-profile-page-verification2__step--pending">
+						<div className="pg-profile-page-verification2__step__info">
+							<div className="pg-profile-page-verification2__step__info__title">
+								
 								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
 							</div>
-							{this.renderProgressBar(labels)}
-						</CardHeader>
-				*/}
-						<CardBody>
-					<div key={index} className="pg-profile-page-verification__step pg-profile-page-verification__step--pending">
-						<div className="pg-profile-page-verification__step__info">
-							<div className="pg-profile-page-verification__step__info__title">
-								<div>Nível {index+1} </div>
-								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
-							</div>
-							<div className="pg-profile-page-verification__step__info__subtitle">
+							<div className="pg-profile-page-verification2__step__info__subtitle">
 								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle`} />
 							</div>
 						</div>
-						<div className="pg-profile-page-verification__step__label pg-profile-page-verification__step__label--pending">
+						<div className="pg-profile-page-verification2__step__label pg-profile-page-verification2__step__label--pending">
 							<FormattedMessage id="page.body.profile.verification.pending" />
 							<ClocksIcon />
 						</div>
 					</div>
-
-					</CardBody>
-				</Card>			
-              
-			</Flex>
-
 				);
 			case 'rejected':
 				return (
-										<Flex direction='row' mt={{ sm: "150px", md: "100px" }}>
-					<Card
-						height="520px"
-						width="360px"
-						backgroundColor="gray.600"
-					>
-						{/*
-						<CardHeader  mb='12px'>
-						
-						<div className="pg-profile-page-verification__step__info__title">
-								<span>{index + 1}.&nbsp;</span>
+					<div key={index} className="pg-profile-page-verification2__step pg-profile-page-verification2__step--rejected">
+						<div className="pg-profile-page-verification2_step__info">
+							<div className="pg-profile-page-verification2_step__info__title">
+								
 								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
 							</div>
-							{this.renderProgressBar(labels)}
-						</CardHeader>
-				*/}
-						<CardBody>
-					<div key={index} className="pg-profile-page-verification__step pg-profile-page-verification__step--rejected">
-						<div className="pg-profile-page-verification__step__info">
-							<div className="pg-profile-page-verification__step__info__title">
-								<div>Nível {index+1} </div>
-								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
-							</div>
-							<div className="pg-profile-page-verification__step__info__subtitle">
+							<div className="pg-profile-page-verification2__step__info__subtitle">
 								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle`} />
 							</div>
 						</div>
 						<div
-							className="pg-profile-page-verification__step__label pg-profile-page-verification__step__label--rejected"
+							className="pg-profile-page-verification2__step__label pg-profile-page-verification2__step__label--rejected"
 							onMouseEnter={e => this.handleHoverTooltipIcon()}
 							onMouseLeave={e => this.handleToggleTooltipVisible()}
 						>
@@ -284,95 +168,44 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 							<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.rejected.tooltip`} />
 						</span>
 					</div>
-					</CardBody>
-				</Card>			
-              
-			</Flex>
 				);
 			case 'blocked':
-				
 				return (
-					<Flex direction='row' mt={{ sm: "150px", md: "100px" }}>
-					<Card
-						height="520px"
-						width="360px"
-						backgroundColor="gray.600"
-					>
-						{/*
-						<CardHeader  mb='12px'>
-						
-						<div className="pg-profile-page-verification__step__info__title">
-								<span>{index + 1}.&nbsp;</span>
+					<div key={index} className="pg-profile-page-verification2__step pg-profile-page-verification2__step--blocked">
+						<div className="pg-profile-page-verification2__step__info">
+							<div className="pg-profile-page-verification2__step__info__title">
+					
 								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
 							</div>
-							{this.renderProgressBar(labels)}
-						</CardHeader>
-				*/}
-						<CardBody>
-							
-					<div key={index} className="pg-profile-page-verification__step pg-profile-page-verification__step--blocked">
-						<div className="pg-profile-page-verification__step__info">
-							
-							<div className="pg-profile-page-verification__step__info__title">
-								<div>Nível {index+1} </div>
-								
-								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
-							</div>
-							<div className="pg-profile-page-verification__step__info__subtitle">
+							<div className="pg-profile-page-verification2__step__info__subtitle">
 								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle`} />
 							</div>
 						</div>
-						<div className="pg-profile-page-verification__step__button pg-profile-page-verification__step__button--blocked">
+						<div className="pg-profile-page-verification2__step__button pg-profile-page-verification2__step__button--blocked">
 							<Link to="/confirm">
 								<FormattedMessage id="page.body.profile.verification.verify" />
 							</Link>
 						</div>
 					</div>
-					</CardBody>
-				</Card>			
-              
-			</Flex>
-					
 				);
 			default:
 				return (
-					<Flex direction='row' mt={{ sm: "150px", md: "100px" }}>
-					<Card
-						height="520px"
-						width="360px"
-						backgroundColor="gray.600"
-					>
-						{/*
-						<CardHeader  mb='12px'>
-						
-						<div className="pg-profile-page-verification__step__info__title">
-								<span>{index + 1}.&nbsp;</span>
+					<div key={index} className="pg-profile-page-verification2__step pg-profile-page-verification2__step--active">
+						<div className="pg-profile-page-verification2__step__info">
+							<div className="pg-profile-page-verification2__step__info__title">
+				
 								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
 							</div>
-							{this.renderProgressBar(labels)}
-						</CardHeader>
-				*/}
-						<CardBody>
-					<div key={index} className="pg-profile-page-verification__step pg-profile-page-verification__step--active">
-						<div className="pg-profile-page-verification__step__info">
-							<div className="pg-profile-page-verification__step__info__title">
-								<div>Nível {index+1} </div>
-								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
-							</div>
-							<div className="pg-profile-page-verification__step__info__subtitle">
+							<div className="pg-profile-page-verification2__step__info__subtitle">
 								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle`} />
 							</div>
 						</div>
-						<div className="pg-profile-page-verification__step__button pg-profile-page-verification__step__button--active">
+						<div className="pg-profile-page-verification2__step__button pg-profile-page-verification2__step__button--active">
 							<Link to="/confirm">
 								<FormattedMessage id="page.body.profile.verification.verify" />
 							</Link>
 						</div>
 					</div>
-					</CardBody>
-				</Card>			
-              
-			</Flex>
 				);
 		}
 	}
@@ -381,26 +214,10 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 		const { labels } = this.props;
 
 		return (
-			<div className="pg-profile-page__box pg-profile-page-verification">
-			<Flex direction='row' mt={{ sm: "150px", md: "100px" }}>
-
-
-
-						{kycSteps().map((step: string, index: number) => this.renderVerificationLabel(labels, step, index))}
-			
-              
-			</Flex>
-			</div>		
-			
-		
-			
-			
-			
-
-
-
-
-
+			<div className="pg-profile-page-verification2">
+				{this.renderProgressBar(labels)}
+				
+			</div>
 		);
 	}
 
@@ -433,7 +250,7 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 	};
 
 	private handleHoverTooltipIcon = () => {
-		changeElementPosition('pg-profile-page-verification__step__tooltip', 0, -100, 20);
+		changeElementPosition('pg-profile-page-verification2__step__tooltip', 0, -100, 20);
 		this.handleToggleTooltipVisible();
 	};
 }
