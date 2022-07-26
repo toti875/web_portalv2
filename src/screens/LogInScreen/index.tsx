@@ -83,9 +83,12 @@ class FormLogin extends React.Component<Props, LogInState> {
 		const className = cx('pg-sign-in-screen__container', { loading });
 
 		return (
-			<div className="pg-sign-in-screen">
-				<div className={className}>{require2FA ? this.render2FA() : this.renderSignInForm()}</div>
-			</div>
+
+		
+					<div className="pg-sign-in-screen">
+						<div className={className}>{require2FA ? this.render2FA() : this.renderSignInForm()}</div>
+					</div>
+
 		);
 	}
 

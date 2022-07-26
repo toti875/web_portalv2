@@ -106,7 +106,8 @@ const SignInComponent = React.memo((props: SignInProps) => {
 			</span>
 		</div>
 	);
-
+	const image = require('../../assets/images/logo_branca_bandeira_verde.svg'); 
+	
 	const {
 		email,
 		emailError,
@@ -116,7 +117,6 @@ const SignInComponent = React.memo((props: SignInProps) => {
 		passwordPlaceholder,
 		isLoading,
 		onSignUp,
-		image,
 		labelSignIn,
 		labelSignUp,
 		emailLabel,
@@ -130,11 +130,11 @@ const SignInComponent = React.memo((props: SignInProps) => {
 	const passwordGroupClass = cr('cr-sign-in-form__group', {
 		'cr-sign-in-form__group--focused': passwordFocused,
 	});
-	const logo = image ? (
+	const logo = (
 		<h1 className="cr-sign-in-form__title">
 			<img className="cr-sign-in-form__image" src={image} alt="logo" />
 		</h1>
-	) : null;
+	);
 
 	return (
 		<form>
@@ -154,7 +154,7 @@ const SignInComponent = React.memo((props: SignInProps) => {
 					</div>
 				)}
 				<div className="cr-sign-in-form__form-content">
-					{logo}
+					{logo} 
 					<div className={emailGroupClass}>
 						<CustomInput
 							type="email"

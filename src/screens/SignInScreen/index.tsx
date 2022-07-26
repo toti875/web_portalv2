@@ -21,6 +21,7 @@ import {
 	signUpRequireVerification,
 } from '../../modules';
 
+
 interface ReduxProps {
 	isLoggedIn: boolean;
 	loading?: boolean;
@@ -83,9 +84,12 @@ class SignIn extends React.Component<Props, SignInState> {
 		const className = cx('pg-sign-in-screen__container', { loading });
 
 		return (
-			<div className="pg-sign-in-screen">
-				<div className={className}>{require2FA ? this.render2FA() : this.renderSignInForm()}</div>
-			</div>
+
+
+					<div className="pg-sign-in-screen">
+						<div className={className}>{require2FA ? this.render2FA() : this.renderSignInForm()}</div>
+					</div>
+
 		);
 	}
 

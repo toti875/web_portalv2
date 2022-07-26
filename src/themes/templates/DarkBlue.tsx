@@ -1,7 +1,7 @@
 import { ThemeColorInterface } from './index';
 
 export const DarkBlueTheme: ThemeColorInterface[] = [
-	{ key: '--rgb-main-background-color', value: '23, 28, 41' },
+	{ key: '--rgb-main-background-color', value: '45, 52, 58' },
 	{ key: '--rgb-body-background-color', value: '30, 40, 65' },
 	{ key: '--rgb-header-background-color', value: '30, 40, 65' },
 	{ key: '--rgb-subheader-background-color', value: '40, 51, 78' },

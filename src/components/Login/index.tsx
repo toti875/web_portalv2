@@ -9,6 +9,9 @@ import { FormInput } from '..';
 import { EMAIL_REGEX } from '../../helpers';
 import { selectMobileDeviceState } from '../../modules/public/globalSettings';
 import './style.css';
+
+const Logo = require('../../assets/images/logo_branca_bandeira_verde.svg');
+
 export interface LogInProps {
 	labelSignIn?: string;
 	labelSignUp?: string;
@@ -38,6 +41,8 @@ export interface LogInProps {
 	changePassword: (value: string) => void;
 	changeEmail: (value: string) => void;
 }
+
+
 
 const Login = React.memo((props: LogInProps) => {
 	const {
@@ -159,6 +164,8 @@ const Login = React.memo((props: LogInProps) => {
 	) : null;
 
 	return (
+
+		
 		<form>
 			<div className="cr-sign-in-form" onKeyPress={handleEnterPress}>
 				{!isMobileDevice && (
@@ -171,7 +178,7 @@ const Login = React.memo((props: LogInProps) => {
 									wordSpacing: '2px',
 								}}
 							>
-								ACESSAR MINHA CONTA
+								<img className="cr-sign-in-form__image" src={Logo} alt="logo" />
 							</div>
 						</div>
 					</div>
@@ -185,34 +192,9 @@ const Login = React.memo((props: LogInProps) => {
 							marginBottom: '18px',
 						}}
 					>
-						Please check that you are visiting the correct URL
+						Faça seu login com o email utilizado no cadastro
 					</div>
-					<div
-						data-bn-type="text"
-						style={{
-							display: 'flex',
-							flexDirection: 'row',
-							justifyContent: 'space-between',
-							alignItems: 'center',
-							width: '100%',
-							maxWidth: '250px',
-							margin: '0 auto',
-							padding: '10px 30px',
-							border: '1px solid white',
-							borderRadius: '23px',
-						}}
-					>
-						<div style={{ marginTop: '-6px', color: 'green' }}>
-							<LockFilled />
-						</div>
-						<div dir="ltr">
-							<span data-bn-type="text" style={{ color: 'green' }}>
-								https://
-							</span>
-							<span data-bn-type="text">demo.fortem-financial.io</span>
-						</div>
-					</div>
-					{logo}
+
 					<div className={emailGroupClass}>
 						<FormInput
 							type="email"
@@ -260,6 +242,7 @@ const Login = React.memo((props: LogInProps) => {
 				</div>
 			</div>
 		</form>
+
 	);
 });
 

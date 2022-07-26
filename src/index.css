@@ -702,7 +702,7 @@
 				margin-top: calc(var(--gap) * 2);
 			}
 }.pg-sign-up-screen {
-	background-size: cover;
+
 	display: flex;
 	height: calc(120vh - 95px);
 	justify-content: center;
@@ -712,7 +712,7 @@
 		width: calc(var(--gap) * 70.66);
 	}.pg-sign-up-screen .cr-sign-up-form {
 		background: var(--body-background-color);
-		border-radius: calc(var(--gap) * 0.66);
+		border-radius: 20px;
 		margin: 0 auto;
 		min-height: calc(var(--big-gap) * 10);
 	}.pg-sign-up-screen .cr-sign-up-form__options-group {
@@ -734,7 +734,7 @@
 				border-color: var(--input-border-color-active) !important;
 			}.pg-sign-up-screen .cr-sign-up-form__title {
 			background: transparent;
-			font-size: calc(var(--gap) * 4);
+			font-size: calc(var(--gap) * 3);
 			margin: calc(var(--gap) * 6.66) !important;
 		}.pg-sign-up-screen .cr-sign-up-form__label {
 			background: var(--input-background-color);
@@ -814,7 +814,7 @@
 				padding: 0 calc(var(--gap) * 3.33);
 			}
 }.pg-sign-in-screen {
-	background-size: cover;
+	background: var(--main-background-color);
 	display: flex;
 	height: calc(100vh - 95px);
 	justify-content: center;
@@ -824,11 +824,13 @@
 		width: calc(var(--gap) * 70.66);
 	}.pg-sign-in-screen .cr-sign-in-form {
 		background: var(--body-background-color);
-		border-radius: calc(var(--gap) * 0.66);
+		border-radius: 20px;
 		display: flex;
 		flex-direction: column;
 		height: calc(var(--big-gap) * 7.5);
 		margin: 0 auto;
+		margin-top: 100px;
+		colon: white !important;
 	}.pg-sign-in-screen .cr-sign-in-form__options-group {
 			border-bottom: 2px solid var(--divider-color-level-2);
 			height: calc(var(--big-gap) * 0.97);
@@ -881,7 +883,7 @@
 				margin-top: calc(var(--gap) * 2);
 			}
 }.pg-sign-up-screen {
-	background-size: cover;
+	
 	display: flex;
 	height: 800px;
 	justify-content: center;
@@ -891,9 +893,10 @@
 		width: calc(var(--gap) * 70.66);
 	}.pg-sign-up-screen .cr-sign-up-form {
 		background: var(--body-background-color);
-		border-radius: calc(var(--gap) * 0.66);
+		border-radius: 20px;
 		margin: 0 auto;
 		min-height: calc(var(--big-gap) * 11);
+		margin-top: 100px;
 	}.pg-sign-up-screen .cr-sign-up-form__options-group {
 			border-bottom: 2px solid var(--divider-color-level-2);
 			height: calc(var(--big-gap) * 0.97);
@@ -913,12 +916,12 @@
 				border-color: var(--input-border-color-active) !important;
 			}.pg-sign-up-screen .cr-sign-up-form__title {
 			background: transparent;
-			font-size: calc(var(--gap) * 4);
-			margin: calc(var(--gap) * 6.66) !important;
+			font-size: calc(var(--gap) * 1);
+			
 		}.pg-sign-up-screen .cr-sign-up-form__label {
 			background: var(--input-background-color);
 			color: var(--inout-legend-color);
-			font-size: calc(var(--gap) * 2);
+			font-size: calc(var(--gap) * 1);
 			position: absolute;
 			top: calc(var(--gap) * (-1.33));
 		}.pg-sign-up-screen .cr-sign-up-form .cr-checkbox {
@@ -4028,7 +4031,7 @@
 					}.subheaderDesktop-screen .subheader__right-menu__dropdown__wrap:hover .subheader__right-menu__dropdown__wrap__content {
 						display: block;
 					}.subheaderDesktop-screen .subheader__right-menu__dropdown__wrap:hover .subheader__right-menu__dropdown__wrap__dropbtn {
-						color: #FDA736 !important;
+						color: #FDD57C !important;
 						outline: none !important;
 						text-decoration: none !important;
 					}.subheaderDesktop-screen .subheader__right-menu__dropdown__wrap:hover .subheader__right-menu__dropdown__wrap__dropbtn__icon-drop-down {
@@ -4043,13 +4046,13 @@
 						outline: none;
 						text-decoration: none;
 					}.subheaderDesktop-screen .subheader__right-menu__item__title a:hover, .subheaderDesktop-screen .subheader__right-menu__item__title span:hover {
-							color: #FDA736;
+							color: #FCC57D;
 						}.subheaderDesktop-screen .subheader__right-menu__item__title link {
 						color: white;
 						outline: none;
 						text-decoration: none;
 					}.subheaderDesktop-screen .subheader__right-menu__item__title link:hover {
-							color: #FDA736;
+							color: #FCC57D;
 						}.subheaderDesktop-screen .subheader__right-menu__item__title--active a,
 						.subheaderDesktop-screen .subheader__right-menu__item__title--active span {
 							color: #FCC57D;
@@ -4065,7 +4068,7 @@
 					}.subheaderDesktop-screen .subheader__right-menu__item__title--btn--active {
 							background-color: #FCC57D;
 						}.subheaderDesktop-screen .subheader__right-menu__item__title--btn:hover {
-							background-color: #FDA736;
+							background-color: #FCC57D;
 							color: white;
 						}.subheaderDesktop-screen .subheader__right-menu__item__title__icon {
 						font-size: 20px;
@@ -8287,12 +8290,14 @@
 	height: 500px;
 	max-width: 424px;
 	position: relative;
+	background: var(--body-backgound-color);
+	margin-top: 200px;
 }.cr-sign-in-form__options-group {
 		border-bottom: 2px solid var(--divider-color-level-2);
 		height: 58px;
 		width: 100%;
 	}.cr-sign-in-form__option {
-		background: var(--subheader-background-color);
+		background: transparent;
 		display: inline-block;
 		height: 58px;
 		width: 50%;
@@ -8320,6 +8325,7 @@
 		position: absolute;
 		right: 23px;
 		top: 80px;
+		background: transparent
 	}.cr-sign-in-form > * {
 		background: transparent;
 	}.cr-sign-in-form__error-message {
@@ -8345,7 +8351,7 @@
 		display: block;
 		height: 100px;
 		margin: 0 auto 20px auto;
-		width: 50%;
+		width: 60%;
 	}.cr-sign-in-form__title {
 		font-size: 18px;
 		margin: calc(var(--gap) * 3) 0 calc(var(--gap) * 8) 0;
@@ -8385,7 +8391,7 @@
 		}.cr-sign-in-form__bottom-section .cr-sign-in-form__bottom-section-signup:hover {
 				color: var(--primary-text-color);
 			}.cr-sign-up-form {
-	border-radius: 3px;
+	border-radius: 20px;
 	box-shadow: 0 10px 15px var(--shadow-color-level-2);
 	max-width: 424px;
 	min-height: 620px;

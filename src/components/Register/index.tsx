@@ -15,7 +15,7 @@ export interface RegisterFormProps {
 	onSignUp: () => void;
 	onSignIn?: () => void;
 	className?: string;
-	image?: string;
+	//image?: string;
 	labelSignIn?: string;
 	labelSignUp?: string;
 	emailLabel?: string;
@@ -62,6 +62,8 @@ export interface RegisterFormProps {
 	translate: (id: string) => string;
 }
 
+const image = require('../../assets/images/logo_branca_bandeira_verde.svg'); 
+
 export const Register = (props: RegisterFormProps) => {
 	const isMobileDevice = useSelector(selectMobileDeviceState);
 	const history = useHistory();
@@ -74,7 +76,7 @@ export const Register = (props: RegisterFormProps) => {
 		confirmPassword,
 		refId,
 		onSignIn,
-		image,
+		//image,
 		isLoading,
 		// labelSignIn,
 		labelSignUp,
@@ -226,11 +228,12 @@ export const Register = (props: RegisterFormProps) => {
 	const refIdGroupClass = cr('cr-sign-up-form__group', {
 		'cr-sign-up-form__group--focused': refIdFocused,
 	});
-	const logo = image ? (
-		<h1 className="cr-sign-up-form__title">
-			<img className="cr-sign-up-form__image" src={image} alt="logo" />
+
+	const logo = (
+		<h1 className="cr-sign-in-form__title">
+			<img className="cr-sign-in-form__image" src={image} alt="logo" />
 		</h1>
-	) : null;
+	);
 
 	return (
 		<form>
@@ -253,16 +256,17 @@ export const Register = (props: RegisterFormProps) => {
 					<div
 						data-bn-type="text"
 						style={{
-							margin: '12px 0',
+							margin: '-45px 0 0 20px',
 							display: 'flex',
 							flexDirection: 'column',
 							alignItems: 'center',
+							
 						}}
 					>
 						<div
 							data-bn-type="text"
 							style={{
-								fontSize: '18px',
+								fontSize: '15px',
 								letterSpacing: '1px',
 								wordSpacing: '2px',
 								textTransform: 'uppercase',
@@ -270,7 +274,7 @@ export const Register = (props: RegisterFormProps) => {
 								color: 'var(--primary-text-color)',
 							}}
 						>
-							Create a free account
+							Bem vindo à Fortem Financial
 						</div>
 						<div
 							data-bn-type="text"
@@ -279,7 +283,7 @@ export const Register = (props: RegisterFormProps) => {
 								margin: '0 0 32px',
 							}}
 						>
-							Welcome to Fortem Financial
+							Inicie sua jornada de investimento
 						</div>
 					</div>
 					<div className={emailGroupClass}>
@@ -313,12 +317,6 @@ export const Register = (props: RegisterFormProps) => {
 						/>
 						{confirmationError && <div className={'cr-sign-up-form__error'}>{confirmationError}</div>}
 					</div>
-					<div className={refIdGroupClass}>
-						<p style={{ cursor: 'pointer' }} onClick={handleDropdown}>
-							Referral ID (Optional) <CaretDownOutlined />
-						</p>
-						{renderFormInput()}
-					</div>
 
 					<Form className="cr-sign-up-form__group" onClick={e => props.clickCheckBox(e)}>
 						<Form.Check
@@ -343,7 +341,7 @@ export const Register = (props: RegisterFormProps) => {
 						</Button>
 
 						<div style={{ textAlign: 'center', marginTop: '20px' }}>
-							Already registered?
+							Já possui conta?
 							<span
 								data-bn-type="link"
 								className="cr-sign-up-form__button-wrapper__login"
@@ -354,7 +352,7 @@ export const Register = (props: RegisterFormProps) => {
 									color: 'var(--button-primary-cta-background-color)',
 								}}
 							>
-								Log In
+								Acessar
 							</span>
 						</div>
 					</div>

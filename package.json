@@ -81,6 +81,7 @@
 		"react-jvectormap": "0.0.16",
 		"react-maskinput": "^1.0.1",
 		"react-paginate": "^7.1.3",
+		"react-payment-card-component": "^0.2.1",
 		"react-perfect-scrollbar": "^1.5.8",
 		"react-quill": "^2.0.0-beta.4",
 		"react-redux": "^7.2.3",
