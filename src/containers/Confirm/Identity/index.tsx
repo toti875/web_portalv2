@@ -50,6 +50,7 @@ interface OnChangeEvent {
 }
 
 interface IdentityState {
+	cpf: string;
 	city: string;
 	countryOfBirth: string;
 	dateOfBirth: string;
@@ -69,6 +70,7 @@ type Props = ReduxProps & DispatchProps & RouterProps & IntlProps;
 
 class IdentityComponent extends React.Component<Props, IdentityState> {
 	public state = {
+		cpf: '',
 		city: '',
 		countryOfBirth: '',
 		dateOfBirth: '',
@@ -93,13 +95,14 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 
 		if ((!prev.editSuccess && editSuccess) || (!prev.sendSuccess && sendSuccess)) {
 			this.props.labelFetch();
-			history.push('/profile');
+			history.push('admin/pages/profile/overview');
 		}
 	}
 
 	public render() {
 		const { editSuccess, sendSuccess, lang } = this.props;
 		const {
+			cpf,
 			city,
 			dateOfBirth,
 			firstName,
@@ -188,7 +191,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 					<div className="pg-confirm__content-identity__forms__row">
 						<fieldset className={dateOfBirthGroupClass}>
 							<div className="custom-input">
-								{dateOfBirth ? <label>{this.translate('page.body.kyc.identity.dateOfBirth')}</label> : null}
+								<label>{this.translate('page.body.kyc.identity.dateOfBirth')}</label>
 								<div className="input-group input-group-lg">
 									<MaskInput
 										className="pg-confirm__content-identity__forms__row__content-number"
@@ -352,11 +355,11 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 	private handleValidateInput = (field: string, value: string): boolean => {
 		switch (field) {
 			case 'firstName':
-				const firstNameRegex = new RegExp(`^[a-zA-Z]{1,100}$`);
+				const firstNameRegex = new RegExp(`^[a-zA-Z0-9,.;/\\s]+$`);
 
 				return value.match(firstNameRegex) ? true : false;
 			case 'lastName':
-				const lastNameRegex = new RegExp(`^[a-zA-Z]{1,100}$`);
+				const lastNameRegex = new RegExp(`^[a-zA-Z0-9,.;/\\s]+$`);
 
 				return value.match(lastNameRegex) ? true : false;
 			case 'residentialAddress':
@@ -364,7 +367,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 
 				return value.match(residentialAddressRegex) ? true : false;
 			case 'city':
-				const cityRegex = new RegExp(`^[a-zA-Z]+$`);
+				const cityRegex = new RegExp(`^[a-zA-Z0-9,.;/\\s]+$`);
 
 				return value.match(cityRegex) ? true : false;
 			case 'postcode':

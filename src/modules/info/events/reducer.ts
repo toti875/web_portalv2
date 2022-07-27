@@ -2,10 +2,12 @@
 import { EventActions } from './actions';
 import { EVENT_DATA, EVENT_ERROR, EVENT_FETCH } from './constants';
 import { EventsState } from './types';
-import info1 from './img/info1.png';
-import info2 from './img/info2.png';
-import info3 from './img/info3.png';
-import info4 from './img/info4.png';
+
+import info1 from '../../../assets/animation/crypto-animation.gif'
+//import info1 from './img/info1.png';
+import info2 from '../../../assets/animation/crypto-animation2.gif'
+import info3 from '../../../assets/animation/crypto-animation3.gif'
+import info4 from '../../../assets/animation/crypto-animation2.gif'
 
 
 
@@ -16,7 +18,7 @@ export const initialEvent: EventsState = {
 			event_name: "Initial Offering",
 			description: "Lorem Ipsum",
 			image_link: info1,
-			ref_link: "Lorem Ipsum1",
+			ref_link: "http://local.fortem-financial.io:3002/tokens",
 			created_at: "Lorem Ipsum"
 		},
 	

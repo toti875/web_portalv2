@@ -6,6 +6,7 @@ import { eventFetch, selectEvents } from '../../modules';
 import { useDispatch, useSelector } from 'react-redux';
 import Slider from 'react-slick';
 
+import { SaleListTables } from '../../plugins/Sale/containers/SaleListTables';
 
 import { TickerTape } from 'react-tradingview-embed';
 
@@ -18,7 +19,11 @@ import Feature6 from './Home/Feature6.svg';
 import AppStore from './Home/AppStore.svg';
 import GgPlay from './Home/GgPlay.svg';
 import Cryp from './Home/Cryp.svg';
-import Banner_Event from './Home/banner_event.jpg';
+import Banner_Event from './Home/crypto-animation.gif';
+
+const Logo = require('../../assets/images/logo_branca_bandeira_verde.svg');
+
+const Logo_Capital = require ('../../assets/images/svg/branco_capital_bandeira_verde.svg');
 
 
 export const FortemIOHomePage = () => {
@@ -31,7 +36,7 @@ export const FortemIOHomePage = () => {
 
 	const events = useSelector(selectEvents);
 	const settingEvents = {
-		dots: false,
+		dots: true,
 		infinite: true,
 		speed: 500,
 		slidesToShow: 1,
@@ -50,12 +55,14 @@ export const FortemIOHomePage = () => {
 					<Slider {...settingEvents}>
 						{[...events.payload].map(event => {
 							return (
-								<div style={{ height: 80, position:'relative'}}>
+								<div style={{width: '100%', height: '100%', position:'relative'}}>
 									
-										<img src={Banner_Event} style={{ width: '100%', height: 80,  margin: 0 }}  />
+										<img src={event.image_link} style={{ width: '640px', height:'640px',  margin: 'auto', background: 'black',  }}  />
+										
+										<img src={Logo_Capital} style={{ position: 'absolute', background: 'black', width: '360px', height:'360px', margin: 'auto', top: '90px'}}  />
 										<p className='custom-text' style={{position: 'absolute',  top: '10px', color: 'white', display: 'flex', justifyContent:'center', alignItems:'center', fontSize: "2rem" }}>{event.event_name}</p>
-										<p className='custom-text' style={{position: 'absolute', bottom: '10px', color: 'white', display: 'flex', justifyContent:'center', alignItems:'center', fontSize: "1.5rem"  }}>{event.description}</p>
-
+										<p className='custom-text' style={{position: 'absolute', bottom: '10px', color: 'white', display: 'flex', justifyContent:'center', alignItems:'center', fontSize: "1.5rem", margin: 'auto'  }}>{event.description}</p>
+									
 									
 								</div>
 

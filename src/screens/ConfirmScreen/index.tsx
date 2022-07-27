@@ -66,7 +66,8 @@ class ConfirmComponent extends React.Component<Props> {
 		return (
 			<div className={containerClass}>
 				<div className="pg-confirm__logo">
-					<img src={Logo} alt="" className="pg-logo__img" />
+					<img src={Logo} alt="" className="pg-logo__img" height={64} width={64} />
+					
 				</div>
 				<h3 className="pg-confirm__title">
 					<FormattedMessage id={`page.confirm.title.${step}`} />

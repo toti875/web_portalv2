@@ -29,7 +29,7 @@ export const SaleListScreen: React.FC = () => {
 			<div id="sale-list" className="container-fluid">
 				<div className="row">
 					<div className="col-12 text-center">
-						<h1 className="sale-list__title">Welcome to Fortem FinancialLaunchpad!</h1>
+						<h1 className="sale-list__title">Welcome to Fortem Financial Launchpad!</h1>
 						<h2 className="sale-list__subtitle">
 							The starting point for the most promising projects the cryptocurrency space has to offer.
 						</h2>

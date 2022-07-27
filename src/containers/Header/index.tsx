@@ -259,7 +259,7 @@ export const Header: React.FC = () => {
 						<div className="header__left-menu__dropdown flex-shrink-0 ">
 							<div className={classLinkActive('ieo')} onClick={() => setStateActiveNow('ieo')}>
 								<Link
-									to="/ieo"
+									to="/tokens"
 									className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
 								>
 									Tokens
