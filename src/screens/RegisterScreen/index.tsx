@@ -366,7 +366,7 @@ class FormRegister extends React.Component<Props> {
 	};
 
 	private handleSignIn = () => {
-		this.props.history.push('/login');
+		this.props.history.push('/banner/authentication/sign-in/basic');
 	};
 
 	private handleReCaptchaSuccess: ReCAPTCHAProps['onChange'] = value => {

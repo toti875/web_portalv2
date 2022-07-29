@@ -108,14 +108,8 @@ export default function Pages(props) {
   document.documentElement.layout = "auth";
   return (
     <ChakraProvider theme={theme} resetCss={false} w='100%'>
-      <Box ref={navRef} w='100%'>
-        <Portal containerRef={navRef}>
-          <AuthNavbar
-            secondary={getActiveNavbar(routes)}
-            logoText='VISION UI PRO'
-          />
-        </Portal>
-        <Box w='100%'>
+
+        <Box w='100%' >
           <Box ref={wrapper} w='100%'>
             <Switch>
               {getRoutes(routes)}
@@ -126,7 +120,7 @@ export default function Pages(props) {
             </Switch>
           </Box>
         </Box>
-      </Box>
+
     </ChakraProvider>
   );
 }

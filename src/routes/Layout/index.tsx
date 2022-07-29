@@ -95,7 +95,16 @@ import {
 } from '../../screens';
 
 
-import Default from "../../ui_vision/layouts/Admin"
+import Default from "../../ui_vision/layouts/Admin";
+
+import SignInBasic from "../../ui_vision/layouts/Banner";
+import SignUpBasic from "../../ui_vision/layouts/Banner";
+
+
+
+
+
+
 
 
 
@@ -410,8 +419,8 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 			<div className={`container-fluid pg-layout ${tradingCls}`}>
 				<Switch>
 					<Route exact={true} path="/magic-link" component={MagicLink} />
-					<PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/login" component={LogInScreen} />
-					<PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/signup" component={RegisterScreen} />
+					<PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/banner/authentication/sign-in/basic" component={SignInBasic} />
+					<PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/banner/authentication/sign-up/basic" component={SignUpBasic} />
 					<PublicRoute
 						loading={userLoading}
 						isLogged={isLoggedIn}
@@ -450,7 +459,9 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					<Route path="/admin/dashboard/default" component={Default} />
 			
 					<Route path="/admin/pages/profile/wallets" component={Default} />
-					<Route path="/admin/ecommerce/orders/order-list" component={Default} />
+					<PublicRoute path="/banner/authentication/sign-in/basic" component={SignInBasic} />
+					<PublicRoute path="/auth/authentication/sign-in/cover" component={SignInBasic} />
+					<PublicRoute path="/banner/authentication/sign-up/basic" component={SignUpBasic} />
 
 					
 					

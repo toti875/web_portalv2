@@ -84,6 +84,12 @@ const dashRoutes = [
         layout: "/admin",
       },
       {
+        name: "Profile",
+        path: "/profile/overview",
+        component: Overview,
+        layout: "/admin",
+      },
+      {
         name: "CRM",
         path: "/dashboard/crm",
         component: CRM,
@@ -357,7 +363,7 @@ const dashRoutes = [
             items: [
               {
                 name: "Basic",
-                secondaryNavbar: true,
+                secondaryNavbar: false,
                 component: SignInBasic,
                 path: "/authentication/sign-in/basic",
                 layout: "/banner",

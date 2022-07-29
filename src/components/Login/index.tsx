@@ -137,14 +137,14 @@ const Login = React.memo((props: LogInProps) => {
 			>
 				Criar nova conta
 			</div>
-		</div>
+		</div> 
 	);
 
 	const renderRegister = (
 		<div className="pg-sign-in-screen__register">
 			<span>
 				{intl.formatMessage({ id: 'page.header.signIN.noAccountYet' })}
-				<span onClick={() => history.push('/signup')} className="pg-sign-in-screen__register-button">
+				<span onClick={() => history.push('/banner/authentication/sign-up/basic')} className="pg-sign-in-screen__register-button">
 					Cadastrar
 				</span>
 			</span>

@@ -158,7 +158,7 @@
 	--system-yellow: rgb(var(--rgb-system-yellow));
 	--system-red: rgb(var(--rgb-system-red));
 	--system-green: rgb(var(--rgb-system-green));
-	--input-background-color: rgb(var(--rgb-body-background-color));
+	--input-background-color: transparent !important;
 	--landing-background-color: rgb(var(--rgb-landing-background-color));
 	--strength-meter-very-strong: rgb(var(--rgb-strength-meter-very-strong));
 
@@ -634,73 +634,6 @@
 		width: 100vw;
 	}.trading-layout {
 	background: var(--main-background-color);
-}.pg-sign-in-screen {
-	background-size: cover;
-	display: flex;
-	height: 550px !important;
-	justify-content: center;
-}.pg-sign-in-screen .pg-sign-in-screen__container {
-		background: transparent;
-		margin-top: calc(var(--gap) * 3.33);
-		width: calc(var(--gap) * 70.66);
-	}.pg-sign-in-screen .cr-sign-in-form {
-		background: var(--body-background-color);
-		border-radius: calc(var(--gap) * 0.66);
-		display: flex;
-		flex-direction: column;
-		height: calc(var(--big-gap) * 7);
-		margin: 0 auto;
-	}.pg-sign-in-screen .cr-sign-in-form__options-group {
-			border-bottom: 2px solid var(--divider-color-level-2);
-			height: calc(var(--big-gap) * 0.97);
-			width: 100%;
-		}.pg-sign-in-screen .cr-sign-in-form__button-wrapper {
-			bottom: calc(var(--gap) * 3.5);
-			min-height: calc(var(--gap));
-		}.pg-sign-in-screen .cr-sign-in-form__option {
-			background: var(--subheader-background-color);
-		}.pg-sign-in-screen .cr-sign-in-form__option .__selected {
-				border-bottom: 2px solid var(--primary-cta-color);
-				color: var(--primary-text-color);
-			}.pg-sign-in-screen .cr-sign-in-form__title {
-			background: transparent;
-			font-size: calc(var(--gap) * 4);
-			margin: calc(var(--gap) * 6.66) !important;
-		}.pg-sign-in-screen .cr-sign-in-form__forgot {
-			color: var(--secondary-contrast-cta-color);
-			padding-top: calc(var(--gap) * 1.33);
-		}.pg-sign-in-screen .cr-sign-in-form__error,
-		.pg-sign-in-screen .cr-sign-in-form__error-message {
-			color: var(--system-red);
-		}.pg-sign-in-screen .cr-sign-in-form__footer {
-			bottom: calc(var(--gap) * (-1.66));
-			left: 0;
-			position: absolute;
-			right: 0;
-		}.pg-sign-in-screen .cr-sign-in-form__footer-create {
-				font-size: calc(var(--gap) * 2.33);
-				font-weight: bolder;
-			}.pg-sign-in-screen .cr-sign-in-form__footer-signup {
-				font-size: calc(var(--gap) * 2.33);
-				font-weight: bold;
-			}.pg-sign-in-screen .cr-sign-in-form__group--focused .cr-sign-in-form__label {
-				color: var(--input-legend-color-active);
-			}.pg-sign-in-screen .cr-sign-in-form__group--focused input {
-				border-color: var(--input-border-color-active) !important;
-			}@media screen and (max-width: 768px) {
-		.pg-sign-in-screen .pg-sign-in-screen__container {
-			margin: calc(var(--gap) * 3.33) calc(var(--gap) * 1.66) 0;
-			width: 100%;
-		}
-			.pg-sign-in-screen .cr-sign-in-form__button {
-				font-size: calc(var(--gap) * 2);
-				margin-top: calc(var(--gap) * 4);
-			}
-
-			.pg-sign-in-screen .cr-sign-in-form__title {
-				background: transparent;
-				margin-top: calc(var(--gap) * 2);
-			}
 }.pg-sign-up-screen {
 
 	display: flex;
@@ -711,8 +644,6 @@
 		margin-top: calc(var(--gap) * 3.33);
 		width: calc(var(--gap) * 70.66);
 	}.pg-sign-up-screen .cr-sign-up-form {
-		background: var(--body-background-color);
-		border-radius: 20px;
 		margin: 0 auto;
 		min-height: calc(var(--big-gap) * 10);
 	}.pg-sign-up-screen .cr-sign-up-form__options-group {
@@ -814,35 +745,37 @@
 				padding: 0 calc(var(--gap) * 3.33);
 			}
 }.pg-sign-in-screen {
-	background: var(--main-background-color);
+	background: transparent!important;
 	display: flex;
 	height: calc(100vh - 95px);
 	justify-content: center;
 }.pg-sign-in-screen .pg-sign-in-screen__container {
-		background: transparent;
+		background: transparent !important;
 		margin-top: calc(var(--gap) * 3.33);
 		width: calc(var(--gap) * 70.66);
 	}.pg-sign-in-screen .cr-sign-in-form {
-		background: var(--body-background-color);
-		border-radius: 20px;
+		color: white!important;
+		background: transparent!important;
+
 		display: flex;
 		flex-direction: column;
 		height: calc(var(--big-gap) * 7.5);
 		margin: 0 auto;
-		margin-top: 100px;
-		colon: white !important;
+		margin-top: 10px transparent;
 	}.pg-sign-in-screen .cr-sign-in-form__options-group {
-			border-bottom: 2px solid var(--divider-color-level-2);
+			border-bottom:0 transparent;
 			height: calc(var(--big-gap) * 0.97);
 			width: 100%;
+			background: transparent!important;
 		}.pg-sign-in-screen .cr-sign-in-form__button-wrapper {
 			bottom: calc(var(--gap) * 6.5);
 			min-height: calc(var(--gap));
 		}.pg-sign-in-screen .cr-sign-in-form__option {
-			background: var(--subheader-background-color);
+			background: transparent!important;
 		}.pg-sign-in-screen .cr-sign-in-form__option .__selected {
 				border-bottom: 2px solid var(--primary-cta-color);
 				color: var(--primary-text-color);
+				background: transparent!important;
 			}.pg-sign-in-screen .cr-sign-in-form__title {
 			background: transparent;
 			font-size: calc(var(--gap) * 4);
@@ -865,7 +798,7 @@
 				font-size: calc(var(--gap) * 2.33);
 				font-weight: bold;
 			}.pg-sign-in-screen .cr-sign-in-form__group--focused .cr-sign-in-form__label {
-				color: var(--input-legend-color-active);
+				color: var(--input-legend-color-active) !important;
 			}.pg-sign-in-screen .cr-sign-in-form__group--focused input {
 				border-color: var(--input-border-color-active) !important;
 			}@media screen and (max-width: 768px) {
@@ -887,18 +820,19 @@
 	display: flex;
 	height: 800px;
 	justify-content: center;
+	margin-top: -80px !important;
 }.pg-sign-up-screen .pg-sign-up-screen__container {
-		background: transparent;
-		margin-top: calc(var(--gap) * 3.33);
+		background: transparent !important;
+		margin-top: 0px !important;
 		width: calc(var(--gap) * 70.66);
+
 	}.pg-sign-up-screen .cr-sign-up-form {
-		background: var(--body-background-color);
-		border-radius: 20px;
+		background: transparent !important;
 		margin: 0 auto;
 		min-height: calc(var(--big-gap) * 11);
-		margin-top: 100px;
+		margin-top: 0px !important;
 	}.pg-sign-up-screen .cr-sign-up-form__options-group {
-			border-bottom: 2px solid var(--divider-color-level-2);
+			border-bottom: 0 !important;
 			height: calc(var(--big-gap) * 0.97);
 			width: 100%;
 		}.pg-sign-up-screen .cr-sign-up-form__form-content {
@@ -906,7 +840,7 @@
 		}.pg-sign-up-screen .cr-sign-up-form__group {
 			margin-bottom: calc(var(--gap) * 3.1);
 		}.pg-sign-up-screen .cr-sign-up-form__option {
-			background: var(--subheader-background-color);
+			background: transparent !important;
 		}.pg-sign-up-screen .cr-sign-up-form__option .__selected {
 				border-bottom: 2px solid var(--primary-cta-color);
 				color: var(--primary-text-color);
@@ -4446,7 +4380,7 @@
 						text-transform: uppercase;
 					}
 }.pg-sign-in-screen {
-	background-size: cover;
+
 	display: flex;
 	height: calc(100vh - calc(var(--gap) * 9.84));
 	justify-content: center;
@@ -8059,8 +7993,8 @@
 				margin-right: 20px;
 				margin-top: 5px;
 			}.cr-sign-in-form {
-	border-radius: 3px;
-	box-shadow: 0 10px 15px var(--shadow-color-level-2);
+
+
 	height: 500px;
 	max-width: 424px;
 	position: relative;
@@ -8069,7 +8003,7 @@
 		height: 58px;
 		width: 100%;
 	}.cr-sign-in-form__option {
-		background: var(--subheader-background-color);
+		background: transparent !important;
 		display: inline-block;
 		height: 58px;
 		width: 50%;
@@ -8077,7 +8011,7 @@
 			border-bottom: 2px solid var(--primary-cta-color);
 			color: var(--primary-text-color);
 		}.cr-sign-in-form__option-inner {
-		background: transparent;
+		background: transparent !important;
 		cursor: pointer;
 		font-size: 14px;
 		font-style: normal;
@@ -8092,12 +8026,13 @@
 	}.cr-sign-in-form__form-content {
 		bottom: 23px;
 		box-sizing: border-box;
+		background: transparent !important;
 		left: 23px;
 		position: absolute;
 		right: 23px;
 		top: 90px;
 	}.cr-sign-in-form > * {
-		background: transparent;
+		background: transparent !important;
 	}.cr-sign-in-form__error-message {
 		align-items: center;
 		background: transparent;
@@ -8108,7 +8043,7 @@
 		justify-content: center;
 		min-height: calc(var(--gap) * 6);
 	}.cr-sign-in-form__group {
-		background: transparent;
+		background: transparent !important;
 		margin: 20px 0;
 		position: relative;
 	}.cr-sign-in-form__error {
@@ -8144,7 +8079,7 @@
 		position: absolute;
 		width: 100%;
 	}.cr-sign-in-form__bottom-section .cr-sign-in-form__bottom-section-password {
-			background: transparent;
+			background: transparent !important;
 			color: var(--secondary-contrast-cta-color);
 			cursor: pointer;
 			font-size: 14px;
@@ -8156,8 +8091,7 @@
 		}.cr-sign-in-form__bottom-section .cr-sign-in-form__bottom-section-password:hover {
 				color: var(--primary-text-color);
 			}.cr-sign-up-form {
-	border-radius: 3px;
-	box-shadow: 0 10px 15px var(--shadow-color-level-2);
+
 	max-width: 424px;
 	min-height: 620px;
 	position: relative;
@@ -8287,13 +8221,11 @@
 		top: 10px;
 		z-index: 2;
 	}.cr-sign-in-form {
-	border-radius: 3px;
-	box-shadow: 0 10px 15px var(--shadow-color-level-2);
+
 	height: 500px;
 	max-width: 424px;
 	position: relative;
 	background: var(--body-backgound-color);
-	margin-top: 200px;
 }.cr-sign-in-form__options-group {
 		border-bottom: 2px solid var(--divider-color-level-2);
 		height: 58px;
@@ -8353,7 +8285,7 @@
 		display: block;
 		height: 100px;
 		margin: 0 auto 20px auto;
-		width: 60%;
+		width: 50%;
 	}.cr-sign-in-form__title {
 		font-size: 18px;
 		margin: calc(var(--gap) * 3) 0 calc(var(--gap) * 8) 0;
@@ -8393,8 +8325,7 @@
 		}.cr-sign-in-form__bottom-section .cr-sign-in-form__bottom-section-signup:hover {
 				color: var(--primary-text-color);
 			}.cr-sign-up-form {
-	border-radius: 20px;
-	box-shadow: 0 10px 15px var(--shadow-color-level-2);
+
 	max-width: 424px;
 	min-height: 620px;
 	position: relative;

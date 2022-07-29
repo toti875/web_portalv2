@@ -21,6 +21,8 @@ import {
 	signUpRequireVerification,
 } from '../../modules';
 
+//import {SignInBasic} from "../../ui_vision/views/Authentication/SignIn/SignInBasic";
+
 interface ReduxProps {
 	isLoggedIn: boolean;
 	loading?: boolean;
@@ -86,6 +88,7 @@ class FormLogin extends React.Component<Props, LogInState> {
 
 		
 					<div className="pg-sign-in-screen">
+		
 						<div className={className}>{require2FA ? this.render2FA() : this.renderSignInForm()}</div>
 					</div>
 
@@ -187,7 +190,7 @@ class FormLogin extends React.Component<Props, LogInState> {
 	};
 
 	private handleSignUp = () => {
-		this.props.history.push('/signup');
+		this.props.history.push('/banner/authentication/sign-up/basic');
 	};
 
 	private forgotPassword = () => {

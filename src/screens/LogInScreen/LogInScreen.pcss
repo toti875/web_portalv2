@@ -1,30 +1,31 @@
 .pg-sign-in-screen {
-	background: var(--main-background-color);
+	background: transparent!important;
 	display: flex;
 	height: calc(100vh - 95px);
 	justify-content: center;
 	
 
 	.pg-sign-in-screen__container {
-		background: transparent;
+		background: transparent !important;
 		margin-top: calc(var(--gap) * 3.33);
 		width: calc(var(--gap) * 70.66);
 	}
 
 	.cr-sign-in-form {
-		background: var(--body-background-color);
-		border-radius: 20px;
+		color: white!important;
+		background: transparent!important;
+
 		display: flex;
 		flex-direction: column;
 		height: calc(var(--big-gap) * 7.5);
 		margin: 0 auto;
-		margin-top: 100px;
-		colon: white !important;
+		margin-top: 10px transparent;
 
 		&__options-group {
-			border-bottom: 2px solid var(--divider-color-level-2);
+			border-bottom:0 transparent;
 			height: calc(var(--big-gap) * 0.97);
 			width: 100%;
+			background: transparent!important;
 		}
 
 		&__button-wrapper {
@@ -33,11 +34,12 @@
 		}
 
 		&__option {
-			background: var(--subheader-background-color);
+			background: transparent!important;
 
 			.__selected {
 				border-bottom: 2px solid var(--primary-cta-color);
 				color: var(--primary-text-color);
+				background: transparent!important;
 			}
 		}
 
@@ -76,7 +78,7 @@
 
 		&__group--focused {
 			.cr-sign-in-form__label {
-				color: var(--input-legend-color-active);
+				color: var(--input-legend-color-active) !important;
 			}
 
 			input {

@@ -5,6 +5,8 @@ import { NewMarketSlick } from '../../components';
 import { eventFetch, selectEvents } from '../../modules';
 import { useDispatch, useSelector } from 'react-redux';
 import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import { SaleListTables } from '../../plugins/Sale/containers/SaleListTables';
 
@@ -21,10 +23,16 @@ import GgPlay from './Home/GgPlay.svg';
 import Cryp from './Home/Cryp.svg';
 import Banner_Event from './Home/crypto-animation.gif';
 
+import { Player, Controls } from '@lottiefiles/react-lottie-player';
+
+
+
+
 const Logo = require('../../assets/images/logo_branca_bandeira_verde.svg');
 
 const Logo_Capital = require ('../../assets/images/svg/branco_capital_bandeira_verde.svg');
 
+const Anime1 = require ('../../assets/animation/Bigscene-1-.json');
 
 export const FortemIOHomePage = () => {
 	const history = useHistory();
@@ -45,6 +53,7 @@ export const FortemIOHomePage = () => {
 		autoplaySpeed: 6000,
 		pauseOnHover: true,
 	};
+
 	const renderEvent = () => {
 		return (
 			
@@ -176,6 +185,17 @@ export const FortemIOHomePage = () => {
 		<div className="cx-homepage">
 			{renderEvent()}
 			{renderMarketSlick()}
+			<Player
+  autoplay
+  loop
+  src="https://assets1.lottiefiles.com/packages/lf20_8wuout7s.json"
+  style={{ height: '640px', width: '640px', background: 'black' }}
+>
+  <Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
+</Player>
+
+			
+
 			{renderMarket()}
 			{renderFeature()}
 			{renderTrading()}

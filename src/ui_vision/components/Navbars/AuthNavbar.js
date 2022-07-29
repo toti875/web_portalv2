@@ -16,7 +16,7 @@
 */
 
 import React from "react";
-import routes from "routes.js";
+import routes from "../../routes.js";
 import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 

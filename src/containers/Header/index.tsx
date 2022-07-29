@@ -189,11 +189,11 @@ export const Header: React.FC = () => {
 	};
 
 	const redirectSingIn = () => {
-		history.push('/login');
+		history.push('/banner/authentication/sign-in/basic');
 	};
 
 	const redirectSingUp = () => {
-		history.push('/signup');
+		history.push('/banner/authentication/sign-up/basic');
 	};
 
 	const translate = (key: string) => intl.formatMessage({ id: key });
