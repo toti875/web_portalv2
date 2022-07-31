@@ -34,6 +34,7 @@ import SignInCover from "./views/Authentication/SignIn/SignInCover.js";
 import SignInIllustration from "./views/Authentication/SignIn/SignInIllustration.js";
 import SignUpBasic from "./views/Authentication/SignUp/SignUpBasic.js";
 import SignUpCover from "./views/Authentication/SignUp/SignUpCover.js";
+import ConfirmBasic from "./views/Authentication/Confirm/ConfirmBasic.js"
 import SignUpIllustration from "./views/Authentication/SignUp/SignUpIllustration.js";
 import CRM from "./views/Dashboard/CRM.js";
 import Default from "./views/Dashboard/Default.js";
@@ -366,6 +367,13 @@ const dashRoutes = [
                 secondaryNavbar: false,
                 component: SignInBasic,
                 path: "/authentication/sign-in/basic",
+                layout: "/banner",
+              },
+              {
+                name: "Basic",
+                secondaryNavbar: false,
+                component: ConfirmBasic,
+                path: "/authentication/confirm/basic",
                 layout: "/banner",
               },
               {

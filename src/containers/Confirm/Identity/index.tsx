@@ -62,6 +62,7 @@ interface IdentityState {
 	dateOfBirthFocused: boolean;
 	firstNameFocused: boolean;
 	lastNameFocused: boolean;
+	cpfFocused: boolean;
 	postcodeFocused: boolean;
 	residentialAddressFocused: boolean;
 }
@@ -82,6 +83,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 		dateOfBirthFocused: false,
 		firstNameFocused: false,
 		lastNameFocused: false,
+		cpfFocused: false,
 		postcodeFocused: false,
 		residentialAddressFocused: false,
 	};
@@ -115,6 +117,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 			lastNameFocused,
 			postcodeFocused,
 			residentialAddressFocused,
+			cpfFocused
 		} = this.state;
 
 		const firstNameGroupClass = cr('pg-confirm__content-identity__forms__row__content', {
@@ -133,6 +136,12 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 			'pg-confirm__content-identity__forms__row__content--focused': dateOfBirthFocused,
 			'pg-confirm__content-identity__forms__row__content--wrong':
 				dateOfBirth && !this.handleValidateInput('dateOfBirth', dateOfBirth),
+		});
+
+		const cpfGroupClass = cr('pg-confirm__content-identity__forms__row__content', {
+			'pg-confirm__content-identity__forms__row__content--focused': cpfFocused,
+			'pg-confirm__content-identity__forms__row__content--wrong':
+				cpf && !this.handleValidateInput('cpf', cpf),
 		});
 
 		const residentialAddressGroupClass = cr('pg-confirm__content-identity__forms__row__content', {
@@ -188,7 +197,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 							/>
 						</fieldset>
 					</div>
-					<div className="pg-confirm__content-identity__forms__row">
+					<div className="pg-confirm__content-identity__forms__row, input-group">
 						<fieldset className={dateOfBirthGroupClass}>
 							<div className="custom-input">
 								<label>{this.translate('page.body.kyc.identity.dateOfBirth')}</label>
@@ -202,6 +211,23 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 										onBlur={this.handleFieldFocus('dateOfBirth')}
 										value={dateOfBirth}
 										placeholder={this.translate('page.body.kyc.identity.dateOfBirth.placeholder')}
+									/>
+								</div>
+							</div>
+						</fieldset>
+						<fieldset className={cpfGroupClass}>
+							<div className="custom-input">
+								<label>{this.translate('page.body.kyc.identity.cpf')}</label>
+								<div className="input-group input-group-lg">
+									<MaskInput
+										className="pg-confirm__content-identity__forms__row__content-number"
+										maskString="000.000.000-00"
+										mask="000.000.000-00"
+										onChange={this.handleChangeCPF}
+										onFocus={this.handleFieldFocus('cpf')}
+										onBlur={this.handleFieldFocus('cpf')}
+										value={cpf}
+										placeholder={this.translate('page.body.kyc.identity.cpf.placeholder')}
 									/>
 								</div>
 							</div>
@@ -296,6 +322,12 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 					});
 					this.scrollToElement(2);
 					break;
+				case 'cpf':
+					this.setState({
+						cpfFocused: !this.state.cpfFocused,
+					});
+					this.scrollToElement(3);
+					break;					
 				case 'firstName':
 					this.setState({
 						firstNameFocused: !this.state.firstNameFocused,
@@ -318,7 +350,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 					this.setState({
 						residentialAddressFocused: !this.state.residentialAddressFocused,
 					});
-					this.scrollToElement(4);
+					this.scrollToElement(5);
 					break;
 				default:
 					break;
@@ -346,6 +378,20 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 		});
 	};
 
+	private handleChangeCPF = (e: OnChangeEvent) => {
+		this.setState({
+			cpf: this.formatCPF(e.target.value),
+		});
+	};
+
+	private formatCPF(cpf){
+		//retira os caracteres indesejados...
+		cpf = cpf.replace(/[^\d]/g, "");
+		
+		//realizar a formatação...
+		  return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
+	  }
+
 	private selectCountry = (value: string) => {
 		this.setState({
 			countryOfBirth: countries.getAlpha2Code(value, this.props.lang),
@@ -362,6 +408,10 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 				const lastNameRegex = new RegExp(`^[a-zA-Z0-9,.;/\\s]+$`);
 
 				return value.match(lastNameRegex) ? true : false;
+			case 'cpf':
+				const cpfRegex = new RegExp(`^(([0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}))$`);
+	
+				return value.match(cpfRegex) ? true : false;				
 			case 'residentialAddress':
 				const residentialAddressRegex = new RegExp(`^[a-zA-Z0-9,.;/\\s]+$`);
 
@@ -386,7 +436,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 	};
 
 	private handleCheckButtonDisabled = () => {
-		const { city, dateOfBirth, firstName, lastName, postcode, residentialAddress, countryOfBirth } = this.state;
+		const { cpf, city, dateOfBirth, firstName, lastName, postcode, residentialAddress, countryOfBirth } = this.state;
 
 		const firstNameValid = this.handleValidateInput('firstName', firstName);
 		const lastNameValid = this.handleValidateInput('lastName', lastName);
@@ -394,10 +444,12 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 		const cityValid = this.handleValidateInput('city', city);
 		const postcodeValid = this.handleValidateInput('postcode', postcode);
 		const dateOfBirthValid = this.handleValidateInput('dateOfBirth', dateOfBirth);
+		const cpfValid = this.handleValidateInput('cpf', cpf);
 
 		return (
 			!firstNameValid ||
 			!lastNameValid ||
+			!cpfValid ||
 			!residentialAddressValid ||
 			!countryOfBirth ||
 			!cityValid ||
@@ -409,9 +461,12 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 	private sendData = () => {
 		const { labels, user } = this.props;
 		const dob = !isDateInFuture(this.state.dateOfBirth) ? this.state.dateOfBirth : '';
+		const metadata = null;
 		const profileInfo: IdentityData = {
 			first_name: this.state.firstName,
 			last_name: this.state.lastName,
+			metadata: null,
+
 			dob,
 			address: this.state.residentialAddress,
 			postcode: this.state.postcode,

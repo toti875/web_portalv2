@@ -1200,7 +1200,7 @@
 		width: 3rem;
 	}.pg-confirm {
   align-items: center !important;
-  background: var(--body-background-color) !important;
+  background: transparent !important;
   display: flex !important;
   flex-direction: column !important;
   height: 720px !important;
@@ -1208,14 +1208,14 @@
 
   width: 620px !important;
 
-		border-radius: 20px !important;
 
-		margin: 80px auto !important;
+
+		margin: -40px auto !important;
 		color: white !important;
 }.pg-confirm__logo {
-    height: 60px !important;
-    margin-bottom: 24px;
-    margin-top: 47px;
+
+	margin-top: -10px !important;
+
   }.pg-confirm__title {
     align-items: center;
     color: var(--primary-text-color);
@@ -1231,7 +1231,8 @@
             margin-block-end: 0;
     -webkit-margin-before: 0;
             margin-block-start: 0;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
+	margin-top: -25px !important;
     -webkit-margin-end: 0;
             margin-inline-end: 0;
     -webkit-margin-start: 0;
@@ -1249,7 +1250,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-bottom: 100px;
   }.pg-confirm__content-phone,
     .pg-confirm__content-identity,
     .pg-confirm__content-documents,
@@ -1313,7 +1313,7 @@
         }.pg-confirm__content-phone__row.input-group > fieldset:last-child, .pg-confirm__content-phone__forms__row.input-group > fieldset:last-child, .pg-confirm__content-identity__row.input-group > fieldset:last-child, .pg-confirm__content-identity__forms__row.input-group > fieldset:last-child, .pg-confirm__content-documents__row.input-group > fieldset:last-child, .pg-confirm__content-documents__forms__row.input-group > fieldset:last-child, .pg-confirm__content-address__row.input-group > fieldset:last-child, .pg-confirm__content-address__forms__row.input-group > fieldset:last-child {
           margin-left: 6px;
         }.pg-confirm__content-phone fieldset, .pg-confirm__content-identity fieldset, .pg-confirm__content-documents fieldset, .pg-confirm__content-address fieldset {
-        background: var(--body-background-color);
+        background: transparent !important;
         border: 1px solid var(--input-border-color);
         border-radius: 4px;
         height: 49px;
@@ -1327,8 +1327,10 @@
           height: 100%;
           justify-content: space-between;
           width: 100%;
+		  background: transparent !important;
         }.pg-confirm__content-phone fieldset .input-group .custom-input, .pg-confirm__content-identity fieldset .input-group .custom-input, .pg-confirm__content-documents fieldset .input-group .custom-input, .pg-confirm__content-address fieldset .input-group .custom-input {
             width: calc(100% - 150px) !important;
+			background: transparent !important;
           }.pg-confirm__content-phone fieldset .input-group input:-webkit-autofill,
           .pg-confirm__content-phone fieldset .input-group input:-webkit-autofill:hover,
           .pg-confirm__content-phone fieldset .input-group input:-webkit-autofill:focus,
@@ -1345,16 +1347,19 @@
           }.pg-confirm__content-phone fieldset .custom-input, .pg-confirm__content-identity fieldset .custom-input, .pg-confirm__content-documents fieldset .custom-input, .pg-confirm__content-address fieldset .custom-input {
           height: 100%;
           width: calc(100% - 13px) !important;
+		  color: var(--primary-text-color);
+		  background: transparent !important;
         }.pg-confirm__content-phone fieldset .custom-input label, .pg-confirm__content-identity fieldset .custom-input label, .pg-confirm__content-documents fieldset .custom-input label, .pg-confirm__content-address fieldset .custom-input label {
-            background: var(--input-background-color);
+            background: transparent !important;
             color: var(--secondary-contrast-cta-color);
-            font-size: 11px;
+            font-size: 12px;
             left: 8px;
             line-height: 15px;
             margin-top: -8px;
             padding: 0 5px;
           }.pg-confirm__content-phone fieldset .custom-input input, .pg-confirm__content-identity fieldset .custom-input input, .pg-confirm__content-documents fieldset .custom-input input, .pg-confirm__content-address fieldset .custom-input input {
             border: none;
+			background: transparent !important;
             border-radius: 4px;
             color: var(--primary-text-color);
             font-size: 14px;
@@ -1392,8 +1397,12 @@
             border: none !important;
           }.pg-confirm__content-phone .cr-dropdown--default button, .pg-confirm__content-identity .cr-dropdown--default button, .pg-confirm__content-documents .cr-dropdown--default button, .pg-confirm__content-address .cr-dropdown--default button {
           color: var(--input-placeholder-color);
-        }.pg-confirm__content-phone .dropdown button, .pg-confirm__content-identity .dropdown button, .pg-confirm__content-documents .dropdown button, .pg-confirm__content-address .dropdown button {
+		  background: transparent !important;
+        }.pg-confirm__content-phone .dropdown, .pg-confirm__content-identity .dropdown, .pg-confirm__content-documents .dropdown, .pg-confirm__content-address .dropdown {
+		background: transparent !important;
+      }.pg-confirm__content-phone .dropdown button, .pg-confirm__content-identity .dropdown button, .pg-confirm__content-documents .dropdown button, .pg-confirm__content-address .dropdown button {
           align-items: center;
+		  background: transparent !important;
           display: flex;
           flex-direction: row;
           font-size: 14px;
@@ -1407,12 +1416,14 @@
           width: 100%;
         }.pg-confirm__content-phone .dropdown button::-webkit-scrollbar, .pg-confirm__content-identity .dropdown button::-webkit-scrollbar, .pg-confirm__content-documents .dropdown button::-webkit-scrollbar, .pg-confirm__content-address .dropdown button::-webkit-scrollbar {
             height: 0;
+			background: transparent !important;
           }.pg-confirm__content-phone .dropdown button::after, .pg-confirm__content-identity .dropdown button::after, .pg-confirm__content-documents .dropdown button::after, .pg-confirm__content-address .dropdown button::after {
             margin-right: 5px;
           }.pg-confirm__content-phone .dropdown-menu, .pg-confirm__content-identity .dropdown-menu, .pg-confirm__content-documents .dropdown-menu, .pg-confirm__content-address .dropdown-menu {
-          max-height: 98vh;
+          max-height: 90px;
           overflow-x: hidden;
           overflow-y: auto;
+		  
         }.pg-confirm__content-address__row__content-label {
       margin-top: -7px;
     }.pg-confirm__content-deep {
@@ -4156,8 +4167,8 @@
 	}img {
 	margin-right: 5px;
 }.pg-logo__img {
-	height: 100px;
-	width: 100px;
+	height: 128px;
+	width: 128px;
 }.pg-navbar {
 	background: #363944;
 	align-items: center;

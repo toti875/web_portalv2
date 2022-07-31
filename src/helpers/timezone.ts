@@ -1,6 +1,6 @@
 import * as moment from 'moment-timezone';
 
-let timezone = '';
+let timezone = 'br';
 export const getTimezone = () => (timezone.length > 0 ? timezone : moment.tz.guess());
 export const setTimezone = (tz: string) => (timezone = tz);
 

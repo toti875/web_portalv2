@@ -129,7 +129,7 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 							onMouseEnter={e => this.handleHoverTooltipIcon()}
 							onMouseLeave={e => this.handleToggleTooltipVisible()}
 						>
-							<Link to="/confirm">
+							<Link to="/banner/authentication/confirm/basic">
 								<FormattedMessage id="page.body.profile.verification.reverify" />
 							</Link>
 							<CrossIcon />
@@ -159,7 +159,7 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 							</div>
 						</div>
 						<div className="pg-profile-page-verification-labels__step__button pg-profile-page-verification-labels__step__button--blocked">
-							<Link to="/confirm">
+							<Link to="/banner/authentication/confirm/basic">
 								<FormattedMessage id="page.body.profile.verification.verify" />
 							</Link>
 						</div>
@@ -185,7 +185,7 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 							</div>
 						</div>
 						<div className="pg-profile-page-verification-labels__step__button pg-profile-page-verification-labels__step__button--active">
-							<Link to="/confirm">
+							<Link to="/banner/authentication/confirm/basic">
 								<FormattedMessage id="page.body.profile.verification.verify" />
 							</Link>
 						</div>

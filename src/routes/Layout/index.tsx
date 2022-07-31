@@ -100,6 +100,8 @@ import Default from "../../ui_vision/layouts/Admin";
 import SignInBasic from "../../ui_vision/layouts/Banner";
 import SignUpBasic from "../../ui_vision/layouts/Banner";
 
+import ConfirmBasic from "../../ui_vision/layouts/Banner"
+
 
 
 
@@ -495,6 +497,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					/>
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/orders" component={OrdersTabScreen} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/history" component={HistoryScreen} />
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/banner/authentication/confirm/basic" component={ConfirmBasic} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/confirm" component={ConfirmScreen} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={ProfileScreen} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/pages/profile/overview" component={Default} />

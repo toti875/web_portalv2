@@ -1,4 +1,5 @@
 import { en } from '../../translations/en';
+import { pt } from '../../translations/pt';
 
 // tslint:disable:no-submodule-imports
 // import localeRu from 'react-intl/locale-data/ru';
@@ -6,6 +7,6 @@ import { en } from '../../translations/en';
 
 // export const customLocaleData = ([...localeRu]);
 
-export type LangType = typeof en;
+export type LangType = typeof pt;
 
 

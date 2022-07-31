@@ -59,19 +59,20 @@ class ConfirmComponent extends React.Component<Props> {
 		const { isSidebarOpen } = this.props;
 		const step = this.handleGetVerificationStep();
 		const Logo = require('../../assets/images/logo_branca_bandeira_verde.svg');
-		const containerClass = classnames('pg-container pg-confirm', {
-			'pg-container--open': isSidebarOpen,
-		});
+		const containerClass = classnames('pg-confirm');
 
 		return (
 			<div className={containerClass}>
 				<div className="pg-confirm__logo">
-					<img src={Logo} alt="" className="pg-logo__img" height={64} width={64} />
+					<img src={Logo} alt="" className="pg-logo__img" />
 					
 				</div>
 				<h3 className="pg-confirm__title">
 					<FormattedMessage id={`page.confirm.title.${step}`} />
 				</h3>
+				<h6 className="pg-confirm__subtitle">
+					<FormattedMessage id={`page.confirm.subtitle.${step}`} />
+				</h6>
 				<div className="pg-confirm__content">{this.renderVerificationStep(step)}</div>
 			</div>
 		);

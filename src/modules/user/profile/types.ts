@@ -11,7 +11,7 @@ export interface UserProfile {
 	state: string;
 	created_at: string;
 	updated_at: string;
-	metadata?: string;
+	metadata: string;
 }
 
 export interface Phone {
@@ -23,6 +23,8 @@ export interface Phone {
 export interface User {
 	username?: string;
 	email: string;
+	name?: string;
+	lastname?: string;
 	level: number;
 	otp: boolean;
 	role: string;
