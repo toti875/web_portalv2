@@ -12,7 +12,7 @@ export interface ConfigsState extends CommonState {
 
 const defaultConfigs: Configs = {
 	captcha_type: 'none',
-	password_min_entropy: 0,
+	password_min_entropy: 14,
 };
 
 export const initialConfigsState: ConfigsState = {

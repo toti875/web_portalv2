@@ -62,14 +62,10 @@ const renderPasswordStrengthMeter = (passwordStrengthMeterLength: number) => (
 const renderPasswordStrengthTip = (props: PasswordStrengthMeterProps, passwordStrengthMeterLength: number) =>
 	props.passwordPopUp ? (
 		<div className="pg-password-pop-up">
-			<div className="pg-password-pop-up__strength">
-				<div className="pg-password-pop-up__strength-title">
-					{props.translate('page.header.signUp.strength.password')}
-				</div>
 				<div className={`pg-password-pop-up__strength-status ${passwordStrengthClassName(passwordStrengthMeterLength)}`}>
 					{passwordStrengthStatus(passwordStrengthMeterLength, props.translate)}
 				</div>
-			</div>
+			
 			<PasswordStrengthTip
 				passwordErrorFirstSolved={props.passwordErrorFirstSolved}
 				passwordErrorSecondSolved={props.passwordErrorSecondSolved}

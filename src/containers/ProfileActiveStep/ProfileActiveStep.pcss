@@ -1,9 +1,9 @@
 .td-pg-profile__active-step {
-	background-color: #002145;
-	margin-bottom: 40px;
-	margin-top: 40px;
+	background-color: transparent !important;
+	margin-bottom: 60px !important;
+
 	overflow: hidden;
-	padding: 20px;
+
 	position: relative;
 
 	&__mask-icon {
@@ -13,11 +13,18 @@
 	}
 
 	&__title {
+		
+		color: #fff !important;
+		font-size: 14px;
 		font-weight: 700px;
+		margin-top: -16px !important;
+		margin-bottom: 40px !important;
 	}
 
 	&__content {
-		margin-top: 20px;
+		color: #fff !important;
+		font-size: 12px;
+		margin-top: 10px !important;
 
 		&__item {
 			position: relative;
@@ -27,7 +34,7 @@
 				::before {
 					background-color: #c4c4c4;
 					content: '';
-					height: 1px;
+					height: 2px;
 					position: absolute;
 					right: 100%;
 					top: calc(21px / 2);
@@ -39,7 +46,6 @@
 				align-items: center;
 				background-color: #c4c4c4;
 				border-radius: 50%;
-				color: #000;
 				display: flex;
 				height: 21px;
 				justify-content: center;
@@ -49,11 +55,15 @@
 			}
 
 			&__step--active {
-				background-color: #ecb22d;
+				background-color: #f9a912;
+				font-size: 14px;
 			}
 
 			&__title {
 				margin-top: 20px;
+				color: #fff !important;
+				font-size: 14px;
+				font-weight: 700px;
 			}
 
 			&__desc {
@@ -62,10 +72,12 @@
 			}
 
 			&__action {
-				background-color: rgb(47, 182, 126);
+				background-color: #18988F;
+				border-color: #18988F !important;
 
 				&:hover {
-					background-color: rgba(47, 182, 126, 0.8);
+					background-color: #1EDED0;
+					border-color: #1EDED0;
 				}
 			}
 		}

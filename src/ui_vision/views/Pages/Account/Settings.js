@@ -15,11 +15,13 @@
 
 */
 
-import React, { useState } from "react";
+import React, { useReducer, useState } from "react";
+import { useSelector } from 'react-redux';
 
 // Chakra imports
 import {
   Avatar,
+  AvatarBadge,
   Badge,
   Box,
   Button,
@@ -46,8 +48,12 @@ import {
   DarkMode,
 } from "@chakra-ui/react";
 
-// Images
-import avatar11 from "../../../assets/img/avatars/avatar11.png";
+
+import {
+  FaCube,
+  FaPencilAlt,
+
+} from "react-icons/fa";
 
 // Custom components
 import Card from "../../../components/Card/Card";
@@ -66,200 +72,81 @@ import {
 
 import { AiFillDelete } from "react-icons/ai";
 import { BsArrowRight, BsCircleFill, BsToggleOn } from "react-icons/bs";
-import { FaCube, FaUser } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
 import { GiSmartphone } from "react-icons/gi";
 import { IoIosArrowUp, IoIosRocket, IoMdNotifications } from "react-icons/io";
 //import { IoDocumentText } from "react-icons/io5";
 import { MdPowerSettingsNew } from "react-icons/md";
 import { RiComputerLine } from "react-icons/ri";
 
+import { selectUserActivity, selectUserInfo } from 'modules';
+import { ProfileAccountActivity, ProfileActiveStep, ProfileAuthDetails, Profile2FA, ProfileAnnouncement, ProfileApiKeys, ProfileTwoFactorAuth, ProfileSecurity, ProfileVerification, ProfileVerificationLabels } from 'containers';
+import { localeDate, setDocumentTitle } from 'helpers';
+
+const GetUserEmail = () => {
+	const userActivity = useSelector(selectUserActivity);
+	const user = useSelector(selectUserInfo);
+
+	const lastLogin = userActivity.find(act => act.action === 'login');
+	const ip = lastLogin ? lastLogin.user_ip : '';
+	const time = lastLogin ? localeDate(lastLogin.created_at, 'fullDate') : '';
+
+	return (<React.Fragment>{user.email}</React.Fragment>);
+}
+
+const GetUserID = () => {
+	const userActivity = useSelector(selectUserActivity);
+	const user = useSelector(selectUserInfo);
+
+	const lastLogin = userActivity.find(act => act.action === 'login');
+	const ip = lastLogin ? lastLogin.user_ip : '';
+	const time = lastLogin ? localeDate(lastLogin.created_at, 'fullDate') : '';
+  
+	return (<>{user.uid}</>);
+}
+
+const GetUserLoginInformation = () => {
+	const userActivity = useSelector(selectUserActivity);
+
+	const lastLogin = userActivity.find(act => act.action === 'login');
+	const ip = lastLogin ? lastLogin.user_ip : '';
+	const time = lastLogin ? localeDate(lastLogin.created_at, 'fullDate') : '';
+
+	return (
+		
+						<div>
+							<span>Útimo login: {time} </span>
+							<span>IP : {ip} </span>
+						</div>
+	
+	);
+};
+
+
 function Settings() {
   const bgActiveButton = "brand.200";
   const bgHoverLinks = "brand.200";
   const bgVerificationCard = "#0F1535";
 
-  // sets the active button based on the current state
-  const [activeButtons, setActiveButtons] = useState({
-    messages: true,
-    social: false,
-    notifications: false,
-    backup: false,
-  });
-
-  const [skills, setSkills] = useState([
-    {
-      name: "chakra-ui",
-      id: 1,
-    },
-    {
-      name: "react",
-      id: 2,
-    },
-    {
-      name: "javascript",
-      id: 3,
-    },
-  ]);
-
-  const [toggle, setToggle] = useState(false);
-
-  // Creates the skills in the text area
-  const keyPress = (e) => {
-    if (e.keyCode === 13) {
-      setSkills([
-        ...skills,
-        {
-          name: e.target.value,
-          id: skills.length === 0 ? 1 : skills[skills.length - 1].id + 1,
-        },
-      ]);
-      e.target.value = "";
-    }
-  };
-
   return (
+
     <Flex direction='column' pt={{ sm: "125px", lg: "75px" }}>
-      <Box w='100%'>
-        {/* Buttons */}
-        <Stack
-          direction={{ sm: "column", lg: "row" }}
-          spacing={{ sm: "8px", lg: "38px" }}
-          w={{ sm: "100%", lg: null }}>
-          <Button
-            borderRadius='12px'
-            boxShadow={
-              activeButtons.messages
-                ? "0px 2px 5.5px rgba(0, 0, 0, 0.06)"
-                : "none"
-            }
-            bg={activeButtons.messages ? bgActiveButton : "transparent"}
-            transition='all .5s ease'
-            w={{ sm: "100%", lg: "135px" }}
-            h='35px'
-            _hover='none'
-            _focus={{ boxShadow: "0px 2px 5.5px rgba(0, 0, 0, 0.06)" }}
-            _active={{
-              boxShadow: activeButtons.messages
-                ? "0px 2px 5.5px rgba(0, 0, 0, 0.06)"
-                : "none",
-            }}
-            onClick={() =>
-              setActiveButtons({
-                messages: true,
-                social: false,
-                notifications: false,
-                backup: false,
-              })
-            }>
-            <Text color='#fff' fontSize='10px' fontWeight='bold'>
-              MESSAGES
-            </Text>
-          </Button>
-          <Button
-            borderRadius='12px'
-            boxShadow={
-              activeButtons.social
-                ? "0px 2px 5.5px rgba(0, 0, 0, 0.06)"
-                : "none"
-            }
-            bg={activeButtons.social ? bgActiveButton : "transparent"}
-            transition='all .5s ease'
-            w={{ sm: "100%", lg: "135px" }}
-            h='35px'
-            _hover='none'
-            _focus={{ boxShadow: "0px 2px 5.5px rgba(0, 0, 0, 0.06)" }}
-            _active={{
-              boxShadow: activeButtons.social
-                ? "0px 2px 5.5px rgba(0, 0, 0, 0.06)"
-                : "none",
-            }}
-            onClick={() =>
-              setActiveButtons({
-                messages: false,
-                social: true,
-                notifications: false,
-                backup: false,
-              })
-            }>
-            <Text color='#fff' fontSize='10px' fontWeight='bold'>
-              SOCIAL
-            </Text>
-          </Button>
-          <Button
-            borderRadius='12px'
-            boxShadow={
-              activeButtons.notifications
-                ? "0px 2px 5.5px rgba(0, 0, 0, 0.06)"
-                : "none"
-            }
-            bg={activeButtons.notifications ? bgActiveButton : "transparent"}
-            transition='all .5s ease'
-            w={{ sm: "100%", lg: "135px" }}
-            h='35px'
-            _hover='none'
-            _focus={{ boxShadow: "0px 2px 5.5px rgba(0, 0, 0, 0.06)" }}
-            _active={{
-              boxShadow: activeButtons.notifications
-                ? "0px 2px 5.5px rgba(0, 0, 0, 0.06)"
-                : "none",
-            }}
-            onClick={() =>
-              setActiveButtons({
-                messages: false,
-                social: false,
-                notifications: true,
-                backup: false,
-              })
-            }>
-            <Text color='#fff' fontSize='10px' fontWeight='bold'>
-              NOTIFICATIONS
-            </Text>
-          </Button>
-          <Button
-            borderRadius='12px'
-            boxShadow={
-              activeButtons.backup
-                ? "0px 2px 5.5px rgba(0, 0, 0, 0.06)"
-                : "none"
-            }
-            bg={activeButtons.backup ? bgActiveButton : "transparent"}
-            transition='all .5s ease'
-            w={{ sm: "100%", lg: "135px" }}
-            h='35px'
-            _hover='none'
-            _focus={{ boxShadow: "0px 2px 5.5px rgba(0, 0, 0, 0.06)" }}
-            _active={{
-              boxShadow: activeButtons.backup
-                ? "0px 2px 5.5px rgba(0, 0, 0, 0.06)"
-                : "none",
-            }}
-            onClick={() =>
-              setActiveButtons({
-                messages: false,
-                social: false,
-                notifications: false,
-                backup: true,
-              })
-            }>
-            <Text color='#fff' fontSize='10px' fontWeight='bold'>
-              BACKUP
-            </Text>
-          </Button>
-        </Stack>
-      </Box>
       {/* Menu */}
       <Card
-        w={{ sm: "100%", lg: "262px", xl: "21%", "2xl": "23.4%" }}
+        w={{ sm: "100%", lg: "262px", xl: "15%", "2xl": "15%" }}
         mt={{ sm: "30px", lg: "0px" }}
         position={{ lg: "fixed" }}
-        top={{ lg: "180px" }}>
-        <CardBody>
+        top={{ lg: "150px" }}
+        bg='#131538'
+        borderRadius='10px'
+        >
+        <CardBody bg='#131538'>
           <Stack direction='column' spacing='8px' w='100%' color='gray.500'>
             <Link to='profile' spy={true} smooth={true} duration={500}>
               <Button
                 variant='transparent-with-icon'
                 borderRadius='15px'
-                _hover={{ bg: bgHoverLinks }}
+               
                 w='100%'>
                 <Flex align='center' justifySelf='flex-start' w='100%'>
                   <Icon
@@ -269,8 +156,8 @@ function Settings() {
                     h='18px'
                     color='#fff'
                   />
-                  <Text color='#fff' fontWeight='500' fontSize='xs'>
-                    Profile
+                  <Text color='#fff' fontWeight='500' fontSize='15'  _hover='#1EDED0'>
+                    Status da Conta
                   </Text>
                 </Flex>
               </Button>
@@ -283,14 +170,14 @@ function Settings() {
                 w='100%'>
                 <Flex align='center' justifySelf='flex-start' w='100%'>
                   <Icon
-                    as={MdPowerSettingsNew}
+                    as={FaUser}
                     me='12px'
                     w='18px'
                     h='18px'
                     color='#fff'
                   />
-                  <Text color='#fff' fontWeight='500' fontSize='xs'>
-                    Basic Info
+                  <Text color='#fff' fontWeight='500' fontSize='15'>
+                    Dados Pessoais
                   </Text>
                 </Flex>
               </Button>
@@ -298,13 +185,13 @@ function Settings() {
             <Link to='change-password' spy={true} smooth={true} duration={500}>
               <Button
                 variant='transparent-with-icon'
-                borderRadius='15px'
+                borderRadius='20px'
                 _hover={{ bg: bgHoverLinks }}
                 w='100%'>
                 <Flex align='center' justifySelf='flex-start' w='100%'>
                   <Icon as={FaCube} me='12px' w='18px' h='18px' color='#fff' />
-                  <Text color='#fff' fontWeight='500' fontSize='xs'>
-                    Change Password
+                  <Text color='#fff' fontWeight='500' fontSize='15'>
+                    Limites Operacionais
                   </Text>
                 </Flex>
               </Button>
@@ -323,8 +210,8 @@ function Settings() {
                     h='18px'
                     color='#fff'
                   />
-                  <Text color='#fff' fontWeight='500' fontSize='xs'>
-                    2FA
+                  <Text color='#fff' fontWeight='500' fontSize='15'>
+                    Preferências
                   </Text>
                 </Flex>
               </Button>
@@ -357,8 +244,8 @@ function Settings() {
                     h='18px'
                     color='#fff'
                   />
-                  <Text color='#fff' fontWeight='500' fontSize='xs'>
-                    Notifications
+                  <Text color='#fff' fontWeight='500' fontSize='15'>
+                    Avisos
                   </Text>
                 </Flex>
               </Button>
@@ -377,8 +264,8 @@ function Settings() {
                     h='18px'
                     color='#fff'
                   />
-                  <Text color='#fff' fontWeight='500' fontSize='xs'>
-                    Sessions
+                  <Text color='#fff' fontWeight='500' fontSize='15'>
+                    Sessões
                   </Text>
                 </Flex>
               </Button>
@@ -397,8 +284,8 @@ function Settings() {
                     h='18px'
                     color='#fff'
                   />
-                  <Text color='#fff' fontWeight='500' fontSize='xs'>
-                    Delete Account
+                  <Text color='#fff' fontWeight='500' fontSize='15'>
+                    Excluir Conta
                   </Text>
                 </Flex>
               </Button>
@@ -408,54 +295,57 @@ function Settings() {
       </Card>
       <Stack
         direction='column'
-        spacing='24px'
-        mt='40px'
+        spacing='10px'
+        mt='60px'
         align={{ lg: "flex-end" }}
         justify={{ lg: "flex-end" }}
         w='100%'>
         {/* Header */}
         <Card
-          w={{ sm: "100%", lg: "70%" }}
+          w={{ sm: "100%", lg: "83%" }}
           alignSelf={{ lg: "flex-end" }}
-          justifySelf={{ lg: "flex-end" }}>
+          justifySelf={{ lg: "flex-end" }}
+          bg='#131538'
+          borderRadius='10px'
+          >
           <Element id='profile' name='profile'>
-            <CardBody>
+            <CardBody bg='transparent' >
               <Flex
                 direction={{ sm: "column", md: "row" }}
                 justify='space-between'
                 align='center'
                 w='100%'>
                 <Flex align='center'>
-                  <Avatar
-                    src={avatar11}
-                    w='80px'
-                    h='80px'
-                    me='22px'
-                    borderRadius='15px'
-                  />
+                <Avatar
+                me={{ md: "26px" }}
+                //src={avatar11}
+                w='80px'
+                h='80px'
+                borderRadius='8px'>
+                <AvatarBadge
+                  cursor='pointer'
+                  borderRadius='8px'
+                  border='transparent'
+                  bg='linear-gradient(138.78deg, rgba(6, 11, 40, 0.94) 17.44%, rgba(10, 14, 35, 0.49) 93.55%, rgba(10, 14, 35, 0.69) 93.55%)'
+                  boxSize='26px'
+                  backdropFilter='blur(120px)'>
+                  <Icon h='12px' w='12px' color='#fff' as={FaPencilAlt} />
+                </AvatarBadge>
+              </Avatar>
                   <Flex direction='column'>
-                    <Text color='#fff' fontWeight='bold' fontSize='lg'>
-                      Mark Johnson
+                    <Text color='#fff' fontWeight='bold' fontSize='15'>
+                      Jeferson Martin
                     </Text>
-                    <Text color='gray.400' fontWeight='500' fontSize='sm'>
-                      mark@simmmple.com
+                    <Text color='#f9a912' fontWeight='500' fontSize='14'>
+                      ID: {GetUserID()}
+                    </Text>
+                    <Text color='gray.400' fontWeight='500' fontSize='14' >
+                      {GetUserEmail()}
+                    </Text>
+                    <Text color='gray.400' fontWeight='500' fontSize='14' >
+                      {GetUserLoginInformation()}
                     </Text>
                   </Flex>
-                </Flex>
-                <Flex
-                  align='center'
-                  alignSelf={{ sm: "flex-start", lg: null }}
-                  mt={{ sm: "16px", lg: null }}
-                  ms={{ sm: "6px", lg: null }}>
-                  <Text color='#fff' fontWeight='500' me='14px' fontSize='sm'>
-                    Switch to {toggle ? "invisible" : "visible"}
-                  </Text>
-                  <DarkMode>
-                    <Switch
-                      colorScheme='brand'
-                      onChange={() => setToggle(!toggle)}
-                    />
-                  </DarkMode>
                 </Flex>
               </Flex>
             </CardBody>
@@ -463,13 +353,37 @@ function Settings() {
         </Card>
         {/* Basic Info Card*/}
         <Card
-          w={{ sm: "100%", lg: "70%" }}
-          alignSelf='flex-end'
-          justifySelf='flex-end'>
+          w={{ sm: "100%", lg: "83%" }}
+          alignSelf={{ lg: "flex-end" }}
+          justifySelf={{ lg: "flex-end" }}
+          bg='#131538'
+          borderRadius='10px'
+          >
           <Element id='info' name='info'>
             <CardHeader mb='40px'>
-              <Text color='#fff' fontSize='lg' fontWeight='bold'>
-                Basic Info
+              <Text color='#fff' fontSize='15' fontWeight='bold'>
+                Status da Conta
+              </Text>
+            </CardHeader>
+            <CardBody>
+              <Flex w='100%' direction={{ sm: "column", md: "row" }}>
+        				<ProfileActiveStep />
+              </Flex>
+            </CardBody>
+          </Element>
+        </Card>
+
+        <Card
+          w={{ sm: "100%", lg: "83%" }}
+          alignSelf={{ lg: "flex-end" }}
+          justifySelf={{ lg: "flex-end" }}
+          bg='#131538'
+          borderRadius='10px'
+          >
+          <Element id='info' name='info'>
+            <CardHeader mb='40px'>
+              <Text color='#fff' fontSize='15' fontWeight='bold'>
+                Dados Pessoais
               </Text>
             </CardHeader>
             <CardBody>
@@ -726,63 +640,7 @@ function Settings() {
                       <option value='option3'>Romanian</option>
                     </Select>
                   </FormControl>
-                  <FormControl>
-                    <FormLabel
-                      fontWeight='bold'
-                      color='#fff'
-                      fontSize='xs'
-                      mb='10px'>
-                      Skills
-                    </FormLabel>
-                    <Flex
-                      direction='row'
-                      p='12px'
-                      wrap='wrap'
-                      borderRadius='15px'
-                      _focus={{ borderColor: "brand.200" }}
-                      minH='60px'
-                      cursor='text'
-                      border='.5px solid'
-                      borderColor='rgba(226, 232, 240, 0.3)'
-                      _hover='none'
-                      color='#fff'>
-                      {skills.map((skill, index) => {
-                        return (
-                          <Tag
-                            minW='80px'
-                            fontSize='xs'
-                            h='25px'
-                            mb='6px'
-                            me='6px'
-                            key={skill.id}
-                            borderRadius='12px'
-                            variant='solid'
-                            bg='brand.200'
-                            key={index}>
-                            <TagLabel w='100%'>{skill.name}</TagLabel>
-                            <TagCloseButton
-                              justifySelf='flex-end'
-                              onClick={() =>
-                                setSkills([
-                                  ...skills.filter(
-                                    (element) => element.id !== skill.id
-                                  ),
-                                ])
-                              }
-                            />
-                          </Tag>
-                        );
-                      })}
-                      <Input
-                        borderRadius='15px'
-                        border='none'
-                        _focus='none'
-                        p='0px'
-                        onKeyDown={(e) => keyPress(e)}
-                        fontSize='xs'
-                      />
-                    </Flex>
-                  </FormControl>
+
                 </Stack>
               </Stack>
             </CardBody>
@@ -790,7 +648,7 @@ function Settings() {
         </Card>
         {/* Change Password Card */}
         <Card
-          w={{ sm: "100%", lg: "70%" }}
+          w={{ sm: "100%", lg: "83%" }}
           alignSelf='flex-end'
           justifySelf='flex-end'>
           <Element id='change-password' name='change-password'>
@@ -1448,7 +1306,6 @@ function Settings() {
                   color='#fff'
                   fontSize='lg'
                   fontWeight='bold'
-                  color='#fff'
                   mb='4px'>
                   Sessions
                 </Text>
@@ -1700,6 +1557,7 @@ function Settings() {
         </Card>
       </Stack>
     </Flex>
+
   );
 }
 

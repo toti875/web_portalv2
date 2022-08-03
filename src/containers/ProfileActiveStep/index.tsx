@@ -42,7 +42,7 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 
 	return (
 		<div>
-			<span>Inicie a sua jornada de investimentos</span>
+			<span className="td-pg-profile__active-step__title d-flex">Inicie a sua jornada de investimentos</span>
 			<div className="td-pg-profile__active-step__content d-flex">
 				<div className="td-pg-profile__active-step__content__item">
 					<span
@@ -64,15 +64,15 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 					</span>
 					<h5 className="td-pg-profile__active-step__content__item__title">2FA</h5>
 					<span className="td-pg-profile--color--second td-pg-profile__active-step__content__item__desc">
-						Aumente a segurança da sua conta com o duplo fato de auteticação!
+						Aumente a segurança da sua conta com o duplo fator de auteticação
 					</span>
 					{!user.otp ? (
 						<Button
-							size="sm"
+							size="lg"
 							className="td-pg-profile__active-step__content__item__action mt-3"
 							onClick={handleNavigateTo2fa}
 						>
-							Ativar
+							Habilitar
 						</Button>
 					) : null}
 				</div>

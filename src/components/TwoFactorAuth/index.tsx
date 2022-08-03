@@ -39,7 +39,7 @@ class TwoFactorAuthComponent extends React.Component<TwoFactorAuthProps> {
 						<div className="cr-email-form__options-group">
 							<div className="cr-email-form__option">
 								<div className="cr-email-form__option-inner">
-									{title || '2FA verification'}
+									{title || 'Autenticação em Duas Etapas (2FA)'}
 									<div className="cr-email-form__cros-icon" onClick={this.handleCancel}>
 										<CloseIcon className="close-icon" />
 									</div>
@@ -50,7 +50,7 @@ class TwoFactorAuthComponent extends React.Component<TwoFactorAuthProps> {
 							<div className="cr-email-form__header">{message}</div>
 							<div className={emailGroupClass}>
 								<CustomInput
-									type="number"
+									type="password"
 									label={label || '6-digit Google Authenticator Code'}
 									placeholder={label || '6-digit Google Authenticator Code'}
 									defaultLabel="6-digit Google Authenticator Code"

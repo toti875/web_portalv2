@@ -13,7 +13,8 @@
 	}
 
 	.cr-sign-up-form {
-		background: transparent !important;
+		color: white!important;
+		background: transparent!important;
 		margin: 0 auto;
 		min-height: calc(var(--big-gap) * 11);
 		margin-top: 0px !important;
@@ -22,6 +23,7 @@
 			border-bottom: 0 !important;
 			height: calc(var(--big-gap) * 0.97);
 			width: 100%;
+			background: transparent!important;
 		}
 
 		&__form-content {
@@ -38,6 +40,7 @@
 			.__selected {
 				border-bottom: 2px solid var(--primary-cta-color);
 				color: var(--primary-text-color);
+				background: transparent!important;
 			}
 		}
 
@@ -53,15 +56,16 @@
 
 		&__title {
 			background: transparent;
-			font-size: calc(var(--gap) * 1);
+			font-size: calc(var(--gap) * 4);
 			
 		}
 
 		&__label {
-			background: var(--input-background-color);
-			color: var(--inout-legend-color);
-			font-size: calc(var(--gap) * 1);
+			background: var(--form-background-color) !important;
+			color: var(--input-legend-color);
+			font-size: calc(var(--gap) * 0,6);
 			position: absolute;
+			padding-left: 5px !important;
 			top: calc(var(--gap) * (-1.33));
 		}
 

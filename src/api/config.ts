@@ -10,7 +10,7 @@ export const defaultConfig: Config = {
 
 		downstreamURL: 'ws://demo.fortem-financial.io/api/v2/downstream',
 	},
-	minutesUntilAutoLogout: '50',
+	minutesUntilAutoLogout: '60',
 	rangerReconnectPeriod: '1',
 	withCredentials: true,
 	storage: {},
@@ -24,7 +24,7 @@ export const defaultConfig: Config = {
 	usernameEnabled: true,
 	sessionCheckInterval: '15000',
 	balancesFetchInterval: '3000',
-	passwordEntropyStep: 0,
+	passwordEntropyStep: 14,
 	showLanding: true,
 	sentryEnabled: false,
 

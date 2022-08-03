@@ -1,10 +1,13 @@
 .pg-profile-two-factor-auth {
+	border-radius: 20px !important;
+	
 	display: block;
 	margin: 0 auto;
 	width: 535px;
+	background: #131538 !important;
 
 	&__header {
-		background: var(--subheader-background-color);
+		background: var(--form-backgroung-color);
 		border-bottom: 2px solid var(--divider-color-level-2);
 		color: var(--primary-text-color);
 		font-size: calc(var(--gap) * 2.33);
@@ -163,6 +166,11 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
+			color: #fff;
+			font-style: normal;
+			font-size: 13px;
+			
+			width: 100%;
 
 			&--last {
 				justify-content: center;
@@ -182,7 +190,8 @@
 				margin: calc(var(--gap) * 2) 0;
 
 				a {
-					color: rgba(var(--primary-cta-color));
+					color: #fff;
+					font-style: bold;
 				}
 
 				span {
@@ -212,7 +221,7 @@
 	}
 
 	&__form {
-		background: var(--body-background-color);
+		background: transparent;
 		box-shadow: 0 10px 15px var(--shadow-color-level-2);
 
 		.cr-copyable-text-field {
@@ -229,7 +238,7 @@
 	}
 
 	&__info {
-		color: var(--input-text-color);
+		color: #fff;
 	}
 
 	.cr-copyable-text-field {

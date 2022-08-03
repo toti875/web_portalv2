@@ -25,10 +25,10 @@ const mockConfig: Config = {
 	finex: false,
 	isResizable: false,
 	isDraggable: false,
-	languages: ['en', 'ru'],
+	languages: ['en', 'pt'],
 	sessionCheckInterval: '15000',
 	balancesFetchInterval: '3000',
-	passwordEntropyStep: 0,
+	passwordEntropyStep: 14,
 	showLanding: true,
 	sentryEnabled: false,
 };

@@ -176,7 +176,7 @@ class SignIn extends React.Component<Props, SignInState> {
 
 		if (!otpCode) {
 			this.setState({
-				error2fa: 'Please enter 2fa code',
+				error2fa: 'Digite seu código 2FA de 6 dígitos',
 			});
 		} else {
 			this.props.signIn({

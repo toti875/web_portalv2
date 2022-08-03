@@ -42,7 +42,7 @@ export const pt = {
 	'page.header.signUp.alreadyRegistered': 'Already registered?',
 
 	'page.mobile.reset.header': 'Resend confirmation',
-	'page.mobile.signin.kyc.header': '2FA Verification',
+	'page.mobile.signin.kyc.header': 'Autenticação em Duas Etapas (2FA)',
 
 	'page.mobile.wallets.deposit.history': 'Deposit',
 	'page.mobile.wallets.withdraw.history': 'Withdraw',
@@ -107,9 +107,9 @@ export const pt = {
 
 	'page.profile.kyc.title': '2FA',
 
-	'page.mobile.twoFactorModal.title': '2FA Verification',
-	'page.mobile.twoFactorModal.subtitle': 'Enter 2fa code from the app',
-	'page.mobile.twoFactorModal.send': 'Send',
+	'page.mobile.twoFactorModal.title': 'Autenticação em Duas Etapas (2FA)',
+	'page.mobile.twoFactorModal.subtitle': 'Digite seu código 2FA de 6 dígitos',
+	'page.mobile.twoFactorModal.send': 'Enviar',
 
 	'page.mobile.createdApiKeyModal.title': 'Created',
 	'page.mobile.createdApiKeyModal.confirm': 'confirm',

@@ -47,7 +47,7 @@ class ToggleTwoFactorAuthComponent extends React.Component<Props, State> {
 	};
 
 	public componentDidMount() {
-		setDocumentTitle('Two factor authentication');
+		setDocumentTitle('Autenticação em duas etapas');
 		const enable2fa = this.get2faAction();
 		if (enable2fa) {
 			this.props.generateQR();

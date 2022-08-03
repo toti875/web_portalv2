@@ -91,6 +91,12 @@ const dashRoutes = [
         layout: "/admin",
       },
       {
+        name: "Profile",
+        path: "/account/settings",
+        component: Settings,
+        layout: "/admin",
+      },
+      {
         name: "CRM",
         path: "/dashboard/crm",
         component: CRM,
