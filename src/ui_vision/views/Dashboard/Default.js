@@ -66,7 +66,9 @@ import {
 } from "../../components/Icons/Icons.js";
 
 	
-import {WalletListScreen} from "../../../screens";
+import {WalletListScreen, PortfolioValueScreen} from "../../../screens";
+
+import { EstimatedValue } from '../../../containers/Wallets/EstimatedValue';
 
 export default function Default() {
   // Chakra Color Mode
@@ -81,21 +83,12 @@ export default function Default() {
         gap='26px'
         maxW='100%'
         w='100%'>
-        {/* ThreeJS Globe */}
-        <Box
-          minW='300px'
-          h='300px'
-          position='absolute'
-          right='30px'
-          top='14%'
-          display={{ sm: "none", md: "block" }}>
-          {/*<Globe />*/}
-        </Box>
+
         <Stack
           direction='column'
           spacing='16px'
           w='100%'
-          mb='24px'
+          mt='24px'
           maxW={{ sm: "315px", md: "100%" }}
           zIndex='0'>
           {/* Mini Statistics */}
@@ -108,12 +101,12 @@ export default function Default() {
                   justify='center'
                   w='100%'>
                   <Stat me='auto'>
-                    <StatLabel fontSize='xs' color='gray.400' pb='2px'>
-                      Today's Money
+                    <StatLabel fontSize='14' color='gray.400' pb='20px' fontWeight='bold'>
+                      Patrimônio total
                     </StatLabel>
                     <Flex>
-                      <StatNumber fontSize='lg' color='#fff'>
-                        $53,000
+                      <StatNumber fontSize='15' color='#fff'>
+                        <PortfolioValueScreen/>
                       </StatNumber>
                       <StatHelpText
                         alignSelf='flex-end'
@@ -127,7 +120,7 @@ export default function Default() {
                       </StatHelpText>
                     </Flex>
                   </Stat>
-                  <IconBox as='box' h={"45px"} w={"45px"} bg='brand.200'>
+                  <IconBox as='box' h={"45px"} w={"45px"} bg='transparent'>
                     <WalletIcon h={"24px"} w={"24px"} color={iconBoxInside} />
                   </IconBox>
                 </Flex>
@@ -167,77 +160,11 @@ export default function Default() {
                 </Flex>
               </CardBody>
             </Card>
-            <Card minH='83px'>
-              <CardBody>
-                <Flex
-                  flexDirection='row'
-                  align='center'
-                  justify='center'
-                  w='100%'>
-                  <Stat me='auto'>
-                    <StatLabel fontSize='xs' color='gray.400' pb='2px'>
-                      Today's Users
-                    </StatLabel>
-                    <Flex>
-                      <StatNumber fontSize='lg' color='#fff'>
-                        2,300
-                      </StatNumber>
-                      <StatHelpText
-                        alignSelf='flex-end'
-                        justifySelf='flex-end'
-                        m='0px'
-                        color='green.400'
-                        fontWeight='bold'
-                        ps='3px'
-                        fontSize='sm'>
-                        +5%
-                      </StatHelpText>
-                    </Flex>
-                  </Stat>
-                  <IconBox as='box' h={"45px"} w={"45px"} bg='brand.200'>
-                    <GlobeIcon h={"24px"} w={"24px"} color={iconBoxInside} />
-                  </IconBox>
-                </Flex>
-              </CardBody>
-            </Card>
-            <Card minH='83px'>
-              <CardBody>
-                <Flex
-                  flexDirection='row'
-                  align='center'
-                  justify='center'
-                  w='100%'>
-                  <Stat me='auto'>
-                    <StatLabel fontSize='xs' color='gray.400' pb='2px'>
-                      Total Sales
-                    </StatLabel>
-                    <Flex>
-                      <StatNumber fontSize='lg' color='#fff' fontWeight='bold'>
-                        173,000
-                      </StatNumber>
-                      <StatHelpText
-                        alignSelf='flex-end'
-                        justifySelf='flex-end'
-                        m='0px'
-                        color='green.400'
-                        fontWeight='bold'
-                        ps='3px'
-                        fontSize='sm'>
-                        +8%
-                      </StatHelpText>
-                    </Flex>
-                  </Stat>
-                  <IconBox as='box' h={"45px"} w={"45px"} bg='brand.200'>
-                    <CartIcon h={"24px"} w={"24px"} color={iconBoxInside} />
-                  </IconBox>
-                </Flex>
-              </CardBody>
-            </Card>
           </SimpleGrid>
           {/* Sales table */}
           <Card px='0px'>
             <CardHeader px='22px' mb='32px'>
-              <Text color='#fff' fontSize='14' fontWeight='bold'>
+              <Text color='#fff' fontSize='13' fontWeight='bold'>
                 Composição da Carteira
               </Text>
             </CardHeader>

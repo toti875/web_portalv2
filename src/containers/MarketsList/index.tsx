@@ -151,7 +151,7 @@ export const MarketsList = props => {
 									outline: 'none',
 								}}
 							>
-								Trade
+								Negociar
 							</button>
 						),
 					};
@@ -326,7 +326,7 @@ export const MarketsList = props => {
 									<input
 										className="search-coin__input"
 										type="text"
-										placeholder="search coin name..."
+										placeholder="localizar ativo por nome..."
 										onChange={handldeSearchInputChange}
 									/>
 								</div>
@@ -355,15 +355,15 @@ export const MarketsList = props => {
 	const columns = React.useMemo(() => {
 		return [
 			{
-				Header: 'Pair',
+				Header: 'Ativo',
 				accessor: 'pair',
 			},
 			{
-				Header: 'Last Price',
+				Header: 'Último',
 				accessor: 'last',
 			},
 			{
-				Header: '24h Change',
+				Header: '24h',
 				accessor: 'price_change_percent',
 			},
 			{

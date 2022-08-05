@@ -24,5 +24,6 @@ export * from './AssetsFeeScreen';
 export * from './Referral';
 export * from './FortemIOHomePage';
 export * from './PortfolioScreen';
+export * from './PortfolioValueScreen';
 
 

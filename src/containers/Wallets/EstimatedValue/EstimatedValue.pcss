@@ -1,25 +1,26 @@
 .pg-estimated-value {
-	background: #313445;
+	background: transparent;
 	display: flex;
+	direction: column;
 
 	&__container {
-	  font-size: 1em;
-	  padding: 20px 5px;
-	  width: 1024px;
+	  font-size: 12.5px;
+	  padding: 10px 5px;
+	  width: 360px;
 
 	  .value-container {
 		margin-left: var(--gap);
 		vertical-align: middle;
 
 		.value {
-		  color: var(--primary-text-color);
-		  font-weight: 600;
+		  color: white;
+		  font-weight: 400;
 		}
 
 		.value-sign {
-		  background: var(--primary-cta-color);
+		  background: none;
 		  border-radius: 10%;
-		  color: var(--cta-layer-color);
+		  color: white;
 		  margin-left: var(--gap);
 		  padding: 3px;
 		}
@@ -27,42 +28,4 @@
 	}
   }
 
-  @media screen and (min-width: 340px) {
-	.pg-estimated-value {
-	  &__container {
-		font-size: 0.95em;
-	  }
-	}
-  }
 
-  @media screen and (min-width: 400px) {
-	.pg-estimated-value {
-	  &__container {
-		font-size: 1em;
-	  }
-	}
-  }
-
-  @media screen and (min-width: 600px) {
-	.pg-estimated-value {
-	  &__container {
-		font-size: 1.2em;
-	  }
-	}
-  }
-
-  @media screen and (min-width: 800px) {
-	.pg-estimated-value {
-	  &__container {
-		font-size: 1.2em;
-	  }
-	}
-  }
-
-  @media screen and (min-width: 1200px) {
-	.pg-estimated-value {
-	  &__container {
-		font-size: 1.3em;
-	  }
-	}
-  }

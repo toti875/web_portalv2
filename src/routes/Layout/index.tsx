@@ -457,7 +457,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					<Route path="/admin/profile/overview" component={Default} />
 
 					<Route path="/admin/dashboard/crm" component={Default} />
-					<Route path="/admin/dashboard/default" component={Default} />
+					<PublicRoute path="/admin/dashboard/default" component={Default} />
 			
 					<Route path="/admin/pages/profile/wallets" component={Default} />
 					<PublicRoute path="/banner/authentication/sign-in/basic" component={SignInBasic} />

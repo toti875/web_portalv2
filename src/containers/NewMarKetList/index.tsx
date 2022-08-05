@@ -47,7 +47,7 @@ const ChartWrap = styled.div`
 const MarketChartItem = styled.div`
 	min-height: 100px;
 	padding: 15px 5px;
-	border-radius: 4px;
+	border-radius: 15px;
 	background-color: var(--tab-panel-background-color);
 	:hover {
 		cursor: pointer;
@@ -72,8 +72,11 @@ export const NewMarketList: React.FC<any> = () => {
 		dots: false,
 		infinite: true,
 		speed: 500,
-		slidesToShow: 3,
+		slidesToShow: 6,
 		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 6000,
+		pauseOnHover: true,
 	};
 
 	const dispatch = useDispatch();

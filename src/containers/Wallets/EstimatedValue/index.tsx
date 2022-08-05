@@ -91,11 +91,11 @@ class EstimatedValueContainer extends React.Component<Props> {
 		return (
 			<div className="pg-estimated-value">
 				<div className="pg-estimated-value__container">
-					{this.translate('page.body.wallets.estimated_value')}
+					{this.translate('page.body.wallets.estimated_value_dolar')}
 					<span className="value-container">
 						<span className="value">{estimatedValue}</span>
 						<span className="value-sign">{VALUATION_PRIMARY_CURRENCY.toUpperCase()}</span>
-					</span>
+					</span><br />{this.translate('page.body.wallets.estimated_value_btc')}
 					{VALUATION_SECONDARY_CURRENCY && this.renderSecondaryCurrencyValuation(estimatedValue)}
 				</div>
 			</div>
