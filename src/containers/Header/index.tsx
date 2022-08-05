@@ -246,6 +246,51 @@ export const Header: React.FC = () => {
 								<img src={Logo} alt="" />
 							</Link>
 						</div>
+						
+
+
+						<div className="header__left-menu__dropdown flex-shrink-0  ">
+							<div className="header__left-menu__dropdown__wrap">
+								<span className={classLinkActiveTitleDrop('Trade')}>
+									Negociação
+									<div className="header__left-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div>
+								</span>
+								<div className="header__left-menu__dropdown__wrap__content">
+									<Link
+										to=""
+										className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
+										onClick={() => {
+											setStateActiveNow('Trade');
+											setActiveItemDrop('for-issuers');
+										}}
+									>
+										<div className={classActiveItemDrop('for-issuers')}>
+											<FaGift className="header__left-menu__dropdown__wrap__content__title__icon mr-2" />
+											Exchange Pro
+										</div>
+									</Link>
+									<Link
+										to=""
+										className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
+										onClick={() => {
+											setStateActiveNow('More');
+											setActiveItemDrop('for-investors');
+										}}
+									>
+										<div className={classActiveItemDrop('for-investors')}>
+											<FaGift className="header__left-menu__dropdown__wrap__content__title__icon mr-2" />
+											Exchange Fast
+										</div>
+									</Link>
+
+								</div>
+							</div>
+						</div>
+
+						
+						
+						
+						
 						<div className="header__left-menu__dropdown flex-shrink-0">
 							<div className={classLinkActive('markets')} onClick={() => setStateActiveNow('markets')}>
 								<Link

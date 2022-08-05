@@ -10,8 +10,8 @@ import { logoutFetch, selectUserLoggedIn } from '../../modules';
 
 import { NavBar } from '../NavBar';
 
-
-const Logo = require('../../assets/images/logo_branca_colorida.svg');
+const IconWallet = require('../../assets/svg/wallet2.svg');
+const IconDashboard = require('../../assets/svg/dashboard2.svg');
 
 export const HeaderAuthToolbar: React.FC = () => {
 	const history = useHistory();
@@ -52,49 +52,39 @@ export const HeaderAuthToolbar: React.FC = () => {
 
 		return (
 			isLoggedIn && (
-				<div className="subheader__right-menu__item ">
-					<div className={classItemTitle} onClick={() => setStateActiveNow('Wallet')}>
-						<Link to="/wallets">Wallets</Link>
+				<div className="subheader__right-menu__item__title">
+					<div className={classItemTitle} onClick={() => setStateActiveNow('Wallet')} >
+						 
+					
+
+						<Link to="/wallets">Wallets
+						</Link>
 					</div>
 				</div>
 			)
 		);
 	};
 
-	const renderDashboardLink = () => {
-		const classItemTitle = classNames('subheader__right-menu__item__title', {
-			'subheader__right-menu__item__title--active': activeNow === 'Dashboard',
-		});
 
-		return (
-			isLoggedIn && (
-				<div className="subheader__right-menu__item ">
-					<div className={classItemTitle} onClick={() => setStateActiveNow('Dashboard')}>
-						<Link to="/dashboard">Dashboard</Link>
-					</div>
-				</div>
-			)
-		);
-	};
-
-	const renderOrderTab = () => {
+	const renderDashboardTab = () => {
 		return (
 			isLoggedIn && (
 			
 				<div className="subheader__right-menu__dropdown__wrap">
-					<span className={classLinkActiveTitleDrop('orders')}>
-						{translate('page.body.homepage.header.orders')}
+					<span className={classLinkActiveTitleDrop('dashboard')}>
+					<img src={IconDashboard} className="subheader__right-menu__item__title__svg" style={{width: '20px',}} />
+						{translate('page.body.homepage.header.dashboard')}
 						<div className="subheader__right-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div>
 					</span>
 					<div className="subheader__right-menu__dropdown__wrap__content">
 						<Link
-							to="/orders"
+							to="/dashboard"
 							onClick={() => {
-								setStateActiveNow('orders');
-								setActiveItemDrop('orders');
+								setStateActiveNow('dashboard');
+								setActiveItemDrop('dashboard');
 							}}
 						>
-							<div className={classActiveItemDrop('orders')}>
+							<div className={classActiveItemDrop('dashboard')}>
 								<FaStar className="mr-2" />
 								{translate('page.body.homepage.header.openOrder')}
 							</div>
@@ -102,7 +92,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 						<Link
 							to="/history"
 							onClick={() => {
-								setStateActiveNow('orders');
+								setStateActiveNow('dashboard');
 								setActiveItemDrop('history');
 							}}
 						>
@@ -118,38 +108,63 @@ export const HeaderAuthToolbar: React.FC = () => {
 		);
 	};
 
-	const renderDigitalAsstesTab = () => {
+	const renderFinanceTab = () => {
 		return (
 			isLoggedIn && (
 			
 				<div className="subheader__right-menu__dropdown__wrap">
-					<span className={classLinkActiveTitleDrop('digitalassets')}>
-						{translate('page.body.homepage.header.digitalassets')}
+					<span className={classLinkActiveTitleDrop('finance')}>
+					<img src={IconWallet} className="subheader__right-menu__item__title__svg" style={{width: '20px',}} />
+						{translate('page.body.homepage.header.finance')}
 						<div className="subheader__right-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div>
 					</span>
 					<div className="subheader__right-menu__dropdown__wrap__content">
 						<Link
-							to="/tokens"
+							to="/wallets"
 							onClick={() => {
-								setStateActiveNow('digitalassets');
-								setActiveItemDrop('tokens');
+								setStateActiveNow('finance');
+								setActiveItemDrop('wallets');
 							}}
 						>
-							<div className={classActiveItemDrop('tokens')}>
+							<div className={classActiveItemDrop('wallets')}>
 								<FaStar className="mr-2" />
-								{translate('page.body.homepage.header.tokens')}
+								{translate('page.body.homepage.header.wallet')}
 							</div>
 						</Link>
 						<Link
-							to="/crypto"
+							to="/history"
 							onClick={() => {
-								setStateActiveNow('digitalassets');
-								setActiveItemDrop('crypto');
+								setStateActiveNow('finance');
+								setActiveItemDrop('transaction');
 							}}
 						>
-							<div className={classActiveItemDrop('crypto')}>
+							<div className={classActiveItemDrop('transaction')}>
 								<FaHistory className="subheader__right-menu__dropdown__wrap__content__title__icon mr-2" />
-								{translate('page.body.homepage.header.crypto')}
+								{translate('page.body.homepage.header.transaction')}
+							</div>
+						</Link>
+						<Link
+							to="/deposit"
+							onClick={() => {
+								setStateActiveNow('finance');
+								setActiveItemDrop('deposit');
+							}}
+						>
+							<div className={classActiveItemDrop('deposit')}>
+								<FaHistory className="subheader__right-menu__dropdown__wrap__content__title__icon mr-2" />
+								{translate('page.body.homepage.header.deposit')}
+							</div>
+						</Link>
+						<Link
+							to="/withdraw"
+							onClick={() => {
+								setStateActiveNow('finance');
+								setActiveItemDrop('withdraw');
+							}}
+						>
+							<div className={classActiveItemDrop('withdraw')}>
+								<FaHistory className="subheader__right-menu__dropdown__wrap__content__title__icon mr-2" />
+								{translate('page.body.homepage.header.withdraw')}
 							</div>
 						</Link>
 					</div>
@@ -295,10 +310,9 @@ export const HeaderAuthToolbar: React.FC = () => {
 					<div className="subheader__left-menu d-flex flex-row align-items-center">
 					
 						{renderUnLogin()}
-						{renderDashboardLink()}
-						{renderDigitalAsstesTab()}
-						{renderWalletLink()}
-						{renderOrderTab()}
+						{renderDashboardTab()}
+						{renderFinanceTab()}
+						
 					
 
 
@@ -308,8 +322,6 @@ export const HeaderAuthToolbar: React.FC = () => {
 
 					<div className="subheader__right-menu d-flex align-items-center flex-row">
 						{renderUnLogin()}
-						{renderWalletLink()}
-						{renderOrderTab()}
 						
 						<NavBar />
 					</div>

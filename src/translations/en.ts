@@ -856,12 +856,15 @@ export const en = {
 	'page.body.homegape.header.button2' : 'Sign In',
 	'page.body.homegape.header.button3' : 'Register',
 	'page.body.homepage.header.orders' : 'My Orders',
-	'page.body.homepage.header.digitalassets' : 'Digital Assets',
+	'page.body.homepage.header.finance' : 'Digital Assets',
 	'page.body.homepage.header.account' : 'My Account',
 	'page.body.homepage.header.openOrder' : 'Open Order',
-	'page.body.homepage.header.tokens' : 'Tokens',
+	'page.body.homepage.header.wallet' : 'Tokens',
 	'page.body.homepage.header.history' : 'History',
-	'page.body.homepage.header.crypto' : 'Cryptocurrencies',
+	'page.body.homepage.header.transactions' : 'History',
+	'page.body.homepage.header.deposit' : 'Depositar',
+	'page.body.homepage.header.withdraw' : 'Sacar',
+	'page.body.homepage.header.dashboard' : 'Dashboard',
 
 
 	'create.stake.success': 'Create Stake successfully',

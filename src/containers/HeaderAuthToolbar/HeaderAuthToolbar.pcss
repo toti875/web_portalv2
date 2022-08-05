@@ -9,10 +9,6 @@
 		margin: 0 20px;
 	}
 
-	img {
-		display: block;
-		width: 150px;
-	}
 
 	a {
 		outline: none;
@@ -265,12 +261,12 @@
 
 					&__content link:hover {
 						background-color: #363944;
-						color: #FDA736 !important;
+						color: #f9a912 !important;
 					}
 
 					&__content a:hover {
 						background-color: #363944;
-						color: #FDA736 !important;
+						color: #f9a912 !important;
 					}
 
 					&:hover .subheader__right-menu__dropdown__wrap__content {
@@ -278,7 +274,7 @@
 					}
 
 					&:hover .subheader__right-menu__dropdown__wrap__dropbtn {
-						color: #FDD57C !important;
+						color: #f9a912 !important;
 						outline: none !important;
 						text-decoration: none !important;
 					}
@@ -300,9 +296,11 @@
 						color: white;
 						outline: none;
 						text-decoration: none;
+						display: inline-block;;
+						direction: column;
 
 						&:hover {
-							color: #FCC57D;
+							color: #f9a912;
 						}
 					}
 
@@ -312,43 +310,41 @@
 						text-decoration: none;
 
 						&:hover {
-							color: #FCC57D;
+							color: #f9a912;
 						}
 					}
 
 					&--active {
 						a,
 						span {
-							color: #FCC57D;
-						}
-					}
-
-					font-size: 16px;
-					margin-right: 20px;
-
-					&--btn {
-						background-color: #FDA736;
-						border-radius: 5px;
-						color: white;
-						padding: 6px 16px;
-
-						&--active {
-							background-color: #FCC57D;
-						}
-
-						&:hover {
-							background-color: #FCC57D;
 							color: white;
 						}
 					}
 
-					&__icon {
-						font-size: 20px;
+					font-size: 14px;
+					margin-right: 20px;
+
+					&__svg {
+						
+				
+						filter: invert(66%) sepia(89%) saturate(1202%) hue-rotate(352deg) brightness(101%) contrast(95%);
+					
+
+						&--active {
+						
+							filter: invert(66%) sepia(89%) saturate(1202%) hue-rotate(352deg) brightness(101%) contrast(95%);
+						}
+
+						&:hover {
+					
+							filter: invert(66%) sepia(89%) saturate(1202%) hue-rotate(352deg) brightness(101%) contrast(95%);
+						}
 					}
 
-					@media screen and (max-width: 1200px) {
-						margin-right: 10px;
+					&__icon {
+						font-size: 14px;
 					}
+
 				}
 			}
 		}

@@ -106,6 +106,8 @@ import ConfirmBasic from "../../ui_vision/layouts/Banner"
 
 
 
+
+
 interface ReduxProps {
 	colorTheme: string;
 	currentMarket?: Market;
@@ -451,7 +453,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					<Route path="/portal/dashboard/default" component={Default} />
 					<Route path="/portal/pages/profile/overview" component={Default} />
 
-					<PrivateRoute path="/admin/account/settings" component={Default} />	
+					<PublicRoute path="/admin/account/settings" component={Default} />	
 					<Route path="/admin/profile/overview" component={Default} />
 
 					<Route path="/admin/dashboard/crm" component={Default} />

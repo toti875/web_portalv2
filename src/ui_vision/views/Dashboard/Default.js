@@ -46,7 +46,7 @@ import CardBody from "../../components/Card/CardBody.js";
 import CardHeader from "../../components/Card/CardHeader.js";
 import BarChart from "../../components/Charts/BarChart";
 import LineChart from "../../components/Charts/LineChart";
-import Globe from "../../components/Globe/Globe";
+//import Globe from "../../components/Globe/Globe";
 import IconBox from "../../components/Icons/IconBox";
 import {
   barChartDataDashboard,
@@ -65,32 +65,35 @@ import {
   WalletIcon,
 } from "../../components/Icons/Icons.js";
 
+	
+import {WalletListScreen} from "../../../screens";
+
 export default function Default() {
   // Chakra Color Mode
   const iconBoxInside = useColorModeValue("white", "white");
   return (
     <Flex flexDirection='column' pt={{ base: "120px", md: "75px" }}>
-      <Text color='#fff' fontWeight='bold' fontSize='3xl' mb='30px' ps='20px'>
-        General Statistics
+      <Text color='#fff' fontSize='14' fontWeight='bold'>
+        Minha carteira
       </Text>
       <Grid
         templateColumns={{ sm: "4fr 1fr", xl: "1.2fr 1fr" }}
-        gap='32px'
+        gap='26px'
         maxW='100%'
         w='100%'>
         {/* ThreeJS Globe */}
         <Box
-          minW='700px'
-          h='700px'
+          minW='300px'
+          h='300px'
           position='absolute'
           right='30px'
           top='14%'
           display={{ sm: "none", md: "block" }}>
-          <Globe />
+          {/*<Globe />*/}
         </Box>
         <Stack
           direction='column'
-          spacing='24px'
+          spacing='16px'
           w='100%'
           mb='24px'
           maxW={{ sm: "315px", md: "100%" }}
@@ -234,158 +237,22 @@ export default function Default() {
           {/* Sales table */}
           <Card px='0px'>
             <CardHeader px='22px' mb='32px'>
-              <Text color='#fff' fontSize='lg' fontWeight='bold'>
-                Sales by Country
+              <Text color='#fff' fontSize='14' fontWeight='bold'>
+                Composição da Carteira
               </Text>
             </CardHeader>
             <CardBody overflowX={{ sm: "scroll", md: "hidden" }}>
-              <Table variant='simple'>
-                <Thead>
-                  <Tr>
-                    <Th
-                      color='gray.400'
-                      fontSize='10px'
-                      fontFamily='Plus Jakarta Display'
-                      borderColor='#56577A'>
-                      Country:
-                    </Th>
-                    <Th
-                      color='gray.400'
-                      fontSize='10px'
-                      fontFamily='Plus Jakarta Display'
-                      borderColor='#56577A'>
-                      Sales:
-                    </Th>
-                    <Th
-                      color='gray.400'
-                      fontSize='10px'
-                      fontFamily='Plus Jakarta Display'
-                      borderColor='#56577A'>
-                      Value:
-                    </Th>
-                    <Th
-                      color='gray.400'
-                      fontSize='10px'
-                      fontFamily='Plus Jakarta Display'
-                      borderColor='#56577A'>
-                      Bounce:
-                    </Th>
-                  </Tr>
-                </Thead>
-                <Tbody>
-                  <Tr>
-                    <Td minW='180px' borderColor='#56577A'>
-                      <Stack direction='row' spacing='16px'>
-                        <Text>🇺🇸</Text>
-                        <Text color='#fff' fontSize='sm' fontWeight='bold'>
-                          United States
-                        </Text>
-                      </Stack>
-                    </Td>
-                    <Td borderColor='#56577A'>
-                      <Text color='#fff' fontSize='sm' fontWeight='bold'>
-                        2500
-                      </Text>
-                    </Td>
-                    <Td borderColor='#56577A'>
-                      <Text color='#fff' fontSize='sm' fontWeight='bold'>
-                        $214,000
-                      </Text>
-                    </Td>
-                    <Td borderColor='#56577A'>
-                      <Text color='#fff' fontSize='sm' fontWeight='bold'>
-                        40,22%
-                      </Text>
-                    </Td>
-                  </Tr>
-                  <Tr>
-                    <Td borderColor='#56577A'>
-                      <Stack direction='row' spacing='16px'>
-                        <Text>🇩🇪</Text>
-                        <Text color='#fff' fontSize='sm' fontWeight='bold'>
-                          Germany
-                        </Text>
-                      </Stack>
-                    </Td>
-                    <Td borderColor='#56577A'>
-                      <Text color='#fff' fontSize='sm' fontWeight='bold'>
-                        3900
-                      </Text>
-                    </Td>
-                    <Td borderColor='#56577A'>
-                      <Text color='#fff' fontSize='sm' fontWeight='bold'>
-                        $446,700
-                      </Text>
-                    </Td>
-                    <Td borderColor='#56577A'>
-                      <Text color='#fff' fontSize='sm' fontWeight='bold'>
-                        19,22%
-                      </Text>
-                    </Td>
-                  </Tr>
-                  <Tr>
-                    <Td borderColor='#56577A'>
-                      <Stack direction='row' spacing='16px'>
-                        <Text>🇬🇧</Text>
-                        <Text color='#fff' fontSize='sm' fontWeight='bold'>
-                          Great Britain
-                        </Text>
-                      </Stack>
-                    </Td>
-                    <Td borderColor='#56577A'>
-                      <Text color='#fff' fontSize='sm' fontWeight='bold'>
-                        1300
-                      </Text>
-                    </Td>
-                    <Td borderColor='#56577A'>
-                      <Text color='#fff' fontSize='sm' fontWeight='bold'>
-                        $121,900
-                      </Text>
-                    </Td>
-                    <Td borderColor='#56577A'>
-                      <Text color='#fff' fontSize='sm' fontWeight='bold'>
-                        39,22%
-                      </Text>
-                    </Td>
-                  </Tr>
-                  <Tr>
-                    <Td border='none'>
-                      <Stack direction='row' spacing='16px'>
-                        <Text>🇧🇷</Text>
-                        <Text color='#fff' fontSize='sm' fontWeight='bold'>
-                          Brasil
-                        </Text>
-                      </Stack>
-                    </Td>
-                    <Td border='none'>
-                      <Text color='#fff' fontSize='sm' fontWeight='bold'>
-                        920
-                      </Text>
-                    </Td>
-                    <Td border='none'>
-                      <Text color='#fff' fontSize='sm' fontWeight='bold'>
-                        $52,100
-                      </Text>
-                    </Td>
-                    <Td border='none'>
-                      {" "}
-                      <Text color='#fff' fontSize='sm' fontWeight='bold'>
-                        29,9%
-                      </Text>
-                    </Td>
-                  </Tr>
-                </Tbody>
-              </Table>
+              <WalletListScreen/>
             </CardBody>
           </Card>
         </Stack>
       </Grid>
-      <Grid
+    {/*  <Grid
         templateColumns={{ sm: "1fr", lg: "1.3fr 1.7fr" }}
         maxW={{ sm: "350px", md: "100%" }}
         gap='24px'
         mb='24px'>
-        {/* Active users */}
+    
         <Card p='16px'>
           <CardBody>
             <Flex direction='column' w='100%'>
@@ -542,7 +409,7 @@ export default function Default() {
             </Flex>
           </CardBody>
         </Card>
-        {/* Sales overview */}
+ 
         <Card p='28px 0px 0px 0px'>
           <CardHeader mb='20px' ps='22px'>
             <Flex direction='column' alignSelf='flex-start'>
@@ -564,7 +431,7 @@ export default function Default() {
             />
           </Box>
         </Card>
-      </Grid>
+      </Grid> */}
     </Flex>
   );
 }

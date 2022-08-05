@@ -10,7 +10,7 @@ export const defaultConfig: Config = {
 
 		downstreamURL: 'ws://demo.fortem-financial.io/api/v2/downstream',
 	},
-	minutesUntilAutoLogout: '60',
+	minutesUntilAutoLogout: '15',
 	rangerReconnectPeriod: '1',
 	withCredentials: true,
 	storage: {},

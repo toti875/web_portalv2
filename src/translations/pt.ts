@@ -91,11 +91,11 @@ export const pt = {
 	'page.body.marketsTable.header.trade': 'Trade',
 
 	/* Wallets */
-	'page.body.wallets.estimated_value': 'Estimated Value',
+	'page.body.wallets.estimated_value': 'Valor aproximado',
 
-	'page.body.wallets.locked': 'Locked',
-	'page.body.wallets.balance': 'Available',
-	'page.body.wallets.tabs.deposit': 'Deposit',
+	'page.body.wallets.locked': 'Em uso',
+	'page.body.wallets.balance': 'Disponível',
+	'page.body.wallets.tabs.deposit': 'Depositar',
 	'page.body.wallets.tabs.deposit.disabled.message': 'Deposit was disabled by administration',
 	'page.body.wallets.tabs.deposit.ccy.message.confirmation':
 		'1. Coins will be deposited after {confirmations} network confirmations.',
@@ -120,12 +120,12 @@ export const pt = {
 	'page.body.wallets.table.rejected': 'Rejected',
 	'page.body.wallets.tabs.deposit.fiat.admin': ' To initiate a fiat withdrawal, please contact administrator!',
 
-	'page.body.wallets.tabs.withdraw': 'Withdraw',
-	'page.body.wallets.tabs.withdraw.content.amount': 'Withdrawal Amount',
-	'page.body.wallets.tabs.withdraw.content.code2fa': '2FA code',
+	'page.body.wallets.tabs.withdraw': 'Sacar',
+	'page.body.wallets.tabs.withdraw.content.amount': 'Quantidade',
+	'page.body.wallets.tabs.withdraw.content.code2fa': 'Código 2FA',
 	'page.body.wallets.tabs.withdraw.content.fee': 'Withdrawal Fee',
 	'page.body.wallets.tabs.withdraw.content.total': 'You will got',
-	'page.body.wallets.tabs.withdraw.content.button': 'WITHDRAW',
+	'page.body.wallets.tabs.withdraw.content.button': 'Sacar',
 	'page.body.wallets.tabs.withdraw.disabled.message': 'Withdraw was disabled by administration',
 
 	'page.body.wallets.tabs.withdraw.amount.larger': 'Amount should be larger',
@@ -531,8 +531,8 @@ export const pt = {
 	'page.header.signUp.terms': 'Li e aceito os Termos de uso e a Política de Privacidade',
 	'page.header.signUp.modal.header': 'CADASTRO INICIADO',
 	'page.header.signUp.modal.body':
-		'Seu cadastro foi inicado com sucesso.' +
-		'Agora, verifique seu email para ativar a sua conta' +
+		'Seu cadastro foi inicado com sucesso. ' +
+		'Agora, verifique seu email para ativar a sua conta ' +
 		'e ter acesso à plataforma.',
 	'page.header.signUp.modal.footer': 'OK',
 	'page.header.signUp.strength.password': '',
@@ -886,17 +886,20 @@ export const pt = {
 	'page.body.homegape.header.button2' : 'Entrar',
 	'page.body.homegape.header.button3' : 'Criar conta',
 	'page.body.homepage.header.orders' : 'Minhas ordens',
-	'page.body.homepage.header.digitalassets' : 'Investimentos',
+	'page.body.homepage.header.finance' : 'Financeiro',
 	'page.body.homepage.header.account' : 'My Account',
 	'page.body.homepage.header.openOrder' : 'Open Order',
-	'page.body.homepage.header.tokens' : 'Tokens',
+	'page.body.homepage.header.wallet' : 'Minha carteira',
 	'page.body.homepage.header.history' : 'Histórico',
-	'page.body.homepage.header.crypto' : 'Cryptocurrencies',
+	'page.body.homepage.header.transaction' : 'Extrato de operações',
+	'page.body.homepage.header.deposit' : 'Depositar',
+	'page.body.homepage.header.withdraw' : 'Sacar',
+	'page.body.homepage.header.dashboard' : 'Dashboard',
 
 
 	'create.stake.success': 'Create Stake successfully',
 	'unstake.success': 'UnStake successfully',
-	'page.body.plugins.wallet.list.button.hideSmallBalance': 'Hide Small Balances',
+	'page.body.plugins.wallet.list.button.hideSmallBalance': 'Ocultar saldo zero',
 	'page.body.plugins.wallet.withdraw.info.tips': 'Tips',
 	'page.body.plugins.wallet.withdraw.info.tip1':
 		'1. Funds can only been withdrawn from your spot account. To withdraw funds in other accounts, please transfer to your spot account first.',

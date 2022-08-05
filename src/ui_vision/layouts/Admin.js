@@ -127,7 +127,7 @@ export default function Dashboard(props) {
   // Chakra Color Mode
   return (
     <>
-      <ChakraProvider theme={theme} resetCss={true} overflowX='hidden'>
+      <ChakraProvider theme={theme} resetCss={false} overflowX='hidden'>
 
           <MainPanel
             ref={mainPanel}

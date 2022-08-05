@@ -28,6 +28,7 @@ import {
   Flex,
   FormControl,
   FormLabel,
+  Grid,
   Icon,
   Input,
   Select,
@@ -83,6 +84,9 @@ import { selectUserActivity, selectUserInfo } from 'modules';
 import { ProfileAccountActivity, ProfileActiveStep, ProfileAuthDetails, Profile2FA, ProfileAnnouncement, ProfileApiKeys, ProfileTwoFactorAuth, ProfileSecurity, ProfileVerification, ProfileVerificationLabels } from 'containers';
 import { localeDate, setDocumentTitle } from 'helpers';
 
+
+const ProfileAvatar = require ('../../../../assets/animation/profile-avatar.gif');
+
 const GetUserEmail = () => {
 	const userActivity = useSelector(selectUserActivity);
 	const user = useSelector(selectUserInfo);
@@ -129,14 +133,15 @@ function Settings() {
   const bgVerificationCard = "#0F1535";
 
   return (
-
+    
+   
     <Flex direction='column' pt={{ sm: "125px", lg: "75px" }}>
       {/* Menu */}
       <Card
         w={{ sm: "100%", lg: "262px", xl: "15%", "2xl": "15%" }}
         mt={{ sm: "30px", lg: "0px" }}
         position={{ lg: "fixed" }}
-        top={{ lg: "150px" }}
+        top='{{ lg: "150px" }}'
         bg='#131538'
         borderRadius='10px'
         >
@@ -162,6 +167,24 @@ function Settings() {
                 </Flex>
               </Button>
             </Link>
+
+
+
+            <Link to='change-password' spy={true} smooth={true} duration={500}>
+              <Button
+                variant='transparent-with-icon'
+                borderRadius='20px'
+                _hover={{ bg: bgHoverLinks }}
+                w='100%'>
+                <Flex align='center' justifySelf='flex-start' w='100%'>
+                  <Icon as={FaCube} me='12px' w='18px' h='18px' color='#fff' />
+                  <Text color='#fff' fontWeight='500' fontSize='15'>
+                    Limites de Operação
+                  </Text>
+                </Flex>
+              </Button>
+            </Link>
+
             <Link to='info' spy={true} smooth={true} duration={500}>
               <Button
                 variant='transparent-with-icon'
@@ -177,25 +200,13 @@ function Settings() {
                     color='#fff'
                   />
                   <Text color='#fff' fontWeight='500' fontSize='15'>
-                    Dados Pessoais
+                    Dados de Cadastro
                   </Text>
                 </Flex>
               </Button>
             </Link>
-            <Link to='change-password' spy={true} smooth={true} duration={500}>
-              <Button
-                variant='transparent-with-icon'
-                borderRadius='20px'
-                _hover={{ bg: bgHoverLinks }}
-                w='100%'>
-                <Flex align='center' justifySelf='flex-start' w='100%'>
-                  <Icon as={FaCube} me='12px' w='18px' h='18px' color='#fff' />
-                  <Text color='#fff' fontWeight='500' fontSize='15'>
-                    Limites Operacionais
-                  </Text>
-                </Flex>
-              </Button>
-            </Link>
+
+
             <Link to='2fa' spy={true} smooth={true} duration={500}>
               <Button
                 variant='transparent-with-icon'
@@ -212,20 +223,6 @@ function Settings() {
                   />
                   <Text color='#fff' fontWeight='500' fontSize='15'>
                     Preferências
-                  </Text>
-                </Flex>
-              </Button>
-            </Link>
-            <Link to='accounts' spy={true} smooth={true} duration={500}>
-              <Button
-                variant='transparent-with-icon'
-                borderRadius='15px'
-                _hover={{ bg: bgHoverLinks }}
-                w='100%'>
-                <Flex align='center' justifySelf='flex-start' w='100%'>
-                  <Icon as={FaUser} me='12px' w='18px' h='18px' color='#fff' />
-                  <Text color='#fff' fontWeight='500' fontSize='xs'>
-                    Accounts
                   </Text>
                 </Flex>
               </Button>
@@ -296,10 +293,12 @@ function Settings() {
       <Stack
         direction='column'
         spacing='10px'
-        mt='60px'
+        
         align={{ lg: "flex-end" }}
         justify={{ lg: "flex-end" }}
-        w='100%'>
+        w='100%'
+ 
+        >
         {/* Header */}
         <Card
           w={{ sm: "100%", lg: "83%" }}
@@ -307,6 +306,7 @@ function Settings() {
           justifySelf={{ lg: "flex-end" }}
           bg='#131538'
           borderRadius='10px'
+      
           >
           <Element id='profile' name='profile'>
             <CardBody bg='transparent' >
@@ -317,18 +317,21 @@ function Settings() {
                 w='100%'>
                 <Flex align='center'>
                 <Avatar
-                me={{ md: "26px" }}
-                //src={avatar11}
-                w='80px'
-                h='80px'
+                me={{ md: "32px" }}
+                src={ProfileAvatar}
+                bg='transparent'
+                w='128px'
+                h='128px'
                 borderRadius='8px'>
                 <AvatarBadge
                   cursor='pointer'
                   borderRadius='8px'
                   border='transparent'
                   bg='linear-gradient(138.78deg, rgba(6, 11, 40, 0.94) 17.44%, rgba(10, 14, 35, 0.49) 93.55%, rgba(10, 14, 35, 0.69) 93.55%)'
-                  boxSize='26px'
-                  backdropFilter='blur(120px)'>
+                  boxSize='32px'
+                  backdropFilter='blur(120px)'
+                  src={ProfileAvatar}
+                  >
                   <Icon h='12px' w='12px' color='#fff' as={FaPencilAlt} />
                 </AvatarBadge>
               </Avatar>
@@ -372,6 +375,29 @@ function Settings() {
             </CardBody>
           </Element>
         </Card>
+                <Card
+          w={{ sm: "100%", lg: "83%" }}
+          alignSelf={{ lg: "flex-end" }}
+          justifySelf={{ lg: "flex-end" }}
+          bg='#131538'
+          borderRadius='10px'
+          >
+          <Element id='info' name='info'>
+            <CardHeader mb='40px'>
+              <Text color='#fff' fontSize='15' fontWeight='bold'>
+                Limites de Operação
+              </Text>
+            </CardHeader>
+            <Grid w='100%' >
+            <Flex w='100%'  h='100%' direction={{ sm: "column", md: "row" }}>
+              <ProfileVerification />   
+            </Flex>
+            <CardBody>
+              <ProfileVerificationLabels />
+            </CardBody>
+            </Grid>
+          </Element>
+        </Card>
 
         <Card
           w={{ sm: "100%", lg: "83%" }}
@@ -383,7 +409,7 @@ function Settings() {
           <Element id='info' name='info'>
             <CardHeader mb='40px'>
               <Text color='#fff' fontSize='15' fontWeight='bold'>
-                Dados Pessoais
+                Dados de Cadastro
               </Text>
             </CardHeader>
             <CardBody>

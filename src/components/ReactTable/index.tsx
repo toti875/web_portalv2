@@ -57,7 +57,7 @@ export const ReactTable: React.FC<ReacTableProps> = (props: ReacTableProps) => {
 					<div className="text-center empty">
 						<img className="text-center" width="100px" src={EmptySVG} alt="empty" />
 						<br />
-						<p>No Data</p>
+						<p>Sem dados</p>
 					</div>
 				) : (
 					<tbody {...getTableBodyProps()}>
@@ -78,13 +78,13 @@ export const ReactTable: React.FC<ReacTableProps> = (props: ReacTableProps) => {
 			<div className="pagination">
 				<div className="pagination-page_number">
 					<span>
-						Page{' '}
+						Página{' '}
 						<strong>
 							{pageIndex + 1} of {pageOptions.length}
 						</strong>{' '}
 					</span>
 					<span>
-						| Go to page:{' '}
+						| Ir para página:{' '}
 						<input
 							type="number"
 							defaultValue={pageIndex + 1}
@@ -120,7 +120,7 @@ export const ReactTable: React.FC<ReacTableProps> = (props: ReacTableProps) => {
 					>
 						{[20, 30, 40, 50].map(pageSize => (
 							<option key={pageSize} value={pageSize}>
-								Show {pageSize}
+								Mostrar {pageSize}
 							</option>
 						))}
 					</select>

@@ -81,11 +81,11 @@ export const WalletListScreen = () => {
 
 	const columns = React.useMemo(
 		() => [
-			{ Header: 'Coin', accessor: 'coin' },
+			{ Header: 'Ativo', accessor: 'coin' },
 			{ Header: 'Total', accessor: 'total' },
-			{ Header: 'Available', accessor: 'available' },
-			{ Header: 'In Order', accessor: 'in_order' },
-			{ Header: 'Action', accessor: 'action' },
+			{ Header: 'Disponível', accessor: 'available' },
+			{ Header: 'Em uso', accessor: 'in_order' },
+			{ Header: 'Transferir', accessor: 'action' },
 		],
 		[],
 	);
@@ -138,7 +138,7 @@ export const WalletListScreen = () => {
 			return {
 				coin: (
 					<span className="text-left">
-						{' '}
+						{'   '}
 						{currency_icon} {wallet.currency.toUpperCase()} <span className="text-secondary">{wallet.name}</span>
 					</span>
 				),
@@ -198,17 +198,20 @@ export const WalletListScreen = () => {
 			<div
 				className="container-fluid"
 				style={{
-					backgroundColor: '#2D2E3D',
-					borderRadius: '5px',
+					backgroundColor: 'transparent',
+			
 					minHeight: '100vh',
-					padding: '20px 10%',
+					
+				
 				}}
-			>
+			>{/*}
 				<div className="row">
 					<div className="col-12">
 						<EstimatedValue wallets={wallets} />
 					</div>
 				</div>
+
+			*/}
 				<div className="row mt-3">
 					<div className="col-12 d-flex justify-content-between align-items-center flex-row">
 						<input
@@ -216,7 +219,7 @@ export const WalletListScreen = () => {
 							autoFocus
 							type="text"
 							value={searchInputState}
-							placeholder="Search coin ..."
+							placeholder="Localizar ativo ..."
 							onChange={e => onChange(e)}
 						/>
 						<div className="checkbox-input">
