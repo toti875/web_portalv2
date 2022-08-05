@@ -1,21 +1,21 @@
 export const pt = {
 	'page.body.wallet.history.header': 'Wallet history',
 	/**Trade history */
-	'page.body.trade.tab.myTrades': 'My Trades',
-	'page.body.trade.tab.marketTrades': 'Market Trades',
+	'page.body.trade.tab.myTrades': 'Ordens executadas',
+	'page.body.trade.tab.marketTrades': 'Últimos negócios',
 	/**New Order */
 	'page.body.trade.header.newOrder.content.buyWith': 'Buy With',
 	'page.body.trade.header.newOrder.content.title.buy': 'Buy',
 	'page.body.trade.header.newOrder.content.title.sell': 'Sell',
 	/**Logger */
-	'page.body.user.loggin': 'Log in',
-	'page.body.user.register': 'Register Now',
+	'page.body.user.loggin': 'Entrar',
+	'page.body.user.register': 'Criar conta',
 	/**Order History in Tradding page */
-	'page.body.trade.header.orderHistory': 'Order History',
+	'page.body.trade.header.orderHistory': 'Histórico de ordens',
 	/**OrderBook */
-	'page.body.trading.header.orderBook.header.title.price': 'Price',
-	'page.body.trading.header.orderBook.header.title.amount': 'Amount',
-	'page.body.trading.header.orderBook.header.title.sum': 'Sum',
+	'page.body.trading.header.orderBook.header.title.price': 'Preço unitário',
+	'page.body.trading.header.orderBook.header.title.amount': 'Qtd.',
+	'page.body.trading.header.orderBook.header.title.sum': 'Vol financeiro',
 	/**Vote */
 	'page.body.vote.msg.success': 'Vote success',
 	'page.body.vote.msg.fail': 'Vote fail',

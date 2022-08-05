@@ -2,7 +2,7 @@ export const en = {
 	'page.body.wallet.history.header': 'Wallet history',
 	/**Trade history */
 	'page.body.trade.tab.myTrades': 'My Trades',
-	'page.body.trade.tab.marketTrades': 'Market Trades',
+	'page.body.trade.tab.marketTrades': 'Últimos negócios',
 	/**New Order */
 	'page.body.trade.header.newOrder.content.buyWith': 'Buy With',
 	'page.body.trade.header.newOrder.content.title.buy': 'Buy',
