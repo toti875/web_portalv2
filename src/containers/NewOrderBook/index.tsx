@@ -127,9 +127,9 @@ const OrderBookContainer = props => {
 					key={i}
 					onClick={() => handleOnSelectBids(i.toString(), total[i])}
 				>
-					<td className="td-order-book-item__positive">{item[0]}</td>
-					<td>{item[1]}</td>
-					<td>{item[2]}</td>
+					<td className="td-order-book-item__positive pisca3">{item[0]}</td>
+					<td className="pisca3">{item[1]}</td>
+					<td className="pisca3">{item[2]}</td>
 				</TrStyle>
 			));
 		}
@@ -148,9 +148,9 @@ const OrderBookContainer = props => {
 					key={i}
 					onClick={() => handleOnSelectAsks(i.toString(), total[i])}
 				>
-					<td className="td-order-book-item__negative">{item[0]}</td>
-					<td>{item[1]}</td>
-					<td>{item[2]}</td>
+					<td className="td-order-book-item__negative pisca3">{item[0]}</td>
+					<td className="pisca3">{item[1]}</td>
+					<td className="pisca3">{item[2]}</td>
 				</TrStyle>
 			));
 		}

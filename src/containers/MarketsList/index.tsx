@@ -278,7 +278,7 @@ export const MarketsList = props => {
 		return (
 			<div className="cx-market-item">
 				<Tabs defaultActiveKey="Spot Markets">
-					<div className="market__pair">
+					<div className="market__pair, pisca3" >
 						<div className="row d-flex align-items: baseline">
 							<div className="col-md-9 d-flex align-items: center">
 								<button
@@ -390,8 +390,8 @@ export const MarketsList = props => {
 			<div className="container">
 				<div className="row">
 					<div className="col-12">
-						<div>{MarketsHotOnList()}</div>
-						<div>{MarketsTabs()}</div>
+						<div className="pisca3">{MarketsHotOnList()}</div>
+						<div className="pisca3">{MarketsTabs()} </div>
 					</div>
 				</div>
 			</div>

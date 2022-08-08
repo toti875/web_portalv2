@@ -86,6 +86,15 @@ const dashRoutes = [
       },
       {
         name: "Profile",
+        path: "/profile/settings",
+        component: Default,
+        layout: "/admin",
+      },
+
+
+
+      {
+        name: "Profile",
         path: "/profile/overview",
         component: Overview,
         layout: "/admin",

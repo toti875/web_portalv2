@@ -275,4 +275,29 @@ export const MarketsListTradingStyle = styled.div`
 			}
 		}
 	}
+	@-webkit-keyframes pisca3 {
+		from { background-color: #13887 ; }
+		to { background-color: transparent; }
+	  }
+	  @-moz-keyframes pisca3 {
+		from { background-color: #13b887 ; }
+		to { background-color: transparent; }
+	  }
+	  @-o-keyframes pisca3 {
+		from { background-color: #13b887 ; }
+		
+		to { background-color: transparent; }
+	  }
+	  @keyframes pisca3 {
+		from { background-color: #13b887; }
+		to { background-color: transparent; }
+	  }
+	
+	  .pisca3 {
+	  -webkit-animation: pisca3 2s ; /* Safari 4+ */
+	  -moz-animation:    pisca3 2s ; /* Fx 5+ */
+	  -o-animation:      pisca3 2s ; /* Opera 12+ */
+	  animation:         pisca3 2s ; /* IE 10+ */
+	}
+	
 `;

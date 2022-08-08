@@ -490,9 +490,12 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/history" component={HistoryScreen} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/banner/authentication/confirm/basic" component={ConfirmBasic} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/confirm" component={ConfirmScreen} />
-					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={ProfileScreen} />
-					{/*Profile Page */}
+					{/* OLD Profile Page */}
+					{/* <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={ProfileScreen} /> */}
+					{/* NEW Profile Page */}
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/account/settings" component={Default} />
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/profile/settings" component={Default} />
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={Default} />
 
 
 					{/*Profile Test Page */}

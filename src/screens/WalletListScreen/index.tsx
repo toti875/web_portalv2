@@ -148,9 +148,9 @@ export const WalletListScreen = () => {
 					</Decimal>
 				),
 				available: (
-					<span>
-						<Decimal key={index} fixed={fixed}>
-							{wallet.balance > 0 ? wallet.balance : 0}
+					<span className="pisca3">
+						<Decimal key={index} fixed={fixed} >
+							{wallet.balance > 0 ? wallet.balance : 0 }
 						</Decimal>
 					</span>
 				),
