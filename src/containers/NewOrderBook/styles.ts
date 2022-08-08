@@ -106,6 +106,10 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 				tr {
 					margin-top: 1px;
 					margin-bottom: 1px;
+					webkit-animation: pisca3 2s ; /* Safari 4+ */
+					moz-animation:    pisca3 2s ; /* Fx 5+ */
+					o-animation:      pisca3 2s ; /* Opera 12+ */
+					animation:         pisca3 2s ; /* IE 10+ */
 					td {
 						height: 100%;
 					}
@@ -119,6 +123,10 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 					}
 					tr {
 						direction: rtl;
+						webkit-animation: pisca3 2s ; /* Safari 4+ */
+						moz-animation:    pisca3 2s ; /* Fx 5+ */
+						o-animation:      pisca3 2s ; /* Opera 12+ */
+						animation:         pisca3 2s ; /* IE 10+ */
 						td {
 							transform: rotate(180deg);
 						}
@@ -127,6 +135,23 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 			}
 		}
 	}
+	@-webkit-keyframes pisca3 {
+		from { background-color: #13887 ; }
+		to { background-color: transparent; }
+	  }
+	  @-moz-keyframes pisca3 {
+		from { background-color: #13b887 ; }
+		to { background-color: transparent; }
+	  }
+	  @-o-keyframes pisca3 {
+		from { background-color: #13b887 ; }
+		
+		to { background-color: transparent; }
+	  }
+	  @keyframes pisca3 {
+		from { background-color: #13b887; }
+		to { background-color: transparent; }
+	  }
 `;
 
 interface TrProps {
@@ -148,5 +173,27 @@ export const TrStyle = styled.tr<TrProps>`
 		background-color: ${(props: TrProps) => props.color};
 		width: ${(props: TrProps) => props.percentWidth}%;
 		z-index: -5;
+		webkit-animation: pisca3 2s ; /* Safari 4+ */
+		moz-animation:    pisca3 2s ; /* Fx 5+ */
+		o-animation:      pisca3 2s ; /* Opera 12+ */
+		animation:         pisca3 2s ; /* IE 10+ */
 	}
+	@-webkit-keyframes pisca3 {
+		from { background-color: #13887 ; }
+		to { background-color: transparent; }
+	  }
+	  @-moz-keyframes pisca3 {
+		from { background-color: #13b887 ; }
+		to { background-color: transparent; }
+	  }
+	  @-o-keyframes pisca3 {
+		from { background-color: #13b887 ; }
+		
+		to { background-color: transparent; }
+	  }
+	  @keyframes pisca3 {
+		from { background-color: #13b887; }
+		to { background-color: transparent; }
+	  }
+	
 `;
