@@ -52,7 +52,7 @@ export const SaleListTables: React.FC = () => {
 				<Empty
 					image="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
 					imageStyle={{ marginTop: '3rem' }}
-					description={<span>No available IEO</span>}
+					description={<span>Nenhuma emissão disponível</span>}
 				/>
 			</div>
 		);
@@ -84,16 +84,16 @@ export const SaleListTables: React.FC = () => {
 				<div className="col-12">
 					<Menu mode="horizontal" defaultSelectedKeys={['active']} onClick={handleSelectMenuItem}>
 						<Menu.Item key="active">
-							<span style={{ color: '#4284F5ff' }}>Active</span>
+							<span style={{ color: '#4284F5ff' }}>Emissões Disponíveis</span>
 						</Menu.Item>
 						<Menu.Item key="ongoing">
-							<span style={{ color: '#0C9D58ff' }}>On Going</span>
+							<span style={{ color: '#0C9D58ff' }}>Emissões em Andamento</span>
 						</Menu.Item>
 						<Menu.Item key="upcoming">
-							<span style={{ color: '#FABE08ff' }}>Up Coming</span>
+							<span style={{ color: '#FABE08ff' }}>Emissões Futuras</span>
 						</Menu.Item>
 						<Menu.Item key="ended">
-							<span style={{ color: '#EA4235ff' }}>Ended</span>
+							<span style={{ color: '#EA4235ff' }}>Emissões Finalizadas</span>
 						</Menu.Item>
 					</Menu>
 				</div>

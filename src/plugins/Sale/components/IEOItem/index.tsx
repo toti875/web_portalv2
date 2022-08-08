@@ -18,16 +18,16 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
 		return (
 			<div id="sale_item__timer">
 				<div id="days">
-					00 <span>Days</span>
+					00 <span>Dias</span>
 				</div>
 				<div id="hours">
-					00 <span>Hours</span>
+					00 <span>Horas</span>
 				</div>
 				<div id="minutes">
-					00 <span>Mininutes</span>
+					00 <span>Minutos</span>
 				</div>
 				<div id="seconds">
-					00 <span>Seconds</span>
+					00 <span>Segundos</span>
 				</div>
 			</div>
 		);
@@ -36,16 +36,16 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
 		return (
 			<div id="sale_item__timer">
 				<div id="days">
-					{days} <span>Days</span>
+					{days} <span>Dias</span>
 				</div>
 				<div id="hours">
-					{hours} <span>Hours</span>
+					{hours} <span>Horas</span>
 				</div>
 				<div id="minutes">
-					{minutes} <span>Mininutes</span>
+					{minutes} <span>Minutos</span>
 				</div>
 				<div id="seconds">
-					{seconds} <span>Seconds</span>
+					{seconds} <span>Segundos</span>
 				</div>
 			</div>
 		);
@@ -82,13 +82,13 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 
 	switch (props.type) {
 		case 'upcoming':
-			countdownTitle = <span className="text-success">START IN</span>;
+			countdownTitle = <span className="text-success">Tempo restante para emissão:</span>;
 			break;
 		case 'ongoing':
-			countdownTitle = <span className="text-warning">END IN</span>;
+			countdownTitle = <span className="text-warning">Tempo restante:</span>;
 			break;
 		default:
-			countdownTitle = <span className="text-danger">ENDED</span>;
+			countdownTitle = <span className="text-danger"> EMISSÃO FINALIZADA</span>;
 			break;
 	}
 
@@ -157,7 +157,7 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 			<br />
 			<div className="row">
 				<div className="col-6 d-flex align-items-center justify-content-center">
-					<Statistic title="STARTING PRICE:" value={`$${props.sale.price} USD`} />
+					<Statistic title="Preço inicial:" value={`$${props.sale.price} Reais`} />
 				</div>
 				<div className="col-6 d-flex align-items-center justify-content-center">
 					<Row gutter={[8, 8]}>

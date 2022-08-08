@@ -865,6 +865,7 @@ export const en = {
 	'page.body.homepage.header.deposit' : 'Depositar',
 	'page.body.homepage.header.withdraw' : 'Sacar',
 	'page.body.homepage.header.dashboard' : 'Dashboard',
+	'page.body.homepage.header.dashboard_item' : 'Dashboard',
 
 
 	'create.stake.success': 'Create Stake successfully',

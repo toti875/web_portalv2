@@ -24,7 +24,7 @@ export const SaleDetailScreen: React.FC = () => {
 
 	React.useEffect(() => {
 		if (saleItem.loading) {
-			message.loading('Waiting a seconds...', 0);
+			message.loading('Aguarde...', 0);
 		} else {
 			message.destroy();
 		}
@@ -105,7 +105,7 @@ export const SaleDetailScreen: React.FC = () => {
 					subTitle="Sorry, something went wrong. Not found IEO"
 					extra={
 						<Button type="primary" onClick={() => history.goBack()}>
-							Go Back
+							Voltar
 						</Button>
 					}
 				/>

@@ -4000,7 +4000,9 @@
 					}@media screen and (max-width: 1200px) {.subheaderDesktop-screen .subheader__right-menu__dropdown__wrap {
 						margin-right: 10px
 				}
-					}.subheaderDesktop-screen .subheader__right-menu__item__title a,
+					}.subheaderDesktop-screen .subheader__right-menu__item {
+				width: "220px" !important;
+			}.subheaderDesktop-screen .subheader__right-menu__item__title a,
 					.subheaderDesktop-screen .subheader__right-menu__item__title span {
 						color: white;
 						outline: none;
@@ -4010,14 +4012,14 @@
 					}.subheaderDesktop-screen .subheader__right-menu__item__title a:hover, .subheaderDesktop-screen .subheader__right-menu__item__title span:hover {
 							color: #f9a912;
 						}.subheaderDesktop-screen .subheader__right-menu__item__title link {
-						color: white;
+						color: #f9a912;
 						outline: none;
 						text-decoration: none;
 					}.subheaderDesktop-screen .subheader__right-menu__item__title link:hover {
 							color: #f9a912;
 						}.subheaderDesktop-screen .subheader__right-menu__item__title--active a,
 						.subheaderDesktop-screen .subheader__right-menu__item__title--active span {
-							color: white;
+							color: #f9a912;
 						}.subheaderDesktop-screen .subheader__right-menu__item__title{
 
 					font-size: 14px;

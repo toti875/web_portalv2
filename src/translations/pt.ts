@@ -890,17 +890,18 @@ export const pt = {
 	'page.body.homepage.header.finance' : 'Financeiro',
 	'page.body.homepage.header.account' : 'My Account',
 	'page.body.homepage.header.openOrder' : 'Open Order',
-	'page.body.homepage.header.wallet' : 'Minha carteira',
+	'page.body.homepage.header.wallet' : 'Minhas carteiras',
 	'page.body.homepage.header.history' : 'Histórico',
 	'page.body.homepage.header.transaction' : 'Extrato de operações',
 	'page.body.homepage.header.deposit' : 'Depositar',
 	'page.body.homepage.header.withdraw' : 'Sacar',
-	'page.body.homepage.header.dashboard' : 'Dashboard',
+	'page.body.homepage.header.dashboard' : 'Painel de Controle',
+	'page.body.homepage.header.dashboard_item' : 'Dashboard',
 
 
 	'create.stake.success': 'Create Stake successfully',
 	'unstake.success': 'UnStake successfully',
-	'page.body.plugins.wallet.list.button.hideSmallBalance': 'Ocultar saldo zero',
+	'page.body.plugins.wallet.list.button.hideSmallBalance': 'Ocultar pequenas quantias',
 	'page.body.plugins.wallet.withdraw.info.tips': 'Tips',
 	'page.body.plugins.wallet.withdraw.info.tip1':
 		'1. Funds can only been withdrawn from your spot account. To withdraw funds in other accounts, please transfer to your spot account first.',

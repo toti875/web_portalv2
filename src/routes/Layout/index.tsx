@@ -180,7 +180,7 @@ const PublicRoute: React.FunctionComponent<any> = ({ component: CustomComponent,
 	if (isLogged) {
 		return (
 			<Route {...rest}>
-				<Redirect to={'/admin/pages/profile/overview'} />
+				<Redirect to={'/admin/account/settings'} />
 			</Route>
 		);
 	}
@@ -420,6 +420,8 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 				<Switch>
 					<Route exact={true} path="/magic-link" component={MagicLink} />
 					<PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/banner/authentication/sign-in/basic" component={SignInBasic} />
+					<PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/login" component={SignInBasic} />
+					<PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/signin" component={SignInBasic} />
 					<PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/banner/authentication/sign-up/basic" component={SignUpBasic} />
 					<PublicRoute
 						loading={userLoading}
@@ -447,26 +449,13 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 						path="/email-verification"
 						component={EmailVerificationScreen}
 					/>
-
-
-					<Route path="/portal/dashboard/crm" component={Default} />
-					<Route path="/portal/dashboard/default" component={Default} />
-					<Route path="/portal/pages/profile/overview" component={Default} />
-
-					<PublicRoute path="/admin/account/settings" component={Default} />	
-					<Route path="/admin/profile/overview" component={Default} />
-
-					<Route path="/admin/dashboard/crm" component={Default} />
-					<PublicRoute path="/admin/dashboard/default" component={Default} />
-			
-					<Route path="/admin/pages/profile/wallets" component={Default} />
+					{/*
 					<PublicRoute path="/banner/authentication/sign-in/basic" component={SignInBasic} />
-					<PublicRoute path="/auth/authentication/sign-in/cover" component={SignInBasic} />
 					<PublicRoute path="/banner/authentication/sign-up/basic" component={SignUpBasic} />
+					*/}
 
-					
-					
-				
+							
+				 
 					<Route path="/404" component={RestrictedScreen} />
 					<Route path="/500" component={MaintenanceScreen} />
 					<Route exact={false} path="/market/:market?" component={TradingScreen} />
@@ -494,23 +483,21 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 						path="/announcement/detail/:id"
 						component={AnnouncementDetail}
 					/>
+					{/* Dashboard Page */}
+					<PrivateRoute loading={userLoading}	isLogged={isLoggedIn} path="/admin/dashboard/default" exact	component={Default} />
+
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/orders" component={OrdersTabScreen} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/history" component={HistoryScreen} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/banner/authentication/confirm/basic" component={ConfirmBasic} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/confirm" component={ConfirmScreen} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={ProfileScreen} />
+					{/*Profile Page */}
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/account/settings" component={Default} />
+
+
+					{/*Profile Test Page */}
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/pages/profile/overview" component={Default} />
-					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/pages/profile/perfil" component={Default} />
-					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/pages/profile/limite" component={Default} />
-					{/* <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets" component={WalletsScreen} /> */}
-					<PrivateRoute
-						loading={userLoading}
-						isLogged={isLoggedIn}
-						path="/wallets"
-						exact
-						component={WalletListScreen}
-					/>
-					<PrivateRoute
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets" exact component={WalletListScreen} />					<PrivateRoute
 						loading={userLoading}
 						isLogged={isLoggedIn}
 						path="/wallets/deposit/:currency_id"
@@ -551,7 +538,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					/>
 					{/* old feature */}
 					<Route path="/tokens" exact component={SaleListScreen} />
-					<Route path="/tokens/detail/:ieoID" exact component={SaleDetailScreen} />
+					<Route path="/ieo/detail/:ieoID" exact component={SaleDetailScreen} />
 					<Route path="/vote" exact component={VoteScreen} />
 					<Route path="/trading-competition" exact component={CompetitionListingScreen} />
 					<Route path="/trading-competition/:competition_id" exact component={CompetitionDetailScreen} />
@@ -560,6 +547,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					<Route path="**">
 						<Redirect to="/market/" />
 					</Route>
+
 				</Switch>
 				{isLoggedIn && <WalletsFetch />}
 				{this.handleRenderExpiredSessionModal()}

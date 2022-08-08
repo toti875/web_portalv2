@@ -36,16 +36,16 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
 		return (
 			<div id="ieo-item-mobile__timer">
 				<div id="days">
-					{days} <span>Days</span>
+					{days} <span>Dias</span>
 				</div>
 				<div id="hours">
-					{hours} <span>Hours</span>
+					{hours} <span>Horas</span>
 				</div>
 				<div id="minutes">
-					{minutes} <span>Mininutes</span>
+					{minutes} <span>Minutos</span>
 				</div>
 				<div id="seconds">
-					{seconds} <span>Seconds</span>
+					{seconds} <span>Segundos</span>
 				</div>
 			</div>
 		);

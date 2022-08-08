@@ -45,7 +45,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 		});
 	};
 
-	const renderWalletLink = () => {
+	const renderDashboardLink = () => {
 		const classItemTitle = classNames('subheader__right-menu__item__title', {
 			'subheader__right-menu__item__title--active': activeNow === 'Wallet',
 		});
@@ -53,11 +53,10 @@ export const HeaderAuthToolbar: React.FC = () => {
 		return (
 			isLoggedIn && (
 				<div className="subheader__right-menu__item__title">
-					<div className={classItemTitle} onClick={() => setStateActiveNow('Wallet')} >
-						 
-					
+					<div className={classItemTitle} onClick={() => setStateActiveNow('Dashboard')} >
+					<img src={IconDashboard} className="subheader__right-menu__item__title__svg" style={{width: '20px',}} />
 
-						<Link to="/wallets">Wallets
+						<Link to="/dashboard">Painel de controle
 						</Link>
 					</div>
 				</div>
@@ -76,7 +75,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 						{translate('page.body.homepage.header.dashboard')}
 						<div className="subheader__right-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div>
 					</span>
-					<div className="subheader__right-menu__dropdown__wrap__content">
+					<div className="subheader__right-menu__dropdown__wrap__content" style={{width: '100px',}}>
 						<Link
 							to="/dashboard"
 							onClick={() => {
@@ -84,9 +83,9 @@ export const HeaderAuthToolbar: React.FC = () => {
 								setActiveItemDrop('dashboard');
 							}}
 						>
-							<div className={classActiveItemDrop('dashboard')}>
+							<div className={classActiveItemDrop('dashboard')} style={{width: '300px',}}>
 								<FaStar className="mr-2" />
-								{translate('page.body.homepage.header.openOrder')}
+								{translate('page.body.homepage.header.dashboard_item')}
 							</div>
 						</Link>
 						<Link
@@ -118,9 +117,9 @@ export const HeaderAuthToolbar: React.FC = () => {
 						{translate('page.body.homepage.header.finance')}
 						<div className="subheader__right-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div>
 					</span>
-					<div className="subheader__right-menu__dropdown__wrap__content">
+					<div className="subheader__right-menu__dropdown__wrap__content" style={{width: '220px',}}>
 						<Link
-							to="/wallets"
+							to="/admin/dashboard/default"
 							onClick={() => {
 								setStateActiveNow('finance');
 								setActiveItemDrop('wallets');

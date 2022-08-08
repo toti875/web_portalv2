@@ -18,16 +18,16 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
 		return (
 			<div id="sale_item__timer">
 				<div id="days">
-					00 <span>Days</span>
+					00 <span>Dias</span>
 				</div>
 				<div id="hours">
-					00 <span>Hours</span>
+					00 <span>Horas</span>
 				</div>
 				<div id="minutes">
-					00 <span>Mininutes</span>
+					00 <span>Minutos</span>
 				</div>
 				<div id="seconds">
-					00 <span>Seconds</span>
+					00 <span>Segundos</span>
 				</div>
 			</div>
 		);
@@ -36,16 +36,16 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
 		return (
 			<div id="timer">
 				<div id="days">
-					{days} <span>Days</span>
+					{days} <span>Dias</span>
 				</div>
 				<div id="hours">
-					{hours} <span>Hours</span>
+					{hours} <span>Horas</span>
 				</div>
 				<div id="minutes">
-					{minutes} <span>Mininutes</span>
+					{minutes} <span>Minutos</span>
 				</div>
 				<div id="seconds">
-					{seconds} <span>Seconds</span>
+					{seconds} <span>Segundos</span>
 				</div>
 			</div>
 		);
@@ -73,7 +73,7 @@ export const SaleInfo: React.FC<SaleInfoProps> = (props: SaleInfoProps) => {
 	}, [dispatchGetTotalBuyers, props.ieoID]);
 
 	return (
-		<div id="sale-info" style={{ backgroundColor: '#2D2E3D', padding: '3vw', height: '100%' }}>
+		<div id="sale-info" style={{ backgroundColor: '#0b1426', padding: '3vw', height: '100%' }}>
 			<div className="row">
 				<div className="col-12">
 					<img className="w-50" src={props.sale.image_link} alt="sale-logo" />
@@ -92,21 +92,21 @@ export const SaleInfo: React.FC<SaleInfoProps> = (props: SaleInfoProps) => {
 				<div className="col-12">
 					<Row gutter={[16, 16]}>
 						<Col span={8}>
-							<Statistic valueStyle={{ color: '#e9c46a' }} title="Start Price" value={`$${props.sale.price} USD`} />
+							<Statistic valueStyle={{ color: '#FDA736', fontSize: '13px' }} title="Preço inicial" value={`R$${props.sale.price} `} />
 						</Col>
 						<Col span={8}>
 							<Statistic
-								valueStyle={{ color: '#e76f51' }}
-								title="Min Buy"
-								value={`${props.sale.min_buy} ${props.sale.currency_id.toUpperCase()}`}
+								valueStyle={{ color: '#FDA736', fontSize: '13px' }}
+								title="Quantidade mínima"
+								value={`${props.sale.min_buy} ${ 'tokens' }${props.sale.currency_id.toUpperCase()}`}
 							/>
 						</Col>
 						<Col span={8}>
 							<Statistic
-								valueStyle={{ color: '#f4a261' }}
-								title="Available Currencies"
-								value={props.sale.currency_available.map(currency => currency.toUpperCase()).join(', ')}
-							/>
+								valueStyle={{ color: '#FDA736', fontSize: '13px' }}
+								title="Formas de pagamento" 
+								value={`${ 'Reais (R$) e Criptomoedas: ' } ${props.sale.currency_available.map(currency => currency.toUpperCase()).join(',',)} ${ '' }`} />
+
 						</Col>
 					</Row>
 				</div>
@@ -116,18 +116,19 @@ export const SaleInfo: React.FC<SaleInfoProps> = (props: SaleInfoProps) => {
 				<div className="col-12 text-center">
 					<Row gutter={[16, 16]}>
 						<Col span={8}>
-							<Statistic valueStyle={{ color: '#e9c46a' }} title={'Remain'} value={props.sale.remains} />
+							<Statistic valueStyle={{ color: '#13b887', fontSize: '13px'  }} title={'Total de tokens emitidos'} value={props.sale.total_ieo} />{' '}
+						</Col>
+						<Col span={8}>
+							<Statistic valueStyle={{ color: '#13b887', fontSize: '13px'  }} title={'Total de tokens restantes'} value={props.sale.remains} />
 						</Col>
 						<Col span={8}>
 							<Statistic
-								valueStyle={{ color: '#e76f51', fontWeight: 'bold' }}
-								title="Total Buyers"
+								valueStyle={{ color: '#13b887', fontSize: '13px' }}
+								title="Total de compradores"
 								value={totalBuyersSelector.payload.totalBuyers}
 							/>
 						</Col>
-						<Col span={8}>
-							<Statistic valueStyle={{ color: '#f4a261' }} title={'Total'} value={props.sale.total_ieo} />{' '}
-						</Col>
+
 					</Row>
 					<hr />
 					<ProgressBar

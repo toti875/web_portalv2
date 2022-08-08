@@ -184,7 +184,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 		() => {
 			dispatchWalletsFetch();
 			dispatchGetPrice({
-				fsym: 'USD',
+				fsym: 'BRL',
 				tsyms: props.sale.currency_available,
 			});
 			//updateBonusState(quantityInputState);
@@ -209,7 +209,8 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 		if (priceSelector.payload && quoteCurrencyState && priceSelector.payload[quoteCurrencyState.toUpperCase()]) {
 			const convertedPrice = calculatePrice(props.sale.price, priceSelector.payload[quoteCurrencyState.toUpperCase()]);
 			setPriceState(convertedPrice);
-			//setQuoteTotalState(NP.strip(NP.times(quantityInputState, convertedPrice)));
+			//A LINHA ABAIXO ESTAVA COMENTADA 
+			setQuoteTotalState(NP.strip(NP.times(quantityInputState, convertedPrice)));
 		}
 	}, [quoteCurrencyState, priceSelector.loading, calculatePrice, priceSelector.payload, props.sale.price, quantityInputState]);
 
@@ -231,7 +232,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 		if (buyResponse.payload) {
 			if (buyResponse.payload.success) {
 				notification.success({
-					message: `Buy ${currency_id.toUpperCase()} successfully`,
+					message: `Parabéns! Compra ${currency_id.toUpperCase()} efetivada.`,
 				});
 				dispatchResetBuyResponse();
 				dispatchGetTotalBuyers(props.sale.id); // update Total Buyers in Sale Info
@@ -242,9 +243,9 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 		}
 
 		if (buyResponse.loading) {
-			const hide = message.loading('Buying in progress..', 0);
+			const hide = message.loading('Efetivando a sua compra..', 0);
 			// dismiss manually and asynchronously
-			setTimeout(hide, 2500);
+			setTimeout(hide, 5500);
 		}
 	}, [
 		buyResponse.error,
@@ -275,7 +276,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 			setIsBuyConfirmModalVisibleState(false);
 		} else {
 			notification.error({
-				message: 'Something went wrong.',
+				message: 'Não foi possível realizar sua compra no momento. Por favor, tente novamente em instantes.',
 			});
 		}
 	};
@@ -305,17 +306,17 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 				type="primary"
 				size="large"
 				block
-				style={{ height: '3rem' }}
+				style={{ height: '3rem', color: 'white', background: '#13b887' }}
 				disabled={handleBuyDisabled()}
 				onClick={showBuyConfirmModal}
-			>
-				Buy
+			>Comprar Tokens
+				
 			</Button>
 		);
 	} else {
 		buyButton = (
-			<Button type="primary" size="large" block style={{ height: '3rem' }} onClick={handleNavigateLoginPage}>
-				Login
+			<Button type="primary" size="large" block style={{ height: '3rem', background: '#1EBDB2', textAlign: 'center' }} onClick={handleNavigateLoginPage}>
+				Entrar na sua conta
 			</Button>
 		);
 	}
@@ -324,8 +325,8 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 		if (quoteCurrencyState) {
 			return (
 				<React.Fragment>
-					<div className="quantity">
-						<span>Quantity to buy:</span>
+					<div className="quantity" >
+						<span style={{ fontSize: '11.5px', color: 'white', background: 'transparent' }}>Digite a quantidade de tokens que deseja adquirir</span>
 						<Input
 							size="large"
 							autoFocus={type === 'ongoing'}
@@ -337,15 +338,15 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 							addonAfter={currency_id.toUpperCase()}
 						/>
 						{quantityInputState < props.sale.min_buy ? (
-							<span style={{ color: '#e63946', fontWeight: 'bold' }}>
-								** Quantiy must be larger {props.sale.min_buy}
+							<span style={{ fontSize: '11.5px', color: 'white', background: 'transparent' }}>
+								** A quantidade deve ser maior que {props.sale.min_buy} tokens
 							</span>
 						) : (
 							''
 						)}
 					</div>
 					<div className="price">
-						<span>At the price:</span>
+						<span style={{ fontSize: '11.5px', color: 'white', background: 'transparent' }}>Ao preço unitário de:</span>
 						<Input
 							size="large"
 							disabled
@@ -356,7 +357,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 						/>
 					</div>
 					<div className="total">
-						<span>Total</span>
+						<span style={{ fontSize: '11.5px', color: 'white', background: 'transparent' }}>O total da sua compra será de: </span>
 						<Input
 							size="large"
 							disabled
@@ -367,7 +368,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 							addonAfter={quoteCurrencyState.toUpperCase()}
 						/>
 					</div>
-					<div className="buy-button" style={{ marginTop: '3rem' }}>
+					<div className="buy-button" style={{ marginTop: '35px' }}>
 						{buyButton}
 					</div>
 				</React.Fragment>
@@ -380,12 +381,12 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 	const showSelectCurrencyForm = () => {
 		return (
 			<div className="select-currency-box">
-				<span>Select currency</span>
+				<span style={{ fontSize: '11.5px', color: 'white', background: 'transparent' }}>Selecione a forma de pagamento</span>
 				<select onChange={handleSelectCurrency} value={quoteCurrencyState}>
 					{currency_available.map(currency => {
 						let optiontring = currency.toUpperCase();
 						const balance = handleGetBalance(currency);
-						optiontring += ` | Available: ${balance}`;
+						optiontring += ` | Disponível: ${balance}`;
 
 						return <option value={currency}>{optiontring}</option>;
 					})}
@@ -398,9 +399,9 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 		if (type !== 'ongoing') {
 			return (
 				<div id="sale-buy__closed">
-					<span>STARTING PRICE:</span>
-					<p>${props.sale.price} USD</p>
-					<span>STARTS AFTER:</span>
+					<span>Preço inicial:</span>
+					<p>R${props.sale.price} Reais</p>
+					<span>Inicia após:</span>
 					<p style={{ color: 'rgb(248, 83, 113)' }}>{type.toUpperCase()}</p>
 				</div>
 			);
@@ -434,15 +435,15 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 	return (
 		<React.Fragment>
 			<div id="sale-buy" style={{ height: '100%' }}>
-				<h2 className="sale-buy__title">Buy {currency_id.toUpperCase()}</h2>
-				<h3 className="sale-buy__subtitle">{`Available: ${baseBalance} ${currency_id.toUpperCase()}`}</h3>
-				<div className="buy-box">
+				<h2 className="sale-buy__title">Comprar {currency_id.toUpperCase()}</h2>
+				<h3 className="sale-buy__subtitle">{`Saldo atual: ${baseBalance} ${currency_id.toUpperCase()}`}</h3>
+				<div className="buy-box" >
 					{showSelectCurrencyForm()}
 					{showBuyForm()}
 				</div>
 				<div className="row">
 					<div className="col-12 text-center" style={{ marginTop: '2rem' }}>
-						<img width="100px" src={WalletImage} alt="" />
+						<img width="80px" src={WalletImage} alt="" />
 					</div>
 				</div>
 			</div>

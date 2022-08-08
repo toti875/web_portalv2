@@ -18,10 +18,10 @@ export const SaleListScreen: React.FC = () => {
 					}}
 				>
 					<Button style={{ backgroundColor: '#457b9d' }} type="primary" size={'large'} href="#" target="_blank">
-						Apply to Launch
+						Adquira seu Token
 					</Button>
 					<Button href="#" target="_blank" style={{ backgroundColor: '#2a9d8f' }} type="primary" size={'large'}>
-						Open Trade Token
+						Conheça o Projeto
 					</Button>
 				</div>
 			</div>
@@ -29,9 +29,9 @@ export const SaleListScreen: React.FC = () => {
 			<div id="sale-list" className="container-fluid">
 				<div className="row">
 					<div className="col-12 text-center">
-						<h1 className="sale-list__title">Welcome to Fortem Financial Launchpad!</h1>
+						<h1 className="sale-list__title">Bem vindo ao Marketplace de ativos digitais da Fortem One!</h1>
 						<h2 className="sale-list__subtitle">
-							The starting point for the most promising projects the cryptocurrency space has to offer.
+							Diversifique seus investimentos e impulsione o seu portfólio com os ativos digitais listados na Plataforma.
 						</h2>
 					</div>
 				</div>

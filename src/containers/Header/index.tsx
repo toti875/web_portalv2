@@ -129,7 +129,7 @@ export const Header: React.FC = () => {
 		return (
 			isLoggedIn && (
 				<Link
-					to="/admin/pages/profile/overview"
+					to="/admin/account/settings"
 					onClick={() => {
 						setStateActiveNow('account');
 						setActiveItemDrop('perfil');
@@ -172,7 +172,7 @@ export const Header: React.FC = () => {
 		return (
 			isLoggedIn && (
 				<Link
-					to="/admin/pages/profile/overview"
+					to="/admin/account/settings"
 					onClick={() => {
 						setStateActiveNow('account');
 						setActiveItemDrop('kyc');
@@ -251,66 +251,101 @@ export const Header: React.FC = () => {
 
 						<div className="header__left-menu__dropdown flex-shrink-0  ">
 							<div className="header__left-menu__dropdown__wrap">
-								<span className={classLinkActiveTitleDrop('Trade')}>
+								<span className={classLinkActiveTitleDrop('Exchange')}>
 									Negociação
 									<div className="header__left-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div>
 								</span>
 								<div className="header__left-menu__dropdown__wrap__content">
 									<Link
-										to=""
+										to="/markets"
 										className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
 										onClick={() => {
-											setStateActiveNow('Trade');
-											setActiveItemDrop('for-issuers');
+											setStateActiveNow('Exchange');
+											setActiveItemDrop('markets');
 										}}
 									>
-										<div className={classActiveItemDrop('for-issuers')}>
+										<div className={classActiveItemDrop('markets')}>
 											<FaGift className="header__left-menu__dropdown__wrap__content__title__icon mr-2" />
-											Exchange Pro
+											Mercados
 										</div>
 									</Link>
 									<Link
-										to=""
+										to="/exchange-fast"
 										className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
 										onClick={() => {
-											setStateActiveNow('More');
-											setActiveItemDrop('for-investors');
+											setStateActiveNow('Exchange');
+											setActiveItemDrop('fast');
 										}}
 									>
-										<div className={classActiveItemDrop('for-investors')}>
+										<div className={classActiveItemDrop('fast')}>
 											<FaGift className="header__left-menu__dropdown__wrap__content__title__icon mr-2" />
 											Exchange Fast
 										</div>
 									</Link>
+									<a
+   										target="_blank"
+   										rel="noreferrer"
+   										href="http://demo.exchange.fortem-financial.io/">
+        
+										<div className={classActiveItemDrop('pro')}>
+											<FaGift className="header__left-menu__dropdown__wrap__content__title__icon mr-2" />
+											Exchange Pro
+										</div>
+										</a>
 
 								</div>
 							</div>
 						</div>
 
-						
-						
-						
-						
-						<div className="header__left-menu__dropdown flex-shrink-0">
-							<div className={classLinkActive('markets')} onClick={() => setStateActiveNow('markets')}>
-								<Link
-									to="/markets"
-									className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
-								>
-									Exchange Pro
-								</Link>
+						<div className="header__left-menu__dropdown flex-shrink-0  ">
+							<div className="header__left-menu__dropdown__wrap">
+								<span className={classLinkActiveTitleDrop('DigitalAssets')}>
+									Ativos Digitais
+									<div className="header__left-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div>
+								</span>
+								<div className="header__left-menu__dropdown__wrap__content">
+									<Link
+										to="/tokens"
+										className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
+										onClick={() => {
+											setStateActiveNow('DigitalAssets');
+											setActiveItemDrop('investors');
+										}}
+									>
+										<div className={classActiveItemDrop('investors')}>
+											<FaGift className="header__left-menu__dropdown__wrap__content__title__icon mr-2" />
+											Emitir tokens
+										</div>
+									</Link>
+									<Link
+										to="/tokens"
+										className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
+										onClick={() => {
+											setStateActiveNow('DigitalAssets');
+											setActiveItemDrop('emiters');
+										}}
+									>
+										<div className={classActiveItemDrop('emiters')}>
+											<FaGift className="header__left-menu__dropdown__wrap__content__title__icon mr-2" />
+											Comprar tokens
+										</div>
+									</Link>
+									<a
+   										target="_blank"
+   										rel="noreferrer"
+   										href="http://demo.exchange.fortem-financial.io/">
+        
+										<div className={classActiveItemDrop('learn-tokenization')}>
+											<FaGift className="header__left-menu__dropdown__wrap__content__title__icon mr-2" />
+											Saiba mais
+										</div>
+									</a>
+
+								</div>
 							</div>
-						</div>
-						<div className="header__left-menu__dropdown flex-shrink-0 ">
-							<div className={classLinkActive('ieo')} onClick={() => setStateActiveNow('ieo')}>
-								<Link
-									to="/tokens"
-									className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
-								>
-									Tokens
-								</Link>
-							</div>
-						</div>
+						</div>						
+						
+						
 						<div className="header__left-menu__dropdown flex-shrink-0 d-none d-lg-block d-xl-block ">
 							<div className={classLinkActive('stake')} onClick={() => setStateActiveNow('stake')}>
 								<Link

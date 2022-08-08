@@ -129,7 +129,7 @@ export const HeaderNavbar: React.FC = () => {
 		return (
 			isLoggedIn && (
 				<Link
-					to="/admin/pages/profile/overview"
+					to="/admin/account/settings"
 					onClick={() => {
 						setStateActiveNow('account');
 						setActiveItemDrop('perfil');
@@ -172,7 +172,7 @@ export const HeaderNavbar: React.FC = () => {
 		return (
 			isLoggedIn && (
 				<Link
-					to="/admin/pages/profile/overview"
+					to="/admin/account/settings"
 					onClick={() => {
 						setStateActiveNow('account');
 						setActiveItemDrop('kyc');
