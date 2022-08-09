@@ -121,7 +121,7 @@ const OrderBookContainer = props => {
 
 			return arrBidsElm.map((item, i) => (
 				<TrStyle
-					color="rgba(47,182,126,0.4)"
+					color="#13b887"
 					placement="right"
 					percentWidth={(item[3] as number) || 0}
 					key={i}
@@ -142,13 +142,13 @@ const OrderBookContainer = props => {
 
 			return arrAsksElm.map((item, i) => (
 				<TrStyle
-					color="rgba(224,30,90,0.2)"
+					color="#ef5350"
 					placement="left"
 					percentWidth={(item[3] as number) || 0}
 					key={i}
 					onClick={() => handleOnSelectAsks(i.toString(), total[i])}
 				>
-					<td className="td-order-book-item__negative pisca3">{item[0]}</td>
+					<td className="td-order-book-item__negative pisca4">{item[0]}</td>
 					<td className="pisca3">{item[1]}</td>
 					<td className="pisca3">{item[2]}</td>
 				</TrStyle>
