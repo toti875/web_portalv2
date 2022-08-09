@@ -157,7 +157,7 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 
 
 	@-webkit-keyframes pisca3 {
-		from { background-color: #13887 ; }
+		from { background-color: #13b887 ; }
 		to { background-color: transparent; }
 	  }
 	  @-moz-keyframes pisca3 {
