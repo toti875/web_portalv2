@@ -149,8 +149,8 @@ const OrderBookContainer = props => {
 					onClick={() => handleOnSelectAsks(i.toString(), total[i])}
 				>
 					<td className="td-order-book-item__negative pisca4">{item[0]}</td>
-					<td className="pisca3">{item[1]}</td>
-					<td className="pisca3">{item[2]}</td>
+					<td className="pisca4">{item[1]}</td>
+					<td className="pisca4">{item[2]}</td>
 				</TrStyle>
 			));
 		}

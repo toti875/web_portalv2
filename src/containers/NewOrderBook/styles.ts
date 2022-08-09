@@ -135,6 +135,27 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 			}
 		}
 	}
+
+
+	@-webkit-keyframes pisca4 {
+		from { background-color: #ef5350  ; }
+		to { background-color: transparent; }
+	  }
+	  @-moz-keyframes pisca4 {
+		from { background-color: #ef5350  ; }
+		to { background-color: transparent; }
+	  }
+	  @-o-keyframes pisca4 {
+		from { background-color: #ef5350  ; }
+		
+		to { background-color: transparent; }
+	  }
+	  @keyframes pisca4 {
+		from { background-color: #ef5350 ; }
+		to { background-color: transparent; }
+	  }
+
+
 	@-webkit-keyframes pisca3 {
 		from { background-color: #13887 ; }
 		to { background-color: transparent; }
@@ -153,23 +174,7 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 		to { background-color: transparent; }
 	  }
 
-	  @-webkit-keyframes pisca4 {
-		from { background-color: #ef5350  ; }
-		to { background-color: transparent; }
-	  }
-	  @-moz-keyframes pisca4 {
-		from { background-color: #ef5350  ; }
-		to { background-color: transparent; }
-	  }
-	  @-o-keyframes pisca4 {
-		from { background-color: #ef5350  ; }
-		
-		to { background-color: transparent; }
-	  }
-	  @keyframes pisca4 {
-		from { background-color: #ef5350 ; }
-		to { background-color: transparent; }
-	  }
+
 
 `;
 
