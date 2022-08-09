@@ -444,7 +444,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 						component={ChangeForgottenPasswordScreen}
 					/>
 					<PublicRoute
-						loading={userLoading}
+						loading={userLoading} 
 						isLogged={isLoggedIn}
 						path="/email-verification"
 						component={EmailVerificationScreen}

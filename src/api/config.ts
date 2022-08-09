@@ -3,12 +3,12 @@ import { Config } from './types';
 
 export const defaultConfig: Config = {
 	api: {
-		authzURL: 'https://demo.fortem-financial.io/api/v2/authz',
-		switchURL: 'https://demo.fortem-financial.io/api/v2/switch',
-		transactionURL: 'https://demo.fortem-financial.io/api/v2/fortem',
-		ieoURL: 'https://api.fortem-financial.io/api/v2/fortem',
+		authzURL: 'http://demo.fortem-financial.io/api/v2/authz',
+		switchURL: 'http://demo.fortem-financial.io/api/v2/switch',
+		transactionURL: 'http://demo.fortem-financial.io/api/v2/fortem',
+		ieoURL: 'http://api.fortem-financial.io/api/v2/fortem',
 
-		downstreamURL: 'wss://demo.fortem-financial.io/api/v2/downstream',
+		downstreamURL: 'ws://demo.fortem-financial.io/api/v2/downstream',
 	},
 	minutesUntilAutoLogout: '15',
 	rangerReconnectPeriod: '1',
@@ -18,8 +18,8 @@ export const defaultConfig: Config = {
 	msAlertDisplayTime: '10000',
 	incrementalOrderBook: true,
 	finex: false,
-	isResizable: false,
-	isDraggable: false,
+	isResizable: true,
+	isDraggable: true,
 	languages: ['pt'],
 	usernameEnabled: true,
 	sessionCheckInterval: '15000',
@@ -58,9 +58,9 @@ export const gaTrackerKey = (): string => Cryptobase.config.gaTrackerKey || 'G-M
 export const msAlertDisplayTime = (): string => Cryptobase.config.msAlertDisplayTime || '10000';
 export const rangerReconnectPeriod = (): number =>
 	Cryptobase.config.rangerReconnectPeriod ? Number(Cryptobase.config.rangerReconnectPeriod) : 1;
-export const incrementalOrderBook = (): boolean => Cryptobase.config.incrementalOrderBook || false;
-export const isResizableGrid = (): boolean => Cryptobase.config.isResizable || false;
-export const isDraggableGrid = (): boolean => Cryptobase.config.isDraggable || false;
+export const incrementalOrderBook = (): boolean => Cryptobase.config.incrementalOrderBook || true;
+export const isResizableGrid = (): boolean => Cryptobase.config.isResizable || true;
+export const isDraggableGrid = (): boolean => Cryptobase.config.isDraggable || true;
 export const languages =
 	Cryptobase.config.languages && Cryptobase.config.languages.length > 0 ? Cryptobase.config.languages : ['pt'];
 export const sessionCheckInterval = (): string => Cryptobase.config.sessionCheckInterval || '15000';
