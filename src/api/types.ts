@@ -1,4 +1,6 @@
-export interface Config {
+
+declare global {
+interface Config {
 	api: {
 		authzURL: string;
 		transactionURL: string;
@@ -15,6 +17,7 @@ export interface Config {
 	};
 	gaTrackerKey?: string;
 	msAlertDisplayTime?: string;
+	msPricesUpdates: string;
 	incrementalOrderBook: boolean;
 	finex: boolean;
 	isResizable: boolean;
@@ -28,3 +31,9 @@ export interface Config {
 	sentryEnabled?: boolean;
 	kycSteps?: string[];
 }
+interface Window {
+	env: Config;
+}
+}
+
+export {};

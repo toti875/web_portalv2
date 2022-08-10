@@ -94,6 +94,9 @@ import { rootWithdrawLimitSaga, WithdrawLimitState } from './user/withdrawLimit'
 import { rootCompetitionListSaga } from './plugins/competition/list/saga';
 import { rootCompetitionRankingSaga } from './plugins/competition/ranking/sagas';
 import { HolderInfoState, HolderListState, rootHolderSaga } from './plugins/holder';
+import { QuickExchangeState, rootQuickExchangeSaga } from './user/quickExchange';
+import { AbilitiesState, rootAbilitiesSaga } from './user/abilities';
+
 
 export * from './airdrops/airdrop';
 export * from './airdrops/claim';
@@ -141,6 +144,10 @@ export * from './user/userActivity';
 export * from './user/wallets';
 export * from './user/withdrawLimit';
 export * from './plugins/competition';
+
+export * from './user/quickExchange';
+export * from './user/abilities';
+
 export interface RootState {
 	airdrops: {
 		airdrops: AirdropState;
@@ -227,6 +234,9 @@ export interface RootState {
 		child_currencies: ChildCurrenciesState;
 		all_child_currencies: ChildCurrenciesState;
 		withdrawLimit: WithdrawLimitState;
+		abilities: AbilitiesState;
+		quickExchange: QuickExchangeState;
+
 	};
 	events: {
 		lunar: LunarsState;

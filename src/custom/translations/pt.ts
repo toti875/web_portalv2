@@ -22,4 +22,26 @@ export const pt = {
 	/**Airdrop Coin */
 	'page.body.airdropCoin.claim.msg.success': 'Claim success',
 	'page.body.airdropCoin.claim.msg.fail': 'Claim fail',
+
+    /* Quick Exchange */
+    'page.body.quick.exchange.header': 'Quick exchang',
+
+    'page.body.quick.exchange.label.exchange': 'You exchange',
+    'page.body.quick.exchange.label.receive': 'You receive',
+    'page.body.quick.exchange.label.currency': 'Currency',
+
+    'page.body.quick.exchange.sublabel.min_amount': 'Min exchange amount is',
+    'page.body.quick.exchange.sublabel.balance': 'Balance',
+
+    'page.body.quick.exchange.estimated_price': 'Estimated price',
+    'page.body.quick.exchange.slippage': 'Slippage is higher than 1%. Enter a lower amount to get a better price',
+
+    'page.body.quick.exchange.placeholder.exchange': 'You exchange',
+    'page.body.quick.exchange.placeholder.receive': 'You receive',
+
+    'page.body.quick.exchange.button.exchange': 'Exchange',
+
+    'success.quick.exchange.order.created': 'Order successfully created',
+
+
 };

@@ -1,111 +1,102 @@
 import classnames from 'classnames';
-import * as React from 'react';
+import React, { useEffect, useState, useMemo, useCallback } from 'react';
 import { Dropdown } from 'react-bootstrap';
+import { ChevronIcon } from '../../assets/images/ChevronIcon';
+import { convertToString } from '../../helpers/convertToString';
+
 
 type DropdownElem = number | string | React.ReactNode;
 
 export interface DropdownComponentProps {
-	/**
-	 * List of options
-	 */
-	list: DropdownElem[];
-	/**
-	 * Selection callback function
-	 * @default empty
-	 */
-	onSelect?: (index: number) => void;
-	/**
-	 *  By default class name 'cr-dropwdown'
-	 *  This property gives an additional class name
-	 *  @default empty
-	 */
-	className?: string;
-	/**
-	 * Value for placeholder of Dropdown components
-	 * @default empty
-	 */
-	placeholder?: string;
-	/**
-	 * Value for disabling contentEditable property
-	 * @default false
-	 */
-	disableContentEditable?: boolean;
+    /**
+     * List of options
+     */
+    list: DropdownElem[];
+    /**
+     * Selection callback function
+     * @default empty
+     */
+    onSelect?: (index: number) => void;
+    /**
+     *  By default class name 'cr-dropwdown'
+     *  This property gives an additional class name
+     *  @default empty
+     */
+    className?: string;
+    /**
+     * Value for placeholder of Dropdown components
+     * @default empty
+     */
+    placeholder?: string;
+    /**
+     * Value for disabling contentEditable property
+     * @default false
+     */
+    disableContentEditable?: boolean;
+    /**
+     * Value for clear selected item
+     * @default false
+     */
+    clear?: boolean;
+    selectedValue?: string;
 }
 
-interface DropdownComponentState {
-	selected: string;
-	selectedIndex: string;
-}
 
 /**
  *  Cryptobase Dropdown that overrides default dropdown with list of options.
  */
-class DropdownComponent extends React.PureComponent<DropdownComponentProps & {}, DropdownComponentState> {
-	constructor(props: DropdownComponentProps) {
-		super(props);
-		const selectedValue = this.props.placeholder || this.convertToString(this.props.list[0]);
-		this.state = {
-			selected: selectedValue,
-			selectedIndex: '0',
-		};
-	}
 
-	public componentDidUpdate(prevProps: DropdownComponentProps) {
-		const { placeholder } = this.props;
+export const DropdownComponent = (props: DropdownComponentProps) => {
+    const [selected, setSelected] = useState<string | undefined>('');
 
-		if (placeholder && placeholder !== prevProps.placeholder) {
-			this.setState({
-				selected: placeholder,
-				selectedIndex: '0',
-			});
-		}
-	}
+    const { list, className, placeholder, clear, onSelect } = props;
+    const defaultPlaceholder = list[0];
 
-	public render() {
-		const { selected } = this.state;
-		const { list } = this.props;
-		const cx = classnames('cr-dropdown', this.props.className, {
-			'cr-dropdown--default': selected === this.props.placeholder,
-		});
+    const cx = useMemo(() => classnames('cr-dropdown', className, {
+        'cr-dropdown--default': selected === placeholder,
+    }), [selected, placeholder, className]);
 
-		return (
-			<div className={cx}>
-				<Dropdown>
-					<Dropdown.Toggle variant="primary" id="dropdown-basic">
-						{selected}
-					</Dropdown.Toggle>
-					<Dropdown.Menu>{list.map((elem, index) => this.renderElem(elem, index))}</Dropdown.Menu>
-				</Dropdown>
-			</div>
-		);
-	}
+    useEffect(() => {
+        if (clear !== false) {
+            setSelected(placeholder || convertToString(defaultPlaceholder));
+        }
+    }, [placeholder, defaultPlaceholder, clear]);
 
-	private renderElem = (elem: DropdownElem, index: number) => {
-		return (
-			<Dropdown.Item
-				key={index}
-				onSelect={(eventKey: any, e?: React.SyntheticEvent<unknown>) => this.handleSelect(elem, index)}
-			>
-				{elem}
-			</Dropdown.Item>
-		);
-	};
+    useEffect(() => {
+        if (typeof props.selectedValue !== 'undefined' && props.selectedValue !== '') {
+            setSelected(props.selectedValue);
+        } else if (props.selectedValue === '') {
+            setSelected(placeholder || convertToString(defaultPlaceholder));
+        }
+    }, [props.selectedValue]);
 
-	private handleSelect = (elem: DropdownElem, index: number) => {
-		this.props.onSelect && this.props.onSelect(index);
-		this.setState({
-			selected: this.convertToString(elem),
-			selectedIndex: index.toString(),
-		});
-	};
+    const handleSelect = useCallback((elem: DropdownElem, index: number) => {
+        onSelect && onSelect(index);
+        setSelected(convertToString(elem));
+    }, [list, selected, onSelect]);
 
-	private convertToString = (elem: DropdownElem) => {
-		if (elem !== undefined && elem !== null) {
-			return elem.toString();
-		}
+    const renderElem = useCallback((elem: DropdownElem, index: number) => {
+        return  (
+            <Dropdown.Item
+                key={index}
+                onSelect={() => handleSelect(elem, index)}
+            >
+                {elem}
+            </Dropdown.Item>
+        );
+    }, [handleSelect]);
 
-		return '';
-	};
-}
-
-export { DropdownComponent };
+    return (
+        <div className={cx}>
+            <Dropdown>
+                <Dropdown.Toggle variant="primary" id="dropdown-basic">
+                    {selected || placeholder}
+                    <ChevronIcon className="cr-dropdown__arrow" />
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                    {list.map(renderElem)}
+                </Dropdown.Menu>
+            </Dropdown>
+        </div>
+    );
+};

@@ -1,5 +1,4 @@
 import { DEFAULT_KYC_STEPS, ORDER_BOOK_DEFAULT_SIDE_LIMIT, STORAGE_DEFAULT_LIMIT } from '../constants';
-import { Config } from './types';
 
 export const defaultConfig: Config = {
 	api: {
@@ -16,6 +15,7 @@ export const defaultConfig: Config = {
 	storage: {},
 	gaTrackerKey: 'G-M47QL88D4R',
 	msAlertDisplayTime: '10000',
+	msPricesUpdates: '1000',
 	incrementalOrderBook: true,
 	finex: false,
 	isResizable: true,
@@ -56,6 +56,7 @@ export const defaultStorageLimit = () => Cryptobase.config.storage.defaultStorag
 export const orderBookSideLimit = () => Cryptobase.config.storage.orderBookSideLimit || ORDER_BOOK_DEFAULT_SIDE_LIMIT;
 export const gaTrackerKey = (): string => Cryptobase.config.gaTrackerKey || 'G-M47QL88D4R';
 export const msAlertDisplayTime = (): string => Cryptobase.config.msAlertDisplayTime || '10000';
+export const msPricesUpdates = () => Cryptobase.config.msPricesUpdates;
 export const rangerReconnectPeriod = (): number =>
 	Cryptobase.config.rangerReconnectPeriod ? Number(Cryptobase.config.rangerReconnectPeriod) : 1;
 export const incrementalOrderBook = (): boolean => Cryptobase.config.incrementalOrderBook || true;

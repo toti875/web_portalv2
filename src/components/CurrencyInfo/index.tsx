@@ -15,14 +15,14 @@ interface CurrencyIconProps {
 	currency: string;
 }
 
-const CurrencyIcon: React.FunctionComponent<CurrencyIconProps> = (props: CurrencyIconProps) => {
+export const CurrencyIcon: React.FunctionComponent<CurrencyIconProps> = (props: CurrencyIconProps) => {
 	return props.icon ? (
 		<img alt="" className="cr-wallet-item__single__image-icon" src={props.icon} />
 	) : (
 		<CryptoIcon code={props.currency} />
 	);
 };
-
+ 
 const CurrencyInfo: React.FunctionComponent<CurrencyInfoProps> = (props: CurrencyInfoProps) => {
 	const balance = props.wallet && props.wallet.balance ? props.wallet.balance.toString() : '0';
 

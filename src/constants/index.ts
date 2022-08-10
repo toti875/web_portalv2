@@ -26,9 +26,9 @@ export const DEFAULT_TRADING_VIEW_INTERVAL = '5';
 export const VALUATION_PRIMARY_CURRENCY = 'USD';
 export const VALUATION_SECONDARY_CURRENCY = 'BTC';
 
-export const PASSWORD_ENTROPY_STEP = 14;
+export const PASSWORD_ENTROPY_STEP = 6;
 
-export const DEFAULT_KYC_STEPS = ['email', 'profile', 'document', 'address'];
+export const DEFAULT_KYC_STEPS = ['email', 'profile', 'document'];
 
 export const DEFAULT_ORDER_TYPES: DropdownElem[] = ['Limit', 'Market'];
 export const AMOUNT_PERCENTAGE_ARRAY = [0.25, 0.5, 0.75, 1];

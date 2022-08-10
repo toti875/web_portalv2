@@ -92,6 +92,7 @@ import {
 	WithdrawScreen,
 	FortemIOHomePage,
 	PortfolioScreen,
+	QuickExchange,
 } from '../../screens';
 
 
@@ -527,6 +528,8 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 						component={PortfolioScreen}
 					/>
 					<Route path="/holder/starting" exact component={HolderStartingScreen} />
+
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/quick-exchange" component={QuickExchange} />
 
 					{/* new feature */}
 					<Route path="/airdrops" exact component={AirdropCoinListScreen} />

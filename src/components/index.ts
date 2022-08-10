@@ -61,3 +61,6 @@ export * from './NewDropdown';
 export * from './NewHomeMarketTable';
 export * from './NewMarketSlick';
 export * from './WrapperTabPage';
+export * from './CurrencyInfo';
+export * from './QuickExchangeForm';
+export * from './Timer';
