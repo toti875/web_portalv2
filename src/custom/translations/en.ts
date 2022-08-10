@@ -29,7 +29,7 @@ export const en = {
 	'page.body.airdropCoin.claim.msg.fail': 'Claim fail',
 
 	    /* Quick Exchange */
-		'page.body.quick.exchange.header': 'Quick exchang',
+		'page.body.quick.exchange.header': 'Quick Exchange',
 
 		'page.body.quick.exchange.label.exchange': 'You exchange',
 		'page.body.quick.exchange.label.receive': 'You receive',

@@ -21,7 +21,7 @@ export const SaleListScreen: React.FC = () => {
 						Adquira seu Token
 					</Button>
 					<Button href="#" target="_blank" style={{ backgroundColor: '#2a9d8f' }} type="primary" size={'large'}>
-						Conheça o Projeto
+						Conheça os Projetos
 					</Button>
 				</div>
 			</div>

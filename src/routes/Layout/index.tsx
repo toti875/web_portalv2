@@ -421,8 +421,8 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 				<Switch>
 					<Route exact={true} path="/magic-link" component={MagicLink} />
 					<PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/banner/authentication/sign-in/basic" component={SignInBasic} />
-					<PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/login" component={SignInBasic} />
-					<PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/signin" component={SignInBasic} />
+					<PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/banner/authentication/sign-in/basic" component={SignInBasic} />
+					<PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/banner/authentication/sign-in/basic" component={SignInBasic} />
 					<PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/banner/authentication/sign-up/basic" component={SignUpBasic} />
 					<PublicRoute
 						loading={userLoading}
@@ -496,7 +496,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					{/* NEW Profile Page */}
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/account/settings" component={Default} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/profile/settings" component={Default} />
-					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={Default} />
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/profile/settings" component={Default} />
 
 
 					{/*Profile Test Page */}
