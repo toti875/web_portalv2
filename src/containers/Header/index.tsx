@@ -270,7 +270,7 @@ export const Header: React.FC = () => {
 										</div>
 									</Link>
 									<Link
-										to="/exchange-fast"
+										to="/quick-exchange"
 										className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
 										onClick={() => {
 											setStateActiveNow('Exchange');

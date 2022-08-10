@@ -1,6 +1,5 @@
 import { Market, Wallet } from '../../modules';
 
-//downlevelIteration 
 const getCurrencyForMarket = (markets: Market[]) =>
     [...(new Set((markets.map(item => [item.base_unit, item.quote_unit]) as any).flat()))];
 

@@ -2,10 +2,10 @@ import React, { useCallback, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useIntl } from 'react-intl';
 import { Button, Spinner } from 'react-bootstrap';
-import { useHistory } from 'react-router-dom';
+//import { useHistory } from 'react-router-dom';
 import { msPricesUpdates } from '../../api';
 import { useCurrenciesFetch } from '../../hooks';
-import { CanCan } from '../../containers';
+//import { CanCan } from '../../containers';
 import {
     marketsFetch,
     selectMarkets,
@@ -15,8 +15,7 @@ import {
     selectMarketPrice,
     selectMarketPriceFetchSuccess,
     createQuickExchangeFetch,
-    selectAbilities,
-    selectAbilitiesSuccess,
+    
 } from '../../modules'
 import { SwipeIcon } from '../../assets/images/swipe';
 import { Decimal, CurrencyIcon, QuickExchangeForm, DropdownComponent, Timer } from '../../components';
@@ -29,11 +28,10 @@ import {
     getBaseAmount,
     getQuoteAmount,
 } from './helpers';
-import { precisionRegExp } from '../../helpers';
-import { ssToMMSS } from 'helpers/ssToMMSS';
-import { ArrowRight, WarningIcon } from './icons';
+import { ssToMMSS } from '../../helpers/ssToMMSS';
 
-import axios from 'axios';
+import {precisionRegExp} from '../../helpers'
+import { ArrowRight, WarningIcon } from './icons';
 
 interface QuickExchangeTimer {
     initialSeconds: number;
@@ -67,20 +65,14 @@ export const QuickExchangeContainer = () => {
 
     const { formatMessage } = useIntl();
     const dispatch = useDispatch();
-    const history = useHistory();
-
-    const payload = [{
-        read: [ 'Order', 'Trade', 'Member', 'Account', 'PaymentAddress' ],
-        update: [ 'Order' ],
-    }];
+    //const history = useHistory();
 
     const wallets = useSelector(selectWallets) || [];
     const markets = useSelector(selectMarkets) || [];
     const marketPrice = useSelector(selectMarketPrice);
     const updateTimer = useSelector(selectMarketPriceFetchSuccess);
     //const abilities = useSelector(selectAbilities);
-    const abilities = payload;
-    //const abilitiesSuccess = useSelector(selectAbilitiesSuccess);//
+    //const abilitiesSuccess = useSelector(selectAbilitiesSuccess);
 
     const translate = useCallback((id: string) => formatMessage({ id: id }), [formatMessage]);
 
@@ -96,12 +88,8 @@ export const QuickExchangeContainer = () => {
         const seconds = +msPricesUpdates() / 1000;
         setTime(ssToMMSS(seconds));
 
-        
-           
-        
-
         dispatch(walletsFetch());
-        dispatch(marketsFetch({type: 'qe'}));
+        dispatch(marketsFetch({type: 'market'}));
     }, [true]);
 
     const currentSelectedMarket = React.useMemo(() => getMarket(marketID, markets), [marketID]);
@@ -129,13 +117,9 @@ export const QuickExchangeContainer = () => {
     const handleChangeValue = (value: string, key: string) => {
         const precision = key === 'base_value' ? basePrecision : quotePrecision;
 
-        const ftkPrice = axios.get('http://demo.fortem-financial.io/api/v2/fortem');
-
-
-
         if (walletBase && value.match(precisionRegExp(precision))) {
             const [baseAmount, quoteAmount] = key === 'base_value'
-                ? getBaseAmount(walletBase, value, "22000", base.amount, quote.amount)
+                ? getBaseAmount(walletBase, value, marketPrice.price, base.amount, quote.amount)
                 : getQuoteAmount(walletBase, value, marketPrice.price, base.amount, quote.amount);
 
             const newBaseValue = {
@@ -377,8 +361,8 @@ export const QuickExchangeContainer = () => {
 
     return (
         <React.Fragment>
-      
-      <div className="cr-quick-exchange">
+           
+                <div className="cr-quick-exchange">
                     <div className="cr-quick-exchange__header">
                         {translate('page.body.quick.exchange.header')}
                     </div>

@@ -5,7 +5,7 @@ export const defaultConfig: Config = {
 		authzURL: 'http://demo.fortem-financial.io/api/v2/authz',
 		switchURL: 'http://demo.fortem-financial.io/api/v2/switch',
 		transactionURL: 'http://demo.fortem-financial.io/api/v2/fortem',
-		ieoURL: 'http://api.fortem-financial.io/api/v2/fortem',
+		ieoURL: 'http://api.fortem-financial.io/api/v2/peatio',
 
 		downstreamURL: 'ws://demo.fortem-financial.io/api/v2/downstream',
 	},

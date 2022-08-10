@@ -10,7 +10,7 @@ import * as WebSocket from 'ws';
 const mockConfig: Config = {
 	api: {
 		authzURL: '/api/v2/authz',
-		transactionURL: '/api/v2/fortem',
+		transactionURL: '/api/v2/peatio',
 		switchURL: '/api/v2/switch',
 		downstreamURL: '/api/v2/downstream',
 		ieoURL: '/api/v2/ieo',
