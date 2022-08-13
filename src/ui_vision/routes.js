@@ -38,6 +38,7 @@ import ConfirmBasic from "./views/Authentication/Confirm/ConfirmBasic.js"
 import SignUpIllustration from "./views/Authentication/SignUp/SignUpIllustration.js";
 import CRM from "./views/Dashboard/CRM.js";
 import Default from "./views/Dashboard/Default.js";
+import Wallets from "./views/Dashboard/Wallets.js";
 import OrderDetails from "./views/Ecommerce/Orders/OrderDetails";
 import OrderList from "./views/Ecommerce/Orders/OrderList";
 import EditProduct from "./views/Ecommerce/Products/EditProduct";
@@ -46,6 +47,7 @@ import ProductPage from "./views/Ecommerce/Products/ProductPage";
 import Billing from "./views/Pages/Account/Billing.js";
 import Invoice from "./views/Pages/Account/Invoice.js";
 import Settings from "./views/Pages/Account/Settings.js";
+
 import Alerts from "./views/Pages/Alerts";
 import Charts from "./views/Pages/Charts.js";
 import Pricing from "./views/Pages/Pricing.js";
@@ -105,6 +107,12 @@ const dashRoutes = [
         component: Settings,
         layout: "/admin",
       },
+      {
+        name: "Wallets",
+        path: "/account/wallets",
+        component: Wallets,
+        layout: "/admin",
+      },      
       {
         name: "CRM",
         path: "/dashboard/crm",

@@ -63,7 +63,7 @@ class ProfileActiveStepActionComponent extends React.Component<Props, State> {
 			case 3:
 				return (
 					<div>
-						Valide seu IR
+						Conclua seu cadastro
 						<CrossIcon />
 					</div>
 				);

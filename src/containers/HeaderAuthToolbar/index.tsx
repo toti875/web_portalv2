@@ -56,7 +56,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 					<div className={classItemTitle} onClick={() => setStateActiveNow('Dashboard')} >
 					<img src={IconDashboard} className="subheader__right-menu__item__title__svg" style={{width: '20px',}} />
 
-						<Link to="/dashboard">Painel de controle
+						<Link to="/admin/dashboard/default">Painel de controle
 						</Link>
 					</div>
 				</div>
@@ -77,7 +77,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 					</span>
 					<div className="subheader__right-menu__dropdown__wrap__content" style={{width: '100px',}}>
 						<Link
-							to="/dashboard"
+							to="/admin/dashboard/default"
 							onClick={() => {
 								setStateActiveNow('dashboard');
 								setActiveItemDrop('dashboard');
@@ -119,7 +119,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 					</span>
 					<div className="subheader__right-menu__dropdown__wrap__content" style={{width: '220px',}}>
 						<Link
-							to="/admin/dashboard/default"
+							to="/admin/account/wallets"
 							onClick={() => {
 								setStateActiveNow('finance');
 								setActiveItemDrop('wallets');

@@ -31,12 +31,12 @@ export const barChartOptionsDashboard = {
   tooltip: {
     style: {
       fontSize: "12px",
-      fontFamily: "Plus Jakarta Display",
+      fontFamily: "Inter",
     },
     onDatasetHover: {
       style: {
         fontSize: "12px",
-        fontFamily: "Plus Jakarta Display",
+        fontFamily: "Inter",
       },
     },
     theme: "dark",
@@ -99,21 +99,29 @@ export const barChartOptionsDashboard = {
   ],
 };
 
-export const lineChartDataDashboard = [
+export const lineChartDataDashboard_Cliente_IBOV = [
   {
-    name: "Mobile apps",
-    data: [500, 250, 300, 220, 500, 250, 300, 230, 300, 350, 250, 400],
+    name: "IBOV",
+    data: [6.98, 0.89, 6.06, -10.10, 3.22, -11.5, 4.69, 2.70],
   },
   {
-    name: "Websites",
-    data: [200, 230, 300, 350, 370, 420, 550, 350, 400, 500, 330, 550],
+    name: "Sua carteira",
+    data: [2.61, 1.89, 6.37, 0.76, 4.14, 2.72, 3.85, 2.83],
   },
 ];
+
+export const lineChartDataDashboard = [
+  {
+    name: "Sua carteira",
+    data: [2.61, 1.89, 6.37, 0.76, 4.14, 2.72, 3.85, 3.25],
+  },
+];
+
 
 export const lineChartOptionsDashboard = {
   chart: {
     toolbar: {
-      show: false,
+      show: true,
     },
   },
   tooltip: {
@@ -128,18 +136,15 @@ export const lineChartOptionsDashboard = {
   xaxis: {
     type: "datetime",
     categories: [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
+      "Jan/22",
+      "Fev/22",
+      "Mar/22",
+      "Abr/22",
+      "Mai/22",
+      "Jun/22",
+      "Jul/22",
+      "Ago/22"
+ 
     ],
     labels: {
       style: {
@@ -181,7 +186,7 @@ export const lineChartOptionsDashboard = {
       opacityTo: 0,
       stops: [],
     },
-    colors: ["#2CD9FF", "#582CFF"],
+    colors: ["#2CD9FF"],
   },
   colors: ["#2CD9FF", "#582CFF"],
 };
@@ -1015,22 +1020,18 @@ export const donutChartOptionsGeneral = {
 
 export const donutChartDataGeneral = [75, 25];
 
-export const lineChartDataCharts1 = [
+export const lineChartDataCharts2 = [
   {
-    name: "Organic Search",
-    data: [330, 150, 300, 220, 500, 250, 400, 230, 500],
+    name: "IBOV",
+    data: [6.98, 0.89, 6.06, -10.10, 3.22, -11.5, 4.69, 2.70],
   },
   {
-    name: "Referral",
-    data: [500, 400, 40, 140, 290, 290, 340, 230, 200],
-  },
-  {
-    name: "Direct",
-    data: [45, 23, 550, 33, 290, 150, 230, 340, 100],
+    name: "Sua carteira",
+    data: [2.61, 1.89, 6.37, 0.76, 4.14, 2.72, 3.85, 2.83],
   },
 ];
 
-export const lineChartOptionsCharts1 = {
+export const lineChartOptionsCharts2 = {
   chart: {
     toolbar: {
       show: false,
@@ -1050,17 +1051,14 @@ export const lineChartOptionsCharts1 = {
     type: "datetime",
     categories: [
       "Jan",
-      "Feb",
+      "Fev",
       "Mar",
-      "Apr",
-      "May",
+      "Abr",
+      "Mai",
       "Jun",
       "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
+      "Ago",
+
     ],
     labels: {
       style: {
@@ -1124,18 +1122,18 @@ export const lineChartOptionsCharts1 = {
   colors: ["#01B574", "#3182CE", "#582CFF"],
 };
 
-export const lineChartDataCharts2 = [
+export const lineChartDataCharts1 = [
   {
-    name: "Mobile apps",
-    data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+    name: "IBOV",
+    data: [6.98, 0.89, 6.06, -10.10, 3.22, -11.5, 4.69, 2.70],
   },
   {
-    name: "Websites",
-    data: [400, 500, 40, 140, 290, 290, 340, 230, 400],
+    name: "Sua carteira",
+    data: [2.61, 1.89, 6.37, 0.76, 4.14, 2.72, 3.85, 2.83],
   },
 ];
 
-export const lineChartOptionsCharts2 = {
+export const lineChartOptionsCharts1 = {
   chart: {
     toolbar: {
       show: false,
@@ -1153,18 +1151,15 @@ export const lineChartOptionsCharts2 = {
   xaxis: {
     type: "datetime",
     categories: [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
+      "Jan/22",
+      "Fev/22",
+      "Mar/22",
+      "Abr/22",
+      "Mai/22",
+      "Jun/22",
+      "Jul/22",
+      "Ago/22"
+ 
     ],
     labels: {
       style: {
@@ -1223,8 +1218,8 @@ export const lineChartOptionsCharts2 = {
 
 export const barChartDataCharts1 = [
   {
-    name: "Sales by age",
-    data: [20, 30, 40, 20, 45, 30],
+    name: "Rendimento mensal (%)",
+    data: [2.61, 1.89, 6.37, 0.76, 4.14, 2.72, 3.85, 3.25],
   },
 ];
 
@@ -1248,13 +1243,13 @@ export const barChartOptionsCharts1 = {
     theme: "dark",
   },
   xaxis: {
-    categories: ["16-20", "21-25", "26-30", "31-35", "36-42", "42+"],
+    categories: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago"],
     show: true,
     labels: {
       show: true,
       style: {
         colors: "#A0AEC0",
-        fontSize: "10px",
+        fontSize: "12px",
       },
     },
     axisBorder: {
@@ -1271,7 +1266,7 @@ export const barChartOptionsCharts1 = {
       show: true,
       style: {
         colors: "#A0AEC0",
-        fontSize: "10px",
+        fontSize: "12px",
       },
     },
   },
@@ -1285,13 +1280,13 @@ export const barChartOptionsCharts1 = {
     },
     xaxis: {
       lines: {
-        show: false,
+        show: true,
       },
     },
   },
   fill: {
     type: "solid",
-    colors: ["#582CFF"],
+    colors: ['#13b887'],
   },
   dataLabels: {
     enabled: false,
@@ -1822,8 +1817,8 @@ export const donutChartOptionsCharts1 = {
 export const donutChartDataCharts1 = [50, 15, 10, 20, 5];
 
 export const pieChartOptionsCharts1 = {
-  labels: ["Dev.to", "Creative Tim", "Github"],
-  colors: ["#582CFF", "#3F1AD1", "#35199F"],
+  labels: ["BTC (Bitcoin)", "ETH (Ethereum)", "FTK (Fortem Token)", "BOAT (Boat Rental Token)", "HORSE5 (Horse Token)"],
+  colors: ["#582CFF", "#3F1AD1", "#35199F", "#FDA736", "#1EDED0"],
   chart: {
     width: "100%",
     stroke: {
@@ -1838,7 +1833,7 @@ export const pieChartOptionsCharts1 = {
     },
   },
   legend: {
-    show: false,
+    show: true,
   },
   stroke: {
     show: false,
@@ -1849,16 +1844,16 @@ export const pieChartOptionsCharts1 = {
   hover: { mode: null },
   plotOptions: {
     donut: {
-      expandOnClick: false,
+      expandOnClick: true,
       donut: {
         labels: {
-          show: false,
+          show: true,
         },
       },
     },
   },
   fill: {
-    colors: ["#582CFF", "#3F1AD1", "#35199F"],
+    colors: ["#582CFF", "#3F1AD1", "#35199F", "#FDA736", "#1EDED0"],
   },
   tooltip: {
     enabled: true,
@@ -1866,7 +1861,7 @@ export const pieChartOptionsCharts1 = {
   },
 };
 
-export const pieChartDataCharts1 = [70, 10, 20];
+export const pieChartDataCharts1 = [62, 16, 14, 3, 7];
 
 export const radarChartOptionsCharts = {
   chart: {

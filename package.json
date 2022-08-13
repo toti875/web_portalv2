@@ -47,6 +47,7 @@
 		"material-ui": "^0.20.2",
 		"millify": "^4.0.0",
 		"mock": "^0.1.1",
+		"modern-normalize": "^1.1.0",
 		"moment": "^2.23.0",
 		"moment-timezone": "^0.5.23",
 		"nouislider": "15.0.0",
@@ -56,6 +57,7 @@
 		"postcss-loader": "^3.0.0",
 		"public-ip": "^4.0.2",
 		"qrcode.react": "^1.0.0",
+		"rci": "^0.0.3",
 		"react": "^17.0.2",
 		"react-apexcharts": "^1.3.9",
 		"react-big-calendar": "^0.33.2",
@@ -81,6 +83,7 @@
 		"react-intl": "^3.12.1",
 		"react-jvectormap": "0.0.16",
 		"react-maskinput": "^1.0.1",
+		"react-otp-input": "^2.4.0",
 		"react-paginate": "^7.1.3",
 		"react-payment-card-component": "^0.2.1",
 		"react-perfect-scrollbar": "^1.5.8",
@@ -111,6 +114,7 @@
 		"three": "0.109.0",
 		"tslint": "^5.13.1",
 		"ua-parser-js": "^0.7.19",
+		"use-is-focused": "^0.0.1",
 		"ws": "^7.2.0"
 	},
 	"resolutions": {
