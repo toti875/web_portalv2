@@ -10,7 +10,7 @@ export const en = {
 	'page.body.trade.header.newOrder.content.title.sell': 'Sell',
 	/**Logger */
 	//'page.body.user.loggin': 'Log in',
-	'page.body.user.loggin': 'Acessar',
+	'page.body.user.loggin': 'Entrar',
 	//'page.body.user.register': 'Register Now',
 	'page.body.user.register': 'Criar conta',
 	/**Order History in Tradding page */

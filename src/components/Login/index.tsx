@@ -187,12 +187,12 @@ const Login = React.memo((props: LogInProps) => {
 					<div
 						data-bn-type="text"
 						style={{
-							fontSize: '13px',
+							fontSize: '13.5px',
 							textAlign: 'center',
 							marginBottom: '18px',
 						}}
 					>
-						Faça seu login com o email utilizado no cadastro
+						Faça o login com o email utilizado no cadastro
 					</div>
 
 					<div className={emailGroupClass}>

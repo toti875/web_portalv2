@@ -135,13 +135,21 @@ function Settings() {
   return (
     
    
-    <Flex direction='column' pt={{ sm: "125px", lg: "75px" }}>
+    <Flex flexDirection='column' pt={{ base: "120px", md: "75px" }}>
+
+<Grid
+ 
+ gap='26px'
+ maxW='100%'
+ w='100%'>
+
+
       {/* Menu */}
       <Card
         w={{ sm: "100%", lg: "262px", xl: "15%", "2xl": "15%" }}
-        mt={{ sm: "30px", lg: "0px" }}
+
         position={{ lg: "fixed" }}
-        top='{{ lg: "150px" }}'
+        top={{ lg: "150px" }}
         bg='#131538'
         borderRadius='10px'
         >
@@ -161,7 +169,7 @@ function Settings() {
                     h='18px'
                     color='#fff'
                   />
-                  <Text color='#fff' fontWeight='500' fontSize='15'  _hover='#1EDED0'>
+                  <Text color='#fff' fontWeight='500' fontSize='14'  _hover='#1EDED0'>
                     Status da Conta
                   </Text>
                 </Flex>
@@ -178,7 +186,7 @@ function Settings() {
                 w='100%'>
                 <Flex align='center' justifySelf='flex-start' w='100%'>
                   <Icon as={FaCube} me='12px' w='18px' h='18px' color='#fff' />
-                  <Text color='#fff' fontWeight='500' fontSize='15'>
+                  <Text color='#fff' fontWeight='500' fontSize='14'>
                     Limites de Operação
                   </Text>
                 </Flex>
@@ -199,7 +207,7 @@ function Settings() {
                     h='18px'
                     color='#fff'
                   />
-                  <Text color='#fff' fontWeight='500' fontSize='15'>
+                  <Text color='#fff' fontWeight='500' fontSize='14'>
                     Dados de Cadastro
                   </Text>
                 </Flex>
@@ -221,7 +229,7 @@ function Settings() {
                     h='18px'
                     color='#fff'
                   />
-                  <Text color='#fff' fontWeight='500' fontSize='15'>
+                  <Text color='#fff' fontWeight='500' fontSize='14'>
                     Preferências
                   </Text>
                 </Flex>
@@ -241,7 +249,7 @@ function Settings() {
                     h='18px'
                     color='#fff'
                   />
-                  <Text color='#fff' fontWeight='500' fontSize='15'>
+                  <Text color='#fff' fontWeight='500' fontSize='14'>
                     Avisos
                   </Text>
                 </Flex>
@@ -261,7 +269,7 @@ function Settings() {
                     h='18px'
                     color='#fff'
                   />
-                  <Text color='#fff' fontWeight='500' fontSize='15'>
+                  <Text color='#fff' fontWeight='500' fontSize='14'>
                     Sessões
                   </Text>
                 </Flex>
@@ -281,7 +289,7 @@ function Settings() {
                     h='18px'
                     color='#fff'
                   />
-                  <Text color='#fff' fontWeight='500' fontSize='15'>
+                  <Text color='#fff' fontWeight='500' fontSize='14'>
                     Excluir Conta
                   </Text>
                 </Flex>
@@ -295,15 +303,14 @@ function Settings() {
         spacing='10px'
         
         align={{ lg: "flex-end" }}
-        justify={{ lg: "flex-end" }}
+    
         w='100%'
  
         >
         {/* Header */}
         <Card
           w={{ sm: "100%", lg: "83%" }}
-          alignSelf={{ lg: "flex-end" }}
-          justifySelf={{ lg: "flex-end" }}
+
           bg='#131538'
           borderRadius='10px'
       
@@ -1582,6 +1589,7 @@ function Settings() {
           </Element>
         </Card>
       </Stack>
+      </Grid>
     </Flex>
 
   );

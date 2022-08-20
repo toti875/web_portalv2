@@ -107,6 +107,8 @@ export const en = {
 	'page.body.wallets.tabs.deposit.ccy.message.error': 'Generating deposit address - Let refresh page to load wallet',
 	'page.body.wallets.tabs.deposit.ccy.button.generate': 'Generate',
 	'page.body.wallets.tabs.deposit.ccy.button.address': 'address',
+	'page.body.wallets.tabs.deposit.ccy.message.submit': 'Submit a deposit using the following address or QR code. Your deposit will be reflected in your account after {confirmations} confirmations',
+	'page.body.wallets.tabs.deposit.ccy.message.pending': 'Generating deposit address',
 
 	'page.body.wallets.tabs.deposit.fiat.message1': 'Deposit using bank transfer',
 	'page.body.wallets.tabs.deposit.fiat.message2':

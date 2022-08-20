@@ -95,6 +95,8 @@ import {
 	QuickExchange,
 } from '../../screens';
 
+import { WalletsScreen } from '../../v2/src/screens/WalletsScreen'
+
 
 import Default from "../../ui_vision/layouts/Admin";
 
@@ -167,7 +169,7 @@ const PrivateRoute: React.FunctionComponent<any> = ({ component: CustomComponent
 
 	return (
 		<Route {...rest}>
-			<Redirect to={'/signin'} />
+			<Redirect to={'/banner/authentication/sign-in/basic'} />
 		</Route>
 	);
 };
@@ -420,9 +422,9 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 			<div className={`container-fluid pg-layout ${tradingCls}`}>
 				<Switch>
 					<Route exact={true} path="/magic-link" component={MagicLink} />
+					{/*TELA DE LOGIN*/}
 					<PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/banner/authentication/sign-in/basic" component={SignInBasic} />
-					<PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/banner/authentication/sign-in/basic" component={SignInBasic} />
-					<PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/banner/authentication/sign-in/basic" component={SignInBasic} />
+					{/*TELA DE CADASTRO*/}
 					<PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/banner/authentication/sign-up/basic" component={SignUpBasic} />
 					<PublicRoute
 						loading={userLoading}
@@ -516,6 +518,20 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 						exact
 						component={WithdrawScreen}
 					/>
+
+<PrivateRoute
+						loading={userLoading}
+						isLogged={isLoggedIn}
+						path="/wallets2"
+						exact
+						component={WalletsScreen}
+					/>
+
+<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/security/2fa" component={ProfileTwoFactorAuthScreen} />
+
+
+
+
 					<PrivateRoute
 						loading={userLoading}
 						isLogged={isLoggedIn}
@@ -609,7 +625,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 	private handleSubmitExpSessionModal = () => {
 		const { history } = this.props;
 		this.handleChangeExpSessionModalState();
-		history.push('/signin');
+		history.push('/banner/authentication/sign-in/basic');
 	};
 
 	private handleRenderExpiredSessionModal = () => {

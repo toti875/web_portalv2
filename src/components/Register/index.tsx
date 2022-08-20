@@ -352,7 +352,7 @@ export const Register = (props: RegisterFormProps) => {
 									color: 'var(--button-primary-cta-background-color)',
 								}}
 							>
-								Acessar
+								Entrar
 							</span>
 						</div>
 					</div>

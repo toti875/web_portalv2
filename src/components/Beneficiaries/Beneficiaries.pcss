@@ -1,7 +1,7 @@
 .pg-beneficiaries {
 	&__title {
 		color: var(--primary-text-color);
-		font-size: 16px;
+		font-size: 14px;
 		font-style: normal;
 		font-weight: 500;
 		line-height: 40px;
@@ -30,6 +30,8 @@
 			height: 11px;
 			margin-right: 10px;
 			width: 11px;
+			font-style: bold;
+			font-weight: 800;
 		}
 
 		&:hover {
@@ -410,9 +412,10 @@
 	}
 
 	.cr-email-form {
-		background: var(--body-background-color);
+		background: transparent !important;
 		border-bottom-left-radius: 3px;
 		border-bottom-right-radius: 3px;
+		border-radius: 20px !important;
 		box-shadow: 0 8px 25px var(--shadow-color-level-3);
 
 		&__option {

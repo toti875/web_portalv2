@@ -87,7 +87,7 @@ class FormLogin extends React.Component<Props, LogInState> {
 		return (
 
 		
-					<div className="pg-sign-in-screen">
+					<div className="pg-sign-in-screen-basic">
 		
 						<div className={className}>{require2FA ? this.render2FA() : this.renderSignInForm()}</div>
 					</div>

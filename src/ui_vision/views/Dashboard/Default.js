@@ -174,7 +174,7 @@ export default function Default() {
           w={{ sm: "100%", lg: "100%" }}
           alignSelf={{ lg: "flex-end" }}
           justifySelf={{ lg: "flex-end" }}
-          bg='#131538'
+          bg='transparent'
           borderRadius='10px'
       
           >

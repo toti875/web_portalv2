@@ -5,12 +5,12 @@ export const defaultConfig: Config = {
 		authzURL: 'http://demo.fortem-financial.io/api/v2/authz',
 		switchURL: 'http://demo.fortem-financial.io/api/v2/switch',
 		transactionURL: 'http://demo.fortem-financial.io/api/v2/fortem',
-		ieoURL: 'http://api.fortem-financial.io/api/v2/peatio',
+		ieoURL: 'http://api.fortem-financial.io/api/v2/fortem',
 
 		downstreamURL: 'ws://demo.fortem-financial.io/api/v2/downstream',
 	},
-	minutesUntilAutoLogout: '15',
-	rangerReconnectPeriod: '1',
+	minutesUntilAutoLogout: '60',
+	rangerReconnectPeriod: '1', 
 	withCredentials: true,
 	storage: {},
 	gaTrackerKey: 'G-M47QL88D4R',
@@ -34,11 +34,11 @@ export const Cryptobase = {
 	config: defaultConfig,
 };
 
-declare global {
-	interface Window {
-		env: Config;
-	}
-}
+export const Window = {
+	
+		//env: config,
+};
+
 
 window.env = window.env || defaultConfig;
 Cryptobase.config = { ...window.env };
@@ -58,7 +58,7 @@ export const gaTrackerKey = (): string => Cryptobase.config.gaTrackerKey || 'G-M
 export const msAlertDisplayTime = (): string => Cryptobase.config.msAlertDisplayTime || '10000';
 export const msPricesUpdates = () => Cryptobase.config.msPricesUpdates;
 export const rangerReconnectPeriod = (): number =>
-	Cryptobase.config.rangerReconnectPeriod ? Number(Cryptobase.config.rangerReconnectPeriod) : 1;
+	Cryptobase.config.rangerReconnectPeriod ? Number(Cryptobase.config.rangerReconnectPeriod) : 1; 
 export const incrementalOrderBook = (): boolean => Cryptobase.config.incrementalOrderBook || true;
 export const isResizableGrid = (): boolean => Cryptobase.config.isResizable || true;
 export const isDraggableGrid = (): boolean => Cryptobase.config.isDraggable || true;

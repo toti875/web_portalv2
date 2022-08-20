@@ -1,15 +1,6 @@
 .cr-deposit-crypto {
-	background: transparent;
-	color: var(--table-text-color);
-	display: flex;
-	flex-direction: column;
-	font-size: var(--font-size);
-	padding: 0.5em;
-
-	div:nth-child(1) {
-		display: flex;
-		justify-content: space-between;
-	}
+	align-items: center;
+	font-size: 13px;
 
 	&__create {
 		align-items: center;
@@ -19,17 +10,22 @@
 
 	.cr-deposit-info {
 		background-color: inherit;
-		font-size: calc(var(--gap) * 2.3);
-		line-height: 25px;
-		margin-bottom: calc(var(--gap) * 3);
-		width: 56%;
+		
+		line-height: 40px;
+		margin: auto;
+		margin-bottom: 20px;
+		margin-top: 20px;
+		width: 80%;
+
 	}
 
 	&__copyable {
-		align-items: center;
+		align-items: center !important;
 		display: flex;
+		flex-direction: row;
 		justify-content: space-between;
-		margin-top: calc(var(--gap) * 6);
+		
+		margin: auto;
 
 		fieldset {
 			&:focus,
@@ -41,7 +37,7 @@
 		}
 
 		.custom-input {
-			width: 80%;
+			width: 100%;
 		}
 
 		&-title {
@@ -53,7 +49,7 @@
 
 		&-area {
 			border: 1px solid var(--input-border-color);
-			margin-top: calc(var(--gap) * -1.1);
+			
 
 			.input-group {
 				&:first-child {
@@ -84,8 +80,13 @@
 	}
 
 	.qr-code {
-		margin-left: 0.5em;
-		margin-top: 0.5em;
+		
+		margin: auto;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		width: 20%;
+
+		
 
 		svg {
 			border: 1px solid var(--primary-text-color);

@@ -66,9 +66,9 @@ import {
 } from "../../components/Icons/Icons.js";
 
 	
-import {WalletListScreen, PortfolioValueScreen, DepositScreen} from "../../../screens";
+import {WalletListScreen, PortfolioValueScreen} from "../../../screens";
 
-//import {DepositScreen} from "../../.../screens";
+import {WalletsScreen} from '../../../v2/src/screens/WalletsScreen';
 
 import { EstimatedValue } from '../../../containers/Wallets/EstimatedValue';
 
@@ -93,7 +93,7 @@ export default function Wallets() {
           zIndex='0'>
           {/* Mini Statistics */}
           <SimpleGrid columns={{ sm: "1", md: "2" }} spacing='24px'>
-            <Card minH='83px' bg='#131538'>
+            <Card minH='83px' >
               <CardBody>
                 <Flex
                   flexDirection='row'
@@ -117,7 +117,7 @@ export default function Wallets() {
                 </Flex>
               </CardBody>
             </Card>
-            <Card minH='83px' bg='#131538'>
+            <Card minH='83px' >
               <CardBody>
                 <Flex
                   flexDirection='row'
@@ -134,30 +134,21 @@ export default function Wallets() {
             </Card>
           </SimpleGrid>
           {/* Sales table */}
-          <SimpleGrid columns={{ sm: "1", md: "2" }} spacing='24px'>
-          <Card px='0px' bg='#131538'>
+      
+          <Card px='0px'>
             <CardHeader px='22px' mb='32px'>
               <Text color='#fff' fontSize='15' fontWeight='bold'>
                 Minhas carteiras 
               </Text>
             </CardHeader>
             <CardBody >
-              <WalletListScreen/>
+            <WalletsScreen></WalletsScreen>
             </CardBody>
           </Card>
 
-          <Card px='0px' bg='#131538'>
-            <CardHeader px='22px' mb='32px'>
-              <Text color='#fff' fontSize='15' fontWeight='bold'>
-                Minhas carteiras 
-              </Text>
-            </CardHeader>
-            <CardBody >
-                <DepositScreen />
-            </CardBody>
-          </Card>
 
-          </SimpleGrid>
+
+  
         </Stack>
       </Grid>
     {/*  <Grid
