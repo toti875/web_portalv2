@@ -49,14 +49,6 @@
     }
   }
 
-  .input-group {
-    background-color: pink !important;
-  }
-
-  .input-group-lg {
-    background-color: pink !important;
-  }
-
 
 
   .cr-wallet-list {
@@ -330,7 +322,7 @@
       
 
       .cr-withdraw__label {
-        background: pink !important;
+
         border-radius: calc(var(--gap) * 0.33);
         left: calc(var(--gap) * 1.66);
         padding: calc(var(--gap) * 0.33) var(--gap);
@@ -349,13 +341,13 @@
     &__group__amount,
     &__group__code {
       .input-group {
-        background: pink !important;
+   
              
       }
       width: 50%;
       
       .custom-input {
-        background-color: pink !important;
+
         
         label {
           margin-top: 0;
@@ -372,32 +364,25 @@
     }
 
     &__group__amount {
-      background: pink !important;
+
       
       .custom-input {
-        background: pink !important;
-        label {
-          
-          margin-top: 2px;
-          
-        }
+    
+
         
 
 
 
-    .input-group {
-      background: pink !important;
-           
-    }
+
       }
     }
 
     &__group__code {
       width: 45%;
-      background: pink !important;
+  
       
       .cr-withdraw__input {
-        background: pink !important;
+    
         input[type=number]::-webkit-inner-spin-button,
         input[type=number]::-webkit-outer-spin-button {
           -webkit-appearance: none;
@@ -439,13 +424,13 @@
     }
 
     .custom-input {
-      background: pink !important;
+
       
      
     }
 
     .input-group {
-      background: pink !important;
+ 
            
     }
 
@@ -477,14 +462,18 @@
 
 
 
-  .cr-copyable-text-field__disabled {
+  .cr-copyable-text-field {
     
     
     .cr-deposit-crypto {
+      display: flex !important;
+      flex-direction: column !important;
 
      
 
       &__copyable {
+        display: flex !important;
+        flex-direction: column !important;
    
         fieldset {
           &:focus-within {
@@ -492,23 +481,37 @@
 
             legend {
               color: var(--input-legend-color-active);
-              background-color: transparent  !important;
+              background-color: green  !important;
             }
           }
         }
 
         .cr-deposit-crypto__copyable-area {
-          border: 1px solid var(--input-border-color);
+      
+          display: flex !important;
+          flex-direction: flex-start !important;
 
           .custom-input {
             .input-group {
               border: none !important;
-              background: pink !important;
+              background: blue !important;
             }
 
             label {
               margin-top: -15px;
-              background-color: transparent  !important;
+              background-color: green  !important;
+            }
+          }
+
+          .input-group {
+            .custom-input {
+              border: none !important;
+              background: blue !important;
+            }
+
+            label {
+              margin-top: -15px;
+              background-color: green  !important;
             }
           }
         }
@@ -517,6 +520,7 @@
 
         width: 100% !important;
         align: center !important;
+        margin-bottom: 150px;
     
       }
       }
@@ -722,7 +726,7 @@
         padding: var(--gap) 0;
         text-align: left;
         width: 100%;
-        background: pink !important;
+        
       }
     }
   }
@@ -942,24 +946,55 @@
   }
 }
 
-.form-control {
-
-  background-color: pink !important;
-}
-
-
-.form-control-lg {
-
-  background-color: pink !important;
-}
-
-.input-group {
-  background-color: pink !important;
-
-}
-
-.cr-withdraw__group__amount {
-
+.cr-deposit-crypto__copyable-area {
+  border: none !important;
   display: flex !important;
-  background: pink !important;
+  flex-direction: flex-start !important;
+
+
+
+
+  }
+
+
+  
+
+
+.cr-deposit-crypto__copyable {
+  display: flex !important;
+  flex-direction: column !important;
+  border: none !important;
+  align-items: flex-start !important;
+
+
+
+  .input-group {
+    border: none !important;
+    /*background: yellow !important;*/
+    width: 105% !important;
+    align=items: center !important;
+    margin-top: -22px;
+ 
+ 
+ 
+    label {
+      margin-top: -42px;
+      margin-left: -10px;
+      font-weight: normal !important;
+      background-color: none  !important;
+    }
+ 
+  }
+
+
+
+}
+
+.pg-metamask {
+
+  align: center;
+  margin-top: 100px !important;
+  margin-left: 160px !important;
+  width: 30px !important;
+
 }

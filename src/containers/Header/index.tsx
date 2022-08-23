@@ -215,10 +215,21 @@ export const Header: React.FC = () => {
 						onClick={e => {
 							redirectSingIn();
 							setStateActiveNow('login');
-						}}
-					>
-						<div className={classLinkActiveLogin}>
-							<span>{translate('page.body.homegape.header.button2')}</span>
+						}}>
+							<div className="text-animated">Acessar Plataforma</div>
+						<div className="svg-wrapper" >
+						
+					
+						
+						<svg height="45px" width="330px" xmlns="http://www.w3.org/2000/svg">
+							
+							
+							<rect className="shape" height="30px" width="330px" />
+							
+						
+								
+						
+						</svg>
 						</div>
 					</div>
 					<div

@@ -3,7 +3,7 @@
 #sale-detail,
 #sale-history {
 	position: relative;
-	background-color: #313445;
+	background-color: #131313;
 	margin-top: 50px;
 	margin-bottom: 50px;
 	padding: 5vh 2vw;
@@ -12,6 +12,13 @@
 	border-radius: 6px;
 }
 
+
+.pg-layout {
+
+
+background-color: #131313 !important;
+
+}
 .sale-detail__badge {
 	position: absolute;
 	top: 0;
@@ -51,4 +58,8 @@
 
 .ant-modal-footer {
 	background-color: #2d3040;
+}
+
+#sale-detail-screen {
+	background-color: #131313 !important;
 }

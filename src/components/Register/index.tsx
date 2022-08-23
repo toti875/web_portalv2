@@ -62,7 +62,7 @@ export interface RegisterFormProps {
 	translate: (id: string) => string;
 }
 
-const image = require('../../assets/images/logo_branca_bandeira_verde.svg'); 
+const image = require('../../assets/images/logo_preta_bandeira_verde.svg'); 
 
 export const Register = (props: RegisterFormProps) => {
 	const isMobileDevice = useSelector(selectMobileDeviceState);
@@ -116,8 +116,8 @@ export const Register = (props: RegisterFormProps) => {
 						handleChangeInput={props.handleChangeRefId}
 						inputValue={refId}
 						handleFocusInput={props.handleFocusRefId}
-						classNameLabel="cr-sign-up-form__label"
-						classNameInput="cr-sign-up-form__input"
+						classNameLabel="cr-sign-up-form2__label"
+						classNameInput="cr-sign-up-form2__input"
 						autoFocus={false}
 					/>
 				</React.Fragment>
@@ -139,8 +139,8 @@ export const Register = (props: RegisterFormProps) => {
 	};
 
 	const renderPasswordInput = () => {
-		const passwordGroupClass = cr('cr-sign-up-form__group', {
-			'cr-sign-up-form__group--focused': passwordFocused,
+		const passwordGroupClass = cr('cr-sign-up-form2__group', {
+			'cr-sign-up-form2__group--focused': passwordFocused,
 		});
 
 		return (
@@ -153,8 +153,8 @@ export const Register = (props: RegisterFormProps) => {
 					handleChangeInput={props.handleChangePassword}
 					inputValue={password}
 					handleFocusInput={props.handleFocusPassword}
-					classNameLabel="cr-sign-up-form__label"
-					classNameInput="cr-sign-up-form__input"
+					classNameLabel="cr-sign-up-form2__label"
+					classNameInput="cr-sign-up-form2__input"
 					autoFocus={false}
 				/>
 				{password ? (
@@ -207,10 +207,10 @@ export const Register = (props: RegisterFormProps) => {
 
 	const renderLogIn = () => {
 		return (
-			<div className="pg-sign-up-screen__login">
+			<div className="pg-sign-up-screen2__login">
 				<span>
 					{intl.formatMessage({ id: 'page.header.signUp.alreadyRegistered' })}
-					<span onClick={() => history.push('/login')} className="pg-sign-up-screen__login-button">
+					<span onClick={() => history.push('/login')} className="pg-sign-up-screen2__login-button">
 						{intl.formatMessage({ id: 'page.mobile.header.signIn' })}
 					</span>
 				</span>
@@ -218,26 +218,26 @@ export const Register = (props: RegisterFormProps) => {
 		);
 	};
 
-	const emailGroupClass = cr('cr-sign-up-form__group', {
-		'cr-sign-up-form__group--focused': emailFocused,
+	const emailGroupClass = cr('cr-sign-up-form2__group', {
+		'cr-sign-up-form2__group--focused': emailFocused,
 	});
 
-	const confirmPasswordGroupClass = cr('cr-sign-up-form__group', {
-		'cr-sign-up-form__group--focused': confirmPasswordFocused,
+	const confirmPasswordGroupClass = cr('cr-sign-up-form2__group', {
+		'cr-sign-up-form2__group--focused': confirmPasswordFocused,
 	});
-	const refIdGroupClass = cr('cr-sign-up-form__group', {
-		'cr-sign-up-form__group--focused': refIdFocused,
+	const refIdGroupClass = cr('cr-sign-up-form2__group', {
+		'cr-sign-up-form2__group--focused': refIdFocused,
 	});
 
 	const logo = (
-		<h1 className="cr-sign-in-form__title">
-			<img className="cr-sign-in-form__image" src={image} alt="logo" />
-		</h1>
+		<div className="cr-sign-in-form__option-inner __selected-sigin">
+			<img src={image} />
+		</div>
 	);
 
 	return (
 		<form>
-			<div className="cr-sign-up-form" onKeyPress={handleEnterPress}>
+			<div className="cr-sign-up-form2" onKeyPress={handleEnterPress}>
 				{/* {!isMobileDevice && <div className="cr-sign-up-form__options-group">
                   <div className="cr-sign-up-form__option">
                     <div className="cr-sign-up-form__option-inner cr-sign-in-form__tab-signin" onClick={onSignIn}>
@@ -251,12 +251,12 @@ export const Register = (props: RegisterFormProps) => {
                   </div>
                 </div>
                 } */}
-				<div className="cr-sign-up-form__form-content">
+				<div className="cr-sign-up-form2__form-content">
 					{logo}
 					<div
 						data-bn-type="text"
 						style={{
-							margin: '-45px 0 0 20px',
+							margin: '10px auto',
 							display: 'flex',
 							flexDirection: 'column',
 							alignItems: 'center',
@@ -266,27 +266,32 @@ export const Register = (props: RegisterFormProps) => {
 						<div
 							data-bn-type="text"
 							style={{
-								fontSize: '15px',
+								fontSize: '17px',
+								fontWeight: 'bold' ,
 								letterSpacing: '1px',
 								wordSpacing: '2px',
 								textTransform: 'uppercase',
-								margin: '0 0 12px',
-								color: 'var(--primary-text-color)',
+								margin: '0 auto',
+								color: '#595959',
 							}}
 						>
-							Bem vindo à Fortem Financial
+							Bem vindo à Fortem ONE
 						</div>
 						<div
 							data-bn-type="text"
 							style={{
-								fontSize: '14px',
-								margin: '0 0 32px',
+								fontSize: '15px',
+							
+								color: '#595959',
+								bottom: '20px',
+
+						
 							}}
 						>
-							Inicie sua jornada de investimento
+							Inicie sua jornada de investimentos
 						</div>
 					</div>
-					<div className={emailGroupClass}>
+					<div className={emailGroupClass} >
 						<FormInput
 							type="email"
 							label={emailLabel || 'Email'}
@@ -301,8 +306,9 @@ export const Register = (props: RegisterFormProps) => {
 						/>
 						{emailError && <div className="cr-sign-up-form__error">{emailError}</div>}
 					</div>
-					{renderPasswordInput()}
+					
 					<div className={confirmPasswordGroupClass}>
+					{renderPasswordInput()}
 						<FormInput
 							type="password"
 							label={confirmPasswordLabel || 'Confirm Password'}
@@ -318,7 +324,7 @@ export const Register = (props: RegisterFormProps) => {
 						{confirmationError && <div className={'cr-sign-up-form__error'}>{confirmationError}</div>}
 					</div>
 
-					<Form className="cr-sign-up-form__group" onClick={e => props.clickCheckBox(e)}>
+					<Form className="cr-sign-up-form2_group" onClick={e => props.clickCheckBox(e)}>
 						<Form.Check
 							type="checkbox"
 							custom
@@ -328,7 +334,7 @@ export const Register = (props: RegisterFormProps) => {
 						/>
 					</Form>
 					{props.renderCaptcha}
-					<div className="cr-sign-up-form__button-wrapper">
+					<div className="cr-sign-up-form2__button-wrapper">
 						<Button
 							block={true}
 							type="button"
@@ -340,16 +346,16 @@ export const Register = (props: RegisterFormProps) => {
 							{isLoading ? 'Loading...' : labelSignUp ? labelSignUp : 'Sign up'}
 						</Button>
 
-						<div style={{ textAlign: 'center', marginTop: '20px' }}>
+						<div style={{ textAlign: 'center', marginTop: '20px', fontSize: '13px', color: '#595959', }}>
 							Já possui conta?
 							<span
 								data-bn-type="link"
-								className="cr-sign-up-form__button-wrapper__login"
+								className="cr-sign-up-form2__button-wrapper__login"
 								onClick={onSignIn}
 								style={{
 									fontSize: '14px',
 									marginLeft: '6px',
-									color: 'var(--button-primary-cta-background-color)',
+									color: '#18988F',
 								}}
 							>
 								Entrar

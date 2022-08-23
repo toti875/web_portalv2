@@ -1,8 +1,17 @@
-.cr-sign-up-form {
+.cr-sign-up-form2 {
 
 	max-width: 424px;
-	min-height: 620px;
+	height: 630px !important;
 	position: relative;
+
+
+	display: grid !important;
+	background: #dde1e7 !important;
+	border-radius: 10px !important;
+	padding: 40px 30px !important;
+	box-shadow: -3px -3px 7px #ffffff73,
+				2px 2px 5px rgba(94, 104, 121, 0.288) !important;
+
 
 	&__options-group {
 		border-bottom: 2px solid var(--divider-color-level-2);
@@ -24,8 +33,9 @@
 
 	&__option-inner {
 		background: transparent;
+		color: var(--secondary-contrast-cta-color); 
 		cursor: pointer;
-		font-size: 14px;
+		font-size: 18px;
 		font-style: normal;
 		font-weight: 500;
 		height: 58px;
@@ -37,28 +47,43 @@
 		width: 75%;
 	}
 
+	&__title {
+
+		width: 200px !important;
+	}
+
 	&__form-content {
 		bottom: 23px;
 		box-sizing: border-box;
 		left: 23px;
 		position: absolute;
 		right: 23px;
-		top: 90px;
+		top: 30px !important;
+		background-color: #dde1e7 !important;
+
+		&__title {
+
+			width: 20px !important;
+		}
 
 		.custom-control {
+
+			background-color: #dde1e7 !important;
 			&-input {
+				background-color: #595959 !important;
+				border-color: #dde1e7 !important;
 				&:checked ~ .custom-control-label {
 					&::before {
-						background-color: var(--input-checkbox-background-color-active);
-						border-color: var(--input-border-color-active);
+						background-color: #595959;
+						border-color: #dde1e7;
 						transition: 0.2s;
 					}
 				}
 
 				&:focus ~ .custom-control-label {
 					&::before {
-						border-color: var(--input-border-color-active);
-						box-shadow: 0 0 0 0.2rem var(--input-checkbox-shadow-color-active);
+						border-color: #dde1e7;
+						box-shadow: 0 0 0 0.2rem #595959;
 					}
 				}
 			}
@@ -68,7 +93,7 @@
 				flex-direction: row;
 				font-size: calc(var(--gap) * 1.95) !important;
 				justify-content: center !important;
-				color: white!important;
+				color: #595959 !important;
 				width: 100%;
 
 				&::before {
@@ -83,7 +108,6 @@
 
 				&::after {
 					height: 18px;
-					top: 0;
 					width: 18px;
 				}
 
@@ -92,6 +116,8 @@
 				}
 			}
 		}
+
+
 	}
 
 	& > * {
@@ -100,7 +126,9 @@
 
 	&__group {
 		background: transparent;
-		margin-bottom: 20px;
+		
+		margin-top: 25px;
+		
 		position: relative;
 
 		.custom-input {
@@ -129,7 +157,7 @@
 
 	&__button-wrapper {
 		background: transparent;
-		bottom: 6px;
+		bottom: 5px;
 		left: 0;
 		position: absolute;
 		right: 0;
@@ -150,6 +178,7 @@
 
 	&__input {
 		width: 100%;
+		margin-top: 20px;
 
 		input {
 			border: 1px solid var(--input-border-color);
@@ -173,7 +202,7 @@
 		}
 
 		&-create {
-			color: var(--sign-in-label-color);
+			color: #595959;
 		}
 
 		&-signin {
@@ -187,8 +216,10 @@
 		justify-content: center;
 		left: 0;
 		position: absolute;
+		top: 20px !important;
 		right: 0;
 		top: 10px;
 		z-index: 2;
 	}
 }
+

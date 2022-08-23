@@ -3,7 +3,7 @@
 	height: 100%;
 	border: 2px solid #262936;
 	padding: 2rem 2rem;
-	background:  #131538;
+	background:  #1d1e22;
 	border-radius: 10px;
 	cursor: pointer;
 	margin: 20px 10% 0 10%;
@@ -28,7 +28,7 @@
 }
 
 .sale-item:hover {
-	background: #191a32 ;
+	background:  #363944 ;
 }
 
 .sale-item__title {

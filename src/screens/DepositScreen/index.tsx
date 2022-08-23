@@ -116,14 +116,6 @@ export const DepositScreen = () => {
 					<DepositHistory currency_id={currency_id} />
 				</div>
 			</div>
-			<div style={{ position: 'fixed', top: '10%', left: '2rem' }}>
-				<img
-					style={{ cursor: 'pointer' }}
-					src="https://img.icons8.com/fluent/48/000000/circled-left.png"
-					onClick={() => history.push({ pathname: '/wallets' })}
-					alt="Back"
-				/>
-			</div>
 		</div>
 	);
 };

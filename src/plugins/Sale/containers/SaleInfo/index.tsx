@@ -75,37 +75,40 @@ export const SaleInfo: React.FC<SaleInfoProps> = (props: SaleInfoProps) => {
 	return (
 		<div id="sale-info" style={{ backgroundColor: '#0b1426', padding: '3vw', height: '100%' }}>
 			<div className="row">
-				<div className="col-12">
-					<img className="w-50" src={props.sale.image_link} alt="sale-logo" />
+				<div className="col-4">
+					<img className="sale-logo" src={props.sale.sale_logo} alt="sale-logo" />
 				</div>
 			</div>
 			<div className="row">
-				<div className="col-12">
-					<h2 className="sale-info__title">{props.sale.description}</h2>
+				<div className="col-4" style={{ display: 'flex', flexDirection: 'column' }}>
+					<h4 className="sale-info__title">{props.sale.description}</h4>
+					<h4 className="sale-info__title2">Código do Token: {props.sale.currency_id}</h4>
+					<h4 className="sale-info__title3">Ciclo de captação: {props.sale.id}</h4>
+
 				</div>
 			</div>
-			<div className="row d-flex justify-content-center">
+		{/*	<div className="row d-flex justify-content-center">
 				<Countdown date={countdownTime} renderer={renderer} />
-			</div>
+	</div> */}
 			<hr />
 			<div className="row text-center">
 				<div className="col-12">
 					<Row gutter={[16, 16]}>
 						<Col span={8}>
-							<Statistic valueStyle={{ color: '#FDA736', fontSize: '13px' }} title="Preço inicial" value={`R$${props.sale.price} `} />
+							<Statistic valueStyle={{ color: '#FDA736', fontSize: '18px' }} title="Preço inicial" value={`R$${props.sale.price} `} />
 						</Col>
 						<Col span={8}>
 							<Statistic
-								valueStyle={{ color: '#FDA736', fontSize: '13px' }}
+								valueStyle={{ color: '#FDA736', fontSize: '18px' }}
 								title="Quantidade mínima"
-								value={`${props.sale.min_buy} ${ 'tokens' }${props.sale.currency_id.toUpperCase()}`}
+								value={`${props.sale.min_buy} ${ 'tokens ' }${props.sale.currency_id.toUpperCase()}`}
 							/>
 						</Col>
 						<Col span={8}>
 							<Statistic
-								valueStyle={{ color: '#FDA736', fontSize: '13px' }}
+								valueStyle={{ color: '#FDA736', fontSize: '18px' }}
 								title="Formas de pagamento" 
-								value={`${ 'Reais (R$) e Criptomoedas: ' } ${props.sale.currency_available.map(currency => currency.toUpperCase()).join(',',)} ${ '' }`} />
+								value={`${props.sale.currency_available.map(currency => currency.toUpperCase()).join(',',)} ${ '' }`} />
 
 						</Col>
 					</Row>
@@ -116,20 +119,39 @@ export const SaleInfo: React.FC<SaleInfoProps> = (props: SaleInfoProps) => {
 				<div className="col-12 text-center">
 					<Row gutter={[16, 16]}>
 						<Col span={8}>
-							<Statistic valueStyle={{ color: '#13b887', fontSize: '13px'  }} title={'Total de tokens emitidos'} value={props.sale.total_ieo} />{' '}
+							<Statistic valueStyle={{ color: '#13b887', fontSize: '18px'  }} title={'Total de tokens emitidos'} value={props.sale.total_ieo} />{' '}
 						</Col>
 						<Col span={8}>
-							<Statistic valueStyle={{ color: '#13b887', fontSize: '13px'  }} title={'Total de tokens restantes'} value={props.sale.remains} />
+							<Statistic valueStyle={{ color: '#13b887', fontSize: '18px'  }} title={'Total de tokens restantes'} value={props.sale.remains} />
 						</Col>
 						<Col span={8}>
 							<Statistic
-								valueStyle={{ color: '#13b887', fontSize: '13px' }}
+								valueStyle={{ color: '#13b887', fontSize: '18px' }}
 								title="Total de compradores"
 								value={totalBuyersSelector.payload.totalBuyers}
 							/>
 						</Col>
 
 					</Row>
+			</div> </div>
+					<hr />
+			<div className="row">
+				<div className="col-12 text-center">
+					<Row gutter={[16, 16]}>
+						<Col span={8}>
+							<Statistic valueStyle={{ color: '#13b887', fontSize: '18px'  }} title={'Bônus para holders Fortem'} value={props.sale.bonus} />{' '}
+						</Col>
+						<Col span={8}>
+							<Statistic valueStyle={{ color: '#13b887', fontSize: '18px'  }} title={'Data de encerramento da captação'} value={props.sale.end_date} />
+						</Col>
+						<Col span={8}>
+							<Statistic
+								valueStyle={{ color: '#13b887', fontSize: '18px' }}
+								title="Distribuição e Custódia:"
+								value={props.sale.host_uid}
+							/>
+						</Col>
+					</Row>					
 					<hr />
 					<ProgressBar
 						animated

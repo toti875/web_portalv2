@@ -86,7 +86,7 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 					</span>
 					<h5 className="td-pg-profile__active-step__content__item__title">Deposite</h5>
 					<span className="td-pg-profile--color--second td-pg-profile__active-step__content__item__desc">
-						Deposite crypto ou reais e inicie seus investimentos
+						Deposite cripto ou reais e inicie seus investimentos
 					</span>
 					{user.otp && !isExistBalance ? (
 						<Button
@@ -94,7 +94,7 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 							className="td-pg-profile__active-step__content__item__action mt-3"
 							onClick={handleToWallet}
 						>
-							To Wallet
+							Depositar
 						</Button>
 					) : null}
 				</div>

@@ -13,6 +13,7 @@ export interface SaleItem {
 	min_buy: number;
 	start_date: string;
 	end_date: string;
+	sale_logo: string;
 	bonus: any;
 	social: {
 		website?: string;

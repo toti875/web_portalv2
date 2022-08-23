@@ -197,16 +197,16 @@ export const AirdropTable: React.FunctionComponent = () => {
 				<div className="col-12">
 					<Menu mode="horizontal" defaultSelectedKeys={['open']} onClick={handleSelectMenuItem}>
 						<Menu.Item key="open">
-							<span style={{ color: '#4284F5ff' }}>Active</span>
+							<span style={{ color: '#4284F5ff' }}>Ativos</span>
 						</Menu.Item>
 						<Menu.Item key="wait">
-							<span style={{ color: '#FABE08ff' }}>Up coming</span>
+							<span style={{ color: '#FABE08ff' }}>Em breve</span>
 						</Menu.Item>
 						<Menu.Item key="delivering">
-							<span style={{ color: '#0C9D58ff' }}>Wait for distribute</span>
+							<span style={{ color: '#0C9D58ff' }}>Aguardando distribuição</span>
 						</Menu.Item>
 						<Menu.Item key="delivered">
-							<span style={{ color: '#EA4235ff' }}>Ended</span>
+							<span style={{ color: '#EA4235ff' }}>Finalizados</span>
 						</Menu.Item>
 					</Menu>
 				</div>

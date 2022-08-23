@@ -21,27 +21,22 @@ interface BuyHistoryModel {
 export const BuyHistory: React.FC<BuyHistoryProps> = (props: BuyHistoryProps) => {
 	const columns = [
 		{
-			title: 'Quantity',
+			title: 'Quantidade',
 			dataIndex: 'quantity',
 			key: 'quantity',
 		},
 		{
-			title: 'Currency',
-			dataIndex: 'base_currency',
-			key: 'base_currency',
-		},
-		{
-			title: 'Total Purchase',
+			title: 'Valor Total',
 			dataIndex: 'total',
 			key: 'total',
 		},
 		{
-			title: 'Purchase Currency',
+			title: 'Moeda Utilizada',
 			dataIndex: 'quote_currency',
 			key: 'quote_currency',
 		},
 		{
-			title: 'Buy Date',
+			title: 'Data da compra',
 			dataIndex: 'created_at',
 			key: 'created_at',
 		},
@@ -119,7 +114,7 @@ export const BuyHistory: React.FC<BuyHistoryProps> = (props: BuyHistoryProps) =>
 
 	return (
 		<React.Fragment>
-			<h2 className="text-center text-info">Your Purchase</h2>
+			<h4 className="text-center text-info">Histórico das mihas compras </h4>
 			<Table
 				size="small"
 				pagination={tableState.pagination}

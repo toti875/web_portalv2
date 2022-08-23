@@ -51,51 +51,12 @@ function SignUpBasic() {
   const textColor = "gray.400";
   return (
    
-    <Flex
-      direction='row'
-      alignSelf='center'
-      justifySelf='center'
-    
-   
-      w='100%'
-      p='80px'
-      >
+    <div>
 
-      <Flex
-        alignItems='center'
-        justifyContent='start'
-        style={{ userSelect: "none" }}
-        flexDirection='column'
-        mx={{ base: "auto" }}
-        mb={{ base: "0px", md: "50px" }}
-        w='100%'
- 
-       >
-
-        <GradientBorder
-          p='2px'
-          me={{ base: "none", lg: "30px", xl: "none" }}
-          mb={{ base: "50px", lg: "150px" }}>
-          <Flex
-            background='transparent'
-            borderRadius='30px'
-            direction='column'
-            p='40px'
-            minW={{ base: "unset", md: "430px", xl: "450px" }}
-            w='100%'
-            h='600px'         
-            mx={{ base: "0px" }}
-            bg={{
-              base: "rgb(19,21,56)",
-            }}>
                {RegisterScreen()}
+    </div>
 
 
-          </Flex>
-        </GradientBorder>
-      </Flex>
-
-    </Flex>
   );
 }
 

@@ -8,7 +8,7 @@ import './IEOItem.css';
 interface SaleItemProps {
 	key: string | number | undefined;
 	sale: SaleItem;
-	type: 'ongoing' | 'upcoming' | 'ended';
+	type: 'ongoing' | 'upcoming' | 'ended' | 'active';
 }
 
 const renderer = ({ days, hours, minutes, seconds, completed }) => {
@@ -73,6 +73,9 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 		case 'ended':
 			saleBadgeColor = '#EA4235ff';
 			break;
+			case 'active':
+				saleBadgeColor = '#13b887 ';
+				break;			
 		default:
 			break;
 	}
@@ -142,7 +145,7 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 			<br />
 			<div className="row">
 				<div className="col-12 text-center" style={{ padding: '0 5rem' }}>
-					<Statistic title="Remain Tokens" value={`${props.sale.remains}/${props.sale.total_ieo}`} />
+					<Statistic title="Progresso" value={`${props.sale.remains}/${props.sale.total_ieo}`} />
 
 					<Progress
 						strokeColor={{
@@ -157,7 +160,7 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 			<br />
 			<div className="row">
 				<div className="col-6 d-flex align-items-center justify-content-center">
-					<Statistic title="Preço inicial:" value={`$${props.sale.price} Reais`} />
+					<Statistic title="Preço unitário:" value={`R$${props.sale.price} Reais`} />
 				</div>
 				<div className="col-6 d-flex align-items-center justify-content-center">
 					<Row gutter={[8, 8]}>

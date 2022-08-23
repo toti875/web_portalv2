@@ -1,9 +1,10 @@
 .cr-sign-in-form {
 
+
+
 	height: 500px;
 	max-width: 424px;
 	position: relative;
-	background: var(--body-backgound-color);
 
 	&__options-group {
 		border-bottom: 2px solid var(--divider-color-level-2);
@@ -25,7 +26,7 @@
 
 	&__option-inner {
 		background: transparent;
-		color: var(--primary-text-color);
+		color: var(--secondary-contrast-cta-color); 
 		cursor: pointer;
 		font-size: 18px;
 		font-style: normal;
@@ -66,7 +67,7 @@
 
 	&__group {
 		background: transparent;
-		margin: 40px 0 -10px;
+		margin: 20px 0 -10px;
 		position: relative;
 	}
 
@@ -78,22 +79,18 @@
 
 	&__group--focused {
 		.cr-sign-in-form__label {
-			color: var(--input-legend-color-active);
+			color: transparent !important;
 		}
 	}
 
 	&__image {
-
+		margin-top: -60px !important;
 		height: 100px;
-		margin: 0 auto 20px auto;
-		width: 70%;
+		
+		width: 100%;
+
 	}
 
-	&__title {
-		font-size: 18px;
-		margin: calc(var(--gap) * 3) 0 calc(var(--gap) * 8) 0;
-		text-align: center;
-	}
 
 	&__button-wrapper {
 		background: transparent;
@@ -105,6 +102,9 @@
 		min-height: calc(var(--gap) * 28);
 		position: absolute;
 		right: 0;
+
+
+
 	}
 
 	&__button-wrapper--empty {
@@ -115,11 +115,11 @@
 		background: transparent;
 		bottom: -10px;
 		position: absolute;
-		width: 100%;
+		width: 97.5%;
 
 		.cr-sign-in-form__bottom-section-password {
 			background: transparent;
-			color: var(--secondary-contrast-cta-color);
+			color: #595959;
 			cursor: pointer;
 			font-size: 14px;
 			font-style: normal;
@@ -136,6 +136,8 @@
 		.cr-sign-in-form__bottom-section-signup {
 			color: #1EBDB2 !important;
 			cursor: pointer;
+			font-size: 14px;
+			font-weight: 600px;
 
 			&:hover {
 				color: #1EDED0 !important;

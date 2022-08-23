@@ -10,7 +10,7 @@ import { EMAIL_REGEX } from '../../helpers';
 import { selectMobileDeviceState } from '../../modules/public/globalSettings';
 import './style.css';
 
-const Logo = require('../../assets/images/logo_branca_bandeira_verde.svg');
+const Logo = require('../../assets/images/logo_preta_bandeira_verde.svg');
 
 export interface LogInProps {
 	labelSignIn?: string;
@@ -135,7 +135,7 @@ const Login = React.memo((props: LogInProps) => {
 				}}
 				onClick={onSignUp}
 			>
-				Criar nova conta
+				Criar conta
 			</div>
 		</div> 
 	);
@@ -145,7 +145,7 @@ const Login = React.memo((props: LogInProps) => {
 			<span>
 				{intl.formatMessage({ id: 'page.header.signIN.noAccountYet' })}
 				<span onClick={() => history.push('/banner/authentication/sign-up/basic')} className="pg-sign-in-screen__register-button">
-					Cadastrar
+					Cadastre agora
 				</span>
 			</span>
 		</div>
@@ -165,9 +165,17 @@ const Login = React.memo((props: LogInProps) => {
 
 	return (
 
+
+
+
+
+
+    <div className="content_login_form ">
+ 
+      
 		
 		<form>
-			<div className="cr-sign-in-form" onKeyPress={handleEnterPress}>
+			<div className="cr-sign-in-form content_login_form" onKeyPress={handleEnterPress}>
 				{!isMobileDevice && (
 					<div className="cr-sign-in-form__options-group-sigin">
 						<div className="cr-sign-in-form__option-sigin">
@@ -185,26 +193,25 @@ const Login = React.memo((props: LogInProps) => {
 				)}
 				<div className="cr-sign-in-form__form-content">
 					<div
-						data-bn-type="text"
-						style={{
-							fontSize: '13.5px',
-							textAlign: 'center',
-							marginBottom: '18px',
-						}}
+						className='text'
 					>
 						Faça o login com o email utilizado no cadastro
 					</div>
 
-					<div className={emailGroupClass}>
+				
+					<div className="input-group ">
+  
 						<FormInput
-							type="email"
+							
+							classNameInput="input-group "
+							type="input-group"
 							label={emailLabel || 'Digite seu email'}
 							placeholder={emailPlaceholder}
 							defaultLabel="Digite seu e-mail"
 							handleChangeInput={handleChangeEmail}
 							inputValue={email}
 							handleFocusInput={() => handleFieldFocus('email')}
-							classNameLabel="cr-sign-in-form__label"
+							classNameLabel="cr-sign-in-form__label "
 							autoFocus={true}
 						/>
 						{emailError && <div className={'cr-sign-in-form__error'}>{emailError}</div>}
@@ -242,6 +249,7 @@ const Login = React.memo((props: LogInProps) => {
 				</div>
 			</div>
 		</form>
+		</div>
 
 	);
 });

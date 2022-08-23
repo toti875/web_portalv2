@@ -399,7 +399,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 		if (type !== 'ongoing') {
 			return (
 				<div id="sale-buy__closed">
-					<span>Preço inicial:</span>
+					<span>Preço unitário:</span>
 					<p>R${props.sale.price} Reais</p>
 					<span>Inicia após:</span>
 					<p style={{ color: 'rgb(248, 83, 113)' }}>{type.toUpperCase()}</p>

@@ -82,7 +82,7 @@ class FormLogin extends React.Component<Props, LogInState> {
 	public render() {
 		const { loading, require2FA } = this.props;
 
-		const className = cx('pg-sign-in-screen__container', { loading });
+		const className = cx('pg-sign-in-screen-basic__container', { loading });
 
 		return (
 

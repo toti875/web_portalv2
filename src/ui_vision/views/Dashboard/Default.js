@@ -168,86 +168,9 @@ export default function Default() {
           maxW={{ sm: "315px", md: "100%" }}
           zIndex='0'>
          
-          <SimpleGrid columns={{ sm: "1", md: "1" }} spacing='18px' justify='space-between'>
-            
-          <Card
-          w={{ sm: "100%", lg: "100%" }}
-          alignSelf={{ lg: "flex-end" }}
-          justifySelf={{ lg: "flex-end" }}
-          bg='transparent'
-          borderRadius='10px'
-      
-          >
-          <Element id='profile' name='profile'>
-            <CardBody bg='transparent' >
-              <Flex
-                direction={{ sm: "column", md: "row" }}
-                justify='space-between'
-                align='center'
-                w='100%'>
-                <Flex align='center'>
-                <Avatar
-                me={{ md: "32px" }}
-                src={ProfileAvatar}
-                bg='transparent'
-                w='128px'
-                h='128px'
-                borderRadius='8px'>
-                <AvatarBadge
-                  cursor='pointer'
-                  borderRadius='8px'
-                  border='transparent'
-                  bg='linear-gradient(138.78deg, rgba(6, 11, 40, 0.94) 17.44%, rgba(10, 14, 35, 0.49) 93.55%, rgba(10, 14, 35, 0.69) 93.55%)'
-                  boxSize='32px'
-                  backdropFilter='blur(120px)'
-                  src={ProfileAvatar}
-                  >
-                  <Icon h='12px' w='12px' color='#fff' as={FaPencilAlt} />
-                </AvatarBadge>
-              </Avatar>
-                  <Flex direction='column'>
-                    <Text color='#fff' fontWeight='bold' fontSize='15'>
-                      Jeferson Martin
-                    </Text>
-                    <Text color='#f9a912' fontWeight='500' fontSize='14'>
-                      ID: {GetUserID()}
-                    </Text>
-                    <Text color='gray.400' fontWeight='500' fontSize='14' >
-                      {GetUserEmail()}
-                    </Text>
-                    <Text color='gray.400' fontWeight='500' fontSize='14' >
-                      {GetUserLoginInformation()}
-                    </Text>
-                  </Flex>
-                </Flex>
-              </Flex>
-            </CardBody>
-          </Element>
-        </Card>
-
-        <Card
-          w={{ sm: "100%", lg: "100%" }}
-          alignSelf={{ lg: "flex-end" }}
-          justifySelf={{ lg: "flex-end" }}
-          bg='#131538'
-          borderRadius='10px'
-          >
-          <Element id='info' name='info'>
-            <CardHeader mb='40px'>
-              <Text color='#fff' fontSize='15' fontWeight='bold'>
-                Status da Conta
-              </Text>
-            </CardHeader>
-            <CardBody>
-              <Flex w='100%' direction={{ sm: "column", md: "row" }}>
-        				<ProfileActiveStep />
-              </Flex>
-            </CardBody>
-          </Element>
-        </Card>
-        </SimpleGrid>    
+  
         <SimpleGrid columns={{ sm: "1", md: "2" }} spacing='24px'>
-            <Card minH='83px'  bg='#131538'>
+            <Card minH='83px'  >
               <CardBody>
                 <Flex
                   flexDirection='row'
@@ -264,13 +187,11 @@ export default function Default() {
                       </StatNumber>
                     </Flex>
                   </Stat>
-                  <IconBox as='box' h={"45px"} w={"45px"} bg='transparent'>
-                    <WalletIcon h={"24px"} w={"24px"} color={iconBoxInside} />
-                  </IconBox>
+
                 </Flex>
               </CardBody>
             </Card >
-            <Card minH='83px' bg='#131538'>
+            <Card minH='83px' >
               <CardBody>
                 <Flex
                   flexDirection='row'
@@ -305,9 +226,7 @@ export default function Default() {
                     </Flex>
                   </Stat>
                   <Spacer />
-                  <IconBox as='box' h={"45px"} w={"45px"} bg='brand.200'>
-                    <DocumentIcon h={"24px"} w={"24px"} color={iconBoxInside} />
-                  </IconBox>
+ 
                 </Flex>
               </CardBody>
             </Card>
@@ -321,7 +240,7 @@ export default function Default() {
           w={{ sm: "100%", lg: "100%" }}
           alignSelf={{ lg: "flex-end" }}
           justifySelf={{ lg: "flex-end" }}
-          bg='#131538'
+
           borderRadius='10px'
           >
           <CardHeader mb='34px' px='22px'>
@@ -354,7 +273,7 @@ export default function Default() {
           w={{ sm: "100%", lg: "100%" }}
           alignSelf={{ lg: "flex-end" }}
           justifySelf={{ lg: "flex-end" }}
-          bg='#131538'
+
           borderRadius='10px'
           >
         <CardHeader mb='34px' px='22px'>
@@ -386,7 +305,7 @@ export default function Default() {
           w={{ sm: "100%", lg: "100%" }}
           alignSelf={{ lg: "flex-end" }}
           justifySelf={{ lg: "flex-end" }}
-          bg='#131538'
+
           borderRadius='10px'
           >
         <CardHeader mb='34px' px='22px'>
@@ -419,7 +338,7 @@ export default function Default() {
           w={{ sm: "100%", lg: "100%" }}
           alignSelf={{ lg: "flex-end" }}
           justifySelf={{ lg: "flex-end" }}
-          bg='#131538'
+
           borderRadius='10px'
           >
         <CardHeader mb='34px' px='22px'>
@@ -452,7 +371,7 @@ export default function Default() {
           w={{ sm: "100%", lg: "100%" }}
           alignSelf={{ lg: "flex-end" }}
           justifySelf={{ lg: "flex-end" }}
-          bg='#131538'
+
           borderRadius='10px'
           >
         <CardHeader mb='34px' px='22px'>

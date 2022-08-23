@@ -49,11 +49,11 @@ class CustomInput extends React.Component<Props> {
 
 		return (
 			<React.Fragment>
-				<div className="custom-input">
+				<div className="text">
 					<label className={classNameLabel}>{(labelVisible || inputValue) && (label || defaultLabel)}</label>
-					<InputGroup size="lg">
+					<InputGroup >
 						<FormControl
-							size="lg"
+						
 							type={type}
 							value={inputValue.toString()}
 							placeholder={placeholder}

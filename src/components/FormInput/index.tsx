@@ -36,6 +36,7 @@ class FormInput extends React.Component<Props> {
 			defaultLabel,
 			inputValue,
 			classNameLabel,
+			classNameInput,
 			type,
 			autoFocus,
 			readOnly,
@@ -47,7 +48,7 @@ class FormInput extends React.Component<Props> {
 
 		return (
 			<React.Fragment>
-				<div className="custom-input">
+				<div  className={classNameInput}>
 					<label className={classNameLabel}>{(labelVisible || inputValue) && (label || defaultLabel)}</label>
 					<InputGroup size="lg">
 						<FormControl

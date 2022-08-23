@@ -37,11 +37,11 @@ export const pt = {
 	'page.mobile.currentMarketInfo.low': 'Low',
 
 	'page.header.signIn.forgotPassword': 'Forgot password?',
-	'page.header.signIN.noAccountYet': 'No account yet?',
+	'page.header.signIN.noAccountYet': 'Ainda não se cadastrou?',
 	'page.header.signUp.terms': 'I  agree all statements in terms of service',
 	'page.header.signUp.alreadyRegistered': 'Already registered?',
 
-	'page.mobile.reset.header': 'Resend confirmation',
+	'page.mobile.reset.header': 'Reenviar email de confirmação',
 	'page.mobile.signin.kyc.header': 'Autenticação em Duas Etapas (2FA)',
 
 	'page.mobile.wallets.deposit.history': 'Deposit',

@@ -2,12 +2,15 @@ import { Button } from 'antd';
 import * as React from 'react';
 import { SaleListTables } from '../../containers';
 import './SaleListScreen.css';
+
+const TokenList = require ('../../../../assets/images/tokens.png');
+
 export const SaleListScreen: React.FC = () => {
 	return (
 		<React.Fragment>
-			<div style={{ position: 'relative', padding: '0 5%' }}>
-				<img style={{ width: '100%', margin: 0 }} src="https://i.imgur.com/2yZzXcQ.jpg" alt="ieo_banner" />
-				<div
+			<div style={{ position: 'relative',  }}>
+				<img style={{ width: '110%', margin: 0 }} src={TokenList} alt="ieo_banner" />
+				{/*<div
 					style={{
 						position: 'absolute',
 						content: '',
@@ -23,15 +26,15 @@ export const SaleListScreen: React.FC = () => {
 					<Button href="#" target="_blank" style={{ backgroundColor: '#2a9d8f' }} type="primary" size={'large'}>
 						Conheça os Projetos
 					</Button>
-				</div>
+				</div>  */}
 			</div>
 
 			<div id="sale-list" className="container-fluid">
 				<div className="row">
 					<div className="col-12 text-center">
-						<h1 className="sale-list__title">Bem vindo ao Marketplace de ativos digitais da Fortem One!</h1>
-						<h2 className="sale-list__subtitle">
-							Diversifique seus investimentos e impulsione o seu portfólio com os ativos digitais listados na Plataforma.
+						<h1 className="sale-list__title" style={{ color: '#2a9d8f', fontSize: '42px', fontWeight: 'bold' }}> Seja bem-vindo ao SIMPLE.</h1>
+						<h2 className="sale-list__subtitle" style={{  fontSize: '28px', fontWeight: 'bold' }}>
+						O marketplace de ativos digitais da Fortem ONE
 						</h2>
 					</div>
 				</div>

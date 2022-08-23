@@ -150,10 +150,10 @@ function Settings() {
 
         position={{ lg: "fixed" }}
         top={{ lg: "150px" }}
-        bg='#131538'
+      
         borderRadius='10px'
         >
-        <CardBody bg='#131538'>
+        <CardBody bg=''>
           <Stack direction='column' spacing='8px' w='100%' color='gray.500'>
             <Link to='profile' spy={true} smooth={true} duration={500}>
               <Button
@@ -311,7 +311,7 @@ function Settings() {
         <Card
           w={{ sm: "100%", lg: "83%" }}
 
-          bg='#131538'
+         
           borderRadius='10px'
       
           >
@@ -366,7 +366,7 @@ function Settings() {
           w={{ sm: "100%", lg: "83%" }}
           alignSelf={{ lg: "flex-end" }}
           justifySelf={{ lg: "flex-end" }}
-          bg='#131538'
+     
           borderRadius='10px'
           >
           <Element id='info' name='info'>
@@ -386,7 +386,7 @@ function Settings() {
           w={{ sm: "100%", lg: "83%" }}
           alignSelf={{ lg: "flex-end" }}
           justifySelf={{ lg: "flex-end" }}
-          bg='#131538'
+   
           borderRadius='10px'
           >
           <Element id='info' name='info'>

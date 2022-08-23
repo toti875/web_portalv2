@@ -84,16 +84,16 @@ export const SaleListTables: React.FC = () => {
 				<div className="col-12">
 					<Menu mode="horizontal" defaultSelectedKeys={['active']} onClick={handleSelectMenuItem}>
 						<Menu.Item key="active">
-							<span style={{ color: '#4284F5ff' }}>Emissões Ativas</span>
+							<span style={{ color: '#4284F5ff' }}>Ativas</span>
 						</Menu.Item>
 						<Menu.Item key="ongoing">
-							<span style={{ color: '#0C9D58ff' }}>Emissões em Andamento</span>
+							<span style={{ color: '#13b887' }}>Em andamento</span>
 						</Menu.Item>
 						<Menu.Item key="upcoming">
-							<span style={{ color: '#FABE08ff' }}>Emissões Futuras</span>
+							<span style={{ color: '#FABE08ff' }}>Futuras</span>
 						</Menu.Item>
 						<Menu.Item key="ended">
-							<span style={{ color: '#EA4235ff' }}>Emissões Finalizadas</span>
+							<span style={{ color: '#EA4235ff' }}>Finalizadas</span>
 						</Menu.Item>
 					</Menu>
 				</div>

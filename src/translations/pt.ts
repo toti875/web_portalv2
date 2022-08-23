@@ -101,13 +101,14 @@ export const pt = {
 	'page.body.wallets.tabs.deposit.ccy.message.confirmation':
 		'1. Os ativos serão creditados após {confirmations} confirmações de rede.',
 	'page.body.wallets.tabs.deposit.ccy.message.mindeposit': '2. Min Depósito: {min_deposit_amount} {currency}',
-	'page.body.wallets.tabs.deposit.ccy.message.depositfee': '3. Taxa: {deposit_fee} {currency}',
+	//'page.body.wallets.tabs.deposit.ccy.message.depositfee': '3. Taxa: {deposit_fee} {currency}',
+	'page.body.wallets.tabs.deposit.ccy.message.depositfee': '3. Taxa de depósito: 0 %',
 	'page.body.wallets.tabs.deposit.ccy.message.address': 'Endereço da carteira',
 	'page.body.wallets.tabs.deposit.ccy.message.button': 'Copiar endereço',
 	'page.body.wallets.tabs.deposit.ccy.message.success': 'Endereço copiado',
 	'page.body.wallets.tabs.deposit.ccy.message.error': 'Gerando endereço de depósito',
 	'page.body.wallets.tabs.deposit.ccy.button.generate': 'Gerar endereço ',
-	'page.body.wallets.tabs.deposit.ccy.button.address': '',
+	'page.body.wallets.tabs.deposit.ccy.button.address': 'Endereço',
 	'page.body.wallets.tabs.deposit.ccy.message.submit': 'Faça seu depósito utilizando o endereço de carteira abaixo ou utilize o QR Code gerado. Seu depósito será creditado após {confirmations} confirmações de rede',
 	'page.body.wallets.tabs.deposit.ccy.message.pending': 'Gerando endereço de depósito',
 
@@ -512,8 +513,8 @@ export const pt = {
 	'page.footer.faq': 'FAQ',
 
 	'page.header.signIn': 'Entrar',
-	'page.header.signIn.email': 'Seu email',
-	'page.header.signIn.password': 'Sua senha',
+	'page.header.signIn.email': 'Email',
+	'page.header.signIn.password': 'Senha',
 	'page.header.signIn.password.message.error': 'Senha inválida',
 	'page.header.signIn.receiveConfirmation': `Didn't receive your confirmation email?`,
 	'page.header.signIn.forgotPassword': 'Esqueceu sua senha?',

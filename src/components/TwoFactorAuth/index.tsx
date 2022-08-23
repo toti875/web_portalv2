@@ -33,7 +33,7 @@ class TwoFactorAuthComponent extends React.Component<TwoFactorAuthProps> {
 		});
 
 		return (
-			<div className="pg-2fa___form">
+			<div className="pg-2fa___form2">
 				<form>
 					<div className="cr-email-form">
 						<div className="cr-email-form__options-group">
@@ -47,7 +47,7 @@ class TwoFactorAuthComponent extends React.Component<TwoFactorAuthProps> {
 							</div>
 						</div>
 						<div className="cr-email-form__form-content">
-							<div className="cr-email-form__header">{message}</div>
+							{/*<div className="cr-email-form__header">{message}</div>*/}
 							<div className={emailGroupClass}>
 								<CustomInput
 									type="password"

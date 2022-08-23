@@ -17,6 +17,7 @@ export const initialSaleItem: SaleItemState = {
 		end_date: '',
 		bonus: '',
 		social: {},
+		sale_logo: '',
 		type: 'upcoming',
 	},
 	loading: false,

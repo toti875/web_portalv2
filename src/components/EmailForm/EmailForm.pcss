@@ -1,30 +1,37 @@
 .cr-email-form {
-	background: transparent !important;
-	border-radius: 20px !important;
 
+
+	border-radius: 10px !important;
 	max-width: 424px;
 	min-height: 350px;
 	position: relative;
+	martin-bottom: 20px;
+	background: transparent !important;
+	margin-top: 10px !important;
 
-	&__options-group {
-		border-bottom: 2px solid var(--divider-color-level-2);
-		height: 58px;
-		width: 100%;
-	}
 
 	&__option {
-		background: transparent;
+		border: none !important;
 		display: inline-block;
 		height: 58px;
 		width: 100%;
+		background: transparent !important;
+
 	}
 
+	.close-icon {
+		margin-top: -72px !important;
+		margin-left: 92% !important;
+		
+		}
+
 	&__option-inner {
-		background: #131538 !important;
-		color: var(--primary-text-color);
+		border: none !important;
+		background: transparent !important;
+		color: #595959;
 		font-size: 14px;
 		font-style: normal;
-		font-weight: 500;
+		font-weight: 800;
 		height: 58px;
 		letter-spacing: 0.0357143em;
 		line-height: 58px;
@@ -32,15 +39,19 @@
 		text-align: center;
 		text-transform: uppercase;
 		width: 100%;
+		margin-top: 30px !important;
+
 	}
 
 	&__form-content {
-		bottom: 23px;
+		border: none !important;
+		
+		height: 80px !important;
 		box-sizing: border-box;
 		left: 23px;
 		position: absolute;
 		right: 23px;
-		top: 150px !important;
+		top: 100px !important;
 	}
 
 	& > * {
@@ -60,7 +71,7 @@
 
 	&__group {
 		background: transparent;
-		margin-bottom: 20px;
+		
 		position: relative;
 	}
 
@@ -71,7 +82,7 @@
 	}
 
 	&__label {
-		background: var(--input-background-color);
+		background: transparent !important;
 		border-radius: 2px;
 		color: var(--input-legend-color);
 		left: 10px;
@@ -87,8 +98,8 @@
 
 		input {
 			border: 1px solid var(--input-border-color-active) !important;
-			height: 60px !important;
-			font-size: 40px !important;
+			height: 30px !important;
+			font-size: 15px !important;
 		}
 	}
 
@@ -112,7 +123,7 @@
 
 	&__button-wrapper {
 		background: transparent;
-		bottom: 0 !important;
+		margin: 0 auto !important;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -120,6 +131,7 @@
 		min-height: calc(var(--gap) * 28);
 		position: absolute;
 		right: 0;
+		width: 75% !important;
 	}
 
 	&__button-wrapper--empty {
@@ -127,18 +139,20 @@
 	}
 
 	&__input {
-		margin-top: 8px;
-		width: 100%;
+		margin-top: 18px;
+		margin-left:  50px !important;
+		width: 30px !important;
 
 		input {
-			border: 1px solid var(--input-border-color);
-			border-radius: 4px;
-			box-sizing: border-box;
-			color: var(--input-text-color);
+			border: none !important;
+		
+			text-justify: center !important;
+			color: #595959 !important;
 			font-size: 12px;
 			height: 50px;
-			padding: 0 10px;
-			width: 100%;
+			margin-left:  50px !important;
+			
+			max-width: 30px !important;
 		}
 	}
 }

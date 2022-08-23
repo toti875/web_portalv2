@@ -102,6 +102,13 @@
 	--customization-divider-color: #e1e1e1;
 	--customization-shadow: 0 2px 40px rgba(0, 0, 0, 0.2);
 	--customization-themes-circle-border-color: rgba(172, 172, 172, 0.3);
+
+
+	--form-background-color: #fff !important;
+
+
+
+	
 }/*  ==================================
 *   Table of Contents
 *   ==================================
@@ -139,412 +146,412 @@
 * 32. Order book area
 *	================================== */:root,
 .light-mode {
-	/*  ================================
+  /*  ================================
       1. General area
     ================================ */
-	--main-background-color: rgb(var(--rgb-main-background-color));
-	--body-background-color: rgb(var(--rgb-body-background-color));
-	--header-background-color: rgb(var(--rgb-header-background-color));
-	--subheader-background-color: rgb(var(--rgb-subheader-background-color));
-	--dropdown-background-color: rgb(var(--rgb-dropdown-background-color));
-	--icons: rgb(var(--rgb-icons));
-	--primary-cta-color: rgb(var(--rgb-primary-cta-color));
-	--secondary-contrast-cta-color: rgb(var(--rgb-secondary-contrast-cta-color));
-	--cta-layer-color: rgb(var(--rgb-cta-layer-color));
-	--primary-text-color: rgb(var(--rgb-primary-text-color));
-	--text-contrast-color: rgb(var(--rgb-text-contrast-color));
-	--asks: rgb(var(--rgb-asks));
-	--bids: rgb(var(--rgb-bids));
-	--system-yellow: rgb(var(--rgb-system-yellow));
-	--system-red: rgb(var(--rgb-system-red));
-	--system-green: rgb(var(--rgb-system-green));
-	--input-background-color: transparent !important;
-	--landing-background-color: rgb(var(--rgb-landing-background-color));
-	--strength-meter-very-strong: rgb(var(--rgb-strength-meter-very-strong));
-	--form-background-color: #131538;
+  --main-background-color: rgb(var(--rgb-main-background-color));
+  --body-background-color: rgb(var(--rgb-body-background-color));
+  --header-background-color: rgb(var(--rgb-header-background-color));
+  --subheader-background-color: rgb(var(--rgb-subheader-background-color));
+  --dropdown-background-color: rgb(var(--rgb-dropdown-background-color));
+  --icons: rgb(var(--rgb-icons));
+  --primary-cta-color: rgb(var(--rgb-primary-cta-color));
+  --secondary-contrast-cta-color: rgb(var(--rgb-secondary-contrast-cta-color));
+  --cta-layer-color: rgb(var(--rgb-cta-layer-color));
+  --primary-text-color: rgb(var(--rgb-primary-text-color));
+  --text-contrast-color: rgb(var(--rgb-text-contrast-color));
+  --asks: rgb(var(--rgb-asks));
+  --bids: rgb(var(--rgb-bids));
+  --system-yellow: rgb(var(--rgb-system-yellow));
+  --system-red: rgb(var(--rgb-system-red));
+  --system-green: rgb(var(--rgb-system-green));
+  --input-background-color: rgb(var(--rgb-body-background-color));
+  --landing-background-color: rgb(var(--rgb-landing-background-color));
+  --strength-meter-very-strong: rgb(var(--rgb-strength-meter-very-strong));
 
-	/* =================================
+  /* =================================
       2. Body background color opacity area
     ================================ */
-	--body-background-color-level-1: rgba(var(--rgb-body-background-color), var(--alpha-level-1));
-	--body-background-color-level-2: rgba(var(--rgb-body-background-color), var(--alpha-level-2));
-	--body-background-color-level-3: rgba(var(--rgb-body-background-color), var(--alpha-level-3));
-	--body-background-color-level-4: rgba(var(--rgb-body-background-color), var(--alpha-level-4));
-	--body-background-color-level-5: rgba(var(--rgb-body-background-color), var(--alpha-level-5));
-	--body-background-color-level-6: rgba(var(--rgb-body-background-color), var(--alpha-level-6));
-	--body-background-color-level-7: rgba(var(--rgb-body-background-color), var(--alpha-level-7));
-	--body-background-color-level-8: rgba(var(--rgb-body-background-color), var(--alpha-level-8));
+  --body-background-color-level-1: rgba(var(--rgb-body-background-color), var(--alpha-level-1));
+  --body-background-color-level-2: rgba(var(--rgb-body-background-color), var(--alpha-level-2));
+  --body-background-color-level-3: rgba(var(--rgb-body-background-color), var(--alpha-level-3));
+  --body-background-color-level-4: rgba(var(--rgb-body-background-color), var(--alpha-level-4));
+  --body-background-color-level-5: rgba(var(--rgb-body-background-color), var(--alpha-level-5));
+  --body-background-color-level-6: rgba(var(--rgb-body-background-color), var(--alpha-level-6));
+  --body-background-color-level-7: rgba(var(--rgb-body-background-color), var(--alpha-level-7));
+  --body-background-color-level-8: rgba(var(--rgb-body-background-color), var(--alpha-level-8));
 
-	/* =================================
+  /* =================================
       3. Subheader background color opacity area
     ================================ */
-	--subheader-background-color-level-1: rgba(var(--rgb-subheader-background-color), var(--alpha-level-1));
-	--subheader-background-color-level-2: rgba(var(--rgb-subheader-background-color), var(--alpha-level-2));
-	--subheader-background-color-level-3: rgba(var(--rgb-subheader-background-color), var(--alpha-level-3));
-	--subheader-background-color-level-4: rgba(var(--rgb-subheader-background-color), var(--alpha-level-4));
-	--subheader-background-color-level-5: rgba(var(--rgb-subheader-background-color), var(--alpha-level-5));
-	--subheader-background-color-level-6: rgba(var(--rgb-subheader-background-color), var(--alpha-level-6));
-	--subheader-background-color-level-7: rgba(var(--rgb-subheader-background-color), var(--alpha-level-7));
-	--subheader-background-color-level-8: rgba(var(--rgb-subheader-background-color), var(--alpha-level-8));
+  --subheader-background-color-level-1: rgba(var(--rgb-subheader-background-color), var(--alpha-level-1));
+  --subheader-background-color-level-2: rgba(var(--rgb-subheader-background-color), var(--alpha-level-2));
+  --subheader-background-color-level-3: rgba(var(--rgb-subheader-background-color), var(--alpha-level-3));
+  --subheader-background-color-level-4: rgba(var(--rgb-subheader-background-color), var(--alpha-level-4));
+  --subheader-background-color-level-5: rgba(var(--rgb-subheader-background-color), var(--alpha-level-5));
+  --subheader-background-color-level-6: rgba(var(--rgb-subheader-background-color), var(--alpha-level-6));
+  --subheader-background-color-level-7: rgba(var(--rgb-subheader-background-color), var(--alpha-level-7));
+  --subheader-background-color-level-8: rgba(var(--rgb-subheader-background-color), var(--alpha-level-8));
 
-	/* =================================
+  /* =================================
       4. Dropdown background color opacity area
     ================================ */
-	--dropdown-background-color-level-1: rgba(var(--rgb-dropdown-background-color), var(--alpha-level-1));
-	--dropdown-background-color-level-2: rgba(var(--rgb-dropdown-background-color), var(--alpha-level-2));
-	--dropdown-background-color-level-3: rgba(var(--rgb-dropdown-background-color), var(--alpha-level-3));
-	--dropdown-background-color-level-4: rgba(var(--rgb-dropdown-background-color), var(--alpha-level-4));
-	--dropdown-background-color-level-5: rgba(var(--rgb-dropdown-background-color), var(--alpha-level-5));
-	--dropdown-background-color-level-6: rgba(var(--rgb-dropdown-background-color), var(--alpha-level-6));
-	--dropdown-background-color-level-7: rgba(var(--rgb-dropdown-background-color), var(--alpha-level-7));
-	--dropdown-background-color-level-8: rgba(var(--rgb-dropdown-background-color), var(--alpha-level-8));
+  --dropdown-background-color-level-1: rgba(var(--rgb-dropdown-background-color), var(--alpha-level-1));
+  --dropdown-background-color-level-2: rgba(var(--rgb-dropdown-background-color), var(--alpha-level-2));
+  --dropdown-background-color-level-3: rgba(var(--rgb-dropdown-background-color), var(--alpha-level-3));
+  --dropdown-background-color-level-4: rgba(var(--rgb-dropdown-background-color), var(--alpha-level-4));
+  --dropdown-background-color-level-5: rgba(var(--rgb-dropdown-background-color), var(--alpha-level-5));
+  --dropdown-background-color-level-6: rgba(var(--rgb-dropdown-background-color), var(--alpha-level-6));
+  --dropdown-background-color-level-7: rgba(var(--rgb-dropdown-background-color), var(--alpha-level-7));
+  --dropdown-background-color-level-8: rgba(var(--rgb-dropdown-background-color), var(--alpha-level-8));
 
-	/* =================================
+  /* =================================
       5. Icons background color opacity area
     ================================ */
-	--icons-level-1: rgba(var(--rgb-icons), var(--alpha-level-1));
-	--icons-level-2: rgba(var(--rgb-icons), var(--alpha-level-2));
-	--icons-level-3: rgba(var(--rgb-icons), var(--alpha-level-3));
-	--icons-level-4: rgba(var(--rgb-icons), var(--alpha-level-4));
-	--icons-level-5: rgba(var(--rgb-icons), var(--alpha-level-5));
-	--icons-level-6: rgba(var(--rgb-icons), var(--alpha-level-6));
-	--icons-level-7: rgba(var(--rgb-icons), var(--alpha-level-7));
-	--icons-level-8: rgba(var(--rgb-icons), var(--alpha-level-8));
+  --icons-level-1: rgba(var(--rgb-icons), var(--alpha-level-1));
+  --icons-level-2: rgba(var(--rgb-icons), var(--alpha-level-2));
+  --icons-level-3: rgba(var(--rgb-icons), var(--alpha-level-3));
+  --icons-level-4: rgba(var(--rgb-icons), var(--alpha-level-4));
+  --icons-level-5: rgba(var(--rgb-icons), var(--alpha-level-5));
+  --icons-level-6: rgba(var(--rgb-icons), var(--alpha-level-6));
+  --icons-level-7: rgba(var(--rgb-icons), var(--alpha-level-7));
+  --icons-level-8: rgba(var(--rgb-icons), var(--alpha-level-8));
 
-	/*  ================================
+  /*  ================================
       6. Primary call to action(CTA) color opacity area
     ================================ */
-	--primary-cta-color-level-1: rgba(var(--rgb-primary-cta-color), var(--alpha-level-1));
-	--primary-cta-color-level-2: rgba(var(--rgb-primary-cta-color), var(--alpha-level-2));
-	--primary-cta-color-level-3: rgba(var(--rgb-primary-cta-color), var(--alpha-level-3));
-	--primary-cta-color-level-4: rgba(var(--rgb-primary-cta-color), var(--alpha-level-4));
-	--primary-cta-color-level-5: rgba(var(--rgb-primary-cta-color), var(--alpha-level-5));
-	--primary-cta-color-level-6: rgba(var(--rgb-primary-cta-color), var(--alpha-level-6));
-	--primary-cta-color-level-7: rgba(var(--rgb-primary-cta-color), var(--alpha-level-7));
-	--primary-cta-color-level-8: rgba(var(--rgb-primary-cta-color), var(--alpha-level-8));
+  --primary-cta-color-level-1: rgba(var(--rgb-primary-cta-color), var(--alpha-level-1));
+  --primary-cta-color-level-2: rgba(var(--rgb-primary-cta-color), var(--alpha-level-2));
+  --primary-cta-color-level-3: rgba(var(--rgb-primary-cta-color), var(--alpha-level-3));
+  --primary-cta-color-level-4: rgba(var(--rgb-primary-cta-color), var(--alpha-level-4));
+  --primary-cta-color-level-5: rgba(var(--rgb-primary-cta-color), var(--alpha-level-5));
+  --primary-cta-color-level-6: rgba(var(--rgb-primary-cta-color), var(--alpha-level-6));
+  --primary-cta-color-level-7: rgba(var(--rgb-primary-cta-color), var(--alpha-level-7));
+  --primary-cta-color-level-8: rgba(var(--rgb-primary-cta-color), var(--alpha-level-8));
 
-	/*  ================================
+  /*  ================================
       7. Contrast call to action(CTA) color opacity area
     ================================ */
-	--contrast-cta-color-level-1: rgba(var(--rgb-contrast-cta-color), var(--alpha-level-1));
-	--contrast-cta-color-level-2: rgba(var(--rgb-contrast-cta-color), var(--alpha-level-2));
-	--contrast-cta-color-level-3: rgba(var(--rgb-contrast-cta-color), var(--alpha-level-3));
-	--contrast-cta-color-level-4: rgba(var(--rgb-contrast-cta-color), var(--alpha-level-4));
-	--contrast-cta-color-level-5: rgba(var(--rgb-contrast-cta-color), var(--alpha-level-5));
-	--contrast-cta-color-level-6: rgba(var(--rgb-contrast-cta-color), var(--alpha-level-6));
-	--contrast-cta-color-level-7: rgba(var(--rgb-contrast-cta-color), var(--alpha-level-7));
-	--contrast-cta-color-level-8: rgba(var(--rgb-contrast-cta-color), var(--alpha-level-8));
+  --contrast-cta-color-level-1: rgba(var(--rgb-contrast-cta-color), var(--alpha-level-1));
+  --contrast-cta-color-level-2: rgba(var(--rgb-contrast-cta-color), var(--alpha-level-2));
+  --contrast-cta-color-level-3: rgba(var(--rgb-contrast-cta-color), var(--alpha-level-3));
+  --contrast-cta-color-level-4: rgba(var(--rgb-contrast-cta-color), var(--alpha-level-4));
+  --contrast-cta-color-level-5: rgba(var(--rgb-contrast-cta-color), var(--alpha-level-5));
+  --contrast-cta-color-level-6: rgba(var(--rgb-contrast-cta-color), var(--alpha-level-6));
+  --contrast-cta-color-level-7: rgba(var(--rgb-contrast-cta-color), var(--alpha-level-7));
+  --contrast-cta-color-level-8: rgba(var(--rgb-contrast-cta-color), var(--alpha-level-8));
 
-	/*  ================================
+  /*  ================================
       8. Secondary text color opacity area
     ================================ */
-	--secondary-contrast-cta-color-level-1: rgba(var(--rgb-secondary-contrast-cta-color), var(--alpha-level-1));
-	--secondary-contrast-cta-color-level-2: rgba(var(--rgb-secondary-contrast-cta-color), var(--alpha-level-2));
-	--secondary-contrast-cta-color-level-3: rgba(var(--rgb-secondary-contrast-cta-color), var(--alpha-level-3));
-	--secondary-contrast-cta-color-level-4: rgba(var(--rgb-secondary-contrast-cta-color), var(--alpha-level-4));
-	--secondary-contrast-cta-color-level-5: rgba(var(--rgb-secondary-contrast-cta-color), var(--alpha-level-5));
-	--secondary-contrast-cta-color-level-6: rgba(var(--rgb-secondary-contrast-cta-color), var(--alpha-level-6));
-	--secondary-contrast-cta-color-level-7: rgba(var(--rgb-secondary-contrast-cta-color), var(--alpha-level-7));
-	--secondary-contrast-cta-color-level-8: rgba(var(--rgb-secondary-contrast-cta-color), var(--alpha-level-8));
+  --secondary-contrast-cta-color-level-1: rgba(var(--rgb-secondary-contrast-cta-color), var(--alpha-level-1));
+  --secondary-contrast-cta-color-level-2: rgba(var(--rgb-secondary-contrast-cta-color), var(--alpha-level-2));
+  --secondary-contrast-cta-color-level-3: rgba(var(--rgb-secondary-contrast-cta-color), var(--alpha-level-3));
+  --secondary-contrast-cta-color-level-4: rgba(var(--rgb-secondary-contrast-cta-color), var(--alpha-level-4));
+  --secondary-contrast-cta-color-level-5: rgba(var(--rgb-secondary-contrast-cta-color), var(--alpha-level-5));
+  --secondary-contrast-cta-color-level-6: rgba(var(--rgb-secondary-contrast-cta-color), var(--alpha-level-6));
+  --secondary-contrast-cta-color-level-7: rgba(var(--rgb-secondary-contrast-cta-color), var(--alpha-level-7));
+  --secondary-contrast-cta-color-level-8: rgba(var(--rgb-secondary-contrast-cta-color), var(--alpha-level-8));
 
-	/*  ================================
+  /*  ================================
       9. Call to action layer color opacity area
     ================================ */
-	--cta-layer-color-level-1: rgba(var(--rgb-cta-layer-color), var(--alpha-level-1));
-	--cta-layer-color-level-2: rgba(var(--rgb-cta-layer-color), var(--alpha-level-2));
-	--cta-layer-color-level-3: rgba(var(--rgb-cta-layer-color), var(--alpha-level-3));
-	--cta-layer-color-level-4: rgba(var(--rgb-cta-layer-color), var(--alpha-level-4));
-	--cta-layer-color-level-5: rgba(var(--rgb-cta-layer-color), var(--alpha-level-5));
-	--cta-layer-color-level-6: rgba(var(--rgb-cta-layer-color), var(--alpha-level-6));
-	--cta-layer-color-level-7: rgba(var(--rgb-cta-layer-color), var(--alpha-level-7));
-	--cta-layer-color-level-8: rgba(var(--rgb-cta-layer-color), var(--alpha-level-8));
+  --cta-layer-color-level-1: rgba(var(--rgb-cta-layer-color), var(--alpha-level-1));
+  --cta-layer-color-level-2: rgba(var(--rgb-cta-layer-color), var(--alpha-level-2));
+  --cta-layer-color-level-3: rgba(var(--rgb-cta-layer-color), var(--alpha-level-3));
+  --cta-layer-color-level-4: rgba(var(--rgb-cta-layer-color), var(--alpha-level-4));
+  --cta-layer-color-level-5: rgba(var(--rgb-cta-layer-color), var(--alpha-level-5));
+  --cta-layer-color-level-6: rgba(var(--rgb-cta-layer-color), var(--alpha-level-6));
+  --cta-layer-color-level-7: rgba(var(--rgb-cta-layer-color), var(--alpha-level-7));
+  --cta-layer-color-level-8: rgba(var(--rgb-cta-layer-color), var(--alpha-level-8));
 
-	/*  ================================
+  /*  ================================
       10. System green color opacity area
     ================================ */
-	--system-green-level-1: rgba(var(--rgb-system-green), var(--alpha-level-1));
-	--system-green-level-2: rgba(var(--rgb-system-green), var(--alpha-level-2));
-	--system-green-level-3: rgba(var(--rgb-system-green), var(--alpha-level-3));
-	--system-green-level-4: rgba(var(--rgb-system-green), var(--alpha-level-4));
-	--system-green-level-5: rgba(var(--rgb-system-green), var(--alpha-level-5));
-	--system-green-level-6: rgba(var(--rgb-system-green), var(--alpha-level-6));
-	--system-green-level-7: rgba(var(--rgb-system-green), var(--alpha-level-7));
-	--system-green-level-8: rgba(var(--rgb-system-green), var(--alpha-level-8));
+  --system-green-level-1: rgba(var(--rgb-system-green), var(--alpha-level-1));
+  --system-green-level-2: rgba(var(--rgb-system-green), var(--alpha-level-2));
+  --system-green-level-3: rgba(var(--rgb-system-green), var(--alpha-level-3));
+  --system-green-level-4: rgba(var(--rgb-system-green), var(--alpha-level-4));
+  --system-green-level-5: rgba(var(--rgb-system-green), var(--alpha-level-5));
+  --system-green-level-6: rgba(var(--rgb-system-green), var(--alpha-level-6));
+  --system-green-level-7: rgba(var(--rgb-system-green), var(--alpha-level-7));
+  --system-green-level-8: rgba(var(--rgb-system-green), var(--alpha-level-8));
 
-	/*  ================================
+  /*  ================================
       11. System red color opacity area
     ================================ */
-	--system-red-level-1: rgba(var(--rgb-system-red), var(--alpha-level-1));
-	--system-red-level-2: rgba(var(--rgb-system-red), var(--alpha-level-2));
-	--system-red-level-3: rgba(var(--rgb-system-red), var(--alpha-level-3));
-	--system-red-level-4: rgba(var(--rgb-system-red), var(--alpha-level-4));
-	--system-red-level-5: rgba(var(--rgb-system-red), var(--alpha-level-5));
-	--system-red-level-6: rgba(var(--rgb-system-red), var(--alpha-level-6));
-	--system-red-level-7: rgba(var(--rgb-system-red), var(--alpha-level-7));
-	--system-red-level-8: rgba(var(--rgb-system-red), var(--alpha-level-8));
+  --system-red-level-1: rgba(var(--rgb-system-red), var(--alpha-level-1));
+  --system-red-level-2: rgba(var(--rgb-system-red), var(--alpha-level-2));
+  --system-red-level-3: rgba(var(--rgb-system-red), var(--alpha-level-3));
+  --system-red-level-4: rgba(var(--rgb-system-red), var(--alpha-level-4));
+  --system-red-level-5: rgba(var(--rgb-system-red), var(--alpha-level-5));
+  --system-red-level-6: rgba(var(--rgb-system-red), var(--alpha-level-6));
+  --system-red-level-7: rgba(var(--rgb-system-red), var(--alpha-level-7));
+  --system-red-level-8: rgba(var(--rgb-system-red), var(--alpha-level-8));
 
-	/*  ================================
+  /*  ================================
       12. System yellow color opacity area
     ================================ */
-	--system-yellow-level-1: rgba(var(--rgb-system-yellow), var(--alpha-level-1));
-	--system-yellow-level-2: rgba(var(--rgb-system-yellow), var(--alpha-level-2));
-	--system-yellow-level-3: rgba(var(--rgb-system-yellow), var(--alpha-level-3));
-	--system-yellow-level-4: rgba(var(--rgb-system-yellow), var(--alpha-level-4));
-	--system-yellow-level-5: rgba(var(--rgb-system-yellow), var(--alpha-level-5));
-	--system-yellow-level-6: rgba(var(--rgb-system-yellow), var(--alpha-level-6));
-	--system-yellow-level-7: rgba(var(--rgb-system-yellow), var(--alpha-level-7));
-	--system-yellow-level-8: rgba(var(--rgb-system-yellow), var(--alpha-level-8));
+  --system-yellow-level-1: rgba(var(--rgb-system-yellow), var(--alpha-level-1));
+  --system-yellow-level-2: rgba(var(--rgb-system-yellow), var(--alpha-level-2));
+  --system-yellow-level-3: rgba(var(--rgb-system-yellow), var(--alpha-level-3));
+  --system-yellow-level-4: rgba(var(--rgb-system-yellow), var(--alpha-level-4));
+  --system-yellow-level-5: rgba(var(--rgb-system-yellow), var(--alpha-level-5));
+  --system-yellow-level-6: rgba(var(--rgb-system-yellow), var(--alpha-level-6));
+  --system-yellow-level-7: rgba(var(--rgb-system-yellow), var(--alpha-level-7));
+  --system-yellow-level-8: rgba(var(--rgb-system-yellow), var(--alpha-level-8));
 
-	/*  ================================
+  /*  ================================
       13. Bids color opacity area
     ================================ */
-	--bids-level-1: rgba(var(--rgb-bids), var(--alpha-level-1));
-	--bids-level-2: rgba(var(--rgb-bids), var(--alpha-level-2));
-	--bids-level-3: rgba(var(--rgb-bids), var(--alpha-level-3));
-	--bids-level-4: rgba(var(--rgb-bids), var(--alpha-level-4));
-	--bids-level-5: rgba(var(--rgb-bids), var(--alpha-level-5));
-	--bids-level-6: rgba(var(--rgb-bids), var(--alpha-level-6));
-	--bids-level-7: rgba(var(--rgb-bids), var(--alpha-level-7));
-	--bids-level-8: rgba(var(--rgb-bids), var(--alpha-level-8));
+  --bids-level-1: rgba(var(--rgb-bids), var(--alpha-level-1));
+  --bids-level-2: rgba(var(--rgb-bids), var(--alpha-level-2));
+  --bids-level-3: rgba(var(--rgb-bids), var(--alpha-level-3));
+  --bids-level-4: rgba(var(--rgb-bids), var(--alpha-level-4));
+  --bids-level-5: rgba(var(--rgb-bids), var(--alpha-level-5));
+  --bids-level-6: rgba(var(--rgb-bids), var(--alpha-level-6));
+  --bids-level-7: rgba(var(--rgb-bids), var(--alpha-level-7));
+  --bids-level-8: rgba(var(--rgb-bids), var(--alpha-level-8));
 
-	/*  ================================
+  /*  ================================
       14. Asks color opacity area
     ================================ */
-	--asks-level-1: rgba(var(--rgb-asks), var(--alpha-level-1));
-	--asks-level-2: rgba(var(--rgb-asks), var(--alpha-level-2));
-	--asks-level-3: rgba(var(--rgb-asks), var(--alpha-level-3));
-	--asks-level-4: rgba(var(--rgb-asks), var(--alpha-level-4));
-	--asks-level-5: rgba(var(--rgb-asks), var(--alpha-level-5));
-	--asks-level-6: rgba(var(--rgb-asks), var(--alpha-level-6));
-	--asks-level-7: rgba(var(--rgb-asks), var(--alpha-level-7));
-	--asks-level-8: rgba(var(--rgb-asks), var(--alpha-level-8));
+  --asks-level-1: rgba(var(--rgb-asks), var(--alpha-level-1));
+  --asks-level-2: rgba(var(--rgb-asks), var(--alpha-level-2));
+  --asks-level-3: rgba(var(--rgb-asks), var(--alpha-level-3));
+  --asks-level-4: rgba(var(--rgb-asks), var(--alpha-level-4));
+  --asks-level-5: rgba(var(--rgb-asks), var(--alpha-level-5));
+  --asks-level-6: rgba(var(--rgb-asks), var(--alpha-level-6));
+  --asks-level-7: rgba(var(--rgb-asks), var(--alpha-level-7));
+  --asks-level-8: rgba(var(--rgb-asks), var(--alpha-level-8));
 
-	/*  ================================
+  /*  ================================
       15. Primary text color opacity area
     ================================ */
-	--primary-text-color-level-1: rgba(var(--rgb-primary-text-color), var(--alpha-level-1));
-	--primary-text-color-level-2: rgba(var(--rgb-primary-text-color), var(--alpha-level-2));
-	--primary-text-color-level-3: rgba(var(--rgb-primary-text-color), var(--alpha-level-3));
-	--primary-text-color-level-4: rgba(var(--rgb-primary-text-color), var(--alpha-level-4));
-	--primary-text-color-level-5: rgba(var(--rgb-primary-text-color), var(--alpha-level-5));
-	--primary-text-color-level-6: rgba(var(--rgb-primary-text-color), var(--alpha-level-6));
-	--primary-text-color-level-7: rgba(var(--rgb-primary-text-color), var(--alpha-level-7));
-	--primary-text-color-level-8: rgba(var(--rgb-primary-text-color), var(--alpha-level-8));
+  --primary-text-color-level-1: rgba(var(--rgb-primary-text-color), var(--alpha-level-1));
+  --primary-text-color-level-2: rgba(var(--rgb-primary-text-color), var(--alpha-level-2));
+  --primary-text-color-level-3: rgba(var(--rgb-primary-text-color), var(--alpha-level-3));
+  --primary-text-color-level-4: rgba(var(--rgb-primary-text-color), var(--alpha-level-4));
+  --primary-text-color-level-5: rgba(var(--rgb-primary-text-color), var(--alpha-level-5));
+  --primary-text-color-level-6: rgba(var(--rgb-primary-text-color), var(--alpha-level-6));
+  --primary-text-color-level-7: rgba(var(--rgb-primary-text-color), var(--alpha-level-7));
+  --primary-text-color-level-8: rgba(var(--rgb-primary-text-color), var(--alpha-level-8));
 
-	/*  ================================
+  /*  ================================
       16. Text contrast color opacity area
     ================================ */
-	--text-contrast-color-level-1: rgba(var(--rgb-text-contrast-color), var(--alpha-level-1));
-	--text-contrast-color-level-2: rgba(var(--rgb-text-contrast-color), var(--alpha-level-2));
-	--text-contrast-color-level-3: rgba(var(--rgb-text-contrast-color), var(--alpha-level-3));
-	--text-contrast-color-level-4: rgba(var(--rgb-text-contrast-color), var(--alpha-level-4));
-	--text-contrast-color-level-5: rgba(var(--rgb-text-contrast-color), var(--alpha-level-5));
-	--text-contrast-color-level-6: rgba(var(--rgb-text-contrast-color), var(--alpha-level-6));
-	--text-contrast-color-level-7: rgba(var(--rgb-text-contrast-color), var(--alpha-level-7));
-	--text-contrast-color-level-8: rgba(var(--rgb-text-contrast-color), var(--alpha-level-8));
+  --text-contrast-color-level-1: rgba(var(--rgb-text-contrast-color), var(--alpha-level-1));
+  --text-contrast-color-level-2: rgba(var(--rgb-text-contrast-color), var(--alpha-level-2));
+  --text-contrast-color-level-3: rgba(var(--rgb-text-contrast-color), var(--alpha-level-3));
+  --text-contrast-color-level-4: rgba(var(--rgb-text-contrast-color), var(--alpha-level-4));
+  --text-contrast-color-level-5: rgba(var(--rgb-text-contrast-color), var(--alpha-level-5));
+  --text-contrast-color-level-6: rgba(var(--rgb-text-contrast-color), var(--alpha-level-6));
+  --text-contrast-color-level-7: rgba(var(--rgb-text-contrast-color), var(--alpha-level-7));
+  --text-contrast-color-level-8: rgba(var(--rgb-text-contrast-color), var(--alpha-level-8));
 
-	/*  ================================
+  /*  ================================
       17. Divider color area
     ================================ */
-	--divider-color-level-1: rgba(var(--rgb-divider-color), var(--alpha-level-1));
-	--divider-color-level-2: rgba(var(--rgb-divider-color), var(--alpha-level-2));
-	--divider-color-level-3: rgba(var(--rgb-divider-color), var(--alpha-level-3));
-	--divider-color-level-4: rgba(var(--rgb-divider-color), var(--alpha-level-4));
-	--divider-color-level-5: rgba(var(--rgb-divider-color), var(--alpha-level-5));
-	--divider-color-level-6: rgba(var(--rgb-divider-color), var(--alpha-level-6));
-	--divider-color-level-7: rgba(var(--rgb-divider-color), var(--alpha-level-7));
-	--divider-color-level-8: rgba(var(--rgb-divider-color), var(--alpha-level-8));
+  --divider-color-level-1: rgba(var(--rgb-divider-color), var(--alpha-level-1));
+  --divider-color-level-2: rgba(var(--rgb-divider-color), var(--alpha-level-2));
+  --divider-color-level-3: rgba(var(--rgb-divider-color), var(--alpha-level-3));
+  --divider-color-level-4: rgba(var(--rgb-divider-color), var(--alpha-level-4));
+  --divider-color-level-5: rgba(var(--rgb-divider-color), var(--alpha-level-5));
+  --divider-color-level-6: rgba(var(--rgb-divider-color), var(--alpha-level-6));
+  --divider-color-level-7: rgba(var(--rgb-divider-color), var(--alpha-level-7));
+  --divider-color-level-8: rgba(var(--rgb-divider-color), var(--alpha-level-8));
 
-	/*  ================================
+  /*  ================================
       18. Shadow color area
     ================================ */
-	--shadow-color-level-1: rgba(var(--rgb-shadow-color), var(--alpha-level-1));
-	--shadow-color-level-2: rgba(var(--rgb-shadow-color), var(--alpha-level-2));
-	--shadow-color-level-3: rgba(var(--rgb-shadow-color), var(--alpha-level-3));
-	--shadow-color-level-4: rgba(var(--rgb-shadow-color), var(--alpha-level-4));
-	--shadow-color-level-5: rgba(var(--rgb-shadow-color), var(--alpha-level-5));
-	--shadow-color-level-6: rgba(var(--rgb-shadow-color), var(--alpha-level-6));
-	--shadow-color-level-7: rgba(var(--rgb-shadow-color), var(--alpha-level-7));
-	--shadow-color-level-8: rgba(var(--rgb-shadow-color), var(--alpha-level-8));
+  --shadow-color-level-1: rgba(var(--rgb-shadow-color), var(--alpha-level-1));
+  --shadow-color-level-2: rgba(var(--rgb-shadow-color), var(--alpha-level-2));
+  --shadow-color-level-3: rgba(var(--rgb-shadow-color), var(--alpha-level-3));
+  --shadow-color-level-4: rgba(var(--rgb-shadow-color), var(--alpha-level-4));
+  --shadow-color-level-5: rgba(var(--rgb-shadow-color), var(--alpha-level-5));
+  --shadow-color-level-6: rgba(var(--rgb-shadow-color), var(--alpha-level-6));
+  --shadow-color-level-7: rgba(var(--rgb-shadow-color), var(--alpha-level-7));
+  --shadow-color-level-8: rgba(var(--rgb-shadow-color), var(--alpha-level-8));
 
-	/*  ================================
+  /*  ================================
       19. Button area
     ================================ */
 
-	/* bids button */
-	--button-bids-background-color: var(--bids-level-7);
-	--button-bids-text-color: var(--primary-text-color-level-7);
-	--button-bids-background-color-hover: var(--bids);
-	--button-bids-text-color-hover: var(--primary-text-color);
-	--button-bids-background-color-active: var(--bids);
-	--button-bids-text-color-active: var(--primary-text-color);
-	--button-bids-background-color-disabled: var(--bids-level-3);
-	--button-bids-text-color-disabled: var(--primary-text-color-level-7);
+  /* bids button */
+  --button-bids-background-color: var(--bids-level-7);
+  --button-bids-text-color: var(--primary-text-color-level-7);
+  --button-bids-background-color-hover: var(--bids);
+  --button-bids-text-color-hover: var(--primary-text-color);
+  --button-bids-background-color-active: var(--bids);
+  --button-bids-text-color-active: var(--primary-text-color);
+  --button-bids-background-color-disabled: var(--bids-level-3);
+  --button-bids-text-color-disabled: var(--primary-text-color-level-7);
 
-	/* asks button */
-	--button-asks-background-color: var(--asks-level-7);
-	--button-asks-text-color: var(--primary-text-color-level-7);
-	--button-asks-background-color-hover: var(--asks);
-	--button-asks-text-color-hover: var(--primary-text-color);
-	--button-asks-background-color-active: var(--asks);
-	--button-asks-text-color-active: var(--primary-text-color);
-	--button-asks-background-color-disabled: var(--asks-level-3);
-	--button-asks-text-color-disabled: var(--primary-text-color-level-7);
+  /* asks button */
+  --button-asks-background-color: var(--asks-level-7);
+  --button-asks-text-color: var(--primary-text-color-level-7);
+  --button-asks-background-color-hover: var(--asks);
+  --button-asks-text-color-hover: var(--primary-text-color);
+  --button-asks-background-color-active: var(--asks);
+  --button-asks-text-color-active: var(--primary-text-color);
+  --button-asks-background-color-disabled: var(--asks-level-3);
+  --button-asks-text-color-disabled: var(--primary-text-color-level-7);
 
-	/* percentage button */
-	--button-percentage-background-color: var(--dropdown-background-color-level-3);
-	--button-percentage-text-color: var(--primary-text-color-level-5);
-	--button-percentage-background-color-hover: var(--dropdown-background-color);
-	--button-percentage-text-color-hover: var(--primary-text-color);
-	--button-percentage-background-color-active: var(--dropdown-background-color);
-	--button-percentage-text-color-active: var(--primary-text-color);
+  /* percentage button */
+  --button-percentage-background-color: var(--dropdown-background-color-level-3);
+  --button-percentage-text-color: var(--primary-text-color-level-5);
+  --button-percentage-background-color-hover: var(--dropdown-background-color);
+  --button-percentage-text-color-hover: var(--primary-text-color);
+  --button-percentage-background-color-active: var(--dropdown-background-color);
+  --button-percentage-text-color-active: var(--primary-text-color);
 
-	/* primary cta color (blue) button  */
-	--button-primary-cta-background-color: #00a693;
-	--button-primary-cta-text-color: var(--cta-layer-color-level-7);
-	--button-primary-cta-background-color-hover: #00d0b8;
-	--button-primary-cta-text-color-hover: var(--cta-layer-color);
-	--button-primary-cta-background-color-active: #00d0b8;
-	--button-primary-cta-text-color-active: var(--cta-layer-color);
-	--button-primary-cta-background-color-disabled: var(--primary-cta-color-level-3);
-	--button-primary-cta-text-color-disabled: var(--cta-layer-color-level-7);
+  /* primary cta color (blue) button  */
+  --button-primary-cta-background-color: var(--primary-cta-color-level-7);
+  --button-primary-cta-text-color: var(--cta-layer-color-level-7);
+  --button-primary-cta-background-color-hover: var(--primary-cta-color);
+  --button-primary-cta-text-color-hover: var(--cta-layer-color);
+  --button-primary-cta-background-color-active: var(--primary-cta-color);
+  --button-primary-cta-text-color-active: var(--cta-layer-color);
+  --button-primary-cta-background-color-disabled: var(--primary-cta-color-level-3);
+  --button-primary-cta-text-color-disabled: var(--cta-layer-color-level-7);
 
-	/*  ================================
+  /*  ================================
       20. Header area
     ================================ */
-	--header-market-selector-border-color: var(--secondary-contrast-cta-color-level-3);
-	--header-market-selector-text-color: var(--primary-text-color);
-	--header-toolbar-item-text-color: var(--secondary-contrast-cta-color);
-	--header-switcher-border-color-theme: var(--secondary-contrast-cta-color);
-	--header-switcher-background-color-theme-active: var(--dropdown-background-color);
-	--header-positive-text-color: var(--bids);
-	--header-negative-text-color: var(--asks);
-	--header-toggle-menu-icon: var(--primary-text-color);
+  --header-market-selector-border-color: var(--secondary-contrast-cta-color-level-3);
+  --header-market-selector-text-color: var(--primary-text-color);
+  --header-toolbar-item-text-color: var(--secondary-contrast-cta-color);
+  --header-switcher-border-color-theme: var(--secondary-contrast-cta-color);
+  --header-switcher-background-color-theme-active: var(--dropdown-background-color);
+  --header-positive-text-color: var(--bids);
+  --header-negative-text-color: var(--asks);
+  --header-toggle-menu-icon: var(--primary-text-color);
 
-	/*  ================================
+  /*  ================================
       21. Sidebar area
     ================================ */
-	--sidebar-background-color: var(--body-background-color);
-	--sidebar-text-color: var(--secondary-contrast-cta-color);
-	--sidebar-border-color: var(--divider-color-level-1);
-	--sidebar-item-background-color-hover: var(--dropdown-background-color-level-5);
-	--sidebar-item-text-color-hover: var(--primary-text-color);
-	--sidebar-item-background-color-active: var(--dropdown-background-color-level-5);
-	--sidebar-item-text-color-active: var(--primary-text-color);
+  --sidebar-background-color: var(--body-background-color);
+  --sidebar-text-color: var(--secondary-contrast-cta-color);
+  --sidebar-border-color: var(--divider-color-level-1);
+  --sidebar-item-background-color-hover: var(--dropdown-background-color-level-5);
+  --sidebar-item-text-color-hover: var(--primary-text-color);
+  --sidebar-item-background-color-active: var(--dropdown-background-color-level-5);
+  --sidebar-item-text-color-active: var(--primary-text-color);
 
-	/*  ================================
+  /*  ================================
       22. Dropdown area
     ================================== */
-	--dropdown-text-color: var(--primary-text-color-level-6);
-	--dropdown-background-color-hover: var(--secondary-contrast-cta-color-level-1);
-	--dropdown-text-color-hover: var(--primary-text-color);
-	--dropdown-background-color-active: var(--primary-cta-color);
-	--dropdown-text-color-active: var(--primary-text-color);
-	--dropdown-scrollbar-button-color: var(--primary-cta-color);
-	--dropdown-scrollbar-track-color: var(--secondary-contrast-cta-color-level-1);
+  --dropdown-text-color: var(--primary-text-color-level-6);
+  --dropdown-background-color-hover: var(--secondary-contrast-cta-color-level-1);
+  --dropdown-text-color-hover: var(--primary-text-color);
+  --dropdown-background-color-active: var(--primary-cta-color);
+  --dropdown-text-color-active: var(--primary-text-color);
+  --dropdown-scrollbar-button-color: var(--primary-cta-color);
+  --dropdown-scrollbar-track-color: var(--secondary-contrast-cta-color-level-1);
 
-	/*  ================================
+  /*  ================================
       23. Input area
     ================================ */
-	--input-text-color: var(--primary-text-color);
-	--input-text-color-active: var(--primary-cta-color);
-	--input-placeholder-color: var(--secondary-contrast-cta-color);
-	--input-legend-color: #00a693;
-	--input-legend-color-active: #00d0b8;
-	--input-border-color: #00a693;
-	--input-border-color-active: #00d0b8;
-	--input-checkbox-background-color-active: var(--primary-cta-color);
-	--input-checkbox-shadow-color-active: var(--primary-cta-color-level-1);
+  --input-text-color: var(--primary-text-color);
+  --input-text-color-active: var(--primary-cta-color);
+  --input-placeholder-color: var(--secondary-contrast-cta-color);
+  --input-legend-color: var(--secondary-contrast-cta-color);
+  --input-legend-color-active: var(--secondary-contrast-cta-color);
+  --input-border-color: var(--secondary-contrast-cta-color);
+  --input-border-color-active: var(--primary-cta-color);
+  --input-border-color-error: var(--asks);
+  --input-checkbox-background-color-active: var(--primary-cta-color);
+  --input-checkbox-shadow-color-active: var(--primary-cta-color-level-1);
 
-	/*  ================================
+  /*  ================================
       24. Password strength area
   ================================ */
-	--password-strength-meter-background: var(--body-background-color-level-1);
-	--password-strength-meter-too-weak: var(--system-red);
-	--password-strength-meter-weak: var(--system-yellow);
-	--password-strength-meter-good: var(--system-green);
-	--password-strength-meter-strong: var(--bids);
-	--password-strength-meter-very-strong: var(--strength-meter-very-strong);
+  --password-strength-meter-background: var(--body-background-color-level-1);
+  --password-strength-meter-too-weak: var(--system-red);
+  --password-strength-meter-weak: var(--system-yellow);
+  --password-strength-meter-good: var(--system-green);
+  --password-strength-meter-strong: var(--bids);
+  --password-strength-meter-very-strong: var(--strength-meter-very-strong);
 
-	/*  ================================
+  /*  ================================
       25. Footer area
     ================================== */
-	--footer-background-color: var(--body-background-color);
-	--footer-text-color: var(--secondary-contrast-cta-color);
-	--footer-highlight-text-color: var(--primary-text-color);
+  --footer-background-color: var(--body-background-color);
+  --footer-text-color: var(--secondary-contrast-cta-color);
+  --footer-highlight-text-color: var(--primary-text-color);
 
-	/*  ================================
+  /*  ================================
       26. Table area
     ================================ */
-	--table-background-color: var(--body-background-color);
-	--table-text-color: var(--secondary-contrast-cta-color);
-	--table-row-selector-color: var(--dropdown-background-color-level-3);
-	--table-header-text-color: var(--secondary-contrast-cta-color);
-	--table-border-color: var(--divider-color-level-2);
+  --table-background-color: var(--body-background-color);
+  --table-text-color: var(--secondary-contrast-cta-color);
+  --table-row-selector-color: var(--dropdown-background-color-level-3);
+  --table-header-text-color: var(--secondary-contrast-cta-color);
+  --table-border-color: var(--divider-color-level-2);
 
-	/*  ================================
+  /*  ================================
       27. Tab panel area
     ================================ */
-	--tab-panel-background-color: var(--subheader-background-color);
-	--tab-panel-text-color: var(--secondary-contrast-cta-color);
-	--tab-panel-text-color-hover: var(--primary-text-color);
-	--tab-panel-text-color-active: var(--primary-text-color);
-	--tab-panel-border-color-active: var(--primary-cta-color);
-	--tab-panel-border-line-color: var(--divider-color-level-2);
+  --tab-panel-background-color: var(--subheader-background-color);
+  --tab-panel-text-color: var(--secondary-contrast-cta-color);
+  --tab-panel-text-color-hover: var(--primary-text-color);
+  --tab-panel-text-color-active: var(--primary-text-color);
+  --tab-panel-border-color-active: var(--primary-cta-color);
+  --tab-panel-border-line-color: var(--divider-color-level-2);
 
-	/*  ================================
+  /*  ================================
       28. Wallets area
     ================================ */
-	--wallets-locked-amount: var(--primary-text-color);
-	--wallets-locked-amount-active: var(--primary-text-color);
-	--wallets-item-font: var(--primary-text-color);
-	--wallets-item-font-active: var(--primary-text-color);
-	--wallets-item-background-color: var(--body-background-color);
-	--wallets-item-background-color-active: var(--dropdown-background-color-level-7);
-	--wallets-item-background-color-hover: var(--dropdown-background-color-level-7);
-	--wallets-item-border-color: var(--divider-color-level-2);
-	--wallets-balance-color: var(--primary-text-color);
+  --wallets-locked-amount: var(--primary-text-color);
+  --wallets-locked-amount-active: var(--primary-text-color);
+  --wallets-item-font: var(--primary-text-color);
+  --wallets-item-font-active: var(--primary-text-color);
+  --wallets-item-background-color: var(--body-background-color);
+  --wallets-item-background-color-active: var(--dropdown-background-color-level-7);
+  --wallets-item-background-color-hover: var(--dropdown-background-color-level-7);
+  --wallets-item-border-color: var(--divider-color-level-2);
+  --wallets-balance-color: var(--primary-text-color);
 
-	/*  ================================
+  /*  ================================
       29. Beneficiaries area
     ================================ */
-	--beneficiaries-primary-0-8: var(--primary-text-color-level-8);
-	--beneficiaries-primary-0-1: var(--primary-text-color-level-1);
-	--beneficiaries-primary-0-06: rgba(var(--rgb-primary-text-color), calc(var(--alpha) / 2));
-	--beneficiaries-primary-0-04: rgba(var(--rgb-primary-text-color), calc(var(--alpha) / 3));
+  --beneficiaries-primary-0-8: var(--primary-text-color-level-8);
+  --beneficiaries-primary-0-1: var(--primary-text-color-level-1);
+  --beneficiaries-primary-0-06: rgba(var(--rgb-primary-text-color), calc(var(--alpha) / 2));
+  --beneficiaries-primary-0-04: rgba(var(--rgb-primary-text-color), calc(var(--alpha) / 3));
 
-	/*  ================================
+  /*  ================================
       30. Landing page area
     ================================ */
-	--light-item-border: rgba(var(--rgb-shadow-color), calc(var(--alpha) / 2));
+  --light-item-border: rgba(var(--rgb-shadow-color), calc(var(--alpha) / 2));
 
-	/*  ================================
+  /*  ================================
       31. Market selector area
     ================================ */
-	--market-selector-background-color: var(--body-background-color);
-	--market-selector-header-background-color: var(--subheader-background-color);
-	--market-selector-header-text-color: var(--secondary-contrast-cta-color);
-	--market-selector-header-text-color-hover: var(--primary-text-color);
-	--market-selector-header-text-color-active: var(--primary-text-color);
-	--market-selector-header-text-border-active: var(--primary-cta-color);
-	--market-selector-table-header-text-color: var(--secondary-contrast-cta-color);
-	--market-selector-table-header-text-color-hover: var(--primary-text-color);
-	--market-selector-table-text-color: var(--secondary-contrast-cta-color);
-	--market-selector-table-text-color-hover: var(--primary-text-color);
-	--market-selector-table-text-color-active: var(--primary-text-color);
-	--market-selector-table-background-color: var(--body-background-color);
-	--market-selector-table-row-selector: var(--secondary-contrast-cta-color-level-1);
-	--market-selector-table-row-selector-hover: var(--secondary-contrast-cta-color-level-1);
-	--market-selector-input: var(--primary-text-color);
-	--market-selector-background-color-input: var(--body-background-color);
-	--market-selector-input-border: none;
+  --market-selector-background-color: var(--body-background-color);
+  --market-selector-header-background-color: var(--subheader-background-color);
+  --market-selector-header-text-color: var(--secondary-contrast-cta-color);
+  --market-selector-header-text-color-hover: var(--primary-text-color);
+  --market-selector-header-text-color-active: var(--primary-text-color);
+  --market-selector-header-text-border-active: var(--primary-cta-color);
+  --market-selector-table-header-text-color: var(--secondary-contrast-cta-color);
+  --market-selector-table-header-text-color-hover: var(--primary-text-color);
+  --market-selector-table-text-color: var(--secondary-contrast-cta-color);
+  --market-selector-table-text-color-hover: var(--primary-text-color);
+  --market-selector-table-text-color-active: var(--primary-text-color);
+  --market-selector-table-background-color: var(--body-background-color);
+  --market-selector-table-row-selector: var(--secondary-contrast-cta-color-level-1);
+  --market-selector-table-row-selector-hover: var(--secondary-contrast-cta-color-level-1);
+  --market-selector-input: var(--primary-text-color);
+  --market-selector-background-color-input: var(--body-background-color);
+  --market-selector-input-border: none;
 
-	/*  ================================
+  /*  ================================
       32. Order book area
     ================================== */
-	--order-book-table-text-color: var(--primary-text-color);
-	--order-book-last-market-price-subtitle: var(--cta-contrast-level-4);
-	--order-book-last-market-price-border-color: var(--divider-color-level-2);
+  --order-book-table-text-color: var(--primary-text-color);
+  --order-book-last-market-price-subtitle: var(--cta-contrast-level-4);
+  --order-book-last-market-price-border-color: var(--divider-color-level-2);
 }.btn-primary {
 	background: #00a693;
 	border: none;
@@ -618,6 +625,20 @@
 	border: none;
 	box-shadow: none;
 	color: var(--button-asks-text-color-active);
+}.pg-sign-in-screen-basic__container .pg-2fa___form2 {
+
+	width: 110%;
+	background: #dde1e7 !important;
+	border-radius: 10px !important;
+	box-shadow: inset 2px 2px 5px #babecc,
+				inset -5px -5px 10px #ffffff73;
+
+
+}.cr-email-form__cross-icon {
+margin-top: -100px !important;
+
+color: #dde1e7 !important;
+
 }.pg-layout {
 	background: var(--main-background-color);
 	color: var(--secondary-contrast-cta-color);
@@ -637,124 +658,25 @@
 		width: 100vw;
 	}.trading-layout {
 	background: black;
-}.pg-sign-up-screen {
-
-	display: flex;
-	height: calc(120vh - 95px);
-	justify-content: center;
-}.pg-sign-up-screen .pg-sign-up-screen__container {
-		background: transparent;
-		margin-top: calc(var(--gap) * 3.33);
-		width: calc(var(--gap) * 70.66);
-	}.pg-sign-up-screen .cr-sign-up-form {
-		margin: 0 auto;
-		min-height: calc(var(--big-gap) * 10);
-	}.pg-sign-up-screen .cr-sign-up-form__options-group {
-			border-bottom: 2px solid var(--divider-color-level-2);
-			height: calc(var(--big-gap) * 0.97);
-			width: 100%;
-		}.pg-sign-up-screen .cr-sign-up-form__form-content {
-			top: calc(var(--gap) * 14.8);
-		}.pg-sign-up-screen .cr-sign-up-form__group {
-			margin-bottom: calc(var(--gap) * 3.1);
-		}.pg-sign-up-screen .cr-sign-up-form__option {
-			background: var(--subheader-background-color);
-		}.pg-sign-up-screen .cr-sign-up-form__option .__selected {
-				border-bottom: 2px solid var(--primary-cta-color);
-				color: var(--primary-text-color);
-			}.pg-sign-up-screen .cr-sign-up-form__group--focused .cr-sign-up-form__label {
-				color: var(--input-legend-color-active);
-			}.pg-sign-up-screen .cr-sign-up-form__group--focused input {
-				border-color: var(--input-border-color-active) !important;
-			}.pg-sign-up-screen .cr-sign-up-form__title {
-			background: transparent;
-			font-size: calc(var(--gap) * 3);
-			margin: calc(var(--gap) * 6.66) !important;
-		}.pg-sign-up-screen .cr-sign-up-form__label {
-			background: var(--input-background-color);
-			color: var(--inout-legend-color);
-			font-size: calc(var(--gap) * 2);
-			position: absolute;
-			top: calc(var(--gap) * (-1.33));
-		}.pg-sign-up-screen .cr-sign-up-form .cr-checkbox {
-			padding-left: calc(2.6 * var(--checkbox-general-intent));
-		}.pg-sign-up-screen .cr-sign-up-form .cr-checkbox__checkitem {
-				border-color: var(--secondary-contrast-cta-color);
-			}.pg-sign-up-screen .cr-sign-up-form .cr-checkbox__checkitem::after {
-					border-color: var(--primary-text-color);
-				}.pg-sign-up-screen .cr-sign-up-form .cr-checkbox__label {
-				font-size: calc(var(--gap) * 2.33);
-			}.pg-sign-up-screen .cr-sign-up-form__error {
-			color: var(--system-red);
-		}.pg-sign-up-screen .cr-sign-up-form__recaptcha {
-			position: relative;
-			z-index: 1;
-		}.pg-sign-up-screen .cr-sign-in-form__error-message {
-			color: var(--system-red);
-		}.cr-modal .cr-modal__container {
-		background: var(--body-background-color);
-		border-radius: calc(var(--gap) * 0.66);
-		min-width: 30% !important;
-		outline: none;
-		width: calc(var(--big-gap) * 10);
-	}.cr-modal .cr-modal__container .cr-modal__container-header {
-			border-bottom: 2px solid var(--divider-color-level-2);
-			border-top-left-radius: calc(var(--gap) * 0.66);
-			border-top-right-radius: calc(var(--gap) * 0.66);
-			outline: none;
-			text-align: center;
-		}.cr-modal .cr-modal__container .cr-modal__container-header .pg-exchange-modal-submit-header {
-				margin-top: calc(var(--gap) * 1.16);
-			}.cr-modal .cr-modal__container .cr-modal__container-content {
-			color: var(--secondary-contrast-color);
-			margin-bottom: 0;
-			padding: 0 calc(var(--gap) * 8.33);
-		}.cr-modal .cr-modal__container .cr-modal__container-footer {
-			outline: none !important;
-		}@media screen and (max-width: 768px) {
-		.pg-sign-up-screen .pg-sign-up-screen__container {
-			margin: calc(var(--gap) * 3.33) calc(var(--gap) * 1.66) 0;
-			width: 100%;
-		}
-
-		.pg-sign-up-screen .cr-sign-up-form {
-			margin: 0 auto;
-			min-height: calc(var(--big-gap) * 10.8);
-		}
-
-			.pg-sign-up-screen .cr-sign-up-form__button {
-				font-size: calc(var(--gap) * 2);
-				margin-top: calc(var(--gap) * 4);
-			}
-
-			.pg-sign-up-screen .cr-sign-up-form__title {
-				background: transparent;
-				margin-top: calc(var(--gap) * 2);
-			}
-
-			.pg-sign-up-screen .cr-sign-up-form__form-content {
-				top: calc(var(--gap) * 10.8);
-			}
-		.cr-modal .cr-modal__container {
-			font-size: calc(var(--gap) * 1.5);
-			width: 100%;
-		}
-
-			.cr-modal .cr-modal__container .cr-modal__container-header {
-				font-size: calc(var(--gap) * 1.5);
-			}
-
-			.cr-modal .cr-modal__container .cr-modal__container-content {
-				padding: 0 calc(var(--gap) * 3.33);
-			}
 }.pg-sign-in-screen-basic {
 	background: transparent!important;
 	display: flex;
 	height: calc(100vh - 95px);
 	justify-content: center;
-}.pg-sign-in-screen-basic .pg-sign-in-screen__container {
-		background: transparent !important;
-		margin-top: 0px !important;
+
+	margin-top: 80px !important;
+
+
+
+
+
+
+
+	
+}.pg-sign-in-screen-basic .pg-sign-in-screen-basic__container {
+		border: none !important;
+		background: none !important;
+		margin-top: 10px !important;
 		width: calc(var(--gap) * 70.66);
 	}.pg-sign-in-screen-basic .cr-sign-in-form {
 		color: white!important;
@@ -823,64 +745,81 @@
 				margin-top: calc(var(--gap) * 2);
 			}
 }.pg-sign-up-screen {
-	
-	display: flex;
-	height: 800px;
-	justify-content: center;
-	margin-top: -80px !important;
+	background: transparent!important;
+	margin: 0 auto;
+	height: calc(100vh - 95px);
+
+	justify-content: center !important;
+	margin-top: 80px !important;
+	width: 620px!important;	width: calc(var(--gap) * 70.66);
+
+	display: grid !important;
+	background: #dde1e7 !important;
+	border-radius: 10px;
+	padding: 40px 30px !important;
+	box-shadow: -3px -3px 7px #ffffff73,
+				2px 2px 5px rgba(94, 104, 121, 0.288) !important;
 }.pg-sign-up-screen .pg-sign-up-screen__container {
 		background: transparent !important;
 		margin-top: 0px !important;
 		width: calc(var(--gap) * 70.66);
 
-	}.pg-sign-up-screen .cr-sign-up-form {
+	}.pg-sign-up-screen .cr-sign-up-form2 {
 		color: white!important;
 		background: transparent!important;
 		margin: 0 auto;
 		min-height: calc(var(--big-gap) * 11);
-		margin-top: 0px !important;
-	}.pg-sign-up-screen .cr-sign-up-form__options-group {
-			border-bottom: 0 !important;
+		margin-top: 0px ;
+	}.pg-sign-up-screen .cr-sign-up-form2__options-group {
+			border-bottom: 0 ;
 			height: calc(var(--big-gap) * 0.97);
 			width: 100%;
 			background: transparent!important;
-		}.pg-sign-up-screen .cr-sign-up-form__form-content {
+		}.pg-sign-up-screen .cr-sign-up-form2__form-content {
 			top: calc(var(--gap) * 1);
-		}.pg-sign-up-screen .cr-sign-up-form__group {
+		}.pg-sign-up-screen .cr-sign-up-form2__group {
 			margin-bottom: calc(var(--gap) * 3.1);
-		}.pg-sign-up-screen .cr-sign-up-form__option {
+		}.pg-sign-up-screen .cr-sign-up-form2__option {
 			background: transparent !important;
-		}.pg-sign-up-screen .cr-sign-up-form__option .__selected {
+		}.pg-sign-up-screen .cr-sign-up-form2__option .__selected {
 				border-bottom: 2px solid var(--primary-cta-color);
 				color: var(--primary-text-color);
 				background: transparent!important;
-			}.pg-sign-up-screen .cr-sign-up-form__group--focused .cr-sign-up-form__label {
+			}.pg-sign-up-screen .cr-sign-up-form2__group--focused .cr-sign-up-form__label {
 				color: var(--input-legend-color-active);
-			}.pg-sign-up-screen .cr-sign-up-form__group--focused input {
+			}.pg-sign-up-screen .cr-sign-up-form2__group--focused input {
 				border-color: var(--input-border-color-active) !important;
-			}.pg-sign-up-screen .cr-sign-up-form__title {
+			}.pg-sign-up-screen .cr-sign-up-form2__title {
 			background: transparent;
-			font-size: calc(var(--gap) * 4);
-			
-		}.pg-sign-up-screen .cr-sign-up-form__label {
+			font-size: 16px !important;
+			width: 120px !important;
+
+
+
+
+
+
+		}.pg-sign-up-screen .cr-sign-up-form2__label {
 			background: var(--form-background-color) !important;
 			color: var(--input-legend-color);
 			font-size: calc(var(--gap) * 0,6);
 			position: absolute;
 			padding-left: 5px !important;
 			top: calc(var(--gap) * (-1.33));
-		}.pg-sign-up-screen .cr-sign-up-form .cr-checkbox {
+		}.pg-sign-up-screen .cr-sign-up-form2 .cr-checkbox {
+			background: #595959 !important;
 			padding-left: calc(2.6 * var(--checkbox-general-intent));
-		}.pg-sign-up-screen .cr-sign-up-form .cr-checkbox__checkitem {
+		}.pg-sign-up-screen .cr-sign-up-form2 .cr-checkbox__checkitem {
 				border-color: var(--secondary-contrast-cta-color);
-			}.pg-sign-up-screen .cr-sign-up-form .cr-checkbox__checkitem::after {
+			}.pg-sign-up-screen .cr-sign-up-form2 .cr-checkbox__checkitem::after {
 					border-color: var(--primary-text-color);
-				}.pg-sign-up-screen .cr-sign-up-form .cr-checkbox__label {
-				font-size: calc(var(--gap) * 2.33);
-			}.pg-sign-up-screen .cr-sign-up-form__error {
+				}.pg-sign-up-screen .cr-sign-up-form2 .cr-checkbox__label {
+				font-size: 13px !important;
+			}.pg-sign-up-screen .cr-sign-up-form2__error {
 			color: var(--system-red);
-		}.pg-sign-up-screen .cr-sign-up-form__recaptcha {
+		}.pg-sign-up-screen .cr-sign-up-form2__recaptcha {
 			position: relative;
+			margin-top: 20px !important;
 			z-index: 1;
 		}.pg-sign-up-screen .cr-sign-in-form__error-message {
 			color: var(--system-red);
@@ -1587,7 +1526,7 @@
       }.pg-profile-page__right-col__referral-program {
       min-height: 20%;
     }.pg-profile-page__right-col__referral-program .cr-copyable-text-field {
-        background: var(--input-background-color);
+        background: transparent !important;
         border: none;
         width: 70%;
       }.pg-profile-page__right-col__referral-program .cr-copyable-text-field__button {
@@ -2793,11 +2732,7 @@
   }.pg-wallet .cr-crypto-icon img {
       margin-right: calc(var(--gap) * 2) ;
       width: 64px ;
-    }.pg-wallet .input-group {
-    background-color: pink !important;
-  }.pg-wallet .input-group-lg {
-    background-color: pink !important;
-  }.pg-wallet .cr-wallet-list {
+    }.pg-wallet .cr-wallet-list {
     background-color: transparent !important;
     border-radius: 15px !important;
     border: 1px solid var(--wallets-item-border-color);
@@ -2981,7 +2916,7 @@
       position: relative;
       width: 100%;
     }.pg-wallet .cr-withdraw__group__address .cr-withdraw__label, .pg-wallet .cr-withdraw__group__amount .cr-withdraw__label, .pg-wallet .cr-withdraw__group__code .cr-withdraw__label {
-        background: pink !important;
+
         border-radius: calc(var(--gap) * 0.33);
         left: calc(var(--gap) * 1.66);
         padding: calc(var(--gap) * 0.33) var(--gap);
@@ -2993,36 +2928,28 @@
         
        
       }.pg-wallet .cr-withdraw__group__amount .input-group, .pg-wallet .cr-withdraw__group__code .input-group {
-        background: pink !important;
+   
              
       }.pg-wallet .cr-withdraw__group__amount,
     .pg-wallet .cr-withdraw__group__code{
       width: 50%;
-}.pg-wallet .cr-withdraw__group__amount .custom-input, .pg-wallet .cr-withdraw__group__code .custom-input {
-        background-color: pink !important;
-      }.pg-wallet .cr-withdraw__group__amount .custom-input label, .pg-wallet .cr-withdraw__group__code .custom-input label {
+}.pg-wallet .cr-withdraw__group__amount .custom-input label, .pg-wallet .cr-withdraw__group__code .custom-input label {
           margin-top: 0;
           
         }.pg-wallet .cr-withdraw__group__amount .custom-input:focus-within label, .pg-wallet .cr-withdraw__group__code .custom-input:focus-within label {
             color: var(--input-legend-color-active) !important;
         
-          }.pg-wallet .cr-withdraw__group__amount {
-      background: pink !important;
-    }.pg-wallet .cr-withdraw__group__amount .custom-input {
-        background: pink !important;
-      }.pg-wallet .cr-withdraw__group__amount .custom-input label {
-          
-          margin-top: 2px;
-          
-        }.pg-wallet .cr-withdraw__group__amount .custom-input .input-group {
-      background: pink !important;
-           
-    }.pg-wallet .cr-withdraw__group__code {
+          }.pg-wallet .cr-withdraw__group__amount .custom-input {
+    
+
+        
+
+
+
+
+      }.pg-wallet .cr-withdraw__group__code {
       width: 45%;
-      background: pink !important;
-    }.pg-wallet .cr-withdraw__group__code .cr-withdraw__input {
-        background: pink !important;
-      }.pg-wallet .cr-withdraw__group__code .cr-withdraw__input input[type=number]::-webkit-inner-spin-button,
+    }.pg-wallet .cr-withdraw__group__code .cr-withdraw__input input[type=number]::-webkit-inner-spin-button,
         .pg-wallet .cr-withdraw__group__code .cr-withdraw__input input[type=number]::-webkit-outer-spin-button {
           -webkit-appearance: none;
           margin: 0;
@@ -3044,11 +2971,11 @@
       width: calc(var(--gap) * 18.5);
       
     }.pg-wallet .cr-withdraw .custom-input {
-      background: pink !important;
+
       
      
     }.pg-wallet .cr-withdraw .input-group {
-      background: pink !important;
+ 
            
     }.pg-wallet .cr-tab {
     background-color: transparent  !important;
@@ -3068,23 +2995,39 @@
       font-size: 15px !important;
       font-weight: bold !important;
    
-    }.pg-wallet .cr-copyable-text-field__disabled .cr-deposit-crypto__copyable fieldset:focus-within {
+    }.pg-wallet .cr-copyable-text-field .cr-deposit-crypto {
+      display: flex !important;
+      flex-direction: column !important;
+    
+    }.pg-wallet .cr-copyable-text-field .cr-deposit-crypto__copyable {
+        display: flex !important;
+        flex-direction: column !important;
+      }.pg-wallet .cr-copyable-text-field .cr-deposit-crypto__copyable fieldset:focus-within {
             border-color: #18988F !important;
-          }.pg-wallet .cr-copyable-text-field__disabled .cr-deposit-crypto__copyable fieldset:focus-within legend {
+          }.pg-wallet .cr-copyable-text-field .cr-deposit-crypto__copyable fieldset:focus-within legend {
               color: var(--input-legend-color-active);
-              background-color: transparent  !important;
-            }.pg-wallet .cr-copyable-text-field__disabled .cr-deposit-crypto__copyable .cr-deposit-crypto__copyable-area {
-          border: 1px solid var(--input-border-color);
-        }.pg-wallet .cr-copyable-text-field__disabled .cr-deposit-crypto__copyable .cr-deposit-crypto__copyable-area .custom-input .input-group {
+              background-color: green  !important;
+            }.pg-wallet .cr-copyable-text-field .cr-deposit-crypto__copyable .cr-deposit-crypto__copyable-area {
+      
+          display: flex !important;
+          flex-direction: flex-start !important;
+        }.pg-wallet .cr-copyable-text-field .cr-deposit-crypto__copyable .cr-deposit-crypto__copyable-area .custom-input .input-group {
               border: none !important;
-              background: pink !important;
-            }.pg-wallet .cr-copyable-text-field__disabled .cr-deposit-crypto__copyable .cr-deposit-crypto__copyable-area .custom-input label {
+              background: blue !important;
+            }.pg-wallet .cr-copyable-text-field .cr-deposit-crypto__copyable .cr-deposit-crypto__copyable-area .custom-input label {
               margin-top: -15px;
-              background-color: transparent  !important;
-            }.pg-wallet .cr-copyable-text-field__disabled .cr-deposit-crypto__copyable .cr-deposit-info {
+              background-color: green  !important;
+            }.pg-wallet .cr-copyable-text-field .cr-deposit-crypto__copyable .cr-deposit-crypto__copyable-area .input-group .custom-input {
+              border: none !important;
+              background: blue !important;
+            }.pg-wallet .cr-copyable-text-field .cr-deposit-crypto__copyable .cr-deposit-crypto__copyable-area .input-group label {
+              margin-top: -15px;
+              background-color: green  !important;
+            }.pg-wallet .cr-copyable-text-field .cr-deposit-crypto__copyable .cr-deposit-info {
 
         width: 100% !important;
         align: center !important;
+        margin-bottom: 150px;
     
       }.pg-wallet .cr-tab-panel__navigation-container {
     background-color: transparent  !important;
@@ -3222,7 +3165,7 @@
         padding: var(--gap) 0;
         text-align: left;
         width: 100%;
-        background: pink !important;
+        
       }.pg-wallet__enable-2fa-message {
     font-size: calc(var(--gap) * 3);
     text-align: center;
@@ -3369,19 +3312,41 @@
     .cr-wallet-item__single .cr-wallet-item__balance-amount {
       font-size: 14px ;
     }
-}.form-control {
-
-  background-color: pink !important;
-}.form-control-lg {
-
-  background-color: pink !important;
-}.input-group {
-  background-color: pink !important;
-
-}.cr-withdraw__group__amount {
-
+}.cr-deposit-crypto__copyable-area {
+  border: none !important;
   display: flex !important;
-  background: pink !important;
+  flex-direction: flex-start !important;
+
+
+
+
+  }.cr-deposit-crypto__copyable {
+  display: flex !important;
+  flex-direction: column !important;
+  border: none !important;
+  align-items: flex-start !important;
+
+
+
+}.cr-deposit-crypto__copyable .input-group {
+    border: none !important;
+    /*background: yellow !important;*/
+    width: 105% !important;
+    align=items: center !important;
+    margin-top: -22px;
+ 
+  }.cr-deposit-crypto__copyable .input-group label {
+      margin-top: -42px;
+      margin-left: -10px;
+      font-weight: normal !important;
+      background-color: none  !important;
+    }.pg-metamask {
+
+  align: center;
+  margin-top: 100px !important;
+  margin-left: 160px !important;
+  width: 30px !important;
+
 }.pg-customization {
 	background: var(--customization-background-color);
 	box-shadow: var(--customization-shadow);
@@ -3509,11 +3474,9 @@
 				}.headerDesktop-screen {
 	background: black !important;;
 	color: white;
-	padding: 1rem 0.5rem;
-	height: 80px;
 }.headerDesktop-screen .container-header {
-		margin: 0 20px;
-		padding-top: 20px;
+	
+	
 		
 	}.headerDesktop-screen img {
 		display: block;
@@ -3745,7 +3708,55 @@
 					}@media screen and (max-width: 1200px) {.headerDesktop-screen .header__right-menu__item__title {
 						margin-right: 10px
 				}
-					}.headerDesktop-screen2 {
+					}html, body {
+	background: rgb(20,20,20);
+	text-align: center;
+	height: 100%;
+
+
+	
+  }.svg-wrapper {
+
+	-webkit-transform: translateY(-50%);
+
+	        transform: translateY(-50%);
+		margin: 0 auto;
+	width: 340px;  
+	margin-top: 20px;
+  }.shape {
+	stroke-dasharray: 140 540;
+	stroke-dashoffset: -474;
+	stroke-width: 2px;
+	fill: transparent;
+	stroke: #19f6e8;
+	border-bottom: 5px solid black !important;
+	transition: stroke-width 0.6s, stroke-dashoffset 0.6s, stroke-dasharray 0.6s;
+	border-bottom: 5px solid black;
+	
+
+
+	
+  }.text-animated {
+	font-family: 'Inter';
+	font-size: 15px !important;
+	line-height: 26px;
+	letter-spacing: 1px;
+	color: #fff;
+	margin: 0 auto !important;
+	padding-right: 50px;
+	height: 18px;
+	padding-top: 30px;
+	
+
+
+
+
+	
+  }.svg-wrapper:hover .shape {
+	stroke-width: 2px;
+	stroke-dashoffset: 0;
+	stroke-dasharray: 760;
+  }.headerDesktop-screen2 {
 	background: pink;
 	color: white;
 	padding: 1rem 0.5rem;
@@ -3985,9 +3996,10 @@
 						margin-right: 10px
 				}
 					}.subheaderDesktop-screen {
-	background: #363944;
+	background: #131313;
 	color: white;
 	height: 50px;
+	border-bottom: 2px solid #009991;
 
 	padding: 1rem 0.5rem;
 }.subheaderDesktop-screen .container-subheader {
@@ -6204,16 +6216,16 @@
 					width: 100%;
 				}.td-pg-profile__active-step__content__item__step {
 				align-items: center;
-				background-color: #c4c4c4;
+				background-color: #13b887  !important;
 				border-radius: 50%;
 				display: flex;
 				height: 21px;
 				justify-content: center;
 				position: relative;
 				width: 21px;
-				z-index: 2;
+				z-index: 999 !important;
 			}.td-pg-profile__active-step__content__item__step--active {
-				background-color: #f9a912;
+				background-color: #FDA736;
 				font-size: 14px;
 			}.td-pg-profile__active-step__content__item__title {
 				margin-top: 20px;
@@ -7760,27 +7772,33 @@
 			color: var(--base-2);
 			margin-right: calc(var(--gap) * 2);
 		}.cr-email-form {
-	background: transparent !important;
-	border-radius: 20px !important;
 
+
+	border-radius: 10px !important;
 	max-width: 424px;
 	min-height: 350px;
 	position: relative;
-}.cr-email-form__options-group {
-		border-bottom: 2px solid var(--divider-color-level-2);
-		height: 58px;
-		width: 100%;
-	}.cr-email-form__option {
-		background: transparent;
+	martin-bottom: 20px;
+	background: transparent !important;
+	margin-top: 10px !important;
+}.cr-email-form__option {
+		border: none !important;
 		display: inline-block;
 		height: 58px;
 		width: 100%;
-	}.cr-email-form__option-inner {
-		background: #131538 !important;
-		color: var(--primary-text-color);
+		background: transparent !important;
+
+	}.cr-email-form .close-icon {
+		margin-top: -72px !important;
+		margin-left: 92% !important;
+		
+		}.cr-email-form__option-inner {
+		border: none !important;
+		background: transparent !important;
+		color: #595959;
 		font-size: 14px;
 		font-style: normal;
-		font-weight: 500;
+		font-weight: 800;
 		height: 58px;
 		letter-spacing: 0.0357143em;
 		line-height: 58px;
@@ -7788,13 +7806,17 @@
 		text-align: center;
 		text-transform: uppercase;
 		width: 100%;
+		margin-top: 30px !important;
+
 	}.cr-email-form__form-content {
-		bottom: 23px;
+		border: none !important;
+		
+		height: 80px !important;
 		box-sizing: border-box;
 		left: 23px;
 		position: absolute;
 		right: 23px;
-		top: 150px !important;
+		top: 100px !important;
 	}.cr-email-form > * {
 		background: transparent;
 	}.cr-email-form__error-message {
@@ -7808,14 +7830,14 @@
 		min-height: calc(var(--gap) * 6);
 	}.cr-email-form__group {
 		background: transparent;
-		margin-bottom: 20px;
+		
 		position: relative;
 	}.cr-email-form__error {
 		background: transparent;
 		color: var(--system-red);
 		margin-top: 5px;
 	}.cr-email-form__label {
-		background: var(--input-background-color);
+		background: transparent !important;
 		border-radius: 2px;
 		color: var(--input-legend-color);
 		left: 10px;
@@ -7826,8 +7848,8 @@
 			color: var(--input-legend-color-active);
 		}.cr-email-form__group--focused input {
 			border: 1px solid var(--input-border-color-active) !important;
-			height: 60px !important;
-			font-size: 40px !important;
+			height: 30px !important;
+			font-size: 15px !important;
 		}.cr-email-form__image {
 		display: block;
 		height: 100px;
@@ -7842,7 +7864,7 @@
 		min-height: calc(var(--gap) * 6);
 	}.cr-email-form__button-wrapper {
 		background: transparent;
-		bottom: 0 !important;
+		margin: 0 auto !important;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -7850,20 +7872,23 @@
 		min-height: calc(var(--gap) * 28);
 		position: absolute;
 		right: 0;
+		width: 75% !important;
 	}.cr-email-form__button-wrapper--empty {
 		justify-content: flex-end;
 	}.cr-email-form__input {
-		margin-top: 8px;
-		width: 100%;
+		margin-top: 18px;
+		margin-left:  50px !important;
+		width: 30px !important;
 	}.cr-email-form__input input {
-			border: 1px solid var(--input-border-color);
-			border-radius: 4px;
-			box-sizing: border-box;
-			color: var(--input-text-color);
+			border: none !important;
+		
+			text-justify: center !important;
+			color: #595959 !important;
 			font-size: 12px;
 			height: 50px;
-			padding: 0 10px;
-			width: 100%;
+			margin-left:  50px !important;
+			
+			max-width: 30px !important;
 		}.cr-history-action {
 		background: transparent;
 	}.cr-history-action--buy {
@@ -8242,7 +8267,7 @@
 			}.modal.td-cpn__modal .modal-content .modal-header .close span:first-child {
 					font-size: 25px;
 				}.modal.td-cpn__modal .modal-content .modal-body {
-			background: #131538;
+			background: #fff;
 			padding-bottom: 35px;
 			padding-left: 23px;
 			padding-right: 23px;
@@ -8369,237 +8394,10 @@
 			}.cr-sign-in-form {
 
 
-	height: 500px;
-	max-width: 424px;
-	position: relative;
-}.cr-sign-in-form__options-group {
-		border-bottom: 2px solid var(--divider-color-level-2);
-		height: 58px;
-		width: 100%;
-	}.cr-sign-in-form__option {
-		background: transparent !important;
-		display: inline-block;
-		height: 58px;
-		width: 50%;
-	}.cr-sign-in-form__option .__selected {
-			border-bottom: 2px solid var(--primary-cta-color);
-			color: var(--primary-text-color);
-		}.cr-sign-in-form__option-inner {
-		background: transparent !important;
-		cursor: pointer;
-		font-size: 14px;
-		font-style: normal;
-		font-weight: 500;
-		height: 58px;
-		letter-spacing: 0.0357143em;
-		line-height: 58px;
-		margin: 0 auto;
-		text-align: center;
-		text-transform: uppercase;
-		width: 75%;
-	}.cr-sign-in-form__form-content {
-		bottom: 23px;
-		box-sizing: border-box;
-		background: transparent !important;
-		left: 23px;
-		position: absolute;
-		right: 23px;
-		top: 110px !important;
-	}.cr-sign-in-form > * {
-		background: transparent !important;
-	}.cr-sign-in-form__error-message {
-		align-items: center;
-		background: transparent;
-		color: var(--system-red);
-		display: flex;
-		flex: 1;
-		font-size: calc(var(--gap) * 2.5);
-		justify-content: center;
-		min-height: calc(var(--gap) * 6);
-	}.cr-sign-in-form__group {
-		background: transparent !important;
-		margin: 20px 0;
-		position: relative;
-	}.cr-sign-in-form__error {
-		background: transparent;
-		color: var(--system-red);
-		margin-top: 5px;
-	}.cr-sign-in-form__group--focused .cr-sign-in-form__label {
-			color: var(--input-legend-color-active);
-		}.cr-sign-in-form__image {
-		display: block;
-		height: 100px;
-		margin: 0 auto 20px auto;
-		width: 50%;
-	}.cr-sign-in-form__title {
-		font-size: 18px;
-		margin: calc(var(--gap) * 3) 0 calc(var(--gap) * 8) 0;
-		text-align: center;
-	}.cr-sign-in-form__button-wrapper {
-		background: transparent;
-		bottom: 55px;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		left: 0;
-		min-height: calc(var(--gap) * 28);
-		position: absolute;
-		right: 0;
-	}.cr-sign-in-form__button-wrapper--empty {
-		justify-content: flex-end;
-	}.cr-sign-in-form__bottom-section {
-		background: transparent;
-		bottom: -10px;
-		position: absolute;
-		width: 100%;
-	}.cr-sign-in-form__bottom-section .cr-sign-in-form__bottom-section-password {
-			background: transparent !important;
-			color: var(--secondary-contrast-cta-color);
-			cursor: pointer;
-			font-size: 14px;
-			font-style: normal;
-			font-weight: normal;
-			line-height: 30px;
-			text-align: center;
-			transition: 0.2s;
-		}.cr-sign-in-form__bottom-section .cr-sign-in-form__bottom-section-password:hover {
-				color: var(--primary-text-color);
-			}.cr-sign-up-form {
-
-	max-width: 424px;
-	min-height: 620px;
-	position: relative;
-}.cr-sign-up-form__options-group {
-		border-bottom: 2px solid var(--divider-color-level-2);
-		height: 58px;
-		width: 100%;
-	}.cr-sign-up-form__option {
-		background: var(--subheader-background-color);
-		display: inline-block;
-		height: 58px;
-		width: 50%;
-	}.cr-sign-up-form__option .__selected {
-			border-bottom: 2px solid var(--primary-cta-color);
-			color: var(--primary-text-color);
-		}.cr-sign-up-form__option-inner {
-		background: transparent;
-		cursor: pointer;
-		font-size: 14px;
-		font-style: normal;
-		font-weight: 500;
-		height: 58px;
-		letter-spacing: 0.0357143em;
-		line-height: 58px;
-		margin: 0 auto;
-		text-align: center;
-		text-transform: uppercase;
-		width: 75%;
-	}.cr-sign-up-form__form-content {
-		bottom: 23px;
-		box-sizing: border-box;
-		left: 23px;
-		position: absolute;
-		right: 23px;
-		top: 90px;
-	}.cr-sign-up-form__form-content .custom-control-input:checked ~ .custom-control-label::before {
-						background-color: var(--input-checkbox-background-color-active);
-						border-color: var(--input-border-color-active);
-						transition: 0.2s;
-					}.cr-sign-up-form__form-content .custom-control-input:focus ~ .custom-control-label::before {
-						border-color: var(--input-border-color-active);
-						box-shadow: 0 0 0 0.2rem var(--input-checkbox-shadow-color-active);
-					}.cr-sign-up-form__form-content .custom-control-label {
-				display: flex;
-				flex-direction: row;
-				font-size: calc(var(--gap) * 2.35);
-				justify-content: space-around;
-				width: 90%;
-			}.cr-sign-up-form__form-content .custom-control-label::before {
-					background-color: var(--input-background-color);
-					border-color: var(--input-border-color);
-					height: 18px;
-					margin-right: calc(var(--gap) * 3);
-					top: 0;
-					transition: 0.2s;
-					width: 18px;
-				}.cr-sign-up-form__form-content .custom-control-label::after {
-					height: 18px;
-					top: 0;
-					width: 18px;
-				}.cr-sign-up-form__form-content .custom-control-label:hover {
-					cursor: pointer;
-				}.cr-sign-up-form > * {
-		background: transparent;
-	}.cr-sign-up-form__group {
-		background: transparent;
-		margin-bottom: 20px;
-		position: relative;
-	}.cr-sign-up-form__group .custom-input label {
-				margin-top: -1px;
-			}.cr-sign-up-form__error {
-		background: transparent;
-		color: var(--system-red);
-		margin-top: 5px;
-	}.cr-sign-up-form__error-message {
-		align-items: center;
-		background: transparent;
-		color: var(--system-red);
-		display: flex;
-		flex: 1;
-		font-size: calc(var(--gap) * 2.5);
-		justify-content: center;
-		min-height: calc(var(--gap) * 6);
-	}.cr-sign-up-form__button-wrapper {
-		background: transparent;
-		bottom: 0;
-		left: 0;
-		position: absolute;
-		right: 0;
-	}.cr-sign-up-form__button-wrapper--empty {
-		background: transparent;
-		bottom: 0 !important;
-		left: 0;
-		position: absolute;
-		right: 0;
-	}.cr-sign-up-form__loader {
-		background: transparent;
-		min-height: calc(var(--gap) * 6);
-	}.cr-sign-up-form__input {
-		width: 100%;
-	}.cr-sign-up-form__input input {
-			border: 1px solid var(--input-border-color);
-			border-radius: 4px;
-			box-sizing: border-box;
-			color: var(--input-text-color);
-			font-size: 12px;
-			height: 50px;
-			padding: 0 10px;
-			width: 100%;
-		}.cr-sign-up-form__footer {
-		align-items: center;
-		display: flex;
-		justify-content: center;
-	}.cr-sign-up-form__footer > * {
-			background: transparent;
-		}.cr-sign-up-form__footer-create {
-			color: var(--sign-in-label-color);
-		}.cr-sign-up-form__footer-signin {
-			cursor: pointer;
-			padding-left: 10px;
-		}.cr-sign-up-form__recaptcha {
-		display: flex;
-		justify-content: center;
-		left: 0;
-		position: absolute;
-		right: 0;
-		top: 10px;
-		z-index: 2;
-	}.cr-sign-in-form {
 
 	height: 500px;
 	max-width: 424px;
 	position: relative;
-	background: var(--body-backgound-color);
 }.cr-sign-in-form__options-group {
 		border-bottom: 2px solid var(--divider-color-level-2);
 		height: 58px;
@@ -8614,7 +8412,7 @@
 			color: var(--primary-text-color);
 		}.cr-sign-in-form__option-inner {
 		background: transparent;
-		color: var(--primary-text-color);
+		color: var(--secondary-contrast-cta-color); 
 		cursor: pointer;
 		font-size: 18px;
 		font-style: normal;
@@ -8647,23 +8445,20 @@
 		min-height: calc(var(--gap) * 5);
 	}.cr-sign-in-form__group {
 		background: transparent;
-		margin: 40px 0 -10px;
+		margin: 20px 0 -10px;
 		position: relative;
 	}.cr-sign-in-form__error {
 		background: transparent;
 		color: var(--system-red);
 		margin-top: 5px;
 	}.cr-sign-in-form__group--focused .cr-sign-in-form__label {
-			color: var(--input-legend-color-active);
+			color: transparent !important;
 		}.cr-sign-in-form__image {
-
+		margin-top: -60px !important;
 		height: 100px;
-		margin: 0 auto 20px auto;
-		width: 70%;
-	}.cr-sign-in-form__title {
-		font-size: 18px;
-		margin: calc(var(--gap) * 3) 0 calc(var(--gap) * 8) 0;
-		text-align: center;
+		
+		width: 100%;
+
 	}.cr-sign-in-form__button-wrapper {
 		background: transparent;
 		bottom: 55px;
@@ -8674,16 +8469,19 @@
 		min-height: calc(var(--gap) * 28);
 		position: absolute;
 		right: 0;
+
+
+
 	}.cr-sign-in-form__button-wrapper--empty {
 		justify-content: flex-end;
 	}.cr-sign-in-form__bottom-section {
 		background: transparent;
 		bottom: -10px;
 		position: absolute;
-		width: 100%;
+		width: 97.5%;
 	}.cr-sign-in-form__bottom-section .cr-sign-in-form__bottom-section-password {
 			background: transparent;
-			color: var(--secondary-contrast-cta-color);
+			color: #595959;
 			cursor: pointer;
 			font-size: 14px;
 			font-style: normal;
@@ -8696,29 +8494,40 @@
 			}.cr-sign-in-form__bottom-section .cr-sign-in-form__bottom-section-signup {
 			color: #1EBDB2 !important;
 			cursor: pointer;
+			font-size: 14px;
+			font-weight: 600px;
 		}.cr-sign-in-form__bottom-section .cr-sign-in-form__bottom-section-signup:hover {
 				color: #1EDED0 !important;
-			}.cr-sign-up-form {
+			}.cr-sign-up-form2 {
 
 	max-width: 424px;
-	min-height: 620px;
+	height: 630px !important;
 	position: relative;
-}.cr-sign-up-form__options-group {
+
+
+	display: grid !important;
+	background: #dde1e7 !important;
+	border-radius: 10px !important;
+	padding: 40px 30px !important;
+	box-shadow: -3px -3px 7px #ffffff73,
+				2px 2px 5px rgba(94, 104, 121, 0.288) !important;
+}.cr-sign-up-form2__options-group {
 		border-bottom: 2px solid var(--divider-color-level-2);
 		height: 58px;
 		width: 100%;
-	}.cr-sign-up-form__option {
+	}.cr-sign-up-form2__option {
 		background: var(--subheader-background-color);
 		display: inline-block;
 		height: 58px;
 		width: 50%;
-	}.cr-sign-up-form__option .__selected {
+	}.cr-sign-up-form2__option .__selected {
 			border-bottom: 2px solid var(--primary-cta-color);
 			color: var(--primary-text-color);
-		}.cr-sign-up-form__option-inner {
+		}.cr-sign-up-form2__option-inner {
 		background: transparent;
+		color: var(--secondary-contrast-cta-color); 
 		cursor: pointer;
-		font-size: 14px;
+		font-size: 18px;
 		font-style: normal;
 		font-weight: 500;
 		height: 58px;
@@ -8728,28 +8537,43 @@
 		text-align: center;
 		text-transform: uppercase;
 		width: 75%;
-	}.cr-sign-up-form__form-content {
+	}.cr-sign-up-form2__title {
+
+		width: 200px !important;
+	}.cr-sign-up-form2__form-content {
 		bottom: 23px;
 		box-sizing: border-box;
 		left: 23px;
 		position: absolute;
 		right: 23px;
-		top: 90px;
-	}.cr-sign-up-form__form-content .custom-control-input:checked ~ .custom-control-label::before {
-						background-color: var(--input-checkbox-background-color-active);
-						border-color: var(--input-border-color-active);
+		top: 30px !important;
+		background-color: #dde1e7 !important;
+
+
+	}.cr-sign-up-form2__form-content__title {
+
+			width: 20px !important;
+		}.cr-sign-up-form2__form-content .custom-control {
+
+			background-color: #dde1e7 !important;
+		}.cr-sign-up-form2__form-content .custom-control-input {
+				background-color: #595959 !important;
+				border-color: #dde1e7 !important;
+			}.cr-sign-up-form2__form-content .custom-control-input:checked ~ .custom-control-label::before {
+						background-color: #595959;
+						border-color: #dde1e7;
 						transition: 0.2s;
-					}.cr-sign-up-form__form-content .custom-control-input:focus ~ .custom-control-label::before {
-						border-color: var(--input-border-color-active);
-						box-shadow: 0 0 0 0.2rem var(--input-checkbox-shadow-color-active);
-					}.cr-sign-up-form__form-content .custom-control-label {
+					}.cr-sign-up-form2__form-content .custom-control-input:focus ~ .custom-control-label::before {
+						border-color: #dde1e7;
+						box-shadow: 0 0 0 0.2rem #595959;
+					}.cr-sign-up-form2__form-content .custom-control-label {
 				display: flex;
 				flex-direction: row;
 				font-size: calc(var(--gap) * 1.95) !important;
 				justify-content: center !important;
-				color: white!important;
+				color: #595959 !important;
 				width: 100%;
-			}.cr-sign-up-form__form-content .custom-control-label::before {
+			}.cr-sign-up-form2__form-content .custom-control-label::before {
 					background-color: var(--input-background-color);
 					border-color: var(--input-border-color);
 					height: 18px;
@@ -8757,25 +8581,26 @@
 					top: 0;
 					transition: 0.2s;
 					width: 18px;
-				}.cr-sign-up-form__form-content .custom-control-label::after {
+				}.cr-sign-up-form2__form-content .custom-control-label::after {
 					height: 18px;
-					top: 0;
 					width: 18px;
-				}.cr-sign-up-form__form-content .custom-control-label:hover {
+				}.cr-sign-up-form2__form-content .custom-control-label:hover {
 					cursor: pointer;
-				}.cr-sign-up-form > * {
+				}.cr-sign-up-form2 > * {
 		background: transparent;
-	}.cr-sign-up-form__group {
+	}.cr-sign-up-form2__group {
 		background: transparent;
-		margin-bottom: 20px;
+		
+		margin-top: 25px;
+		
 		position: relative;
-	}.cr-sign-up-form__group .custom-input label {
+	}.cr-sign-up-form2__group .custom-input label {
 				margin-top: -1px;
-			}.cr-sign-up-form__error {
+			}.cr-sign-up-form2__error {
 		background: transparent;
 		color: var(--system-red);
 		margin-top: 5px;
-	}.cr-sign-up-form__error-message {
+	}.cr-sign-up-form2__error-message {
 		align-items: center;
 		background: transparent;
 		color: var(--system-red);
@@ -8784,24 +8609,25 @@
 		font-size: calc(var(--gap) * 2.5);
 		justify-content: center;
 		min-height: calc(var(--gap) * 6);
-	}.cr-sign-up-form__button-wrapper {
+	}.cr-sign-up-form2__button-wrapper {
 		background: transparent;
-		bottom: 6px;
+		bottom: 5px;
 		left: 0;
 		position: absolute;
 		right: 0;
-	}.cr-sign-up-form__button-wrapper--empty {
+	}.cr-sign-up-form2__button-wrapper--empty {
 		background: transparent;
 		bottom: 0 !important;
 		left: 0;
 		position: absolute;
 		right: 0;
-	}.cr-sign-up-form__loader {
+	}.cr-sign-up-form2__loader {
 		background: transparent;
 		min-height: calc(var(--gap) * 6);
-	}.cr-sign-up-form__input {
+	}.cr-sign-up-form2__input {
 		width: 100%;
-	}.cr-sign-up-form__input input {
+		margin-top: 20px;
+	}.cr-sign-up-form2__input input {
 			border: 1px solid var(--input-border-color);
 			border-radius: 4px;
 			box-sizing: border-box;
@@ -8810,22 +8636,23 @@
 			height: 50px;
 			padding: 0 10px;
 			width: 100%;
-		}.cr-sign-up-form__footer {
+		}.cr-sign-up-form2__footer {
 		align-items: center;
 		display: flex;
 		justify-content: center;
-	}.cr-sign-up-form__footer > * {
+	}.cr-sign-up-form2__footer > * {
 			background: transparent;
-		}.cr-sign-up-form__footer-create {
-			color: var(--sign-in-label-color);
-		}.cr-sign-up-form__footer-signin {
+		}.cr-sign-up-form2__footer-create {
+			color: #595959;
+		}.cr-sign-up-form2__footer-signin {
 			cursor: pointer;
 			padding-left: 10px;
-		}.cr-sign-up-form__recaptcha {
+		}.cr-sign-up-form2__recaptcha {
 		display: flex;
 		justify-content: center;
 		left: 0;
 		position: absolute;
+		top: 20px !important;
 		right: 0;
 		top: 10px;
 		z-index: 2;
@@ -9008,7 +8835,7 @@
 		border-color: var(--input-border-color);
 		background: transparent !important;
 	}.custom-input label {
-		background: #131538 !important;
+		background: #fff !important;
 		color: #fff;
 		font-size: 12px;
 		left: 2%;
@@ -9019,7 +8846,7 @@
 		z-index: 5;
 	}.custom-input input,
 	.custom-input input:focus {
-		background: #131538 !important;
+		background: #fff !important;
 		box-shadow: none;
 		color: var(--input-text-color);
 	}.custom-input input:focus-within {

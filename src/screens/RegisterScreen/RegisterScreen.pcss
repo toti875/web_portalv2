@@ -1,9 +1,19 @@
 .pg-sign-up-screen {
-	
-	display: flex;
-	height: 800px;
-	justify-content: center;
-	margin-top: -80px !important;
+	background: transparent!important;
+	margin: 0 auto;
+	height: calc(100vh - 95px);
+
+	justify-content: center !important;
+	margin-top: 80px !important;
+	width: 620px!important;	width: calc(var(--gap) * 70.66);
+
+	display: grid !important;
+	background: #dde1e7 !important;
+	border-radius: 10px;
+	padding: 40px 30px !important;
+	box-shadow: -3px -3px 7px #ffffff73,
+				2px 2px 5px rgba(94, 104, 121, 0.288) !important;
+
 
 	.pg-sign-up-screen__container {
 		background: transparent !important;
@@ -12,15 +22,15 @@
 
 	}
 
-	.cr-sign-up-form {
+	.cr-sign-up-form2 {
 		color: white!important;
 		background: transparent!important;
 		margin: 0 auto;
 		min-height: calc(var(--big-gap) * 11);
-		margin-top: 0px !important;
+		margin-top: 0px ;
 
 		&__options-group {
-			border-bottom: 0 !important;
+			border-bottom: 0 ;
 			height: calc(var(--big-gap) * 0.97);
 			width: 100%;
 			background: transparent!important;
@@ -56,9 +66,16 @@
 
 		&__title {
 			background: transparent;
-			font-size: calc(var(--gap) * 4);
-			
+			font-size: 16px !important;
+			width: 120px !important;
+
+
+
+
+
+
 		}
+
 
 		&__label {
 			background: var(--form-background-color) !important;
@@ -70,6 +87,7 @@
 		}
 
 		.cr-checkbox {
+			background: #595959 !important;
 			padding-left: calc(2.6 * var(--checkbox-general-intent));
 
 			&__checkitem {
@@ -81,7 +99,7 @@
 			}
 
 			&__label {
-				font-size: calc(var(--gap) * 2.33);
+				font-size: 13px !important;
 			}
 		}
 
@@ -91,6 +109,7 @@
 
 		&__recaptcha {
 			position: relative;
+			margin-top: 20px !important;
 			z-index: 1;
 		}
 	}
