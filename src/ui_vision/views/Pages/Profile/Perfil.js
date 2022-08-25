@@ -233,7 +233,7 @@ function Perfil() {
                   color='#fff'
                   fontWeight='bold'
                   ms={{ sm: "8px", md: "0px" }}>
-                  Jeferson Martin
+                  Toti
                 </Text>
                 <Text fontSize={{ sm: "sm", md: "md" }} color='gray.400'>
                   ID: {GetUserID()}
@@ -340,7 +340,7 @@ function Perfil() {
                   Nome:{" "}
                 </Text>
                 <Text fontSize='sm' color='#fff' fontWeight='400'>
-                  Jeferson Martin
+                  Toti
                 </Text>
               </Flex>
               <Flex align='center' mb='18px'>

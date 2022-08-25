@@ -204,13 +204,13 @@ export default function Default() {
                     </StatLabel>
                     <Flex>
                       <Text fontSize='13' color='#fff'>
-                        Você possui uma carteira com 5 ativos
+                        Você possui uma carteira com 0 ativos
                         </Text>
                         <Text fontSize='13' color='#fff'>
-                        Total de tokens: 3
+                        Total de tokens: 0
                         </Text>
                         <Text fontSize='13' color='#fff'>
-                        Total de cripto: 2
+                        Total de cripto: 0
 
                       </Text>
                       <StatHelpText
@@ -253,7 +253,7 @@ export default function Default() {
               </Text>
               <Text fontSize='md' fontWeight='medium' color='gray.400'>
                 <Text as='span' color='green.400' fontWeight='bold'>
-                  O rendimento acumulado da sua carteira no ano é de: (+25.59%) 
+                  O rendimento acumulado da sua carteira no ano é de: (+00.00%) 
                 </Text>{" "}
                 De janeiro até hoje
               </Text>
@@ -286,7 +286,7 @@ export default function Default() {
               </Text>
               <Text fontSize='md' fontWeight='medium' color='gray.400'>
                 <Text as='span' color='green.400' fontWeight='bold'>
-                  O rendimento acumulado da sua carteira no ano é de: (+25.59%) 
+                  O rendimento acumulado da sua carteira no ano é de: (0%) 
                 </Text>{" "}
                 De janeiro até hoje
               </Text>

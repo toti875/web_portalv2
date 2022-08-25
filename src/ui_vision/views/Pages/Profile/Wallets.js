@@ -225,7 +225,7 @@ function Profile() {
               <Flex direction='column' maxWidth='100%' my={{ sm: "14px" }}>
                 <Text
                   fontSize='lg' color='#fff' fontWeight='bold'>
-                  Jeferson Martin
+                  Toti
                 </Text>
                 <Text fontSize={{ sm: "sm", md: "md" }} color='gray.400'>
                   ID: {GetUserID()}
@@ -242,7 +242,7 @@ function Profile() {
                   Full Name:{" "}
                 </Text>
                 <Text fontSize='sm' color='#fff' fontWeight='400'>
-                  Jeferson Martin
+                  Toti
                 </Text>
               </Flex>
               <Flex align='center' mb='18px'>

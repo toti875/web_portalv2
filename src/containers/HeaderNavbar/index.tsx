@@ -152,7 +152,7 @@ export const HeaderNavbar: React.FC = () => {
 					<div className="header__right-menu__dropdown__wrap">
 						<span className={classLinkActiveTitleDrop('account')}>
 							<FaUserCircle className="header__right-menu__dropdown__wrap__content__title__icon mr-2" />
-							Jeferson Martin
+							Toti
 							{/*{translate('page.body.homepage.header.account')}*/}
 							<div className="header__right-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div>
 						</span>

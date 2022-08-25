@@ -3474,6 +3474,7 @@ color: #dde1e7 !important;
 				}.headerDesktop-screen {
 	background: black !important;;
 	color: white;
+	min-height: 40px;
 }.headerDesktop-screen .container-header {
 	
 	
@@ -3481,6 +3482,8 @@ color: #dde1e7 !important;
 	}.headerDesktop-screen img {
 		display: block;
 		width: 150px;
+		margin-left: 15px;
+		margin-top: 10px;
 	}.headerDesktop-screen a {
 		outline: none;
 		text-decoration: none !important;

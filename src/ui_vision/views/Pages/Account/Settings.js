@@ -344,7 +344,7 @@ function Settings() {
               </Avatar>
                   <Flex direction='column'>
                     <Text color='#fff' fontWeight='bold' fontSize='15'>
-                      Jeferson Martin
+                      Toti
                     </Text>
                     <Text color='#f9a912' fontWeight='500' fontSize='14'>
                       ID: {GetUserID()}

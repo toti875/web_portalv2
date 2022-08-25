@@ -106,14 +106,16 @@ export const lineChartDataDashboard_Cliente_IBOV = [
   },
   {
     name: "Sua carteira",
-    data: [2.61, 1.89, 6.37, 0.76, 4.14, 2.72, 3.85, 2.83],
+    /*data: [2.61, 1.89, 6.37, 0.76, 4.14, 2.72, 3.85, 2.83],*/
+    data: [0, 0, 0, 0, 0, 0, 0, 0],
   },
 ];
 
 export const lineChartDataDashboard = [
   {
     name: "Sua carteira",
-    data: [2.61, 1.89, 6.37, 0.76, 4.14, 2.72, 3.85, 3.25],
+    /*data: [2.61, 1.89, 6.37, 0.76, 4.14, 2.72, 3.85, 3.25],*/
+    ata: [0, 0, 0, 0, 0, 0, 0, 0],
   },
 ];
 
@@ -1023,11 +1025,13 @@ export const donutChartDataGeneral = [75, 25];
 export const lineChartDataCharts2 = [
   {
     name: "IBOV",
-    data: [6.98, 0.89, 6.06, -10.10, 3.22, -11.5, 4.69, 2.70],
+    /*data: [6.98, 0.89, 6.06, -10.10, 3.22, -11.5, 4.69, 2.70],*/
+    data: [6.98, 0.89, 6.06, -10.10, 3.22, -11.5, 4.69, 2.70]
   },
   {
     name: "Sua carteira",
-    data: [2.61, 1.89, 6.37, 0.76, 4.14, 2.72, 3.85, 2.83],
+    /*data: [2.61, 1.89, 6.37, 0.76, 4.14, 2.72, 3.85, 2.83],*/
+    data: [0, 0, 0, 0, 0, 0, 0, 0],
   },
 ];
 
@@ -1125,11 +1129,13 @@ export const lineChartOptionsCharts2 = {
 export const lineChartDataCharts1 = [
   {
     name: "IBOV",
-    data: [6.98, 0.89, 6.06, -10.10, 3.22, -11.5, 4.69, 2.70],
+    /*data: [6.98, 0.89, 6.06, -10.10, 3.22, -11.5, 4.69, 2.70],*/
+    data: [0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     name: "Sua carteira",
-    data: [2.61, 1.89, 6.37, 0.76, 4.14, 2.72, 3.85, 2.83],
+    /*data: [2.61, 1.89, 6.37, 0.76, 4.14, 2.72, 3.85, 2.83],*/
+    data: [0, 0, 0, 0, 0, 0, 0, 0],
   },
 ];
 
@@ -1218,8 +1224,9 @@ export const lineChartOptionsCharts1 = {
 
 export const barChartDataCharts1 = [
   {
-    name: "Rendimento mensal (%)",
-    data: [2.61, 1.89, 6.37, 0.76, 4.14, 2.72, 3.85, 3.25],
+    /*name: "Rendimento mensal (%)",*/
+    /*data: [2.61, 1.89, 6.37, 0.76, 4.14, 2.72, 3.85, 3.25],*/
+    data: [0, 0, 0, 0, 0, 0, 0, 0],
   },
 ];
 
@@ -1817,8 +1824,8 @@ export const donutChartOptionsCharts1 = {
 export const donutChartDataCharts1 = [50, 15, 10, 20, 5];
 
 export const pieChartOptionsCharts1 = {
-  labels: ["BTC (Bitcoin)", "ETH (Ethereum)", "FTK (Fortem Token)", "BOAT (Boat Rental Token)", "HORSE5 (Horse Token)"],
-  colors: ["#582CFF", "#3F1AD1", "#35199F", "#FDA736", "#1EDED0"],
+  labels: ["Tokens", "Cripto", "Reais"],
+  colors: ["#582CFF", "#3F1AD1",  "#1EDED0"],
   chart: {
     width: "100%",
     stroke: {
@@ -1853,7 +1860,7 @@ export const pieChartOptionsCharts1 = {
     },
   },
   fill: {
-    colors: ["#582CFF", "#3F1AD1", "#35199F", "#FDA736", "#1EDED0"],
+    colors: ["#582CFF", "#3F1AD1", "#35199F",],
   },
   tooltip: {
     enabled: true,
