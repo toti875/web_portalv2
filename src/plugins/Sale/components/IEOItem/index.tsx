@@ -85,13 +85,13 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 
 	switch (props.type) {
 		case 'upcoming':
-			countdownTitle = <span className="text-success">Tempo restante para emissão:</span>;
+			countdownTitle = <span className="text-success">Tempo para abertura da captação:</span>;
 			break;
 		case 'ongoing':
-			countdownTitle = <span className="text-warning">Tempo restante:</span>;
+			countdownTitle = <span className="text-warning">Tempo restante de captação:</span>;
 			break;
 		default:
-			countdownTitle = <span className="text-danger"> EMISSÃO FINALIZADA</span>;
+			countdownTitle = <span className="text-danger"> Esta captação foi finalizada</span>;
 			break;
 	}
 
@@ -122,13 +122,23 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 			<span className="sale-item__badge" style={{ backgroundColor: saleBadgeColor }}>
 				{saleType}
 			</span>
+			
 			<div className="row">
-				<div className="col-6">
-					<h3 className="sale-item__title">{props.sale.currency_id.toUpperCase()}</h3>
-					<span className="sale-item__subtitle">{props.sale.description}</span>
+		
+					<h3 className="sale-item__title">Nome: {props.sale.currency_id.toUpperCase()}</h3>
+		
+	
+			</div>
+			<div className="row">
+
+				<div className="sale-item-logo">
+					<h1 className="sale-item-emissor">Emissor: </h1>
+					<img className="sale-item-logo-img" src={props.sale.image_link} alt="" />
 				</div>
+
 				<div className="col-6">
-					<img className="img-fluid" src={props.sale.image_link} alt="" />
+					
+					<h3 className="sale-item__description">{props.sale.description}</h3>
 				</div>
 			</div>
 			<br />
@@ -145,27 +155,48 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 			<br />
 			<div className="row">
 				<div className="col-12 text-center" style={{ padding: '0 5rem' }}>
-					<Statistic title="Progresso" value={`${props.sale.remains}/${props.sale.total_ieo}`} />
+					<Statistic title="Total de tokens disponíveis / Total de tokens ofertados" value={`${props.sale.remains} / ${props.sale.total_ieo}`} />
+					
+					
+				</div>
+				<pre> </pre>
+				
+					<div className="col-12 d-flex align-items-center justify-content-center" style={{ fontSize: '22px !important' }} >
 
+
+
+					<span >Progresso: </span>
+					
+	
 					<Progress
 						strokeColor={{
 							'0%': '#2a9d8f',
 							'100%': '#e76f51',
 						}}
 						status="active"
+						
 						percent={Math.floor(((props.sale.total_ieo - props.sale.remains) / props.sale.total_ieo) * 100)}
 					/>
 				</div>
+				<pre> </pre>
+				<div className="col-12 text-center" >
+				<h4 className="text-bold">Valor total captado: R$ {(((props.sale.total_ieo - props.sale.remains) * props.sale.price))}</h4>
+</div>
+
+
+
 			</div>
 			<br />
 			<div className="row">
-				<div className="col-6 d-flex align-items-center justify-content-center">
-					<Statistic title="Preço unitário:" value={`R$${props.sale.price} Reais`} />
+				<div className="col-6 d-flex align-items-center justify-content-center" >
+					<Statistic title="Preço unitário:" value={`R$ ${props.sale.price} `} />
 				</div>
-				<div className="col-6 d-flex align-items-center justify-content-center">
-					<Row gutter={[8, 8]}>
+				</div>
+				<div className="row">
+				<div className="col-6 d-flex align-items-center justify-content-center" style={{ marginLeft: '110px'}}> Pagamentos aceitos:
+					<Row gutter={[36, 36]}> 
 						{props.sale.currency_available.map(currency => (
-							<Col span={8}>
+							<Col span={1}>
 								<img
 									style={{ width: '3rem', height: '3rem', marginLeft: '1rem', marginTop: '1rem' }}
 									src={findIcon(currency)}

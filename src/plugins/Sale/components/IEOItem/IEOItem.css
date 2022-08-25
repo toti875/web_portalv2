@@ -8,6 +8,9 @@
 	cursor: pointer;
 	margin: 20px 10% 0 10%;
 	transition: all 0.3s;
+	font-size: 15px;
+	font-weight: bold;
+	color: #a4acb6;
 }
 
 .sale-item__badge {
@@ -27,41 +30,76 @@
 	vertical-align: middle;
 }
 
+.sale-item-logo {
+	max-width: 220px !important;
+	max-height: 220px !important;
+	
+
+}
+
+.sale-item-logo-img {
+	max-width: 220px !important;
+	max-height: 160px !important;
+
+}
+
 .sale-item:hover {
 	background:  #363944 ;
 }
 
 .sale-item__title {
 	color: #ffff;
-	font-size: 2rem;
+	font-size: 18px;
 	font-weight: 700;
 	line-height: 24px;
-	text-transform: uppercase;
+	margin: 20px auto;
+
+
 }
 
-.sale-item__subtitle {
+.sale-item__description {
 	color: #a4acb6;
 	font-size: 16px;
 	line-height: 20px;
+	padding-left: 80px;
+	width: 100%;
+	margin-top: 20px;
+
+	align-text: right;
+}
+
+.sale-item-emissor {
+	color: #ffff;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 24px;
+	margin-top: 20px;
+	margin-left: 30px;
+}
+
+.sale-item-logo-img {
+	max-width: 220px !important;
+	max-height: 160px !important;
+	margin-left: 30px;
 }
 
 #sale_item__timer #days {
-	font-size: 25px;
+	font-size: 18px  !important;
 	color: #db4844;
 }
 
 #sale_item__timer #hours {
-	font-size: 25px;
+	font-size: 18px  !important;
 	color: #f07c22;
 }
 
 #sale_item__timer #minutes {
-	font-size: 25px;
+	font-size: 18px  !important;
 	color: #f6da74;
 }
 
 #sale_item__timer #seconds {
-	font-size: 25px;
+	font-size: 18px  !important;
 	color: #abcd58;
 }
 
@@ -69,7 +107,7 @@
 	display: inline-block;
 	line-height: 1;
 	padding: 20px 0;
-	font-size: 25px;
+	font-size: 18px  !important;
 	margin-top: 0;
 	text-align: center;
 }
@@ -78,11 +116,17 @@
 	display: inline-block;
 	line-height: 1;
 	padding: 0 20px;
-	font-size: 25px;
+	font-size: 18px  !important;
 }
 
 #sale_item__timer div span {
 	display: block;
-	font-size: 15px;
+	font-size: 18px  !important;
 	color: white;
+}
+
+.text-sale {
+
+font-size: 17px !important;
+
 }

@@ -76,7 +76,7 @@ export const SaleInfo: React.FC<SaleInfoProps> = (props: SaleInfoProps) => {
 		<div id="sale-info" style={{ backgroundColor: '#0b1426', padding: '3vw', height: '100%' }}>
 			<div className="row">
 				<div className="col-4">
-					<img className="sale-logo" src={props.sale.sale_logo} alt="sale-logo" />
+					<img className="sale-logo-details" src={props.sale.sale_logo} alt="sale-logo" />
 				</div>
 			</div>
 			<div className="row">
@@ -139,7 +139,7 @@ export const SaleInfo: React.FC<SaleInfoProps> = (props: SaleInfoProps) => {
 				<div className="col-12 text-center">
 					<Row gutter={[16, 16]}>
 						<Col span={8}>
-							<Statistic valueStyle={{ color: '#13b887', fontSize: '18px'  }} title={'Bônus para holders Fortem'} value={props.sale.bonus} />{' '}
+							<Statistic valueStyle={{ color: '#13b887', fontSize: '18px'  }} title={'Bônus para holders Fortem'} value={1} />{' token'}
 						</Col>
 						<Col span={8}>
 							<Statistic valueStyle={{ color: '#13b887', fontSize: '18px'  }} title={'Data de encerramento da captação'} value={props.sale.end_date} />

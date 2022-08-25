@@ -5,11 +5,17 @@ import './SaleListScreen.css';
 
 const TokenList = require ('../../../../assets/images/tokens.png');
 
+const GlobeAnimated  = require ('../../../../assets/video/globe-900.hevc.mp4');
 export const SaleListScreen: React.FC = () => {
 	return (
 		<React.Fragment>
 			<div style={{ position: 'relative',  }}>
 				<img style={{ width: '110%', margin: 0 }} src={TokenList} alt="ieo_banner" />
+			
+				
+ 
+          
+
 				{/*<div
 					style={{
 						position: 'absolute',
@@ -32,9 +38,9 @@ export const SaleListScreen: React.FC = () => {
 			<div id="sale-list" className="container-fluid">
 				<div className="row">
 					<div className="col-12 text-center">
-						<h1 className="sale-list__title" style={{ color: '#2a9d8f', fontSize: '42px', fontWeight: 'bold' }}> Seja bem-vindo ao SIMPLE.</h1>
+						<h1 className="sale-list__title" style={{ color: '#2a9d8f', fontSize: '42px', fontWeight: 'bold' }}> Seja bem-vindo ao SIMPLE</h1>
 						<h2 className="sale-list__subtitle" style={{  fontSize: '28px', fontWeight: 'bold' }}>
-						O marketplace de ativos digitais da Fortem ONE
+						O marketplace global de ativos digitais da Fortem ONE
 						</h2>
 					</div>
 				</div>

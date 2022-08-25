@@ -112,7 +112,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 				// 	return NP.divide(NP.divide(1, quotePrice), NP.divide(1, basePrice));
 				// case 'swp':
 				// 	return NP.divide(NP.divide(1, quotePrice), NP.divide(1, basePrice));
-				case 'cx':
+				case 'BRL':
 					return NP.divide(NP.divide(1, quotePrice), NP.divide(1, basePrice));
 				default:
 					return NP.divide(quotePrice, NP.divide(1, basePrice));
@@ -191,7 +191,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 			setQuoteBalanceState(handleGetBalance(props.sale.currency_available[0]));
 		},
 		[
-			// dispatchWalletsFetch,
+			 dispatchWalletsFetch,
 			// dispatchGetPrice,
 			// updateBonusState,
 			// setQuoteBalanceState,
@@ -210,7 +210,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 			const convertedPrice = calculatePrice(props.sale.price, priceSelector.payload[quoteCurrencyState.toUpperCase()]);
 			setPriceState(convertedPrice);
 			//A LINHA ABAIXO ESTAVA COMENTADA 
-			setQuoteTotalState(NP.strip(NP.times(quantityInputState, convertedPrice)));
+			//setQuoteTotalState(NP.strip(NP.times(quantityInputState, convertedPrice)));
 		}
 	}, [quoteCurrencyState, priceSelector.loading, calculatePrice, priceSelector.payload, props.sale.price, quantityInputState]);
 
@@ -238,14 +238,14 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 				dispatchGetTotalBuyers(props.sale.id); // update Total Buyers in Sale Info
 				setTimeout(() => {
 					dispatchFetchSaleItemByID(props.sale.id);
-				}, 3000);
+				}, 5000);
 			}
 		}
 
 		if (buyResponse.loading) {
 			const hide = message.loading('Efetivando a sua compra..', 0);
 			// dismiss manually and asynchronously
-			setTimeout(hide, 5500);
+			setTimeout(hide, 3500);
 		}
 	}, [
 		buyResponse.error,
@@ -381,12 +381,12 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 	const showSelectCurrencyForm = () => {
 		return (
 			<div className="select-currency-box">
-				<span style={{ fontSize: '11.5px', color: 'white', background: 'transparent' }}>Selecione a forma de pagamento</span>
+				<span style={{ fontSize: '13.5px', color: 'white', background: 'transparent' }}>Selecione a forma de pagamento</span>
 				<select onChange={handleSelectCurrency} value={quoteCurrencyState}>
 					{currency_available.map(currency => {
 						let optiontring = currency.toUpperCase();
 						const balance = handleGetBalance(currency);
-						optiontring += ` | Disponível: ${balance}`;
+						optiontring += ` | Saldo disponível: ${balance}`;
 
 						return <option value={currency}>{optiontring}</option>;
 					})}
@@ -443,7 +443,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 				</div>
 				<div className="row">
 					<div className="col-12 text-center" style={{ marginTop: '2rem' }}>
-						<img width="80px" src={WalletImage} alt="" />
+						{/* <img width="80px" src={WalletImage} alt="" /> */}
 					</div>
 				</div>
 			</div>

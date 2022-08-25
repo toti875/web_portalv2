@@ -46,14 +46,14 @@ export const HolderStartingScreen = () => {
 				<React.Fragment>
 					{holderInfo && toNumber(holderInfo.amount) > MINIMUM_HOLD_AMOUNT ? (
 						<h2>
-							✔️ Your balance is larger than {MINIMUM_HOLD_AMOUNT} CX.
+							✔️ Seu saldo deve ser maior do {MINIMUM_HOLD_AMOUNT} FTK.
 							<br />
 							<br />
-							✔️ You have qualified to participate in the program{' '}
+							✔️ Você se qualifica para participar do programa {' '}
 						</h2>
 					) : (
 						<h2>
-							👉 Your balance must be larger than {MINIMUM_HOLD_AMOUNT} CX.
+							👉 Your balance must be larger than {MINIMUM_HOLD_AMOUNT} FTK.
 							<br />
 							<br />❌ You have not qualified to participate in the program.
 						</h2>
@@ -61,7 +61,7 @@ export const HolderStartingScreen = () => {
 
 					{holderInfo ? (
 						<h2>
-							Your amount: <strong>{holderInfo.amount} CX</strong>
+							Seu saldo: <strong>{holderInfo.amount} CX</strong>
 						</h2>
 					) : null}
 				</React.Fragment>

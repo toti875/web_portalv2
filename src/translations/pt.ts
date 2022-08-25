@@ -115,12 +115,12 @@ export const pt = {
 
 	'page.body.wallets.tabs.deposit.fiat.message1': 'Depósito por PIX',
 	'page.body.wallets.tabs.deposit.fiat.message2':
-		'Please use the following credentials to initiate your bank transfer. Your deposit will be reflected in your account within 2 business days.',
-	'page.body.wallets.tabs.deposit.fiat.bankName': 'FORTEM Bank',
-	'page.body.wallets.tabs.deposit.fiat.accountNumber': 'Account number',
-	'page.body.wallets.tabs.deposit.fiat.accountName': 'Account name',
-	'page.body.wallets.tabs.deposit.fiat.phoneNumber': 'Phone Number',
-	'page.body.wallets.tabs.deposit.fiat.referenceCode': 'Your reference code',
+		'Certifique-se de que o nome e o número de CPF na sua conta bancária corresponde com o nome legal associado à sua Fortem. Seu depósito será creditado em sua carteira Fortem em até 1 hora.',
+	'page.body.wallets.tabs.deposit.fiat.bankName': 'CNPJ',
+	'page.body.wallets.tabs.deposit.fiat.accountNumber': 'Nome do titular da conta',
+	'page.body.wallets.tabs.deposit.fiat.accountName': 'Código do banco',
+	'page.body.wallets.tabs.deposit.fiat.phoneNumber': 'Agencia',
+	'page.body.wallets.tabs.deposit.fiat.referenceCode': 'Seu ID',
 	'page.body.wallets.table.pending': 'Pending',
 	'page.body.wallets.table.rejected': 'Rejected',
 	'page.body.wallets.tabs.deposit.fiat.admin': ' To initiate a fiat withdrawal, please contact administrator!',

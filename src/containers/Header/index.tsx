@@ -485,7 +485,7 @@ export const Header: React.FC = () => {
 									>
 										<div className={classActiveItemDrop('academy')}>
 											<FaAward className="header__left-menu__dropdown__wrap__content__title__icon mr-2" />
-											Academy
+											Fortem Academy
 										</div>
 									</Link>
 								</div>
@@ -501,26 +501,8 @@ export const Header: React.FC = () => {
 								</Link>
 							</div>
 						</div>
-						<div className="header__left-menu__dropdown flex-shrink-0  ">
-							<div className={classLinkActive('help')} onClick={() => setStateActiveNow('help')}>
-								<Link
-									to=""
-									className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
-								>
-									Ajuda
-								</Link>
-							</div>
-						</div>
-						<div className="header__left-menu__dropdown flex-shrink-0  ">
-							<div className={classLinkActive('about')} onClick={() => setStateActiveNow('about')}>
-								<Link
-									to=""
-									className="header__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
-								>
-									Sobre a Fortem
-								</Link>
-							</div>
-						</div>
+	
+
 					</div>
 
 					<div className="header__right-menu d-flex align-items-center flex-row">
