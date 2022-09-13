@@ -5,7 +5,7 @@ import { alertPush } from '../../alert';
 import { klineData, KlineFetch } from '../actions';
 
 const klineRequestOptions: RequestOptions = {
-	apiVersion: isFinexEnabled() ? 'authz' : 'core',
+	apiVersion: 'ieo',
 };
 
 export function* handleKlineFetchSaga(action: KlineFetch) {

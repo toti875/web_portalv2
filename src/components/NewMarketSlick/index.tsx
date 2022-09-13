@@ -9,43 +9,56 @@ import { currenciesFetch, selectMarkets, selectMarketTickers, Market, setCurrent
 import Down from './icon/down.svg';
 import Up from './icon/up.svg';
 
+import ContentLoader from "react-content-loader";
+import Ticker from 'react-ticker'
+
+
+
 const ChartWrap = styled.div`
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	background-color: rgb(37, 42, 59);
+
+
+
+	
 
 	.market-slick {
-		width: 100%;
-		div {
+
+		div{
 			.slick-slider {
 				.slick-list {
+					border-top: 1px solid rgb(66, 66, 66);
+					border-bottom: 1px solid rgb(66, 66, 66);
+					background: transparent;
+
+
+
 					.slick-track {
-						width: auto;
-						margin: 0;
-						.slick-slide {
-							max-width: 290px;
-							width: 100%;
-							padding: 0;
-							height: 60px;
-							border-right: 1px solid rgb(66, 66, 66);
+						margin-left: 250px;
+
+						.slick-slide, .slick-active{
+					
+							width: 250px !important;
+							border-right: '1px solid rgb(66, 66, 66)'
+
+							
 						}
 					}
-				}
+				} 
 			}
 		}
 	}
 `;
 const MarketChartItem = styled.div`
-	min-height: 60px;
-	border-radius: 4px;
-	background-color: rgb(38, 40, 58);
+
+	
+	width: 190px;
+
+
 	:hover {
 		cursor: pointer;
 	}
 `;
 
-const BASE_MARKET_URL = 'http://demo.fortem-financial.io/api/fortem/public/markets';
+const BASE_MARKET_URL = 'https://www.yellow.com/api/v2/peatio/public/markets';
 
 export const NewMarketSlick: React.FC<any> = () => {
 	const defaultTicker = {
@@ -60,13 +73,17 @@ export const NewMarketSlick: React.FC<any> = () => {
 
 	const settings = {
 		dots: false,
-		infinite: false,
-		speed: 500,
-		slidesToShow: 6,
-		slidesToScroll: 1,
+		infinite: true,
+		speed: 10000,
+		slidesToShow: 7,
+		slidesToScroll: 0.8,
 		autoplay: true,
-		autoplaySpeed: 3000,
+		autoplaySpeed: 1000,
 		pauseOnHover: true,
+		adaptiveHeight: false,
+		arrows: false,
+		//lazyLoad: ondemand, 
+
 	};
 
 	const dispatch = useDispatch();
@@ -75,6 +92,23 @@ export const NewMarketSlick: React.FC<any> = () => {
 
 	const markets = useSelector(selectMarkets);
 	const marketTickers = useSelector(selectMarketTickers);
+
+	const MyLoader = (props) => (
+		<ContentLoader 
+		  speed={2}
+		  width={400}
+		  height={460}
+		  viewBox="0 0 400 460"
+		  backgroundColor="#f3f3f3"
+		  foregroundColor="#ecebeb"
+		  {...props}
+		>
+		  <circle cx="31" cy="31" r="15" /> 
+		  <rect x="58" y="18" rx="2" ry="2" width="140" height="10" /> 
+		  <rect x="58" y="34" rx="2" ry="2" width="140" height="10" /> 
+		  <rect x="0" y="60" rx="2" ry="2" width="400" height="400" />
+		</ContentLoader>
+	  )
 
 	React.useEffect(() => {
 		dispatch(currenciesFetch());
@@ -107,7 +141,7 @@ export const NewMarketSlick: React.FC<any> = () => {
 					return b.price_change_percent - a.price_change_percent;
 				});
 
-				const marketNames = marketListToState.slice(0, 10).map(market => {
+				const marketNames = marketListToState.slice(0, 20).map(market => {
 					return market.name;
 				});
 				setMarketNames(marketNames);
@@ -137,7 +171,7 @@ export const NewMarketSlick: React.FC<any> = () => {
 						const klines = await fetchMarketsKlines(marketNames[i], from, to);
 						setKlinesState(prev => [...prev, klines]);
 					}
-				} catch (error) {}
+				} catch (error) { }
 				return;
 			};
 			drawMarketLines();
@@ -167,34 +201,40 @@ export const NewMarketSlick: React.FC<any> = () => {
 			const open = Number((marketTickers[market.id] || defaultTicker).open);
 			const price_change_percent = (marketTickers[market.id] || defaultTicker).price_change_percent;
 			const change = +last - +open;
-			const marketChangeColor = +(change || 0) < 0 ? 'var(--system-red)' : 'var(--system-green)';
+			const marketChangeColor = +(change || 0) < 0 ? 'var(--asks)' : 'var(--bids)';
 			const price_change_percent_change = +(change || 0) < 0 ? Down : Up;
-			return (
+			const baseCurrency = marketID.split('/')[0];
+			const findIcon = (code: string): string => {
+				const market = markets.find((currency: any) => String(currency.id).toLowerCase() === code.toLowerCase());
+				try {
+					return require(`../../../node_modules/cryptocurrency-icons/svg/color/${code.toLowerCase()}.svg`);
+				} catch (err) {
+		
+					return require('../../../node_modules/cryptocurrency-icons/svg/color/generic.svg');
+				}
+			};
+			return ( 
 				<MarketChartItem>
-					<div className="container" onClick={() => handleRedirectToTrading(market.id)}>
-						<div className="row">
-							<div className="col-12 d-flex justify-content-between">
-								<div className="d-flex justify-content-between">
-									<span style={{ fontSize: '14px', margin: '5px', color: '#8D8D8D' }}>
-										{marketID.toUpperCase()}
-									</span>
-								</div>
-								<div className="col-6 d-flex justify-content-end align-items-center">
-									<span style={{ marginRight: '5px', color: marketChangeColor, fontWeight: 'bold' }}>
-										{price_change_percent}
-									</span>
-								</div>
-							</div>
+					<div className="container-ticker" onClick={() => handleRedirectToTrading(market.id)}>
+						<div className="tickerIcon">
+							<img style={{ borderRadius: '50%' }} width="38px" height="38px" src={findIcon(baseCurrency)} />
 						</div>
-						<div className="row d-flex justify-content-between">
-							<div className="d-flex justify-content-start align-items-center">
-								<span style={{ marginLeft: '20px', fontSize: '16px', color: '#fff' }}>{last}</span>
+						<div className="tickerInfo" style={{borderRight: '1px solid rgb(66, 66, 66)', marginRight: '-15px', marginTop: '4px', paddingRight: '6px'}}>
+							<div style={{display: 'flex', flexDirection: 'row',  justifyContent: 'space-between',alignContent: 'space-between', fontSize: '16px', color: "whiteSmoke",}}>
+
+								<span>{market.base_unit.toUpperCase()}</span>
+								<span>{last}</span>
+								
 							</div>
-							<div style={{ marginRight: '40px' }}>
-								<img src={price_change_percent_change} alt="price_change_percent_change" />
+							<div style={{display: 'flex', flexDirection: 'row',  justifyContent: 'space-between',alignContent: 'space-between', fontSize: '16px', marginTop: '-4px'}}>
+								<span style={{ fontSize: '16px', fontWeight: 'bold', color:  marketChangeColor }}>{price_change_percent}</span>
+								<img src={price_change_percent_change} alt="price_change_percent_change"/>
+
+
 							</div>
 						</div>
 					</div>
+
 				</MarketChartItem>
 			);
 		}
@@ -203,15 +243,27 @@ export const NewMarketSlick: React.FC<any> = () => {
 
 	return (
 		<ChartWrap>
-			<div className="market-slick" style={{ borderRadius: '1rem', padding: 50}}>
-				<div>
+
+				<div className='slide-track market-slick ' style={{ paddingTop: '-80px', width: '240px', height: '62px',  border: '1px solid rgb(66, 66, 66)', borderRight: 'none',  zIndex: 9999, }}>  {MarketChart(kLinesState[1], "BTC/USDT")}</div>
+				<div className="market-slick" style={{ borderRadius: '1rem', marginLeft: '246px', marginTop: '-62px' }}>
+				
+					<div>
+					
 					<Slider {...settings}>
+				
+					
 						{kLinesState.map((kline, i) => (
 							<div key={i}>{MarketChart(kline, marketNames[i])}</div>
 						))}
 					</Slider>
-				</div>
+					</div>
+				
+					
+				
 			</div>
+
 		</ChartWrap>
 	);
+
+
 };

@@ -512,7 +512,7 @@ export const pt = {
 	'page.footer.legalDocuments': 'Legal documents',
 	'page.footer.faq': 'FAQ',
 
-	'page.header.signIn': 'Entrar',
+	'page.header.signIn': 'Acessar plataforma',
 	'page.header.signIn.email': 'Email',
 	'page.header.signIn.password': 'Senha',
 	'page.header.signIn.password.message.error': 'Senha inválida',
@@ -926,6 +926,9 @@ export const pt = {
 
 	'page.referral.link.copy.success': 'Successfully copied!',
 
+	'page.homePage.trade.btn.trade': 'Negociar',
+
+	'page.homePage.trade.btn.signup': 'Abra sua conta',
 	...nationalitiesNames,
 	...customTranslations,
 };

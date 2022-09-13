@@ -893,6 +893,10 @@ export const en = {
 
 	'page.referral.link.copy.success': 'Successfully copied!',
 
+	'page.homePage.trade.btn.trade': 'Negociar',
+
+	'page.homePage.trade.btn.signup': 'Abra sua conta',
+
 	...nationalitiesNames,
 	...customTranslations,
 };

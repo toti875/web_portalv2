@@ -24,3 +24,4 @@ export * from './useAnnouncementFetch';
 export * from './useAllChildCurrenciesFetch';
 export * from './useAirdropCoinFetch';
 export * from './useAirdropCoinClaimFetch';
+export * from './useCurrenciesFetchInterval';

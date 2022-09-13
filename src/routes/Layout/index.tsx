@@ -93,6 +93,8 @@ import {
 	FortemIOHomePage,
 	PortfolioScreen,
 	QuickExchange,
+	LandingScreen,
+	DocumentationScreen,
 } from '../../screens';
 
 import { WalletsScreen } from '../../v2/src/screens/WalletsScreen'
@@ -104,9 +106,6 @@ import SignInBasic from "../../ui_vision/layouts/Banner";
 import SignUpBasic from "../../ui_vision/layouts/Banner";
 
 import ConfirmBasic from "../../ui_vision/layouts/Banner"
-
-
-
 
 
 
@@ -463,6 +462,9 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					<Route path="/500" component={MaintenanceScreen} />
 					<Route exact={false} path="/market/:market?" component={TradingScreen} />
 					<Route exact={true} path="/" component={FortemIOHomePage} />
+					<Route exact={true} path="/landing" component={LandingScreen} />
+					<Route exact={true} path="/doc" component={DocumentationScreen} />
+
 					<Route exact={false} path="/fee" component={AssetsFeeScreen} />
 					<Route exact path="/markets" component={MarketsList} />
 					<Route path="/announcement" exact component={AnnouncementScreen} />
@@ -569,9 +571,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					<Route path="/trading-competition/:competition_id" exact component={CompetitionDetailScreen} />
 					<Route path="/stake" exact component={StakingListScreen} />
 					<Route path="/stake/detail/:stake_id" exact component={StakingDetailScreen} />
-					<Route path="**">
-						<Redirect to="/market/" />
-					</Route>
+
 
 				</Switch>
 				{isLoggedIn && <WalletsFetch />}

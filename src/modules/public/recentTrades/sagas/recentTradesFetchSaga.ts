@@ -4,7 +4,7 @@ import { API, RequestOptions } from '../../../../api';
 import { recentTradesData, recentTradesError, RecentTradesFetch } from '../actions';
 
 const tradesOptions: RequestOptions = {
-	apiVersion: 'core',
+	apiVersion: 'ieo',
 };
 
 export function* recentTradesFetchSaga(action: RecentTradesFetch) {

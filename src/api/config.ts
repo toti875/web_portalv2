@@ -5,18 +5,19 @@ export const defaultConfig: Config = {
 		authzURL: 'http://demo.fortem-financial.io/api/v2/authz',
 		switchURL: 'http://demo.fortem-financial.io/api/v2/switch',
 		transactionURL: 'http://demo.fortem-financial.io/api/v2/fortem',
-		ieoURL: 'http://api.fortem-financial.io/api/v2/fortem',
+		ieoURL: 'http://www.yellow.com/api/v2/peatio',
 
-		downstreamURL: 'ws://demo.fortem-financial.io/api/v2/downstream',
+		//downstreamURL: 'ws://demo.fortem-financial.io/api/v2/downstream',
+		downstreamURL: 'ws://www.yellow.com/api/v2/ranger',
 	},
 	minutesUntilAutoLogout: '60',
 	rangerReconnectPeriod: '1', 
-	withCredentials: true,
+	withCredentials: false,
 	storage: {},
 	gaTrackerKey: 'G-M47QL88D4R',
 	msAlertDisplayTime: '10000',
 	msPricesUpdates: '1000',
-	incrementalOrderBook: true,
+	incrementalOrderBook: false,
 	finex: false,
 	isResizable: true,
 	isDraggable: true,
@@ -51,12 +52,12 @@ export const switchURL = () => Cryptobase.config.api.switchURL;
 export const ieoURL = () => Cryptobase.config.api.ieoURL;
 export const downstreamURL = () => Cryptobase.config.api.downstreamURL;
 export const minutesUntilAutoLogout = (): string => Cryptobase.config.minutesUntilAutoLogout || '15';
-export const withCredentials = () => Cryptobase.config.withCredentials;
+export const withCredentials = () => Cryptobase.config.withCredentials || false;
 export const defaultStorageLimit = () => Cryptobase.config.storage.defaultStorageLimit || STORAGE_DEFAULT_LIMIT;
 export const orderBookSideLimit = () => Cryptobase.config.storage.orderBookSideLimit || ORDER_BOOK_DEFAULT_SIDE_LIMIT;
 export const gaTrackerKey = (): string => Cryptobase.config.gaTrackerKey || 'G-M47QL88D4R';
 export const msAlertDisplayTime = (): string => Cryptobase.config.msAlertDisplayTime || '10000';
-export const msPricesUpdates = () => Cryptobase.config.msPricesUpdates;
+export const msPricesUpdates = () => Cryptobase.config.msPricesUpdates || '1000'
 export const rangerReconnectPeriod = (): number =>
 	Cryptobase.config.rangerReconnectPeriod ? Number(Cryptobase.config.rangerReconnectPeriod) : 1; 
 export const incrementalOrderBook = (): boolean => Cryptobase.config.incrementalOrderBook || true;
@@ -71,4 +72,4 @@ export const passwordEntropyStep = (): number => Cryptobase.config.passwordEntro
 export const showLanding = (): boolean => Cryptobase.config.showLanding;
 export const sentryEnabled = () => Cryptobase.config.sentryEnabled || defaultConfig.sentryEnabled;
 export const kycSteps = (): string[] => Cryptobase.config.kycSteps || DEFAULT_KYC_STEPS;
-export const isUsernameEnabled = (): boolean => Cryptobase.config.usernameEnabled;
+export const isUsernameEnabled = (): boolean => true;

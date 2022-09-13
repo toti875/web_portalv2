@@ -1,3 +1,4 @@
+import { createBrowserHistory } from 'history';
 import * as React from 'react';
 import * as ReactGA from 'react-ga';
 import { IntlProvider } from 'react-intl';
@@ -5,12 +6,10 @@ import { useSelector } from 'react-redux';
 import { Router } from 'react-router';
 import { gaTrackerKey } from './api';
 import { ErrorWrapper } from './containers';
-import { useSetMobileDevice } from './hooks';
+import { useCurrenciesFetchInterval, useSetMobileDevice } from './hooks';
 import * as mobileTranslations from './mobile/translations';
-import { createBrowserHistory } from 'history';
 import { selectCurrentLanguage, selectMobileDeviceState } from './modules';
 import { languageMap } from './translations';
-
 const gaKey = gaTrackerKey();
 const browserHistory = createBrowserHistory();
 
@@ -35,21 +34,8 @@ const CustomizationContainer = React.lazy(() =>
 );
 const FooterContainer = React.lazy(() => import('./containers/Footer').then(({ Footer }) => ({ default: Footer })));
 const HeaderContainer = React.lazy(() => import('./containers/Header').then(({ Header }) => ({ default: Header })));
-const HeaderNavbarContainer = React.lazy(() => import('./containers/HeaderNavbar').then(({ HeaderNavbar }) => ({ default: HeaderNavbar })));
-const HeaderAuthToolbarContainer = React.lazy(() => import('./containers/HeaderAuthToolbar').then(({ HeaderAuthToolbar }) => ({ default: HeaderAuthToolbar })));
-
 const SidebarContainer = React.lazy(() => import('./containers/Sidebar').then(({ Sidebar }) => ({ default: Sidebar })));
-const SBToggler = React.lazy(() =>
-	import('./containers/SideBarToggle').then(({ SideBarToggle }) => ({ default: SideBarToggle })),
-);
 const LayoutContainer = React.lazy(() => import('./routes').then(({ Layout }) => ({ default: Layout })));
-const NavBarContainer = React.lazy(() =>
-	import('./containers/NavBar').then(({ NavBar }) => ({ default: NavBar })),
-);
-
-
-
-
 
 const getTranslations = (lang: string, isMobileDevice: boolean) => {
 	if (isMobileDevice) {
@@ -61,8 +47,7 @@ const getTranslations = (lang: string, isMobileDevice: boolean) => {
 
 	return languageMap[lang];
 };
-//<SBToggler />
-//<SidebarContainer />
+
 const RenderDeviceContainers = () => {
 	const isMobileDevice = useSelector(selectMobileDeviceState);
 
@@ -80,16 +65,17 @@ const RenderDeviceContainers = () => {
 	return (
 		<React.Fragment>
 			<HeaderContainer />
-			<HeaderAuthToolbarContainer />
-			<CustomizationContainer />
+			<SidebarContainer />
+
 			<AlertsContainer />
 			<LayoutContainer />
-
+			<FooterContainer />
 		</React.Fragment>
 	);
 };
 
 export const App = () => {
+	useCurrenciesFetchInterval();
 	useSetMobileDevice();
 	const lang = useSelector(selectCurrentLanguage);
 	const isMobileDevice = useSelector(selectMobileDeviceState);

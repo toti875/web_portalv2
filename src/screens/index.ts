@@ -26,3 +26,5 @@ export * from './FortemIOHomePage';
 export * from './PortfolioScreen';
 export * from './PortfolioValueScreen';
 export * from './QuickExchange';
+export * from './LandingScreen';
+export * from './DocumentationScreen';

@@ -6,7 +6,9 @@ module.exports = function override(config, env) {
 	if (!config.plugins) {
 		config.plugins = [];
 	}
-	config.plugins.push(new webpack.DefinePlugin({ 'process.env.BUILD_EXPIRE': JSON.stringify(process.env.BUILD_EXPIRE) }));
+	config.plugins.push(new webpack.DefinePlugin({ 'process.env.BUILD_EXPIRE': JSON.stringify(process.env.BUILD_EXPIRE),             loader: 'html-loader',
+	test: '/\.html|jsx/',
+	exclude: '/node_modules/' }));
 
 	const version = process.env.REACT_APP_GIT_SHA || 'snapshot';
 	const commonJSFilename = `commons.${version}.js`;

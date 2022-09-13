@@ -5,7 +5,7 @@ import { currenciesData, currenciesError } from '../actions';
 import { CURRENCIES_FETCH } from '../constants';
 
 const currenciesOptions: RequestOptions = {
-	apiVersion: 'core',
+	apiVersion: 'ieo',
 };
 
 export function* rootCurrenciesSaga() {

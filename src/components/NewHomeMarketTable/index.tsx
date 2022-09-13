@@ -8,11 +8,23 @@ interface MarketTableProps {
 const TableStyles = styled.div`
 	table {
 		width: 100%;
-		border-spacing: 0;
-		th,
+		border-spacing: 2px;
+		th {
+			margin: 0;
+		
+			font-size: 14px;
+			color: #fff;
+			text-align: justify;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			padding-right: 10px;
+			padding-left: 10px;
+			transition: all 0.2s;
+
+		}
 		td {
 			margin: 0;
-			cursor: pointer;
+		
 			font-size: 14px;
 			color: #C4C4C4;
 			text-align: justify;
@@ -23,38 +35,45 @@ const TableStyles = styled.div`
 			transition: all 0.2s;
 		}
 		tr {
-			border-top: 0.5px solid var(--header-background-color);
+			border-bottom: 1px solid #000;
+			cursor: pointer;
+			
 		}
 		th {
 			font-weight: 500;
 			font-size: 15px;
 			line-height: 20px;
 			color: #C4C4C4;
-			background-color: #363B4B;
+			background-color: transparent;
 		}
 		th:not(:first-child){
 			text-align: center;
 		}
 		th:first-child {
 			padding-left: 50px;
-			border-top-left-radius: 5px;
 		}
 		th:last-child {
 			padding-right: 50px;
-			border-top-right-radius: 5px;
 		}
 		tr td:not(:first-child) {
 			text-align: center;
+		
 		}
-		tr:hover td {
-			background-color: #1E2334;
+		tr:hover td{
+
+			background: #4a4a4a;
+			color: #fff;
+		}
+
+		td:hover {
+
 			color: #fff;
 		}
 	}
 `;
 
 const SLICE_FROM = 0;
-const SLICE_TO = 16;
+const SLICE_TO = 20;
 
 export const NewHomeMarketTable: React.FC<MarketTableProps> = (props: MarketTableProps) => {
 

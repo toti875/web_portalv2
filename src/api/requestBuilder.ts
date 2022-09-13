@@ -62,10 +62,10 @@ const buildRequest = (request: Request, configData: RequestOptions) => {
 	const requestConfig: AxiosRequestConfig = {
 		baseURL: apiUrl,
 		data: body,
-		headers: { ...headers, ...defaultHeaders },
+		//headers: { defaultHeaders },
 		method,
 		url,
-		withCredentials: withCredentials(),
+		withCredentials: false,
 	};
 
 	return requestConfig;

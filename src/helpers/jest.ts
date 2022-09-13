@@ -17,7 +17,7 @@ const mockConfig: Config = {
 	},
 	minutesUntilAutoLogout: '30',
 	rangerReconnectPeriod: '1',
-	withCredentials: true,
+	withCredentials: false,
 	storage: {},
 	gaTrackerKey: '',
 	incrementalOrderBook: false,

@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const OrderStyle = styled.div`
+	font-weight: 500;
+	font-size: 13px;
 	height: 100%;
-	background-color: #313445;
+	background-color: #0b1426;
 	padding: 10px;
 	.rc-tabs {
 		display: flex;
@@ -21,7 +23,6 @@ export const OrderStyle = styled.div`
 				justify-content: center;
 				span {
 					color: #848e9c;
-					font-size: 14px;
 					margin-right: 5px;
 				}
 				button {
@@ -78,24 +79,25 @@ export const OrderStyle = styled.div`
 						.title-block {
 							.title-block-left {
 								color: white;
-								font-size: 16px;
+								font-size: 13px;
 								display: flex;
 								align-items: center;
 							}
 							.title-block-right {
-								font-size: 14px;
+								font-size: 13px;
 								display: flex;
 								justify-content: flex-end;
 								align-items: center;
 							}
 						}
 						.input-group {
-							background-color: rgba(132, 142, 156, 0.35);
+							background-color: transparent;
+							border: 1px solid #7a7e8b;
 							border-radius: 2px;
 							input,
 							span {
 								background: transparent;
-								font-size: 14px;
+								font-size: 13px;
 								outline: none;
 								border: none;
 							}
@@ -140,7 +142,7 @@ export const OrderStyle = styled.div`
 							}
 						}
 						.submit-order {
-							font-size: 14px;
+							font-size: 13px;
 							border-radius: 2px;
 							span {
 								font-weight: bold;
@@ -148,19 +150,23 @@ export const OrderStyle = styled.div`
 							}
 						}
 						.logger-order {
-							border-radius: 2px;
+							
+							border: 1px solid #1EBDB2;
+							border-radius: 5px;
 							height: 32px;
-							background-color: #4e5463;
+							background-color: transparent;
+
 							span {
 								margin: 0 5px;
 								line-height: 32px;
 							}
 							a {
-								font-size: 14px;
-								color: #2fb67e;
+								font-size: 15px;
+								color: white;
 								line-height: 32px;
 								:hover {
-									color: #2fb67e;
+									background-color: transparent;
+									color: white;
 								}
 							}
 						}
@@ -168,13 +174,19 @@ export const OrderStyle = styled.div`
 					.content-form-buy {
 						padding-right: 20px;
 						.submit-order {
-							background: var(--button-bids-background-color);
+							background: #13b887;
+							font-weight: 350;
+							font-size: 14px;
+							filter: brightness(110%);
 						}
 					}
 					.content-form-sell {
 						padding-left: 20px;
 						.submit-order {
-							background: var(--button-asks-background-color);
+							background: #ef5350;
+							font-weight: 350;
+							font-size: 14px;
+							filter: brightness(110%);							
 						}
 					}
 				}

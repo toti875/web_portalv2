@@ -13,13 +13,16 @@ export const HeaderToolbarStyle = styled.div`
 	display: flex;
 	justify-content: space-between;
 	height: 70px;
-	padding: 15px 30px;
-	background-color: #313445;
+	padding: 15px 15px;
+	background-color: #0b1426;
+	font-size: 13px;
 
 	.td-header__toolbar {
+
 		&--left {
 			display: flex;
 			height: 100%;
+			
 		}
 		&--right {
 			display: flex;
@@ -33,6 +36,7 @@ export const HeaderToolbarStyle = styled.div`
 		}
 		&-item,
 		&-item--hightlight {
+			font-size: 13px;
 			display: flex;
 			flex-flow: column;
 			justify-content: space-between;
@@ -52,15 +56,15 @@ export const HeaderToolbarStyle = styled.div`
 
 			&-title {
 				font-weight: 700;
-				font-size: 16px;
+				font-size: 15px;
 				color: #fff;
 				margin: 0;
 			}
 
 			&-text {
 				color: #848e9c;
-				font-weight: 400;
-				font-size: 11px;
+				font-weight: 500;
+				font-size: 13px;
 			}
 
 			&-value {
@@ -79,7 +83,7 @@ export const HeaderToolbarStyle = styled.div`
 
 				&-data {
 					color: wheat;
-					font-weight: 400;
+					font-weight: 500;
 				}
 			}
 		}
@@ -114,7 +118,7 @@ const HeaderToolbarContainer: React.FC = () => {
 	const bidUnit = currentMarket && currentMarket.quote_unit.toUpperCase();
 	const askUnit = currentMarket && currentMarket.base_unit.toUpperCase();
 	const amountPrecision = (currentMarket && currentMarket.amount_precision) || 6;
-	const pricePrecision = (currentMarket && currentMarket.price_precision) || 4;
+	const pricePrecision = (currentMarket && currentMarket.price_precision) || 2;
 
 	return (
 		<HeaderToolbarStyle>
@@ -152,10 +156,10 @@ const HeaderToolbarContainer: React.FC = () => {
 
 				<div className="td-header__toolbar-item">
 					<p className="td-header__toolbar-item-text">
-						{translate('page.body.trade.toolBar.volume')}({bidUnit})
+						{translate('page.body.trade.toolBar.volume')}
 					</p>
 					<p className={`td-header__toolbar-item-value td-header__toolbar-item-value-${cls}`}>
-						{Decimal.formatRemoveZero(Number(getTickerValue('volume')), amountPrecision)}
+						{Decimal.formatRemoveZero(Number(getTickerValue('volume')), amountPrecision)} {bidUnit}
 					</p>
 				</div>
 			</div>

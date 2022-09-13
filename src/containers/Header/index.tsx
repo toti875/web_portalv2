@@ -1,6 +1,8 @@
 import classNames from 'classnames';
 //import { TOGGLE_SIDEBAR } from 'modules/public/globalSettings/constants';
 import * as React from 'react';
+import {useState, useRef} from "react";
+
 import { FaAward, FaGift, FaHistory, FaSignOutAlt, FaStar, FaUserCircle, FaUserPlus } from 'react-icons/fa';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
@@ -8,6 +10,8 @@ import { Link, useHistory } from 'react-router-dom';
 import { logoutFetch, selectUserLoggedIn } from '../../modules';
 
 import { ProfileActiveStepAction } from 'containers/ProfileActiveStepAction';
+
+import useStickyHeader from "./useStickyHeader";
 
 
 const Logo = require('../../assets/images/logo_branca_bandeira_verde.svg');
@@ -22,7 +26,11 @@ export const Header: React.FC = () => {
 
 	const dispatch = useDispatch();
 
-	
+	let [check, setCheck] = useState(true);
+    const sticky = useStickyHeader( 50 );
+    const headerClasses = `header-default ${(sticky && check) ? 'sticky' : ''}`
+
+	const HeaderSTyle="header-transparent";
 
 	const setStateActiveNow = (nameActive: string) => {
 		setActiveNow(nameActive);
@@ -211,26 +219,21 @@ export const Header: React.FC = () => {
 			!isLoggedIn && (
 				<>
 					<div
-						className="header__right-menu__item flex-shrink-0 custom-poiter"
+						className="header__right-menu__items flex-shrink-0 custom-poiter"
 						onClick={e => {
 							redirectSingIn();
 							setStateActiveNow('login');
 						}}>
-							<div className="text-animated">Acessar Plataforma</div>
-						<div className="svg-wrapper" >
-						
-					
-						
-						<svg height="45px" width="330px" xmlns="http://www.w3.org/2000/svg">
-							
-							
-							<rect className="shape" height="30px" width="330px" />
-							
+							<div className={classLinkActiveLogin}>
+
+								<span >{translate('page.header.signIn')}</span>
+							</div>
+
+
 						
 								
-						
-						</svg>
-						</div>
+					
+
 					</div>
 					<div
 						className="header__right-menu__item flex-shrink-0 custom-poiter"
@@ -239,22 +242,24 @@ export const Header: React.FC = () => {
 							setStateActiveNow('register');
 						}}
 					>
-						<span className={classLinkActiveRegister}>{translate('page.body.homegape.header.button3')}</span>
+
+						<span className={classLinkActiveRegister}>{translate('page.header.signUp')}</span>
 					</div>
 				</>
 			)
 		);
 	};
-
+ 
 	return (
-	
-		<div className="headerDesktop-screen">
+		<>
+
+<header className={`headerDesktop-screen rn-header header-default ${HeaderSTyle} ${headerClasses}`}>		
 			<div className="container-header">
 				<nav className="header d-flex flex-row justify-content-between align-items-center">
 					<div className="header__left-menu d-flex flex-row align-items-center">
-						<div className="header__left-menu__logo" onClick={() => setStateActiveNow('')}>
+						<div className="header-logo" onClick={() => setStateActiveNow('')}>
 							<Link to="/">
-								<img src={Logo} alt="" />
+								<img src={Logo} alt=""  />
 							</Link>
 						</div>
 						
@@ -511,7 +516,9 @@ export const Header: React.FC = () => {
 					</div>
 				</nav>
 			</div>
-		</div>
+			</header>
+  
+  </>
 
 	);
 };

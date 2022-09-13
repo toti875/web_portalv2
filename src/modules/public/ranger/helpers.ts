@@ -5,6 +5,7 @@ import { marketStreams } from './actions';
 
 export const generateSocketURI = (baseUrl: string, s: string[]) => `${baseUrl}/?stream=${s.sort().join('&stream=')}`;
 
+
 export const formatTicker = (events: { [pair: string]: TickerEvent }): { [pair: string]: Ticker } => {
 	const tickers = {};
 	for (const market in events) {

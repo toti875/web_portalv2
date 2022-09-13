@@ -24,24 +24,28 @@ export const pt = {
 	'page.body.airdropCoin.claim.msg.fail': 'Claim fail',
 
     /* Quick Exchange */
-    'page.body.quick.exchange.header': 'Quick Exchange',
+    'page.body.quick.exchange.header': 'Conversão de moedas',
 
     'page.body.quick.exchange.label.exchange': 'You exchange',
     'page.body.quick.exchange.label.receive': 'You receive',
     'page.body.quick.exchange.label.currency': 'Currency',
 
     'page.body.quick.exchange.sublabel.min_amount': 'Min exchange amount is',
-    'page.body.quick.exchange.sublabel.balance': 'Balance',
+    'page.body.quick.exchange.sublabel.balance': 'Saldo',
 
-    'page.body.quick.exchange.estimated_price': 'Estimated price',
+    'page.body.quick.exchange.estimated_price': 'Valor aproximado',
     'page.body.quick.exchange.slippage': 'Slippage is higher than 1%. Enter a lower amount to get a better price',
 
     'page.body.quick.exchange.placeholder.exchange': 'You exchange',
     'page.body.quick.exchange.placeholder.receive': 'You receive',
 
-    'page.body.quick.exchange.button.exchange': 'Exchange',
+    'page.body.quick.exchange.button.exchange': 'Converter',
 
-    'success.quick.exchange.order.created': 'Order successfully created',
+    'success.quick.exchange.order.created': 'Ordem enviada com sucesso',
+
+	'page.homePage.trade.btn.trade': 'Negociar',
+
+	'page.homePage.trade.btn.signup': 'Abra sua conta',
 
 
 };

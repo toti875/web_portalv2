@@ -1,15 +1,18 @@
 import * as Sentry from '@sentry/browser';
-import 'antd/dist/antd.dark.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'antd/dist/antd.dark.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { WrappedComponentProps } from 'react-intl';
 import { Provider } from 'react-redux';
-import 'slick-carousel/slick/slick-theme.css';
-import 'slick-carousel/slick/slick.css';
+//import 'slick-carousel/slick/slick-theme.css';
+//import 'slick-carousel/slick/slick.css';
 import { sentryEnabled } from './api/config';
 import { App } from './App';
 import './index.css';
+import './template_react/doob/src/assets/scss/style.scss';
+import './blockchain.css';
+
 import { rootSaga } from './modules';
 import { rangerSagas } from './modules/public/ranger';
 import { rangerMiddleware, sagaMiddleware, store } from './store';
@@ -46,6 +49,7 @@ const render = () =>
 	ReactDOM.render(
 		
 		<Provider store={store}>
+			
 			<App />
 		</Provider>,
 		document.getElementById('root') as HTMLElement,

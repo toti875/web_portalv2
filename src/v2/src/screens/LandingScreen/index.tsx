@@ -93,7 +93,7 @@ class Landing extends React.Component<Props> {
         );
     }
 
-    public renderMarketInfoBlock() {
+    public renderMarketInfoBlock() { 
         return (
             <div className="pg-landing-screen__market-info">
                 <div className="pg-landing-screen__market-info__wrap">

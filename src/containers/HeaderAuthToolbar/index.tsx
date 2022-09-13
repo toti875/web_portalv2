@@ -10,6 +10,8 @@ import { logoutFetch, selectUserLoggedIn } from '../../modules';
 
 import { NavBar } from '../NavBar';
 
+import './HeaderAuthToolbar.pcss';
+
 const IconWallet = require('../../assets/svg/wallet2.svg');
 const IconDashboard = require('../../assets/svg/dashboard2.svg');
 

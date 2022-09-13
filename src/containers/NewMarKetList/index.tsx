@@ -55,7 +55,7 @@ const MarketChartItem = styled.div`
 	}
 `;
 
-const BASE_MARKET_URL = 'http://demo.fortem-financial.io/api/fortem/public/markets';
+const BASE_MARKET_URL = 'http://www.yellow.com/api/v2/peatio/public/markets';
 
 export const NewMarketList: React.FC<any> = () => {
 	const defaultTicker = {

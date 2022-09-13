@@ -47,4 +47,8 @@ export const en = {
 		'page.body.quick.exchange.button.exchange': 'Exchange',
 	
 		'success.quick.exchange.order.created': 'Order successfully created',
+
+		'page.homePage.trade.btn.trade': 'Negociar',
+
+		'page.homePage.trade.btn.signup': 'Abra sua conta',
 };

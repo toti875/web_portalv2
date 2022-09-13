@@ -163,7 +163,7 @@ const MarketsListTradingComponent: React.FC<MarketsListTradingComponentProps> = 
 
 	return (
 		<MarketsListTradingStyle>
-			<div className="td-markets-trading-list-container pisca3">
+			<div className="td-markets-trading-list-container">
 				<TableTrading
 					data={dataTable.length > 0 ? dataTable : [[]]}
 					header={getHeaders()}

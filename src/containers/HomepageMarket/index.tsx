@@ -32,7 +32,7 @@ export const HomepageMarket = props => {
 		if (currentMarket) {
 			props.handleChangeCurrentMarket && props.handleChangeCurrentMarket(currentMarket);
 			dispatch(setCurrentMarket(currentMarket));
-			history.push(`/trading/${currentMarket.id}`);
+			history.push(`/market/${currentMarket.id}`);
 		}
 	};
 
@@ -65,7 +65,7 @@ export const HomepageMarket = props => {
 						low: Decimal.format(Number((marketTickers[market.id] || defaultTicker).low), market.price_precision),
 						volume: Decimal.format(
 							Number((marketTickers[market.id] || defaultTicker).volume),
-							market.amount_precision,
+							2,
 						),
 					};
 				})
@@ -75,7 +75,7 @@ export const HomepageMarket = props => {
 				}))
 
 				.map(market => {
-					const marketChangeColor = +(market.change || 0) < 0 ? '#E01E5A' : '#2FB67E';
+					const marketChangeColor = +(market.change || 0) < 0 ? '#D92121' : '#00CC99';
 					const marketName = market.name.split('/');
 					const marketID = market.name.toUpperCase();
 					const baseCurrency = marketID.split('/')[0];
@@ -85,17 +85,17 @@ export const HomepageMarket = props => {
 						name: (
 							<div className="d-flex flex-row align-items-center">
 								<img width="30px" height="30px" src={findIcon(baseCurrency)} alt="marketName" />
-								<span style={{ color: '#737f92', marginLeft: 8 }}>{marketName[0]}</span>
-								<span style={{ color: '#737f92' }}>/</span>
-								<span style={{ color: '#737f92' }}>{marketName[1]}</span>
+								<span style={{ color: '#c4c4c4', marginLeft: 8 }}>{marketName[0]}</span>
+								<span style={{ color: '#c4c4c4' }}>/</span>
+								<span style={{ color: '#c4c4c4' }}>{marketName[1]}</span>
 							</div>
 						),
 						last: (
 							<span style={{ color: marketChangeColor }} className="d-flex flex-row align-items-center">
 								{market.last}
-								<p className="m-0 ml-3" style={{ color: 'rgb(115 127 146)' }}>
-									$ <ConvertUsd value={+market.last} symbol={marketName[1]} />
-								</p>
+									{/*<p className="m-0 ml-3" style={{ color: 'rgb(115 127 146)' }}>
+										$ <ConvertUsd value={+market.last} symbol={marketName[1]} />
+									</p>*/}
 							</span>
 						),
 						open: <span style={{ color: marketChangeColor }}>{market.open}</span>,
@@ -107,7 +107,7 @@ export const HomepageMarket = props => {
 								onClick={() => handleRedirectToTrading(market.id)}
 								className="home-market__trading-btn"
 							>
-								Trade
+								Negociar
 							</button>
 						),
 					};

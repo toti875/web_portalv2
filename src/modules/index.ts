@@ -188,6 +188,7 @@ export interface RootState {
 	info: {
 		events: EventsState;
 		announcement: AnnouncementState;
+		//statistic: StatisticState;
 	};
 
 	public: {

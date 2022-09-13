@@ -18,17 +18,30 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 	right: 0;
 	height: calc(100% - 6px);
 	color: white;
+	
+	font-weight: 500;
 	padding: 0 10px;
+	background-color: #0b1426;
 	.td-order-book {
-		background-color: #313445;
+		background-color: #0b1426;
+		animation:        flashX 2.5s ;
 		height: 100%;
+		font-weight: 500;
 		padding-top: 10px;
 		padding-bottom: 15px;
 		&-item__negative {
-			color: var(--header-negative-text-color);
+			color: #ef5350;
+			webkit-animation: flash_red 2.5s ; /* Safari 4+ */
+			moz-animation:    flash_red 2.5s ; /* Fx 5+ */
+			o-animation:      flash_red 2.5s ; /* Opera 12+ */
+			animation:         flash_red 2.5s ; /* IE 10+ */	
 		}
 		&-item__positive {
-			color: var(--header-positive-text-color);
+			color: #13b887;
+			webkit-animation: flash_green 2.5s ; /* Safari 4+ */
+			moz-animation:    flash_green 2.5s ; /* Fx 5+ */
+			o-animation:      flash_green 2.5s ; /* Opera 12+ */
+			animation:         flash_green 2.5s ; /* IE 10+ */	
 		}
 		&-tooltip {
 			bottom: 200px;
@@ -43,7 +56,10 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 			height: ${OrderBookStyleVar.tbHeadHeight};
 			padding-top: 6px;
 			padding-bottom: 6px;
-			color: #848e9c;
+			color: #7a7e8b;
+			font-size: 13px;
+			filter: brightness(130%);
+
 			> div {
 				display: inline-block;
 				width: 28%;
@@ -58,10 +74,10 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 			margin: 5px 18px !important;
 			font-size: 14px;
 			&__last-price {
-				font-size: 20px;
+				font-size: 18px;
 			}
 			&__usd {
-				color: #848e9c;
+				color: #0b1426 ;
 			}
 		}
 		&-table {
@@ -78,12 +94,15 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 			thead,
 			tbody {
 				display: block;
+				animation:        flashX 2.5s ;
 				tr {
 					display: block;
 					background-color: transparent;
 					cursor: pointer;
+					animation:        flashX 2.5s ;
 					:hover {
-						background-color: #4e5463;
+						background-color: #0b1426 ;
+						animation:        flashX 2.5s ;
 					}
 					td,
 					th {
@@ -103,13 +122,18 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 			tbody {
 				height: 100%;
 				overflow-y: scroll;
+				animation:        flashX 2.5s ;
 				tr {
 					margin-top: 1px;
 					margin-bottom: 1px;
-					webkit-animation: pisca4 2.5s ; /* Safari 4+ */
-					moz-animation:    pisca4 2.5s ; /* Fx 5+ */
-					o-animation:      pisca4 2.5s ; /* Opera 12+ */
-					animation:         pisca4 2.5s ; /* IE 10+ */
+					animation:        flashX 2.5s ;
+					
+					webkit-animation: flash_green 2.5s ; /* Safari 4+ */
+					moz-animation:    flash_green 2.5s ; /* Fx 5+ */
+					o-animation:      flash_green 2.5s ; /* Opera 12+ */
+					animation:         flash_green 2.5s ; /* IE 10+ */
+					
+					
 					td {
 						height: 100%;
 					}
@@ -117,18 +141,23 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 			}
 			&.td-reverse-table-body {
 				tbody {
+					animation:        flashX 2.5s ;
 					transform: rotate(180deg);
 					.td-order-book-table__empty_data {
-						transform: rotate(180deg);
+						transform: rotate(180deg);					
 					}
 					tr {
 						direction: rtl;
-						webkit-animation: pisca3 2.5s ; /* Safari 4+ */
-						moz-animation:    pisca3 2.5s ; /* Fx 5+ */
-						o-animation:      pisca3 2.5s ; /* Opera 12+ */
-						animation:         pisca3 2.5s ; /* IE 10+ */
+						webkit-animation: flash_red 2.5s ; /* Safari 4+ */
+						moz-animation:    flash_red 2.5s ; /* Fx 5+ */
+						o-animation:      flash_red 2.5s ; /* Opera 12+ */
+						animation:         flash_red 2.5s ; /* IE 10+ */	
 						td {
 							transform: rotate(180deg);
+							webkit-animation: flash_red 2.5s ; /* Safari 4+ */
+							moz-animation:    flash_red 2.5s ; /* Fx 5+ */
+							o-animation:      flash_red 2.5s ; /* Opera 12+ */
+							animation:        flash_red 2.5s ; /* IE 10+ */	
 						}
 					}
 				}
@@ -136,43 +165,44 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 		}
 	}
 
-
-	@-webkit-keyframes pisca4 {
+	@-webkit-keyframes flash_red {
 		from { background-color: #ef5350  ; }
 		to { background-color: transparent; }
 	  }
-	  @-moz-keyframes pisca4 {
+	  @-moz-keyframes flash_red {
 		from { background-color: #ef5350  ; }
 		to { background-color: transparent; }
 	  }
-	  @-o-keyframes pisca4 {
+	  @-o-keyframes flash_red {
 		from { background-color: #ef5350  ; }
 		
 		to { background-color: transparent; }
 	  }
-	  @keyframes pisca4 {
+	  @keyframes flash_red {
 		from { background-color: #ef5350 ; }
 		to { background-color: transparent; }
 	  }
 
 
-	@-webkit-keyframes pisca3 {
+	@-webkit-keyframes flash_green {
 		from { background-color: #13b887 ; }
 		to { background-color: transparent; }
 	  }
-	  @-moz-keyframes pisca3 {
+	  @-moz-keyframes flash_green {
 		from { background-color: #13b887 ; }
 		to { background-color: transparent; }
 	  }
-	  @-o-keyframes pisca3 {
+	  @-o-keyframes flash_green {
 		from { background-color: #13b887 ; }
-		
 		to { background-color: transparent; }
 	  }
-	  @keyframes pisca3 {
+	  @keyframes flash_green {
 		from { background-color: #13b887; }
 		to { background-color: transparent; }
 	  }
+
+
+
 
 
 
@@ -187,6 +217,10 @@ interface TrProps {
 export const TrStyle = styled.tr<TrProps>`
 	position: relative;
 	z-index: 5;
+	webkit-animation: flashX 2s ; /* Safari 4+ */
+	moz-animation:    flashX 2s ; /* Fx 5+ */
+	o-animation:      flashX 2s ; /* Opera 12+ */
+	animation:         flashX 2s ; /* IE 10+ */		
 	&:after {
 		content: '';
 		position: absolute;
@@ -197,28 +231,27 @@ export const TrStyle = styled.tr<TrProps>`
 		background-color: ${(props: TrProps) => props.color};
 		width: ${(props: TrProps) => props.percentWidth}%;
 		z-index: -5;
-		webkit-animation: piscaX 2s ; /* Safari 4+ */
-		moz-animation:    piscaX 2s ; /* Fx 5+ */
-		o-animation:      piscaX 2s ; /* Opera 12+ */
-		animation:         piscaX 2s ; /* IE 10+ */
+		webkit-animation: flashX 2s ; /* Safari 4+ */
+		moz-animation:    flashX 2s ; /* Fx 5+ */
+		o-animation:      flashX 2s ; /* Opera 12+ */
+		animation:         flashX 2s ; /* IE 10+ */		
 	}
-	@-webkit-keyframes piscaX {
-		from { background-color: ${(props: TrProps) => props.color}; }
-		to { background-color: transparent; }
-	  }
-	  @-moz-keyframes piscaX {
-		from { background-color: ${(props: TrProps) => props.color}; }
-		to { background-color: transparent; }
-	  }
-	  @-o-keyframes piscaX {
-		from { background-color: ${(props: TrProps) => props.color}; }
-		
-		to { background-color: transparent; }
-	  }
-	  @keyframes piscaX {
-		from { background-color: ${(props: TrProps) => props.color}; }
-		to { background-color: transparent; }
-	  }
 
+	@-webkit-keyframes flashX {
+		from { background-color: ${(props: TrProps) => props.color}; }
+		to { background-color: transparent; }
+	  }
+	  @-moz-keyframes flashX {
+		from { background-color: ${(props: TrProps) => props.color}; }
+		to { background-color: transparent; }
+	  }
+	  @-o-keyframes flashX {
+		from { background-color: ${(props: TrProps) => props.color}; }
+		to { background-color: transparent; }
+	  }
+	  @keyframes flashX {
+		from { background-color: ${(props: TrProps) => props.color}; }
+		to { background-color: transparent; }
+	  }
 	
 `;

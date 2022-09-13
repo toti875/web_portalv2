@@ -193,35 +193,35 @@ const Login = React.memo((props: LogInProps) => {
 				)}
 				<div className="cr-sign-in-form__form-content">
 					<div
-						className='text'
+						className='text-header-login'
 					>
 						Faça o login com o email utilizado no cadastro
 					</div>
 
 				
-					<div className="input-group ">
+					<div className="input-group">
   
 						<FormInput
 							
-							classNameInput="input-group "
+							classNameInput="input-login"
 							type="input-group"
-							label={emailLabel || 'Digite seu email'}
+							label={emailLabel || 'Email'}
 							placeholder={emailPlaceholder}
-							defaultLabel="Digite seu e-mail"
+							defaultLabel="Email"
 							handleChangeInput={handleChangeEmail}
 							inputValue={email}
 							handleFocusInput={() => handleFieldFocus('email')}
-							classNameLabel="cr-sign-in-form__label "
+							classNameLabel="cr-sign-in-form__label"
 							autoFocus={true}
 						/>
 						{emailError && <div className={'cr-sign-in-form__error'}>{emailError}</div>}
-					</div>
-					<div className={passwordGroupClass}>
+				
 						<FormInput
+							classNameInput="input-login"
 							type="password"
-							label={passwordLabel || 'Password'}
+							label={passwordLabel || 'Senha'}
 							placeholder={passwordPlaceholder}
-							defaultLabel="Password"
+							defaultLabel="Senha"
 							handleChangeInput={handleChangePassword}
 							inputValue={password}
 							handleFocusInput={() => handleFieldFocus('password')}

@@ -4,7 +4,7 @@ import { API, RequestOptions } from '../../../../api';
 import { orderBookData, orderBookError, OrderBookFetch } from '../actions';
 
 const orderBookOptions: RequestOptions = {
-	apiVersion: 'core',
+	apiVersion: 'ieo',
 };
 
 export function* orderBookSaga(action: OrderBookFetch) {

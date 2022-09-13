@@ -4,9 +4,11 @@ import { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
 //  import styled from "styled-components";
-import { /* FaPhoneAlt, */ FaEnvelope, FaFacebook, FaTelegram, FaTwitter /* , FaGlobe */ } from 'react-icons/fa';
+import {  FaPhoneAlt, FaEnvelope, FaFacebook, FaTelegram, FaTwitter, FaGlobe } from 'react-icons/fa';
 
 const Logo = require('../../assets/images/logo2.svg');
+
+const logoTechno = require ('../../assets/svg/branco_techno_bandeira_verde.svg')
 
 export const Footer: React.FC = Props => {
 	const history = useHistory();
@@ -39,28 +41,31 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress) => {
 			<div className="container-footer-screen">
 				<div className="footer d-flex flex-row justify-content-between ">
 					<div className="footer__logo">
+					<div className="footer__info">
+						<p className="footer__info__title">POWERED BY:</p>
 						<a className="footer__logo__img" href="/">
-							<img src={Logo} alt="" />
+							<img src={logoTechno} alt="" style={{width: '220px'}}/>
 						</a>
 					</div>
+					</div>
 
 					<div className="footer__info">
-						<p className="footer__info__title">CONTACT</p>
-						{/* <p className="footer__info__item">
-							<FaPhoneAlt className="footer__info__item__icon" /> 0905333999
-						</p> */}
+						<p className="footer__info__title">CONTATO</p>
 						<p className="footer__info__item">
-							<FaEnvelope className="footer__info__item__icon" /> contact@fortem-financial.io
+							<FaPhoneAlt className="footer__info__item__icon" /> (11) - 3000-2022
+						</p>
+						<p className="footer__info__item">
+							<FaEnvelope className="footer__info__item__icon" /> contato@fortem-financial.io
 						</p>
 					</div>
 
 					<div className="footer__info">
-						<p className="footer__info__title">SERVICE SUPPORT</p>
+						<p className="footer__info__title">SUPORTE</p>
 						<p className="footer__info__item">
-							<Link to="/fee">Asset Fee </Link>
+							<Link to="/fee">Taxas </Link>
 						</p>
 						<p className="footer__info__item">
-							<Link to="/announcement">Announcements </Link>
+							<Link to="/announcement">Informes </Link>
 						</p>
 						<p className="footer__info__item">
 							<a href="https://forms.gle/2eH6ia3XSTyzn2TR6" target="blank">
@@ -69,25 +74,25 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress) => {
 						</p>
 						<p className="footer__info__item">
 							<a href="https://api.fortem-financial.io" target="blank">
-								API Documentation
+								Documentação API
 							</a>
 						</p>
 					</div>
 
 					<div className="footer__news">
-						<p className="footer__news__title">RECEIVE NEWS</p>
+						<p className="footer__news__title">Receba nossa newsletter</p>
 
 						<div className="footer__news__take-email">
-							<div className="footer__news__take-email__label">Your email</div>
+							<div className="footer__news__take-email__label">Email</div>
 							<input
 								className="footer__news__take-email__input"
-								placeholder="enter your email"
+								placeholder="Digite seu email"
 								type="email"
 								value={valueInput}
 								onChange={inputEmail}
 							/>
 							<span className="footer__news__take-email__btn" onClick={sendEmail}>
-								Send
+								Enviar
 							</span>
 						</div>
 
@@ -117,7 +122,7 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress) => {
 				<div className="white-line"></div>
 
 				<p className="footer__copyright">
-					© 2022 Copyright : <a href="https://demo.fortem-financial.io/"> demo-fortem-financial.io </a>
+					Fortem ONE © 2022 Copyright : <a href="https://demo.fortem-financial.io/"> fortem-financial.io </a> 
 				</p>
 			</div>
 		</div>
