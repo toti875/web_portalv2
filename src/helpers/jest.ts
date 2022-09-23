@@ -14,6 +14,7 @@ const mockConfig: Config = {
 		switchURL: '/api/v2/switch',
 		downstreamURL: '/api/v2/downstream',
 		ieoURL: '/api/v2/ieo',
+		infoURL: '/api/v2/ieo',
 	},
 	minutesUntilAutoLogout: '30',
 	rangerReconnectPeriod: '1',

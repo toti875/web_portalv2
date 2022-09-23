@@ -3,6 +3,8 @@ import {
 	switchURL,
 	authzURL,
 	ieoURL,
+	infoURL,
+
 	transactionURL,
 	withCredentials,
 
@@ -17,11 +19,7 @@ export interface JsonBody {
 }
 
 export interface RequestOptions {
-	apiVersion:
-		| 'switch'
-		| 'core'
-		| 'authz'
-		| 'ieo';
+	apiVersion: 'switch'	| 'core'	| 'authz'	| 'ieo' |	'info'  ;
 	withHeaders?: boolean;
 	headers?: Object;
 }
@@ -44,6 +42,7 @@ const getAPI = () => ({
 	switch: switchURL(),
 	core: transactionURL(),
 	ieo: ieoURL(),
+	info: infoURL(),
 });
 
 const buildRequest = (request: Request, configData: RequestOptions) => {

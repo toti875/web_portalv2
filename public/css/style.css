@@ -44,7 +44,7 @@ Table of contents
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Raleway Dots:100,300,400,500,700,900&display=swap');
 /* ===================================
     02. Reset
 ====================================== */
@@ -4021,9 +4021,9 @@ a img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 .list-style-02 li i { line-height: 30px; }
 
 /* list style 03 */
-.list-style-03 { list-style: none; }
+.list-style-03 { list-style: none; padding: 0px; margin: 0px auto;}
 .list-style-03.light li { border-bottom: 1px solid rgba(255,255,255,.15);}
-.list-style-03 li { padding: 10px 0; border-bottom: 1px solid #e4e4e4; }
+.list-style-03 li {  border-bottom: 1px solid #e4e4e4; }
 .list-style-03 li:last-child { border-bottom: none; }
 
 /* list style 04 */
@@ -4455,7 +4455,7 @@ aside .instafeed-grid.gutter-double-extra-large { margin-left: -20px; margin-rig
 .pricing-table-style-01 .pricing-header .popular-label { position: absolute; top: 0; left: 50%; padding: 6px 17px; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); }
 
 /* pricing table style 02 */
-.pricing-table-style-02 .pricing-table { overflow: hidden; }
+.pricing-table-style-02 .pricing-table { overflow: hidden; max-height: 540px; max-width: 360px }
 .pricing-table-style-02 .pricing-table .popular-label { position: absolute; top: -28px; right: -47px; width: 120px; transform-origin: 0; padding: 10px 0 8px; transform: rotate(45deg); -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); }
 .pricing-table-style-02 .pricing-body ul li { padding: 15px 0; }
 .pricing-table-style-02 .pricing-body ul li:last-child { padding-bottom: 0; }

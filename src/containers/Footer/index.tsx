@@ -37,7 +37,9 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress) => {
 	const valueInput: string = emailAddress;
 
 	return (
+
 		<div className="footerDesktop-screen">
+			<div className="white-line"></div>
 			<div className="container-footer-screen">
 				<div className="footer d-flex flex-row justify-content-between ">
 					<div className="footer__logo">

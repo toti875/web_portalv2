@@ -3,15 +3,15 @@ import ScrollAnimation from "react-animate-on-scroll";
 import { FiArrowRight } from "react-icons/fi";
 
 const callToActionData = {
-    title: "Ready to start creating a standard website?",
-    subtitle: "Finest choice for your home & office",
-    btnText: "Purchase Doob",
+    title: "Pronto para iniciar sua jornada digital?",
+    subtitle: "Os melhores investimentos globais agora à sua disposição. Comece a investir em ativos digitais home mesmo!",
+    btnText: "Abra sua conta",
 }
 
 const CalltoActionFive = () => {
     return (
         <div className="rn-callto-action clltoaction-style-default style-5">
-            <div className="container">
+            {/*<div className="container">*/}
                 <div className="row row--0 align-items-center content-wrapper theme-shape">
                     <div className="col-lg-12">
                         <div className="inner">
@@ -41,7 +41,7 @@ const CalltoActionFive = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            {/*</div>*/}
         </div>
     )
 }

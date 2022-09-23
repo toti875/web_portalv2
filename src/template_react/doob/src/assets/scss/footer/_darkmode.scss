@@ -199,7 +199,7 @@ body {
 
         .header-transparent-with-topbar .header-top-bar,
         .header-transparent-with-topbar .header-default {
-            background: transparent;
+            background: transparent !important;
         }
 
         [class*=col]:nth-child(2) .counter-style-2.color-variation .count-number {

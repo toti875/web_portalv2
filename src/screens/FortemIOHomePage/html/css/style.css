@@ -4023,7 +4023,7 @@ a img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 /* list style 03 */
 .list-style-03 { list-style: none; }
 .list-style-03.light li { border-bottom: 1px solid rgba(255,255,255,.15);}
-.list-style-03 li { padding: 10px 0; border-bottom: 1px solid #e4e4e4; }
+.list-style-03 li {  border-bottom: 1px solid #e4e4e4; }
 .list-style-03 li:last-child { border-bottom: none; }
 
 /* list style 04 */

@@ -28,11 +28,12 @@ const ChartWrap = styled.div`
 					border-top: 1px solid rgb(66, 66, 66);
 					border-bottom: 1px solid rgb(66, 66, 66);
 					background: transparent;
-
+					max-height: 62px !important;
 
 
 					.slick-track {
 						margin-left: 250px;
+						max-height: 62px !important;
 
 						.slick-slide, .slick-active{
 					
@@ -171,7 +172,7 @@ export const NewMarketSlick: React.FC<any> = () => {
 						const klines = await fetchMarketsKlines(marketNames[i], from, to);
 						setKlinesState(prev => [...prev, klines]);
 					}
-				} catch (error) { }
+				} catch (error) { console.log("erro ao desenhar grafico do market")}
 				return;
 			};
 			drawMarketLines();

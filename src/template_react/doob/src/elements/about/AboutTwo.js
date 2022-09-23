@@ -2,6 +2,12 @@ import React from 'react';
 import ScrollAnimation from "react-animate-on-scroll";
 import {Link} from "react-router-dom";
 import { FiArrowRight, FiCheck } from "react-icons/fi";
+import LoadingIframe from 'react-loading-iframe';
+
+const Skeleton = () => {
+    return <div>Cool loading screen</div>;
+  };
+
 
 const AboutTwo = () => {
     return (
@@ -10,10 +16,16 @@ const AboutTwo = () => {
             <div className="row no-gutters radius-10 align-items-center">
                     <div className="col-lg-12 col-xl-6 col-12">
                         <div className="thumbnail">
-                        <iframe src="http://local.fortem-financial.io:3001/market/compusdt" style={{overflowY: 'hidden', width:'1024px', height:'880px',   webkitTransform:'scale(0.9, 0.9)', mozTransform:'scale(0.2, 0.2)', pointer: 'none',   pointerEvents: 'none'}}>
+                        {/*<iframe src="http://local.fortem-financial.io:3001/market/compusdt" style={{overflowY: 'hidden', width:'1024px', height:'880px',   webkitTransform:'scale(0.9, 0.9)', mozTransform:'scale(0.2, 0.2)', pointer: 'none',   pointerEvents: 'none'}}>*/}
+                        <LoadingIframe
+      skeleton={<Skeleton />}
+      src="https://google.com"
+      className="your-class"
+      frameBorder={0}
+    />
                         Your browser doesn't support iframes
                         
-                        </iframe>
+                        
                         </div>
                     </div>
 

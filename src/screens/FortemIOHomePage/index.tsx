@@ -9,25 +9,31 @@ import { setDocumentTitle } from '../../helpers';
 import { NewMarketSlick } from '../../components';
 import { eventFetch, selectEvents, selectUserLoggedIn} from '../../modules';
 import { useDispatch, useSelector } from 'react-redux';
-//import Slider from 'react-slick';
-//import "slick-carousel/slick/slick.css";
-//import "slick-carousel/slick/slick-theme.css"; 
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css"; 
 //import "./css/font-icons.min.css";
 //import "./css/theme-vendors.min.css";
 //import "./css/style.css";
 //import "./css/responsive.css";
 
+import 'animate.css';
 
-import Slider from "react-slick";
+
+
+//import Slider from "react-slick";
 
 //import { BannerActivation } from "../../te  /utils/script";
 
 import {TextDecrypt} from './TextDecrypt.js';
-import CtaStrap from './ctastrap/CtaStrap.js'
 
 import { BannerActivation } from "../../template_react/doob/src/utils/script";
 
 //import '../../template_react/doob/src/assets/scss/style.scss';
+import ParticleImage, { ParticleOptions } from "react-particle-image";
+
+import Particles1 from "./circle.png";
+
 
  
 
@@ -60,10 +66,12 @@ import Udon from './Home/udon-img.svg';
 import WhatApp from './Home/WhatApp.svg';
 import YouT from './Home/ytb.svg';
 
+import eventBackground from './images/banner.png'
+
 import styled from 'styled-components';
 
-import serviceBorder from './Home/Telegram.svg' 
-
+import serviceBorder from './Home/Telegram.svg' ;
+import LoadingIframe from 'react-loading-iframe';
 
 
 import Typed from 'react-typed';
@@ -106,10 +114,40 @@ import { CardView } from 'smart-webcomponents-react/cardview';
 import BlogClassicData from '../../template_react/doob/src/data/blog/BlogList.json';
 import { Divider } from 'antd';
 
+import news from './images/news.svg';
+
+import Particles from './particles/src/App';
+import Token from './token.png';
+import NFT from './nft.png';
+
+import devices from './fortemDevices-Laptop.png';
+import deviceLaptop from './fortemDevices-Laptop.png';
+import devicePhone from './fortemDevices-iPhone.png';
+
+
+import Flip from 'react-reveal/Flip';
+import Zoom from 'react-reveal/Zoom';
+import Flash from 'react-reveal/Flash';
+import Pulse from 'react-reveal/Pulse';
+import RubberBand from 'react-reveal/RubberBand';
+
+
+
+
 var BlogListData = BlogClassicData.slice(0, 3);
 
 
- 
+
+
+const particleOptions: ParticleOptions = {
+	filter: ({ x, y, image }) => {
+	  // Get pixel
+	  const pixel = image.get(x, y);
+	  // Make a particle for this pixel if blue > 50 (range 0-255)
+	  return pixel.b > 50;
+	},
+	color: ({ x, y, image }) => "#61dafb"
+  };
 
 //import HomePage from './home-business.html';
 
@@ -122,6 +160,10 @@ const Logo = require('../../assets/images/logo_branca_bandeira_verde.svg');
 const Logo_Capital = require ('../../assets/images/svg/branco_capital_bandeira_verde.svg');
 
 const Anime1 = require ('../../assets/animation/Bigscene-1-.json');
+
+const Skeleton = () => {
+	return <div>Cool loading screen</div>;
+  };
 
 //const logo1 = require ('url(https://doob.rainbowit.net/images/bg/bg-image-5.jpg)')
 
@@ -187,35 +229,24 @@ export const SALE_UDON_CONFIG = {
 	address: '0x8606d59312150A2970377502b607c36084aC4806',
 };
 
+
+
 const BannerData = [
     {
         image: Logo,
         title: "Conecte-se com ",
-        description: "A gente respira o novo",
+        description: "Aqui, agente respira o novo e constrói a nova geração de investimentos." ,
 		image_background: "https://doob.rainbowit.net/images/bg/bg-image-5.jpg",
     },
-    {
-        image: Logo,
-        title: "Startup Your <br /> Creative Agency.",
-        description: "Constrindo a nova geração, <br /> digital experiences, and print materials.",
-		image_background: "https://www.neoris.com/documents/20126/173896/neoris-google-alliance.jpg",
-    },
+    
 ]
 
-const settings = {
-	dots: true,
-	infinite: true,
-	speed: 500,
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	autoplay: true,
-	autoplaySpeed: 10000,
-	pauseOnHover: true,
-};
 
 
 export const FortemIOHomePage = () => {
 	setDocumentTitle('Homepage');
+
+
 
 	const intl = useIntl();
 
@@ -223,6 +254,31 @@ export const FortemIOHomePage = () => {
 	const history = useHistory();
 	const isLogin = useSelector(selectUserLoggedIn);
 	//const statistics = useSelector(selectStatistics);
+	
+	
+	const settings = {
+		dots: true,
+		infinite: true,
+		speed: 500,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 10000,
+		pauseOnHover: true,
+	};
+
+
+	const settingEvents = {
+		dots: false,
+		infinite: true,
+		speed: 500,
+		autoplay: true,
+		autoplaySpeed: 6000,
+		pauseOnHover: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+	};
+	
 
 	React.useEffect(() => {
 		//dispatch(eventFetch());
@@ -243,64 +299,67 @@ export const FortemIOHomePage = () => {
 		history.push('/trade');
 	};
 
+	{/*
+	// index.js
+window.onscroll = function () {
+    scrollRotate();
+};
+
+function scrollRotate() {
+    let image = document.getElementById("reload0");
+    image.style.transform = "rotateX(" + window.scrollY/4 + "deg)";
+	
+}
+*/}
 
 	const renderBanner = () => (
 <>
-		{/*<Slider className="slider-area slider-style-4 variation-2  rn-slick-dot rn-slick-arrow" {...BannerActivation}>*/}
-		<Slider className="slider-area slider-style-4 variation-3 " {...BannerActivation}>
+
+		<Slider className="slider-area slider-style-4 variation-2 " {...BannerActivation}>
+		
 		{BannerData.map((data, index) => (
-			<div key={index} className="single-slide">
-				<div className="height-950 bg-overlay bg_image" style={{marginRight: '-5px', width: '110%', backgroundImage: `url("${data.image_background}")`}}>
-					<div className="container position-relative">
-						<img src={Logo_Capital} style={{ position: 'absolute', color: 'white', background: 'transparent', width: '560px',  top: '10px', paddingLeft: '-650px'}}  />
+			<div key={1} className="single-slide">
+				<div className="height-950 bg-overlay bg_image" style={{marginRight: '-100px', width: '100%', maxHeight: '850px', backgroundImage: `url("${data.image_background}")`}}>
+				<img className="logo" src={Logo} style={{ position: 'absolute', color: 'white', background: 'transparent', width: '560px',  top: '170px', paddingLeft: '140px'}}  />
+					<div className="container2 position-relative">
+						
 						
 
 						<div className="row row--30 align-items-center">
 							<div className="col-lg-12">
-								<div className="inner text-left">
-									<h2 className="title" style={{marginLeft: '-280px'}} >
-										<span dangerouslySetInnerHTML={{__html: data.title}} />
-                                        <Typed
-                                            strings={[
-                                                " o novo,",
-												" o digital,",
-                                                " o crédito,",
-                                                " a rentabilidade,",
-												" a segurança,",
-												" a Fortem ONE.",
-                                            ]}
-                                            typeSpeed={100}
-                                            backSpeed={50}
-                                            backDelay={1900}
-                                            loop
-                                        />
-										</h2>
-									<h1 className="description" style={{position: 'absolute',  top: '220px', color: 'white', display: 'flex', fontSize: '38px', width: '680px', paddingLeft: '75px' }} dangerouslySetInnerHTML={{__html: data.description}}></h1>
+								<div className="align-items-center justify-items-center" style={{display: 'flex', justifyContent: 'center'}}>
+										<h3 className="description justify-center animate_flash" style={{fontFamily: 'Inter', justifyContent: 'center', position: 'absolute', left: '100px', top: '-150px', color: 'white', display: 'flex', fontSize: '38px', width: '680px', }}> Fortem ONE é a plataforma especializada em  
+										<br  className=" animate__animated animate__bounce animate__animated animate_flash" style={{color: '#1EDED0'}} /> ativos digitais </h3>
+										
+										<Zoom interval={8000} delay={20000} forever={true} duration={3000}><h3 className="description justify-center animate__animated animate__bounce" style={{position: 'absolute',  top: '50px', left: '100px', color: 'yellow !important', display: 'flex', fontSize: '20px', width: '680px', }} dangerouslySetInnerHTML={{__html: data.description}}></h3></Zoom>
 
+										</div>
+							</div>
+						</div>
+						</div>
+				</div>
 									{isLogin ? (
-								<button className="btn-Register btn-none" onClick={redirectTrading}>
+								<button className="btn-Register btn-none" onClick={redirectTrading} style={{position: 'absolute',   bottom: '100px', left: '60px'}}>
 									{translate('page.homePage.trade.btn.trade')}
 								</button>
 							) : (
-								<button className="btn-Register btn-active" onClick={redirectSingUP}>
-									{translate('page.homePage.trade.btn.signup')}
-								</button>
+								<><a className="btn-default btn-icon icon-btn-wrap" href="/banner/authentication/sign-in/basic" style={{position: 'absolute',  bottom: '200px', left: '100px', background: 'transparent'}}>Acessar plataforma <i className="icon"><FiArrowRight /></i></a>
+							
+																<button className="btn-icon btn-default" onClick={redirectSingUP} style={{position: 'absolute',  bottom: '200px', left: '340px'}}>
+																{translate('page.homePage.trade.btn.signup')}
+															</button></>
 							)}
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div className="marketSlick">
-			{renderMarketSlick()}
-		</div>	
+			<div style={{}} >{renderMarketSlick()}	</div>
 			</div>
 
 
 
 
 		))}
+		
 	</Slider>
+	
+
 	
 	<div className="overflow-hidden" >
 		<section className='section pd-top-300px wf-section'>
@@ -327,7 +386,99 @@ export const FortemIOHomePage = () => {
 						</div>
 					</div>
 				</div>
-				<Slider {...settings}>
+
+				<div className="container rn-section-gap" style={{display: 'flex', flexDirection: 'row', }}>
+							<ScrollAnimation animateIn="fadeInUp" animateOut="fadeInOut" animateOnce={false}>
+							<div className='servicesFortem'>
+							<div className=" bg_image servicesFortem-inner"  style={{  width: '470px', height: '460px', backgroundImage: `url(${serviceBorder})`, marginLeft: '-240px'  }} >
+								<div className="container position-relative">
+									<div className="inner" style={{display: 'flex',}}>
+						
+                 
+										<ServiceA cardStyle = "card-style-2" textAlign = "center"/>
+					
+									</div>
+								</div>
+							</div>
+							</div>
+							</ScrollAnimation>
+							<ScrollAnimation animateIn="fadeInUp" animateOut="fadeInOut" animateOnce={false}>
+							<div className='servicesFortem'>
+							<div className=" bg_image servicesFortem-inner"  style={{  width: '470px', height: '460px', backgroundImage: `url(${serviceBorder})`, marginTop: '280px', marginLeft: '-140px'}}>
+								<div className="container position-relative">
+									<div className="inner" style={{display: 'flex',}}>
+						
+                 
+										<ServiceB cardStyle = "card-style-2" textAlign = "center"/>
+					
+									</div>
+								</div>
+							</div>
+							</div>
+							</ScrollAnimation>
+							<ScrollAnimation animateIn="fadeInUp" animateOut="fadeInOut" animateOnce={false}>
+							<div className='servicesFortem'>
+							<div className=" bg_image servicesFortem-inner"  style={{  width: '470px', height: '460px', backgroundImage: `url(${serviceBorder})`, marginLeft: '-140px'}}>
+								<div className="container position-relative">
+									<div className="inner" style={{display: 'flex',}}>
+						
+                 
+										<ServiceC cardStyle = "card-style-2" textAlign = "center"/>
+					
+									</div>
+								</div>
+							</div>
+							</div>
+							</ScrollAnimation>
+							<ScrollAnimation animateIn="fadeInUp" animateOut="fadeInOut" animateOnce={false}>
+							<div className='servicesFortem'>
+							<div className=" bg_image servicesFortem-inner"  style={{  width: '470px', height: '460px', backgroundImage: `url(${serviceBorder})`, marginTop: '280px', marginLeft: '-140px'}}>
+								<div className="container position-relative">
+									<div className="inner" style={{display: 'flex',}}>
+						
+                 
+										<ServiceD cardStyle = "card-style-2" textAlign = "center"/>
+					
+									</div>
+								</div>
+							</div>
+							</div>
+							</ScrollAnimation>
+							<ScrollAnimation animateIn="fadeInUp" animateOut="fadeInOut" animateOnce={false}>
+							<div className='servicesFortem'>
+							<div className=" bg_image servicesFortem-inner"  style={{  width: '460px', height: '450px', backgroundImage: `url(${serviceBorder})`,  marginLeft: '-140px'}}>
+								<div className="container position-relative">
+									<div className="inner" style={{display: 'flex',}}>
+						
+                 
+										<ServiceE cardStyle = "card-style-2" textAlign = "center"/>
+					
+									</div>
+								</div>
+							</div>
+							</div>
+							</ScrollAnimation>
+						</div>
+
+
+						<div className="rn-service-area rn-section-gap">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <SectionTitle
+                                    textAlign = "text-center"
+                                    radiusRounded = ""
+                                    subtitle = ""
+                                    title = "Nosso desejo implacável de revolucionar flui através de tudo o que fazemos"
+                                    description = "Os mercados e as relações de consumo estão constantemente sendo transformados pela tecnologia.  Aqui no Portal da Fortem ONE você encontra soluções completas e inovadoras, estruturadas através de ativos digitais. <br /> Seja para você diversificar seus investimentos com segurança, planejar a sua indepência financeira, ou construir a sua reserva de emergência. <br /> Seja para sua empresa ou projeto, sair do papel ou  expandir sua base de clientes, otimizar sua captação de recursos e fluxo de caixa, ou diminuir seus custos operacionais. <br /> Estamos aqui para construirmos juntos uma nova era, democratizando o acesso aos melhores investimentos, expandindo e descentralizando ofertas de crédito e colocando você no controle e na posse do que é seu.  "
+                                    />
+                            </div>
+                        </div>
+					</div>
+</div>
+
+
+				<Slider {...settings} className='rn-section-gap'>
 				
 	
 				<div key={1} className="single-slide">
@@ -337,15 +488,17 @@ export const FortemIOHomePage = () => {
 							<div id="w-node-_5cc181b4-8b75-cd7a-679b-c9ede103bf72-2e306f0f" className="inner-container _97 _100---tablet">
 								<div className="mg-bottom-16px">
 									<div className="title-border-left">
-										<h3 className="display-3 mg-bottom-0">
+										<h3 className="animate__animated animate__bounce">
 											Invista em
 											<span className="color-accent">+300 <br /></span>
-											Ativos Digitais 
+											Ativos Digitais com  <br /> liquidez global
+											
+
 										</h3>
 									</div>
 								</div>
 								<div className="inner-container _628px">
-									<p className="mg-bottom-32px">
+									<p className="animate__animated animate__bounce">
 										"A Fortem ONE é a única plataforma nacional conectada diretamente às maiores exchanges de cripto ativos do mundo.  "
 										<span className="text-no-wrap">dui egestas.</span>
 									</p>
@@ -362,41 +515,41 @@ export const FortemIOHomePage = () => {
 								<img src="https://assets.website-files.com/624f34ee3b91afefdf14076f/625448c88ca8d4a32d63674c_image-stats-blockchain-template.png" loading="eager" alt="Buy 100+ Crypto Assets Fast And Secure - Blockchain X Webflow Template" className="image cover" />
 							<div className="position-absolute top-left world-stats-01" style={{willChange: 'opacity, transform', opacity: 0.89327, transform: 'translate3d(0px, 0px, 0px) scale3d(0.997865, 0.997865, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
 								<div className="world-stats-wrapper">
-									<div className="display-4 display-shadow">
+									<div className="display-4 display-shadow" style={{marginLeft: '80px', marginTop: '-30px'}}>
 										1M
 										<span className="color-accent">+</span>
 									</div>
-									<h3 className="display-4 mg-bottom-0">Usuários ativos</h3>
+									<h3 className="display-4 mg-bottom-0" style={{fontSize: '18px', marginLeft: '80px', }}>Usuários ativos</h3>
 								</div> 
 							</div>
 
 							<div className="position-absolute bottom-left world-stats-02" style={{willChange: 'opacity, transform', opacity: 0.9401, transform: 'translate3d(0px, 0px, 0px) scale3d(0.998802, 0.998802, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
 								<div className="world-stats-wrapper">
-									<div className="display-4 display-shadow">
+									<div className="display-4 display-shadow" style={{marginLeft: '160px'}}>
 										80
 										<span className="color-accent">%</span>
 									</div>
-									<h3 className="display-4 mg-bottom-0">de spread</h3>
+									<h3 className="display-4 mg-bottom-0" style={{fontSize: '18px', marginLeft: '160px'}}>de spread</h3>
 								</div> 
 							</div>
 
 							<div className="position-absolute top-right world-stats-03" style={{willChange: 'opacity, transform', opacity: 0.9401, transform: 'translate3d(0px, 0px, 0px) scale3d(0.998802, 0.998802, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
 								<div className="world-stats-wrapper">
-									<div className="display-4 display-shadow">
+									<div className="display-4 display-shadow" style={{marginLeft: '-490px'}}>
 										80
 										<span className="color-accent">%</span>
 									</div>
-									<h3 className="display-4 mg-bottom-0">de spread</h3>
+									<h3 className="display-4 mg-bottom-0" style={{fontSize: '18px', marginLeft: '-490px'}}>de spread</h3>
 								</div> 
 							</div>
 
 							<div className="position-absolute bottom-right world-stats-04" style={{willChange: 'opacity, transform', opacity: 0.62273, transform: 'translate3d(0px, 0px, 0px) scale3d(0.992455, 0.992455, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
 								<div className="world-stats-wrapper">
-									<div className="display-4 display-shadow">
+									<div className="display-4 display-shadow" style={{marginLeft: '-290px'}}>
 										80
 										<span className="color-accent">%</span>
 									</div>
-									<h3 className="display-4 mg-bottom-0">de spread</h3>
+									<h3 className="display-4 mg-bottom-0" style={{fontSize: '18px', marginLeft: '-290px'}}>de spread</h3>
 								</div> 
 							</div>
 
@@ -409,7 +562,10 @@ export const FortemIOHomePage = () => {
 				</div>
 
 <div key={2} className="single-slide">
+
 <div data-w-id="49ba8199-44af-7440-391c-d9656fe42200" className="card cta-part-section" style={{willChange: 'opacity, transform', opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
+<div>
+
 	<div className="w-layout-grid grid-2-columns cta-part-section-grid">
 		<div id="w-node-_99dc8130-6570-a167-3af8-c9281f72c055-2e306f0f" className="position-relative z-index-2">
 			<div id="w-node-_5cc181b4-8b75-cd7a-679b-c9ede103bf72-2e306f0f" className="inner-container _97 _100---tablet">
@@ -436,22 +592,144 @@ export const FortemIOHomePage = () => {
 				</div>
 			</div> 
 		</div>
-		<div id="w-node-_63999b7c-6bb5-477e-a990-ce743ee613f1-2e306f0f" className="cta-part-section-mockup-wrapper">
-				<img src='https://assets.website-files.com/62a9184508598c19a1306f0c/62a9184508598c4e1f306f7a_image-features-blockchain-template.png' loading="eager" alt="Buy 100+ Crypto Assets Fast And Secure - Blockchain X Webflow Template" className="image cover" />
+		<div id="w-node-_63999b7c-6bb5-477e-a990-ce743ee613f1-2e306f0f" className="cta-part-section-mockup-wrapper"  style={{backgroundColor: 'transparent', height: '100%', backgroundImage: `url("https://assets.website-files.com/62a9184508598c19a1306f0c/62a9184508598c4e1f306f7a_image-features-blockchain-template-p-800.png")`}}>
+		
 
+		<div className='container-default w-container' >
+			<div className='position-relative' >
+				<div className='w-layout-grid grid-2-columns text-left-large'>
+					<div id="w-node-_8739d627-4653-f82b-1c08-3d2b5647b690-2e306f0f" className='position-relative z-index-1' >
+						< div id="w-node-_8739d627-4653-f82b-1c08-3d2b5647b690-2e306f0f" className='position-relative z-index-1'>
+						</div>
+					</div>
+					<div id="w-node-_9f488382-c649-058f-76bd-e6c17d1dd59e-2e306f0f" data-w-id="9f488382-c649-058f-76bd-e6c17d1dd59e" style={{opacity: 1, willChange: 'transform', transform: 'translate3d(0px, 4.01px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d',}}>
+		
 
+					</div>
 
+				</div>
+			</div>
+		</div>
+		</div>
+		<img src="https://assets.website-files.com/62a9184508598c19a1306f0c/62a9184508598c1542306f75_image-mesh-hero-blockchain-template.svg" loading="eager" alt='position-absolute full section-bg' className='position-absolute full section-bg'/> 
+		
 
-	
-
-
-
-			<div className="position-absolute bg-circle cta-part-section"></div>
+			<div className='position-absolute bottom fade' />
 
 		</div>
 	</div>
 </div>
 </div>
+
+
+
+
+<div key={3} className="single-slide">
+
+<div data-w-id="49ba8199-44af-7440-391c-d9656fe42200" className="card cta-part-section" style={{willChange: 'opacity, transform', opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
+<div>
+
+	<div className="w-layout-grid grid-2-columns cta-part-section-grid">
+		<div id="w-node-_99dc8130-6570-a167-3af8-c9281f72c055-2e306f0f" className="position-relative z-index-2">
+			<div id="w-node-_5cc181b4-8b75-cd7a-679b-c9ede103bf72-2e306f0f" className="inner-container _97 _100---tablet">
+				<div className="mg-bottom-16px">
+					<div className="title-border-left" >
+						<h3 className="display-3 mg-bottom-0">
+							Invista em
+							<span className="color-accent">+300 <br /></span>
+							Ativos Criptos 
+						</h3>
+					</div>
+				</div>
+				<div className="inner-container _628px">
+					<p className="mg-bottom-32px" style={{textRendering: 'optimizeLegibility'}}>
+						"Compre, venda ou converta criptoativos com os melhores preços, em poucos cliques. Aproveite a diversidade de criptoativos em uma interface intuitiva e completa para todos os perfis."
+						<span className="text-no-wrap">dui egestas.</span>
+					</p>
+					
+					<button className='btn-Register' > 
+						<span>Abra sua conta</span> 
+					</button> 
+						
+					
+				</div>
+			</div> 
+		</div>
+		<div id="w-node-_63999b7c-6bb5-477e-a990-ce743ee613f1-2e306f0f" className="cta-part-section-mockup-wrapper"  style={{backgroundColor: 'transparent', height: '100%' }}>
+		
+			<ParticleImage
+      src={Particles1}
+      scale={0.75}
+      entropy={20}
+      maxParticles={6200}
+      particleOptions={particleOptions} style={{width: '100%', backgroundColor: 'transparent', borderRadius: '100px'}}
+							/>
+	 
+
+
+		</div>
+		
+
+			<div className='position-absolute bottom fade' />
+
+		</div>
+	</div>
+</div>
+</div>
+
+<div key={4} className="single-slide">
+
+<div data-w-id="49ba8199-44af-7440-391c-d9656fe42200" className="card cta-part-section" style={{willChange: 'opacity, transform', opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
+<div>
+
+	<div className="w-layout-grid grid-2-columns cta-part-section-grid">
+		<div id="w-node-_99dc8130-6570-a167-3af8-c9281f72c055-2e306f0f" className="position-relative z-index-2">
+			<div id="w-node-_5cc181b4-8b75-cd7a-679b-c9ede103bf72-2e306f0f" className="inner-container _97 _100---tablet">
+				<div className="mg-bottom-16px">
+					<div className="title-border-left" >
+						<h3 className="display-3 mg-bottom-0">
+							Invista em
+							<span className="color-accent">+300 <br /></span>
+							NFTs 
+						</h3>
+					</div>
+				</div>
+				<div className="inner-container _628px">
+					<p className="mg-bottom-32px">
+						"Compre, venda ou converta criptoativos com os melhores preços, em poucos cliques. Aproveite a diversidade de criptoativos em uma interface intuitiva e completa para todos os perfis."
+						<span className="text-no-wrap">dui egestas.</span>
+					</p>
+					
+					<button className='btn-Register' > 
+						<span>Abra sua conta</span> 
+					</button> 
+						
+					
+				</div>
+			</div> 
+		</div>
+		<div id="w-node-_63999b7c-6bb5-477e-a990-ce743ee613f1-2e306f0f" className="cta-part-section-mockup-wrapper"  style={{backgroundColor: 'transparent', height: '100%' }}>
+		
+		{/*	<ParticleImage
+      src={Particles1}
+      scale={0.75}
+      entropy={20}
+      maxParticles={6200}
+      particleOptions={particleOptions} style={{width: '100%', backgroundColor: 'transparent', borderRadius: '100px'}}
+							/>	*/}
+	 <img src={NFT} />
+
+
+		</div>
+		
+
+			<div className='position-absolute bottom fade' />
+
+		</div>
+	</div>
+</div>
+</div>
+
 
 				
 				</Slider>
@@ -472,6 +750,23 @@ export const FortemIOHomePage = () => {
 				<p className="mg-bottom-0">
 					"Quam facilisi gravida in morbi blandit imperdiet urna ut metus pharetra orci ut cursus diam ut urna mi pharetra nibh neque mi cursus nec donec morbi non hendrerit "
 					<span className="text-no-wrap">in gravida .</span>
+				</p>  
+			</div>
+			<div id="w-node-_0cbf1d8f-f8bb-0b9d-a837-f1a2579de295-2e306f0f" className="border-bottom">
+				<div className="mg-bottom-50px">
+					<div className="inner-container _82px">
+						<div className="image-wrapper">
+							<img src="https://assets.website-files.com/62a9184508598c19a1306f0c/62a9184508598c0b8f306f76_icon-2-features-section-blockchain-template.svg" loading="eager" alt="Send & Receive Crypto Tokens - Blockchain X Webflow Template" className="image cover" /> 
+						</div>
+					</div>
+				</div>
+				<h3 className="display-4">
+					"TRANSFERENCIAS"
+					<span className="color-accent"></span>
+				</h3>
+				<p className="mg-bottom-0">
+					"Quam facilisi gravida in morbi blandit imperdiet urna ut metus pharetra orci ut cursus diam ut urna mi pharetra nibh neque mi cursus nec donec morbi non hendrerit "
+					<span className="text-no-wrap">in gravida .</span>
 				</p>
 			</div>
 			<div id="w-node-_0cbf1d8f-f8bb-0b9d-a837-f1a2579de295-2e306f0f" className="border-bottom">
@@ -483,7 +778,41 @@ export const FortemIOHomePage = () => {
 					</div>
 				</div>
 				<h3 className="display-4">
-					"Send & receive crypto tokens easily"
+					"TRANSFERENCIAS"
+					<span className="color-accent"></span>
+				</h3>
+				<p className="mg-bottom-0">
+					"Quam facilisi gravida in morbi blandit imperdiet urna ut metus pharetra orci ut cursus diam ut urna mi pharetra nibh neque mi cursus nec donec morbi non hendrerit "
+					<span className="text-no-wrap">in gravida .</span>
+				</p>
+			</div>
+			<div id="w-node-_0cbf1d8f-f8bb-0b9d-a837-f1a2579de295-2e306f0f" className="border-bottom">
+				<div className="mg-bottom-50px">
+					<div className="inner-container _82px">
+						<div className="image-wrapper">
+							<img src="https://assets.website-files.com/62a9184508598c19a1306f0c/62a9184508598c0b8f306f76_icon-2-features-section-blockchain-template.svg" loading="eager" alt="Send & Receive Crypto Tokens - Blockchain X Webflow Template" className="image cover" /> 
+						</div>
+					</div>
+				</div>
+				<h3 className="display-4">
+					"TRANSFERENCIAS"
+					<span className="color-accent"></span>
+				</h3>
+				<p className="mg-bottom-0">
+					"Quam facilisi gravida in morbi blandit imperdiet urna ut metus pharetra orci ut cursus diam ut urna mi pharetra nibh neque mi cursus nec donec morbi non hendrerit "
+					<span className="text-no-wrap">in gravida .</span>
+				</p>
+			</div>
+			<div id="w-node-_0cbf1d8f-f8bb-0b9d-a837-f1a2579de295-2e306f0f" className="border-bottom">
+				<div className="mg-bottom-50px">
+					<div className="inner-container _82px">
+						<div className="image-wrapper">
+							<img src="https://assets.website-files.com/62a9184508598c19a1306f0c/62a9184508598c0b8f306f76_icon-2-features-section-blockchain-template.svg" loading="eager" alt="Send & Receive Crypto Tokens - Blockchain X Webflow Template" className="image cover" /> 
+						</div>
+					</div>
+				</div>
+				<h3 className="display-4">
+					"TRANSFERENCIAS"
 					<span className="color-accent"></span>
 				</h3>
 				<p className="mg-bottom-0">
@@ -500,7 +829,7 @@ export const FortemIOHomePage = () => {
 					</div>
 				</div>
 				<h3 className="display-4">
-					"Watch and analyze  charts in real-time"
+					"VOLUME"
 					<span className="color-accent">.</span>
 				</h3>
 				<p className="mg-bottom-0">
@@ -521,7 +850,7 @@ export const FortemIOHomePage = () => {
 
 
 
-
+{/*
 		<div className="height-950 bg-overlay bg_image" style={{backgroundImage: `url("https://assets.website-files.com/62a9184508598c19a1306f0c/62a9184508598c1542306f75_image-mesh-hero-blockchain-template.svg")`}}>
 		<section className='section pd-top-390 wf-section section-2143' > 
 		<div className='container-default w-container' >
@@ -546,7 +875,7 @@ export const FortemIOHomePage = () => {
 
 	</section>
 	</div>
-
+						*/}
 	</>
 
 
@@ -642,35 +971,10 @@ const renderServices = () => (
 
 
 
-			   <Separator />
-			   {/* Start Elements Area  */}
-			   <div className="rwt-team-area rn-section-gap">
-				   <div className="wrapper plr--65 plr_md--15 plr_sm--15">
-					   <div className="row mb--20">
-						   <div className="col-lg-12">
-								   <SectionTitle
-									   textAlign = "text-center"
-									   radiusRounded = ""
-									   subtitle = "Our Experts."
-									   title = "Our Experts Team"
-									   description = ""
-								   />
-						   </div>
-					   </div>
-					   <TeamFour column="col-lg-6 col-xl-3 col-md-6 col-12 mt--30" teamStyle="team-style-three" />
-				   </div>
-			   </div>
-			   {/* End Elements Area  */}
 
-			   <Separator />
 
-			   {/* Start Call To Action Area  */}
-			   <div className="rwt-callto-action-area rn-section-gapBottom">
-				   <div className="wrapper">
-					   <CalltoActionFive />
-				   </div>
-			   </div>
-			   {/* End Call To Action Area  */}
+
+
 
 			   </>
 
@@ -679,37 +983,10 @@ const renderServices = () => (
 
 	
 
-	const renderBanner2 = () => (
+const renderBlog = () => (
 <main className="page-wrapper">
 
 
-
-<div className="rwt-split-area">
-	<div className="wrapper">
-		<SlipThree />
-	</div>
-</div>
-{/* End Elements Area  */}
-
-
-{/* Start Elements Area  */}
-<div className="rwt-elements-area rn-section-gap">
-	<div className="container">
-		<div className="row">
-			<div className="col-lg-12 mb--10">
-				<SectionTitle
-					textAlign = "text-center"
-					radiusRounded = ""
-					subtitle = "Client Feedback"
-					title = "What People Say About Us."
-					description = ""
-				/>
-			</div>
-		</div>
-		<TestimonialOne column="col-lg-4 col-md-6 col-12" teamStyle="card-style-default testimonial-style-one style-two border-gradient" />
-	</div>
-</div>
-{/* End Elements Area  */}
 
 <Separator />
 <div className="blog-area rn-section-gap">
@@ -719,12 +996,12 @@ const renderServices = () => (
 				<SectionTitle
 					textAlign = "text-center"
 					radiusRounded = ""
-					subtitle = "Latests News"
-					title = "Our Latest News."
+					subtitle = ""
+					title = "Veja o que está acontecendo através do nosso Blog"
 					description = ""
 				/>
 			</div>
-		</div>
+		</div>      
 		<div className="row row--15">
 			{BlogListData.map((item) => (
 				<div key={item.id} className="col-lg-4 col-md-6 col-12 mt--30">
@@ -735,7 +1012,6 @@ const renderServices = () => (
 	</div>
 </div> 
 
-<FooterOne />
 </main>
 
 
@@ -783,8 +1059,41 @@ const renderServices = () => (
 		history.push('/markets');
 	};
 
+
+	const renderEvent = () => {
+		return (
+		
+			<div className="homepage-event  rn-header header-default " style={{background: '#000',  margin: '0px auto', marginLeft: '5px', display: 'flex', flexDirection: 'row', height: '36px', borderTop: '1px solid #1EDED0', borderBottom: '1px solid #1EDED0', minWidth: '100px',  backgroundColor: '#000'}}> 
+			
+				<div  className="news-event "  style={{ marginTop: '2px', maxWidth: '60px', background: '#000', alignItems: 'center',  color: '#1EDED0', borderRight: '1px solid gray', fontSize: '16px',  maxHeight: '26px' }}>
+				<Pulse forever={true}>	<img src={news} style={{ marginTop: '-2px', minWidth: '30px', }}></img></Pulse>
+									
+				</div>
+
+				<div className="container2  theme-shape-root"  style={{  background: '#000', color: '#1EDED0', alignItems: 'center',   marginLeft: '10px', height: '26px', fontSize: '14px', backgroundColor: '#000'}}>
+
+
+					<Slider {...settingEvents}>
+						{[...events.payload].map(event => {
+							return (
+								<div  >
+									<p  style={{background: '#000',  fontFamily: 'Raleway Dots'}} >{event.event_name}{event.description}
+									
+									</p>
+								
+								</div>
+							);
+						})}
+					</Slider>
+				</div>
+			</div>
+		);
+	};
+
+
+
 	const renderMarket = () => (
-		<div className="market bg-transparent circle-1 circle-2 circle-2 theme-shape content-wrapper bg-transparent slider-style-1">
+		<div className="market bg-transparent  theme-shape-root content-wrapper bg-transparent slider-style-1">
 			<div className="container">
 								<div className="home-market">
 					<HomepageMarket />
@@ -851,36 +1160,98 @@ const renderServices = () => (
 		</div>
 	);
 	//
-	const renderTrading = () => (
-		<div className="trading">
-			<div className="container">
-				<div className="row">
-					<div className="col-xl-6 lg-12 trading trading-content">
-						<h3 className="trading-title">Start investing digital assets today!</h3>
-						<p className="trading-description">
+
+
+	const renderDownloadDevices = () => {
+		return (
+			<div className="homepage-download rn-section-gap">
+				<div className="container">
+					<div className="main-homepage-download">
+						<div className="row dowdload-box">
+							<div className="col-5 dowdload-box__box-1" style={{ paddingTop: 100 }}>
+								<div className="row ">
+									<div className="col-12">
+										<div className="d-flex justify-content-start">
+										<h3 className="trading-title">Agora não há mais motivos para você ficar de fora. </h3>
+									</div>
+									<div>
+									<p className="trading-description">
 							Download Fortem APP, you will be able to easily at any time, anywhere trading global mainstream,
 							popular digital assets.
 						</p>
-						<div className="trading-direction">
-							<div className="trading-direction__app-store">
-								<img src={DownloadAPP} alt="App store" />
+										</div>
+					
+									</div>
+								</div>
+								<div className="row pt-5">
+									<div className="col-12">
+										<div
+											className="grid-container"
+											style={{ display: 'grid', gridTemplateColumns: 'auto auto' }}
+										>
+											<div>
+												<img
+													className="img-fluid"
+													src={DownloadAPP}
+													style={{ borderRadius: 10 }}
+													alt="google+play"
+												/>
+											</div>
+											<div style={{ marginLeft: -100 }}>
+												<img
+													className="img-fluid"
+													src={DownloadGG}
+													style={{ borderRadius: 10 }}
+													alt="android+store"
+												/>
+											</div>
+											<div className="mt-3">
+												<img
+													className="img-fluid"
+													src={Download2}
+													style={{ borderRadius: 10 }}
+													alt="app+store"
+												/>
+											</div>
+											<div className="mt-3" style={{ marginLeft: -100 }}>
+												<img
+													className="img-fluid"
+													src={Download1}
+													style={{ borderRadius: 10 }}
+													alt="scan+qrcode"
+												/>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
-							<div className="trading-direction__GG-play">
-								<img src={DownloadGG} alt="google Play" />
+							<div className="col-7 dowdload-box__box-2" style={{ position: 'relative' }}>
+							<Flip top cascade>
+
+							<img
+									src={devicePhone}
+									alt="exchange"
+									style={{ position: 'absolute', zIndex: 100, top: -30, left: -145, width: '45%' }}
+								/>
+
+								<img
+									src={deviceLaptop}
+									alt="exchange"
+									style={{ position: 'absolute', zIndex: 100, top: -98, left: 0, width: '100%' }}
+								/>
+							</Flip>
 							</div>
 						</div>
 					</div>
-					<div className="col-xl-6 lg-12 trading-cryp">
-						<img src={Cryp} alt="crypto" />
-					</div>
 				</div>
+
 			</div>
-		</div>
-	);
+		);
+	};
 
 	const renderTrade = () => {
 		return (
-			<div className="homepage-trade circle-1 circle-2 circle-3">
+			<div className="homepage-trade rn-section-gap circle-1 circle-2 circle-3">
 				<div className="circle-2 theme-shape content-wrapper bg-transparent slider-style-1 ">
 					<div className="circle-2 theme-shape content-wrapper bg-transparent slider-style-1 circle-1">
 						<h3>{translate('page.homePage.trade.start')} </h3>
@@ -904,42 +1275,41 @@ const renderServices = () => (
 
 	return (
         <div className="fortem-mainPage">
+		
 	
-         
-		{/*
+
+
+     {/*
+		
 			<div className="marketSlick">
                 {renderMarketSlick()}
 			</div>							        			
-		*/}
-			<div className='ctastrap'>
-				<div className='brandhub-cta-strap' data-num-items-desktop-tablet='5' data-num-items-mobile="4">
-					<ul className="brandhub-cta-strap__inner">
-						<li className="brandhub-cta-strap__item brandhub-cta-strap__item--first"></li>
-					</ul>
-					
-				</div>
-
-
-
-			</div>
+	*/}
+	
 		
 	
+			{renderEvent()}				
+			
+
 			{renderBanner()}
-			{renderServices()}
 			
-	
-			{renderBanner2()}
-		
+			{renderMarketSlick()}
 
-             
+			{renderMarket()}
+
+			{renderDownloadDevices()}
+
             {renderMarket()}
-			
+
+			{renderBlog()}
+
+			<CalltoActionFive />
+{/*			
 			{renderFeature()}
 			
-			{renderTrading()}     
 		
           
-
+	*/}
 		
 			{/*<Player
   autoplay

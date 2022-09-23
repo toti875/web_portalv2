@@ -3,6 +3,12 @@ import CountUp from 'react-countup';
 import TrackVisibility from "react-on-screen";
 import ScrollAnimation from "react-animate-on-scroll";
 import { FiArrowRight, FiCheck } from "react-icons/fi";
+import LoadingIframe from 'react-loading-iframe';
+
+
+const Skeleton = () => {
+    return <div>Cool loading screen</div>;
+  };
 
 
 const Data = [
@@ -23,15 +29,19 @@ const SlipThree = () => {
             <div className="split-wrapper">
                 <div className="row no-gutters radius-10 align-items-center">
                     <div className="col-lg-12 col-xl-6 col-12">
-                        <div className="thumbnail">
+            
                         
-                        <iframe src="http://local.fortem-financial.io:3001/market/compusdt" style={{overflowY: 'hidden', minWidth: '800px', maxWidth:'1300px', height:'880px',   webkitTransform:'scale(0.9, 0.9)', mozTransform:'scale(0.2, 0.2)', pointer: 'none',   pointerEvents: 'none'}}>
-                        Your browser doesn't support iframes
+                        {/*<iframe src="http://local.fortem-financial.io:3001/market/compusdt" style={{overflowY: 'hidden', minWidth: '800px', maxWidth:'1300px', height:'880px',   webkitTransform:'scale(0.9, 0.9)', mozTransform:'scale(0.2, 0.2)', pointer: 'none',   pointerEvents: 'none'}}>*/}
+
                         
-                        </iframe>
+                        <LoadingIframe
+      skeleton={<Skeleton />}
+      src="https://big.one/en/trade/BTC-USDT"
+      className="iframe-tradingScreen"
+      frameBorder={0}
+      style={{minWidth: '800px', maxWidth:'1300px', height:'880px', minHeight: '712px', minHeight: '832px',  webkitTransform:'scale(0.9, 0.9)', mozTransform:'scale(0.2, 0.2)', pointer: 'none',   pointerEvents: 'none'}}
+    />
         
-        
-                        </div>
                     </div>
                     <div className="col-lg-10 col-xl-6 col-10">
                         <div className="split-inner">

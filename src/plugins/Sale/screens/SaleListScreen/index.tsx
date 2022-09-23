@@ -3,37 +3,34 @@ import * as React from 'react';
 import { SaleListTables } from '../../containers';
 import './SaleListScreen.css';
 
-const TokenList = require ('../../../../assets/images/tokens.png');
+const TokenList = require ('../../../../assets/images/tokenList.jpg');
 
-const GlobeAnimated  = require ('../../../../assets/video/globe-900.hevc.mp4');
+const GlobeAnimated  = require ('../../../../assets/video/globe.mp4');
+
 export const SaleListScreen: React.FC = () => {
 	return (
 		<React.Fragment>
-			<div style={{ position: 'relative',  }}>
-				<img style={{ width: '110%', margin: 0 }} src={TokenList} alt="ieo_banner" />
 			
-				
+				<div className="height-650  bg_image" style={{ width: '100%', maxHeight: '850px', backgroundImage: `url(${TokenList})` }}>
+			
+						
+						
+
+						<div className="container2 align-items-center">
+			<video style={{ width: '25%',   borderRadius: '50%', left: '38%', top: '160px', opacity: 1, position: 'absolute'}} autoPlay >
+					<source 					 src={GlobeAnimated} type="video/mp4" />
+				</video>
+
+				</div>
+			
+			
+				</div>
+			
  
           
 
-				{/*<div
-					style={{
-						position: 'absolute',
-						content: '',
-						bottom: '-3rem',
-						left: '50%',
-						transform: 'translate(-50%, -50%)',
-						display: 'inline-block',
-					}}
-				>
-					<Button style={{ backgroundColor: '#457b9d' }} type="primary" size={'large'} href="#" target="_blank">
-						Adquira seu Token
-					</Button>
-					<Button href="#" target="_blank" style={{ backgroundColor: '#2a9d8f' }} type="primary" size={'large'}>
-						Conheça os Projetos
-					</Button>
-				</div>  */}
-			</div>
+
+
 
 			<div id="sale-list" className="container-fluid">
 				<div className="row">
@@ -51,3 +48,5 @@ export const SaleListScreen: React.FC = () => {
 		</React.Fragment>
 	);
 };
+
+

@@ -5,8 +5,8 @@ import ScrollAnimation from "react-animate-on-scroll";
 const ServiceList = [
     {
         image: '/images/service/serviice-01.jpg',
-        title: 'Fortem SIMPLE <br /> Emissor',
-        description: 'Tire seus projetos do papel ou amplie seus negócios tokenizando seus ativos e obtendo crédito rápido e simplficado, com as melhores taxas'
+        title: 'Crédito',
+        description: 'Antecipe seus recebíveis ou obtenha crédito rápido e simplficado, com as melhores taxas, tokenizando seus serviços'
     }
 ]
 const ServiceC = ({textAlign, cardStyle}) => {
@@ -22,8 +22,8 @@ const ServiceC = ({textAlign, cardStyle}) => {
           
                         </div>
                         <div className="content" >
-                            <h4 className="title title-text-serviceA mb--20 ml-70 align-items-center text-center"><Link to="#service" dangerouslySetInnerHTML={{__html: val.title}}></Link></h4>
-                            <p className="b1 description-text-serviceA ml--50  mr-20" dangerouslySetInnerHTML={{__html: val.description}}></p>
+                            <h4 className="title title-text-serviceA mb--20 ml-10 align-items-center text-center mt--80"><Link to="#service" dangerouslySetInnerHTML={{__html: val.title}}></Link></h4>
+                            <p className="b1 description-text-serviceA ml--60  mr-20 align-items-center text-center" dangerouslySetInnerHTML={{__html: val.description}}></p>
                             <Link className="btn-default btn-small btn-border btn-marketplace" to="/tokens">Saiba mais</Link>
                         </div>
                     </div>

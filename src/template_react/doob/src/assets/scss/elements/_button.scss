@@ -20,7 +20,7 @@ button {
         border-color: transparent;
         border-radius: 8px;
         background-color: transparent;
-        background: linear-gradient(95deg, var(--color-primary) 15%, var(--color-tertiary) 45%, var(--color-pink) 75%, var(--color-secondary) 100%) 95% / 200% 100%;
+        background: linear-gradient(95deg, var(--color-white) 25%, #009991 45%, #009991 75%, #1EDED0 100%) 95% / 200% 100%;
         transition-duration: 300ms;
         color: var(--color-white);
         font-size: 16px;
@@ -48,12 +48,11 @@ button {
             }
         }
         &:hover {
-            box-shadow: var(--shadow-primary);
-            -webkit-filter: brightness(125%);
-            filter: brightness(125%);
+            filter: brightness(115%);
             color: var(--color-white);
             text-decoration: none;
-        }
+            -webkit-filter: brightness(115%);
+}
         &.btn-small {
             height: 40px;
             line-height: 36px;
@@ -89,12 +88,12 @@ button {
         }
         &.btn-border {
             background-image: inherit;
-            border-color: var(--color-border);
+            border-color: #1EDED0;
             border-width: 2px;
             border-style: solid;
             &:hover {
-                background-color: var(--color-secondary);
-                border-color: var(--color-secondary);
+                background-color: #009991;
+                border-color: #009991;
             }
         }
         &.text-underline {
@@ -200,7 +199,7 @@ button {
             content: "";
             left: auto;
             bottom: 2px;
-            background: var(--color-primary);
+            background: #1EDED0;
             width: 0;
             height: 2px;
             transition: 0.3s;
@@ -210,7 +209,7 @@ button {
 
     &:hover {
         span {
-            color: var(--color-primary);
+            color: #009991;
             &::before {
                 width: 100%;
                 left: 0;
@@ -223,7 +222,7 @@ button {
 
 .rn-badge {
     display: inline-block;
-    background-color: var(--color-primary);
+    background-color: #009991;
     padding: 0 16px;
     height: 30px;
     line-height: 30px;
@@ -246,7 +245,7 @@ button {
     z-index: 2;
     letter-spacing: 0.5px;
     &::before {
-        background: linear-gradient(95deg, var(--color-primary) 15%, var(--color-tertiary) 45%, var(--color-pink) 75%, var(--color-secondary) 100%) 95%/200% 100%;
+        background: linear-gradient(95deg, var(--color-white) 25%, #009991 45%, #009991 75%, #1EDED0 100%) 95% / 200% 100%;
         content: "";
         width: 100%;
         height: 100%;

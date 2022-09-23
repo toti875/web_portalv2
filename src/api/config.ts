@@ -6,6 +6,8 @@ export const defaultConfig: Config = {
 		switchURL: 'http://demo.fortem-financial.io/api/v2/switch',
 		transactionURL: 'http://demo.fortem-financial.io/api/v2/fortem',
 		ieoURL: 'http://www.yellow.com/api/v2/peatio',
+		infoURL: 'http://www.yellow.com/api/v2/peatio',
+
 
 		//downstreamURL: 'ws://demo.fortem-financial.io/api/v2/downstream',
 		downstreamURL: 'ws://www.yellow.com/api/v2/ranger',
@@ -44,6 +46,7 @@ export const Window = {
 window.env = window.env || defaultConfig;
 Cryptobase.config = { ...window.env };
 Cryptobase.config.api.ieoURL = Cryptobase.config.api.ieoURL || '/api/v2/ieoURL';
+Cryptobase.config.api.infoURL = Cryptobase.config.api.infoURL || '/api/v2/infoURL';
 Cryptobase.config.storage = Cryptobase.config.storage || {};
 
 export const transactionURL = () => Cryptobase.config.api.transactionURL;
@@ -51,6 +54,8 @@ export const authzURL = () => Cryptobase.config.api.authzURL;
 export const switchURL = () => Cryptobase.config.api.switchURL;
 export const ieoURL = () => Cryptobase.config.api.ieoURL;
 export const downstreamURL = () => Cryptobase.config.api.downstreamURL;
+export const infoURL = () => Cryptobase.config.api.infoURL;
+
 export const minutesUntilAutoLogout = (): string => Cryptobase.config.minutesUntilAutoLogout || '15';
 export const withCredentials = () => Cryptobase.config.withCredentials || false;
 export const defaultStorageLimit = () => Cryptobase.config.storage.defaultStorageLimit || STORAGE_DEFAULT_LIMIT;

@@ -7,6 +7,7 @@ interface Config {
 		switchURL: string;
 		downstreamURL: string;
 		ieoURL: string;
+		infoURL: string;
 	};
 	minutesUntilAutoLogout?: string;
 	rangerReconnectPeriod?: string;

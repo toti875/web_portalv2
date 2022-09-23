@@ -102,6 +102,10 @@ export const IEOItemComponent: React.FC<IEOItemProps> = props => {
 		}
 	};
 	return (
+		
+		
+		
+		
 		<div
 			id="ieo-item"
 			onClick={() => {
@@ -109,8 +113,34 @@ export const IEOItemComponent: React.FC<IEOItemProps> = props => {
 					pathname: `/ieo/detail/${props.id}`,
 				};
 				history.push(location);
-			}}
-		>
+			}}>
+			<div className="col pricing-table-style-02 text-center px-md-0 sm-margin-30px-bottom xs-margin-15px-bottom wow animate__fadeIn z-index-1">
+			
+			<div className="pricing-table pricing-popular bg-white box-shadow-large border-radius-6px">
+			
+				<div className="pricing-header bg-extra-dark-gray padding-20px-tb">
+					<div className="alt-font font-weight-500 text-small text-white text-uppercase letter-spacing-minus-1-half">Standard plan</div>
+				</div>
+			
+				<div className="pricing-body padding-60px-tb">
+					<i className="line-icon-Business-ManWoman icon-medium text-fast-blue margin-20px-bottom"></i>
+					<h4 className="font-weight-500 text-extra-dark-gray letter-spacing-minus-2px margin-15px-bottom">$19.99</h4>
+					<ul className="list-style-03">
+						<li className="border-color-medium-gray"><span className="text-extra-dark-gray font-weight-500">10</span> Domains</li>
+						<li className="border-color-medium-gray"><span className="text-extra-dark-gray font-weight-500">2 GB</span> File upload</li>
+						<li className="border-color-medium-gray"><span className="text-extra-dark-gray font-weight-500">40 GB</span> Secure storage</li>
+						<li><span className="text-extra-dark-gray font-weight-500">Unlimited</span> bandwidth</li>
+					</ul>
+				</div>
+				
+				<div className="pricing-footer margin-5px-top margin-55px-bottom">
+					<a className="btn btn-medium btn-dark-gray btn-round-edge" href="pricing-packages.html">Register now</a>
+				</div>
+			
+			</div>
+			
+		</div>
+		
 			<div className="ioe-item-header">
 				{renderStatus(props.type)}
 				<div className="ieo-item-coin-img">

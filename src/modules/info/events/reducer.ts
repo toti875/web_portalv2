@@ -15,8 +15,8 @@ export const initialEvent: EventsState = {
 	payload: [
 		{
 			event_id: 1,
-			event_name: "Initial Offering",
-			description: "Lorem Ipsum",
+			event_name: "@Nova listagem: ",
+			description: "Tokens Kart11 serão listados na plataforma a partir de 12/10/2022. Fique atento e não perca essa oportunidade de investimento. ",
 			image_link: info1,
 			ref_link: "http://local.fortem-financial.io:3002/tokens",
 			created_at: "Lorem Ipsum"
