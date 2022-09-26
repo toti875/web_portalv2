@@ -103,12 +103,52 @@
     object-fit: contain;
 } 
 
+.h4:hover {
+
+        color: 1EDED0 !important;
+
+
+} 
+
+.a:hover {
+
+    color: 1EDED0 !important;
+
+
+} 
+
+.title:hover {
+    color: 1EDED0 !important;
+    } 
+
+.h4:hover {
+    color: 1EDED0 !important;
+    } 
+
+.a:hover {
+    color: 1EDED0 !important;
+    } 
+
+h4:hover {
+    color: 1EDED0 !important;
+    } 
+
+a:hover {
+    color: 1EDED0 !important;
+    } 
+
+.title-text-serviceA:hover {
+    color: 1EDED0 !important;
+    } 
+
 .servicesFortem:hover  .servicesFortem-inner {
     
     -webkit-transform: rotateY(360deg);
     
             transform: rotateY(360deg);
-    transition: 1s all;
+    transition: 0.5s all;
+    color: 1EDED0 !important;
+
     
 } 
 
@@ -289,7 +329,7 @@ margin-left: 20px;
 
 .title-text-serviceA:hover {
 
-        color: pink !important;
+        color: #009991 !important;
     } 
 
 .description-text-serviceA {

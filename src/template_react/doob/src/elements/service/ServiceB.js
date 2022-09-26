@@ -22,7 +22,7 @@ const ServiceB = ({textAlign, cardStyle}) => {
           
                         </div>
                         <div className="content" >
-                            <h4 className="title title-text-serviceA mb--20 ml-10 align-items-center text-center"><Link to="#service" dangerouslySetInnerHTML={{__html: val.title}}></Link></h4>
+                            <h4 className="title title-text-serviceA mb--20 ml-10 align-items-center text-center" style={{}} ><Link to="#service" dangerouslySetInnerHTML={{__html: val.title}}></Link></h4>
                             <p className="b1 description-text-serviceA ml--60  mr-20 align-items-center text-center" dangerouslySetInnerHTML={{__html: val.description}}></p>
                             <Link className="btn-default btn-small btn-border btn-marketplace" to="/markets">Mercados</Link>
                         </div>
