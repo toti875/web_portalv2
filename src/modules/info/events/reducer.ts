@@ -15,36 +15,36 @@ export const initialEvent: EventsState = {
 	payload: [
 		{
 			event_id: 1,
-			event_name: "@Nova listagem: ",
-			description: "Tokens Kart11 serão listados na plataforma a partir de 12/10/2022. Fique atento e não perca essa oportunidade de investimento. ",
+			event_name: "Nova listagem: ",
+			description: "Tokens KART5 serão listados na plataforma a partir de 12/10/2022. Fique atento e não perca essa oportunidade de investimento. ",
 			image_link: info1,
-			ref_link: "http://local.fortem-financial.io:3002/tokens",
+			ref_link: "/tokens",
 			created_at: "Lorem Ipsum"
 		},
 	
 		{
 			event_id: 2,
-			event_name: "Initial Offering",
-			description: "Lorem Ipsum2",
+			event_name: "Novidade: ",
+			description: "Nosso marketplace de NFT está no ar. Venha conferir.",
 			image_link: info2,
-			ref_link: "Lorem Ipsum",
+			ref_link: "/nft",
 			created_at: "Lorem Ipsum"
 		},
 	
 		{
 			event_id: 3,
-			event_name: "Initial Offering",
-			description: "Lorem Ipsum3",
+			event_name: "Novidade: ",
+			description: "Fique por dentro de tudo que acontece no universo de ativos digitais. Conheça nosso blog.",
 			image_link: info3,
-			ref_link: "Lorem Ipsum",
+			ref_link: "/blog",
 			created_at: "Lorem Ipsum"
 		},
 		{
 			event_id: 4,
-			event_name: "Initial Offering",
+			event_name: "Aberto o ciclo 1 de venda do Token FORTEM ($FTK). Conheça os benefícios.",
 			description: "Lorem Ipsum4",
 			image_link: info4,
-			ref_link: "Lorem Ipsum",
+			ref_link: "/tokens",
 			created_at: "Lorem Ipsum"
 		}
 

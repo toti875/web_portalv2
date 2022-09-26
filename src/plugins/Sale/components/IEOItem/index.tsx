@@ -1,19 +1,22 @@
 import React, { useState } from "react";
+import { Parallax } from "react-scroll-parallax";
+
 
 import { Col, Progress, Row, Statistic } from 'antd';
 import { ProgressBar } from 'react-bootstrap';
+import Modal from 'react-bootstrap/Modal';
 
 //import * as React from 'react'; 
 import Countdown from 'react-countdown';
 import { useDispatch, useSelector,  } from 'react-redux';
 import { useHistory } from 'react-router';
 import { currenciesFetch, SaleItem, selectCurrencies } from '../../../../modules';
-import {Modal} from '../../../../components/Modal'
+//import {Modal} from '../../../../components/Modal'
 import './IEOItem.css';
 import '../../../../template/html/css/style.css';
 import Separator from "../../../../template_react/doob/src/elements/separator/Separator";
 import ReactCardFlip from "react-card-flip";
-import { BuyersHistory, BuyHistory, SaleBuy, SaleDetail, SaleInfo, SaleSocial } from '../../containers';
+//import { BuyersHistory, BuyHistory, SaleBuy, SaleDetail, SaleInfo, SaleSocial } from '../../containers';
 
 
 
@@ -101,21 +104,9 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 			break;
 	}
 
-	const showBuyConfirmModal = () => {
-		return (	<Modal	show	content={				<div className="font-weight-500 text-extra-dark-gray mt--10" style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
-		<span>Investimento mínimo</span><span style={{}}>R$ 100,00</span>
-	</div>}
-	
-	header={"teste"}
-	footer={"teste"}
-	
-	
-	>
 
-		</Modal>)
-
+	const [show, setShow] = useState(false);
 	
-	}
 
 	const countdownTime = props.type === 'upcoming' ? new Date(props.sale.start_date) : new Date(props.sale.end_date);
 	let countdownTitle: JSX.Element;
@@ -219,7 +210,31 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 					/>
 							<div className="pricing-footer margin-5px-top mb--10 mt--15">
 								<a className="btn btn-medium  btn-round-edge "  onClick={() => setFlip(!flip)}>Mais informações</a>
-								<a className="btn btn-medium  btn-fast-blue modal-popup wow animate__fadeIn" href="#modal-popup">ComprarModal</a>
+
+								<a className="btn btn-medium  btn-fast-blue modal-popup wow animate__fadeIn" onClick={() => setShow(true)}>ComprarModal</a>
+								<Modal
+        show={show}
+        onHide={() => setShow(false)}
+        dialogClassName="modal-90w"
+        aria-labelledby="example-custom-modal-styling-title"
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="example-custom-modal-styling-title">
+            Custom Modal Styling
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>
+            Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde
+            commodi aspernatur enim, consectetur. Cumque deleniti temporibus
+            ipsam atque a dolores quisquam quisquam adipisci possimus
+            laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod
+            accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia
+            reiciendis porro quo magni incidunt dolore amet atque facilis ipsum
+            deleniti rem!
+          </p>
+        </Modal.Body>
+      </Modal>
 								<div id="modal-popup" className="col-11 col-xl-3 col-lg-6 col-md-8 col-sm-9 mx-auto bg-white text-center modal-popup-main padding-4-half-rem-all mfp-hide border-radius-6px sm-padding-2-half-rem-lr">
                             <span className="text-extra-dark-gray text-uppercase alt-font text-extra-large font-weight-600 margin-15px-bottom d-block">Simple modal popup</span>
                             <p>Lorem ipsum is simply dummy text of the printing and typesetting industry lorem ipsum has been the industry's standard dummy text ever.</p>

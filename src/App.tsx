@@ -10,6 +10,8 @@ import { useCurrenciesFetchInterval, useSetMobileDevice } from './hooks';
 import * as mobileTranslations from './mobile/translations';
 import { selectCurrentLanguage, selectMobileDeviceState } from './modules';
 import { languageMap } from './translations';
+import { ParallaxProvider } from 'react-scroll-parallax';
+
 const gaKey = gaTrackerKey();
 const browserHistory = createBrowserHistory();
 
@@ -81,6 +83,7 @@ export const App = () => {
 	const isMobileDevice = useSelector(selectMobileDeviceState);
 
 	return (
+		<ParallaxProvider>
 		<IntlProvider locale={lang} messages={getTranslations(lang, isMobileDevice)} key={lang}>
 			<Router history={browserHistory}>
 				<ErrorWrapper>
@@ -90,5 +93,6 @@ export const App = () => {
 				</ErrorWrapper>
 			</Router>
 		</IntlProvider>
+		</ParallaxProvider>
 	);
 };

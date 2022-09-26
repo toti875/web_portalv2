@@ -12,7 +12,8 @@ import { logoutFetch, selectUserLoggedIn } from '../../modules';
 import { ProfileActiveStepAction } from 'containers/ProfileActiveStepAction';
 
 import useStickyHeader from "./useStickyHeader";
-
+import Notifications from "react-notifications-menu";
+import './notifications.css'
 
 const Logo = require('../../assets/images/logo_branca_bandeira_verde.svg');
 
@@ -153,10 +154,22 @@ export const Header: React.FC = () => {
 		);
 	};
 
+	const data = [{ 
+	image:     "https://cutshort-data.s3.amazonaws.com/cloudfront/public/companies/5809d1d8af3059ed5b346ed1/logo-1615367026425-logo-v6.png",
+	message: 'Nossa plataforma de lançamento de tokens está no ar. Conheça novas opções de investimentos em ativos digitais.', 
+	detailPage: '/tokens',
+	receivedTime: "12h ago"
+}];
+
 	const renderProfileTab = () => {
 		return (
 			isLoggedIn && (
 				<>
+					< Notifications  data={data} header={{
+    title: 'Notificações',
+    option: { text: 'Ver todas', onClick: () => console.log('Clicked') },
+	classNamePrefix: 'fortem',
+  }} />
 					<div className="header__right-menu__dropdown__wrap">
 						<span className={classLinkActiveTitleDrop('account')}>
 							<FaUserCircle className="header__right-menu__dropdown__wrap__content__title__icon mr-2" />

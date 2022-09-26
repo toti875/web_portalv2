@@ -202,16 +202,16 @@ export const NewMarketSlick: React.FC<any> = () => {
 			const open = Number((marketTickers[market.id] || defaultTicker).open);
 			const price_change_percent = (marketTickers[market.id] || defaultTicker).price_change_percent;
 			const change = +last - +open;
-			const marketChangeColor = +(change || 0) < 0 ? 'var(--asks)' : 'var(--bids)';
+			const marketChangeColor = +(change || 0) < 0 ? '#ED0A3F' : '#00CC99';
 			const price_change_percent_change = +(change || 0) < 0 ? Down : Up;
 			const baseCurrency = marketID.split('/')[0];
 			const findIcon = (code: string): string => {
 				const market = markets.find((currency: any) => String(currency.id).toLowerCase() === code.toLowerCase());
 				try {
-					return require(`../../../node_modules/cryptocurrency-icons/svg/color/${code.toLowerCase()}.svg`);
+					return require(`../../../node_modules/cryptocurrency-icons/svg/icon/${code.toLowerCase()}.svg`);
 				} catch (err) {
 		
-					return require('../../../node_modules/cryptocurrency-icons/svg/color/generic.svg');
+					return require('../../../node_modules/cryptocurrency-icons/svg/icon/generic.svg');
 				}
 			};
 			return ( 
@@ -246,7 +246,7 @@ export const NewMarketSlick: React.FC<any> = () => {
 		<ChartWrap>
 
 				<div className='slide-track market-slick ' style={{ paddingTop: '-80px', width: '240px', height: '62px',  border: '1px solid rgb(66, 66, 66)', borderRight: 'none',  zIndex: 9999, }}>  {MarketChart(kLinesState[1], "BTC/USDT")}</div>
-				<div className="market-slick" style={{ borderRadius: '1rem', marginLeft: '246px', marginTop: '-62px' }}>
+				<div className="market-slick " style={{ borderRadius: '1rem', marginLeft: '246px', marginTop: '-62px' }}>
 				
 					<div>
 					

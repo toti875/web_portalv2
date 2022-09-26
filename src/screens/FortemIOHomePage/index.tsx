@@ -6,6 +6,7 @@ import { HomepageMarket } from '../../containers';
 import { useHistory } from 'react-router-dom';
 import { setDocumentTitle } from '../../helpers';
 
+
 import { NewMarketSlick } from '../../components';
 import { eventFetch, selectEvents, selectUserLoggedIn} from '../../modules';
 import { useDispatch, useSelector } from 'react-redux';
@@ -123,6 +124,7 @@ import NFT from './nft.png';
 import devices from './fortemDevices-Laptop.png';
 import deviceLaptop from './fortemDevices-Laptop.png';
 import devicePhone from './fortemDevices-iPhone.png';
+import mobile from './fortem-mobile.png';
 
 
 import Flip from 'react-reveal/Flip';
@@ -130,6 +132,7 @@ import Zoom from 'react-reveal/Zoom';
 import Flash from 'react-reveal/Flash';
 import Pulse from 'react-reveal/Pulse';
 import RubberBand from 'react-reveal/RubberBand';
+import { Parallax } from 'react-scroll-parallax';
 
 
 
@@ -160,6 +163,9 @@ const Logo = require('../../assets/images/logo_branca_bandeira_verde.svg');
 const Logo_Capital = require ('../../assets/images/svg/branco_capital_bandeira_verde.svg');
 
 const Anime1 = require ('../../assets/animation/Bigscene-1-.json');
+
+const mainBanner = require ('./main_banner.jpg');
+
 
 const Skeleton = () => {
 	return <div>Cool loading screen</div>;
@@ -235,12 +241,27 @@ const BannerData = [
     {
         image: Logo,
         title: "Conecte-se com ",
-        description: "Aqui, agente respira o novo e constrói a nova geração de investimentos." ,
-		image_background: "https://doob.rainbowit.net/images/bg/bg-image-5.jpg",
+        description: "Aqui, a gente respira o novo e constrói a nova geração de investimentos." ,
+		image_background: mainBanner,
     },
     
 ]
 
+const BannerData2 = [
+    {
+        image: Logo,
+        title: "Conecte-se com ",
+        description: "ativos digitais" ,
+		image_background: mainBanner,
+    },
+	{
+        image: Logo,
+        title: "Conecte-se com ",
+        description: "crédito" ,
+		image_background: mainBanner,
+    },
+    
+]
 
 
 export const FortemIOHomePage = () => {
@@ -273,11 +294,25 @@ export const FortemIOHomePage = () => {
 		infinite: true,
 		speed: 500,
 		autoplay: true,
-		autoplaySpeed: 6000,
+		autoplaySpeed: 10000,
 		pauseOnHover: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 	};
+
+	const BannerSettings = {
+		dots: false,
+		infinite: true,
+		speed: 500,
+		autoplay: false,
+		autoplaySpeed: 6000,
+		pauseOnHover: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+	};
+
+
+	
 	
 
 	React.useEffect(() => {
@@ -312,15 +347,19 @@ function scrollRotate() {
 }
 */}
 
-	const renderBanner = () => (
-<>
 
-		<Slider className="slider-area slider-style-4 variation-2 " {...BannerActivation}>
+
+	const renderBanner = () => (
+		
+<>
+		
+		<Slider className="slider-area slider-style-4 variation-2 " {...BannerSettings}>
 		
 		{BannerData.map((data, index) => (
 			<div key={1} className="single-slide">
-				<div className="height-950 bg-overlay bg_image" style={{marginRight: '-100px', width: '100%', maxHeight: '850px', backgroundImage: `url("${data.image_background}")`}}>
-				<img className="logo" src={Logo} style={{ position: 'absolute', color: 'white', background: 'transparent', width: '560px',  top: '170px', paddingLeft: '140px'}}  />
+				<div className="bg-overlay bg_image" style={{ width: '100%', height: '800px', backgroundPosition: '1% 80%',}}>
+				<img src={data.image_background} style={{filter: 'blur(1px)', backgroundPosition: '1% 80%', backgroundSize: 'cover', opacity: '0.2', width: '100%', height: '800px'}}/>
+				<img className="logo" src={Logo} style={{ opacity: '1 !important', position: 'absolute', color: 'white', background: 'transparent', width: '460px',  top: '210px', paddingLeft: '30px'}}  />
 					<div className="container2 position-relative">
 						
 						
@@ -328,28 +367,51 @@ function scrollRotate() {
 						<div className="row row--30 align-items-center">
 							<div className="col-lg-12">
 								<div className="align-items-center justify-items-center" style={{display: 'flex', justifyContent: 'center'}}>
-										<h3 className="description justify-center animate_flash" style={{fontFamily: 'Inter', justifyContent: 'center', position: 'absolute', left: '100px', top: '-150px', color: 'white', display: 'flex', fontSize: '38px', width: '680px', }}> Fortem ONE é a plataforma especializada em  
-										<br  className=" animate__animated animate__bounce animate__animated animate_flash" style={{color: '#1EDED0'}} /> ativos digitais </h3>
+										<h3 className="description justify-center animate_flash" style={{fontFamily: 'Alliance1', fontSize: '40px', fontWeight: 'bold', justifyContent: 'center', position: 'absolute', left: '100px', top: '-420px', color: 'white', display: 'flex',  width: '680px', }}> Fortem ONE é a plataforma especializada em  </h3>
+										<br/>
+										<h3  className=" animate__animated animate__bounce animate__animated animate_flash" style={{opacity: '0.8', fontFamily: 'Alliance1', fontSize: '36px', fontWeight: 'bold', position: 'absolute', left: '100px', top: '-310px', width: '680px', color: '#1EDED0'}} > 
+										<Typed
+                                            strings={[
+                                                "ativos digitais",
+												"melhores créditos",
+                                                "alta rentabilidade",
+                                                "diversificação",
+												"segurança",
+												
+                                            ]}
+                                            typeSpeed={100}
+                                            backSpeed={50}
+                                            backDelay={1900}
+                                            loop
+                                        />
+										</h3>
 										
-										<Zoom interval={8000} delay={20000} forever={true} duration={3000}><h3 className="description justify-center animate__animated animate__bounce" style={{position: 'absolute',  top: '50px', left: '100px', color: 'yellow !important', display: 'flex', fontSize: '20px', width: '680px', }} dangerouslySetInnerHTML={{__html: data.description}}></h3></Zoom>
+										<Zoom interval={20000} delay={10000} forever={false} duration={8000}>
+											<h3 className="description justify-center animate__animated animate__bounce" style={{position: 'absolute',  top: '-220px', left: '104px',  display: 'flex', fontSize: '20px', width: '100%', }}> {data.description}</h3>
+										</Zoom>
+										<Zoom interval={20000} delay={18000} forever={false} duration={6000}>
+											<h3 className="description justify-center animate__animated animate__bounce" style={{opacity: '0.2', position: 'absolute',  top: '-180px', left: '104px',  display: 'flex', fontSize: '20px', width: '100%', }}> Re-escrevendo o futuro dos investimentos</h3>
+										</Zoom>
+
+										{isLogin ? (
+								<button className="btn-Register btn-none" onClick={redirectTrading} style={{position: 'absolute',   bottom: '370px', left: '60%'}}>
+									{translate('page.homePage.trade.btn.trade')}
+								</button>
+							) : (
+								<><a className="btn-default btn-icon icon-btn-wrap" href="/banner/authentication/sign-in/basic" style={{fontSize: '20px', position: 'absolute',  bottom: '370px', left: '50%', background: 'transparent'}}>Acessar plataforma <i className="icon"><FiArrowRight /></i></a>
+							
+																<button className="btn-icon btn-default" onClick={redirectSingUP} style={{fontSize: '20px', position: 'absolute',  bottom: '370px', left: '65%'}}>
+																{translate('page.homePage.trade.btn.signup')}
+															</button></>
+							)}
+
 
 										</div>
 							</div>
 						</div>
 						</div>
 				</div>
-									{isLogin ? (
-								<button className="btn-Register btn-none" onClick={redirectTrading} style={{position: 'absolute',   bottom: '100px', left: '60px'}}>
-									{translate('page.homePage.trade.btn.trade')}
-								</button>
-							) : (
-								<><a className="btn-default btn-icon icon-btn-wrap" href="/banner/authentication/sign-in/basic" style={{position: 'absolute',  bottom: '200px', left: '100px', background: 'transparent'}}>Acessar plataforma <i className="icon"><FiArrowRight /></i></a>
-							
-																<button className="btn-icon btn-default" onClick={redirectSingUP} style={{position: 'absolute',  bottom: '200px', left: '340px'}}>
-																{translate('page.homePage.trade.btn.signup')}
-															</button></>
-							)}
-			<div style={{}} >{renderMarketSlick()}	</div>
+				<div style={{}} >{renderMarketSlick()}	</div>
 			</div>
 
 
@@ -369,12 +431,15 @@ function scrollRotate() {
 						<div className="text-center">
 							<div className="position-relative">
 								<div className="position-relative z-index-1">
+								<Parallax rotateX={[-90, 0]} easing="easeInOutCirc">
+
 									<h2 data-w-id="2f13477a-efb0-0f82-999f-982786d80614" style={{transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d', opacity: 1}} className="display-2">
 										Plataforma 
 										<span className="color-accent">.<br /></span>
 										<span>para todas as suas necessidades</span>
 										<span className="color-accent">.</span>
 									</h2>
+									</Parallax>
 								</div>
 								<ScrollAnimation animateIn="fadeInUp" animateOut="fadeInOut" animateOnce={false}></ScrollAnimation>
 								<div className="position-absolute top number-01">
@@ -522,8 +587,9 @@ function scrollRotate() {
 									<h3 className="display-4 mg-bottom-0" style={{fontSize: '18px', marginLeft: '80px', }}>Usuários ativos</h3>
 								</div> 
 							</div>
-
+							<Parallax translateY={[-20, 10]} style={{ background: 'blue' }} className="test">
 							<div className="position-absolute bottom-left world-stats-02" style={{willChange: 'opacity, transform', opacity: 0.9401, transform: 'translate3d(0px, 0px, 0px) scale3d(0.998802, 0.998802, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
+							
 								<div className="world-stats-wrapper">
 									<div className="display-4 display-shadow" style={{marginLeft: '160px'}}>
 										80
@@ -531,8 +597,10 @@ function scrollRotate() {
 									</div>
 									<h3 className="display-4 mg-bottom-0" style={{fontSize: '18px', marginLeft: '160px'}}>de spread</h3>
 								</div> 
+								
 							</div>
-
+							</Parallax>
+							
 							<div className="position-absolute top-right world-stats-03" style={{willChange: 'opacity, transform', opacity: 0.9401, transform: 'translate3d(0px, 0px, 0px) scale3d(0.998802, 0.998802, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
 								<div className="world-stats-wrapper">
 									<div className="display-4 display-shadow" style={{marginLeft: '-490px'}}>
@@ -583,11 +651,11 @@ function scrollRotate() {
 						"Compre, venda ou converta criptoativos com os melhores preços, em poucos cliques. Aproveite a diversidade de criptoativos em uma interface intuitiva e completa para todos os perfis."
 						<span className="text-no-wrap">dui egestas.</span>
 					</p>
-					
+
 					<button className='btn-Register' > 
 						<span>Abra sua conta</span> 
 					</button> 
-						
+
 					
 				</div>
 			</div> 
@@ -1063,23 +1131,25 @@ const renderBlog = () => (
 	const renderEvent = () => {
 		return (
 		
-			<div className="homepage-event  rn-header header-default " style={{background: '#000',  margin: '0px auto', marginLeft: '5px', display: 'flex', flexDirection: 'row', height: '36px', borderTop: '1px solid #1EDED0', borderBottom: '1px solid #1EDED0', minWidth: '100px',  backgroundColor: '#000'}}> 
+			<div className="homepage-event  rn-header header-default " style={{background: '#000',  margin: '0px auto', marginLeft: '5px', display: 'flex', flexDirection: 'row', height: '36px', borderTop: '2px solid #46473E', borderBottom: '2px solid #46473E', minWidth: '100px', }}> 
 			
-				<div  className="news-event "  style={{ marginTop: '2px', maxWidth: '60px', background: '#000', alignItems: 'center',  color: '#1EDED0', borderRight: '1px solid gray', fontSize: '16px',  maxHeight: '26px' }}>
-				<Pulse forever={true}>	<img src={news} style={{ marginTop: '-2px', minWidth: '30px', }}></img></Pulse>
+				<div  className="news-event "  style={{margin: '0 auto', maxWidth: '80px', background: '#000', alignItems: 'center',  color: '#1EDED0', borderRight: '1px solid gray', fontSize: '16px',  maxHeight: '32px' }}>
+				<Pulse forever={true}>	<img src={news} style={{ marginTop: '-5px', minWidth: '30px', }}></img></Pulse>
 									
 				</div>
 
-				<div className="container2  theme-shape-root"  style={{  background: '#000', color: '#1EDED0', alignItems: 'center',   marginLeft: '10px', height: '26px', fontSize: '14px', backgroundColor: '#000'}}>
+				<div className="container2  theme-shape-root"  style={{  background: '#000', color: '#1EDED0', alignItems: 'center',   marginLeft: '10px', height: '26px', backgroundColor: '#000'}}>
 
 
 					<Slider {...settingEvents}>
 						{[...events.payload].map(event => {
 							return (
-								<div  >
-									<p  style={{background: '#000',  fontFamily: 'Raleway Dots'}} >{event.event_name}{event.description}
-									
-									</p>
+								<div className="news-event text-center justify-content-center" style={{display: 'flex', textAlign: 'center'}}>
+									<h3  style={{opacity: '1', fontSize: '16px', color: '#F5F5F5', letterSpacing: '3px', marginTop: '-14px', background: '#000',  fontFamily: 'Raleway Dots'}} >
+									<Zoom infinite={true} appear={true} delay={4000}> 
+										<a style={{fontFamily: 'Raleway Dots', }} href={event.ref_link}>{event.event_name}{event.description}</a>
+									</Zoom>
+									</h3>
 								
 								</div>
 							);
@@ -1293,7 +1363,6 @@ const renderBlog = () => (
 
 			{renderBanner()}
 			
-			{renderMarketSlick()}
 
 			{renderMarket()}
 
@@ -1301,15 +1370,17 @@ const renderBlog = () => (
 
             {renderMarket()}
 
+			<Parallax rotateX={[-120, 0]} easing="easeOutQuart" >
+				<img src={mobile} style={{backgroundImage: 'radial-gradient(300px at center, #4a4a4a, transparent )', display: 'block', transformOrigin: '80% 0px', marginTop: '60px', marginLeft: 'auto', marginRight: 'auto', height: '740px', width: '680px', objectFit: 'contain', }} className="theme-shape-center" />
+			</Parallax>
+
 			{renderBlog()}
 
 			<CalltoActionFive />
-{/*			
-			{renderFeature()}
 			
 		
           
-	*/}
+	
 		
 			{/*<Player
   autoplay
