@@ -2426,6 +2426,12 @@ html {
 	        filter: brightness(130%);
 } 
 
+.description, .b1 {
+
+    font-size: 20px !importante;
+
+} 
+
 .theme-shape-root {
     position: relative;
     z-index: 2;
