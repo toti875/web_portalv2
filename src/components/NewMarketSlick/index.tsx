@@ -6,8 +6,8 @@ import styled from 'styled-components';
 import { Decimal } from '../../components';
 import Slider from 'react-slick';
 import { currenciesFetch, selectMarkets, selectMarketTickers, Market, setCurrentMarket } from '../../modules';
-import Down from './icon/down.svg';
-import Up from './icon/up.svg';
+import Down from './icon/down2.svg';
+import Up from './icon/up2.svg';
 
 import ContentLoader from "react-content-loader";
 import Ticker from 'react-ticker'

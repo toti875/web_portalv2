@@ -564,8 +564,8 @@ function scrollRotate() {
 								</div>
 								<div className="inner-container _628px">
 									<p className="animate__animated animate__bounce">
-										"A Fortem ONE é a única plataforma nacional conectada diretamente às maiores exchanges de cripto ativos do mundo.  "
-										<span className="text-no-wrap">dui egestas.</span>
+										A Fortem ONE é a única plataforma nacional conectada diretamente às maiores exchanges e formadores de mercado cripto do mundo, concentrando todas as ordens em um único livro de ofertas.
+										<span>Assim, disponibilizamos aos nossos clientes os melhores preços e uma ampla variedade de ativos.</span>
 									</p>
 									
 									<button className='btn-Register' > 
@@ -587,7 +587,6 @@ function scrollRotate() {
 									<h3 className="display-4 mg-bottom-0" style={{fontSize: '18px', marginLeft: '80px', }}>Usuários ativos</h3>
 								</div> 
 							</div>
-							<Parallax translateY={[-20, 10]} style={{ background: 'blue' }} className="test">
 							<div className="position-absolute bottom-left world-stats-02" style={{willChange: 'opacity, transform', opacity: 0.9401, transform: 'translate3d(0px, 0px, 0px) scale3d(0.998802, 0.998802, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
 							
 								<div className="world-stats-wrapper">
@@ -599,7 +598,6 @@ function scrollRotate() {
 								</div> 
 								
 							</div>
-							</Parallax>
 							
 							<div className="position-absolute top-right world-stats-03" style={{willChange: 'opacity, transform', opacity: 0.9401, transform: 'translate3d(0px, 0px, 0px) scale3d(0.998802, 0.998802, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
 								<div className="world-stats-wrapper">
@@ -678,9 +676,7 @@ function scrollRotate() {
 				</div>
 			</div>
 		</div>
-		</div>
-		<img src="https://assets.website-files.com/62a9184508598c19a1306f0c/62a9184508598c1542306f75_image-mesh-hero-blockchain-template.svg" loading="eager" alt='position-absolute full section-bg' className='position-absolute full section-bg'/> 
-		
+		</div>		
 
 			<div className='position-absolute bottom fade' />
 
@@ -725,15 +721,16 @@ function scrollRotate() {
 		</div>
 		<div id="w-node-_63999b7c-6bb5-477e-a990-ce743ee613f1-2e306f0f" className="cta-part-section-mockup-wrapper"  style={{backgroundColor: 'transparent', height: '100%' }}>
 		
-			<ParticleImage
+		<img src={Token} />
+		{/*<ParticleImage
       src={Particles1}
       scale={0.75}
       entropy={20}
       maxParticles={6200}
       particleOptions={particleOptions} style={{width: '100%', backgroundColor: 'transparent', borderRadius: '100px'}}
 							/>
-	 
-
+		*/}
+					
 
 		</div>
 		
