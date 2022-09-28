@@ -105,7 +105,11 @@ import Default from "../../ui_vision/layouts/Admin";
 import SignInBasic from "../../ui_vision/layouts/Banner";
 import SignUpBasic from "../../ui_vision/layouts/Banner";
 
-import ConfirmBasic from "../../ui_vision/layouts/Banner"
+import ConfirmBasic from "../../ui_vision/layouts/Banner";
+
+import NFT from "../../template_react_ft_axies/src/pages/Home01";
+
+import FAQ from "../../screens/FortemFAQ/FAQ";
 
 
 
@@ -450,6 +454,14 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 						isLogged={isLoggedIn}
 						path="/email-verification"
 						component={EmailVerificationScreen}
+					/>
+
+
+					<PublicRoute
+						loading={userLoading} 
+						isLogged={isLoggedIn}
+						path="/faq"
+						component={FAQ}
 					/>
 					{/*
 					<PublicRoute path="/banner/authentication/sign-in/basic" component={SignInBasic} />

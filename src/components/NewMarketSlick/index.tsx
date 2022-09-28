@@ -10,7 +10,8 @@ import Down from './icon/down2.svg';
 import Up from './icon/up2.svg';
 
 import ContentLoader from "react-content-loader";
-import Ticker from 'react-ticker'
+import Ticker from 'react-ticker';
+import { CryptoIcon } from '../CryptoIcon';
 
 
 
@@ -142,7 +143,7 @@ export const NewMarketSlick: React.FC<any> = () => {
 					return b.price_change_percent - a.price_change_percent;
 				});
 
-				const marketNames = marketListToState.slice(0, 20).map(market => {
+				const marketNames = marketListToState.slice(0, 50).map(market => {
 					return market.name;
 				});
 				setMarketNames(marketNames);
@@ -208,7 +209,7 @@ export const NewMarketSlick: React.FC<any> = () => {
 			const findIcon = (code: string): string => {
 				const market = markets.find((currency: any) => String(currency.id).toLowerCase() === code.toLowerCase());
 				try {
-					return require(`../../../node_modules/cryptocurrency-icons/svg/icon/${code.toLowerCase()}.svg`);
+					return require(`../../../node_modules/cryptocurrency-icons/32/icon/${baseCurrency.toLowerCase()}.png`);
 				} catch (err) {
 		
 					return require('../../../node_modules/cryptocurrency-icons/svg/icon/generic.svg');

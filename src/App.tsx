@@ -12,9 +12,10 @@ import { selectCurrentLanguage, selectMobileDeviceState } from './modules';
 import { languageMap } from './translations';
 import { ParallaxProvider } from 'react-scroll-parallax';
 
+
 const gaKey = gaTrackerKey();
 const browserHistory = createBrowserHistory();
-
+ 
 if (gaKey) {
 	ReactGA.initialize(gaKey);
 	browserHistory.listen(location => {
@@ -23,7 +24,7 @@ if (gaKey) {
 	});
 }
 
-/* Mobile components */
+/* Mobile components  */
 const MobileFooter = React.lazy(() =>
 	import('./mobile/components/NewBottomNavbar').then(({ BottomNavbar }) => ({ default: BottomNavbar })),
 );
@@ -53,6 +54,10 @@ const getTranslations = (lang: string, isMobileDevice: boolean) => {
 const RenderDeviceContainers = () => {
 	const isMobileDevice = useSelector(selectMobileDeviceState);
 
+
+
+	
+
 	if (isMobileDevice) {
 		return (
 			<div className="pg-mobile-app">
@@ -67,10 +72,14 @@ const RenderDeviceContainers = () => {
 	return (
 		<React.Fragment>
 			<HeaderContainer />
-			<SidebarContainer />
 
+			
+
+			<SidebarContainer />
 			<AlertsContainer />
 			<LayoutContainer />
+			
+			
 			<FooterContainer />
 		</React.Fragment>
 	);

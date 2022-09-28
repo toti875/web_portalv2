@@ -12,6 +12,7 @@ import todayPickData from '../assets/fake-data/data-today-pick';
 import PopularCollection from '../components/layouts/PopularCollection';
 import popularCollectionData from '../assets/fake-data/data-popular-collection';
 import Create from '../components/layouts/Create';
+import './App.css';
 
 const Home01 = () => {
 

@@ -1,6 +1,6 @@
 {
 	"linterOptions": {
-		"exclude": ["config/**/*.js", "node_modules", "coverage/lcov-report/*.js", "src/charting_library/*"]
+		"exclude": ["./src/template_react_ft_axies/node_modules/*", "config/**/*.js", "node_modules", "coverage/lcov-report/*.js", "src/charting_library/*", "src/template_react_ft_axies/node_modules/*"]
 	},
 	"rules": {
 		"quotemark": [true, "single", "jsx-double"],
@@ -81,6 +81,7 @@
 		"no-misused-new": true,
 		"no-return-await": true,
 		"no-shadowed-variable": true,
+		"react-internal/no-production-logging": false,
 		"no-sparse-arrays": true,
 		"no-string-literal": true,
 		"no-string-throw": true,

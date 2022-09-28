@@ -10,10 +10,10 @@ import { currenciesFetch, selectCurrencies, selectMarkets, selectMarketTickers, 
 
 const ChartWrap = styled.div`
 	width: 100%;
-	padding-top: 50px;
+	padding-top: 20px;
 	display: flex;
 	justify-content: space-between;
-	background-color: #252a3b;
+	background-color: transparent;
 
 	.container {
 		div {
@@ -47,8 +47,8 @@ const ChartWrap = styled.div`
 const MarketChartItem = styled.div`
 	min-height: 100px;
 	padding: 15px 5px;
-	border-radius: 15px;
-	background-color: var(--tab-panel-background-color);
+	border-radius: 10px;
+	background-color: transparent;
 	:hover {
 		cursor: pointer;
 		box-shadow: #7d82b8 0px 0px 10px 0px;
@@ -72,10 +72,10 @@ export const NewMarketList: React.FC<any> = () => {
 		dots: false,
 		infinite: true,
 		speed: 500,
-		slidesToShow: 6,
+		slidesToShow: 4,
 		slidesToScroll: 1,
 		autoplay: true,
-		autoplaySpeed: 6000,
+		autoplaySpeed: 8000,
 		pauseOnHover: true,
 	};
 
@@ -129,7 +129,7 @@ export const NewMarketList: React.FC<any> = () => {
 	const fetchMarketsKlines = async (marketId: string, from: number, to: number) => {
 		try {
 			const klines = await axios.get(
-				`${BASE_MARKET_URL}/${marketId.split('/').join('')}/k-line?period=30&time_from=${from}&time_to=${to}`,
+				`${BASE_MARKET_URL}/${marketId.split('/').join('')}/k-line?period=1440&time_from=${from}&time_to=${to}`,
 			);
 			return klines.data.map((kline, index) => {
 				return { pv: kline[3] };
@@ -158,7 +158,7 @@ export const NewMarketList: React.FC<any> = () => {
 	const findIcon = (code: string): string => {
 		const currency = currencies.find((currency: any) => String(currency.id).toLowerCase() === code.toLowerCase());
 		try {
-			return require(`../../../node_modules/cryptocurrency-icons/128/color/${code.toLowerCase()}.png`);
+			return require(`../../../node_modules/cryptocurrency-icons/32/icon/${code.toLowerCase()}.png`);
 		} catch (err) {
 			if (currency) return currency.icon_url;
 			return require('../../../node_modules/cryptocurrency-icons/svg/color/generic.svg');
@@ -190,14 +190,14 @@ export const NewMarketList: React.FC<any> = () => {
 			const open = Number((marketTickers[market.id] || defaultTicker).open);
 			const price_change_percent = (marketTickers[market.id] || defaultTicker).price_change_percent;
 			const change = +last - +open;
-			const marketChangeColor = +(change || 0) < 0 ? 'var(--system-red)' : 'var(--system-green)';
+			const marketChangeColor = +(change || 0) < 0 ? '#D92121' : '#00CC99';
 			return (
 				<MarketChartItem>
 					<div className="container" onClick={() => handleRedirectToTrading(market.id)}>
 						<div className="row">
 							<div className="col-12 d-flex justify-content-between">
 								<div className="d-flex justify-content-between">
-									<img width="30px" height="30px" src={findIcon(baseCurrency)} alt={baseCurrency} />
+									<img width="38px" height="38px" src={findIcon(baseCurrency)} alt={baseCurrency} style={{borderRadius: '50%'}}/>
 									<span style={{ fontSize: '1.4rem', margin: '5px' }} className="text-white">
 										{marketID.toUpperCase()}
 									</span>
@@ -245,7 +245,7 @@ export const NewMarketList: React.FC<any> = () => {
 								<ResponsiveContainer ani width="100%" aspect={6 / 1}>
 									<AreaChart
 										width={200}
-										height={60}
+										height={200}
 										data={data}
 										margin={{
 											top: 5,
@@ -255,11 +255,11 @@ export const NewMarketList: React.FC<any> = () => {
 										}}
 									>
 										<Area
-											isAnimationActive={false}
-											type="monotone"
+											isAnimationActive={true}
+											type="gradient"
 											dataKey="pv"
 											stroke="#fff"
-											fill="transparent"
+											fill="green"
 										/>
 									</AreaChart>
 								</ResponsiveContainer>

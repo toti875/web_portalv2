@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
-import { Navigation, Scrollbar, A11y   } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/scss';
-import 'swiper/scss/navigation';
-import 'swiper/scss/pagination';
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
+import { Navigation,  Scrollbar, A11y } from 'swiper';
+import 'swiper/swiper.scss'; // core Swiper
+import 'swiper/modules/navigation/navigation.scss'; // Navigation module
+import 'swiper/modules/pagination/pagination.scss'; // Pagination module
 import shape1 from '../../assets/images/backgroup-secsion/bg-gradient1.png'
 import shape2 from '../../assets/images/backgroup-secsion/bg-gradient2.png'
 import shape3 from '../../assets/images/backgroup-secsion/bg-gradient3.png'

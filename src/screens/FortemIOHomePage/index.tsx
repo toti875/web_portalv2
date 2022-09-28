@@ -133,6 +133,11 @@ import Flash from 'react-reveal/Flash';
 import Pulse from 'react-reveal/Pulse';
 import RubberBand from 'react-reveal/RubberBand';
 import { Parallax } from 'react-scroll-parallax';
+import ScrollToTop from './ScrollToTop';
+
+import {NewMarketList} from '../../containers/NewMarKetList'
+
+import {MarketsList} from '../../containers/MarketsList'
 
 
 
@@ -166,10 +171,22 @@ const Anime1 = require ('../../assets/animation/Bigscene-1-.json');
 
 const mainBanner = require ('./main_banner.jpg');
 
+const speed = require ('./images/speed.svg');
+const security = require ('./images/security.svg');
+const surveillance = require ('./images/surveillance.svg');
+const world = require ('./images/world.svg');
+const price = require ('./images/price.svg');
+const deposit = require ('./images/deposit.svg');
+const api = require ('./images/api.svg');
+const stars = require ('./images/stars.svg');
+const interfaces = require ('./images/features.svg');
+
+
 
 const Skeleton = () => {
 	return <div>Cool loading screen</div>;
   };
+ 
 
 //const logo1 = require ('url(https://doob.rainbowit.net/images/bg/bg-image-5.jpg)')
 
@@ -804,30 +821,73 @@ function scrollRotate() {
 					<div className="mg-bottom-50px">
 						<div className="inner-container _82px">
 							<div className="image-wrapper">
-								<img src="https://assets.website-files.com/62a9184508598c19a1306f0c/62a9184508598c64a9306f78_icon-1-features-section-blockchain-template.svg" loading="eager" alt="Secure & Encrypted Crypto Wallet - Blockchain X Webflow Template" className="image cover"></img>
+								<img src={security} loading="eager" alt="Segurança" className="image cover"></img>
 						</div>
 					</div>
 				</div>
-				<h3 className="display-4">
-					"Secure & encrypted crypto wallet"
+				<h3 className="display-4" style={{height: '68px'}}>
+					Segurança
 					<span className="color-accent">.</span>
 				</h3>
 				<p className="mg-bottom-0">
-					"Quam facilisi gravida in morbi blandit imperdiet urna ut metus pharetra orci ut cursus diam ut urna mi pharetra nibh neque mi cursus nec donec morbi non hendrerit "
-					<span className="text-no-wrap">in gravida .</span>
+					Nossa plataforma eletrônica foi projetada e desenvolvida a partir de uma arquitetura tecnológica de missão crítica, com alta disponibilidade, contingências e capacidade de processamento para suportar os momentos mais voláteis dos mercados. Várias camadas e mecanismos de segurança atuam em conjunto com um Centro de Monitoração especializado, 24 horas x 7 dias da semana. 
+					
+					<br />
+					<br /><a href='' ><span className="color-accent">Conheça nossa página de status</span><i className="icon"><FiArrowRight /></i></a>
 				</p>  
 			</div>
 			<div id="w-node-_0cbf1d8f-f8bb-0b9d-a837-f1a2579de295-2e306f0f" className="border-bottom">
 				<div className="mg-bottom-50px">
 					<div className="inner-container _82px">
 						<div className="image-wrapper">
-							<img src="https://assets.website-files.com/62a9184508598c19a1306f0c/62a9184508598c0b8f306f76_icon-2-features-section-blockchain-template.svg" loading="eager" alt="Send & Receive Crypto Tokens - Blockchain X Webflow Template" className="image cover" /> 
+							<img src={speed} loading="eager" alt="Desempenho" /> 
+						</div>
+					</div>
+				</div>
+				<h3 className="display-4" style={{height: '68px'}}>
+					ESTABILIDADE, DESEMPENHO E CAPACIDADE
+					<span className="color-accent">.</span>
+				</h3>
+				<p className="mg-bottom-0">
+					Para adicionar ainda mais segurança ao nosso negócio todas as transações são momitoradas pelo nosso serviço de Supervisão de Mercado, que analisa, investiga e atua junto a operações fora de padrao.
+					<br /> Tudo isso para garantir aos nossos clientes um ambiente 
+					<span className="color-accent"> profissional, seguro e estável.</span>
+					<br />E mais, sem necessidade de correr riscos enviando seus recursos para fora do país.
+					<span className="text-no-wrap"></span>
+
+				</p> 
+			</div>
+			<div id="w-node-_0cbf1d8f-f8bb-0b9d-a837-f1a2579de295-2e306f0f" className="border-bottom">
+				<div className="mg-bottom-50px">
+					<div className="inner-container _82px">
+						<div className="image-wrapper">
+							<img src={world} loading="eager" alt="World" className="image cover" /> 
+						</div>
+					</div>
+				</div>
+				<h3 className="display-4" style={{height: '68px'}}>
+					ALTA LIQUIDEZ, VOLUME GLOBAL
+					<span className="color-accent">.</span>
+				</h3>
+				<p className="mg-bottom-0">
+					Para adicionar ainda mais segurança ao nosso negócio todas as transações são momitoradas pelo nosso serviço de Supervisão de Mercado, que analisa, investiga e atua junto a operações fora de padrao.
+					<br /> Tudo isso para garantir aos nossos clientes um ambiente 
+					<span className="color-accent"> profissional, seguro e estável.</span>
+					<br />E mais, sem necessidade de correr riscos enviando seus recursos para fora do país.
+					<span className="text-no-wrap">in gravida .</span>
+				</p>
+			</div>
+			<div id="w-node-_0cbf1d8f-f8bb-0b9d-a837-f1a2579de295-2e306f0f" className="border-bottom">
+				<div className="mg-bottom-50px">
+					<div className="inner-container _82px">
+						<div className="image-wrapper">
+							<img src={price} loading="eager" alt="Price" className="image cover" /> 
 						</div>
 					</div>
 				</div>
 				<h3 className="display-4">
-					"TRANSFERENCIAS"
-					<span className="color-accent"></span>
+					PREÇO
+					<span className="color-accent">.</span>
 				</h3>
 				<p className="mg-bottom-0">
 					"Quam facilisi gravida in morbi blandit imperdiet urna ut metus pharetra orci ut cursus diam ut urna mi pharetra nibh neque mi cursus nec donec morbi non hendrerit "
@@ -838,13 +898,13 @@ function scrollRotate() {
 				<div className="mg-bottom-50px">
 					<div className="inner-container _82px">
 						<div className="image-wrapper">
-							<img src="https://assets.website-files.com/62a9184508598c19a1306f0c/62a9184508598c0b8f306f76_icon-2-features-section-blockchain-template.svg" loading="eager" alt="Send & Receive Crypto Tokens - Blockchain X Webflow Template" className="image cover" /> 
+							<img src={deposit} loading="eager" alt="Deposit" /> 
 						</div>
 					</div>
 				</div>
 				<h3 className="display-4">
-					"TRANSFERENCIAS"
-					<span className="color-accent"></span>
+					DEPÓSITOS E SAQUES
+					<span className="color-accent">.</span>
 				</h3>
 				<p className="mg-bottom-0">
 					"Quam facilisi gravida in morbi blandit imperdiet urna ut metus pharetra orci ut cursus diam ut urna mi pharetra nibh neque mi cursus nec donec morbi non hendrerit "
@@ -855,13 +915,13 @@ function scrollRotate() {
 				<div className="mg-bottom-50px">
 					<div className="inner-container _82px">
 						<div className="image-wrapper">
-							<img src="https://assets.website-files.com/62a9184508598c19a1306f0c/62a9184508598c0b8f306f76_icon-2-features-section-blockchain-template.svg" loading="eager" alt="Send & Receive Crypto Tokens - Blockchain X Webflow Template" className="image cover" /> 
+							<img src={stars} loading="eager" alt="Features" className="image cover" /> 
 						</div>
 					</div>
 				</div>
 				<h3 className="display-4">
-					"TRANSFERENCIAS"
-					<span className="color-accent"></span>
+					FUNCIONALIDADES
+					<span className="color-accent">.</span>
 				</h3>
 				<p className="mg-bottom-0">
 					"Quam facilisi gravida in morbi blandit imperdiet urna ut metus pharetra orci ut cursus diam ut urna mi pharetra nibh neque mi cursus nec donec morbi non hendrerit "
@@ -872,13 +932,30 @@ function scrollRotate() {
 				<div className="mg-bottom-50px">
 					<div className="inner-container _82px">
 						<div className="image-wrapper">
-							<img src="https://assets.website-files.com/62a9184508598c19a1306f0c/62a9184508598c0b8f306f76_icon-2-features-section-blockchain-template.svg" loading="eager" alt="Send & Receive Crypto Tokens - Blockchain X Webflow Template" className="image cover" /> 
+							<img src={interfaces} loading="eager" alt="Send & Receive Crypto Tokens - Blockchain X Webflow Template" className="image cover" /> 
 						</div>
 					</div>
 				</div>
 				<h3 className="display-4">
-					"TRANSFERENCIAS"
-					<span className="color-accent"></span>
+					INTERFACES
+					<span className="color-accent">.</span>
+				</h3>
+				<p className="mg-bottom-0">
+					"Quam facilisi gravida in morbi blandit imperdiet urna ut metus pharetra orci ut cursus diam ut urna mi pharetra nibh neque mi cursus nec donec morbi non hendrerit "
+					<span className="text-no-wrap">in gravida .</span>
+				</p>
+			</div>
+			<div id="w-node-_0cbf1d8f-f8bb-0b9d-a837-f1a2579de295-2e306f0f" className="border-bottom">
+				<div className="mg-bottom-50px">
+					<div className="inner-container _82px">
+						<div className="image-wrapper">
+							<img src={api} loading="eager" alt="API" /> 
+						</div>
+					</div>
+				</div>
+				<h3 className="display-4">
+					API
+					<span className="color-accent">.</span>
 				</h3>
 				<p className="mg-bottom-0">
 					"Quam facilisi gravida in morbi blandit imperdiet urna ut metus pharetra orci ut cursus diam ut urna mi pharetra nibh neque mi cursus nec donec morbi non hendrerit "
@@ -889,16 +966,19 @@ function scrollRotate() {
 				<div className="mg-bottom-50px">
 					<div className="inner-container _82px">
 						<div image-wrapper>
-							<img src="https://assets.website-files.com/62a9184508598c19a1306f0c/62a9184508598c9c88306f77_icon-3-features-section-blockchain-template.svg" loading="eager" alt="Watch And Analyze Charts In Real-time - Blockchain X Webflow Template" className="image cover"></img>
+							<img src={surveillance} loading="eager" alt="SURVEILLANCE" className="image cover"></img>
 						</div>
 					</div>
 				</div>
 				<h3 className="display-4">
-					"VOLUME"
+					"SUPERVISÃO DO MERCADO"
 					<span className="color-accent">.</span>
 				</h3>
 				<p className="mg-bottom-0">
-					"Quam facilisi gravida in morbi blandit imperdiet urna ut metus pharetra orci ut cursus diam ut urna mi pharetra nibh neque mi cursus nec donec morbi non hendrerit "
+					Para adicionar ainda mais segurança ao nosso negócio todas as transações são momitoradas pelo nosso serviço de Supervisão de Mercado, que analisa, investiga e atua junto a operações fora de padrao.
+					<br /> Tudo isso para garantir aos nossos clientes um ambiente 
+					<span className="color-accent"> profissional, seguro e estável.</span>
+					<br />E mais, sem necessidade de correr riscos enviando seus recursos para fora do país.
 					<span className="text-no-wrap">in gravida .</span>
 				</p>
 			</div>
@@ -1354,24 +1434,31 @@ const renderBlog = () => (
 	*/}
 	
 		
-	
+			<ScrollToTop />
 			{renderEvent()}				
 			
 
 			{renderBanner()}
+			<NewMarketList />
 			
-
+			<MarketsList />
 			{renderMarket()}
 
 			{renderDownloadDevices()}
 
-            {renderMarket()}
 
 			<Parallax rotateX={[-120, 0]} easing="easeOutQuart" >
-				<img src={mobile} style={{backgroundImage: 'radial-gradient(300px at center, #4a4a4a, transparent )', display: 'block', transformOrigin: '80% 0px', marginTop: '60px', marginLeft: 'auto', marginRight: 'auto', height: '740px', width: '680px', objectFit: 'contain', }} className="theme-shape-center" />
+				<img src={mobile} style={{backgroundImage: 'radial-gradient(300px at center, #4a4a4a, transparent )', display: 'block', transformOrigin: '80% 0px', marginLeft: 'auto', marginRight: 'auto', height: '740px', width: '680px', objectFit: 'contain', }} className="theme-shape-center" />
 			</Parallax>
 
 			{renderBlog()}
+
+			{renderFeature()}
+
+			{renderInfo()}
+
+			<SlipThree />
+
 
 			<CalltoActionFive />
 			

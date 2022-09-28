@@ -14,6 +14,8 @@ import { ProfileActiveStepAction } from 'containers/ProfileActiveStepAction';
 import useStickyHeader from "./useStickyHeader";
 import Notifications from "react-notifications-menu";
 import './notifications.css'
+import Menu from '../../react-menu/src/AnimatedNavbar';
+import styled from "styled-components"
 
 const Logo = require('../../assets/images/logo_branca_bandeira_verde.svg');
 
@@ -54,6 +56,20 @@ export const Header: React.FC = () => {
 			'header__right-menu__dropdown__wrap__dropbtn--active': activeNow === nameActive,
 		});
 	};
+
+	
+	const AppContainer = styled.div`
+  background: transparent;
+  display: flex;
+  z-index: 9999;
+  flex-direction: column;
+  height: 80px;
+  margin-top: -80px;
+
+  > div:first-of-type {
+    flex: 1 0 70vh;
+  }
+`
 
 	const renderWalletLink = () => {
 		const classItemTitle = classNames('header__right-menu__item__title', {
@@ -275,8 +291,10 @@ export const Header: React.FC = () => {
 								<img src={Logo} alt=""  />
 							</Link>
 						</div>
-						
 
+					</div>
+						
+{/*
 
 						<div className="header__left-menu__dropdown flex-shrink-0  ">
 							<div className="header__left-menu__dropdown__wrap">
@@ -527,9 +545,16 @@ export const Header: React.FC = () => {
 						{renderUnLogin()}
 						{renderProfileTab()}
 					</div>
+
+
+									*/}
 				</nav>
 			</div>
 			</header>
+			<AppContainer>
+
+<Menu duration={300}/>
+</AppContainer>
   
   </>
 

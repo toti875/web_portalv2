@@ -1,15 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Scrollbar, A11y } from 'swiper';
-
-import 'swiper/scss';
-import 'swiper/scss/navigation';
-import 'swiper/scss/pagination';
+import { Link } from 'react-router-dom';
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import 'swiper/swiper.scss'; // core Swiper
+import 'swiper/modules/navigation/navigation.scss'; // Navigation module
+import 'swiper/modules/pagination/pagination.scss'; // Pagination module
 
 const TopSeller = props => {
     const data = props.data;
-    return (
+    return ( 
         <section className="tf-section top-seller">
             <div className="themesflat-container">
                 <div className="row">
