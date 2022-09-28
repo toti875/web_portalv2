@@ -14,10 +14,11 @@ const ChartWrap = styled.div`
 	justify-content: space-between;
 `;
 const MarketChartItem = styled.div`
-	min-height: 100px;
+	width: 300px;
+	height: 160px;
 	padding: 10px 0;
-	border-radius: 4px;
-	background-color: var(--tab-panel-background-color);
+	border-radius: 10px;
+	background-color: #fff;
 	:hover {
 		cursor: pointer;
 		box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
@@ -76,7 +77,7 @@ export const MarketsHotOnlist: React.FC<any> = () => {
 					return b.price_change_percent - a.price_change_percent;
 				});
 
-				const marketNames = marketListToState.slice(0, 4).map(market => {
+				const marketNames = marketListToState.slice(0, 50).map(market => {
 					return market.name;
 				});
 				setMarketNames(marketNames);
@@ -84,7 +85,7 @@ export const MarketsHotOnlist: React.FC<any> = () => {
 		}
 	}, [marketTickers, markets, defaultTicker, marketNames.length]);
 
-	const BASE_MARKET_URL = 'http'
+	const BASE_MARKET_URL = 'https://www.yellow.com/api/v2/peatio/public/markets';
 	const fetchMarketsKlines = async (marketId: string, from: number, to: number) => {
 		try {
 			const klines = await axios.get(
@@ -156,15 +157,16 @@ export const MarketsHotOnlist: React.FC<any> = () => {
 			const price_change_percent = (marketTickers[market.id] || defaultTicker).price_change_percent;
 			const volume = Decimal.format(Number((marketTickers[market.id] || defaultTicker).volume), market.amount_precision);
 			const change = +last - +open;
-			const marketChangeColor = +(change || 0) < 0 ? 'var(--system-red)' : 'var(--system-green)';
+			const marketChangeColor = +(change || 0) < 0 ? '#D92121' : '#00CC99';
 			return (
 				<MarketChartItem>
 					<div className="container" onClick={() => handleRedirectToTrading(market.id)}>
 						<div className="row">
 							<div className="col-12 d-flex justify-content-between">
 								<div>
-									<img width="30px" height="30px" src={findIcon(baseCurrency)} alt={baseCurrency} />
-									<span style={{ fontSize: '1.2rem', margin: '5px' }} className="text-white">
+								<img width="36px" height="36x" style={{borderRadius: '50%'}}src={findIcon(baseCurrency)} alt={baseCurrency} />
+
+									<span style={{ fontSize: '16px', margin: '5px', color: '#46473E' }} >
 										{marketID.toUpperCase()}
 									</span>
 								</div>
@@ -180,24 +182,26 @@ export const MarketsHotOnlist: React.FC<any> = () => {
 						</div>
 						<div className="row mt-3" style={{ zIndex: 999, position: 'relative' }}>
 							<div className="col-12 d-flex justify-content: center">
-								<span style={{ marginRight: '5px', color: marketChangeColor, fontWeight: 'bold' }}>
+								<span style={{ fontSize: '16px', marginRight: '5px', color: marketChangeColor, fontWeight: 'bold' }}>
 									{price_change_percent}
 								</span>
 								<div className="ml-2">
-									<span style={{ color: '#FFF' }}>Volume:</span>
-									<span className="ml-2" style={{ marginRight: '5px', color: '#FFF', fontWeight: 'bold' }}>
+									<span style={{fontSize: '16px', color: '#46473E' }}>Volume:</span>
+									<span className="ml-2" style={{ marginRight: '5px', color: '#46473E', fontWeight: 'bold' }}>
 										{volume}
 									</span>
-									<span style={{ color: '#FFF' }}>{quoteCurrency.toUpperCase()}</span>
+									<span style={{fontSize: '16px', color: '#46473E' }}>{quoteCurrency.toUpperCase()}</span>
 								</div>
 							</div>
 						</div>
-						<div className="row position-absolute fixed-bottom" style={{ zIndex: 0, position: 'absolute' }}>
+						<div className="row position-absolute fixed-bottom" style={{marginTop: '260px', marginLeft: '40%', width: '200px', height: '160px', zIndex: 0, position: 'absolute' }}>
 							<div className="col-12">
+
 								<ResponsiveContainer ani width="100%" aspect={4 / 1}>
+
 									<AreaChart
-										width={90}
-										height={60}
+										width="90px"
+										height="60px"
 										data={data}
 										margin={{
 											top: 5,
@@ -206,12 +210,19 @@ export const MarketsHotOnlist: React.FC<any> = () => {
 											bottom: 5,
 										}}
 									>
+										        <defs>
+          <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="5%" stopColor={marketChangeColor} stopOpacity={0.4}/>
+            <stop offset="95%" stopColor="#FFFFFF" stopOpacity={0.4}/>
+          </linearGradient>
+        </defs>
 										<Area
-											isAnimationActive={false}
 											type="monotone"
 											dataKey="pv"
-											stroke="#FFF"
-											fill="rgba(122, 122, 176, 0.4)"
+											stroke={marketChangeColor}
+											strokeWidth={2}
+											fillOpacity={0.6}
+											fill="transparent"
 										/>
 									</AreaChart>
 								</ResponsiveContainer>

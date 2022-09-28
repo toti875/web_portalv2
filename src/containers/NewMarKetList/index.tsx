@@ -5,8 +5,9 @@ import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 import { Decimal } from '../../components';
 import Slider from 'react-slick';
-import { AreaChart, Area, ResponsiveContainer } from 'recharts';
+import { AreaChart, Area, LineChart, Line, ResponsiveContainer } from 'recharts';
 import { currenciesFetch, selectCurrencies, selectMarkets, selectMarketTickers, Market, setCurrentMarket } from '../../modules';
+import { Sparklines, SparklinesLine } from 'react-sparklines';
 
 const ChartWrap = styled.div`
 	width: 100%;
@@ -55,7 +56,7 @@ const MarketChartItem = styled.div`
 	}
 `;
 
-const BASE_MARKET_URL = 'http://www.yellow.com/api/v2/peatio/public/markets';
+const BASE_MARKET_URL = 'https://www.yellow.com/api/v2/peatio/public/markets';
 
 export const NewMarketList: React.FC<any> = () => {
 	const defaultTicker = {
@@ -80,6 +81,8 @@ export const NewMarketList: React.FC<any> = () => {
 	};
 
 	const dispatch = useDispatch();
+
+	
 	const [marketNames, setMarketNames] = React.useState<string[]>([]);
 	const [kLinesState, setKlinesState] = React.useState<{ pv: string }[]>([]);
 
@@ -138,14 +141,16 @@ export const NewMarketList: React.FC<any> = () => {
 			return [];
 		}
 	};
+
+	var klines;
 	React.useEffect(() => {
 		if (marketNames) {
-			const from = Math.floor(Date.now() / 1000) - 60 * 1 * 60 * 1000;
+			const from = Math.floor(Date.now() / 1000) - 60 * 24 * 60 * 1000;
 			const to = Math.floor(Date.now() / 1000);
 			const drawMarketLines = async () => {
 				try {
 					for (let i = 0; i < marketNames.length; i++) {
-						const klines = await fetchMarketsKlines(marketNames[i], from, to);
+						klines = await fetchMarketsKlines(marketNames[i], from, to);
 						setKlinesState(prev => [...prev, klines]);
 					}
 				} catch (error) {}
@@ -198,27 +203,16 @@ export const NewMarketList: React.FC<any> = () => {
 							<div className="col-12 d-flex justify-content-between">
 								<div className="d-flex justify-content-between">
 									<img width="38px" height="38px" src={findIcon(baseCurrency)} alt={baseCurrency} style={{borderRadius: '50%'}}/>
-									<span style={{ fontSize: '1.4rem', margin: '5px' }} className="text-white">
-										{marketID.toUpperCase()}
+									<span style={{ fontSize: '17px', margin: '5px' }} className="text-white">
+										{baseCurrency}
 									</span>
 								</div>
-								<span
-									style={{
-										color: '#fff',
-										padding: '0.5rem 1rem',
-										backgroundColor: 'rgba(47, 182, 126, 0.25)',
-										borderRadius: '6px',
-										fontWeight: 'bold',
-										maxHeight: '32px',
-									}}
-								>
-									24H
-								</span>
+
 							</div>
 						</div>
 						<div className="row mt-4">
 							<div className="col-6 d-flex justify-content-start align-items-center">
-								<span style={{ marginLeft: '5px', fontSize: '1.4rem', color: '#fff' }}>{last}</span>
+								<span style={{ marginLeft: '5px', fontSize: '16px', color: '#fff' }}>{last}</span>
 							</div>
 
 							<div className="col-6 d-flex justify-content-end align-items-center">
@@ -231,7 +225,7 @@ export const NewMarketList: React.FC<any> = () => {
 							<div className="col-12 d-flex justify-content-between">
 								<span
 									style={{
-										fontSize: '1.4rem',
+										fontSize: '16px',
 										margin: '5px',
 										color: '#FFF',
 									}}
@@ -241,27 +235,11 @@ export const NewMarketList: React.FC<any> = () => {
 							</div>
 						</div>
 						<div className="row">
-							<div className="col-12 d-flex justify-content: center">
+							<div className="col-12 d-flex justify-content-center">
 								<ResponsiveContainer ani width="100%" aspect={6 / 1}>
-									<AreaChart
-										width={200}
-										height={200}
-										data={data}
-										margin={{
-											top: 5,
-											right: 0,
-											left: 0,
-											bottom: 5,
-										}}
-									>
-										<Area
-											isAnimationActive={true}
-											type="gradient"
-											dataKey="pv"
-											stroke="#fff"
-											fill="green"
-										/>
-									</AreaChart>
+								<Sparklines data={data}>
+  <SparklinesLine color={marketChangeColor} />
+</Sparklines>
 								</ResponsiveContainer>
 							</div>
 						</div>

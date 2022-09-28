@@ -139,6 +139,9 @@ import {NewMarketList} from '../../containers/NewMarKetList'
 
 import {MarketsList} from '../../containers/MarketsList'
 
+import { MarketsHotOnlist } from '../../components/MarketsHotOnList'
+
+
 
 
 
@@ -1439,9 +1442,8 @@ const renderBlog = () => (
 			
 
 			{renderBanner()}
-			<NewMarketList />
 			
-			<MarketsList />
+			<MarketsHotOnlist />
 			{renderMarket()}
 
 			{renderDownloadDevices()}
@@ -1453,7 +1455,6 @@ const renderBlog = () => (
 
 			{renderBlog()}
 
-			{renderFeature()}
 
 			{renderInfo()}
 

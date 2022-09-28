@@ -17018,6 +17018,13 @@
     "raf" "^3.4.0"
     "react-transition-group" "^2.5.0"
 
+"react-sparklines@^1.7.0":
+  "integrity" "sha512-bJFt9K4c5Z0k44G8KtxIhbG+iyxrKjBZhdW6afP+R7EnIq+iKjbWbEFISrf3WKNFsda+C46XAfnX0StS5fbDcg=="
+  "resolved" "https://registry.npmjs.org/react-sparklines/-/react-sparklines-1.7.0.tgz"
+  "version" "1.7.0"
+  dependencies:
+    "prop-types" "^15.5.10"
+
 "react-spinner-children@^1.0.8":
   "integrity" "sha512-JNo7Jvs6aZLwhzxEshmTc67RuLMNVbrdZ326fzW3LjeU6wT2Npucm0DHRp9k3Xr2415AZxlHI1LtP4k7uXEbxA=="
   "resolved" "https://registry.npmjs.org/react-spinner-children/-/react-spinner-children-1.0.8.tgz"
