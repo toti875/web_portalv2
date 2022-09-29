@@ -94,7 +94,7 @@ const ProductsDropdown = () => {
                 Marketplace para negociação de tokens exclusivos 
               </p>
               <a href="/nft" style={{marginTop: '-10px', fontSize: '16px',}}>
-                  <Icon />Conheça nosso marketplace de NFTs
+                  <Icon style={{backgroundColor: '#009991'}}/>Conheça nosso marketplace de NFTs
               </a>
             </div>
           </li>

@@ -16,25 +16,25 @@ const CompanyDropdown = () => {
   return (
     <CompanyDropdownEl>
       <DropdownSection data-first-dropdown-section>
-        <ul>
+        <ul> Principais Dúvidas
           <HeadingLink>
             <a href="/">
-              <Icon /> About Stripe
+              <Icon />
             </a>
           </HeadingLink>
           <HeadingLink>
             <a href="/">
-              <Icon />Customers
+              <Icon />Central de Suporte
             </a>
           </HeadingLink>
           <HeadingLink>
             <a href="/">
-              <Icon />Jobs
+              <Icon />Taxas
             </a>
           </HeadingLink>
           <HeadingLink noMarginBottom>
             <a href="/">
-              <Icon />Environment
+              <Icon />Status dos serviços
             </a>
           </HeadingLink>
         </ul>
@@ -42,18 +42,16 @@ const CompanyDropdown = () => {
       <DropdownSection>
         <div>
           <Heading>
-            <Icon />From the Blog
+            <Icon />Blog
           </Heading>
           <LinkList marginLeft="25px">
             <li>
-              <a href="/">Stripe Atlas &rsaquo;</a>
+              <a href="/">Tokenização &rsaquo;</a>
             </li>
             <li>
-              <a href="/">Stripe Home &rsaquo;</a>
+              <a href="/">Cripto &rsaquo;</a>
             </li>
-            <li>
-              <a href="/">Improved Fraud Detection &rsaquo;</a>
-            </li>
+            
           </LinkList>
         </div>
       </DropdownSection>

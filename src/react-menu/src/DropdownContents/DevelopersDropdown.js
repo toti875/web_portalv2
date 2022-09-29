@@ -9,7 +9,7 @@ import {
 } from "./Components"
 
 const DevelopersDropdownEl = styled.div`
-  width: 25rem;
+  width: 400px;
 `
 
 const Flex = styled.div`
@@ -22,60 +22,33 @@ const Flex = styled.div`
 const DevelopersDropdown = () => {
   return (
     <DevelopersDropdownEl>
-      <DropdownSection data-first-dropdown-section>
-        <div>
-          <Heading>Documentation</Heading>
-          <p>Start integrating Stripe&rsquo;s products and tools</p>
-          <Flex>
-            <div>
-              <h4>Get Started</h4>
-              <LinkList>
-                <li>
-                  <a href="/">Elements</a>
-                </li>
-                <li>
-                  <a href="/">Checkout</a>
-                </li>
-                <li>
-                  <a href="/">Mobile apps</a>
-                </li>
-              </LinkList>
-            </div>
-            <div>
-              <h4>Popular Topics</h4>
-              <LinkList>
-                <li>
-                  <a href="/">Apple Pay</a>
-                </li>
-                <li>
-                  <a href="/">Testing</a>
-                </li>
-                <li>
-                  <a href="/">Launch Checklist</a>
-                </li>
-              </LinkList>
-            </div>
-          </Flex>
-        </div>
-      </DropdownSection>
+
       <DropdownSection>
-        <ul>
-          <HeadingLink>
-            <a href="/">
-              <Icon /> Full API Reference
-            </a>
-          </HeadingLink>
-          <HeadingLink>
-            <a href="/">
-              <Icon /> API Status
-            </a>
-          </HeadingLink>
-          <HeadingLink noMarginBottom>
-            <a href="/">
-              <Icon /> Open Source
-            </a>
-          </HeadingLink>
-        </ul>
+      <li>
+            {/*<div>
+              <Logo style={{marginTop: '30px'}} color="blue" />
+            </div>*/}
+            <div>
+              <Heading style={{marginLeft: '15px', color: '#46473E', fontSize: '17px', fontWeight: 'bold'}} >Tokenização</Heading>
+              <p style={{paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '-30px'}}>Antecipe seus recebíveis ou obtenha crédito rápido e simplficado, com as melhores taxas, tokenizando seus serviços</p>
+              <a href="" style={{marginTop: '-10px', fontSize: '16px',}}>
+                  <Icon />Conheça nossa plataforma de tokenização
+              </a>
+            </div>
+          </li>
+          <li>
+            {/*<div>
+              <Logo style={{marginTop: '30px'}} color="blue" />
+            </div>*/}
+            <div>
+              <Heading style={{marginLeft: '15px', color: '#46473E', fontSize: '17px', fontWeight: 'bold'}} >Meios de pagamento</Heading>
+              <p style={{paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '-30px'}}>Aceite pagamentos com cripto e tokens com conversão para Reais e iquidação instantânea</p>
+              <a href="" style={{marginTop: '-10px', fontSize: '16px',}}>
+                  <Icon />Conheça nossas soluções
+              </a>
+            </div>
+          </li>
+
       </DropdownSection>
     </DevelopersDropdownEl>
   )
