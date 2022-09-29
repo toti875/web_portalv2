@@ -10,9 +10,9 @@ import "./index.css"
 //import "normalize.css"
 
 const navbarConfig = [
-  { title: "Products", dropdown: ProductsDropdown },
-  { title: "Developers", dropdown: DevelopersDropdown },
-  { title: "Company", dropdown: CompanyDropdown }
+  { title: "Para você", dropdown: ProductsDropdown },
+  { title: "Para empresas", dropdown: DevelopersDropdown },
+  { title: "Suporte", dropdown: CompanyDropdown }
 ]
 
 export default class AnimatedNavbar extends Component {

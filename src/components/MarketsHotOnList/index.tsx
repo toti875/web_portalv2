@@ -14,13 +14,16 @@ const ChartWrap = styled.div`
 	justify-content: space-between;
 `;
 const MarketChartItem = styled.div`
+	margin-top: 30px;
 	width: 300px;
 	height: 160px;
 	padding: 10px 0;
 	border-radius: 10px;
-	background-color: #fff;
+	background-color: #F5F5F5;
+	transition: transform 1s;
 	:hover {
 		cursor: pointer;
+		transform: scale(1.1) ;
 		box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
 	}
 `;
@@ -77,7 +80,7 @@ export const MarketsHotOnlist: React.FC<any> = () => {
 					return b.price_change_percent - a.price_change_percent;
 				});
 
-				const marketNames = marketListToState.slice(0, 50).map(market => {
+				const marketNames = marketListToState.slice(0, 52).map(market => {
 					return market.name;
 				});
 				setMarketNames(marketNames);
@@ -166,7 +169,7 @@ export const MarketsHotOnlist: React.FC<any> = () => {
 								<div>
 								<img width="36px" height="36x" style={{borderRadius: '50%'}}src={findIcon(baseCurrency)} alt={baseCurrency} />
 
-									<span style={{ fontSize: '16px', margin: '5px', color: '#46473E' }} >
+									<span style={{ fontSize: '16px', fontWeight: 'bold', margin: '5px', color: '#46473E' }} >
 										{marketID.toUpperCase()}
 									</span>
 								</div>
@@ -174,23 +177,21 @@ export const MarketsHotOnlist: React.FC<any> = () => {
 						</div>
 						<div className="row mt-3" style={{ zIndex: 999, position: 'relative' }}>
 							<div className="col-12 d-flex justify-content-start align-items-center">
-								<span style={{ marginLeft: '5px', fontSize: '1.4rem', color: marketChangeColor }}>{last}</span>
-								<p className="m-0 ml-3 text-white">
-									≈ $ <ConvertUsd value={+last} symbol={baseCurrency} />
-								</p>
+								<span style={{ marginLeft: '5px', fontSize: '16px', color: marketChangeColor }}>Preço: {last}</span>
+								<span style={{ fontSize: '16px', marginLeft: '20px', color: marketChangeColor,}}>
+									{price_change_percent}
+								</span>
 							</div>
 						</div>
 						<div className="row mt-3" style={{ zIndex: 999, position: 'relative' }}>
 							<div className="col-12 d-flex justify-content: center">
-								<span style={{ fontSize: '16px', marginRight: '5px', color: marketChangeColor, fontWeight: 'bold' }}>
-									{price_change_percent}
-								</span>
+
 								<div className="ml-2">
-									<span style={{fontSize: '16px', color: '#46473E' }}>Volume:</span>
-									<span className="ml-2" style={{ marginRight: '5px', color: '#46473E', fontWeight: 'bold' }}>
+									<span style={{fontSize: '15px',   color: '#46473E', fontWeight: 'bold', }}>Volume 24H: </span>
+									<span className="ml-2" style={{  color: '#46473E', }}>
 										{volume}
 									</span>
-									<span style={{fontSize: '16px', color: '#46473E' }}>{quoteCurrency.toUpperCase()}</span>
+									<span style={{fontSize: '14px',   color: '#46473E' }}>{quoteCurrency.toUpperCase()}</span>
 								</div>
 							</div>
 						</div>
@@ -206,7 +207,7 @@ export const MarketsHotOnlist: React.FC<any> = () => {
 										margin={{
 											top: 5,
 											right: 20,
-											left: 20,
+											left: 30,
 											bottom: 5,
 										}}
 									>
@@ -221,7 +222,7 @@ export const MarketsHotOnlist: React.FC<any> = () => {
 											dataKey="pv"
 											stroke={marketChangeColor}
 											strokeWidth={2}
-											fillOpacity={0.6}
+											fillOpacity={0.4}
 											fill="transparent"
 										/>
 									</AreaChart>
@@ -239,7 +240,7 @@ export const MarketsHotOnlist: React.FC<any> = () => {
 	const renderChart = () => {
 		return (
 			<ChartWrap>
-				<div className="container" style={{ backgroundColor: 'transparent', padding: '25px 0px', borderRadius: '1rem' }}>
+				<div className="container" style={{ backgroundColor: 'transparent', padding: '25px 10px', borderRadius: '1rem' }}>
 					<div className="row">
 						{kLinesState.map((kline, i) => (
 							<div className="col-lg-3 col-md-6 mb-2 position-relative" key={i}>

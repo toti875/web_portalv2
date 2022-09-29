@@ -111,6 +111,8 @@ import NFT from "../../template_react_ft_axies/src/pages/Home01";
 
 import FAQ from "../../screens/FortemFAQ/FAQ";
 
+import Status from "../../template_react_status/src/components/App"
+
 
 
 
@@ -462,6 +464,13 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 						isLogged={isLoggedIn}
 						path="/faq"
 						component={FAQ}
+					/>
+
+<PublicRoute
+						loading={userLoading} 
+						isLogged={isLoggedIn}
+						path="/status"
+						component={Status}
 					/>
 					{/*
 					<PublicRoute path="/banner/authentication/sign-in/basic" component={SignInBasic} />

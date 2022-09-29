@@ -104,6 +104,7 @@
 		"react-intl": "^3.12.1",
 		"react-jvectormap": "0.0.16",
 		"react-loading-iframe": "^1.1.0",
+		"react-markdown": "^8.0.3",
 		"react-maskinput": "^1.0.1",
 		"react-notifications-menu": "^1.0.6",
 		"react-on-screen": "^2.1.1",

@@ -3,7 +3,8 @@ import styled from "styled-components"
 import { Icon, DropdownSection, Heading } from "./Components"
 
 const ProductsDropdownEl = styled.div`
-  width: 30rem;
+  width: 440px;
+  height: 600px;
 `
 
 const Logo = styled.div`
@@ -55,32 +56,46 @@ const ProductsDropdown = () => {
       <DropdownSection data-first-dropdown-section>
         <ProductsSection>
           <li>
+            {/*<div>
+              <Logo style={{marginTop: '30px'}} color="blue" />
+            </div>*/}
             <div>
-              <Logo color="blue" />
-            </div>
-            <div>
-              <Heading color="blue">Payments</Heading>
-              <p>A complete payments platform</p>
+              <Heading style={{marginLeft: '15px', color: '#46473E', fontSize: '17px', fontWeight: 'bold'}} >Tokens</Heading>
+              <p style={{paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '-30px'}}>Invista nos tokens com os melhores rendimentos e com a segurança da blockchain</p>
+              <a href="/tokens" style={{marginTop: '-10px', fontSize: '16px',}}>
+                  <Icon />Conheça nosso marketplace de tokens
+              </a>
             </div>
           </li>
           <li>
-            <div>
+            {/*<div>
               <Logo color="green" />
-            </div>
+          </div>*/}
             <div>
-              <Heading color="green">Billing</Heading>
-              <p>Build and scale your recurring business model</p>
+              {/*<Heading color="green">Cripto</Heading>*/}
+              <Heading style={{marginLeft: '15px', color: '#46473E', fontSize: '17px', fontWeight: 'bold'}} >Cripto</Heading>
+
+              <p style={{paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '-10px'}}>Os criptoativos mais negociados no mundo agora à sua disposição em Reais</p>
+              <a href="/quick-exchange" style={{fontSize: '16px',}}>
+                  <Icon />Negociação instantânea
+              </a><br/>
+              <a href="/exchange" style={{fontSize: '16px'}}>
+                  <Icon />Negociação avançada
+              </a>
             </div>
           </li>
           <li>
-            <div>
+            {/*<div>
               <Logo color="teal" />
-            </div>
+            </div>*/}
             <div>
-              <Heading color="teal">Connect</Heading>
-              <p style={{ marginBottom: 0 }}>
-                Everything platforms need to get sellers paid
+            <Heading style={{marginLeft: '15px', color: '#46473E', fontSize: '17px', fontWeight: 'bold'}} >NFT</Heading>
+              <p style={{ paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '-10px'}}>
+                Marketplace para negociação de tokens exclusivos 
               </p>
+              <a href="/nft" style={{marginTop: '-10px', fontSize: '16px',}}>
+                  <Icon />Conheça nosso marketplace de NFTs
+              </a>
             </div>
           </li>
         </ProductsSection>
