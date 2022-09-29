@@ -17,9 +17,9 @@ export const SaleListScreen: React.FC = () => {
 						
 
 						<div className="container2 align-items-center">
-			<video style={{ width: '25%',   borderRadius: '50%', left: '38%', top: '160px', opacity: 1, position: 'absolute'}} autoPlay >
+			{/*<video style={{ opacity: '0.5', width: '25%',   borderRadius: '50%', left: '38%', top: '160px', position: 'absolute'}} autoPlay >
 					<source 					 src={GlobeAnimated} type="video/mp4" />
-				</video>
+	</video>*/}
 
 				</div>
 			

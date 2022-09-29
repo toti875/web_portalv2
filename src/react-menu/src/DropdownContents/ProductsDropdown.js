@@ -100,29 +100,7 @@ const ProductsDropdown = () => {
           </li>
         </ProductsSection>
       </DropdownSection>
-      <DropdownSection>
-        <SubProductsList>
-          <li>
-            <Heading noMarginBottom>Sigma</Heading>
-            <div>Your business data at your fingertips.</div>
-          </li>
-          <li>
-            <Heading noMarginBottom>Atlas</Heading>
-            <div>The best way to start an internet business.</div>
-          </li>
-          <li>
-            <Heading noMarginBottom>Radar</Heading>
-            <div>Fight fraud with machine learning.</div>
-          </li>
-        </SubProductsList>
-        <WorksWithStripe>
-          <Heading noMarginBottom>
-            <a href="/">
-              <Icon /> Works with Stripe
-            </a>
-          </Heading>
-        </WorksWithStripe>
-      </DropdownSection>
+
     </ProductsDropdownEl>
   )
 }

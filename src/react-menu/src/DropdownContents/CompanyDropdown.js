@@ -9,17 +9,17 @@ import {
 } from "./Components"
 
 const CompanyDropdownEl = styled.div`
-  width: 18.5rem;
+  width: 360px;
 `
 
 const CompanyDropdown = () => {
   return (
     <CompanyDropdownEl>
       <DropdownSection data-first-dropdown-section>
-        <ul> Principais Dúvidas
+        <ul> 
           <HeadingLink>
-            <a href="/">
-              <Icon />
+            <a href="/faq">
+              <Icon />Principais Dúvidas
             </a>
           </HeadingLink>
           <HeadingLink>
