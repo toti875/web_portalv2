@@ -130,7 +130,7 @@ import Flash from 'react-reveal/Flash';
 import Pulse from 'react-reveal/Pulse';
 import RubberBand from 'react-reveal/RubberBand';
 import { Parallax } from 'react-scroll-parallax';
-import ScrollToTop from './scroll-to-top/index';
+//import ScrollToTop from './scroll-to-top/index';
 
 import {NewMarketList} from '../../containers/NewMarKetList'
 
@@ -139,6 +139,8 @@ import {MarketsList} from '../../containers/MarketsList'
 import { MarketsHotOnlist } from '../../components/MarketsHotOnList'
 
 import Wrapper from './wrapper';
+
+import ScrollToTop from "react-scroll-to-top";
 
 
 
@@ -1433,8 +1435,8 @@ const renderBlog = () => (
 	*/}
 	
 		
-			<ScrollToTop />
-			{renderEvent()}				
+	{/*<ScrollToTop smooth color="#009991" />*/}
+				{renderEvent()}				
 			
 
 			{renderBanner()}
@@ -1454,7 +1456,7 @@ const renderBlog = () => (
 
 			{renderInfo()}
 
-			<SlipThree />
+			{/*<SlipThree />*/}
 
 
 			<CalltoActionFive />

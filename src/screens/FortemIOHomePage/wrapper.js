@@ -7,7 +7,6 @@ const Wrapper = ({ children }) => (
     <>
         {children}
         <ScrollToTop />
-        <ToastContainer />
     </>
 );
 

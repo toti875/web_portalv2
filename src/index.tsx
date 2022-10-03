@@ -13,6 +13,7 @@ import './index.css';
 import './template_react/doob/src/assets/scss/style.scss';
 import './blockchain.css';
 import './themes/bootstrap/bootstrap-utilities.css';
+import './Feather.svg';
 
 import { rootSaga } from './modules';
 import { rangerSagas } from './modules/public/ranger';

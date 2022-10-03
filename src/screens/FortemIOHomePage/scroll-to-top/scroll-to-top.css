@@ -52,6 +52,7 @@
     transform: translateY(15px);
     -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
+    color: green !important;
 
     &.rn-backto-top-active {
         opacity: 1;
@@ -80,7 +81,7 @@
 
     &:hover {
         &::after {
-            color: pink;
+            color: pink !important;
         }
     }
 
@@ -112,7 +113,7 @@
     }
     svg {
         path {
-            fill: #fff;
+            fill: #fff !important;
         }
         &.rn-back-circle {
             path {
