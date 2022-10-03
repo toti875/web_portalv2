@@ -10,7 +10,7 @@ const AppContainer = styled.div`
   background: linear-gradient(150deg, #53f 15%, #05d5ff);
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 60px;
 
   > div:first-of-type {
     flex: 1 0 70vh;

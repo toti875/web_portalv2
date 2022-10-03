@@ -1,6 +1,3 @@
-
-
-
 import React from 'react';
 import { HomepageMarket } from '../../containers';
 import { useHistory } from 'react-router-dom';

@@ -282,11 +282,11 @@ export const Header: React.FC = () => {
 	return (
 		<>
 
-<header className={`headerDesktop-screen rn-header header-default header--stick sitcky ${HeaderSTyle} ${headerClasses}`}>		
+<header className={`headerDesktop-screen rn-header header-default header--stick`}>		
 			<div className="container-header">
 				<nav className="header d-flex flex-row justify-content-between align-items-center">
 					<div className="header__left-menu d-flex flex-row align-items-center">
-						<div className="header-logo" onClick={() => setStateActiveNow('')}>
+						<div className="header-logo" style={{zIndex: 99999}} onClick={() => setStateActiveNow('')}>
 							<Link to="/">
 								<img src={Logo} alt=""  />
 							</Link>
@@ -544,7 +544,7 @@ export const Header: React.FC = () => {
 
 					</div>
 	*/}
-					<div className="header__right-menu d-flex align-items-center flex-row">
+					<div className="header__right-menu d-flex align-items-center flex-row" style={{zIndex: 99999}}>
 						{renderUnLogin()}
 						{renderProfileTab()}
 					</div>
