@@ -1454,7 +1454,6 @@ const renderBlog = () => (
 			{renderBlog()}
 
 
-			{renderInfo()}
 
 			{/*<SlipThree />*/}
 
