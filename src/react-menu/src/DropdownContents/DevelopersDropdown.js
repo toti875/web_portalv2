@@ -42,10 +42,10 @@ const DevelopersDropdown = () => {
             </div>*/}
             <div>
               <Heading style={{marginLeft: '15px', color: '#46473E', fontSize: '17px', fontWeight: 'bold'}} >Meios de pagamento</Heading>
-              <p style={{paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '-30px'}}>Aceite pagamentos com cripto e tokens com conversão para Reais e iquidação instantânea</p>
-              <a href="" style={{marginTop: '-10px', fontSize: '16px',}}>
-                  <Icon />Conheça nossas soluções
-              </a>
+              <p style={{paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '-30px'}}>Aceite pagamentos com cripto e tokens com conversão para Reais e liquidação instantânea</p>
+              <p  style={{marginTop: '-10px', fontSize: '16px',}}>
+                  <Icon />Conheça nossas soluções 
+              </p>
             </div>
           </li>
 

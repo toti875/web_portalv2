@@ -133,13 +133,15 @@ import Flash from 'react-reveal/Flash';
 import Pulse from 'react-reveal/Pulse';
 import RubberBand from 'react-reveal/RubberBand';
 import { Parallax } from 'react-scroll-parallax';
-import ScrollToTop from './ScrollToTop';
+import ScrollToTop from './scroll-to-top/index';
 
 import {NewMarketList} from '../../containers/NewMarKetList'
 
 import {MarketsList} from '../../containers/MarketsList'
 
 import { MarketsHotOnlist } from '../../components/MarketsHotOnList'
+
+import Wrapper from './wrapper';
 
 
 
@@ -200,11 +202,7 @@ const Skeleton = () => {
 
 //var mainPage = require('./home-business.html');
 
-const Wrap = styled.div`
-  padding: 30px 30px 0 0;
-  display: inline-block;
-  background-image: ${encodeSVG(serviceBorder)};
-`;
+
 
 var symbols = /[\r\n"%#()<>?\[\\\]^`{|}]/g;
 
@@ -1424,6 +1422,7 @@ const renderBlog = () => (
 	};
 
 	return (
+		<Wrapper>
         <div className="fortem-mainPage">
 		
 	
@@ -1480,7 +1479,7 @@ const renderBlog = () => (
 
 	
             </div>
-		
+			</Wrapper>
  
 	);
 };

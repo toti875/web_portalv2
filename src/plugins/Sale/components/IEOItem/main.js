@@ -7,6 +7,7 @@
     var sliderBreakPoint= 991; // It will effect when you have used attribute "data-thumb-slider-md-direction" OR "data-slider-md-direction"
     var mobileAnimation = false;
         
+    
     /****** Don't change variables value ******/
     var lastScroll      = 0,
         simpleDropdown  = 0,

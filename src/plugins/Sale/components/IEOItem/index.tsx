@@ -22,6 +22,10 @@ import ReactCardFlip from "react-card-flip";
 
 
 
+
+
+
+
 const ccVisa = require('../../assets/visa.png');
 
 

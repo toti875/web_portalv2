@@ -6,6 +6,34 @@
 	padding-bottom: 30vh;
 }
 
+.banner {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	opacity: 1;
+	
+  }
+  .banner video {
+	position: absolute;
+	opacity: 0.8;
+	top: -200px;
+	left: 0;
+	object-fit: cover;
+	width: 100%;
+	blur: 100px;
+  }
+
+  .logoCentral {
+	opacity: 1;
+	background: rgb(29,30,34);
+	background: radial-gradient(circle, rgba(29,30,34,0.9402135854341737) 60%, rgba(0,153,145,0.43881302521008403) 100%);
+
+  }
+
 .sale-list__title,
 .sale-list__subtitle {
 	font-size: 20px;

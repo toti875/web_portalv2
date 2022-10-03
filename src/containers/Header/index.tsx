@@ -282,7 +282,7 @@ export const Header: React.FC = () => {
 	return (
 		<>
 
-<header className={`headerDesktop-screen rn-header header-default ${HeaderSTyle} ${headerClasses}`}>		
+<header className={`headerDesktop-screen rn-header header-default header--stick sitcky ${HeaderSTyle} ${headerClasses}`}>		
 			<div className="container-header">
 				<nav className="header d-flex flex-row justify-content-between align-items-center">
 					<div className="header__left-menu d-flex flex-row align-items-center">
@@ -539,22 +539,30 @@ export const Header: React.FC = () => {
 						</div>
 	
 
-					</div>
 
+						
+
+					</div>
+	*/}
 					<div className="header__right-menu d-flex align-items-center flex-row">
 						{renderUnLogin()}
 						{renderProfileTab()}
 					</div>
 
 
-									*/}
+
+								
 				</nav>
 			</div>
-			</header>
+
 			<AppContainer>
 
 <Menu duration={300}/>
 </AppContainer>
+
+
+			</header>
+
   
   </>
 
