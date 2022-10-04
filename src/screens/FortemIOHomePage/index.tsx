@@ -141,8 +141,10 @@ import { MarketsHotOnlist } from '../../components/MarketsHotOnList'
 
 import Wrapper from './wrapper';
 
-import ScrollToTop from "react-scroll-to-top";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+
+import { SaleListTablesUpcoming } from '../../plugins/Sale/containers/SaleListTablesUpcoming';
+
 
 
 
@@ -1328,7 +1330,7 @@ const renderBlog = () => (
                                 <div className="tab-content">
                                     <div className="inner">
                                         <div className="thumbnail">
-teste2                                        </div>
+<SaleListTablesUpcoming />                                        </div>
                                     </div>
                                 </div>
                             </TabPanel>

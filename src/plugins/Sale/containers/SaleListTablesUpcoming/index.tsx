@@ -23,9 +23,9 @@ export const SaleListTablesUpcoming: React.FC = () => {
 
 	React.useEffect(() => {
 		// dispatch Active Sale List Fetch in one time
-		dispatchEndedSaleListFetch();
+		dispatchOnGoingSaleListFetch();
 	
-	}, [dispatchEndedSaleListFetch]);
+	}, [dispatchOnGoingSaleListFetch]);
 
 	const handleSelectMenuItem = ({ key, domEvent }) => {
 		switch (key) {
@@ -81,24 +81,7 @@ export const SaleListTablesUpcoming: React.FC = () => {
 
 	return (
 		<div className="container-fluid">
-			<div className="row">
-				<div className="col-12">
-					<Menu mode="horizontal" defaultSelectedKeys={['active']} onClick={handleSelectMenuItem}>
-						<Menu.Item key="active">
-							<span style={{ color: '#4284F5ff' }}>Active</span>
-						</Menu.Item>
-						<Menu.Item key="ongoing">
-							<span style={{ color: '#0C9D58ff' }}>On Going</span>
-						</Menu.Item>
-						<Menu.Item key="upcoming">
-							<span style={{ color: '#FABE08ff' }}>Up Coming</span>
-						</Menu.Item>
-						<Menu.Item key="ended">
-							<span style={{ color: '#EA4235ff' }}>Ended</span>
-						</Menu.Item>
-					</Menu>
-				</div>
-			</div>
+
 			<div className="row mt-4">
 				<div className="col-12">{<Row gutter={[16, 16]}>{saleItems}</Row>}</div>
 			</div>
