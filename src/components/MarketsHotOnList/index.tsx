@@ -14,15 +14,17 @@ const ChartWrap = styled.div`
 	justify-content: space-between;
 `;
 const MarketChartItem = styled.div`
-	margin-top: 30px;
-	width: 300px;
+	margin-bottom: 40px;
+	margin-top: -20px;
+	width: 340px;
 	height: 160px;
-	padding: 10px 0;
+	padding: 10px;
 	border-radius: 10px;
 	background-color: #F5F5F5;
 	transition: transform 1s;
+	cursor: pointer;
 	:hover {
-		cursor: pointer;
+		opacity: 0.6;
 		transform: scale(1.1) ;
 		box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
 	}
@@ -80,7 +82,7 @@ export const MarketsHotOnlist: React.FC<any> = () => {
 					return b.price_change_percent - a.price_change_percent;
 				});
 
-				const marketNames = marketListToState.slice(0, 52).map(market => {
+				const marketNames = marketListToState.slice(0, 6).map(market => {
 					return market.name;
 				});
 				setMarketNames(marketNames);
@@ -163,7 +165,7 @@ export const MarketsHotOnlist: React.FC<any> = () => {
 			const marketChangeColor = +(change || 0) < 0 ? '#D92121' : '#00CC99';
 			return (
 				<MarketChartItem>
-					<div className="container" onClick={() => handleRedirectToTrading(market.id)}>
+					<div className="container2" onClick={() => handleRedirectToTrading(market.id)}>
 						<div className="row">
 							<div className="col-12 d-flex justify-content-between">
 								<div>
@@ -195,7 +197,7 @@ export const MarketsHotOnlist: React.FC<any> = () => {
 								</div>
 							</div>
 						</div>
-						<div className="row position-absolute fixed-bottom" style={{marginTop: '260px', marginLeft: '40%', width: '200px', height: '160px', zIndex: 0, position: 'absolute' }}>
+						<div className="row position-absolute " style={{marginTop: '-115px', marginLeft: '40%', width: '200px', height: '160px', zIndex: 0, position: 'absolute' }}>
 							<div className="col-12">
 
 								<ResponsiveContainer ani width="100%" aspect={4 / 1}>
@@ -205,10 +207,8 @@ export const MarketsHotOnlist: React.FC<any> = () => {
 										height="60px"
 										data={data}
 										margin={{
-											top: 5,
-											right: 20,
+											right: 30,
 											left: 30,
-											bottom: 5,
 										}}
 									>
 										        <defs>
@@ -240,10 +240,10 @@ export const MarketsHotOnlist: React.FC<any> = () => {
 	const renderChart = () => {
 		return (
 			<ChartWrap>
-				<div className="container" style={{ backgroundColor: 'transparent', padding: '25px 10px', borderRadius: '1rem' }}>
+				<div className="container" style={{ backgroundColor: 'transparent', paddingTop: '25px', borderRadius: '1rem' }}>
 					<div className="row">
 						{kLinesState.map((kline, i) => (
-							<div className="col-lg-3 col-md-6 mb-2 position-relative" key={i}>
+							<div className="col-12 col-md-6 mb-2 position-relative" key={i}>
 								{MarketChart(kline, marketNames[i])}
 							</div>
 						))}

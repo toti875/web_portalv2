@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import { HomepageMarket } from '../../containers';
 import { useHistory } from 'react-router-dom';
 import { setDocumentTitle } from '../../helpers';
+
 
 
 import { NewMarketSlick } from '../../components';
@@ -141,6 +142,10 @@ import { MarketsHotOnlist } from '../../components/MarketsHotOnList'
 import Wrapper from './wrapper';
 
 import ScrollToTop from "react-scroll-to-top";
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+
+
+
 
 
 
@@ -166,6 +171,7 @@ const particleOptions: ParticleOptions = {
 //import "./home-business.html";
 
 //const mainPage = require('./home-business.html');
+
 
 const Logo = require('../../assets/images/logo_branca_bandeira_verde.svg');
 
@@ -292,6 +298,8 @@ export const FortemIOHomePage = () => {
 	const history = useHistory();
 	const isLogin = useSelector(selectUserLoggedIn);
 	//const statistics = useSelector(selectStatistics);
+
+	const [tabIndex, setTabIndex] = useState(0);
 	
 	
 	const settings = {
@@ -403,11 +411,11 @@ function scrollRotate() {
                                         />
 										</h3>
 										
-										<Zoom interval={20000} delay={10000} forever={false} duration={8000}>
+										<Zoom interval={10000} delay={10000} forever={false} duration={8000}>
 											<h3 className="description justify-center animate__animated animate__bounce" style={{position: 'absolute',  top: '-220px', left: '104px',  display: 'flex', fontSize: '20px', width: '100%', }}> {data.description}</h3>
 										</Zoom>
 										<Zoom interval={20000} delay={18000} forever={false} duration={6000}>
-											<h3 className="description justify-center animate__animated animate__bounce" style={{opacity: '0.2', position: 'absolute',  top: '-180px', left: '104px',  display: 'flex', fontSize: '20px', width: '100%', }}> Re-escrevendo o futuro dos investimentos</h3>
+											<h3 className="description justify-center animate__animated animate__bounce" style={{opacity: '0.2', position: 'absolute',  top: '-180px', left: '104px',  display: 'flex', fontSize: '20px', width: '100%', }}> Re-escrevendo o futuro dos investimentos.</h3>
 										</Zoom>
 
 										{isLogin ? (
@@ -456,6 +464,7 @@ function scrollRotate() {
 										<span>para todas as suas necessidades</span>
 										<span className="color-accent">.</span>
 									</h2>
+									<p style={{fontSize: '20px'}}>Dos investimentos em criptoativos à conta digital. Aqui você tem o controle integrado de toda a sua vida financeira.</p>
 									</Parallax>
 								</div>
 								<ScrollAnimation animateIn="fadeInUp" animateOut="fadeInOut" animateOnce={false}></ScrollAnimation>
@@ -971,7 +980,7 @@ function scrollRotate() {
 					</div>
 				</div>
 				<h3 className="display-4">
-					"SUPERVISÃO DO MERCADO"
+					SUPERVISÃO DO MERCADO
 					<span className="color-accent">.</span>
 				</h3>
 				<p className="mg-bottom-0">
@@ -1251,6 +1260,96 @@ const renderBlog = () => (
 			</div>
 		</div>
 	);
+
+	const renderCryptoTabs = () => (
+			<div className="rwt-advance-tab-area rn-section-gap theme-shape-root">
+                    <div className="container">
+                        <div className="row mb--40">
+                            <div className="col-lg-12" style={{fontSize: '20px'}}>
+                                <SectionTitle
+                                    textAlign = "text-center"
+                                    radiusRounded = ""
+                                    subtitle = ""
+                                    title = "Conheça um pouco do nosso portfólio diversificado de ativos digitais"
+                                    description = "Todo o universo cripto para você escolher"
+                                />
+                            </div>
+							{renderInfo()}
+                        </div>
+						<Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
+                <div className="row row--30">
+                    <div className="order-2 order-lg-1 col-lg-4 col-md-12 col-sm-12 col-12 mt_md--30 mt_sm--30">
+                        <div className="advance-tab-button advance-tab-button-1">
+                            <TabList className="tab-button-list">
+                                <Tab>
+                                    <div className="tab-button" >
+                                        <h4 className="title">Criptomoedas.</h4>
+                                        <p className="description">Conheça nossa variedade de criptomoedas.</p>
+                                    </div>   
+                                </Tab>
+                                <Tab>
+                                    <div className="tab-button">
+                                        <h4 className="title">Tokens.</h4>
+                                        <p className="description">Veja os tokens que estão em destaque na plataforma.</p>
+                                    </div>   
+                                </Tab>
+                                <Tab>
+                                    <div className="tab-button">
+                                        <h4 className="title">NFT.</h4>
+                                        <p className="description">Explore nossas coleções de NFTs.</p>
+                                    </div>   
+                                </Tab>
+                            </TabList>
+                        </div>
+                    </div>
+                    <div className="order-1 order-lg-2 col-lg-8 col-md-12 col-sm-12 col-12">
+                        <div className="advance-tab-content advance-tab-content-1">
+                            <TabPanel>
+							<div className="tab-content">
+                                    <div className="inner">
+                                        <div className="thumbnail">
+					<MarketsHotOnlist />
+
+					</div>
+					</div>
+											                                        
+		
+                                </div>
+								<div className="market bg-transparent   content-wrapper bg-transparent slider-style-1">
+			<div className="container">
+								<div className="home-market">
+								<button className="btn-mainPage-AllMarkets" onClick={RedirectMarketList}><span>Ver mais criptomoedas</span></button>
+								</div>
+								</div>
+								</div>
+                            </TabPanel>
+                            
+                            <TabPanel>
+                                <div className="tab-content">
+                                    <div className="inner">
+                                        <div className="thumbnail">
+teste2                                        </div>
+                                    </div>
+                                </div>
+                            </TabPanel>
+
+                            <TabPanel>
+                                <div className="tab-content">
+                                    <div className="inner">
+                                        <div className="thumbnail">
+teste3                                        </div>
+                                    </div>
+                                </div>
+                            </TabPanel>
+                        </div>
+                    </div>
+                </div>
+            </Tabs>                    </div>
+                </div>
+	);
+
+
+
 	//
 	const renderFeature = () => (
 		<div className="feature">
@@ -1396,6 +1495,10 @@ const renderBlog = () => (
 		);
 	};
 
+
+
+
+
 	const renderTrade = () => {
 		return (
 			<div className="homepage-trade rn-section-gap circle-1 circle-2 circle-3">
@@ -1436,12 +1539,14 @@ const renderBlog = () => (
 	
 		
 	{/*<ScrollToTop smooth color="#009991" />*/}
-				{renderEvent()}				
+			{renderEvent()}				
 			
 
 			{renderBanner()}
-			
-			<MarketsHotOnlist />
+
+			{renderCryptoTabs()}
+
+	
 			{renderMarket()}
 
 			{renderDownloadDevices()}

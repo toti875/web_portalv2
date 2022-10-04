@@ -90,7 +90,7 @@ export const SaleListTables: React.FC = () => {
 	return (
 		<div className="container">
 				<div >
-					<Menu mode="vertical" defaultSelectedKeys={['active']} onClick={handleSelectMenuItem}>
+					<Menu mode="horizontal" defaultSelectedKeys={['active']} onClick={handleSelectMenuItem}>
 						<Menu.Item key="active">
 							<button onClick={handleSelectActive}>Captações Ativas </button>
 						</Menu.Item>

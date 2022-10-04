@@ -41,8 +41,8 @@ export const initialEvent: EventsState = {
 		},
 		{
 			event_id: 4,
-			event_name: "Aberto o ciclo 1 de venda do Token FORTEM ($FTK). Conheça os benefícios.",
-			description: "Lorem Ipsum4",
+			event_name: "Tokens:",
+			description: "Aberto o ciclo 1 de venda do Token FORTEM ($FTK). Conheça os benefícios.",
 			image_link: info4,
 			ref_link: "/tokens",
 			created_at: "Lorem Ipsum"

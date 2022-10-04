@@ -7,6 +7,8 @@ import { ConvertUsd, Decimal, NewHomeMarketTable } from '../../components';
 import { useMarketsFetch, useMarketsTickersFetch, useRangerConnectFetch } from '../../hooks';
 import { Market, selectMarkets, selectMarketTickers, setCurrentMarket, selectCurrencies } from '../../modules';
 
+import './HomepageMarket.pcss'
+
 const defaultTicker = {
 	amount: '0.0',
 	last: '0.0',

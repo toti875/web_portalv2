@@ -23,10 +23,10 @@ export const pt = {
 	'page.body.trade.header.markets': 'Markets',
 	'page.body.trade.header.markets.content.market': 'Market',
 	'page.body.trade.header.markets.content.pair': 'Pair',
-	'page.body.trade.header.markets.content.price': 'Price',
+	'page.body.trade.header.markets.content.price': 'Preço',
 	'page.body.trade.header.markets.content.last_price': 'Last Price',
-	'page.body.trade.header.markets.content.change': 'Change',
-	'page.body.trade.header.markets.content.search': 'Search',
+	'page.body.trade.header.markets.content.change': 'Variação',
+	'page.body.trade.header.markets.content.search': 'Procurar',
 	'page.body.trade.header.markets.content.volume': 'Volume',
 
 	'page.body.trade.header.newOrder': 'Order Form',
