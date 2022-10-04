@@ -91,17 +91,23 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 	}, [dispatchcFetchCurrencies]);
 	const currencies = useSelector(selectCurrencies);
 	let saleBadgeColor = '#0C9D58ff';
+	let saleBadgeDescription = 'Em captação';
+
 	switch (props.type) {
 		case 'ongoing':
 			saleBadgeColor = '#0C9D58ff';
+			saleBadgeDescription = 'Em captação';
 			break;
 		case 'upcoming':
 			saleBadgeColor = '#FABE08ff';
+			saleBadgeDescription = 'Captação futura';
+
 			break;
 		case 'ended':
 			saleBadgeColor = '#EA4235ff';
+			saleBadgeDescription = 'Captação finalizada';
 			break;
-			case 'active':
+		case 'active':
 				saleBadgeColor = '#13b887 ';
 				break;			
 		default:
@@ -158,8 +164,8 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 			<div className="col pricing-table-style-02 text-center px-md-0 sm-margin-30px-bottom xs-margin-15px-bottom wow animate__fadeIn z-index-1 ml--30 mr--30" >
 			<ReactCardFlip isFlipped={flip} flipDirection="horizontal">
 				<div>
-				<div className="sale-item pricing-table pricing-body text-center justify-content-center  bg-white box-shadow-large border-radius-10px "  >
-					<div className="sale-item-badge" style={{ backgroundColor: saleBadgeColor }}>{saleType}
+				<div className="sale-item pricing-table pricing-body text-center justify-content-center  bg-white box-shadow-large border-radius-10px " style={{minHeight: '580px'}} >
+					<div className="sale-item-badge" style={{ backgroundColor: saleBadgeColor }}>{saleBadgeDescription}
 				</div>
 	
 				<img className="itemLogo-img" src={props.sale.image_link} alt="" />
@@ -215,7 +221,7 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 							<div className="pricing-footer margin-5px-top mb--10 mt--15">
 								<a className="btn btn-medium  btn-round-edge "  onClick={() => setFlip(!flip)}>Mais informações</a>
 
-								<a className="btn btn-medium  btn-fast-blue modal-popup wow animate__fadeIn" onClick={() => setShow(true)}>ComprarModal</a>
+								<a className="btn btn-medium  btn-dark-gray modal-popup wow animate__fadeIn" onClick={() => setShow(true)}>Comprar Token</a>
 								<Modal
         show={show}
         onHide={() => setShow(false)}
@@ -251,8 +257,8 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 			</div>
 			<div>	
 				<div>
-				<div className="sale-item pricing-table pricing-body text-center justify-content-center  bg-white box-shadow-large border-radius-10px " onClick={() => setFlip(!flip)}>
-					<div className="sale-item-badge" style={{ backgroundColor: saleBadgeColor }}>{saleType}
+				<div className="sale-item pricing-table pricing-body text-center justify-content-center  bg-white box-shadow-large border-radius-10px " style={{minHeight: '580px'}} onClick={() => setFlip(!flip)}>
+					<div className="sale-item-badge" style={{ backgroundColor: saleBadgeColor }}>{saleBadgeDescription}
 				</div>
 	
 			

@@ -80,11 +80,8 @@ export const SaleListTablesUpcoming: React.FC = () => {
 	}, [saleList.loading]);
 
 	return (
-		<div className="container-fluid">
-
-			<div className="row mt-4">
-				<div className="col-12">{<Row gutter={[16, 16]}>{saleItems}</Row>}</div>
-			</div>
+		<div className="container" style={{display: 'flex', justifyContent: 'space-between'}}>
+		<div className="container2 justify-content-center" style={{padding: '30px', display: 'flex', justifyContent: 'space-between'}}>{saleItems}</div>
 		</div>
 	);
 };

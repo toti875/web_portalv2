@@ -54,6 +54,12 @@ export const SaleListTables: React.FC = () => {
 
 	};
 
+	const handleSelectEnded = () => {
+		
+		dispatchEndedSaleListFetch();
+
+};
+
 	let saleItems;
 	if (saleList.payload.length === 0) {
 		saleItems = (
@@ -101,7 +107,8 @@ export const SaleListTables: React.FC = () => {
 							<span >Captações Futuras</span>
 						</Menu.Item>
 						<Menu.Item key="ended">
-							<span style={{ color: '#EA4235' }}>Captações Finalizadas</span>
+						<button style={{ color: '#EA4235' }} onClick={handleSelectActive}>Captações Finalizadas </button>
+
 						</Menu.Item>
 					</Menu>
 				</div>
@@ -111,7 +118,7 @@ export const SaleListTables: React.FC = () => {
 
 			<div className="container" style={{display: 'flex', justifyContent: 'space-between'}}>
 				<div className="container2 justify-content-center" style={{padding: '30px', display: 'flex', justifyContent: 'space-between'}}>{saleItems}</div>
-				<Menu mode="vertical" defaultSelectedKeys={['active']} onClick={handleSelectMenuItem}>
+				<Menu mode="horizontal" defaultSelectedKeys={['active']} onClick={handleSelectMenuItem}>
 						<Menu.Item key="active">
 							<button onClick={handleSelectActive}>Captações Ativas </button>
 						</Menu.Item>
