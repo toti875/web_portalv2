@@ -681,17 +681,16 @@ margin-left: 20px;
   text-decoration: underline;
 }
 
-.pg-sign-in-screen-basic {/*	background: url(../../assets/images/background.svg); */}
-
 .pg-sign-in-screen-basic {
+
+	background: url(./assets/images/signin.jpg);
 	background-size: cover;
 	display: flex;
 	height: calc(100vh - calc(var(--gap) * 9.84));
 	justify-content: center;
 	margin: 0 auto;
 
-
-}
+  }
 
 .pg-sign-in-screen-basic .pg-sign-in-screen-basic__container {
 	  background: transparent;
