@@ -25,8 +25,9 @@ export const SaleListTables: React.FC = () => {
 
 	React.useEffect(() => {
 		// dispatch Active Sale List Fetch in one time
-		dispatchOnGoingSaleListFetch();
-	}, [dispatchOnGoingSaleListFetch]);
+		dispatchActiveSaleListFetch();
+
+	}, [dispatchActiveSaleListFetch]);
 
 	const handleSelectMenuItem = ({ key }) => {
 		switch (key) {
@@ -43,6 +44,7 @@ export const SaleListTables: React.FC = () => {
 				dispatchEndedSaleListFetch();
 				break;
 			default:
+				dispatchActiveSaleListFetch();
 				break;
 		}
 	};
@@ -57,6 +59,12 @@ export const SaleListTables: React.FC = () => {
 	const handleSelectEnded = () => {
 		
 		dispatchEndedSaleListFetch();
+
+};
+
+const handleSelectUpcoming = () => {
+		
+	dispatchUpcomingSaleListFetch();
 
 };
 
@@ -95,43 +103,20 @@ export const SaleListTables: React.FC = () => {
 
 	return (
 		<div className="container">
-				<div >
-					<Menu mode="horizontal" defaultSelectedKeys={['active']} onClick={handleSelectMenuItem}>
-						<Menu.Item key="active">
-							<button onClick={handleSelectActive}>Captações Ativas </button>
-						</Menu.Item>
-						<Menu.Item key="ongoing">
-							<span >Captações em Andamento</span>
-						</Menu.Item>
-						<Menu.Item key="upcoming">
-							<span >Captações Futuras</span>
-						</Menu.Item>
-						<Menu.Item key="ended">
-						<button style={{ color: '#EA4235' }} onClick={handleSelectActive}>Captações Finalizadas </button>
+			{/*}	<div >
+				<button type="button" className="waves-effect waves-light btn" onClick={handleSelectActive}>Captações em andamento</button>
+								  <button type="button" className="waves-effect waves-light btn" onClick={handleSelectUpcoming}>Captações Futuras</button>
+								  <button style={{ color: '#EA4235' }} type="button" className="waves-effect waves-light btn btn-info" onClick={handleSelectEnded}>Captações Finalizadas</button>
 
-						</Menu.Item>
-					</Menu>
 				</div>
 
-		
+			*/}
 
 
 			<div className="container" style={{display: 'flex', justifyContent: 'space-between'}}>
 				<div className="container2 justify-content-center" style={{padding: '30px', display: 'flex', justifyContent: 'space-between'}}>{saleItems}</div>
-				<Menu mode="horizontal" defaultSelectedKeys={['active']} onClick={handleSelectMenuItem}>
-						<Menu.Item key="active">
-							<button onClick={handleSelectActive}>Captações Ativas </button>
-						</Menu.Item>
-						<Menu.Item key="ongoing">
-							<span >Captações em Andamento</span>
-						</Menu.Item>
-						<Menu.Item key="upcoming">
-							<span >Captações Futuras</span>
-						</Menu.Item>
-						<Menu.Item key="ended">
-							<span style={{ color: '#EA4235' }}>Captações Finalizadas</span>
-						</Menu.Item>
-					</Menu>
+				
+		
 			</div>
 		</div>
 	);

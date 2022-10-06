@@ -6834,15 +6834,6 @@
      max-height: 100%;
    }
    
-   .text-big-outline {
-     color: #0f0f12;
-     font-size: 290px;
-     line-height: 1.034em;
-     font-weight: 700;
-     text-transform: uppercase;
-     text-shadow: -2px 0 0 #434347, 2px 0 0 #434347, 0 2px 0 #434347, 0 -2px 0 #434347;
-     mix-blend-mode: lighten;
-   }
    
    .text-big-outline.not-found-number {
      position: relative;

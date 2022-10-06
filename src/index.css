@@ -883,10 +883,14 @@ margin-left: 20px;
 .headerDesktop-screen {
 
 	
-
+    font-size: 18px !important;
+    font-weight: bold !important;
+    font-family: inherit !important;
 	height: 60px !important;
     width: 100%;
     z-index: 9999 !important;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
 
 }
 
@@ -1224,20 +1228,24 @@ margin-left: 20px;
                     background: transparent;
                     width: 180px;
                     height: 60px;
+                    font-size: 18px !important;
+                    font-weight: bold !important;
+                    font-family: inherit !important;
 
                     border: 1px solid #1EDED0 !important;
                     border-radius: 5px !important;
                     padding: 6px 16px !important;
+                    -webkit-font-smoothing: antialiased;
                 }
 
 .headerDesktop-screen .header__right-menu__item__title a:hover, .headerDesktop-screen .header__right-menu__item__title span:hover {
                         transition: 1s ease-out-in;
                         border: 1px solid #fff;
                         transition: 1s ease-in-out;
-      
+                        color: #009991;
                         border-radius: 5px;
                         padding: 6px 16px;
-						background-color: #1d1e22;
+						
     
                     }
 
@@ -1276,26 +1284,28 @@ margin-left: 20px;
 
 .headerDesktop-screen .header__right-menu__item__title {	
 
-                font-size: 16px;
+                font-size: 18px;
                 margin-right: 20px;
 
 
 }
 
 .headerDesktop-screen .header__right-menu__item__title--btn {
-                    background-color: #1EDED0;
+                    background: linear-gradient(95deg, var(--color-white) 25%, #18988F 45%, #18988F 75%, #1EDED0 100%) 95%/200% 100% !important;
+                    border-color: transparent;
                     border-radius: 5px;
-                    color: white;
+                    color: #fff;
                     padding: 6px 16px;
+                    letter-spacing: 0.5px;
+                    width: auto !important;
+                    letter-spacing: 0.5px;
+                    -webkit-appearance: button;
                 }
 
-.headerDesktop-screen .header__right-menu__item__title--btn--active {
-                        background-color: #1EDED0;
-                    }
-
 .headerDesktop-screen .header__right-menu__item__title--btn:hover {
-                        background-color: #1EDED0;
-                        color: white;
+                        background: #1EDED0 !important;                        
+                        color: #fff;
+                        cursor: pointer;
                     }
 
 .headerDesktop-screen .header__right-menu__item__title__icon {
@@ -1950,6 +1960,31 @@ margin-left: 20px;
 		transition: 0.4s;
 	}
 
+.btn-Options {
+
+	margin: 0 auto;
+    margin-top: 20px;
+	
+	border: 1px solid #1EDED0;
+	border-radius: 5px;
+	background: transparent;
+	width: 269px;
+	color: #fff;
+	font-size: 21px;
+	padding: 10px;
+}
+
+.btn-Options span {
+
+		padding: 10px;
+	}
+
+.btn-Options:hover {
+		color: #1EDED0;
+		opacity: 0.6;
+		transition: 0.4s;
+	}
+
 @media (min-width: 48em)
 .brandhub-cta-strap {
     left: 100%;
@@ -2223,8 +2258,9 @@ h2 {
     line-height: 1.034em;
     font-weight: 700;
     text-transform: uppercase;
-    text-shadow: -2px 0 0 #434347, 2px 0 0 #434347, 0 2px 0 #434347, 0 -2px 0 #434347;
+    text-shadow: -2px 0 0 #1EDED0, 2px 0 0 #1EDED0, 0 2px 0 #1EDED0, 0 -2px 0 #1EDED0 !important;
     mix-blend-mode: lighten;
+    opacity: 0.8;
 }
 
 .position-absolute.bottom.fade {

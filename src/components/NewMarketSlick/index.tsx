@@ -23,9 +23,13 @@ const ChartWrap = styled.div`
 
 	.market-slick {
 
+
+
 		div{
 			.slick-slider {
 				.slick-list {
+					font-family: "Verdana", sans-serif;
+					font-weight: bold;
 					border-top: 1px solid rgb(66, 66, 66);
 					border-bottom: 1px solid rgb(66, 66, 66);
 					background: transparent;
@@ -33,11 +37,14 @@ const ChartWrap = styled.div`
 
 
 					.slick-track {
+						font-family: "Verdana", sans-serif;
+						font-weight: bold;
 						margin-left: 250px;
 						max-height: 62px !important;
 
 						.slick-slide, .slick-active{
-					
+							font-family: "Verdana", sans-serif;
+							font-weight: bold;
 							width: 250px !important;
 							border-right: '1px solid rgb(66, 66, 66)'
 

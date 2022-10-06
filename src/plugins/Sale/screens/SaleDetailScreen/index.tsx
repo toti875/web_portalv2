@@ -118,7 +118,7 @@ export const SaleDetailScreen: React.FC = () => {
 							{saleItem.payload ? saleItem.payload.type : ''}
 						</span>
 						<Row gutter={[16, 16]}>
-							<Col span={16} style={{ backgroundColor: '#1d1e22'}}>{saleInfoView}</Col>
+							{/*<Col span={16} style={{ backgroundColor: '#1d1e22'}}>{saleInfoView}</Col>*/}
 							<Col span={8} style={{ backgroundColor: '#1d1e22'}}> {saleBuyView}</Col>
 						</Row>
 					</div>

@@ -23,9 +23,9 @@ export const SaleListTablesUpcoming: React.FC = () => {
 
 	React.useEffect(() => {
 		// dispatch Active Sale List Fetch in one time
-		dispatchOnGoingSaleListFetch();
+		dispatchActiveSaleListFetch();
 	
-	}, [dispatchOnGoingSaleListFetch]);
+	}, [dispatchActiveSaleListFetch]);
 
 	const handleSelectMenuItem = ({ key, domEvent }) => {
 		switch (key) {
@@ -42,6 +42,7 @@ export const SaleListTablesUpcoming: React.FC = () => {
 				dispatchEndedSaleListFetch();
 				break;
 			default:
+				dispatchActiveSaleListFetch();
 				break;
 		}
 	};
@@ -82,6 +83,7 @@ export const SaleListTablesUpcoming: React.FC = () => {
 	return (
 		<div className="container" style={{display: 'flex', justifyContent: 'space-between'}}>
 		<div className="container2 justify-content-center" style={{padding: '30px', display: 'flex', justifyContent: 'space-between'}}>{saleItems}</div>
-		</div>
+
+			</div>
 	);
 };

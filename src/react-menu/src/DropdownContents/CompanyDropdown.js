@@ -42,7 +42,7 @@ const CompanyDropdown = () => {
       <DropdownSection>
         <div>
           <Heading>
-            <Icon />Blog
+            <Icon style={{color: '#6b7c93'}}/>Blog
           </Heading>
           <LinkList marginLeft="25px">
             <li>

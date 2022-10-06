@@ -4,7 +4,7 @@ import { FiArrowRight } from "react-icons/fi";
 
 const callToActionData = {
     title: "Pronto para iniciar sua jornada digital?",
-    subtitle: "Os melhores investimentos globais agora à sua disposição. Comece a investir em ativos digitais home mesmo!",
+    subtitle: "Os melhores investimentos globais agora à sua disposição. Comece a investir em ativos digitais hoje mesmo!",
     btnText: "Abra sua conta",
 }
 

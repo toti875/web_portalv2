@@ -6,10 +6,10 @@
   --white: #fff;
   --grey: #f1f4f8b0;
   --dark-grey: #6b7c93;
-  --green: #24b47e;
-  --teal: #4F96CE;
-  --blue: #6772e5;
-  --dark-blue: #4F3EF5;
+  --green: #6b7c93;
+  --teal: #6b7c93;
+  --blue: #6b7c93;
+  --dark-blue: #6b7c93;
   --spacer: 28px;
 }
 
@@ -22,12 +22,12 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--blue);
+  color: var(--dark-grey);
 }
 
 a:hover,
 a:focus {
-  color: var(--dark-blue);
+  color: #009991 !important;
 }
 
 ul {

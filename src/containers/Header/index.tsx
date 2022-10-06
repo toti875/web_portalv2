@@ -252,7 +252,7 @@ export const Header: React.FC = () => {
 						onClick={e => {
 							redirectSingIn();
 							setStateActiveNow('login');
-						}}>
+						}} style={{fontSize: '18px', fontWeight: 'bold', fontFamily: 'roboto, helvetica, sans-serif' }}>
 							<div className={classLinkActiveLogin}>
 
 								<span >{translate('page.header.signIn')}</span>

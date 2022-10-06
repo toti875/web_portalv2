@@ -192,6 +192,7 @@ const deposit = require ('./images/deposit.svg');
 const api = require ('./images/api.svg');
 const stars = require ('./images/stars.svg');
 const interfaces = require ('./images/features.svg');
+const fortemCard = require ('./fortemCard.png');
 
 
 
@@ -425,10 +426,10 @@ function scrollRotate() {
 									{translate('page.homePage.trade.btn.trade')}
 								</button>
 							) : (
-								<><a className="btn-default btn-icon icon-btn-wrap" href="/banner/authentication/sign-in/basic" style={{fontSize: '20px', position: 'absolute',  bottom: '370px', left: '50%', background: 'transparent'}}>Acessar plataforma <i className="icon"><FiArrowRight /></i></a>
+								<><a className="btn-default btn-icon icon-btn-wrap" href="/banner/authentication/sign-in/basic" style={{fontFamily: 'Verdana', fontWeight: 'bold', fontSize: '22px', position: 'absolute',  bottom: '370px', left: '50%', background: 'transparent'}}>Acessar plataforma <i className="icon"><FiArrowRight /></i></a>
 							
-																<button className="btn-icon btn-default" onClick={redirectSingUP} style={{fontSize: '20px', position: 'absolute',  bottom: '370px', left: '65%'}}>
-																{translate('page.homePage.trade.btn.signup')}
+																<button className="btn-icon btn-default" onClick={redirectSingUP} style={{fontFamily: 'Verdana', fontWeight: 'bold', fontSize: '22px',  position: 'absolute',  bottom: '370px', left: '70%'}}>
+																Conecte-se com a Fortem
 															</button></>
 							)}
 
@@ -466,7 +467,7 @@ function scrollRotate() {
 										<span>para todas as suas necessidades</span>
 										<span className="color-accent">.</span>
 									</h2>
-									<p style={{fontSize: '20px'}}>Dos investimentos em criptoativos à conta digital. Aqui você tem o controle integrado de toda a sua vida financeira.</p>
+									<p style={{fontSize: '26px'}}>Dos investimentos em tokens à conta digital. Aqui você tem o controle integrado de toda a sua vida financeira.</p>
 									</Parallax>
 								</div>
 								<ScrollAnimation animateIn="fadeInUp" animateOut="fadeInOut" animateOnce={false}></ScrollAnimation>
@@ -557,13 +558,13 @@ function scrollRotate() {
 						<div className="rn-service-area rn-section-gap">
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-12" style={{fontSize: '20px'}}>
+                            <div className="col-lg-12" style={{fontSize: '24px'}}>
                                 <SectionTitle
                                     textAlign = "text-center"
                                     radiusRounded = ""
                                     subtitle = ""
                                     title = "Nosso desejo implacável de revolucionar flui através de tudo o que fazemos"
-                                    description = "Os mercados e as relações de consumo estão constantemente sendo transformados pela tecnologia.  Aqui no Portal da Fortem ONE você encontra soluções completas e inovadoras, estruturadas através de ativos digitais. <br /><br /> Seja para você diversificar seus investimentos com segurança, planejar a sua indepência financeira, ou construir a sua reserva de emergência. <br /> Seja para sua empresa ou projeto, sair do papel ou  expandir sua base de clientes, otimizar sua captação de recursos e fluxo de caixa, ou diminuir seus custos operacionais. <br /><br /> Estamos aqui para construirmos juntos uma nova era, democratizando o acesso aos melhores investimentos, expandindo e descentralizando ofertas de crédito e colocando você no controle e na posse do que é seu.  "
+                                    description = "Os mercados e as relações de consumo estão constantemente sendo transformados pela tecnologia.  Aqui no Portal da Fortem ONE você encontra soluções completas e inovadoras, estruturadas através de ativos digitais. <br /><br /> Seja para você diversificar seus investimentos com segurança, planejar a sua indepência financeira, ou construir a sua reserva de emergência. <br /> Seja para sua empresa ou projeto, sair do papel ou  expandir sua base de clientes, otimizar sua captação de recursos e fluxo de caixa, ou diminuir seus custos operacionais. <br /><br /> Estamos aqui para construirmos juntos uma nova era, democratizando o acesso aos melhores investimentos, expandindo e descentralizando ofertas de crédito e colocando você no controle e na posse do que é seu, de maneira simples, intuitiva e com toda a segurança do blockchain."
                                      />
                             </div>
                         </div>
@@ -575,29 +576,29 @@ function scrollRotate() {
 				
 	
 				<div key={1} className="single-slide">
-				<div data-w-id="49ba8199-44af-7440-391c-d9656fe42200" className="card cta-part-section" style={{willChange: 'opacity, transform', opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
+				<div data-w-id="49ba8199-44af-7440-391c-d9656fe42200" className="card cta-part-section" style={{height: '760px', willChange: 'opacity, transform', opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
 					<div className="w-layout-grid grid-2-columns cta-part-section-grid">
-						<div id="w-node-_99dc8130-6570-a167-3af8-c9281f72c055-2e306f0f" className="position-relative z-index-2">
+						<div id="w-node-_99dc8130-6570-a167-3af8-c9281f72c055-2e306f0f" className="position-relative z-index-2" style={{maxWidth: '620px'}}>
 							<div id="w-node-_5cc181b4-8b75-cd7a-679b-c9ede103bf72-2e306f0f" className="inner-container _97 _100---tablet">
 								<div className="mg-bottom-16px">
 									<div className="title-border-left">
-										<h3 className="animate__animated animate__bounce">
-											Invista em
-											<span className="color-accent">+300 <br /></span>
-											Ativos Digitais com  <br /> liquidez global
+										<h3 className="display-3 mg-bottom-0">
+											
+											<span className="color-accent">200+ </span>
+											opções <br />de ativos digitais <br />com liquidez global
 											
 
 										</h3>
 									</div>
 								</div>
-								<div className="inner-container _628px">
+								<div className="inner-container" style={{maxWidth: '580px'}}>
 									<p className="animate__animated animate__bounce">
 										A Fortem ONE é a única plataforma nacional conectada diretamente às maiores exchanges e formadores de mercado cripto do mundo, concentrando todas as ordens em um único livro de ofertas.
-										<span>Assim, disponibilizamos aos nossos clientes os melhores preços e uma ampla variedade de ativos.</span>
+										<br /><span>Assim, disponibilizamos aos nossos clientes os melhores preços e uma ampla variedade de ativos.</span>
 									</p>
 									
-									<button className='btn-Register' > 
-										<span>Abra sua conta</span> 
+									<button className='btn-default btn-icon icon-btn-wrap'  onClick={redirectSingUP}> 
+										<span>Conecte-se com a Fortem</span> 
 									</button> 
 										
 									
@@ -605,48 +606,52 @@ function scrollRotate() {
 							</div> 
 						</div>
 						<div id="w-node-_63999b7c-6bb5-477e-a990-ce743ee613f1-2e306f0f" className="cta-part-section-mockup-wrapper">
-								<img src="https://assets.website-files.com/624f34ee3b91afefdf14076f/625448c88ca8d4a32d63674c_image-stats-blockchain-template.png" loading="eager" alt="Buy 100+ Crypto Assets Fast And Secure - Blockchain X Webflow Template" className="image cover" />
+								<img src="https://assets.website-files.com/624f34ee3b91afefdf14076f/625448c88ca8d4a32d63674c_image-stats-blockchain-template.png" loading="eager" alt="Buy 100+ Crypto Assets Fast And Secure - Blockchain"  />
+						
 							<div className="position-absolute top-left world-stats-01" style={{willChange: 'opacity, transform', opacity: 0.89327, transform: 'translate3d(0px, 0px, 0px) scale3d(0.997865, 0.997865, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
 								<div className="world-stats-wrapper">
 									<div className="display-4 display-shadow" style={{marginLeft: '80px', marginTop: '-30px'}}>
 										1M
 										<span className="color-accent">+</span>
 									</div>
-									<h3 className="display-4 mg-bottom-0" style={{fontSize: '18px', marginLeft: '80px', }}>Usuários ativos</h3>
+									<h3 className="display-4 mg-bottom-0" style={{fontSize: '18px', marginLeft: '80px', }}>Usuários</h3>
+									<h3 className="display-4 mg-bottom-0" style={{fontSize: '18px', marginLeft: '80px', }}>conectados</h3>
 								</div> 
 							</div>
 							<div className="position-absolute bottom-left world-stats-02" style={{willChange: 'opacity, transform', opacity: 0.9401, transform: 'translate3d(0px, 0px, 0px) scale3d(0.998802, 0.998802, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
 							
 								<div className="world-stats-wrapper">
-									<div className="display-4 display-shadow" style={{marginLeft: '160px'}}>
-										80
-										<span className="color-accent">%</span>
+									<div className="display-4 display-shadow" style={{marginLeft: '160px',  marginTop: '-130px'}}>
+										200
+										<span className="color-accent">+</span>
 									</div>
-									<h3 className="display-4 mg-bottom-0" style={{fontSize: '18px', marginLeft: '160px'}}>de spread</h3>
+									<h3 className="display-4 mg-bottom-0" style={{fontSize: '18px', marginLeft: '160px', }}>opções</h3>
 								</div> 
 								
 							</div>
 							
 							<div className="position-absolute top-right world-stats-03" style={{willChange: 'opacity, transform', opacity: 0.9401, transform: 'translate3d(0px, 0px, 0px) scale3d(0.998802, 0.998802, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
 								<div className="world-stats-wrapper">
-									<div className="display-4 display-shadow" style={{marginLeft: '-490px'}}>
-										80
-										<span className="color-accent">%</span>
-									</div>
-									<h3 className="display-4 mg-bottom-0" style={{fontSize: '18px', marginLeft: '-490px'}}>de spread</h3>
+								<h3 className="display-4 mg-bottom-0" style={{fontSize: '18px', marginLeft: '-490px', marginTop: '80px'}}>Até 
+									<span style={{fontSize: '26px'}}> 10</span>
+									<span style={{fontSize: '26px', textTransform: 'none'}} className="color-accent">x</span>
+								</h3>
+								<h3 className="display-4 mg-bottom-0" style={{fontSize: '18px', marginLeft: '-490px'}}>de alavancagem</h3>
+								
+									
 								</div> 
 							</div>
 
-							<div className="position-absolute bottom-right world-stats-04" style={{willChange: 'opacity, transform', opacity: 0.62273, transform: 'translate3d(0px, 0px, 0px) scale3d(0.992455, 0.992455, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
+							<div className="position-absolute bottom-right world-stats-04" style={{willChange: 'opacity, transform', opacity: 0.9273, transform: 'translate3d(0px, 0px, 0px) scale3d(0.992455, 0.992455, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
 								<div className="world-stats-wrapper">
-									<div className="display-4 display-shadow" style={{marginLeft: '-290px'}}>
-										80
-										<span className="color-accent">%</span>
-									</div>
-									<h3 className="display-4 mg-bottom-0" style={{fontSize: '18px', marginLeft: '-290px'}}>de spread</h3>
+								<h3 className="display-4 mg-bottom-0" style={{fontSize: '18px', marginLeft: '-420px', marginTop: '30px'}}>
+									<span style={{fontSize: '26px'}}> 0.1</span>
+									<span style={{fontSize: '26px', textTransform: 'none'}} className="color-accent">%</span>
+								</h3>
+								<h3 className="display-4 mg-bottom-0" style={{fontSize: '18px', marginLeft: '-420px'}}>de spread</h3>
+
 								</div> 
 							</div>
-
 
 							<div className="position-absolute bg-circle cta-part-section"></div>
 
@@ -657,7 +662,7 @@ function scrollRotate() {
 
 <div key={2} className="single-slide">
 
-<div data-w-id="49ba8199-44af-7440-391c-d9656fe42200" className="card cta-part-section" style={{willChange: 'opacity, transform', opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
+<div data-w-id="49ba8199-44af-7440-391c-d9656fe42200" className="card cta-part-section" style={{height: '760px', willChange: 'opacity, transform', opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
 <div>
 
 	<div className="w-layout-grid grid-2-columns cta-part-section-grid">
@@ -666,22 +671,24 @@ function scrollRotate() {
 				<div className="mg-bottom-16px">
 					<div className="title-border-left">
 						<h3 className="display-3 mg-bottom-0">
-							Invista em
-							<span className="color-accent">+300 <br /></span>
-							Ativos Criptos 
+							Invista nos ativos que mais valorizaram na última década
 						</h3>
 					</div>
 				</div>
 				<div className="inner-container _628px">
 					<p className="mg-bottom-32px">
-						"Compre, venda ou converta criptoativos com os melhores preços, em poucos cliques. Aproveite a diversidade de criptoativos em uma interface intuitiva e completa para todos os perfis."
-						<span className="text-no-wrap">dui egestas.</span>
+						Compre, venda ou converta criptoativos com os melhores preços, em poucos cliques. Aproveite a diversidade de criptoativos em uma interface intuitiva e completa para todos os perfis.
 					</p>
-
-					<button className='btn-Register' > 
-						<span>Abra sua conta</span> 
+					<div>
+					<button className='btn-default btn-icon icon-btn-wrap'  onClick={redirectSingUP}> 
+						<span>Conecte-se com a Fortem</span> 
 					</button> 
-
+					</div>
+					<div> 
+					<button className='btn-Options'  onClick={RedirectMarketList}> 
+						<span style={{fontSize: '16px'}}>Conheça as opções</span> 
+					</button> 
+					</div>
 					
 				</div>
 			</div> 
@@ -718,7 +725,7 @@ function scrollRotate() {
 
 <div key={3} className="single-slide">
 
-<div data-w-id="49ba8199-44af-7440-391c-d9656fe42200" className="card cta-part-section" style={{willChange: 'opacity, transform', opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
+<div data-w-id="49ba8199-44af-7440-391c-d9656fe42200" className="card cta-part-section" style={{height: '760px', willChange: 'opacity, transform', opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
 <div>
 
 	<div className="w-layout-grid grid-2-columns cta-part-section-grid">
@@ -727,21 +734,25 @@ function scrollRotate() {
 				<div className="mg-bottom-16px">
 					<div className="title-border-left" >
 						<h3 className="display-3 mg-bottom-0">
-							Invista em
-							<span className="color-accent">+300 <br /></span>
-							Ativos Criptos 
+							Invista nos tokens com as maiores rentabilidades do mercado
 						</h3>
 					</div>
 				</div>
 				<div className="inner-container _628px">
 					<p className="mg-bottom-32px" style={{textRendering: 'optimizeLegibility'}}>
-						"Compre, venda ou converta criptoativos com os melhores preços, em poucos cliques. Aproveite a diversidade de criptoativos em uma interface intuitiva e completa para todos os perfis."
-						<span className="text-no-wrap">dui egestas.</span>
+						Nosso marketplace oferece as melhores opções de tokens de acordo com suas necessidades e expectativas. São várias opções de rentabilidade, prazos para resgate e investimento mínimo. Tudo com a tecnologia da Fotem ONE e segurança da blockchain.
 					</p>
 					
-					<button className='btn-Register' > 
-						<span>Abra sua conta</span> 
+					<div>
+					<button className='btn-default btn-icon icon-btn-wrap'  onClick={redirectSingUP}> 
+						<span>Conecte-se com a Fortem</span> 
 					</button> 
+					</div>
+					<div> 
+					<button className='btn-Options'  onClick={RedirectTokenSales}> 
+						<span style={{fontSize: '16px'}}>Conheça as opções</span> 
+					</button> 
+					</div>
 						
 					
 				</div>
@@ -770,9 +781,70 @@ function scrollRotate() {
 </div>
 </div>
 
-<div key={4} className="single-slide">
 
-<div data-w-id="49ba8199-44af-7440-391c-d9656fe42200" className="card cta-part-section" style={{willChange: 'opacity, transform', opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
+<div key={3} className="single-slide">
+
+<div data-w-id="49ba8199-44af-7440-391c-d9656fe42200" className="card cta-part-section" style={{height: '760px', willChange: 'opacity, transform', opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
+<div>
+
+	<div className="w-layout-grid grid-2-columns cta-part-section-grid">
+		<div id="w-node-_99dc8130-6570-a167-3af8-c9281f72c055-2e306f0f" className="position-relative z-index-2">
+			<div id="w-node-_5cc181b4-8b75-cd7a-679b-c9ede103bf72-2e306f0f" className="inner-container _97 _100---tablet">
+				<div className="mg-bottom-16px">
+					<div className="title-border-left" >
+						<h3 className="display-3 mg-bottom-0">
+							Utilize seus tokens para realizar transações e pagamentos 
+						</h3>
+					</div>
+				</div>
+				<div className="inner-container _628px">
+					<p className="mg-bottom-32px" style={{textRendering: 'optimizeLegibility'}}>
+						Nosso marketplace oferece as melhores opções de tokens de acordo com suas necessidades e expectativas. São várias opções de rentabilidade, prazos para resgate e investimento mínimo. Tudo com a tecnologia da Fotem ONE e segurança da blockchain.
+					</p>
+					
+					<div>
+					<button className='btn-default btn-icon icon-btn-wrap'  onClick={redirectSingUP}> 
+						<span>Conecte-se com a Fortem</span> 
+					</button> 
+					</div>
+					<div> 
+					<button className='btn-Options'  onClick={RedirectTokenSales}> 
+						<span style={{fontSize: '16px'}}>Conheça as opções</span> 
+					</button> 
+					</div>
+						
+					
+				</div>
+			</div> 
+		</div>
+		<div id="w-node-_63999b7c-6bb5-477e-a990-ce743ee613f1-2e306f0f" className="cta-part-section-mockup-wrapper"  style={{backgroundColor: 'transparent', height: '100%' }}>
+		
+		<img src={fortemCard} />
+		{/*<ParticleImage
+      src={Particles1}
+      scale={0.75}
+      entropy={20}
+      maxParticles={6200}
+      particleOptions={particleOptions} style={{width: '100%', backgroundColor: 'transparent', borderRadius: '100px'}}
+							/>
+		*/}
+					
+
+		</div>
+		
+
+			<div className='position-absolute bottom fade' />
+
+		</div>
+	</div>
+</div>
+</div>
+
+
+
+<div key={5} className="single-slide">
+
+<div data-w-id="49ba8199-44af-7440-391c-d9656fe42200" className="card cta-part-section" style={{height: '760px', willChange: 'opacity, transform', opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
 <div>
 
 	<div className="w-layout-grid grid-2-columns cta-part-section-grid">
@@ -783,14 +855,14 @@ function scrollRotate() {
 						<h3 className="display-3 mg-bottom-0">
 							Invista em
 							<span className="color-accent">+300 <br /></span>
-							NFTs 
+							NFT
 						</h3>
 					</div>
 				</div>
 				<div className="inner-container _628px">
 					<p className="mg-bottom-32px">
-						"Compre, venda ou converta criptoativos com os melhores preços, em poucos cliques. Aproveite a diversidade de criptoativos em uma interface intuitiva e completa para todos os perfis."
-						<span className="text-no-wrap">dui egestas.</span>
+					Compre, venda e exiba NFTs
+						<span className="text-no-wrap">dos melhores criadores e marcas.</span>
 					</p>
 					
 					<button className='btn-Register' > 
@@ -826,41 +898,48 @@ function scrollRotate() {
 
 				
 				</Slider>
+
+				<h2 data-w-id="2f13477a-efb0-0f82-999f-982786d80614 mb-90" style={{transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d', opacity: 1}} className="display-3">
+										Segurança é importante 
+										<span className="color-accent">.<br /></span>
+										<span>mas não é tudo</span>
+										<span className="color-accent">...</span>
+				</h2>
 			
-			<div className="w-layout-grid grid-3-columns gap-48px _1-col-tablet gap-row-100px">
+			<div className="w-layout-grid grid-3-columns  _1-col-tablet" style={{marginTop: '80px'}}>
 				<div id="w-node-_2f13477a-efb0-0f82-999f-982786d80619-2e306f0f" className="border-bottom">
 					<div className="mg-bottom-50px">
 						<div className="inner-container _82px">
 							<div className="image-wrapper">
-								<img src={security} loading="eager" alt="Segurança" className="image cover"></img>
+								<img src={security} loading="eager" alt="Performance" className="image cover"></img>
 						</div>
 					</div>
 				</div>
-				<h3 className="display-4" style={{height: '68px'}}>
-					Segurança
+				<h3 className="display-4" style={{height: '82px'}}>
+					ESTABILIDADE, DESEMPENHO E CAPACIDADE
 					<span className="color-accent">.</span>
 				</h3>
 				<p className="mg-bottom-0">
-					Nossa plataforma eletrônica foi projetada e desenvolvida a partir de uma arquitetura tecnológica de missão crítica, com alta disponibilidade, contingências e capacidade de processamento para suportar os momentos mais voláteis dos mercados. Várias camadas e mecanismos de segurança atuam em conjunto com um Centro de Monitoração especializado, 24 horas x 7 dias da semana. 
+					Nossa plataforma eletrônica foi projetada e desenvolvida a partir de uma arquitetura tecnológica de missão crítica, com alta disponibilidade, contingências e capacidade de processamento para suportar os momentos mais voláteis dos mercados. 
 					
 					<br />
-					<br /><a href='' ><span className="color-accent">Conheça nossa página de status</span><i className="icon"><FiArrowRight /></i></a>
+					<br /><a href='' ><span className="color-accent">Conheça nossa página de status dos serviços </span><i className="icon"><FiArrowRight /></i></a>
 				</p>  
 			</div>
 			<div id="w-node-_0cbf1d8f-f8bb-0b9d-a837-f1a2579de295-2e306f0f" className="border-bottom">
 				<div className="mg-bottom-50px">
 					<div className="inner-container _82px">
 						<div className="image-wrapper">
-							<img src={speed} loading="eager" alt="Desempenho" /> 
+							<img src={speed} loading="eager" alt="Secutiry" /> 
 						</div>
 					</div>
 				</div>
-				<h3 className="display-4" style={{height: '68px'}}>
-					ESTABILIDADE, DESEMPENHO E CAPACIDADE
+				<h3 className="display-4" style={{height: '82px'}}>
+					SEGURANÇA
 					<span className="color-accent">.</span>
 				</h3>
 				<p className="mg-bottom-0">
-					Para adicionar ainda mais segurança ao nosso negócio todas as transações são momitoradas pelo nosso serviço de Supervisão de Mercado, que analisa, investiga e atua junto a operações fora de padrao.
+				Várias camadas e mecanismos de segurança atuam em conjunto com um Centro de Monitoração especializado, 24 horas x 7 dias da semana.
 					<br /> Tudo isso para garantir aos nossos clientes um ambiente 
 					<span className="color-accent"> profissional, seguro e estável.</span>
 					<br />E mais, sem necessidade de correr riscos enviando seus recursos para fora do país.
@@ -876,7 +955,7 @@ function scrollRotate() {
 						</div>
 					</div>
 				</div>
-				<h3 className="display-4" style={{height: '68px'}}>
+				<h3 className="display-4" style={{height: '82px'}}>
 					ALTA LIQUIDEZ, VOLUME GLOBAL
 					<span className="color-accent">.</span>
 				</h3>
@@ -1044,17 +1123,18 @@ const renderServices = () => (
 				   <div className="rn-service-area rn-section-gap">
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-12">
+                            <div className="col-lg-12" style={{fontSize: '22px'}}>
                                 <SectionTitle
                                     textAlign = "text-center"
                                     radiusRounded = ""
                                     subtitle = ""
                                     title = "Nosso desejo implacável de revolucionar flui através de tudo o que fazemos"
-                                    description = "Os mercados e as relações de consumo estão constantemente sendo transformados pela tecnologia.  Aqui no Portal da Fortem ONE você encontra soluções completas e inovadoras, estruturadas através de ativos digitais. <br /> Seja para você diversificar seus investimentos com segurança, planejar a sua indepência financeira, ou construir a sua reserva de emergência. <br /> Seja para sua empresa ou projeto, sair do papel ou  expandir sua base de clientes, otimizar sua captação de recursos e fluxo de caixa, ou diminuir seus custos operacionais. <br /> Estamos aqui para construirmos juntos uma nova era, democratizando o acesso aos melhores investimentos, expandindo e descentralizando ofertas de crédito e colocando você no controle e na posse do que é seu.  "
+                                    description = "Os mercados e as relações de consumo estão constantemente sendo transformados pela tecnologia.  Aqui no Portal da Fortem ONE você encontra soluções completas e inovadoras, estruturadas através de ativos digitais. <br /> Seja para você diversificar seus investimentos com segurança, planejar a sua indepência financeira, ou construir a sua reserva de emergência. <br /> Seja para sua empresa ou projeto, sair do papel ou  expandir sua base de clientes, otimizar sua captação de recursos e fluxo de caixa, ou diminuir seus custos operacionais. <br /> Estamos aqui para construirmos juntos uma nova era, democratizando o acesso aos melhores investimentos, expandindo e descentralizando ofertas de crédito e colocando você no controle e na posse do que é seu, de maneira simples, intuitiva e com toda a segurança do blockchain."
                                     />
                             </div>
                         </div>
 					</div>
+
                     
 						<div className="container" style={{display: 'flex', flexDirection: 'row', }}>
 							<ScrollAnimation animateIn="fadeInUp" animateOut="fadeInOut" animateOnce={false}>
@@ -1215,6 +1295,10 @@ const renderBlog = () => (
 		history.push('/markets');
 	};
 
+	const RedirectTokenSales = () => {
+		history.push('/tokens');
+	};
+
 
 	const renderEvent = () => {
 		return (
@@ -1264,17 +1348,18 @@ const renderBlog = () => (
 	);
 
 	const renderCryptoTabs = () => (
-			<div className="rwt-advance-tab-area rn-section-gap theme-shape-root">
+			<div className="rwt-advance-tab-area  theme-shape-root">
                     <div className="container">
-                        <div className="row mb--40">
-                            <div className="col-lg-12" style={{fontSize: '20px'}}>
+                        <div className="row ">
+                            <div className="col-lg-12" >
                                 <SectionTitle
                                     textAlign = "text-center"
                                     radiusRounded = ""
                                     subtitle = ""
-                                    title = "Conheça um pouco do nosso portfólio diversificado de ativos digitais"
-                                    description = "Todo o universo cripto para você escolher"
+                                    title = "Conheça nosso portfólio diversificado de ativos digitais"
+                                    description = ""
                                 />
+								<p style={{fontSize: '26px'}} className="text-center"> Todo o universo cripto para você escolher </p>
                             </div>
 							{renderInfo()}
                         </div>
@@ -1285,19 +1370,19 @@ const renderBlog = () => (
                             <TabList className="tab-button-list">
                                 <Tab>
                                     <div className="tab-button" >
-                                        <h4 className="title">Criptomoedas.</h4>
+                                        <h4 className="title">Criptomoedas</h4>
                                         <p className="description">Conheça nossa variedade de criptomoedas.</p>
                                     </div>   
                                 </Tab>
                                 <Tab>
                                     <div className="tab-button">
-                                        <h4 className="title">Tokens.</h4>
+                                        <h4 className="title">Tokens</h4>
                                         <p className="description">Veja os tokens que estão em destaque na plataforma.</p>
                                     </div>   
                                 </Tab>
                                 <Tab>
                                     <div className="tab-button">
-                                        <h4 className="title">NFT.</h4>
+                                        <h4 className="title">Tokens NFT</h4>
                                         <p className="description">Explore nossas coleções de NFTs.</p>
                                     </div>   
                                 </Tab>
@@ -1553,9 +1638,18 @@ teste3                                        </div>
 
 			{renderDownloadDevices()}
 
+			<h2  style={{transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d', opacity: 1}} className="display-3 text-center">
+										Tenha tudo 
+										<span className="color-accent">.<br /></span>
+										<span>Em uma única Plataforma</span>
+										<span className="color-accent">.<br /></span>
+										<span>Em um único App</span>
+										<span className="color-accent">...</span>
 
-			<Parallax rotateX={[-120, 0]} easing="easeOutQuart" >
-				<img src={mobile} style={{backgroundImage: 'radial-gradient(300px at center, #4a4a4a, transparent )', display: 'block', transformOrigin: '80% 0px', marginLeft: 'auto', marginRight: 'auto', height: '740px', width: '680px', objectFit: 'contain', }} className="theme-shape-center" />
+				</h2>
+			
+			<Parallax rotateX={[-70, 0]} easing="easeInOutCirc">
+				<img src={mobile} style={{backgroundImage: 'radial-gradient(300px at center, #4a4a4a, transparent )', display: 'block', marginTop: '60px', transformOrigin: '90% 0px', marginLeft: 'auto', marginRight: 'auto', height: '740px', width: '680px', objectFit: 'contain', }} className="theme-shape-center" />
 			</Parallax>
 
 			{renderBlog()}
