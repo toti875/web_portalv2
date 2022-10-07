@@ -79,7 +79,7 @@ const ProductsDropdown = () => {
               <a href="/quick-exchange" style={{fontSize: '16px',}}>
                   <Icon />Negociação instantânea
               </a><br/>
-              <a href="/exchange" style={{fontSize: '16px'}}>
+              <a href="/markets" style={{fontSize: '16px'}}>
                   <Icon />Negociação avançada
               </a>
             </div>
