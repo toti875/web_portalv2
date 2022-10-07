@@ -17,21 +17,21 @@ export const pt = {
 	'page.sidebar.group.text': 'Fee Group:',
 	'page.sidebar.group.value': 'Base',
 
-	'page.body.trade.header.market': 'Market',
+	'page.body.trade.header.market': 'Ativo',
 	'page.body.trade.header.yours': 'Yours',
 
 	'page.body.trade.header.markets': 'Markets',
-	'page.body.trade.header.markets.content.market': 'Market',
+	'page.body.trade.header.markets.content.market': 'Ativo',
 	'page.body.trade.header.markets.content.pair': 'Pair',
 	'page.body.trade.header.markets.content.price': 'Preço',
-	'page.body.trade.header.markets.content.last_price': 'Last Price',
+	'page.body.trade.header.markets.content.last_price': 'Último preço',
 	'page.body.trade.header.markets.content.change': 'Variação',
 	'page.body.trade.header.markets.content.search': 'Procurar',
 	'page.body.trade.header.markets.content.volume': 'Volume',
 
 	'page.body.trade.header.newOrder': 'Order Form',
-	'page.body.trade.header.newOrder.content.tabs.buy': 'Buy',
-	'page.body.trade.header.newOrder.content.tabs.sell': 'Sell',
+	'page.body.trade.header.newOrder.content.tabs.buy': 'Comprar',
+	'page.body.trade.header.newOrder.content.tabs.sell': 'Vender',
 	'page.body.trade.header.newOrder.content.orderType': 'Order Type',
 	'page.body.trade.header.newOrder.content.orderType.limit': 'Limit',
 	'page.body.trade.header.newOrder.content.orderType.market': 'Market',
@@ -53,7 +53,7 @@ export const pt = {
 	'page.body.trade.header.marketDepths.content.cumulativeValue': 'Estimated Value:',
 
 	'page.body.trade.toolBar.lowest': 'Lowest 24h',
-	'page.body.trade.toolBar.lastPrice': 'Last Price',
+	'page.body.trade.toolBar.lastPrice': 'Último preço',
 	'page.body.trade.toolBar.selectMarket': 'Select Market',
 	'page.body.trade.toolBar.highest': 'Highest 24h',
 	'page.body.trade.toolBar.volume': '24h Volume',
@@ -81,14 +81,15 @@ export const pt = {
 	'page.body.trade.header.openOrders.content.filled': 'Executado',
 
 	/* Markets Table */
-	'page.body.marketsTable.filter.all': 'AllTodos',
-	'page.body.marketsTable.header.pair': 'Market',
-	'page.body.marketsTable.header.lastPrice': 'Last Price',
-	'page.body.marketsTable.header.change': '24 Change',
-	'page.body.marketsTable.header.high': '24  high',
-	'page.body.marketsTable.header.low': '24 low',
-	'page.body.marketsTable.header.volume': '24 Volume',
+	'page.body.marketsTable.filter.all': 'Todos os mercados',
+	'page.body.marketsTable.header.pair': 'Mercado',
+	'page.body.marketsTable.header.lastPrice': 'Último preço',
+	'page.body.marketsTable.header.change': 'Variação em 24h',
+	'page.body.marketsTable.header.high': 'Valor máximo (24h)',
+	'page.body.marketsTable.header.low': 'Valor mínimo (24h)',
+	'page.body.marketsTable.header.volume': 'Volume em 24h',
 	'page.body.marketsTable.header.trade': 'Negociar',
+	'page.marketsLists.table.body.trade': 'Negociar',
 
 	/* Wallets */
 	'page.body.wallets.estimated_value_dolar': 'Valor aproximado em Reais: ',
@@ -929,6 +930,16 @@ export const pt = {
 	'page.homePage.trade.btn.trade': 'Negociar',
 
 	'page.homePage.trade.btn.signup': 'Abra sua conta',
+
+	'page.marketsLists.tab.favorites': 'Favoritos',
+	'page.marketsLists.tab.spotMarkets': 'Mercados Spot',
+	'FIAT': 'Fiat',
+	'USD': 'USD',
+	'BTC': 'BTC',
+	'page.marketsLists.markets.all': 'Todos',
+	'page.marketsLists.input.search.placeholder': 'Procurar',
+
+
 	...nationalitiesNames,
 	...customTranslations,
 };
