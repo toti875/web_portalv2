@@ -7,10 +7,11 @@
 	font-size: 16px;
 	font-weight: bold;
 	width: 380px !important;
-	height: 780px !important;
+	height: 760px !important;
 	left: 30px;
 	color: var(--color-darker);
 	box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+	padding: 0 !important;
 	
 }
 
@@ -19,10 +20,10 @@
 	top: 5px;
 	right: 3%;
 
-	padding: 0.5rem 2rem;
+	padding: 4px 16px;
 	border-radius: 3px;
 	line-height: 18px;
-	font-size: 15px;
+	font-size: 12px;
 	font-weight: bold;
 	text-transform: uppercase;
 	color: rgb(255, 255, 255);
@@ -42,6 +43,7 @@
 	left: 10%;
 	top: 110px;
 	background-color: transparent !important;
+	border-radius: 50px;
 
 	width: 60px !important;
 	height: 60px !important;
@@ -53,7 +55,6 @@
 	position: absolute;
 	left: 10%;
 	top: 50px;
-	border-radius: 50px;
 
 	width: 60px !important;
 	height: 60px !important;
@@ -62,11 +63,13 @@
 }
 
 .itemLogo-img {
-	width: 100%;
+	width: 102%;
 	height: 140px;
 	background-color: #000 !important;
 	color: #000 !important;
-	border-radius: 0px !important;
+	padding: 5px;
+	border-radius: 10px;
+
 
 	
 
@@ -116,51 +119,49 @@
 
 
 #sale_item__timer #days {
-	font-size: 17px  !important;
-	color: gray;
-	padding: 10px;
+	font-size: 15px  !important;
+	color: #009991;
+	padding: 4px;
+	
 }
 
 #sale_item__timer #hours {
-	font-size: 17px  !important;
-	color: gray;
-	padding: 10px;
+	font-size: 15px  !important;
+	color: #009991;
+	padding: 4px;
+
 }
 
 #sale_item__timer #minutes {
-	font-size: 17px  !important;
-	color: gray;
-	padding: 10px;
+	font-size: 15px  !important;
+	color: #009991;
+	padding: 4px;
 }
 
 #sale_item__timer #seconds {
-	font-size: 17px  !important;
-	color: gray;
-	padding: 10px;
+	font-size: 15px  !important;
+	color: #009991;
+	padding: 4px;
 }
 
 #sale_item__timer {
 	display: flex;
-	line-height: 1;
 	justify-content: space-between !important;
-	font-size: 17px  !important;
+	font-size: 13px  !important;
 	margin: 0 auto;
-	margin-top: 15px;
-	margin-bottom: 15px;
 	text-align: center;
-	padding: 10px;
+	padding: 4px;
 }
 
 #sale_item__timer div {
 	display: inline-block;
 	justify-content: space-between !important;
-	line-height: 1;
-	font-size: 17px  !important;
+	font-size: 13px  !important;
 }
 
 #sale_item__timer div span {
 	display: block;
-	font-size: 17px  !important;
+	font-size: 14px  !important;
 	color: gray;
 }
 
@@ -197,6 +198,6 @@
 
 .text-sale {
 
-font-size: 17px !important;
+font-size: 16px !important;
 
 }

@@ -23,7 +23,7 @@ const CompanyDropdown = () => {
             </a>
           </HeadingLink>
           <HeadingLink>
-            <a href="/">
+            <a href="https://fortem.crisp.help" target="_blank" rel="noreferrer noopener">
               <Icon />Central de Suporte
             </a>
           </HeadingLink>
@@ -33,7 +33,7 @@ const CompanyDropdown = () => {
             </a>
           </HeadingLink>
           <HeadingLink noMarginBottom>
-            <a href="/">
+            <a href="http://status.fortem.website" target="_blank" rel="noreferrer noopener">
               <Icon />Status dos serviços
             </a>
           </HeadingLink>

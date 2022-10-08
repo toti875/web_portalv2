@@ -18,6 +18,10 @@ import Separator from "../../../../template_react/doob/src/elements/separator/Se
 import ReactCardFlip from "react-card-flip";
 //import { BuyersHistory, BuyHistory, SaleBuy, SaleDetail, SaleInfo, SaleSocial } from '../../containers';
 
+import { localeDate } from '../../../../helpers/localeDate';
+import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
+
+
 
 
 
@@ -123,13 +127,13 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 
 	switch (props.type) {
 		case 'upcoming':
-			countdownTitle = <span className="text-success">Tempo para abertura da captação:</span>;
+			countdownTitle = <span style={{fontSize: '14px', color: '#FABE08ff'}} className="text-center align-items-center justify-items-center">Início da captação: {localeDate(props.sale.start_date, 'fullDate', 'pt-BR')}</span>;
 			break;
 		case 'ongoing':
-			countdownTitle = <span className="text-warning">Tempo restante de captação:</span>;
+			countdownTitle = <span style={{fontSize: '14px'}} className="text-center align-items-center justify-items-center text-danger">Fim da captação: {localeDate(props.sale.end_date, 'fullDate', 'pt-BR')}</span>;
 			break;
 		default:
-			countdownTitle = <span className="text-danger"> Esta captação foi finalizada</span>;
+			countdownTitle = <span style={{fontSize: '14px'}} className="text-center align-items-center justify-items-center text-danger"> Captação concluída em: {localeDate(props.sale.end_date, 'fullDate', 'pt-BR')}</span>;
 			break;
 	}
 
@@ -164,9 +168,9 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 			<div className="col pricing-table-style-02 text-center px-md-0 sm-margin-30px-bottom xs-margin-15px-bottom wow animate__fadeIn z-index-1 ml--30 mr--30" >
 			<ReactCardFlip isFlipped={flip} flipDirection="horizontal">
 				<div>
-				<div className="sale-item pricing-table pricing-body text-center justify-content-center  bg-white box-shadow-large border-radius-10px " style={{minHeight: '580px'}} >
+				<div className="sale-item pricing-table bg-white box-shadow-large border-radius-10px " style={{minHeight: '580px'}} >
 					<div className="sale-item-badge" style={{ backgroundColor: saleBadgeColor }}>{saleBadgeDescription}
-				</div>
+					</div>
 	
 				<img className="itemLogo-img" src={props.sale.image_link} alt="" />
 			
@@ -219,7 +223,7 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 						style={{ height: '18px', fontSize: '16px', fontWeight: 'bold',   }}
 					/>
 							<div className="pricing-footer margin-5px-top mb--10 mt--15">
-								<a className="btn btn-medium  btn-round-edge "  onClick={() => setFlip(!flip)}>Mais informações</a>
+								<a className="btn btn-medium  btn-round-edge "  onClick={() => setFlip(!flip)}>Mais informações <i className="icon"><FiArrowRight /></i></a>
 
 								<a className="btn btn-medium  btn-dark-gray modal-popup wow animate__fadeIn" onClick={handleDetailClick}>Comprar Token</a>
 								{/*onClick={() => setShow(true)}>Comprar Token</a>*/}
@@ -258,33 +262,32 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 			</div>
 			<div>	
 				<div>
-				<div className="sale-item pricing-table pricing-body text-center justify-content-center  bg-white box-shadow-large border-radius-10px " style={{minHeight: '580px'}} onClick={() => setFlip(!flip)}>
-					<div className="sale-item-badge" style={{ backgroundColor: saleBadgeColor }}>{saleBadgeDescription}
-				</div>
+					
+				<div className="sale-item pricing-table pricing-body text-center justify-content-center  bg-white box-shadow-large border-radius-10px " style={{minHeight: '580px'}}>
+				<div className="sale-item-badge" style={{ backgroundColor: saleBadgeColor, fontSize: '12px'}}>{saleBadgeDescription}
+					</div>
 	
 			
-				<img className="itemLogo2" src={props.sale.sale_logo} alt="" />
 				<div className="pricing-body tokenCard">
 						
 					<div className="font-weight-500 text-extra-dark-gray ">
 						<ul className="list-style-03">
 
-							<div className="font-weight-500 text-extra-dark-gray mt--90" style={{fontSize: '15px', display: 'flex', }}>
+							<div className="font-weight-500 text-extra-dark-gray" style={{fontSize: '15px', display: 'flex', }}>
 								<span>Descrição</span>
 							</div>
-							<div className="font-weight-500 text-extra-dark-gray mb--15" style={{fontSize: '14px', display: 'flex',}}>
-								<span>{props.sale.description}</span>
+							<div className="inner-container font-weight-500 text-extra-dark-gray mb--15" style={{fontSize: '14px', display: 'flex', justifyContent: 'flex-start', textAlign: 'left', maxHeight: '80px'}}>
+								<span className="display-5 mg-bottom-0" style={{fontSize: '14px', display: 'flex', justifyContent: 'flex-start', textAlign: 'left', maxHeight: '80px'}}>{props.sale.description}</span>
 							</div>
-							<Separator />
-							<div className="font-weight-500 text-extra-dark-gray mt--15" style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
-								<span>Valor total captado</span><span style={{color: 'rgb(19, 184, 135)'}}>R$ {(((props.sale.total_ieo - props.sale.remains) * props.sale.price))}</span>
+							<Separator /> 
+							<div className="font-weight-500 text-extra-dark-gray mt--5" style={{display: 'flex', justifyContent: 'center'}}>
+								<span>{countdownTitle}</span>
+
+	
 							</div>
-							<div className="font-weight-500 text-extra-dark-gray mt--5" style={{display: 'flex', justifyContent: 'space-between'}}>
-								<Countdown date={countdownTime} renderer={renderer} />
-							</div>
-							<div className="font-weight-500 text-extra-dark-gray mt--5 mb--5" style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
+							<div className="font-weight-500 text-extra-dark-gray" style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
 								{/*<span>Encerramento da captação</span><span style={{}}>{formatDate(props.sale.end_date)}</span>*/}
-								<span>Encerramento da captação</span><span style={{}}>01/10/2022</span>
+								<Countdown className = "text-center align-items-center justify-items-center " date={countdownTime} renderer={renderer} />
 							</div>
 							<Separator />
 							<div className="font-weight-500 text-extra-dark-gray mt--15" style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
@@ -302,21 +305,17 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 							<div className="font-weight-500 text-extra-dark-gray mt--5" style={{fontSize: '14px', display: 'flex', justifyContent: 'space-between'}}>
 								<span>Cartão de crédito</span><span style={{}}><img style={{ width: '30px', height: '30px', marginLeft: '1rem', }} src={ccVisa} /></span>
 							</div>
-							
-							<div className="font-weight-500 text-extra-dark-gray mb--15" style={{display: 'flex', justifyContent: 'space-between'}}>
-								<span>Pagamento de juros</span><span style={{}}>Mensal</span>
-							</div>
 							<Separator />
 							<div className="font-weight-500 text-dark-gray mt--15" style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
-								<span>Total de tokens ofertados</span><span style={{}}>{props.sale.total_ieo}</span>
+								<span>Total de tokens ofertados</span><span style={{}}>{(props.sale.total_ieo).toLocaleString('pt-br')}</span>
 							</div>
 							<div className="font-weight-500 text-dark-gray " style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
-								<span>Total de tokens disponíveis</span><span style={{}}>{props.sale.remains}</span>
+							<span>Total de tokens disponíveis</span><span style={{}}>{(props.sale.remains).toLocaleString('pt-br')}</span> 
 							</div>
 							<div className="font-weight-500 text-dark-gray" style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
-								<span>Progresso</span>
+								<span>Progresso</span><span style={{}}>{Math.floor(((props.sale.total_ieo - props.sale.remains) / props.sale.total_ieo) * 100)}%</span>
 							</div>
-							<Progress
+							{/*<Progress
 								strokeColor={{
 								'0%': '#2a9d8f',
 								'100%': '#e76f51',
@@ -324,10 +323,12 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 							status="active"
 						
 							percent={Math.floor(((props.sale.total_ieo - props.sale.remains) / props.sale.total_ieo) * 100)}
-							/>
+						/>*/}
 							<div className="pricing-footer margin-5px-top mb--10 mt--15">
-								<a className="btn btn-medium  btn-round-edge" onClick={() => setFlip(!flip)}>Voltar</a>
-								<a className="btn btn-medium  btn-fast-blue modal-popup wow animate__fadeIn" href="#modal-popup">ComprarModal</a>
+								<a className="btn btn-medium  btn-round-edge" onClick={() => setFlip(!flip)}><i className="icon"><FiArrowLeft /></i> Voltar</a>
+								<a className="btn btn-medium  btn-dark-gray modal-popup wow animate__fadeIn" onClick={handleDetailClick}>Comprar Token</a>
+
+								{/*<a className="btn btn-medium  btn-fast-gray modal-popup wow animate__fadeIn" href="#modal-popup">Comprar Modal</a>*/}
 								<div id="modal-popup" className="col-11 col-xl-3 col-lg-6 col-md-8 col-sm-9 mx-auto bg-white text-center modal-popup-main padding-4-half-rem-all mfp-hide border-radius-6px sm-padding-2-half-rem-lr">
                             <span className="text-extra-dark-gray text-uppercase alt-font text-extra-large font-weight-600 margin-15px-bottom d-block">Simple modal popup</span>
                             <p>Lorem ipsum is simply dummy text of the printing and typesetting industry lorem ipsum has been the industry's standard dummy text ever.</p>
