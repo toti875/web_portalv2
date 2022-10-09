@@ -97,6 +97,10 @@ import {
 	DocumentationScreen,
 } from '../../screens';
 
+//import {SignInScreen} from '../../v2/src/screens/SignInScreen'
+//import { LogInScreen } from '../../screens/LogInScreen'
+
+
 import { WalletsScreen } from '../../v2/src/screens/WalletsScreen'
 
 
@@ -174,7 +178,7 @@ const PrivateRoute: React.FunctionComponent<any> = ({ component: CustomComponent
 
 	return (
 		<Route {...rest}>
-			<Redirect to={'/banner/authentication/sign-in/basic'} />
+			<Redirect to={'/signin'} />
 		</Route>
 	);
 };
@@ -428,7 +432,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 				<Switch>
 					<Route exact={true} path="/magic-link" component={MagicLink} />
 					{/*TELA DE LOGIN*/}
-					<PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/banner/authentication/sign-in/basic" component={SignInBasic} />
+					<PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/signin" component={LogInScreen} />
 					{/*TELA DE CADASTRO*/}
 					<PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/banner/authentication/sign-up/basic" component={SignUpBasic} />
 					<PublicRoute

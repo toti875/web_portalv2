@@ -112,7 +112,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 				// 	return NP.divide(NP.divide(1, quotePrice), NP.divide(1, basePrice));
 				// case 'swp':
 				// 	return NP.divide(NP.divide(1, quotePrice), NP.divide(1, basePrice));
-				case 'BRL':
+				case 'FTK':
 					return NP.divide(NP.divide(1, quotePrice), NP.divide(1, basePrice));
 				default:
 					return NP.divide(quotePrice, NP.divide(1, basePrice));

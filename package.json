@@ -143,6 +143,7 @@
 		"sinon": "^7.2.3",
 		"slick-carousel": "^1.8.1",
 		"smart-webcomponents-react": "^14.2.83",
+		"stripe": "^10.13.0",
 		"styled-components": "^5.3.5",
 		"stylelint": "^13.2.1",
 		"stylelint-config-standard": "^20.0.0",
