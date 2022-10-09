@@ -1,12 +1,18 @@
 import { Button, Col, message, Result, Row } from 'antd';
-import * as React from 'react';
+import React, { useState }  from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router';
 import { findSalebyId, selectSaleItem, selectUserInfo } from '../../../../modules';
 import { BuyersHistory, BuyHistory, SaleBuy, SaleDetail, SaleInfo, SaleSocial } from '../../containers';
 import './SaleDetailScreen.css';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import SectionTitle from "../../../../template_react/doob/src/elements/sectionTitle/SectionTitle";
+
 
 export const SaleDetailScreen: React.FC = () => {
+
+	const [tabIndex, setTabIndex] = useState(0);
+
 	const history = useHistory();
 	const { ieoID } = useParams<{ ieoID: string }>();
 	const saleItem = useSelector(selectSaleItem);
@@ -113,29 +119,121 @@ export const SaleDetailScreen: React.FC = () => {
 		} else {
 			return (
 				<div id="sale-detail-screen">
-					<div id="sale-info-buy" className="container-fluid">
-						<span className="sale-detail__badge" style={{ backgroundColor: getBadgeColor(saleItem.payload.type) }}>
-							{saleItem.payload ? saleItem.payload.type : ''}
-						</span>
-						<Row gutter={[16, 16]}>
-							{/*<Col span={16} style={{ backgroundColor: '#1d1e22'}}>{saleInfoView}</Col>*/}
-							<Col span={8} style={{ backgroundColor: '#1d1e22'}}> {saleBuyView}</Col>
-						</Row>
-					</div>
 
-					<div id="sale-history" className="container-fluid">
-						<div className="row">{buyHistoryView}</div>
+<div className="rwt-advance-tab-area  theme-shape-root">
+                    <div className="container2">
+                        <div className="row ">
+                            <div className="col-lg-12" >
+                                <SectionTitle
+                                    textAlign = "text-center"
+                                    radiusRounded = ""
+                                    subtitle = ""
+                                    title = "Conheça nosso portfólio diversificado de ativos digitais"
+                                    description = ""
+                                />
+								<p style={{fontSize: '26px'}} className="text-center"> Todo o universo cripto para você escolher </p>
+                            </div>
+							{/*{renderInfo()}*/}
+                        </div>
+						<Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
+						<div className="cont" style={{display: 'flex', flexDirection: 'row-reverse', width: '100% important'}} >
+						{saleBuyView}
+							                    <div className="order-2 order-lg-1 col-lg-4 col-md-12 col-sm-12 col-12 mt_md--30 mt_sm--30">
+                        <div className="advance-tab-button advance-tab-button-1" style={{width: '300px'}}>
+                            <TabList className="tab-button-list">
+                                <Tab>
+                                    <div className="tab-button" >
+                                        <h4 className="title">Criptomoedas</h4>
+                                        <p className="description">Conheça nossa variedade de criptomoedas.</p>
+                                    </div>   
+                                </Tab>
+                                <Tab>
+                                    <div className="tab-button">
+                                        <h4 className="title">Tokens</h4>
+                                        <p className="description">Veja os tokens que estão em destaque na plataforma.</p>
+                                    </div>   
+                                </Tab>
+                                <Tab>
+                                    <div className="tab-button">
+                                        <h4 className="title">Tokens NFT</h4>
+                                        <p className="description">Explore nossas coleções de NFTs.</p>
+                                    </div>   
+                                </Tab>
+                            </TabList>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="advance-tab-content advance-tab-content-1">
+                            <TabPanel>
+							<div className="tab-content">
+                                    <div className="inner">
+                                        <div className="thumbnail">
+										<div id="sale-info-buy" className="container-fluid">
+						<div className="row">{saleInfoView}</div>
 					</div>
-					<div id="sale-social" className="container-fluid">
+										
+
+					</div>
+					</div>
+											                                        
+		
+                                </div>
+								<div className="market bg-transparent   content-wrapper bg-transparent slider-style-1">
+			<div className="container">
+								<div className="home-market">
+								{/*<button className="btn-mainPage-AllMarkets" onClick={RedirectMarketList}><span>Ver mais criptomoedas</span></button>*/}
+								</div>
+								</div>
+								</div>
+                            </TabPanel>
+                            
+                            <TabPanel>
+                                <div className="tab-content">
+                                    <div className="inner">
+                                        <div className="thumbnail">
+										{buyHistoryView}                               </div>
+                                    </div>
+                                </div>
+                            </TabPanel>
+
+                            <TabPanel>
+				
+							{saleSocialView}
+					
+                            </TabPanel>
+                        </div>
+                    </div>
+                </div>
+            </Tabs>               
+                
+
+
+
+
+
+	
+				
+					<div id="sale-info-buy" className="container-fluid">
+						<div className="row">{saleBuyView}</div>
+					</div>
+					</div>
+					</div>
+				{/*
+					<span id="sale-info-buy" className="container-fluid">
+						<div className="row">{buyHistoryView}</div>
+					</span>
+
+					<span id="sale-social" className="container-fluid">
 						<div className="row">
 							<div className="col-12">{saleSocialView}</div>
 						</div>
-					</div>
-					<div id="sale-detail" className="container-fluid">
+					</span>
+					<span id="sale-detail" className="container-fluid">
 						<div className="row">
 							<div className="col-12">{saleDetailView}</div>
 						</div>
-					</div>
+					</span>
+		*/}
 				</div>
 			);
 		}

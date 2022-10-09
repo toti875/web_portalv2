@@ -2,12 +2,9 @@
 #sale-social,
 #sale-detail,
 #sale-history {
-	position: relative;
 	background-color: #131313;
-	margin-top: 50px;
-	margin-bottom: 50px;
 	padding: 5vh 2vw;
-	width: 90%;
+	width: 100%;
 	border: 2px solid #2a2c3b;
 	border-radius: 6px;
 }
@@ -60,6 +57,8 @@ background-color: #131313 !important;
 	background-color: #2d3040;
 }
 
-#sale-detail-screen {
+.sale-detail-screen {
 	background-color: #131313 !important;
+	display: flex;
+	flex-direction: column;
 }

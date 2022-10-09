@@ -76,6 +76,7 @@ const renderEvent = () => {
 export const SaleListScreen: React.FC = () => {
 	return (
 		<React.Fragment>
+
 			{renderEvent()}	
 			<Parallax opacity={[1, 0]} scale={[1.3, 0.5]} easing="easeInOutCirc">
 

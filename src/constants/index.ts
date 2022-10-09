@@ -11,7 +11,7 @@ export const pgRoutes = (isLoggedIn: boolean, isLight?: boolean): string[][] => 
 		['page.header.navbar.history', '/history', `history${isLight ? 'Light' : ''}`],
 	];
 	const routesUnloggedIn = [
-		['page.header.navbar.signIn', '/banner/authentication/sign-in/basic', `signin${isLight ? 'Light' : ''}`],
+		['page.header.navbar.signIn', '/signin', `signin${isLight ? 'Light' : ''}`],
 		['page.header.signUp', '/banner/authentication/sign-up/basic', `signup${isLight ? 'Light' : ''}`],
 		['page.header.navbar.trade', '/market/', `trade${isLight ? 'Light' : ''}`],
 	];

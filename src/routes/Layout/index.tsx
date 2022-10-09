@@ -487,7 +487,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					<Route path="/500" component={MaintenanceScreen} />
 					<Route exact={false} path="/market/:market?" component={TradingScreen} />
 					<Route exact={true} path="/" component={FortemIOHomePage} />
-					<Route exact={true} path="/landing" component={LandingScreen} />
+					{/*<Route exact={true} path="/landing" component={LandingScreen} />*/}
 					<Route exact={true} path="/doc" component={DocumentationScreen} />
 
 					<Route exact={false} path="/fee" component={AssetsFeeScreen} />
@@ -652,7 +652,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 	private handleSubmitExpSessionModal = () => {
 		const { history } = this.props;
 		this.handleChangeExpSessionModalState();
-		history.push('/banner/authentication/sign-in/basic');
+		history.push('/signin');
 	};
 
 	private handleRenderExpiredSessionModal = () => {

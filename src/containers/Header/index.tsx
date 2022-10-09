@@ -226,7 +226,7 @@ export const Header: React.FC = () => {
 	};
 
 	const redirectSingIn = () => {
-		history.push('/banner/authentication/sign-in/basic');
+		history.push('/signin');
 	};
 
 	const redirectSingUp = () => {

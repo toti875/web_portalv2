@@ -426,7 +426,7 @@ function scrollRotate() {
 									{translate('page.homePage.trade.btn.trade')}
 								</button>
 							) : (
-								<><a className="btn-default btn-icon icon-btn-wrap" href="/banner/authentication/sign-in/basic" style={{fontFamily: 'Verdana', fontWeight: 'bold', fontSize: '22px', position: 'absolute',  bottom: '370px', left: '50%', background: 'transparent'}}>Acessar plataforma <i className="icon"><FiArrowRight /></i></a>
+								<><a className="btn-default btn-icon icon-btn-wrap" href="/signin" style={{fontFamily: 'Verdana', fontWeight: 'bold', fontSize: '22px', position: 'absolute',  bottom: '370px', left: '50%', background: 'transparent'}}>Acessar plataforma <i className="icon"><FiArrowRight /></i></a>
 							
 																<button className="btn-icon btn-default" onClick={redirectSingUP} style={{fontFamily: 'Verdana', fontWeight: 'bold', fontSize: '22px',  position: 'absolute',  bottom: '370px', left: '70%'}}>
 																Conecte-se com a Fortem
