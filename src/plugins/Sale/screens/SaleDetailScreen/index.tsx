@@ -28,6 +28,8 @@ export const SaleDetailScreen: React.FC = () => {
 		[dispatch],
 	);
 
+	
+
 	React.useEffect(() => {
 		if (saleItem.loading) {
 			message.loading('Aguarde...', 0);
