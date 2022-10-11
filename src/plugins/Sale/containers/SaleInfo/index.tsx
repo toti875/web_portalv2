@@ -24,10 +24,10 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
 					00 <span>Horas</span>
 				</div>
 				<div id="minutes">
-					00 <span>Minutos</span>
+					00 <span>Min</span>
 				</div>
 				<div id="seconds">
-					00 <span>Segundos</span>
+					00 <span>Seg</span>
 				</div>
 			</div>
 		);
@@ -42,10 +42,10 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
 					{hours} <span>Horas</span>
 				</div>
 				<div id="minutes">
-					{minutes} <span>Minutos</span>
+					{minutes} <span>Min</span>
 				</div>
 				<div id="seconds">
-					{seconds} <span>Segundos</span>
+					{seconds} <span>Seg</span>
 				</div>
 			</div>
 		);
@@ -73,44 +73,32 @@ export const SaleInfo: React.FC<SaleInfoProps> = (props: SaleInfoProps) => {
 	}, [dispatchGetTotalBuyers, props.ieoID]);
 
 	return (
-		<div id="sale-info" style={{ backgroundColor: '#0b1426', padding: '3vw', height: '100%' }}>
+		<div >
 			<div className="row">
 				<div className="col-4">
 					<img className="sale-logo-details" src={props.sale.sale_logo} alt="sale-logo" />
+					<span className="sale-info-tick text-center" style={{color: '#fff'}}>Código do Token: </span> <span  style={{color: 'rgb(252,208,0)'}}> {props.sale.currency_id}</span>
+					
 				</div>
 			</div>
 			<div className="row">
 				<div className="col-4" style={{ display: 'flex', flexDirection: 'column' }}>
-					<h4 className="sale-info__title">{props.sale.description}</h4>
-					<h4 className="sale-info__title2">Código do Token: {props.sale.currency_id}</h4>
-					<h4 className="sale-info__title3">Ciclo de captação: {props.sale.id}</h4>
-
+					<p className="title" style={{textDecoration: 'underline', fontSize: '18px', fontWeight: 500}}>Descrição do projeto:</p>
+					<p className="sale-info-description">{props.sale.description}</p>
+					<p style={{color: '#fff', fontSize: '18px'}}>Ciclo atual de captação:</p><span style={{color: '#009991', fontSize: '18px'}}>{props.sale.id}</span>
 				</div>
 			</div>
-		{/*	<div className="row d-flex justify-content-center">
+		<div className="row d-flex justify-content-center">
 				<Countdown date={countdownTime} renderer={renderer} />
-	</div> */}
+	</div>
 			<hr />
 			<div className="row text-center">
-				<div className="col-12">
+				<div className="col-12" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+					<p style={{color: '#fff', fontSize: '18px'}}>Preço unitário:</p><span style={{color: '#009991', fontSize: '18px'}}>{`R$ ${props.sale.price} `}</span>
+					<p style={{color: '#fff', fontSize: '18px'}}>Lote mínimo:</p><span style={{color: '#009991', fontSize: '18px'}}>{`${props.sale.min_buy} ${ 'tokens ' }${props.sale.currency_id.toUpperCase()}`}</span>
 					<Row gutter={[16, 16]}>
-						<Col span={8}>
-							<Statistic valueStyle={{ color: '#FDA736', fontSize: '18px' }} title="Preço inicial" value={`R$${props.sale.price} `} />
-						</Col>
-						<Col span={8}>
-							<Statistic
-								valueStyle={{ color: '#FDA736', fontSize: '18px' }}
-								title="Quantidade mínima"
-								value={`${props.sale.min_buy} ${ 'tokens ' }${props.sale.currency_id.toUpperCase()}`}
-							/>
-						</Col>
-						<Col span={8}>
-							<Statistic
-								valueStyle={{ color: '#FDA736', fontSize: '18px' }}
-								title="Formas de pagamento" 
-								value={`${props.sale.currency_available.map(currency => currency.toUpperCase()).join(',',)} ${ '' }`} />
-
-						</Col>
+					
+						
 					</Row>
 				</div>
 			</div>

@@ -1,56 +1,65 @@
-#sale-info {
-	padding: 0 2rem;
+
+.sale-logo-details {
+	max-width: 80px !important;
+	max-height: 80px !important;
+
+
+}
+
+.sale-info-tick {
+	font-size: 18px;
+	font-weight: 700;
+
+
 	
 }
 
-.sale-logo-details {
-	max-width: 220px !important;
-	max-height: 220px !important;
-	margin-left: -10px !important;
-
-
+.sale-info-description {
+	font-size: 17px;
+	width: 580px;
+	font-weight: 500;
+	margin-left: 10px;
 }
 
-.sale-info__title {
-	font-size: 24px;
-	width: 600px;
-	font-weight: 700;
-	line-height: 50px;
-	margin-top: -120px;
-	margin-left: 60px;
-}
+
 
 .sale-info__content {
 	color: #a4acb6;
 	line-height: 24px !important;
-	margin-top: -100px !important;
 }
 
 #days {
-	font-size: 36px;
-	color: #db4844;
+	font-size: 24px;
+	color: #009991;
+	filter: brightness(130%);
 }
 
 #hours {
-	font-size: 36px;
-	color: #f07c22;
+	font-size: 24px;
+	color: #009991;
+	filter: brightness(130%);
+
 }
 
 #minutes {
-	font-size: 36px;
-	color: #f6da74;
+	font-size: 24px;
+	color: #009991;
+	filter: brightness(130%);
+
 }
 
 #seconds {
-	font-size: 36;
-	color: #abcd58;
+	font-size: 24px;
+	color: #009991;
+	filter: brightness(130%);
+
 }
 
 #timer {
 	display: inline-block;
 	line-height: 1;
 	padding: 20px 0;
-	font-size: 30px;
+	font-size: 24px;
 	margin-top: 0;
 	text-align: center;
 }
@@ -59,13 +68,14 @@
 	display: inline-block;
 	line-height: 1;
 	padding: 0 20px;
-	font-size: 30px;
+	font-size: 24px;
 }
 
 #timer div span {
 	display: block;
-	font-size: 14px;
+	font-size: 16px;
 	color: white;
+	margin-top: 4px;
 }
 
 .sale-logo  {
