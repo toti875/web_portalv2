@@ -120,43 +120,31 @@ export const SaleDetailScreen: React.FC = () => {
 			return (
 				<div id="sale-detail-screen">
 
-<div className="rwt-advance-tab-area  theme-shape-root">
-                    <div className="container2">
-                        <div className="row ">
-                            <div className="col-lg-12" >
-                                <SectionTitle
-                                    textAlign = "text-center"
-                                    radiusRounded = ""
-                                    subtitle = ""
-                                    title = "Conheça nosso portfólio diversificado de ativos digitais"
-                                    description = ""
-                                />
-								<p style={{fontSize: '26px'}} className="text-center"> Todo o universo cripto para você escolher </p>
-                            </div>
-							{/*{renderInfo()}*/}
-                        </div>
+<div className="rwt-advance-tab-area " style={{width: '2000px'}} >
+                    <div className="" >
+
 						<Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
-						<div className="cont" style={{display: 'flex', flexDirection: 'row-reverse', width: '100% important'}} >
-						{saleBuyView}
-							                    <div className="order-2 order-lg-1 col-lg-4 col-md-12 col-sm-12 col-12 mt_md--30 mt_sm--30">
-                        <div className="advance-tab-button advance-tab-button-1" style={{width: '300px'}}>
+						<div className="container" style={{display: 'flex', flexDirection: 'row', width: '100%'}} >
+						
+							                    <div >
+                        <div className="advance-tab-button advance-tab-button-1" style={{width: '250px', borderColor: '#009991', marginRight: '30px' }}>
                             <TabList className="tab-button-list">
                                 <Tab>
-                                    <div className="tab-button" >
-                                        <h4 className="title">Criptomoedas</h4>
-                                        <p className="description">Conheça nossa variedade de criptomoedas.</p>
+                                    <div className="tab-button"  style={{ borderColor: '#009991'}}>
+                                        <h4 className="title">Informações do Token</h4>
+                                        <p className="description">Veja as informações mais relevantes relacionadas a essa captação</p>
                                     </div>   
                                 </Tab>
                                 <Tab>
                                     <div className="tab-button">
-                                        <h4 className="title">Tokens</h4>
-                                        <p className="description">Veja os tokens que estão em destaque na plataforma.</p>
+                                        <h4 className="title">Transações / Extrato</h4>
+                                        <p className="description">Extrato de todas as transações de compra já efetivadas</p>
                                     </div>   
                                 </Tab>
                                 <Tab>
                                     <div className="tab-button">
-                                        <h4 className="title">Tokens NFT</h4>
-                                        <p className="description">Explore nossas coleções de NFTs.</p>
+                                        <h4 className="title">Mais informações</h4>
+                                        <p className="description">Conheça todos os detalhes do projeto</p>
                                     </div>   
                                 </Tab>
                             </TabList>
@@ -168,8 +156,8 @@ export const SaleDetailScreen: React.FC = () => {
 							<div className="tab-content">
                                     <div className="inner">
                                         <div className="thumbnail">
-										<div id="sale-info-buy" className="container-fluid">
-						<div className="row">{saleInfoView}</div>
+										<div id="sale-info" className="container-fluid">
+						{saleInfoView}
 					</div>
 										
 
@@ -178,34 +166,44 @@ export const SaleDetailScreen: React.FC = () => {
 											                                        
 		
                                 </div>
-								<div className="market bg-transparent   content-wrapper bg-transparent slider-style-1">
-			<div className="container">
-								<div className="home-market">
-								{/*<button className="btn-mainPage-AllMarkets" onClick={RedirectMarketList}><span>Ver mais criptomoedas</span></button>*/}
-								</div>
-								</div>
-								</div>
+
                             </TabPanel>
                             
                             <TabPanel>
                                 <div className="tab-content">
                                     <div className="inner">
                                         <div className="thumbnail">
-										{buyHistoryView}                               </div>
+										<div id="sale-info" className="container-fluid">
+										{buyHistoryView}                               
+										</div>
+										</div>
                                     </div>
                                 </div>
                             </TabPanel>
 
                             <TabPanel>
-				
-							{saleSocialView}
+							<div className="tab-content">
+                                    <div className="inner">
+                                        <div className="thumbnail">
+										<div id="sale-info" className="container-fluid">
+										{saleSocialView}                             
+										</div>
+										</div>
+                                    </div>
+                                </div>
+							
 					
                             </TabPanel>
                         </div>
-                    </div>
-                </div>
+						
+                    </div>					
+				
+						{saleBuyView}
+					
+			    </div>
+				
             </Tabs>               
-                
+			
 
 
 
@@ -214,8 +212,11 @@ export const SaleDetailScreen: React.FC = () => {
 	
 				
 					<div id="sale-info-buy" className="container-fluid">
-						<div className="row">{saleBuyView}</div>
+						<div className="row"> teste</div>
 					</div>
+				
+
+
 					</div>
 					</div>
 				{/*

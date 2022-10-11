@@ -75,7 +75,7 @@ const RenderDeviceContainers = () => {
 
 			
 
-			<SidebarContainer />
+		
 			<AlertsContainer />
 			<LayoutContainer />
 			

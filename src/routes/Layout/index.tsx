@@ -192,7 +192,7 @@ const PublicRoute: React.FunctionComponent<any> = ({ component: CustomComponent,
 	if (isLogged) {
 		return (
 			<Route {...rest}>
-				<Redirect to={'/admin/account/settings'} />
+				<Redirect to={'/wallets'} />
 			</Route>
 		);
 	}
@@ -518,7 +518,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/orders" component={OrdersTabScreen} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/history" component={HistoryScreen} />
-					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/banner/authentication/confirm/basic" component={ConfirmBasic} />
+					{/*<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/banner/authentication/confirm/basic" component={ConfirmBasic} />*/}
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/confirm" component={ConfirmScreen} />
 					{/* OLD Profile Page */}
 					{/* <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={ProfileScreen} /> */}
@@ -710,6 +710,7 @@ const mapStateToProps: MapStateToProps<ReduxProps, {}, RootState> = state => ({
 	userLoading: selectUserFetching(state),
 	platformAccessStatus: selectPlatformAccessStatus(state),
 });
+
 
 const mapDispatchToProps: MapDispatchToProps<DispatchProps, {}> = dispatch => ({
 	fetchConfigs: () => dispatch(configsFetch()),

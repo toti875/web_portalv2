@@ -1,6 +1,6 @@
 import { Button, Input, message, notification } from 'antd';
 import NP from 'number-precision';
-import * as React from 'react';
+import React, { useState } from "react";
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
 import {
@@ -30,11 +30,14 @@ interface SaleBuyProps {
 
 
 
+
 export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 	const { id, currency_id, currency_available, type } = props.sale;
 
 	const priceSelector = useSelector(selectPrice);
 	const buyResponse = useSelector(selectBuy, shallowEqual);
+
+	const [show, setShow] = useState(false);
 
 	// dispatch Fetch Wallets Of User Action
 	const history = useHistory();
@@ -276,7 +279,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 			setIsBuyConfirmModalVisibleState(false);
 		} else {
 			notification.error({
-				message: 'Não foi possível realizar sua compra no momento. Por favor, tente novamente em instantes.',
+				message: 'Não foi possível realizar sua compra no momento. Por favor, tente novamente em instantes ou entre em contato com nossa equipe de suporte.',
 			});
 		}
 	};
@@ -434,7 +437,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 
 	return (
 		<React.Fragment>
-			<div id="sale-buy" style={{ height: '100%' }}>
+			<div id="sale-buy" >
 				<h2 className="sale-buy__title">Comprar {currency_id.toUpperCase()}</h2>
 				<h3 className="sale-buy__subtitle">{`Saldo atual: ${baseBalance} ${currency_id.toUpperCase()}`}</h3>
 				<div className="buy-box" >

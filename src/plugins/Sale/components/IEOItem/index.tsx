@@ -226,7 +226,9 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 								<a className="btn btn-medium  btn-round-edge "  onClick={() => setFlip(!flip)}>Mais informações <i className="icon"><FiArrowRight /></i></a>
 
 								<a className="btn btn-medium  btn-dark-gray modal-popup wow animate__fadeIn" onClick={handleDetailClick}>Comprar Token</a>
-								{/*onClick={() => setShow(true)}>Comprar Token</a>*/}
+								<a className="btn btn-medium  btn-dark-gray modal-popup wow animate__fadeIn"onClick={() => setShow(true)}>Modal</a>
+
+								
 								<Modal
         show={show}
         onHide={() => setShow(false)}

@@ -62,8 +62,6 @@ const RenderDeviceContainers = () => {
     return (
         <React.Fragment>
             <HeaderContainer/>
-            <SidebarContainer/>
-            <CustomizationContainer/>
             <AlertsContainer/>
             <LayoutContainer/>
             <FooterContainer/>

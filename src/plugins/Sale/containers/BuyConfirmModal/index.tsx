@@ -1,9 +1,12 @@
 import { ArrowDownOutlined, ArrowUpOutlined } from '@ant-design/icons';
 import { Alert, Card, Col, Modal, Row, Statistic } from 'antd';
+
 import NP from 'number-precision';
 import * as React from 'react';
 import { useSelector } from 'react-redux';
 import { selectCurrencies } from '../../../../modules';
+//import 'antd/dist/antd.dark.min.css';
+
 
 interface BuyConfirmModalProps {
 	visible: boolean;
@@ -55,7 +58,7 @@ export const BuyConfirmModal: React.FC<BuyConfirmModalProps> = (props: BuyConfir
 
 	return (
 		<Modal
-			title="Confirm to Buy"
+			title="Confirme sua compra"
 			centered
 			visible={props.visible}
 			onOk={() => props.onBuy()}

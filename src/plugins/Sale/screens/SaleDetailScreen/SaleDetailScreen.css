@@ -1,21 +1,24 @@
-#sale-info-buy,
+#sale-info,
 #sale-social,
-#sale-detail,
 #sale-history {
-	background-color: #131313;
-	padding: 5vh 2vw;
-	width: 100%;
-	border: 2px solid #2a2c3b;
+	background-color: #1f1f1f !important;
+	padding: 20px !important;
+	width: 620px !important;
+	border: 2px solid #009991;
 	border-radius: 6px;
+	margin-right: 10px !important;
+
 }
 
 
 .pg-layout {
 
 
-background-color: #131313 !important;
+background-color: var(--color-darker)!important;
 
 }
+
+
 .sale-detail__badge {
 	position: absolute;
 	top: 0;
@@ -34,14 +37,14 @@ background-color: #131313 !important;
 }
 
 #sale-history div div div div div div div div table thead tr th {
-	background-color: #3c4055;
+	background-color: #1f1f1f !important;
 	text-align: center;
 	font-weight: bold;
 	color: #bac6cf;
 }
 
 #sale-history div div div div div div div div table tbody tr {
-	background-color: #2a2c3b;
+	background-color: #1f1f1f !important;
 	text-align: center;
 }
 
@@ -58,7 +61,7 @@ background-color: #131313 !important;
 }
 
 .sale-detail-screen {
-	background-color: #131313 !important;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 }
+

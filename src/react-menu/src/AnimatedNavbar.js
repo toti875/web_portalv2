@@ -11,7 +11,7 @@ import "./index.css"
 
 const navbarConfig = [
   { title: "Para você", dropdown: ProductsDropdown },
-  { title: "Para empresas", dropdown: DevelopersDropdown },
+  { title: "Para seu negõcio", dropdown: DevelopersDropdown },
   { title: "Suporte", dropdown: CompanyDropdown }
 ]
 
