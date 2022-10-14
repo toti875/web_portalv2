@@ -13,6 +13,7 @@ import 'antd/es/form/style/index.css';
 import 'antd/es/tooltip/style/index.css';
 import 'antd/es/card/style/index.css';
 import 'antd/es/statistic/style/index.css';
+import 'antd/es/alert/style/index.css';
 
 
 
