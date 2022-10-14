@@ -41,7 +41,7 @@ export const TickerTable = (props: Props) => {
 				</td>
 				<td>
 					<span className={marketChangeColor}>
-						<Decimal fixed={market.price_precision} thousSep=",">
+						<Decimal fixed={market.price_precision} thousSep=".">
 							{market.last}
 						</Decimal>
 					</span>
@@ -51,14 +51,14 @@ export const TickerTable = (props: Props) => {
 				</td>
 				<td>
 					<span>
-						<Decimal fixed={market.price_precision} thousSep=",">
+						<Decimal fixed={market.price_precision} thousSep=".">
 							{market.high}
 						</Decimal>
 					</span>
 				</td>
 				<td>
 					<span>
-						<Decimal fixed={market.price_precision} thousSep=",">
+						<Decimal fixed={market.price_precision} thousSep=".">
 							{market.low}
 						</Decimal>
 					</span>
@@ -66,7 +66,7 @@ export const TickerTable = (props: Props) => {
 
 				<td>
 					<span className={marketChangeColor}>
-						<Decimal fixed={market.amount_precision} thousSep=",">
+						<Decimal fixed={market.amount_precision} thousSep=".">
 							{market.volume}
 						</Decimal>
 					</span>

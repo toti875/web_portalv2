@@ -1,7 +1,37 @@
 import * as Sentry from '@sentry/browser';
 //import 'antd/dist/antd.dark.css';
 //import 'bootstrap/dist/css/bootstrap.min.css';
+import 'antd/es/table/style/index.css'
 import * as React from 'react';
+import 'antd/es/pagination/style/index.css';
+import 'antd/es/modal/style/index.css';
+//import 'antd/es/row/style/index.css';
+//import 'antd/es/col/style/index.css';
+import 'antd/es/button/style/index.css';
+import 'antd/es/dropdown/style/index.css';
+import 'antd/es/form/style/index.css';
+import 'antd/es/tooltip/style/index.css';
+import 'antd/es/card/style/index.css';
+import 'antd/es/statistic/style/index.css';
+
+
+
+
+import 'antd/es/input/style/index.css';
+import 'antd/es/select/style/index.css';
+
+import 'antd/es/list/style/index.css';
+
+
+
+
+import 'antd/es/tabs/style/index.css';
+import 'antd/es/menu/style/index.css';
+
+
+
+
+
 import * as ReactDOM from 'react-dom';
 import { WrappedComponentProps } from 'react-intl';
 import { Provider } from 'react-redux';

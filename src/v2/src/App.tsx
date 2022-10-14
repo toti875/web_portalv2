@@ -34,6 +34,7 @@ const HeaderContainer = React.lazy(() => import('./containers/Header').then(({ H
 const SidebarContainer = React.lazy(() => import('./containers/Sidebar').then(({ Sidebar }) => ({ default: Sidebar })));
 const LayoutContainer = React.lazy(() => import('./routes').then(({ Layout }) => ({ default: Layout })));
 
+
 const getTranslations = (lang: string, isMobileDevice: boolean) => {
     if (isMobileDevice) {
         return  {

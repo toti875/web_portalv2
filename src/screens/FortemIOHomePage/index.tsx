@@ -146,7 +146,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { SaleListTablesUpcoming } from '../../plugins/Sale/containers/SaleListTablesUpcoming';
 
 
-
+import  Parallax2  from 'ui-neumorphism';
 
 
 
@@ -903,7 +903,9 @@ function scrollRotate() {
 										Segurança é importante 
 										<span className="color-accent">.<br /></span>
 										<span>mas não é tudo</span>
-										<span className="color-accent">...</span>
+										<span className="color-accent">...</span><br/>
+										<span>Nós entregamos muito mais</span>
+										<span className="color-accent">:</span>
 				</h2>
 			
 			<div className="w-layout-grid grid-3-columns  _1-col-tablet" style={{marginTop: '80px'}}>

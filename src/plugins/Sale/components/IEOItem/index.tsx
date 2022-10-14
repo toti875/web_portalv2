@@ -19,8 +19,12 @@ import ReactCardFlip from "react-card-flip";
 //import { BuyersHistory, BuyHistory, SaleBuy, SaleDetail, SaleInfo, SaleSocial } from '../../containers';
 
 import { localeDate } from '../../../../helpers/localeDate';
+import { Decimal } from '../../../../components';
+
 import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 
+import { ProgressLinear } from 'ui-neumorphism';
+import 'ui-neumorphism/dist/index.css'
 
 
 
@@ -30,7 +34,9 @@ import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 
 
 
-const ccVisa = require('../../assets/visa.png');
+
+
+const ccVisa = require('../../assets/creditCards.png');
 
 
 
@@ -53,10 +59,10 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
 					00 <span>Horas</span>
 				</div>
 				<div id="minutes">
-					00 <span>Minutos</span>
+					00 <span>Min</span>
 				</div>
 				<div id="seconds">
-					00 <span>Segundos</span>
+					00 <span>Seg</span>
 				</div>
 			</div>
 		);
@@ -71,10 +77,10 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
 					{hours} <span>Horas</span>
 				</div>
 				<div id="minutes">
-					{minutes} <span>Minutos</span>
+					{minutes} <span>Min</span>
 				</div>
 				<div id="seconds">
-					{seconds} <span>Segundos</span>
+					{seconds} <span>Seg</span>
 				</div>
 			</div>
 		);
@@ -201,9 +207,9 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 								<span>Valor captado</span><span>Total ofertado</span>
 							</div>
 							<div className="font-weight-500 text-extra-dark-gray mb--10" style={{ display: 'flex', justifyContent: 'space-between'}}>
-								<span>R$ {((props.sale.total_ieo - props.sale.remains) * props.sale.price).toLocaleString('pt-br')}  </span><span style={{}}>R$ {(props.sale.total_ieo * props.sale.price).toLocaleString('pt-br')}</span>
+								<span>R$ <Decimal fixed={0} thousSep="." floatSep=",">{((props.sale.total_ieo - props.sale.remains) * props.sale.price)}</Decimal></span><span style={{}}>R$ <Decimal fixed={0} thousSep="." floatSep=",">{(props.sale.total_ieo * props.sale.price)}</Decimal></span>
 							</div>
-
+							
 							{/*<Progress
 								strokeColor={{
 								'0%': '#2a9d8f',
@@ -213,15 +219,13 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 						
 							percent={Math.floor(((props.sale.total_ieo - props.sale.remains) / props.sale.total_ieo) * 100)}
 						/>*/}
-												<ProgressBar
-						animated
-						variant="info"
-						now={((props.sale.total_ieo - props.sale.remains) / props.sale.total_ieo) * 100}
+
+					<ProgressLinear 
 						
-						striped={false}
-						
-						style={{ height: '18px', fontSize: '16px', fontWeight: 'bold',   }}
-					/>
+						height={20} 
+						color='#009991'
+						value={Math.floor(((props.sale.total_ieo - props.sale.remains) / props.sale.total_ieo) * 100)}
+					 />
 							<div className="pricing-footer margin-5px-top mb--10 mt--15">
 								<a className="btn btn-medium  btn-round-edge "  onClick={() => setFlip(!flip)}>Mais informações <i className="icon"><FiArrowRight /></i></a>
 
@@ -278,7 +282,7 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 							<div className="font-weight-500 text-extra-dark-gray" style={{fontSize: '15px', display: 'flex', }}>
 								<span>Descrição</span>
 							</div>
-							<div className="inner-container font-weight-500 text-extra-dark-gray mb--15" style={{fontSize: '14px', display: 'flex', justifyContent: 'flex-start', textAlign: 'left', maxHeight: '80px'}}>
+							<div className="inner-container font-weight-500 text-extra-dark-gray mb--15" style={{fontSize: '14px', display: 'flex', justifyContent: 'flex-start', textAlign: 'left', height: '80px'}}>
 								<span className="display-5 mg-bottom-0" style={{fontSize: '14px', display: 'flex', justifyContent: 'flex-start', textAlign: 'left', maxHeight: '80px'}}>{props.sale.description}</span>
 							</div>
 							<Separator /> 
@@ -296,23 +300,24 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 								<span>Formas de pagamento</span>
 							</div>
 							<div className="font-weight-500 text-extra-dark-gray mt--5" style={{fontSize: '14px', display: 'flex', justifyContent: 'space-between'}}>
-								<span>Reais (R$)</span><span style={{}}><img style={{ width: '30px', height: '30px', marginLeft: '1rem', }} src="http://pics.fortem.fra1.cdn.digitaloceanspaces.com/BRL%20%281%29.svg"/></span>
+								<span>Reais (R$)</span><span style={{}}><img style={{ width: '26px', height: '26px', marginLeft: '1rem', }} src="http://pics.fortem.fra1.cdn.digitaloceanspaces.com/BRL%20%281%29.svg"/></span>
 							</div>
 							<div className="font-weight-500 text-extra-dark-gray mt--5" style={{fontSize: '14px', display: 'flex', justifyContent: 'space-between'}}>
-								<span>Cripto </span><span style={{fontSize: '13px'}}><img style={{ width: '30px', height: '30px', marginLeft: '1rem', }} src={findIcon('ETH')}
-									alt="" /><img style={{ width: '30px', height: '30px', marginLeft: '1rem', marginTop: '5px' }} src={findIcon('BTC')}
-									alt="" /><img style={{ width: '30px', height: '30px', marginLeft: '1rem', marginTop: '5px' }} src={findIcon('USDT')}
+								<span>Cripto </span><span style={{fontSize: '13px'}}><img style={{ width: '26px', height: '26px', marginLeft: '1rem', }} src={findIcon('ETH')}
+									alt="" /><img style={{ width: '26px', height: '26px', marginLeft: '1rem', marginTop: '5px' }} src={findIcon('BTC')}
+									alt="" /><img style={{ width: '26px', height: '26px', marginLeft: '1rem', marginTop: '5px' }} src={findIcon('USDT')}
 									alt="" /></span>
 							</div>
-							<div className="font-weight-500 text-extra-dark-gray mt--5" style={{fontSize: '14px', display: 'flex', justifyContent: 'space-between'}}>
-								<span>Cartão de crédito</span><span style={{}}><img style={{ width: '30px', height: '30px', marginLeft: '1rem', }} src={ccVisa} /></span>
+							<div className="font-weight-500 text-extra-dark-gray mt--5 mb--15" style={{fontSize: '14px', display: 'flex', justifyContent: 'space-between'}}>
+								<span>Cartão de crédito</span><span style={{}}><img style={{ maxWidth: '160px', height: '26px', marginLeft: '1rem', }} src={ccVisa} /></span>
 							</div>
 							<Separator />
 							<div className="font-weight-500 text-dark-gray mt--15" style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
-								<span>Total de tokens ofertados</span><span style={{}}>{(props.sale.total_ieo).toLocaleString('pt-br')}</span>
+								<span>Total de tokens ofertados</span><span style={{}}><Decimal fixed={0} thousSep="." floatSep=",">{props.sale.total_ieo}</Decimal></span>
+								
 							</div>
 							<div className="font-weight-500 text-dark-gray " style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
-							<span>Total de tokens disponíveis</span><span style={{}}>{(props.sale.remains).toLocaleString('pt-br')}</span> 
+							<span>Total de tokens disponíveis</span><span style={{}}><Decimal fixed={0} thousSep="." floatSep=",">{props.sale.remains}</Decimal></span> 
 							</div>
 							<div className="font-weight-500 text-dark-gray" style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
 								<span>Progresso</span><span style={{}}>{Math.floor(((props.sale.total_ieo - props.sale.remains) / props.sale.total_ieo) * 100)}%</span>

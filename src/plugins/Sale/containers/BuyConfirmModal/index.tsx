@@ -41,18 +41,18 @@ export const BuyConfirmModal: React.FC<BuyConfirmModalProps> = (props: BuyConfir
 	//const bonusQuantity = NP.times(quantity, bonus);
 	const bonusQuantity = 1;
 	//const totalQuanity = NP.plus(baseBalance, quantity, bonusQuantity);
-	const totalQuanity = baseBalance + quantity + bonusQuantity;
+	const totalQuanity = baseBalance + quantity;
 
 	const baseTitle = (
 		<>
-			<img style={{ width: '3rem', height: '3rem' }} src={findIcon(baseCurrency)} alt="" />
-			<span style={{ fontSize: '1.6rem', marginLeft: '5px' }}>{baseCurrency}</span>
+			<img style={{ width: '30px', height: '30px' }} src={findIcon(baseCurrency)} alt="" />
+			<span style={{ fontSize: '15px', marginLeft: '5px' }}>{baseCurrency}</span>
 		</>
 	);
 	const quoteTitle = (
 		<>
-			<img style={{ width: '3rem', height: '3rem' }} src={findIcon(quoteCurrency)} alt="" />
-			<span style={{ fontSize: '1.6rem', marginLeft: '5px' }}>{quoteCurrency}</span>
+			<img style={{ width: '30px', height: '30px' }} src={findIcon(quoteCurrency)} alt="" />
+			<span style={{ fontSize: '15px', marginLeft: '5px' }}>{quoteCurrency}</span>
 		</>
 	);
 

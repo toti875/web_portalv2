@@ -75,7 +75,7 @@ const ProductsDropdown = () => {
               {/*<Heading color="green">Cripto</Heading>*/}
               <Heading style={{marginLeft: '15px', color: '#46473E', fontSize: '17px', fontWeight: 'bold'}} >Cripto</Heading>
 
-              <p style={{paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '-10px'}}>Os criptoativos mais negociados no mundo agora à sua disposição em Reais</p>
+              <p style={{paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '-30px'}}>Os criptoativos mais negociados no mundo agora à sua disposição em Reais</p>
               <a href="/quick-exchange" style={{fontSize: '16px',}}>
                   <Icon />Negociação instantânea
               </a><br/>
@@ -90,7 +90,7 @@ const ProductsDropdown = () => {
             </div>*/}
             <div>
             <Heading style={{marginLeft: '15px', color: '#46473E', fontSize: '17px', fontWeight: 'bold'}} >NFT</Heading>
-              <p style={{ paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '-10px'}}>
+              <p style={{ paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '-30px'}}>
                 Marketplace para negociação de tokens exclusivos 
               </p>
               <a href="/nft" style={{marginTop: '-10px', fontSize: '16px',}}>

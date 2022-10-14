@@ -20532,6 +20532,13 @@
   "resolved" "https://registry.npmjs.org/ua-parser-js/-/ua-parser-js-0.7.31.tgz"
   "version" "0.7.31"
 
+"ui-neumorphism@^1.1.3":
+  "integrity" "sha512-LAOnLzOq7XA9s+N3khUEeZb8LcUBptUcTXRtdiO3cGLc5hms5k5Q6Xhnl9DV/ILZd1HALUGu4598hf+9gY/d+w=="
+  "resolved" "https://registry.npmjs.org/ui-neumorphism/-/ui-neumorphism-1.1.3.tgz"
+  "version" "1.1.3"
+  dependencies:
+    "react-transition-group" "^4.4.1"
+
 "unbox-primitive@^1.0.2":
   "integrity" "sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw=="
   "resolved" "https://registry.npmjs.org/unbox-primitive/-/unbox-primitive-1.0.2.tgz"

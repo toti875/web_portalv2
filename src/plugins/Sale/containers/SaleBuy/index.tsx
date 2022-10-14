@@ -1,4 +1,4 @@
-import { Button, Input, message, notification } from 'antd';
+import { Button, Input, InputNumber, message, notification, Tooltip, Select } from 'antd';
 import NP from 'number-precision';
 import React, { useState } from "react";
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
@@ -18,8 +18,12 @@ import {
 	selectWallets,
 	walletsFetch,
 } from '../../../../modules';
-import WalletImage from '../../assets/wallet.png';
 import { BuyConfirmModal } from '../BuyConfirmModal';
+
+
+import { FiLogIn } from "react-icons/fi";
+import { Decimal } from '../../../../components';
+
 
 
 import './SaleBuy.css';
@@ -33,7 +37,7 @@ interface SaleBuyProps {
 
 export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 	const { id, currency_id, currency_available, type } = props.sale;
-
+	const iconLogin = require ('./login.svg');
 	const priceSelector = useSelector(selectPrice);
 	const buyResponse = useSelector(selectBuy, shallowEqual);
 
@@ -102,7 +106,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 	const [priceState, setPriceState] = React.useState<number | undefined>(0);
 	//const [bonusState, setBonusState] = React.useState<number>(0);
 	const [bonusState] = React.useState<number>(0);
-	const [quantityInputState, setQuantityInputState] = React.useState<number>(props.sale.min_buy);
+	const [quantityInputState, setQuantityInputState] = React.useState<number>((props.sale.min_buy)*10);
 	const [quoteTotalState, setQuoteTotalState] = React.useState<number>(0);
 	const [isShowBuyConfirmModalState, setIsBuyConfirmModalVisibleState] = React.useState<boolean>(false);
 
@@ -173,13 +177,14 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 	const findIcon = (code: string): string => {
 		const currency = currencies.find(currencyParam => currencyParam.id === code);
 		try {
-			return require(`../../../../../node_modules/cryptocurrency-icons/128/color/${code.toLowerCase()}.png`);
+			return require(`../../../../../node_modules/cryptocurrency-icons/svg/icon/${code.toLowerCase()}.png`);
 		} catch (err) {
 			if (currency) {
 				return currency.icon_url;
 			}
 
 			return require('../../../../../node_modules/cryptocurrency-icons/svg/color/generic.svg');
+
 		}
 	};
 
@@ -318,9 +323,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 		);
 	} else {
 		buyButton = (
-			<Button type="primary" size="large" block style={{ height: '3rem', background: '#1EBDB2', textAlign: 'center' }} onClick={handleNavigateLoginPage}>
-				Entrar na sua conta
-			</Button>
+			<a className="btn-default btn-icon icon-btn-wrap" href="/signin" style={{ width: '100%',  border: '1px solid #1EDED0',  fontSize: '17px', position: 'absolute',  background: 'transparent'}}>Acessar plataforma <i className="icon"><FiLogIn /></i></a>
 		);
 	}
 
@@ -328,20 +331,22 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 		if (quoteCurrencyState) {
 			return (
 				<React.Fragment>
-					<div className="quantity" >
-						<span style={{ fontSize: '11.5px', color: 'white', background: 'transparent' }}>Digite a quantidade de tokens que deseja adquirir</span>
+					<div className="" >
+						<span style={{ fontSize: '14px', color: 'white', background: '#1f1f1f', marginTop: '10px' }}>Quantidade:</span>
+						<Tooltip title={'Digite a quantidade de tokens'}  placement="topLeft" color='#009991' >
+
 						<Input
 							size="large"
 							autoFocus={type === 'ongoing'}
 							value={quantityInputState}
-							type="number"
+							type=' number'
+							
 							disabled={quoteBalanceState <= 0}
 							onChange={handleQuantityInput}
-							addonBefore={<img className="currency-icon" src={findIcon(currency_id)} alt="currency_buy" />}
-							addonAfter={currency_id.toUpperCase()}
-						/>
+			
+						/> </Tooltip>
 						{quantityInputState < props.sale.min_buy ? (
-							<span style={{ fontSize: '11.5px', color: 'white', background: 'transparent' }}>
+							<span style={{ fontSize: '14px', color: '#ED0A3F', opacity: 0.9, background: 'transparent' }}>
 								** A quantidade deve ser maior que {props.sale.min_buy} tokens
 							</span>
 						) : (
@@ -349,7 +354,8 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 						)}
 					</div>
 					<div className="price">
-						<span style={{ fontSize: '11.5px', color: 'white', background: 'transparent' }}>Ao preço unitário de:</span>
+						<span style={{ fontSize: '14px', color: 'white',
+						 background: 'transparent' }}>Ao preço unitário de:</span>
 						<Input
 							size="large"
 							disabled
@@ -360,7 +366,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 						/>
 					</div>
 					<div className="total">
-						<span style={{ fontSize: '11.5px', color: 'white', background: 'transparent' }}>O total da sua compra será de: </span>
+						<span style={{ fontSize: '14px', color: 'white', background: 'transparent' }}>O total da sua compra será de: </span>
 						<Input
 							size="large"
 							disabled
@@ -384,11 +390,11 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 	const showSelectCurrencyForm = () => {
 		return (
 			<div className="select-currency-box">
-				<span style={{ fontSize: '13.5px', color: 'white', background: 'transparent' }}>Selecione a forma de pagamento</span>
-				<select onChange={handleSelectCurrency} value={quoteCurrencyState}>
+				<label form="currency">Selecione a forma de pagamento:</label>
+				<select onChange={handleSelectCurrency} value={quoteCurrencyState} id='currency'   >
 					{currency_available.map(currency => {
 						let optiontring = currency.toUpperCase();
-						const balance = handleGetBalance(currency);
+						const balance = Decimal.format(handleGetBalance(currency), 4, '.', ',');
 						optiontring += ` | Saldo disponível: ${balance}`;
 
 						return <option value={currency}>{optiontring}</option>;
@@ -438,7 +444,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 	return (
 		<React.Fragment>
 			<div id="sale-buy" >
-				<h2 className="sale-buy__title">Comprar {currency_id.toUpperCase()}</h2>
+				<h2 className="sale-buy__title" style={{color: '#fff'}}>Comprar <span style={{color: 'rgb(252,208,0)'}}>{currency_id.toUpperCase()}</span></h2>
 				<h3 className="sale-buy__subtitle">{`Saldo atual: ${baseBalance} ${currency_id.toUpperCase()}`}</h3>
 				<div className="buy-box" >
 					{showSelectCurrencyForm()}

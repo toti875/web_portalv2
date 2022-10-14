@@ -117,7 +117,7 @@ export const SaleInfo: React.FC<SaleInfoProps> = (props: SaleInfoProps) => {
 				</div>
 			</div>
 			<div className="row">
-				<div className="col-12" style={{ display: 'flex', flexDirection: 'column' }}>
+				<div className="col-12" style={{ display: 'flex', flexDirection: 'column', marginTop: '10px' }}>
 					<p className="title" style={{textDecoration: 'underline', fontSize: '18px', fontWeight: 500, color: '#fff'}}>Descrição do projeto:</p>
 					<p className="sale-info-description">{props.sale.description}</p>
 					
@@ -133,9 +133,9 @@ export const SaleInfo: React.FC<SaleInfoProps> = (props: SaleInfoProps) => {
 		<div className="row">
 			<p style={{color: '#009991', fontSize: '18px'}}>{countdownTitle}</p>
 		</div>
-		<div className="row d-flex justify-content-center">
-			<p><Countdown date={countdownTime} renderer={renderer} /></p>
-			<div style={{ width: 120, height: 120 }}>
+		<div className="row d-flex justify-content-between">
+			<p style={{marginLeft: '50px'}}><Countdown date={countdownTime} renderer={renderer} /></p>
+			<div style={{ width: 120, height: 120, marginRight: '50px' }}>
 			<CircularProgressbar
         		value={percentage}
         		text={`${percentage}%`}
@@ -179,7 +179,7 @@ export const SaleInfo: React.FC<SaleInfoProps> = (props: SaleInfoProps) => {
 					/>				
 				</div>
 				<div className="col-12" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginTop: '20px' }}>
-					<p style={{color: '#fff', fontSize: '18px'}}>Total de compradores:</p><span style={{color: '#009991', fontSize: '18px', marginTop: '20px'}}>{totalBuyersSelector.payload.totalBuyers}</span>
+					<p style={{color: '#fff', fontSize: '18px'}}>Total de compradores:</p><span style={{color: '#009991', fontSize: '18px'}}>{totalBuyersSelector.payload.totalBuyers}</span>
 				</div>
 			</div>
 			<hr />

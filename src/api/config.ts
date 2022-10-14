@@ -6,11 +6,11 @@ export const defaultConfig: Config = {
 		switchURL: 'http://demo.fortem-financial.io/api/v2/switch',
 		transactionURL: 'http://demo.fortem-financial.io/api/v2/fortem',
 		ieoURL: 'http://www.yellow.com/api/v2/peatio',
-		infoURL: 'http://www.yellow.com/api/v2/peatio',
+		infoURL: 'https://www.yellow.com/api/v2/peatio',
 
 
 		//downstreamURL: 'ws://demo.fortem-financial.io/api/v2/downstream',
-		downstreamURL: 'ws://www.yellow.com/api/v2/ranger',
+		downstreamURL: 'wss://www.yellow.com/api/v2/ranger',
 	},
 	minutesUntilAutoLogout: '60',
 	rangerReconnectPeriod: '1', 

@@ -120,9 +120,9 @@ export const SaleDetailScreen: React.FC = () => {
 			);
 		} else {
 			return (
-				<div id="sale-detail-screen">
+				<div id="sale-detail-screen" style={{marginTop: '80px'}}>
 
-<div className="rwt-advance-tab-area " style={{width: '2000px'}} >
+<div className="rwt-advance-tab-area "  >
                     <div className="" >
 
 						<Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
@@ -133,19 +133,19 @@ export const SaleDetailScreen: React.FC = () => {
                             <TabList className="tab-button-list">
                                 <Tab>
                                     <div className="tab-button"  style={{ borderColor: '#009991'}}>
-                                        <h4 className="title">Informações do Token</h4>
+                                        <h4 className="title" style={{fontWeight: 'bold'}}>Informações</h4>
                                         <p className="description">Veja as informações mais relevantes relacionadas a essa captação</p>
                                     </div>   
                                 </Tab>
                                 <Tab>
                                     <div className="tab-button">
-                                        <h4 className="title">Transações / Extrato</h4>
+                                        <h4 className="title">Transações</h4>
                                         <p className="description">Extrato de todas as transações de compra já efetivadas</p>
                                     </div>   
                                 </Tab>
                                 <Tab>
                                     <div className="tab-button">
-                                        <h4 className="title">Mais informações</h4>
+                                        <h4 className="title">Detalhes</h4>
                                         <p className="description">Conheça todos os detalhes do projeto</p>
                                     </div>   
                                 </Tab>
@@ -214,7 +214,7 @@ export const SaleDetailScreen: React.FC = () => {
 	
 				
 					<div id="sale-info-buy" className="container-fluid">
-						<div className="row"> teste</div>
+						<div className="row"></div>
 					</div>
 				
 

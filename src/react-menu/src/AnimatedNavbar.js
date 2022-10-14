@@ -12,7 +12,7 @@ import "./index.css"
 const navbarConfig = [
   { title: "Para você", dropdown: ProductsDropdown },
   { title: "Para seu negócio", dropdown: DevelopersDropdown },
-  { title: "Suporte", dropdown: CompanyDropdown }
+  { title: "Recursos", dropdown: CompanyDropdown }
 ]
 
 export default class AnimatedNavbar extends Component {

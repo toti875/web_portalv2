@@ -315,7 +315,7 @@ export const QuickExchangeContainer = () => {
                         {translate('page.body.quick.exchange.label.exchange')}
                     </div>
                     <div className="cr-quick-exchange__body-summary-currency-value">
-                        <Decimal fixed={basePrecision} thousSep=",">{base.amount}</Decimal> {base.currency.toUpperCase()}
+                        <Decimal fixed={basePrecision} thousSep=".">{base.amount}</Decimal> {base.currency.toUpperCase()}
                     </div>
                 </div>
                 <div className="cr-quick-exchange__body-summary-icons">
@@ -328,7 +328,7 @@ export const QuickExchangeContainer = () => {
                         {translate('page.body.quick.exchange.label.receive')}
                     </div>
                     <div className="cr-quick-exchange__body-summary-currency-value">
-                        <Decimal fixed={quotePrecision} thousSep=",">{quote.amount}</Decimal> {quote.currency.toUpperCase()}
+                        <Decimal fixed={quotePrecision} thousSep=".">{quote.amount}</Decimal> {quote.currency.toUpperCase()}
                     </div>
                 </div>
             </div>

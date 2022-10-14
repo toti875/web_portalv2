@@ -10,7 +10,7 @@
 }
 
 .sale-buy__title {
-	font-size: 16.5px;
+	font-size: 16px;
 	text-align: center;
 	font-weight: bold;
 }
@@ -22,21 +22,40 @@
 }
 
 .select-currency-box select {
-	top: 50px;
+	top: 20px;
 	box-sizing: border-box;
 	width: 100%;
 	height: 100%;
 	padding: 10px 28px 10px 10px;
-	font-size: 1.2rem;
+	font-size: 16px;
 	border: 1px solid #009991;
 	border-radius: 4px;
 	opacity: 0.9;
-	background: #3c4055;
+	z-index: 2;
+	color: #1f1f1f;
+	outline: none;
+}
+
+.select-currency-box label {
+
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+}
+
+
+
+.quantity  {
+	box-sizing: border-box;
+	width: 100%;
+	font-size: 14px;
+	border: 1px solid #009991;
+	border-radius: 4px;
+	opacity: 0.9;
 	z-index: 2;
 	color: rgb(255, 255, 255);
 	outline: none;
 }
-
 .buy-box div {
 	position: relative;
 	margin: 15px 0 0 0;
@@ -72,8 +91,8 @@ input[type='number'] {
 }
 
 .currency-icon {
-	width: 20px;
-	height: 20px;
+	width: 30px;
+	height: 30px;
 }
 
 /* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */

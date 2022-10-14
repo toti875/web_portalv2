@@ -111,7 +111,7 @@ export const TickerTableScreen = (props: Props) => {
 				</td>
 				<td>
 					<span className={marketChangeColor}>
-						<Decimal fixed={market.price_precision} thousSep=",">
+						<Decimal fixed={market.price_precision} thousSep=".">
 							{market.last}
 						</Decimal>
 					</span>
@@ -121,21 +121,21 @@ export const TickerTableScreen = (props: Props) => {
 				</td>
 				<td>
 					<span>
-						<Decimal fixed={market.price_precision} thousSep=",">
+						<Decimal fixed={market.price_precision} thousSep=".">
 							{market.high}
 						</Decimal>
 					</span>
 				</td>
 				<td>
 					<span>
-						<Decimal fixed={market.price_precision} thousSep=",">
+						<Decimal fixed={market.price_precision} thousSep=".">
 							{market.low}
 						</Decimal>
 					</span>
 				</td>
 				<td>
 					<span className={marketChangeColor}>
-						<Decimal fixed={decima} thousSep=",">
+						<Decimal fixed={decima} thousSep=".">
 							{market.volume}
 						</Decimal>
 					</span>
@@ -147,7 +147,7 @@ export const TickerTableScreen = (props: Props) => {
 						style={{ marginRight: 0, fontSize: 14 }}
 						onClick={() => props.redirectToTrading(market.id)}
 					>
-						Trade
+						Negociar
 					</Button>
 				</td>
 			</tr>

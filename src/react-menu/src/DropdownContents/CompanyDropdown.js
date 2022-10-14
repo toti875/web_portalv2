@@ -9,51 +9,87 @@ import {
 } from "./Components"
 
 const CompanyDropdownEl = styled.div`
-  width: 360px;
+width: 440px;
+`
+const Logo = styled.div`
+  width: 38px;
+  height: 38px;
+  margin-right: 16px;
+  border-radius: 100%;
+  opacity: 0.6;
+  background-color: ${({ color }) => `var(--${color})`};
+`
+
+const CompanySection = styled.ul`
+  li {
+    display: flex;
+  }
 `
 
 const CompanyDropdown = () => {
   return (
     <CompanyDropdownEl>
       <DropdownSection data-first-dropdown-section>
-        <ul> 
-          <HeadingLink>
-            <a href="/faq">
-              <Icon />Principais Dúvidas
-            </a>
-          </HeadingLink>
-          <HeadingLink>
-            <a href="https://fortem.crisp.help" target="_blank" rel="noreferrer noopener">
-              <Icon />Central de Suporte
-            </a>
-          </HeadingLink>
-          <HeadingLink>
-            <a href="/">
-              <Icon />Taxas
-            </a>
-          </HeadingLink>
-          <HeadingLink noMarginBottom>
-            <a href="http://status.fortem.website" target="_blank" rel="noreferrer noopener">
-              <Icon />Status dos serviços
-            </a>
-          </HeadingLink>
-        </ul>
-      </DropdownSection>
-      <DropdownSection>
-        <div>
-          <Heading>
-            <Icon style={{color: '#1EDED0'}}/>Blog
-          </Heading>
-          <LinkList marginLeft="25px">
-            <li>
-              <a href="/">Tokenização &rsaquo;</a>
-            </li>
-            <li>
-              <a href="/">Cripto &rsaquo;</a>
-            </li>
-            
-          </LinkList>
-        </div>
+      <CompanySection>
+          <li>
+         {/*   <div>
+              <Logo color="green" />
+          </div> */}
+            <div>
+              <Heading style={{marginLeft: '15px', color: '#46473E', fontSize: '17px', fontWeight: 'bold'}} >Novidades</Heading>
+              <p style={{paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '-30px'}}>Conheça nossos últimos lançamentos e atualizações</p>
+              <a href="/tokens" style={{marginTop: '-10px', fontSize: '16px',}}>
+                  <Icon />Produtos
+              </a><br />
+              <a href="/tokens" style={{marginTop: '-10px', fontSize: '16px',}}>
+                  <Icon />Serviços
+              </a>
+            </div>
+          </li>
+          <li>
+         {/*   <div>
+              <Logo color="green" />
+          </div> */}
+            <div>
+              {/*<Heading color="green">Cripto</Heading>*/}
+              <Heading style={{marginLeft: '15px', color: '#46473E', fontSize: '17px', fontWeight: 'bold'}} >Central de Suporte</Heading>
+
+              <p style={{paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '-30px'}}>Esclareça suas dúvidas, conheça mais nossos processos ou entre em contato conosco para um atendimento rápido e personalizado</p>
+              <a href="/quick-exchange" style={{fontSize: '16px',}}>
+                  <Icon />Principais dúvidas
+              </a><br/>
+              <a href="/markets" style={{fontSize: '16px'}}>
+                  <Icon />Status da plataforma
+              </a><br/>
+              <a href="/markets" style={{fontSize: '16px'}}>
+                  <Icon />Documentação das APIs
+              </a><br/>
+              <a href="/markets" style={{fontSize: '16px'}}>
+                  <Icon />Taxas
+              </a><br/>
+              <a href="/markets" style={{fontSize: '16px'}}>
+                  <Icon />Entre em contato
+              </a><br/>
+            </div>
+          </li>
+          <li>
+            {/*   <div>
+              <Logo color="green" />
+          </div> */}
+            <div>
+            <Heading style={{marginLeft: '15px', color: '#46473E', fontSize: '17px', fontWeight: 'bold'}} >Arena do conhecimento</Heading>
+              <p style={{ paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '-30px'}}>
+                Informações, notícias e conteúdos para apoiar seu desenvolvimento sobre ativos digitais
+              </p>
+              <a href="/nft" style={{marginTop: '-10px', fontSize: '16px',}}>
+                  <Icon />Fortem Lab - Pesquisas e Análises
+              </a><br/>
+              <a href="/nft" style={{marginTop: '-10px', fontSize: '16px',}}>
+                  <Icon />Academy - Artigos, vídeos, cursos
+              </a><br/>
+            </div>
+          </li>
+        </CompanySection>
       </DropdownSection>
     </CompanyDropdownEl>
   )
