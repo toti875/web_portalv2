@@ -51,6 +51,7 @@ background-color: var(--color-darker)!important;
 
 .ant-modal-header {
 	background-color: #2a2c3b;
+	color: '#fff';
 }
 
 .ant-modal-body {

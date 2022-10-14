@@ -404,6 +404,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 		);
 	};
 
+	
 	const showCloseView = () => {
 		if (type !== 'ongoing') {
 			return (

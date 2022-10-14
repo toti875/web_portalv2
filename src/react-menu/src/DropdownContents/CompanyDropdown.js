@@ -9,7 +9,7 @@ import {
 } from "./Components"
 
 const CompanyDropdownEl = styled.div`
-width: 440px;
+width: 480px;
 `
 const Logo = styled.div`
   width: 38px;

@@ -9,14 +9,13 @@ import { NewMarketSlick } from '../../components';
 import { eventFetch, selectEvents, selectUserLoggedIn} from '../../modules';
 import { useDispatch, useSelector } from 'react-redux';
 import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css"; 
+
 //import "./css/font-icons.min.css";
 //import "./css/theme-vendors.min.css";
 //import "./css/style.css";
 //import "./css/responsive.css";
 
-import 'animate.css';
+//import 'animate.css';
 
 
 

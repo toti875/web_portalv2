@@ -5,6 +5,8 @@ import NP from 'number-precision';
 import * as React from 'react';
 import { useSelector } from 'react-redux';
 import { selectCurrencies } from '../../../../modules';
+import { Decimal } from '../../../../components';
+
 //import 'antd/dist/antd.dark.min.css';
 
 
@@ -67,28 +69,37 @@ export const BuyConfirmModal: React.FC<BuyConfirmModalProps> = (props: BuyConfir
 			<Row gutter={16}>
 				<Col span={12}>
 					<Card>
-						<Statistic
+						<div>			
+							<img style={{ width: '30px', height: '30px' }} src={findIcon(baseCurrency)} alt="" />
+							<span style={{ fontSize: '15px', marginLeft: '5px' }}>Você está comprando {Decimal.format((totalQuanity), 2, '.', ',')} tokens {baseCurrency} </span>
+						</div>
+						{/*<Statistic
 							title={baseTitle}
 							value={totalQuanity}
 							precision={2}
-							valueStyle={{ color: '#2a9d8f' }}
+							valueStyle={{ color: '#00CC99' }}
 							prefix={<ArrowUpOutlined />}
-						/>
+						/>*/}
 					</Card>
 				</Col>
 				<Col span={12}>
 					<Card>
-						<Statistic
+					<div>			
+						<img style={{ width: '30px', height: '30px' }} src={findIcon(baseCurrency)} alt="" />
+						<span style={{ fontSize: '15px', marginLeft: '5px' }}>Seu novo saldo em {quoteCurrency} será de {Decimal.format((NP.minus(quoteBalance, Number(quoteTotal))), 4, '.', ',')}</span>
+					</div>
+
+						{/*<Statistic
 							title={quoteTitle}
 							value={NP.minus(quoteBalance, Number(quoteTotal))}
 							precision={4}
 							valueStyle={{ color: '#e9c46a' }}
 							prefix={<ArrowDownOutlined />}
-						/>
+					/>*/}
 					</Card>
 				</Col>
 			</Row>
-			<br />
+			{/*<br />
 			{bonus > 0 ? (
 				<Alert
 					message={`🥳 You will receive ${bonus * 100}% bonus of ${quantity} ${baseCurrency.toUpperCase()}
@@ -100,7 +111,7 @@ export const BuyConfirmModal: React.FC<BuyConfirmModalProps> = (props: BuyConfir
 				/>
 			) : (
 				''
-			)}
+			)}*/}
 		</Modal>
 	);
 };

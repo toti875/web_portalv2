@@ -15,27 +15,21 @@ import 'antd/es/card/style/index.css';
 import 'antd/es/statistic/style/index.css';
 import 'antd/es/alert/style/index.css';
 
-
-
-
 import 'antd/es/input/style/index.css';
 import 'antd/es/select/style/index.css';
 
 import 'antd/es/list/style/index.css';
 
-
-
-
 import 'antd/es/tabs/style/index.css';
 import 'antd/es/menu/style/index.css';
-
-
-
 
 
 import * as ReactDOM from 'react-dom';
 import { WrappedComponentProps } from 'react-intl';
 import { Provider } from 'react-redux';
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 //import 'slick-carousel/slick/slick-theme.css';
 //import 'slick-carousel/slick/slick.css';
 import { sentryEnabled } from './api/config';

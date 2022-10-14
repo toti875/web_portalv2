@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Modal, ModalProps } from 'react-bootstrap';
+import './NewModal.pcss'
 
 type cellData = string | number | React.ReactNode | undefined;
 
