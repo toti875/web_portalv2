@@ -403,8 +403,8 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 						<Route exact={false} path="/market/:market?" component={NewTradingScreenMobile} />
 						<Route exact={true} path="/" component={HomePageScreenMobile} />
 						<Route exact={true} path="/markets" component={NewMarketsScreenMobile} />
-						<Route path="/ieo" exact component={IEOListMobileScreen} />
-						<Route path="/ieo/detail/:ieoID" exact component={IEODetailMobileScreen} />
+						<Route path="/ieos" exact component={IEOListMobileScreen} />
+						<Route path="/ies/detail/:ieoID" exact component={IEODetailMobileScreen} />
 						<Route path="/trading-competition" exact component={TradingCompetionListMobileScreen} />
 						<Route
 							path="/trading-competition/:competition_id"
@@ -590,7 +590,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					/>
 					{/* old feature */}
 					<Route path="/tokens" exact component={SaleListScreen} />
-					<Route path="/ieo/detail/:ieoID" exact component={SaleDetailScreen} />
+					<Route path="/tokens/detail/:ieoID" exact component={SaleDetailScreen} />
 					<Route path="/vote" exact component={VoteScreen} />
 					<Route path="/trading-competition" exact component={CompetitionListingScreen} />
 					<Route path="/trading-competition/:competition_id" exact component={CompetitionDetailScreen} />
