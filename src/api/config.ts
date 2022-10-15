@@ -2,10 +2,10 @@ import { DEFAULT_KYC_STEPS, ORDER_BOOK_DEFAULT_SIDE_LIMIT, STORAGE_DEFAULT_LIMIT
 
 export const defaultConfig: Config = {
 	api: {
-		authzURL: 'http://demo.fortem-financial.io/api/v2/authz',
-		switchURL: 'http://demo.fortem-financial.io/api/v2/switch',
-		transactionURL: 'http://demo.fortem-financial.io/api/v2/fortem',
-		ieoURL: 'http://www.yellow.com/api/v2/peatio',
+		authzURL: 'https://api.fortem-financial.io/api/v2/authz',
+		switchURL: 'https://api.fortem-financial.io/api/v2/switch',
+		transactionURL: 'https://api.fortem-financial.io/api/v2/fortem',
+		ieoURL: 'https://www.yellow.com/api/v2/peatio',
 		infoURL: 'https://www.yellow.com/api/v2/peatio',
 
 
