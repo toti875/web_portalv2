@@ -2,15 +2,15 @@ import { DEFAULT_KYC_STEPS, ORDER_BOOK_DEFAULT_SIDE_LIMIT, STORAGE_DEFAULT_LIMIT
 
 export const defaultConfig: Config = {
 	api: {
-		authzURL: 'https://api.fortem-financial.io/api/v2/authz',
-		switchURL: 'https://api.fortem-financial.io/api/v2/switch',
-		transactionURL: 'https://api.fortem-financial.io/api/v2/fortem',
-		ieoURL: 'https://api.fortem-financial.io/api/v2/fortem',
-		infoURL: 'https://api.fortem-financial.io/api/v2/fortem',
+		authzURL: 'https://www.fortem.website/api/v2/authz',
+		switchURL: 'https://www.fortem.website/api/v2/switch',
+		transactionURL: 'https://www.fortem.website/api/v2/fortem',
+		ieoURL: 'https://www.fortem.website/api/v2/fortem',
+		infoURL: 'https://www.fortem.website/api/v2/fortem',
 
 
 		//downstreamURL: 'ws://demo.fortem-financial.io/api/v2/downstream',
-		downstreamURL: 'wss://api.fortem-financial.io/api/v2/ranger',
+		downstreamURL: 'wss://www.fortem.website/api/v2/ranger',
 	},
 	minutesUntilAutoLogout: '60',
 	rangerReconnectPeriod: '1', 
