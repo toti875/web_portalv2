@@ -192,7 +192,7 @@ const PublicRoute: React.FunctionComponent<any> = ({ component: CustomComponent,
 	if (isLogged) {
 		return (
 			<Route {...rest}>
-				<Redirect to={'/wallets'} />
+				<Redirect to={'/'} />
 			</Route>
 		);
 	}
