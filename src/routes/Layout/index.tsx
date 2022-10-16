@@ -403,8 +403,8 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 						<Route exact={false} path="/market/:market?" component={NewTradingScreenMobile} />
 						<Route exact={true} path="/" component={HomePageScreenMobile} />
 						<Route exact={true} path="/markets" component={NewMarketsScreenMobile} />
-						<Route path="/ieos" exact component={IEOListMobileScreen} />
-						<Route path="/ies/detail/:ieoID" exact component={IEODetailMobileScreen} />
+						<Route path="/ieo" exact component={IEOListMobileScreen} />
+						<Route path="/ieo/detail/:ieoID" exact component={IEODetailMobileScreen} />
 						<Route path="/trading-competition" exact component={TradingCompetionListMobileScreen} />
 						<Route
 							path="/trading-competition/:competition_id"
@@ -434,7 +434,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					{/*TELA DE LOGIN*/}
 					<PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/signin" component={LogInScreen} />
 					{/*TELA DE CADASTRO*/}
-					<PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/banner/authentication/sign-up/basic" component={SignUpBasic} />
+					<PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/register" component={RegisterScreen} />
 					<PublicRoute
 						loading={userLoading}
 						isLogged={isLoggedIn}
@@ -476,10 +476,10 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 						path="/status"
 						component={Status}
 					/>
-					{/*
-					<PublicRoute path="/banner/authentication/sign-in/basic" component={SignInBasic} />
-					<PublicRoute path="/banner/authentication/sign-up/basic" component={SignUpBasic} />
-					*/}
+					
+					<PublicRoute path="/login" component={LogInScreen} />
+					<PublicRoute path="/register" component={RegisterScreen} />
+					
 
 							
 				 
@@ -590,7 +590,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					/>
 					{/* old feature */}
 					<Route path="/tokens" exact component={SaleListScreen} />
-					<Route path="/tokens/detail/:ieoID" exact component={SaleDetailScreen} />
+					<Route path="/ieo/detail/:ieoID" exact component={SaleDetailScreen} />
 					<Route path="/vote" exact component={VoteScreen} />
 					<Route path="/trading-competition" exact component={CompetitionListingScreen} />
 					<Route path="/trading-competition/:competition_id" exact component={CompetitionDetailScreen} />

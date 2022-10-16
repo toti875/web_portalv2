@@ -12,7 +12,7 @@ export const pgRoutes = (isLoggedIn: boolean, isLight?: boolean): string[][] => 
 	];
 	const routesUnloggedIn = [
 		['page.header.navbar.signIn', '/signin', `signin${isLight ? 'Light' : ''}`],
-		['page.header.signUp', '/banner/authentication/sign-up/basic', `signup${isLight ? 'Light' : ''}`],
+		['page.header.signUp', '/register', `signup${isLight ? 'Light' : ''}`],
 		['page.header.navbar.trade', '/market/', `trade${isLight ? 'Light' : ''}`],
 	];
 

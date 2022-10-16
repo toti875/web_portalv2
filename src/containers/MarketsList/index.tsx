@@ -89,7 +89,7 @@ export const MarketsList = props => {
 	const translate = (key: string) => intl.formatMessage({ id: key });
 
 	const redirectSingUP = () => {
-		history.push('/banner/authentication/sign-up/basic');
+		history.push('/register');
 	};
 	const redirectTrading = () => {
 		history.push('/trade');

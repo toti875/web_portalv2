@@ -144,7 +144,7 @@ const Login = React.memo((props: LogInProps) => {
 		<div className="pg-sign-in-screen__register">
 			<span>
 				{intl.formatMessage({ id: 'page.header.signIN.noAccountYet' })}
-				<span onClick={() => history.push('/banner/authentication/sign-up/basic')} className="pg-sign-in-screen__register-button">
+				<span onClick={() => history.push('/register')} className="pg-sign-in-screen__register-button">
 					Cadastre agora
 				</span>
 			</span>

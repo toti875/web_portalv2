@@ -193,7 +193,7 @@ export const HeaderNavbar: React.FC = () => {
 	};
 
 	const redirectSingUp = () => {
-		history.push('/banner/authentication/sign-up/basic');
+		history.push('/register');
 	};
 
 	const translate = (key: string) => intl.formatMessage({ id: key });

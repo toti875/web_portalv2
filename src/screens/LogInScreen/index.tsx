@@ -190,7 +190,7 @@ class FormLogin extends React.Component<Props, LogInState> {
 	};
 
 	private handleSignUp = () => {
-		this.props.history.push('/banner/authentication/sign-up/basic');
+		this.props.history.push('/register');
 	};
 
 	private forgotPassword = () => {

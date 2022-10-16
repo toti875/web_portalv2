@@ -188,7 +188,7 @@ class SignIn extends React.Component<Props, SignInState> {
 	};
 
 	private handleSignUp = () => {
-		this.props.history.push('/banner/authentication/sign-up/basic');
+		this.props.history.push('/register');
 	};
 
 	private forgotPassword = () => {
