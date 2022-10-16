@@ -194,7 +194,7 @@ export const NewMarketSlick: React.FC<any> = () => {
 
 		if (currentMarket) {
 			dispatch(setCurrentMarket(currentMarket));
-			history.push(`/market/${currentMarket.id}`);
+			history.push(`/exchange/${currentMarket.id}`);
 		}
 	};
 

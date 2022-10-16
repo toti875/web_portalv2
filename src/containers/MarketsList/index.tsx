@@ -79,7 +79,7 @@ export const MarketsList = props => {
 		if (currentMarket) {
 			props.handleChangeCurrentMarket && props.handleChangeCurrentMarket(currentMarket);
 			dispatch(setCurrentMarket(currentMarket));
-			history.push(`/market/${currentMarket.id}`);
+			history.push(`/exchange/${currentMarket.id}`);
 		}
 	};
 

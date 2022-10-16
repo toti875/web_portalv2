@@ -14,12 +14,12 @@ export const defaultConfig: Config = {
 	},
 	minutesUntilAutoLogout: '60',
 	rangerReconnectPeriod: '1', 
-	withCredentials: false,
+	withCredentials: true,
 	storage: {},
 	gaTrackerKey: 'G-M47QL88D4R',
 	msAlertDisplayTime: '10000',
-	msPricesUpdates: '1000',
-	incrementalOrderBook: false,
+	msPricesUpdates: '3000',
+	incrementalOrderBook: true,
 	finex: false,
 	isResizable: true,
 	isDraggable: true,
@@ -29,7 +29,7 @@ export const defaultConfig: Config = {
 	balancesFetchInterval: '3000',
 	passwordEntropyStep: 14,
 	showLanding: true,
-	sentryEnabled: false,
+	sentryEnabled: true,
 
 };
 

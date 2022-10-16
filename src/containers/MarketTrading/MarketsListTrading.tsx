@@ -52,7 +52,7 @@ const MarketsListTradingComponent: React.FC<MarketsListTradingComponentProps> = 
 			if (!incrementalOrderBook()) {
 				dispatch(depthFetch(marketToSet));
 			}
-			history.push(`/market/${marketToSet.id}`);
+			history.push(`/exchange/${marketToSet.id}`);
 		}
 	};
 

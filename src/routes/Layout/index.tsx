@@ -230,7 +230,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 		if (!isLoggedIn && prevProps.isLoggedIn && !userLoading) {
 			this.props.walletsReset();
 			if (!history.location.pathname.includes('/market')) {
-				history.push('/market/');
+				history.push('/exchange/');
 			}
 		}
 
@@ -400,7 +400,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 							component={ProfileMobileScreen}
 						/>
 
-						<Route exact={false} path="/market/:market?" component={NewTradingScreenMobile} />
+						<Route exact={false} path="/exchange/:market?" component={NewTradingScreenMobile} />
 						<Route exact={true} path="/" component={HomePageScreenMobile} />
 						<Route exact={true} path="/markets" component={NewMarketsScreenMobile} />
 						<Route path="/ieo" exact component={IEOListMobileScreen} />
@@ -418,7 +418,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 						<Route path="/airdrops" exact component={AirdropCoinListMobileScreen} />
 						{/* new feature */}
 						<Route path="**">
-							<Redirect to="/market/" />
+							<Redirect to="/exchange/" />
 						</Route>
 					</Switch>
 					{isLoggedIn && <WalletsFetch />}
@@ -485,7 +485,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 				 
 					<Route path="/404" component={RestrictedScreen} />
 					<Route path="/500" component={MaintenanceScreen} />
-					<Route exact={false} path="/market/:market?" component={TradingScreen} />
+					<Route exact={false} path="/exchange/:market?" component={TradingScreen} />
 					<Route exact={true} path="/" component={FortemIOHomePage} />
 					{/*<Route exact={true} path="/landing" component={LandingScreen} />*/}
 					<Route exact={true} path="/doc" component={DocumentationScreen} />
