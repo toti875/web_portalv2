@@ -55,19 +55,18 @@ const CompanyDropdown = () => {
               <Heading style={{marginLeft: '15px', color: '#46473E', fontSize: '17px', fontWeight: 'bold'}} >Central de Suporte</Heading>
 
               <p style={{paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '-30px'}}>Esclareça suas dúvidas, conheça mais nossos processos ou entre em contato conosco para um atendimento rápido e personalizado</p>
-              <a href="/quick-exchange" style={{fontSize: '16px',}}>
-                  <Icon />Principais dúvidas
+              <a href="https://suporte.fortem.website/" style={{fontSize: '16px'}} target="_blank" rel="noopener noreferrer">                  <Icon />Principais dúvidas
               </a><br/>
-              <a href="/markets" style={{fontSize: '16px'}}>
+              <a href="https://status.fortem.website/" style={{fontSize: '16px'}} target="_blank" rel="noopener noreferrer">
                   <Icon />Status da plataforma
               </a><br/>
-              <a href="/markets" style={{fontSize: '16px'}}>
+              <a href="/api" style={{fontSize: '16px'}}>
                   <Icon />Documentação das APIs
               </a><br/>
-              <a href="/markets" style={{fontSize: '16px'}}>
+              <a href="/fee" style={{fontSize: '16px'}}>
                   <Icon />Taxas
               </a><br/>
-              <a href="/markets" style={{fontSize: '16px'}}>
+              <a href="/contato" style={{fontSize: '16px'}}>
                   <Icon />Entre em contato
               </a><br/>
             </div>
@@ -81,10 +80,10 @@ const CompanyDropdown = () => {
               <p style={{ paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '-30px'}}>
                 Informações, notícias e conteúdos para apoiar seu desenvolvimento sobre ativos digitais
               </p>
-              <a href="/nft" style={{marginTop: '-10px', fontSize: '16px',}}>
+              <a href="/lab" style={{marginTop: '-10px', fontSize: '16px',}}>
                   <Icon />Fortem Lab - Pesquisas e Análises
               </a><br/>
-              <a href="/nft" style={{marginTop: '-10px', fontSize: '16px',}}>
+              <a href="/academy" style={{marginTop: '-10px', fontSize: '16px',}}>
                   <Icon />Academy - Artigos, vídeos, cursos
               </a><br/>
             </div>

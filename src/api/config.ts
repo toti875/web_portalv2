@@ -29,7 +29,7 @@ export const defaultConfig: Config = {
 	balancesFetchInterval: '3000',
 	passwordEntropyStep: 14,
 	showLanding: true,
-	sentryEnabled: true,
+	sentryEnabled: false,
 
 };
 
