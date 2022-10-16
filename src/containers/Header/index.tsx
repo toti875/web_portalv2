@@ -1,9 +1,9 @@
 import classNames from 'classnames';
 //import { TOGGLE_SIDEBAR } from 'modules/public/globalSettings/constants';
 import * as React from 'react';
-import {useState, useRef} from "react";
+import { useState } from "react";
 
-import { FaAward, FaGift, FaHistory, FaSignOutAlt, FaStar, FaUserCircle, FaUserPlus } from 'react-icons/fa';
+import { FaHistory, FaSignOutAlt, FaStar, FaUserCircle } from 'react-icons/fa';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
@@ -18,6 +18,7 @@ import Menu from '../../react-menu/src/AnimatedNavbar';
 import styled from "styled-components"
 
 const Logo = require('../../assets/images/logo_branca_bandeira_verde.svg');
+const signinIcon = require('./signin.svg');
 
 export const Header: React.FC = () => {
 	const history = useHistory();
@@ -31,9 +32,6 @@ export const Header: React.FC = () => {
 
 	let [check, setCheck] = useState(true);
     const sticky = useStickyHeader( 50 );
-    const headerClasses = `header-default ${(sticky && check) ? 'sticky' : ''}`
-
-	const HeaderSTyle="header-transparent";
 
 	const setStateActiveNow = (nameActive: string) => {
 		setActiveNow(nameActive);
@@ -255,7 +253,12 @@ export const Header: React.FC = () => {
 						}} style={{fontSize: '18px', fontWeight: 'bold', fontFamily: 'roboto, helvetica, sans-serif' }}>
 							<div className={classLinkActiveLogin}>
 
-								<span >{translate('page.header.signIn')}</span>
+								<span >{translate('page.header.signIn')}
+								
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M15 1H4a1 1 0 0 0-1 1v2h2V3h9v10H5v-1H3v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/><path  d="m4.879 10.293 1.414 1.414L10 8 6.293 4.293 4.879 5.707 6.172 7H0v2h6.172z"/></svg>
+								
+								
+								</span>
 							</div>
 
 

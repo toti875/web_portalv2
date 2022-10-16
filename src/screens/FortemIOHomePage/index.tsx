@@ -903,7 +903,7 @@ function scrollRotate() {
 										<span className="color-accent">.<br /></span>
 										<span>mas não é tudo</span>
 										<span className="color-accent">...</span><br/>
-										<span>Nós entregamos muito mais</span>
+										<span>Nós oferecemos muito mais</span>
 										<span className="color-accent">:</span>
 				</h2>
 			

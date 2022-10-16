@@ -141,8 +141,8 @@ export const NewSignInMobileScreen: FC = () => {
 						</svg>
 					</div>
 					<div className="td-mobile-screen-signin__body__form__site__name">
-						<span>http://</span>
-						demo.fortem-financial.io
+						<span>https://</span>
+						fortem.website
 					</div>
 				</div>
 				<Form.Item
@@ -214,7 +214,7 @@ export const NewSignInMobileScreen: FC = () => {
 					/>
 					{renderForm()}
 				</div>
-				<div className="td-mobile-screen-signin__footer">© 2022 Fortem-financial.io. All rights reserved</div>
+				<div className="td-mobile-screen-signin__footer">© 2022 fortem.website. All rights reserved</div>
 			</div>
 		</div>
 	);

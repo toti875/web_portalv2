@@ -54,8 +54,8 @@ const CompanyDropdown = () => {
               {/*<Heading color="green">Cripto</Heading>*/}
               <Heading style={{marginLeft: '15px', color: '#46473E', fontSize: '17px', fontWeight: 'bold'}} >Central de Suporte</Heading>
 
-              <p style={{paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '-30px'}}>Esclareça suas dúvidas, conheça mais nossos processos ou entre em contato conosco para um atendimento rápido e personalizado</p>
-              <a href="https://suporte.fortem.website/" style={{fontSize: '16px'}} target="_blank" rel="noopener noreferrer">                  <Icon />Principais dúvidas
+              <p style={{paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '-30px'}}>Esclareça suas dúvidas, conheça mais nossos processos, produtos e serviços ou entre em contato conosco para um atendimento rápido e personalizado</p>
+              <a href="https://ajuda.fortem.website/" style={{fontSize: '16px'}} target="_blank" rel="noopener noreferrer">                  <Icon />Principais dúvidas
               </a><br/>
               <a href="https://status.fortem.website/" style={{fontSize: '16px'}} target="_blank" rel="noopener noreferrer">
                   <Icon />Status da plataforma

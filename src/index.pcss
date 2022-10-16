@@ -3946,6 +3946,8 @@ margin-left: 20px;
 
         &__item {
             &__title {
+
+
                 a,
                 span {
                     color: white;
@@ -3972,7 +3974,22 @@ margin-left: 20px;
                         color: #009991;
                         border-radius: 5px;
                         padding: 6px 16px;
+
+                        svg {
+                            fill: #009991;
+                            transition: 1s ease-out-in;
+                            transition: 1s ease-in-out;
+                            
+                        }
 						
+    
+                    }
+
+                    svg
+                    {
+                        fill: #fff;
+                        width: 20px;
+                        margin-left: 10px;
     
                     }
                 }
@@ -4018,7 +4035,7 @@ margin-left: 20px;
                 margin-right: 20px;
 
                 &--btn {
-                    background: linear-gradient(95deg, var(--color-white) 25%, #18988F 45%, #18988F 75%, #1EDED0 100%) 95%/200% 100% !important;
+                    background: linear-gradient(95deg, var(--color-white) 25%, #009991 45%, #009991 75%, #1EDED0 100%) 95%/200% 100% !important;
                     border-color: transparent;
                     border-radius: 5px;
                     color: #fff;
@@ -4027,10 +4044,10 @@ margin-left: 20px;
                     width: auto !important;
                     letter-spacing: 0.5px;
                     -webkit-appearance: button;
+                    opacity: 0.9;
 
                     &:hover {
-                        background: #1EDED0 !important;                        
-                        color: #fff;
+                        -webkit-filter: brightness(115%);
                         cursor: pointer;
                     }
                 }
@@ -5713,35 +5730,41 @@ h2 {
 			}
 
 			&__take-email {
+                height: 84px;
+
 				&__label {
 					color: rgba(255, 255, 255, 0.7);
 				}
 
 				&__input {
 					&::placeholder {
-						color: white;
+						color: #fff;
 						opacity: 0.7;
 					}
 
-					background-color: rgb(72, 74, 90);
-					border: 0.5px solid white;
-					border-radius: 10px;
-					color: white;
+					background-color: transparent;
+					border: 0.5px solid #1EDED0 !important;
+					border-radius: 5px;
+					color: #fff;
 					height: 40px;
 					outline: none;
 					padding-left: 10px;
-					width: 200px;
+					width: 300px;
 				}
 
 				&__btn {
-					background: rgb(47, 182, 126);
-					border-radius: 7px;
+					background: linear-gradient(95deg, var(--color-white) 25%, #009991 45%, #009991 75%, #1EDED0 100%) 95%/200% 100% !important;
+					border-radius: 5px;
+                    color: #fff;
 					cursor: pointer;
 					margin-left: 15px;
 					padding: 9.5px;
+              
+                    height: 40px;
+                    opacity: 0.9;
 
 					&:hover {
-						background: rgb(27, 226, 143);
+						webkit-filter: brightness(115%);
 						transition: all 0.3 ease-out;
 					}
 				}
@@ -5777,14 +5800,14 @@ h2 {
 		}
 
 		&__copyright {
-			font-size: 14px;
+			font-size: 13px;
 			padding-bottom: 0.8rem;
 			padding-top: 0.8rem;
 			text-align: center;
 
 			a {
 				color: white;
-				font-size: 18px;
+				font-size: 13px;
 				outline: none;
 				text-decoration: none;
 			}
@@ -5828,7 +5851,7 @@ h2 {
 		}
 
 		.footer__news__take-email__input {
-			width: 100px;
+			width: 150px;
 		}
 	}
 }
