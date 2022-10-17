@@ -4,13 +4,13 @@ export const defaultConfig: Config = {
 	api: {
 		authzURL: 'https://www.fortem.website/api/authz',
 		switchURL: 'https://www.fortem.website/api/switch',
-		transactionURL: 'https://www.fortem.website/api/fortem',
-		ieoURL: 'https://www.fortem.website/api/fortem',
+		transactionURL: 'https://www.fortem.website/api/v2/peatio',
+		ieoURL: 'https://www.yellow.com/api/v2/peatio',
 		infoURL: 'https://www.fortem.website/api/fortem',
 
 
 		//downstreamURL: 'ws://demo.fortem-financial.io/api/v2/downstream',
-		downstreamURL: 'wss://www.fortem.website/api/downstream',
+		downstreamURL: 'wss://www.fortem.website/api/v2/ranger',
 	},
 	minutesUntilAutoLogout: '5',
 	rangerReconnectPeriod: '1', 
@@ -57,7 +57,7 @@ export const downstreamURL = () => Cryptobase.config.api.downstreamURL;
 export const infoURL = () => Cryptobase.config.api.infoURL;
 
 export const minutesUntilAutoLogout = (): string => Cryptobase.config.minutesUntilAutoLogout || '15';
-export const withCredentials = () => Cryptobase.config.withCredentials || false;
+export const withCredentials = () => Cryptobase.config.withCredentials || true;
 export const defaultStorageLimit = () => Cryptobase.config.storage.defaultStorageLimit || STORAGE_DEFAULT_LIMIT;
 export const orderBookSideLimit = () => Cryptobase.config.storage.orderBookSideLimit || ORDER_BOOK_DEFAULT_SIDE_LIMIT;
 export const gaTrackerKey = (): string => Cryptobase.config.gaTrackerKey || 'G-M47QL88D4R';

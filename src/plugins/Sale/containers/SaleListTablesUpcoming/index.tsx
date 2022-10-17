@@ -54,7 +54,7 @@ export const SaleListTablesUpcoming: React.FC = () => {
 				<Empty
 					image="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
 					imageStyle={{ marginTop: '3rem' }}
-					description={<span>No available IEO</span>}
+					description={<span>Nenhuma captação encontrada no momento</span>}
 				/>
 			</div>
 		);

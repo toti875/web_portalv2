@@ -9,16 +9,6 @@
     }
 }
 
-a.btn-default {
-
-    &:hover {
-        .icon {
-        fill: #009991;
-        }
-    }
-
-
-}
 
 a,
 button {
@@ -54,17 +44,15 @@ button {
                 height: 30px;
                 fill: #fff;
 
-                &:hover{ 
-                    fill: #009991;
-                }
-
             }
 
             &:hover{ 
                 .icon {
+                    transition: 1s ease-out-in;
+                    transition: 1s ease-in-out;
                     fill: #009991;
+
                     }
-                fill: #009991;
             }
         }
         &:hover {
@@ -72,7 +60,6 @@ button {
             color: var(--color-white);
             text-decoration: none;
             -webkit-filter: brightness(105%);
-            fill: #009991;
  
         }
 
