@@ -2806,7 +2806,7 @@ html {
             border-radius: 10px;
             position: relative;
             z-index: 2;
-            border-color: #009991;
+            
 
             &::before {
                 position: absolute;
@@ -2824,6 +2824,7 @@ html {
             }
 
             &:hover {
+                border: 1px solid #009991;
                 &::before {
                     opacity: 1;
                     transform: scale(1);
@@ -2859,6 +2860,8 @@ html {
 
         .react-tabs__tab--selected {
             .tab-button {
+
+                border-color: #pink !important;
                 .title {
                     color: var(--color-white);
                 }
@@ -5814,9 +5817,16 @@ h2 {
 		}
 	}
 
-	.white-line {
+	.fortem-line {
 		border-bottom: 0.1px solid #1EDED0;
 	}
+
+    .white-line {
+        display: flex;
+        height: 1px;
+        width: 100%;
+        background: linear-gradient(90deg, rgba(224, 225, 226, 0) 0%, rgb(224, 225, 226) 47.22%, rgba(224, 225, 226, 0.157) 94.44%);
+    }
 
 	@media screen and (max-width: 900px) {
 		font-size: 14px;

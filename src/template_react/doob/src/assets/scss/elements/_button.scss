@@ -9,7 +9,16 @@
     }
 }
 
+a.btn-default {
 
+    &:hover {
+        .icon {
+        fill: #009991;
+        }
+    }
+
+
+}
 
 a,
 button {
@@ -34,25 +43,40 @@ button {
         letter-spacing: 0.5px;
         width: auto;
 
-        
+  
 
         &.btn-icon {
             .icon {
                 position: relative;
                 top: -1px;
                 padding-left: 4px;
-                svg {
-                    width: 20px;
-                    height: 20px;
+                width: 30px;
+                height: 30px;
+                fill: #fff;
+
+                &:hover{ 
+                    fill: #009991;
                 }
+
+            }
+
+            &:hover{ 
+                .icon {
+                    fill: #009991;
+                    }
+                fill: #009991;
             }
         }
         &:hover {
-            filter: brightness(115%);
+            filter: brightness(105%);
             color: var(--color-white);
             text-decoration: none;
-            -webkit-filter: brightness(115%);
-}
+            -webkit-filter: brightness(105%);
+            fill: #009991;
+ 
+        }
+
+
         &.btn-small {
             height: 40px;
             line-height: 36px;
@@ -172,6 +196,11 @@ button {
         }
 
     }
+
+    &:hover{ 
+        fill: #009991;
+    }
+    
 }
 
 .btn-read-more {

@@ -147,7 +147,28 @@ import { SaleListTablesUpcoming } from '../../plugins/Sale/containers/SaleListTa
 
 import  Parallax2  from 'ui-neumorphism';
 
+import GradientBorder from '../../components/GradientBorder/GradientBorder';
 
+import fortemSignin from './signin.svg';
+
+import Logo from '../../assets/images/logo_branca_bandeira_verde.svg';
+
+import Logo_Capital from '../../assets/images/svg/branco_capital_bandeira_verde.svg';
+
+import Anime1 from '../../assets/animation/Bigscene-1-.json';
+
+import mainBanner from './main_banner.jpg';
+
+import speed from './images/speed.svg';
+import security from './images/security.svg';
+import surveillance from './images/surveillance.svg';
+import world from './images/world.svg';
+import price from './images/price.svg';
+import deposit from './images/deposit.svg';
+import api from './images/api.svg';
+import stars from './images/stars.svg';
+import interfaces from './images/features.svg';
+import fortemCard from './fortemCard.png';
 
 
 
@@ -174,24 +195,7 @@ const particleOptions: ParticleOptions = {
 //const mainPage = require('./home-business.html');
 
 
-const Logo = require('../../assets/images/logo_branca_bandeira_verde.svg');
 
-const Logo_Capital = require ('../../assets/images/svg/branco_capital_bandeira_verde.svg');
-
-const Anime1 = require ('../../assets/animation/Bigscene-1-.json');
-
-const mainBanner = require ('./main_banner.jpg');
-
-const speed = require ('./images/speed.svg');
-const security = require ('./images/security.svg');
-const surveillance = require ('./images/surveillance.svg');
-const world = require ('./images/world.svg');
-const price = require ('./images/price.svg');
-const deposit = require ('./images/deposit.svg');
-const api = require ('./images/api.svg');
-const stars = require ('./images/stars.svg');
-const interfaces = require ('./images/features.svg');
-const fortemCard = require ('./fortemCard.png');
 
 
 
@@ -425,7 +429,7 @@ function scrollRotate() {
 									{translate('page.homePage.trade.btn.trade')}
 								</button>
 							) : (
-								<><a className="btn-default btn-icon icon-btn-wrap" href="/signin" style={{fontFamily: 'Verdana', fontWeight: 'bold', fontSize: '22px', position: 'absolute',  bottom: '370px', left: '50%', background: 'transparent'}}>Acessar plataforma <i className="icon"><FiArrowRight /></i></a>
+								<><a className="btn-default btn-icon icon-btn-wrap icon header__right-menu__items" href="/signin" style={{fontFamily: 'Verdana', fontWeight: 'bold', fontSize: '22px', position: 'absolute',  bottom: '370px', left: '50%', background: 'transparent'}}>Acessar plataforma <svg className="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M15 1H4a1 1 0 0 0-1 1v2h2V3h9v10H5v-1H3v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/><path  d="m4.879 10.293 1.414 1.414L10 8 6.293 4.293 4.879 5.707 6.172 7H0v2h6.172z"/></svg></a>
 							
 																<button className="btn-icon btn-default" onClick={redirectSingUP} style={{fontFamily: 'Verdana', fontWeight: 'bold', fontSize: '22px',  position: 'absolute',  bottom: '370px', left: '70%'}}>
 																Conecte-se com a Fortem
@@ -457,7 +461,9 @@ function scrollRotate() {
 					<div className="inner-container _912px center">
 						<div className="text-center">
 							<div className="position-relative">
-								<div className="position-relative z-index-1">
+							{/*<GradientBorder borderRadius='15px' >*/}
+								<div className="position-relative z-index-1" >
+								
 								<Parallax rotateX={[-90, 0]} easing="easeInOutCirc">
 
 									<h2 data-w-id="2f13477a-efb0-0f82-999f-982786d80614" style={{transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d', opacity: 1}} className="display-2">
@@ -467,8 +473,11 @@ function scrollRotate() {
 										<span className="color-accent">.</span>
 									</h2>
 									<p style={{fontSize: '26px'}}>Dos investimentos em tokens à conta digital. Aqui você tem o controle integrado de toda a sua vida financeira.</p>
-									</Parallax>
+								</Parallax>
+								
 								</div>
+								{/*</GradientBorder>*/}
+								
 								<ScrollAnimation animateIn="fadeInUp" animateOut="fadeInOut" animateOnce={false}></ScrollAnimation>
 								<div className="position-absolute top number-01">
 									<div className="text-big-outline" style={{opacity: 1}}>
@@ -1382,10 +1391,13 @@ const renderBlog = () => (
                                     </div>   
                                 </Tab>
                                 <Tab>
-                                    <div className="tab-button">
+								{/*<GradientBorder borderRadius='15px' >*/}
+									<div className="tab-button">
+									
                                         <h4 className="title">Tokens NFT</h4>
                                         <p className="description">Explore nossas coleções de NFTs.</p>
-                                    </div>   
+                                    </div>  
+								{/*</GradientBorder>*/}
                                 </Tab>
                             </TabList>
                         </div>
@@ -1645,12 +1657,14 @@ teste3                                        </div>
 										<span>Em uma única Plataforma</span>
 										<span className="color-accent">.<br /></span>
 										<span>Em um único App</span>
+										<span className="color-accent">.</span>
+										<span> Na palma da sua mão</span>
 										<span className="color-accent">...</span>
 
 				</h2>
 			
 			<Parallax rotateX={[-70, 0]} easing="easeInOutCirc">
-				<img src={mobile} style={{backgroundImage: 'radial-gradient(300px at center, #4a4a4a, transparent )', display: 'block', marginTop: '60px', transformOrigin: '90% 0px', marginLeft: 'auto', marginRight: 'auto', height: '740px', width: '680px', objectFit: 'contain', }} className="theme-shape-center" />
+				<img src={mobile} style={{backgroundImage: 'radial-gradient(300px at center, #4a4a4a, transparent )', display: 'block', marginTop: '60px', transformOrigin: '90% 0px', marginLeft: '50%', marginRight: '50%', height: '740px', width: '680px', objectFit: 'contain', }} className="theme-shape-center" />
 			</Parallax>
 
 			{renderBlog()}
