@@ -99,9 +99,10 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress) => {
 								Enviar
 							</span>
 						</div>
-
+						<br />
+						<p className="footer__news__title">REDES SOCIAIS</p>
 						<div className="footer__news__list-icon ">
-						<div className="footer__news__list-icon__item  ">
+							<div className="footer__news__list-icon__item  ">
 								<a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
 									<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="1.6428571428571428rem" height="1.6428571428571428rem" className="brandhub-icon"><path d="M32 6.076a13.025 13.025 0 01-3.771 1.033 6.581 6.581 0 002.887-3.632 13.144 13.144 0 01-4.169 1.594 6.556 6.556 0 00-4.792-2.073 6.565 6.565 0 00-6.565 6.565c0 .514.058 1.015.17 1.496A18.643 18.643 0 012.227 4.2a6.533 6.533 0 00-.889 3.301 6.563 6.563 0 002.92 5.464 6.54 6.54 0 01-2.974-.822l-.001.083a6.57 6.57 0 005.267 6.437 6.62 6.62 0 01-2.966.112 6.571 6.571 0 006.133 4.559 13.17 13.17 0 01-8.153 2.811 13.29 13.29 0 01-1.566-.092 18.576 18.576 0 0010.064 2.95c12.076 0 18.679-10.003 18.679-18.679 0-.284-.006-.568-.018-.85a13.307 13.307 0 003.275-3.397z" fill="currentColor"></path></svg>
 								</a>
@@ -128,7 +129,7 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress) => {
 			</div>
 
 			<div>
-				<div className="white-line"></div>
+				<div className="fortem-line"></div>
 
 				<p className="footer__copyright">
 					<img src={fortemIcon} style={{width: '13px', marginTop: '-2px'}}/>Fortem ONE Ltda © 2022 Copyright : <a href="https://fortem-one.com/"> fortem-one.com </a> | | Fortem Technologies Inc © 2018 - 2022 Copyright : <a href="https://fortem-one.tech/"> fortem-one.tech </a> 

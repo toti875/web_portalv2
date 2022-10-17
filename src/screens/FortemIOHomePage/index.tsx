@@ -1669,12 +1669,14 @@ teste3                                        </div>
 
 			{renderBlog()}
 
-
+			<div className="white-line"></div>
 
 			{/*<SlipThree />*/}
 
 
 			<CalltoActionFive />
+
+
 			
 		
           

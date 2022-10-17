@@ -5694,6 +5694,13 @@ h2 {
         background: linear-gradient(90deg, rgba(224, 225, 226, 0) 0%, rgb(224, 225, 226) 47.22%, rgba(224, 225, 226, 0.157) 94.44%);
     }
 
+.footerDesktop-screen .fortem-line-gradient {
+        display: flex;
+        height: 1px;
+        width: 100%;
+        background: linear-gradient(90deg, #009991 0%, #1EDED0  47.22%, rgba(224, 225, 226, 0.157) 94.44%);
+    }
+
 @media screen and (max-width: 900px) {
 
 .footerDesktop-screen {
