@@ -1664,7 +1664,7 @@ teste3                                        </div>
 				</h2>
 			
 			<Parallax rotateX={[-70, 0]} easing="easeInOutCirc">
-				<img src={mobile} style={{backgroundImage: 'radial-gradient(300px at center, #4a4a4a, transparent )', display: 'block', marginTop: '60px', transformOrigin: '90% 0px', marginLeft: '50%', marginRight: '50%', height: '740px', width: '680px', objectFit: 'contain', }} className="theme-shape-center" />
+				<img src={mobile} style={{backgroundImage: 'radial-gradient(300px at center, #4a4a4a, transparent )', display: 'block', marginTop: '60px', transformOrigin: '90% 0px', marginLeft: 'auto', marginRight: 'auto', height: '740px', width: '680px', objectFit: 'contain', }} className="theme-shape-center" />
 			</Parallax>
 
 			{renderBlog()}
