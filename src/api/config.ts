@@ -5,7 +5,7 @@ export const defaultConfig: Config = {
 		authzURL: 'https://www.fortem.website/api/authz',
 		switchURL: 'https://www.fortem.website/api/switch',
 		transactionURL: 'https://www.fortem.website/api/v2/peatio',
-		ieoURL: 'https://www.yellow.com/api/v2/peatio',
+		ieoURL: 'https://www.fortem.website/api/v2/peatio',
 		infoURL: 'https://www.fortem.website/api/fortem',
 
 
