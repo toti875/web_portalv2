@@ -192,7 +192,7 @@ const PublicRoute: React.FunctionComponent<any> = ({ component: CustomComponent,
 	if (isLogged) {
 		return (
 			<Route {...rest}>
-				<Redirect to={'/'} />
+				<Redirect to={'/wallets'} />
 			</Route>
 		);
 	}
@@ -230,7 +230,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 		if (!isLoggedIn && prevProps.isLoggedIn && !userLoading) {
 			this.props.walletsReset();
 			if (!history.location.pathname.includes('/market')) {
-				history.push('/exchange/');
+				history.push('/market/');
 			}
 		}
 
@@ -259,8 +259,8 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 			configsLoading,
 			platformAccessStatus,
 		} = this.props;
-		const tradingCls = location.pathname.includes('/market') ? 'trading-layout' : '';
-		toggleColorTheme(colorTheme);
+		//const tradingCls = location.pathname.includes('/market') ? 'trading-layout' : '';
+		//toggleColorTheme(colorTheme);
 
 		if (configsLoading && !platformAccessStatus.length) {
 			return renderLoader();
@@ -400,7 +400,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 							component={ProfileMobileScreen}
 						/>
 
-						<Route exact={false} path="/exchange/:market?" component={NewTradingScreenMobile} />
+						<Route exact={false} path="/market/:market?" component={NewTradingScreenMobile} />
 						<Route exact={true} path="/" component={HomePageScreenMobile} />
 						<Route exact={true} path="/markets" component={NewMarketsScreenMobile} />
 						<Route path="/ieo" exact component={IEOListMobileScreen} />
@@ -418,7 +418,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 						<Route path="/airdrops" exact component={AirdropCoinListMobileScreen} />
 						{/* new feature */}
 						<Route path="**">
-							<Redirect to="/exchange/" />
+							<Redirect to="/market/" />
 						</Route>
 					</Switch>
 					{isLoggedIn && <WalletsFetch />}
@@ -428,9 +428,9 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 		}
 
 		return (
-			<div className={`container-fluid pg-layout ${tradingCls}`}>
+			<div className={`container-fluid pg-layout`}>
 				<Switch>
-					<Route exact={true} path="/magic-link" component={MagicLink} />
+					<PublicRoute exact={true} path="/magic-link" component={MagicLink} />
 					{/*TELA DE LOGIN*/}
 					<PublicRoute loading={userLoading} isLogged={isLoggedIn} path="/signin" component={LogInScreen} />
 					{/*TELA DE CADASTRO*/}
@@ -483,17 +483,17 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 
 							
 				 
-					<Route path="/404" component={RestrictedScreen} />
-					<Route path="/500" component={MaintenanceScreen} />
-					<Route exact={false} path="/exchange/:market?" component={TradingScreen} />
-					<Route exact={true} path="/" component={FortemIOHomePage} />
+					<PublicRoute path="/404" component={RestrictedScreen} />
+					<PublicRoute path="/500" component={MaintenanceScreen} />
+					<PublicRoute exact={false} path="/market/:market?" component={TradingScreen} />
+					<PublicRoute exact={true} path="/" component={FortemIOHomePage} />
 					{/*<Route exact={true} path="/landing" component={LandingScreen} />*/}
-					<Route exact={true} path="/doc" component={DocumentationScreen} />
+					<PublicRoute exact={true} path="/doc" component={DocumentationScreen} />
 
-					<Route exact={false} path="/fee" component={AssetsFeeScreen} />
-					<Route exact path="/markets" component={MarketsList} />
-					<Route path="/announcement" exact component={AnnouncementScreen} />
-					<Route path="/referral" component={Referral} />
+					<PublicRoute exact={false} path="/fee" component={AssetsFeeScreen} />
+					<PublicRoute path="/markets" component={MarketsList} />
+					<PublicRoute path="/announcement" exact component={AnnouncementScreen} />
+					<PublicRoute path="/referral" component={Referral} />
 
 					<PrivateRoute
 						loading={userLoading}
@@ -573,15 +573,15 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 						path="/portfolio"
 						component={PortfolioScreen}
 					/>
-					<Route path="/holder/starting" exact component={HolderStartingScreen} />
+					<PublicRoute path="/holder/starting" exact component={HolderStartingScreen} />
 
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/quick-exchange" component={QuickExchange} />
 
 					{/* new feature */}
-					<Route path="/airdrops" exact component={AirdropCoinListScreen} />
+					<PublicRoute path="/airdrops" exact component={AirdropCoinListScreen} />
 					{/* new feature */}
 					{/* old feature */}
-					<Route path="/airdrop" exact component={AirdropList} />
+					<PublicRoute path="/airdrop" exact component={AirdropList} />
 					<PrivateRoute
 						loading={userLoading}
 						isLogged={isLoggedIn}
@@ -589,13 +589,13 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 						component={AirdropDetail}
 					/>
 					{/* old feature */}
-					<Route path="/tokens" exact component={SaleListScreen} />
-					<Route path="/ieo/detail/:ieoID" exact component={SaleDetailScreen} />
-					<Route path="/vote" exact component={VoteScreen} />
-					<Route path="/trading-competition" exact component={CompetitionListingScreen} />
-					<Route path="/trading-competition/:competition_id" exact component={CompetitionDetailScreen} />
-					<Route path="/stake" exact component={StakingListScreen} />
-					<Route path="/stake/detail/:stake_id" exact component={StakingDetailScreen} />
+					<PublicRoute path="/tokens" exact component={SaleListScreen} />
+					<PublicRoute path="/ieo/detail/:ieoID" exact component={SaleDetailScreen} />
+					<PublicRoute path="/vote" exact component={VoteScreen} />
+					<PublicRoute path="/trading-competition" exact component={CompetitionListingScreen} />
+					<PublicRoute path="/trading-competition/:competition_id" exact component={CompetitionDetailScreen} />
+					<PublicRoute path="/stake" exact component={StakingListScreen} />
+					<PublicRoute path="/stake/detail/:stake_id" exact component={StakingDetailScreen} />
 
 
 				</Switch>

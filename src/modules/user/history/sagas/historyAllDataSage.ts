@@ -16,7 +16,7 @@ export function* historyAllDataSaga(action: HistoryAllFetch) {
 		const coreEndpoint = {
 			deposits: '/account/deposits',
 			withdraws: '/account/withdraws',
-			trades: '/exchange/trades',
+			trades: '/market/trades',
 		};
 		const params = `page=${page}&limit=${limit}`;
 		let data = yield call(API.get(config), `${coreEndpoint[type]}?${params}`);

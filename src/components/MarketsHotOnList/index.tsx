@@ -144,7 +144,7 @@ export const MarketsHotOnlist: React.FC<any> = () => {
 
 		if (currentMarket) {
 			dispatch(setCurrentMarket(currentMarket));
-			history.push(`/exchange/${currentMarket.id}`);
+			history.push(`/market/${currentMarket.id}`);
 		}
 	};
 

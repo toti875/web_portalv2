@@ -4,7 +4,7 @@ export const PG_TITLE_PREFIX = 'Fortem ONE';
 
 export const pgRoutes = (isLoggedIn: boolean, isLight?: boolean): string[][] => {
 	const routes = [
-		['page.header.navbar.trade', '/exchange/', `trade${isLight ? 'Light' : ''}`],
+		['page.header.navbar.trade', '/market/', `trade${isLight ? 'Light' : ''}`],
 		['page.header.navbar.dashboard', '/dashboard/', `dasboard${isLight ? 'Light' : ''}`],
 		['page.header.navbar.portfolio', '/portfolio', `wallets${isLight ? 'Light' : ''}`],
 		['page.header.navbar.openOrders', '/orders', `orders${isLight ? 'Light' : ''}`],
@@ -13,7 +13,7 @@ export const pgRoutes = (isLoggedIn: boolean, isLight?: boolean): string[][] => 
 	const routesUnloggedIn = [
 		['page.header.navbar.signIn', '/signin', `signin${isLight ? 'Light' : ''}`],
 		['page.header.signUp', '/register', `signup${isLight ? 'Light' : ''}`],
-		['page.header.navbar.trade', '/exchange/', `trade${isLight ? 'Light' : ''}`],
+		['page.header.navbar.trade', '/market/', `trade${isLight ? 'Light' : ''}`],
 	];
 
 	return isLoggedIn ? routes : routesUnloggedIn;
