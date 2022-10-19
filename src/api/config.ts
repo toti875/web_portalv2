@@ -10,11 +10,11 @@ export const defaultConfig: Config = {
 
 
 		//downstreamURL: 'ws://demo.fortem-financial.io/api/v2/downstream',
-		downstreamURL: 'wss://yellow.fortem.website/api/v2/ranger',
+		downstreamURL: 'wss://www.fortem.website/api/v2/ranger',
 	},
 	minutesUntilAutoLogout: '5',
 	rangerReconnectPeriod: '1', 
-	withCredentials: false,
+	withCredentials: true,
 	storage: {},
 	gaTrackerKey: 'G-M47QL88D4R',
 	msAlertDisplayTime: '10000',
