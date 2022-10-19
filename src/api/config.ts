@@ -4,13 +4,13 @@ export const defaultConfig: Config = {
 	api: {
 		authzURL: 'https://www.fortem.website/api/v2/barong',
 		switchURL: 'https://www.fortem.website/api/v2/applogic',
-		transactionURL: 'https://www.fortem.website/api/v2/peatio',
+		transactionURL: 'https://yellow.fortem.website/api/v2/peatio',
 		ieoURL: 'https://www.fortem.website/api/v2/peatio',
 		infoURL: 'https://www.fortem.website/api/v2/peatio',
 
 
 		//downstreamURL: 'ws://demo.fortem-financial.io/api/v2/downstream',
-		downstreamURL: 'wss://www.fortem.website/api/v2/ranger',
+		downstreamURL: 'wss://yellow.fortem.website/api/v2/ranger',
 	},
 	minutesUntilAutoLogout: '5',
 	rangerReconnectPeriod: '1', 
