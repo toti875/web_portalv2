@@ -5,8 +5,8 @@ export const defaultConfig: Config = {
 		authzURL: 'https://www.fortem.website/api/v2/barong',
 		switchURL: 'https://www.fortem.website/api/v2/applogic',
 		transactionURL: 'https://yellow.fortem.website/api/v2/peatio',
-		ieoURL: 'https://www.fortem.website/api/v2/peatio',
-		infoURL: 'https://www.fortem.website/api/v2/peatio',
+		ieoURL: 'https://yellow.fortem.website/api/v2/peatio',
+		infoURL: 'https://yellow.fortem.website/api/v2/peatio',
 
 
 		//downstreamURL: 'ws://demo.fortem-financial.io/api/v2/downstream',
