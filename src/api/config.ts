@@ -11,7 +11,7 @@ export const defaultConfig: Config = {
 
 		//downstreamURL: 'ws://demo.fortem-financial.io/api/v2/downstream',
 		//downstreamURL: 'localhost:3002/api',
-		downstreamURL: 'wss://fortem1.com.br/api/v2/ranger' 
+		downstreamURL: 'ws://www.fortem1.com.br/api/v2/ranger' 
 	},
 	minutesUntilAutoLogout: '5',
 	rangerReconnectPeriod: '1', 
