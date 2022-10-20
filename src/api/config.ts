@@ -10,8 +10,9 @@ export const defaultConfig: Config = {
 
 
 		//downstreamURL: 'ws://demo.fortem-financial.io/api/v2/downstream',
-		//downstreamURL: 'localhost:3002/api',
-		downstreamURL: 'wss://www.fortem1.com.br/api/v2/ranger' 
+		downstreamURL: 'wss://www.fortem1.com.br/api',
+		
+		//downstreamURL: 'wss://www.fortem1.com.br/api/v2/ranger' 
 	},
 	minutesUntilAutoLogout: '5',
 	rangerReconnectPeriod: '1', 
@@ -33,6 +34,7 @@ export const defaultConfig: Config = {
 	sentryEnabled: false,
 
 };
+
 
 export const Cryptobase = {
 	config: defaultConfig,
