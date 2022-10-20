@@ -77,7 +77,7 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress) => {
 							</a>
 						</p>
 						<p className="footer__info__item">
-							<a href="https://fortem.website/api" target="_blank" rel="noopener noreferrer">
+							<a href="https://www.fortem1.com.br/api" target="_blank" rel="noopener noreferrer">
 								Documentação das APIs
 							</a>
 						</p>
