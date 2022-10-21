@@ -10,7 +10,7 @@ export const defaultConfig: Config = {
 
 
 		//downstreamURL: 'ws://demo.fortem-financial.io/api/v2/downstream',
-		downstreamURL: 'wss://www.fortem1.com.br/api',
+		downstreamURL: 'ws://www.fortem1.com.br:7090/api',
 		
 		//downstreamURL: 'wss://www.fortem1.com.br/api/v2/ranger' 
 	},
