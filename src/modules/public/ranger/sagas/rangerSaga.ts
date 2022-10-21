@@ -44,6 +44,7 @@ const initRanger = (
 	buffer: RangerBuffer,
 ): [EventChannel<any>, WebSocket] => {
 	const baseUrl = `${downstreamURL()}/${withAuth ? 'private' : 'public'}`;
+	//const streams = streamsBuilder(withAuth, prevSubs, market);
 	const streams = streamsBuilder(withAuth, prevSubs, market);
 
 	const ws = new WebSocket(generateSocketURI(baseUrl, streams));
