@@ -5,9 +5,9 @@ interface OrderBookProps {
 }
 
 const OrderBookStyleVar = {
-	headHeight: '32px',
-	tbHeadHeight: '30px',
-	tickerHeight: '30px',
+	headHeight: '42px',
+	tbHeadHeight: '40px',
+	tickerHeight: '40px',
 };
 
 export const OrderBookStyle = styled.div<OrderBookProps>`
@@ -18,48 +18,40 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 	right: 0;
 	height: calc(100% - 6px);
 	color: white;
-	
-	font-weight: 500;
-	padding: 0 10px;
-	background-color: #0b1426;
+	/* padding: 0 10px; */
 	.td-order-book {
-		background-color: #0b1426;
-		animation:        flashX 2.5s ;
 		height: 100%;
-		font-weight: 500;
-		padding-top: 10px;
 		padding-bottom: 15px;
 		&-item__negative {
-			color: #ef5350;
-			webkit-animation: flash_red 2.5s ; /* Safari 4+ */
-			moz-animation:    flash_red 2.5s ; /* Fx 5+ */
-			o-animation:      flash_red 2.5s ; /* Opera 12+ */
-			animation:         flash_red 2.5s ; /* IE 10+ */	
+			color: green;
 		}
 		&-item__positive {
-			color: #13b887;
-			webkit-animation: flash_green 2.5s ; /* Safari 4+ */
-			moz-animation:    flash_green 2.5s ; /* Fx 5+ */
-			o-animation:      flash_green 2.5s ; /* Opera 12+ */
-			animation:         flash_green 2.5s ; /* IE 10+ */	
+			color: red;
 		}
 		&-tooltip {
 			bottom: 200px;
 		}
 		&-header {
+			padding: 10px;
 			height: ${OrderBookStyleVar.headHeight};
 			svg {
 				cursor: pointer;
 			}
+			background-color: var(--trading-header-background);
+			&__title {
+				h3 {
+					font-weight: bold;
+					font-size: 16px;
+					line-height: 22px;
+					color: #ffffff;
+				}
+			}
 		}
 		&-tbheader {
 			height: ${OrderBookStyleVar.tbHeadHeight};
-			padding-top: 6px;
-			padding-bottom: 6px;
-			color: #7a7e8b;
-			font-size: 13px;
-			filter: brightness(130%);
-
+			padding: 6px 10px;
+			font-size: 14px;
+			color: #848e9c;
 			> div {
 				display: inline-block;
 				width: 28%;
@@ -71,16 +63,20 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 		}
 		&-ticker {
 			height: ${OrderBookStyleVar.tickerHeight};
-			margin: 5px 18px !important;
+			padding: 10px;
+			background-color: var(--trading-header-background);
 			font-size: 14px;
 			&__last-price {
 				font-size: 18px;
+				line-height: 25px;
 			}
 			&__usd {
-				color: #0b1426 ;
+				color: #848e9c;
+				padding-left: 1.5rem !important;
 			}
 		}
 		&-table {
+			padding: 0px 10px;
 			height: ${(props: OrderBookProps) =>
 				props.tabState === 'all'
 					? `calc(
@@ -94,15 +90,12 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 			thead,
 			tbody {
 				display: block;
-				animation:        flashX 2.5s ;
 				tr {
 					display: block;
 					background-color: transparent;
 					cursor: pointer;
-					animation:        flashX 2.5s ;
 					:hover {
-						background-color: #0b1426 ;
-						animation:        flashX 2.5s ;
+						background-color: #4e5463;
 					}
 					td,
 					th {
@@ -122,18 +115,9 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 			tbody {
 				height: 100%;
 				overflow-y: scroll;
-				animation:        flashX 2.5s ;
 				tr {
 					margin-top: 1px;
 					margin-bottom: 1px;
-					animation:        flashX 2.5s ;
-					
-					webkit-animation: flash_green 2.5s ; /* Safari 4+ */
-					moz-animation:    flash_green 2.5s ; /* Fx 5+ */
-					o-animation:      flash_green 2.5s ; /* Opera 12+ */
-					animation:         flash_green 2.5s ; /* IE 10+ */
-					
-					
 					td {
 						height: 100%;
 					}
@@ -141,71 +125,20 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 			}
 			&.td-reverse-table-body {
 				tbody {
-					animation:        flashX 2.5s ;
 					transform: rotate(180deg);
 					.td-order-book-table__empty_data {
-						transform: rotate(180deg);					
+						transform: rotate(180deg);
 					}
 					tr {
 						direction: rtl;
-						webkit-animation: flash_red 2.5s ; /* Safari 4+ */
-						moz-animation:    flash_red 2.5s ; /* Fx 5+ */
-						o-animation:      flash_red 2.5s ; /* Opera 12+ */
-						animation:         flash_red 2.5s ; /* IE 10+ */	
 						td {
 							transform: rotate(180deg);
-							webkit-animation: flash_red 2.5s ; /* Safari 4+ */
-							moz-animation:    flash_red 2.5s ; /* Fx 5+ */
-							o-animation:      flash_red 2.5s ; /* Opera 12+ */
-							animation:        flash_red 2.5s ; /* IE 10+ */	
 						}
 					}
 				}
 			}
 		}
 	}
-
-	@-webkit-keyframes flash_red {
-		from { background-color: #ef5350  ; }
-		to { background-color: transparent; }
-	  }
-	  @-moz-keyframes flash_red {
-		from { background-color: #ef5350  ; }
-		to { background-color: transparent; }
-	  }
-	  @-o-keyframes flash_red {
-		from { background-color: #ef5350  ; }
-		
-		to { background-color: transparent; }
-	  }
-	  @keyframes flash_red {
-		from { background-color: #ef5350 ; }
-		to { background-color: transparent; }
-	  }
-
-
-	@-webkit-keyframes flash_green {
-		from { background-color: #13b887 ; }
-		to { background-color: transparent; }
-	  }
-	  @-moz-keyframes flash_green {
-		from { background-color: #13b887 ; }
-		to { background-color: transparent; }
-	  }
-	  @-o-keyframes flash_green {
-		from { background-color: #13b887 ; }
-		to { background-color: transparent; }
-	  }
-	  @keyframes flash_green {
-		from { background-color: #13b887; }
-		to { background-color: transparent; }
-	  }
-
-
-
-
-
-
 `;
 
 interface TrProps {
@@ -217,10 +150,6 @@ interface TrProps {
 export const TrStyle = styled.tr<TrProps>`
 	position: relative;
 	z-index: 5;
-	webkit-animation: flashX 2s ; /* Safari 4+ */
-	moz-animation:    flashX 2s ; /* Fx 5+ */
-	o-animation:      flashX 2s ; /* Opera 12+ */
-	animation:         flashX 2s ; /* IE 10+ */		
 	&:after {
 		content: '';
 		position: absolute;
@@ -231,27 +160,5 @@ export const TrStyle = styled.tr<TrProps>`
 		background-color: ${(props: TrProps) => props.color};
 		width: ${(props: TrProps) => props.percentWidth}%;
 		z-index: -5;
-		webkit-animation: flashX 2s ; /* Safari 4+ */
-		moz-animation:    flashX 2s ; /* Fx 5+ */
-		o-animation:      flashX 2s ; /* Opera 12+ */
-		animation:         flashX 2s ; /* IE 10+ */		
 	}
-
-	@-webkit-keyframes flashX {
-		from { background-color: ${(props: TrProps) => props.color}; }
-		to { background-color: transparent; }
-	  }
-	  @-moz-keyframes flashX {
-		from { background-color: ${(props: TrProps) => props.color}; }
-		to { background-color: transparent; }
-	  }
-	  @-o-keyframes flashX {
-		from { background-color: ${(props: TrProps) => props.color}; }
-		to { background-color: transparent; }
-	  }
-	  @keyframes flashX {
-		from { background-color: ${(props: TrProps) => props.color}; }
-		to { background-color: transparent; }
-	  }
-	
 `;

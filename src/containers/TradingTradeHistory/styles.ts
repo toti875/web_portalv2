@@ -71,10 +71,10 @@ export const MarketHistory = styled.div`
 		font-weight: 300;
 		height: 100%;
 		&__negative {
-			color: #ef5350;
+			color: red;
 		}
 		&__positive {
-			color: #13b887;
+			color: green;
 		}
 		.td-table-container {
 			padding-top: 10px;
