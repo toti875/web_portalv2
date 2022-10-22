@@ -281,7 +281,7 @@ const OrderBookContainer = props => {
 							</Col>
 						</div>
 						{tabState === 'all' || tabState === 'buy' ? (
-							<table className={classNameTableReverse}>
+							<table className={classNameTable}>
 								<tbody>{getAsksElm()}</tbody>
 							</table>
 						) : null}

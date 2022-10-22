@@ -16,6 +16,8 @@ export const pt = {
 	'page.body.trading.header.orderBook.header.title.price': 'Preço unitário',
 	'page.body.trading.header.orderBook.header.title.amount': 'Qtd.',
 	'page.body.trading.header.orderBook.header.title.sum': 'Vol financeiro',
+
+	
 	/**Vote */
 	'page.body.vote.msg.success': 'Vote success',
 	'page.body.vote.msg.fail': 'Vote fail',

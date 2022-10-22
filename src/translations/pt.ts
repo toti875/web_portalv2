@@ -938,7 +938,12 @@ export const pt = {
 	'BTC': 'BTC',
 	'page.marketsLists.markets.all': 'Todos',
 	'page.marketsLists.input.search.placeholder': 'Procurar',
-
+/**Order History in Tradding page */
+'page.body.trade.header.orderHistory': 'Histórico de ordens',
+/**OrderBook */
+'page.body.trading.header.orderBook.header.title.price': 'Preço unitário',
+'page.body.trading.header.orderBook.header.title.amount': 'Qtd.',
+'page.body.trading.header.orderBook.header.title.sum': 'Vol financeiro',
 
 	...nationalitiesNames,
 	...customTranslations,
