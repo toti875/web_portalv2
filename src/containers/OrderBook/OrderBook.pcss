@@ -271,27 +271,77 @@
 	}
 }
 
-@-webkit-keyframes pisca3 {
-	from { background-color: #13887 ; }
+@-webkit-keyframes flash_red {
+	from { background-color: #ef5350  ; }
 	to { background-color: transparent; }
   }
-  @-moz-keyframes pisca3 {
-	from { background-color: #13b887 ; }
+  @-moz-keyframes flash_red {
+	from { background-color: #ef5350  ; }
 	to { background-color: transparent; }
   }
-  @-o-keyframes pisca3 {
-	from { background-color: #13b887 ; }
+  @-o-keyframes flash_red {
+	from { background-color: #ef5350  ; }
 	
 	to { background-color: transparent; }
   }
-  @keyframes pisca3 {
+  @keyframes flash_red {
+	from { background-color: #ef5350 ; }
+	to { background-color: transparent; }
+  }
+
+
+@-webkit-keyframes flash_green {
+	from { background-color: #13b887 ; }
+	to { background-color: transparent; }
+  }
+  @-moz-keyframes flash_green {
+	from { background-color: #13b887 ; }
+	to { background-color: transparent; }
+  }
+  @-o-keyframes flash_green {
+	from { background-color: #13b887 ; }
+	to { background-color: transparent; }
+  }
+  @keyframes flash_green {
 	from { background-color: #13b887; }
 	to { background-color: transparent; }
   }
 
-  .pisca3 {
-  -webkit-animation: pisca3 2s ; /* Safari 4+ */
-  -moz-animation:    pisca3 2s ; /* Fx 5+ */
-  -o-animation:      pisca3 2s ; /* Opera 12+ */
-  animation:         pisca3 2s ; /* IE 10+ */
-}
+  @-webkit-keyframes flashX {
+	from { background-color: #FDA736; }
+	to { background-color: transparent; }
+  }
+  @-moz-keyframes flashX {
+	from { background-color: #FDA736; }
+	to { background-color: transparent; }
+  }
+  @-o-keyframes flashX {
+	from { background-color: #FDA736; }
+	to { background-color: transparent; }
+  }
+  @keyframes flashX {
+	from { background-color: #FDA736; }
+	to { background-color: transparent; }
+  }
+
+  .flash_green {
+	-webkit-animation: flash_green 2s ; /* Safari 4+ */
+	-moz-animation:    flash_green 2s ; /* Fx 5+ */
+	-o-animation:      flash_green 2s ; /* Opera 12+ */
+	animation:         flash_green 2s ; /* IE 10+ */
+  }
+
+  .flash_red {
+	-webkit-animation: flash_red 2s ; /* Safari 4+ */
+	-moz-animation:    flash_red 2s ; /* Fx 5+ */
+	-o-animation:      flash_red 2s ; /* Opera 12+ */
+	animation:         flash_red 2s ; /* IE 10+ */
+  }
+
+  .flashX {
+	-webkit-animation: flashX 2s ; /* Safari 4+ */
+	-moz-animation:    flashX 2s ; /* Fx 5+ */
+	-o-animation:      flashX 2s ; /* Opera 12+ */
+	animation:         flashX 2s ; /* IE 10+ */
+  }
+

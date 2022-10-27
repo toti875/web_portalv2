@@ -97,6 +97,9 @@ import {
 	DocumentationScreen,
 } from '../../screens';
 
+//import {WalletsScreen} from '../../v2/src/screens/WalletsScreen';
+
+
 //import {SignInScreen} from '../../v2/src/screens/SignInScreen'
 //import { LogInScreen } from '../../screens/LogInScreen'
 
@@ -524,14 +527,14 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					{/* <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={ProfileScreen} /> */}
 					{/* NEW Profile Page */}
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/account/settings" component={Default} />
-					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/account/wallets" component={Default} />
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets" component={WalletsScreen} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/profile/settings" component={Default} />
 					
 
 
 					{/*Profile Test Page */}
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/pages/profile/overview" component={Default} />
-					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets" exact component={WalletListScreen} />					
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets2" exact component={WalletListScreen} />					
 					
 					<PrivateRoute
 						loading={userLoading}
