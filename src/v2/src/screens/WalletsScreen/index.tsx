@@ -49,6 +49,8 @@ import {
     walletsWithdrawCcyFetch,
 } from '../../modules';
 
+import './WalletsScreen.pcss';
+
 
 interface ReduxProps {
     user: User;
