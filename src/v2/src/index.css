@@ -546,6 +546,8 @@
     ================================== */
   --order-book-table-text-color: var(--primary-text-color);
   --order-book-last-market-price-subtitle: var(--cta-contrast-level-4);
+
+  
   --order-book-last-market-price-border-color: var(--divider-color-level-2);
 }
 .btn-primary {

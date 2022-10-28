@@ -4,6 +4,7 @@
   align-items: flex-start !important;
   border-radius: var(--gap);
   display: flex;
+  flex-direction: row !important;
   justify-content: flex-start;
   margin-top: calc(var(--gap) * 2) !important;
   max-width: 820px !important;
@@ -701,3 +702,373 @@
     }
   }
 }
+
+.pg-estimated-value {
+	background: transparent;
+	display: flex;
+	direction: column;
+  }.pg-estimated-value__container {
+	  font-size: 12.5px;
+	  padding: 10px 5px;
+	  width: 360px;
+	}.pg-estimated-value__container .value-container {
+		margin-left: 0.5em;
+		margin-left: var(--gap);
+		vertical-align: middle;
+	  }.pg-estimated-value__container .value-container .value {
+		  color: white;
+		  font-weight: 400;
+		}.pg-estimated-value__container .value-container .value-sign {
+		  background: none;
+		  border-radius: 10%;
+		  color: white;
+		  margin-left: 0.5em;
+		  margin-left: var(--gap);
+		  padding: 3px;
+		}.pg-wallet {
+  align-items: flex-start !important;
+  border-radius: 0.5em;
+  border-radius: var(--gap);
+  display: flex;
+  justify-content: flex-start;
+  margin-top: calc(0.5em * 2) !important;
+  margin-top: calc(var(--gap) * 2) !important;
+  max-width: 920px !important;
+  padding: 0 0 calc(0.5em * 2) !important;
+  padding: 0 0 calc(var(--gap) * 2) !important;
+}.pg-wallet .text-center {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    margin-top: calc(0.5em * 8);
+    margin-top: calc(var(--gap) * 8);
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+  }.pg-wallet .pg-wallet__loading {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+  }.pg-wallet .cr-crypto-icon {
+    color: var(--primary-text-color);
+    opacity: 1;
+  }.pg-wallet .cr-crypto-icon img {
+      margin-right: calc(0.5em * 2);
+      margin-right: calc(var(--gap) * 2);
+      width: 64px;
+    }.pg-wallet .cr-wallet-list {
+    background-color: var(--wallets-item-background-color);
+    margin-bottom: 0;
+    margin-top: 0;
+    overflow: hidden;
+  }.pg-wallet .cr-wallet-list li {
+      padding: 0 !important;
+    }.pg-wallet .cr-wallet-list li:last-child .cr-wallet-item {
+          border-bottom: 0.5px solid var(--wallets-item-border-color);
+        }.pg-wallet .cr-wallet-list .cr-wallet-item {
+      border-color: var(--wallets-item-border-color);
+      border-radius: 0;
+      color: var(--wallets-item-font);
+    }.pg-wallet .cr-wallet-list .cr-wallet-item:hover {
+        background: var(--wallets-item-background-color-hover);
+      }.pg-wallet .cr-wallet-list .cr-wallet-item__info {
+        align-items: center;
+      }.pg-wallet .cr-wallet-list .cr-wallet-item__info .cr-wallet-item__image-icon {
+          margin-left: calc(0.5em * 2);
+          margin-left: calc(var(--gap) * 2);
+          margin-right: calc(0.5em * 1.5);
+          margin-right: calc(var(--gap) * 1.5);
+          max-height: calc(0.5em * 4.5);
+          max-height: calc(var(--gap) * 4.5);
+        }.pg-wallet .cr-wallet-list .cr-wallet-item__description {
+        background: transparent;
+      }.pg-wallet .cr-wallet-list .cr-wallet-item__description span {
+          color: var(--primary-text-color);
+        }.pg-wallet .cr-wallet-list .cr-wallet-item__description span:nth-child(1) {
+            opacity: 0.5;
+          }.pg-wallet .cr-wallet-list .cr-wallet-item__description span:nth-child(2) {
+            color: var(--wallets-locked-amount);
+            font-size: calc(0.5em * 1.9);
+            font-size: calc(var(--gap) * 1.9);
+            font-weight: normal;
+            margin-top: calc(0.5em * 0.6);
+            margin-top: calc(var(--gap) * 0.6);
+            opacity: 0.3;
+          }.pg-wallet .cr-wallet-list .cr-wallet-item__amount-locked {
+        color: var(--wallets-locked-amount);
+        font-size: calc(0.5em * 1.9);
+        font-size: calc(var(--gap) * 1.9);
+        opacity: 0.6;
+        padding-top: calc(0.5em * 0.6);
+        padding-top: calc(var(--gap) * 0.6);
+      }.pg-wallet .cr-wallet-list .cr-wallet-item__amount-locked path {
+          fill: var(--primary-text-color);
+        }.pg-wallet .cr-wallet-list .cr-wallet-item__icon {
+        margin-left: calc(0.5em * 2);
+        margin-left: calc(var(--gap) * 2);
+        margin-right: calc(0.5em * 1.5);
+        margin-right: calc(var(--gap) * 1.5);
+        min-width: 23px; /* update after changing icon lib */
+      }.pg-wallet .cr-wallet-list .cr-wallet-item__balance {
+        font-weight: normal;
+        opacity: 0.5;
+      }.pg-wallet .cr-wallet-list .cr-wallet-item--active {
+        background-color: var(--wallets-item-background-color-active);
+        border: none;
+        color: var(--wallets-item-font-active);
+        outline: none;
+      }.pg-wallet .cr-wallet-list .cr-wallet-item--active:hover {
+          background: var(--wallets-item-background-color-active);
+        }.pg-wallet .cr-wallet-list .cr-wallet-item--active .cr-crypto-icon {
+          color: var(--primary-text-color);
+          opacity: 1;
+        }.pg-wallet .cr-wallet-list .cr-wallet-item--active .cr-wallet-item__amount-locked {
+          color: var(--wallets-item-font-active);
+          opacity: 1;
+        }.pg-wallet .cr-wallet-list .cr-wallet-item--active .cr-wallet-item__amount-locked path {
+            fill: var(--primary-text-color);
+          }.pg-wallet .cr-wallet-list .cr-wallet-item--active .cr-wallet-item__description span {
+            opacity: 1;
+          }.pg-wallet .cr-wallet-list .cr-wallet-item--active .cr-wallet-item__balance {
+          opacity: 1;
+        }.pg-wallet .cr-wallet-list .cr-wallet-item--active div {
+          margin-right: auto;
+        }.pg-wallet .cr-wallet-list .cr-wallet-item--active::before {
+          background-color: var(--primary-cta-color);
+          border-bottom-left-radius: calc(0.5em * 0.66);
+          border-bottom-left-radius: calc(var(--gap) * 0.66);
+          border-top-left-radius: calc(0.5em * 0.66);
+          border-top-left-radius: calc(var(--gap) * 0.66);
+          content: '';
+          height: calc(0.5em * 9);
+          height: calc(var(--gap) * 9);
+          width: 4px;
+        }.pg-wallet .pg-wallet__tabs {
+    background: var(--tab-pabel-background-color);
+    border-left: 1px solid var(--wallets-item-border-color);
+  }.pg-wallet .cr-withdraw {
+    color: var(--table-text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: calc(0.5em * 5) calc(0.5em * 3) calc(0.5em * 3);
+    padding: calc(var(--gap) * 5) calc(var(--gap) * 3) calc(var(--gap) * 3);
+  }.pg-wallet .cr-withdraw-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }.pg-wallet .cr-withdraw-column:nth-child(1) {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }.pg-wallet .cr-withdraw-column:nth-child(1) form:nth-child(1) {
+          margin-top: 0;
+          width: 100%;
+        }.pg-wallet .cr-withdraw-column:nth-child(1) form {
+          margin-top: 20px;
+          width: 48%;
+        }.pg-wallet .cr-withdraw-column:nth-child(2) {
+        align-items: center;
+        flex-direction: row;
+        padding-top: 20px;
+      }.pg-wallet .cr-withdraw-column:nth-child(2) div:nth-child(1) {
+          flex-grow: 2;
+        }.pg-wallet .cr-withdraw__group__address,
+    .pg-wallet .cr-withdraw__group__amount,
+    .pg-wallet .cr-withdraw__group__code {
+      background: transparent;
+      margin-bottom: calc(0.5em * 1.83);
+      margin-bottom: calc(var(--gap) * 1.83);
+      position: relative;
+      width: 100%;
+    }.pg-wallet .cr-withdraw__group__address .cr-withdraw__label, .pg-wallet .cr-withdraw__group__amount .cr-withdraw__label, .pg-wallet .cr-withdraw__group__code .cr-withdraw__label {
+        background: var(--input-background-color);
+        border-radius: calc(0.5em * 0.33);
+        border-radius: calc(var(--gap) * 0.33);
+        left: calc(0.5em * 1.66);
+        left: calc(var(--gap) * 1.66);
+        padding: calc(0.5em * 0.33) 0.5em;
+        padding: calc(var(--gap) * 0.33) var(--gap);
+        position: absolute;
+        top: 0;
+      }.pg-wallet .cr-withdraw__group__address .custom-input, .pg-wallet .cr-withdraw__group__amount .custom-input, .pg-wallet .cr-withdraw__group__code .custom-input {
+        margin-top: 10px;
+      }.pg-wallet .cr-withdraw__group__amount,
+    .pg-wallet .cr-withdraw__group__code {
+      width: 50%;
+    }.pg-wallet .cr-withdraw__group__amount .custom-input label, .pg-wallet .cr-withdraw__group__code .custom-input label {
+          margin-top: 0;
+        }.pg-wallet .cr-withdraw__group__amount .custom-input:focus-within label, .pg-wallet .cr-withdraw__group__code .custom-input:focus-within label {
+            color: var(--input-legend-color-active) !important;
+          }.pg-wallet .cr-withdraw__group__amount .custom-input label {
+          margin-top: 2px;
+        }.pg-wallet .cr-withdraw__group__code {
+      width: 45%;
+    }.pg-wallet .cr-withdraw__group__code .cr-withdraw__input input[type=number]::-webkit-inner-spin-button,
+        .pg-wallet .cr-withdraw__group__code .cr-withdraw__input input[type=number]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }.pg-wallet .cr-withdraw__group__address--focused .cr-withdraw__label, .pg-wallet .cr-withdraw__group__amount--focused .cr-withdraw__label, .pg-wallet .cr-withdraw__group__code--focused .cr-withdraw__label {
+        color: var(--input-legend-color-active) !important;
+      }.pg-wallet .cr-withdraw__group__address--focused input, .pg-wallet .cr-withdraw__group__amount--focused input, .pg-wallet .cr-withdraw__group__code--focused input {
+        border-color: var(--input-border-color-active) !important;
+      }.pg-wallet .cr-withdraw__divider {
+      background-color: var(--divider-color-level-2);
+      display: none;
+      margin-left: calc(0.5em * 3.49);
+      margin-left: calc(var(--gap) * 3.49);
+    }.pg-wallet .cr-withdraw__divider-two {
+        height: calc(0.5em * 12);
+        height: calc(var(--gap) * 12);
+        position: absolute;
+      }.pg-wallet .cr-withdraw__deep {
+      width: calc(0.5em * 18.5);
+      width: calc(var(--gap) * 18.5);
+    }.pg-wallet .cr-tab {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    cursor: pointer;
+    font-size: calc(0.5em * 2.6);
+    font-size: calc(var(--gap) * 2.6);
+  }.pg-wallet .cr-tab__active {
+      background: transparent;
+      border-bottom: 1px solid var(--tab-panel-border-color-active);
+    }.pg-wallet .cr-copyable-text-field__disabled .cr-deposit-crypto__copyable fieldset:focus-within {
+            border-color: var(--input-border-color-active);
+          }.pg-wallet .cr-copyable-text-field__disabled .cr-deposit-crypto__copyable fieldset:focus-within legend {
+              color: var(--input-legend-color-active);
+            }.pg-wallet .cr-copyable-text-field__disabled .cr-deposit-crypto__copyable .cr-deposit-crypto__copyable-area {
+          border: 1px solid var(--input-border-color);
+        }.pg-wallet .cr-copyable-text-field__disabled .cr-deposit-crypto__copyable .cr-deposit-crypto__copyable-area .custom-input .input-group {
+              border: none;
+            }.pg-wallet .cr-copyable-text-field__disabled .cr-deposit-crypto__copyable .cr-deposit-crypto__copyable-area .custom-input label {
+              margin-top: -10px;
+            }.pg-wallet .cr-tab-panel__navigation-container {
+    background: var(--tab-panel-background-color);
+    border-bottom: 1px solid var(--tab-panel-border-line-color);
+    border-radius: 0;
+    margin-bottom: 0;
+  }.pg-wallet .cr-tab-panel__navigation-container-navigation {
+      box-shadow: none;
+      padding-bottom: 0;
+    }.pg-wallet .cr-tab-content {
+    background: var(--body-background-color);
+    border-bottom-left-radius: calc(0.5em * 0.5);
+    border-bottom-left-radius: calc(var(--gap) * 0.5);
+    border-bottom-right-radius: calc(0.5em * 0.5);
+    border-bottom-right-radius: calc(var(--gap) * 0.5);
+    display: none;
+    padding: calc(0.5em * 5) calc(0.5em * 2) 0;
+    padding: calc(var(--gap) * 5) calc(var(--gap) * 2) 0;
+  }.pg-wallet .cr-tab-content__active {
+      display: flex;
+    }.pg-wallet .cr-tab-content .pg-blur-deposit-crypto {
+      height: 120px;
+      margin-left: -10px;
+      margin-top: 94px;
+      width: calc(100% - 10px);
+    }.pg-wallet .cr-tab-content .pg-blur-deposit-crypto .pg-blur__content__text {
+        max-width: 180px;
+      }.pg-wallet .cr-tab-content .pg-blur-deposit-crypto--active {
+        height: 245px;
+      }.pg-wallet .cr-tab-content .pg-blur-deposit-fiat,
+    .pg-wallet .cr-tab-content .pg-blur-withdraw {
+      height: 600px;
+      margin-left: -10px;
+      margin-top: 94px;
+      width: calc(100% - 10px);
+    }.pg-wallet .cr-tab-content .pg-blur-deposit-fiat .pg-blur__content__text, .pg-wallet .cr-tab-content .pg-blur-withdraw .pg-blur__content__text {
+        max-width: 180px;
+      }.pg-wallet .cr-tab-content .pg-blur-withdraw {
+      height: 370px;
+    }.pg-wallet .cr-wallet-item {
+    background: var(--body-background-color);
+    border-bottom: 1px solid var(--wallets-item-border-color);
+    border-radius: calc(0.5em * 0.5);
+    border-radius: calc(var(--gap) * 0.5);
+    box-shadow: 0 0 2px var(--shadow-color-level-1);
+    box-sizing: border-box;
+    color: var(--primary-text-color);
+    cursor: pointer;
+    font-size: calc(0.5em * 2.66);
+    font-size: calc(var(--gap) * 2.66);
+    height: calc(0.5em * 9);
+    height: calc(var(--gap) * 9);
+  }.pg-wallet .cr-wallet-item > * {
+      background: transparent;
+    }.pg-wallet .cr-wallet-item__icon {
+      margin-left: calc(0.5em * 1.5);
+      margin-left: calc(var(--gap) * 1.5);
+      margin-right: calc(0.5em * 3);
+      margin-right: calc(var(--gap) * 3);
+    }.pg-wallet .cr-wallet-item__icon,
+    .pg-wallet .cr-wallet-item__icon-code {
+      flex-grow: 1;
+      margin-left: calc(0.5em * 0.6);
+      margin-left: calc(var(--gap) * 0.6);
+    }.pg-wallet .cr-wallet-item__icon img, .pg-wallet .cr-wallet-item__icon-code img {
+        background: transparent;
+        opacity: 0.5;
+        width: 32px;
+      }.pg-wallet .cr-wallet-item__amount-locked {
+      background: none;
+    }.pg-wallet .cr-wallet-item__amount-locked-icon {
+        display: inline-block;
+        margin-right: calc(0.5em * 1);
+        margin-right: calc(var(--gap) * 1);
+      }.pg-wallet .cr-wallet-item--active {
+      background: rgv(var(--primary-cta-color));
+      border-radius: calc(0.5em * 0.66);
+      border-radius: calc(var(--gap) * 0.66);
+      outline: none;
+    }.pg-wallet .cr-wallet-item--active .cr-wallet-item__icon,
+      .pg-wallet .cr-wallet-item--active .cr-wallet-item__icon-code {
+        background: transparent;
+        color: var(--wallet-item-active-color);
+      }.pg-wallet .cr-wallet-item--active .cr-wallet-item__icon img, .pg-wallet .cr-wallet-item--active .cr-wallet-item__icon-code img {
+          background: transparent;
+          opacity: 1;
+          width: 32px;
+        }.pg-wallet .pg-wallet__tabs-content {
+    background: var(--body-background-color);
+    display: flex;
+    min-height: 600px;
+    width: 100%;
+  }.pg-wallet .cr-search {
+    display: none;
+  }.pg-wallet .cr-wallet-item__balance {
+    margin-right: calc(0.5em * 3);
+    margin-right: calc(var(--gap) * 3);
+  }.pg-wallet__error {
+    color: var(--system-red);
+    font-size: 1.2rem;
+    margin-left: calc(0.5em * 4);
+    margin-left: calc(var(--gap) * 4);
+  }.pg-wallet__otp-code {
+    margin-left: calc(0.5em * 5);
+    margin-left: calc(var(--gap) * 5);
+  }.pg-wallet__otp-code label {
+      color: var(--secondary-contrast-cta-color);
+      display: block;
+    }.pg-wallet__otp-code .cr-input {
+      border-bottom: 1px solid var(--input-border-color);
+      display: block;
+      width: calc(0.5em * 20);
+      width: calc(var(--gap) * 20);
+    }.pg-wallet__otp-code .cr-input input {
+        color: var(--input-text-color);
+        font-size: 1.2rem;
+        padding: 0.5em 0;
+        padding: var(--gap) 0;
+        text-align: left;
+        width: 100%;
+      }.pg-wallet__enable-2fa-message {
+    font-size: calc(0.5em * 3);
+    font-size: calc(var(--gap) * 3);
+    text-align: center;
+  }
+

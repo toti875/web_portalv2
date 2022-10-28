@@ -2,6 +2,8 @@ import React, { useCallback } from 'react';
 import { Wallet } from '../../modules';
 import { WalletItem } from '../WalletItem';
 
+import './WalletList.pcss';
+
 export interface WalletListProps {
     walletItems: Wallet[];
     activeIndex: number;

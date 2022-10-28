@@ -19,6 +19,8 @@ import {
 } from '../../../modules';
 import { Market, Ticker } from '../../../modules/public/markets';
 
+import './EstimatedValue.pcss';
+
 interface EstimatedValueProps {
     wallets: Wallet[];
 }

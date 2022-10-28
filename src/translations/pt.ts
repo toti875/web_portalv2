@@ -108,8 +108,8 @@ export const pt = {
 	'page.body.wallets.tabs.deposit.ccy.message.button': 'Copiar endereço',
 	'page.body.wallets.tabs.deposit.ccy.message.success': 'Endereço copiado',
 	'page.body.wallets.tabs.deposit.ccy.message.error': 'Gerando endereço de depósito',
-	'page.body.wallets.tabs.deposit.ccy.button.generate': 'Gerar endereço ',
-	'page.body.wallets.tabs.deposit.ccy.button.address': 'Endereço',
+	'page.body.wallets.tabs.deposit.ccy.button.generate': 'Gerar endereço para depósito de ',
+	'page.body.wallets.tabs.deposit.ccy.button.address': ' ',
 	'page.body.wallets.tabs.deposit.ccy.message.submit': 'Faça seu depósito utilizando o endereço de carteira abaixo ou utilize o QR Code gerado. Seu depósito será creditado após {confirmations} confirmações de rede',
 	'page.body.wallets.tabs.deposit.ccy.message.pending': 'Gerando endereço de depósito',
 

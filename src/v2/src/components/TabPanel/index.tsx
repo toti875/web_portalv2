@@ -2,6 +2,8 @@ import classnames from 'classnames';
 import * as React from 'react';
 import { DropdownComponent } from '../Dropdown';
 
+import './TabPanel.pcss';
+
 export enum HideMode {
     hide = 'hide',
     unmount = 'unmount',

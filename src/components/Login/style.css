@@ -94,7 +94,7 @@
 .forgot-pass:hover a{
   text-decoration: underline;
 }
-
+/*
 .btn-primary {
   margin: 15px 0;
   width: 100%;
@@ -109,14 +109,14 @@
 
 }
 
-.btn-primary:focus{
+.btn-primary-signin:focus{
   color: #3498db !important;
   background: #dde1e7 !important;
   box-shadow: inset 2px 2px 5px #babecc,
               inset -5px -5px 10px #ffffff73;
 }
 
-.btn-primary:enabled{
+.btn-primary-signin:enabled{
 	background: #dde1e7 !important;
 	color: #1EBDB2 !important;
 	
@@ -124,7 +124,7 @@
 	-5px -5px 10px #ffffff73;
   }
 
-
+*/
   
 
 .signup{

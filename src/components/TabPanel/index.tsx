@@ -1,6 +1,6 @@
 import classnames from 'classnames';
 import * as React from 'react';
-
+import './TabPanel.pcss'
 export enum HideMode {
 	hide = 'hide',
 	unmount = 'unmount',

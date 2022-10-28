@@ -1,6 +1,6 @@
 import * as Sentry from '@sentry/browser';
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {  WrappedComponentProps } from 'react-intl';

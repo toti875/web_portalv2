@@ -3,6 +3,8 @@ import * as React from 'react';
 import { Button } from 'react-bootstrap';
 import { NewCopyableTextField } from '..';
 import { QRCode } from '../QRCode';
+
+import './DepositCrypto.pcss';
 /* import { isMobile } from 'react-device-detect'; */
 
 export interface DepositCryptoProps {
@@ -110,9 +112,16 @@ const DepositCrypto: React.FunctionComponent<DepositCryptoProps> = (props: Depos
 		return (
 			<div className="cr-deposit-crypto__create">
 				<div className="cr-deposit-crypto__create-btn">
-					<Button block={true} type="button" onClick={handleGenerateAddress} size="lg" variant="primary">
-						{buttonLabel ? buttonLabel : 'Generate deposit address'}
-					</Button>
+	
+
+					<button className='btn-default btn-icon icon-btn-wrap'  onClick={handleGenerateAddress}> 
+						<span>{buttonLabel ? buttonLabel : 'Gerar endereço de depósito'}</span> 
+					</button> 
+					</div>
+					<div> 
+					<button className='btn-Options'  onClick={handleGenerateAddress}> 
+						<span style={{fontSize: '16px'}}>{buttonLabel ? buttonLabel : 'Gerar endereço de depósito'}</span> 
+					</button> 
 				</div>
 			</div>
 		);

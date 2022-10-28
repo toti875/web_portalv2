@@ -16,7 +16,10 @@ import {
 	selectAllChildCurrencies,
 } from '../../modules';
 import NP from 'number-precision';
+import './WalletListScreen.pcss'
 NP.enableBoundaryChecking(false); // default param is true
+
+
 
 export interface WalletItem {
 	key: string;
