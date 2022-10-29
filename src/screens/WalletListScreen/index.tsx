@@ -16,7 +16,7 @@ import {
 	selectAllChildCurrencies,
 } from '../../modules';
 import NP from 'number-precision';
-import './WalletListScreen.pcss'
+//import './WalletListScreen.pcss'
 NP.enableBoundaryChecking(false); // default param is true
 
 

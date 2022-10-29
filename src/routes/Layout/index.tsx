@@ -535,8 +535,8 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/profile/settings" component={Default} />
 					
 					{/*Wallets*/}
-					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets" exact component={WalletsScreen} />
-					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets2" exact component={WalletListScreen} />					
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets" component={WalletsScreen} />
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets2" component={WalletListScreen} />					
 					
 					{/*Profile Test Page */}
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/pages/profile/overview" component={Default} />
@@ -554,13 +554,6 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 						component={WithdrawScreen}
 					/>
 
-<PrivateRoute
-						loading={userLoading}
-						isLogged={isLoggedIn}
-						path="/wallets2"
-						exact
-						component={WalletsScreen}
-					/>
 
 <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/security/2fa" component={ProfileTwoFactorAuthScreen} />
 

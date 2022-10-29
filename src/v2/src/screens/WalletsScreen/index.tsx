@@ -49,7 +49,7 @@ import {
     walletsWithdrawCcyFetch,
 } from '../../modules';
 
-//import './WalletsScreen.pcss';
+import './WalletsScreen.pcss';
 
 
 interface ReduxProps {
