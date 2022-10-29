@@ -59,7 +59,7 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress) => {
 							<FaPhoneAlt className="footer__info__item__icon" /> (11) - 3000-2022
 						</p>
 						<p className="footer__info__item">
-							<FaEnvelope className="footer__info__item__icon" /> contato@fortem-one.com
+							<FaEnvelope className="footer__info__item__icon" /> contato@fortem1.com.br
 						</p>
 					</div>
 
@@ -99,7 +99,7 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress) => {
 								Enviar
 							</span>
 						</div>
-						<br />
+				
 						<p className="footer__news__title">REDES SOCIAIS</p>
 						<div className="footer__news__list-icon ">
 							<div className="footer__news__list-icon__item  ">
@@ -132,7 +132,7 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress) => {
 				<div className="fortem-line"></div>
 
 				<p className="footer__copyright">
-					<img src={fortemIcon} style={{width: '13px', marginTop: '-2px'}}/>Fortem ONE Ltda © 2022 Copyright : <a href="https://fortem-one.com/"> fortem-one.com </a> | | Fortem Technologies Inc © 2018 - 2022 Copyright : <a href="https://fortem-one.tech/"> fortem-one.tech </a> 
+					<img src={fortemIcon} style={{width: '13px', marginTop: '-2px'}}/>Fortem ONE S.A. © 2022 Copyright : <a href="https://www.fortem1.com.br"> fortem1.com.br </a> | | Fortem Technologies Inc © 2018 - 2022 Copyright : <a href="https://www.fortem-one.tech/"> fortem-one.tech </a> 
 				</p>
 			</div>
 		</div>
