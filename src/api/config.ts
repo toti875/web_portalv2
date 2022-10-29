@@ -1,7 +1,7 @@
 import { DEFAULT_KYC_STEPS, ORDER_BOOK_DEFAULT_SIDE_LIMIT, STORAGE_DEFAULT_LIMIT } from '../constants';
 
 export const defaultConfig: Config = {
-	/*
+	
 		api: {
 		authzURL: 'http://localhost:9002/api/v2/barong',
 		switchURL: 'http://localhost:9002/v2/applogic',
@@ -12,7 +12,7 @@ export const defaultConfig: Config = {
 		downstreamURL: 'ws://local.fortem-financia.io:9003/api/public/',
 	},
 
-	*/
+	/*
 	api: {
 		authzURL: 'https://www.fortem1.com.br/api/v2/barong',
 		switchURL: 'https://www.fortem1.com.br/api/v2/applogic',
@@ -22,7 +22,7 @@ export const defaultConfig: Config = {
 		infoURL: 'https://www.fortem1.com.br/api/v2/peatio',
 		downstreamURL: 'wss://www.fortem1.com.br/api/public/',
 	},
-
+	*/
 	minutesUntilAutoLogout: '60',
 	rangerReconnectPeriod: '1', 
 	withCredentials: false,
