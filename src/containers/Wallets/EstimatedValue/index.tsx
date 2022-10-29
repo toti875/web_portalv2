@@ -21,6 +21,7 @@ import { rangerConnectFetch, RangerConnectFetch } from '../../../modules/public/
 import { RangerState } from '../../../modules/public/ranger/reducer';
 import { selectRanger } from '../../../modules/public/ranger/selectors';
 
+
 interface EstimatedValueProps {
 	wallets: WalletItemProps[];
 	hello: string;

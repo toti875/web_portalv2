@@ -118,7 +118,10 @@ import NFT from "../../template_react_ft_axies/src/pages/Home01";
 
 import FAQ from "../../screens/FortemFAQ/FAQ";
 
-import Status from "../../template_react_status/src/components/App"
+import Status from "../../template_react_status/src/components/App";
+
+import spinerLoading from './spinerLoading.gif';
+
 
 
 
@@ -162,7 +165,8 @@ export type LayoutProps = ReduxProps & DispatchProps & LocationProps & IntlProps
 
 const renderLoader = () => (
 	<div className="pg-loader-container">
-		<Spinner animation="border" variant="primary" />
+		{/*<Spinner animation="border" variant="primary" />*/}
+		<img src={spinerLoading} style={{width: '32px', margin: '0 auto'}}></img>
 	</div>
 );
 
@@ -262,8 +266,8 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 			configsLoading,
 			platformAccessStatus,
 		} = this.props;
-		//const tradingCls = location.pathname.includes('/market') ? 'trading-layout' : '';
-		//toggleColorTheme(colorTheme);
+		const tradingCls = location.pathname.includes('/market') ? 'trading-layout' : '';
+		toggleColorTheme(colorTheme);
 
 		if (configsLoading && !platformAccessStatus.length) {
 			return renderLoader();

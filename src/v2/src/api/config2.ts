@@ -27,7 +27,7 @@ export const defaultConfig2: Config2 = {
         defaultStorageLimit: '50',
         orderBookSideLimit: '25'
     },
-    languages: ['en', 'ru'],
+    languages: ['pt', 'ru'],
     kycSteps: [
         'email',
         'phone',

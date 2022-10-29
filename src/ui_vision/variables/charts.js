@@ -1824,8 +1824,8 @@ export const donutChartOptionsCharts1 = {
 export const donutChartDataCharts1 = [50, 15, 10, 20, 5];
 
 export const pieChartOptionsCharts1 = {
-  labels: ["Tokens", "Cripto", "Reais"],
-  colors: ["#582CFF", "#3F1AD1",  "#1EDED0"],
+  labels: ["BTC", "ETH", "FTK"],
+  colors: ["##009991", "#18988F",  "#1EDED0"],
   chart: {
     width: "100%",
     stroke: {

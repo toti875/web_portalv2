@@ -2,7 +2,7 @@ import * as React from 'react';
 import { injectIntl } from 'react-intl';
 import { connect, MapDispatchToPropsFunction } from 'react-redux';
 import { IntlProps } from '../../../';
-import { formatWithSeparators } from '../../../components';
+import { formatWithSeparators, WalletItem } from '../../../components';
 import { VALUATION_PRIMARY_CURRENCY, VALUATION_SECONDARY_CURRENCY } from '../../../constants';
 import { estimateUnitValue, estimateValue } from '../../../helpers/estimateValue';
 import {
@@ -16,8 +16,13 @@ import {
     selectMarketTickers,
     selectUserLoggedIn,
     Wallet,
+    
 } from '../../../modules';
 import { Market, Ticker } from '../../../modules/public/markets';
+
+
+import PieChart from '../../../../../ui_vision/components/Charts/PieChart'
+
 
 import './EstimatedValue.pcss';
 
@@ -96,10 +101,68 @@ class EstimatedValueContainer extends React.Component<Props> {
             tickers,
             wallets,
         } = this.props;
+
+        let formattedWallet = wallets.map((wallet: Wallet) => ({
+            ...wallet,
+            name: wallet.currency.toUpperCase(),
+            value: Number(wallet.balance),
+        }));
+
+        var sortedWallet = formattedWallet.sort((a,b) => 
+
+            b.value - a.value
+
+        );
+
+        const pieChartOptionsCharts = {
+            labels: [sortedWallet[0].name, sortedWallet[1].name, sortedWallet[2].name],
+            colors: ["#009991", "#18988F",  "#1EDED0"],
+            chart: {
+              width: "100%",
+              stroke: {
+                show: false,
+              },
+            },
+            states: {
+              hover: {
+                filter: {
+                  type: "none",
+                },
+              },
+            },
+            legend: {
+              show: true,
+            },
+            stroke: {
+              show: false,
+            },
+            dataLabels: {
+              enabled: true,
+            },
+            hover: { mode: null },
+            plotOptions: {
+              donut: {
+                expandOnClick: true,
+                donut: {
+                  labels: {
+                    show: true,
+                  },
+                },
+              },
+            },
+            fill: {
+              colors: ["#009991", "#18988F",  "#1EDED0"],
+            },
+            tooltip: {
+              enabled: true,
+              theme: "dark",
+            },
+          };
         const estimatedValue = estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, wallets, markets, tickers);
 
+
         return (
-            <div className="pg-estimated-value">
+            <div className="pg-estimated-value-wallet">
                 <div className="pg-estimated-value__container">
                     {this.translate('page.body.wallets.estimated_value')}
                     <span className="value-container">
@@ -110,6 +173,13 @@ class EstimatedValueContainer extends React.Component<Props> {
                     </span>
                     {VALUATION_SECONDARY_CURRENCY && this.renderSecondaryCurrencyValuation(estimatedValue)}
                 </div>
+              {[sortedWallet[0].value, sortedWallet[1].value]}
+                <PieChart
+              
+              chartData={[sortedWallet[0].value, sortedWallet[1].value]}
+              
+              chartOptions={pieChartOptionsCharts}
+            />
             </div>
         );
     }

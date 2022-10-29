@@ -2838,18 +2838,29 @@
     font-size: 1.4rem;
     margin-top: 20px;
     padding: 10px 30px;
-}{/* wallets -> estimatedValue */}.pg-estimated-value {
-	background: #11223f;
+}{/* wallets -> estimatedValue */}
+.pg-estimated-value-wallet {
+	background: #1f1f1f;
 	border-radius: 10px;
 	display: flex;
 	padding-left: 38px;
+    max-width: 1200px;
+    font-size: 15px;
+    padding: 62px 5px 48px 5px;
+    
+    margin-top: 20px;
+    margin-left: 20px;
+
 }.pg-estimated-value__container {
-		font-size: 1rem;
+		font-size: 15px;
 		padding: 62px 5px 48px 5px;
-		width: 1024px;
+		width: 1200px;
+        margin-top: 20px;
+        margin-left: 20px;
+        
 	}.pg-estimated-value__container .value-container {
-			background: #0c1a32;
-			border-radius: 100px;
+			background: #1f1f1f;
+			border-radius: 10px;
 			margin-right: var(--gap);
 			padding: 10px 15px;
 			vertical-align: middle;
@@ -2864,23 +2875,23 @@
 				padding: 4px 10px;
 			}@media screen and (min-width: 340px) {
 		.pg-estimated-value__container {
-			font-size: 0.95em;
+			font-size: 16px;
 		}
 }@media screen and (min-width: 400px) {
 		.pg-estimated-value__container {
-			font-size: 1em;
+			font-size: 16px;
 		}
 }@media screen and (min-width: 600px) {
 		.pg-estimated-value__container {
-			font-size: 1.2em;
+			font-size: 16px;
 		}
 }@media screen and (min-width: 800px) {
 		.pg-estimated-value__container {
-			font-size: 1.2em;
+			font-size: 16px;
 		}
 }@media screen and (min-width: 1200px) {
 		.pg-estimated-value__container {
-			font-size: 1.3em;
+			font-size: 16px;
 		}
 }.cr-modal .cr-modal__container {
 		background: var(--body-background-color);
@@ -4108,7 +4119,7 @@ margin-left: 20px;
 }
 	}{/*   *** AUTENTICATED SUB-HEADER NAVBAR ***   */}.subheaderDesktop-screen {
 
-    background-color: #363944;
+    background-color: #1f1f1f;
   
 
 	height: 50px;
