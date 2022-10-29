@@ -11,7 +11,6 @@ import * as mobileTranslations from './mobile/translations';
 import { selectCurrentLanguage, selectMobileDeviceState } from './modules';
 import { languageMap } from './translations';
 import { ParallaxProvider } from 'react-scroll-parallax';
-import { Parallax } from 'react-scroll-parallax';
 
 
 const gaKey = gaTrackerKey();
@@ -77,9 +76,7 @@ const RenderDeviceContainers = () => {
             <CustomizationContainer/>
             <AlertsContainer/>
             <LayoutContainer/>
-			<Parallax rotateX={[-70, 0]} easing="easeInOutCirc">
-            	<FooterContainer/>
-			</Parallax>
+            <FooterContainer/>
 		</React.Fragment>
 	);
 };
