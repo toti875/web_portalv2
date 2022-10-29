@@ -24,7 +24,6 @@ import { Market, Ticker } from '../../../modules/public/markets';
 import PieChart from '../../../../../ui_vision/components/Charts/PieChart'
 
 
-//import './EstimatedValue.pcss';
 
 interface EstimatedValueProps {
     wallets: Wallet[];
