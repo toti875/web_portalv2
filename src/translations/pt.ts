@@ -94,6 +94,7 @@ export const pt = {
 	/* Wallets */
 	'page.body.wallets.estimated_value_dolar': 'Valor aproximado em Reais: ',
 	'page.body.wallets.estimated_value_btc': 'Valor aproximado em BTC: ',
+	'page.body.wallets.estimated_value': 'Patrimônio aproximado: ',
 
 	'page.body.wallets.locked': 'Saldo bloqueado (em uso)',
 	'page.body.wallets.balance': 'Disponível',

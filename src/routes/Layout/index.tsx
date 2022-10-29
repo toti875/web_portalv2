@@ -525,25 +525,24 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/orders" component={OrdersTabScreen} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/history" component={HistoryScreen} />
-					{/*<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/banner/authentication/confirm/basic" component={ConfirmBasic} />*/}
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/banner/authentication/confirm/basic" component={ConfirmBasic} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/confirm" component={ConfirmScreen} />
 					{/* OLD Profile Page */}
-					{/* <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={ProfileScreen} /> */}
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={ProfileScreen} />
 					{/* NEW Profile Page */}
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/account/settings" component={Default} />
-					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets" component={WalletsScreen} />
+					
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/profile/settings" component={Default} />
 					
-
-
-					{/*Profile Test Page */}
-					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/pages/profile/overview" component={Default} />
+					{/*Wallets*/}
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets" exact component={WalletsScreen} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets2" exact component={WalletListScreen} />					
 					
-					<PrivateRoute
-						loading={userLoading}
-						isLogged={isLoggedIn}
-						path="/wallets/deposit/:currency_id"
+					{/*Profile Test Page */}
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/pages/profile/overview" component={Default} />
+					
+					
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets/deposit/:currency_id"
 						exact
 						component={DepositScreen}
 					/>

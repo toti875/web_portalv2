@@ -121,7 +121,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 					</span>
 					<div className="subheader__right-menu__dropdown__wrap__content" style={{width: '220px',}}>
 						<Link
-							to="/admin/account/wallets"
+							to="/wallets"
 							onClick={() => {
 								setStateActiveNow('finance');
 								setActiveItemDrop('wallets');

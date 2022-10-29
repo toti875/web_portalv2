@@ -96,12 +96,13 @@ export class WalletTable extends React.Component<Props> {
         return (
             <div className="pg-history-elem__wallet">
                 <div className="pg-history-elem__label" style={{fontSize: '15px'}}>
-                    {/*{this.props.intl.formatMessage({ id: `page.body.history.${label}` })}*/}TESTE
+                    {this.props.intl.formatMessage({ id: `page.body.history.${label}` })}
                 </div>
                 <History headers={this.getHeaders(label)} data={this.retrieveData(list)} />
                 <Pagination
                     firstElemIndex={firstElemIndex}
                     lastElemIndex={lastElemIndex}
+                    total={10}
                     page={page}
                     nextPageExists={nextPageExists}
                     onClickPrevPage={this.onClickPrevPage}
