@@ -1351,7 +1351,7 @@ const renderBlog = () => (
 					<HomepageMarket />
 				
 				
-					<button className="btn-mainPage-AllMarkets" onClick={RedirectMarketList}><span>Ver mais ativos</span></button>
+					<button className="btn-mainPage-AllMarkets" onClick={RedirectMarketList}><span>Ver mais moedas</span></button>
 				</div>
 			</div>
 		</div>

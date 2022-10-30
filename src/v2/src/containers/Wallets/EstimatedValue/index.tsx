@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { injectIntl } from 'react-intl';
 import { connect, MapDispatchToPropsFunction } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { IntlProps } from '../../../';
 import { formatWithSeparators, WalletItem } from '../../../components';
 import { VALUATION_PRIMARY_CURRENCY, VALUATION_SECONDARY_CURRENCY } from '../../../constants';
@@ -21,8 +22,21 @@ import {
 import { Market, Ticker } from '../../../modules/public/markets';
 
 
-import PieChart from '../../../../../ui_vision/components/Charts/PieChart'
+import PieChart from '../../../../../ui_vision/components/Charts/PieChart';
+import LineChart from '../../../../../ui_vision/components/Charts/LineChart'
 
+import { eventFetch, selectEvents,} from '../../../../../modules';
+
+import news from '../../../../../screens/FortemIOHomePage/images/news.svg';
+
+import mainBanner from './main_banner.jpg';
+import Flip from 'react-reveal/Flip';
+import Zoom from 'react-reveal/Zoom';
+import Flash from 'react-reveal/Flash';
+import Pulse from 'react-reveal/Pulse';
+import RubberBand from 'react-reveal/RubberBand';
+
+import Slider from 'react-slick';
 
 
 interface EstimatedValueProps {
@@ -112,12 +126,12 @@ class EstimatedValueContainer extends React.Component<Props> {
             b.value - a.value
 
         );
-
         const pieChartOptionsCharts = {
+            style: {background: 'rgba(255,255,255,0.2)', filter: 'blur(1px)'},
             labels: [sortedWallet[0].name, sortedWallet[1].name, sortedWallet[2].name],
             colors: ["#009991", "#18988F",  "#1EDED0"],
             chart: {
-              width: "100%",
+              width: "100px",
               stroke: {
                 show: false,
               },
@@ -133,7 +147,7 @@ class EstimatedValueContainer extends React.Component<Props> {
               show: true,
             },
             stroke: {
-              show: false,
+              show: true,
             },
             dataLabels: {
               enabled: true,
@@ -154,36 +168,197 @@ class EstimatedValueContainer extends React.Component<Props> {
             },
             tooltip: {
               enabled: true,
-              theme: "dark",
+              theme: "light",
             },
           };
+
+
+          const lineChartDataCharts = [
+            {
+              name: "IBOV",
+              /*data: [6.98, 0.89, 6.06, -10.10, 3.22, -11.5, 4.69, 2.70],*/
+              data: [6.98, 0.89, 6.06, -10.10, 3.22, -11.5, 4.69, 2.70]
+            },
+            {
+              name: "Sua carteira",
+              /*data: [2.61, 1.89, 6.37, 0.76, 4.14, 2.72, 3.85, 2.83],*/
+              data: [0, 0, 0, 0, 0, 0, 0, 0],
+            },
+          ];
+
+          const lineChartOptionsCharts = {
+            chart: {
+              toolbar: {
+                show: false,
+              },
+            },
+            tooltip: {
+              theme: "light",
+            },
+            dataLabels: {
+              enabled: false,
+            },
+            stroke: {
+              curve: "smooth",
+            },
+            xaxis: {
+              type: "datetime",
+              categories: [
+                "Jan/22",
+                "Fev/22",
+                "Mar/22",
+                "Abr/22",
+                "Mai/22",
+                "Jun/22",
+                "Jul/22",
+                "Ago/22"
+           
+              ],
+              labels: {
+                style: {
+                  colors: "#A0AEC0",
+                  fontSize: "10px",
+                },
+              },
+              axisBorder: {
+                show: false,
+              },
+              axisTicks: {
+                show: false,
+              },
+            },
+            yaxis: {
+              labels: {
+                style: {
+                  colors: "#A0AEC0",
+                  fontSize: "10px",
+                },
+              },
+            },
+            legend: {
+              show: false,
+            },
+            grid: {
+              strokeDashArray: 5,
+              borderColor: "#56577A",
+              yaxis: {
+                lines: {
+                  show: false,
+                },
+              },
+              xaxis: {
+                lines: {
+                  show: true,
+                },
+              },
+            },
+            fill: {
+              type: "gradient",
+              gradient: {
+                shade: "dark",
+                type: "vertical",
+                shadeIntensity: 0.5,
+                gradientToColors: undefined, // optional, if not defined - uses the shades of same color in series
+                inverseColors: true,
+                opacityFrom: 0.8,
+                opacityTo: 0,
+                stops: [],
+              },
+              colors: ["#fff", "#582CFF"],
+            },
+            colors: ["#fff", "#582CFF"],
+          };
+          
         const estimatedValue = estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, wallets, markets, tickers);
 
 
         return (
-            <div className="pg-estimated-value-wallet">
-                <div className="pg-estimated-value__container">
-                    {this.translate('page.body.wallets.estimated_value')}
+            <div className="pg-estimated-value-wallet bg_image w-container" >
+                <img src={mainBanner} style={{filter: 'blur(3px)', backgroundSize: 'cover', opacity: '0.2', width: '100%', height: '400px'}}/>
+                <div className="pg-estimated-value__container position-absolute" >
                     <span className="value-container">
-                        <span className="value">
-                            {formatWithSeparators(estimatedValue, ',')}
-                        </span>
+                        <span style={{color: '#F5F5F5'}}>{this.translate('page.body.wallets.estimated_value')} </span>
+                        <span className="value"> {formatWithSeparators(estimatedValue, ',')} </span>
                         <span className="value-sign">{VALUATION_PRIMARY_CURRENCY.toUpperCase()}</span>
                     </span>
-                    {VALUATION_SECONDARY_CURRENCY && this.renderSecondaryCurrencyValuation(estimatedValue)}
-                </div>
-              {[sortedWallet[0].value, sortedWallet[1].value]}
+                    {/*{VALUATION_SECONDARY_CURRENCY && this.renderSecondaryCurrencyValuation(estimatedValue)}*/}
+               
+                {/*{[sortedWallet[0].value, sortedWallet[1].value]}*/}
+                <span className="position-absolute pg-estimated-value__container-charts" style={{ marginTop: '80px', marginLeft: '-320px'}} >
+                <span style={{color: '#F5F5F5', marginTop: '20px'}} > Composição da carteira </span>
+            
                 <PieChart
-              
-              chartData={[sortedWallet[0].value, sortedWallet[1].value]}
-              
-              chartOptions={pieChartOptionsCharts}
-            />
+                    chartData={[sortedWallet[0].value, sortedWallet[1].value]}
+                    chartOptions={pieChartOptionsCharts}
+                />
+            
+                </span>
+
+                <span className="position-absolute pg-estimated-value__container-charts" style={{marginTop: '80px', marginLeft: '30px'}} >
+                <span style={{color: '#F5F5F5', }}> Evolução patrimonial </span>
+                <LineChart
+                    chartData={lineChartDataCharts}
+                    chartOptions={lineChartOptionsCharts}
+                />
+                
+                </span>
+
+
+
+
+            </div>
             </div>
         );
     }
 
     public translate = (key: string) => this.props.intl.formatMessage({id: key});
+
+
+	private renderEvent = () => {
+        const events = useSelector(selectEvents);
+
+        const settingEvents = {
+            dots: false,
+            infinite: true,
+            speed: 500,
+            autoplay: true,
+            autoplaySpeed: 10000,
+            pauseOnHover: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        };
+
+		return (
+		
+			<div className="homepage-event  rn-header header-default " style={{background: '#000',  margin: '0px auto', marginLeft: '5px', display: 'flex', flexDirection: 'row', height: '36px', borderTop: '2px solid #46473E', borderBottom: '2px solid #46473E', minWidth: '100px', }}> 
+			
+				<div  className="news-event "  style={{margin: '0 auto', maxWidth: '80px', background: '#000', alignItems: 'center',  color: '#1EDED0', borderRight: '1px solid gray', fontSize: '16px',  maxHeight: '32px' }}>
+				<Pulse forever={true}>	<img src={news} style={{ marginTop: '-5px', minWidth: '30px', }}></img></Pulse>
+									
+				</div>
+
+				<div className="container2  theme-shape-root"  style={{  background: '#000', color: '#1EDED0', alignItems: 'center',   marginLeft: '10px', height: '26px', backgroundColor: '#000'}}>
+
+
+					<Slider {...settingEvents}>
+						{[...events.payload].map(event => {
+							return (
+								<div className="news-event text-center justify-content-center" style={{display: 'flex', textAlign: 'center'}}>
+									<h3  style={{opacity: '1', fontSize: '16px', color: '#F5F5F5', letterSpacing: '3px', marginTop: '-14px', background: '#000',  fontFamily: 'Raleway Dots'}} >
+									<Zoom infinite={true} appear={true} delay={4000}> 
+										<a style={{fontFamily: 'Raleway Dots', }} href={event.ref_link}>{event.event_name}{event.description}</a>
+									</Zoom>
+									</h3>
+								
+								</div>
+							);
+						})}
+					</Slider>
+				</div>
+			</div>
+		);
+	};
+
 
     private renderSecondaryCurrencyValuation = (estimatedValue: string) => {
         const {

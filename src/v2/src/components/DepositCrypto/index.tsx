@@ -87,7 +87,7 @@ const DepositCrypto: React.FunctionComponent<DepositCryptoProps> = (props: Depos
                             
                             variant="cryptoAdress"
                         >
-                            {buttonLabel ? buttonLabel : 'Generate deposit address'}
+                            {buttonLabel ? buttonLabel : 'Gerar endereço de depósito'}
                         </Button>
                     </div>
                 </div>

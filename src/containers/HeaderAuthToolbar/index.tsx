@@ -145,12 +145,13 @@ export const HeaderAuthToolbar: React.FC = () => {
 							</div>
 						</Link>
 						<Link
-							to="/deposit"
+							to="/dashboard"
 							onClick={() => {
 								setStateActiveNow('finance');
 								setActiveItemDrop('deposit');
 							}}
 						>
+							
 							<div className={classActiveItemDrop('deposit')}>
 								<FaHistory className="subheader__right-menu__dropdown__wrap__content__title__icon mr-2" />
 								{translate('page.body.homepage.header.deposit')}

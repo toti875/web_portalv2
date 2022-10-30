@@ -152,7 +152,7 @@ export const Header: React.FC = () => {
 		return (
 			isLoggedIn && (
 				<Link
-					to="/admin/account/settings"
+					to="/profile"
 					onClick={() => {
 						setStateActiveNow('account');
 						setActiveItemDrop('perfil');

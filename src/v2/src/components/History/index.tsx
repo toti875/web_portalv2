@@ -14,8 +14,8 @@ export interface HistoryProps {
 }
 
 export class History extends React.PureComponent<HistoryProps> {
-    private defaultHeaders = ['Time', 'Action', 'Price', 'Amount', 'Total'];
-    private title = 'Trades History';
+    private defaultHeaders = ['Data', 'Tipo', 'Preço', 'Quantidade', 'Total'];
+    private title = '';
 
     public render() {
         const { headers = this.defaultHeaders } = this.props;
@@ -42,7 +42,7 @@ export class History extends React.PureComponent<HistoryProps> {
 
     private mapRows = (cell: CellData, index: number) => {
         const { headers = this.defaultHeaders } = this.props;
-        const actionIndex = headers.findIndex(header => header === 'Action');
+        const actionIndex = headers.findIndex(header => header === 'Tipo');
 
         return index === actionIndex ? this.renderAction(cell as string) : cell;
     };

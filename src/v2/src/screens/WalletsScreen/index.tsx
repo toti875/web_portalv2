@@ -15,6 +15,7 @@ import {
     TabPanel,
     WalletList,
 } from '../../components';
+import {ProfileScreen} from '../../screens';
 import { DEFAULT_CCY_PRECISION } from '../../constants';
 import { Withdraw, WithdrawProps } from '../../containers';
 import { ModalWithdrawConfirmation } from '../../containers/ModalWithdrawConfirmation';
@@ -227,7 +228,7 @@ class WalletsComponent extends React.Component<Props, WalletsState> {
         return (
             <React.Fragment>
                 {wallets.length && <EstimatedValue wallets={wallets} />}
-                <div className="pg-container pg-wallet">
+                <div className="pg-container pg-wallet w-container">
                     <div className="text-center">
                         {walletsLoading && <Spinner animation="border" variant="primary" />}
                     </div>
@@ -264,6 +265,7 @@ class WalletsComponent extends React.Component<Props, WalletsState> {
                         precision={selectedWalletPrecision}
                     />
                 </div>
+                <ProfileScreen></ProfileScreen>
             </React.Fragment>
         );
     }

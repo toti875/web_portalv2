@@ -34,7 +34,7 @@ import "slick-carousel/slick/slick-theme.css";
 //import 'slick-carousel/slick/slick.css';
 import { sentryEnabled } from './api/config';
 import { App } from './App';
-import './index.css';
+import './fortem.css';
 //import './index.pcss';
 import './template_react/doob/src/assets/scss/style.scss';
 import './blockchain.css';

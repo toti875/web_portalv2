@@ -48,11 +48,6 @@ blockquote,
 menu,
 ol,
 ul,
-table,
-hr {
-	margin: 0;
-	margin-bottom: 20px;
-}
 
 h1,
 h2,
@@ -285,18 +280,7 @@ p {
 }
 
 
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-	margin: 0 0 40px;
-	width: 100%;
-}
 
-table a,
-table a:link,
-table a:visited {
-	text-decoration: none;
-}
 
 cite,
 .wp-block-pullquote cite,
