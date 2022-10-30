@@ -169,7 +169,7 @@ export const Header: React.FC = () => {
 	};
 
 	const data = [{ 
-	image:     "https://cutshort-data.s3.amazonaws.com/cloudfront/public/companies/5809d1d8af3059ed5b346ed1/logo-1615367026425-logo-v6.png",
+	image:     "https://cutshort-data.s3.amazonaws.com/cloudfront/public/companies/0/logo-1615367026425-logo-v6.png",
 	message: 'Nossa plataforma de lançamento de tokens está no ar. Conheça novas opções de investimentos em ativos digitais.', 
 	detailPage: '/tokens',
 	receivedTime: "12h ago"
@@ -207,7 +207,7 @@ export const Header: React.FC = () => {
 		return (
 			isLoggedIn && (
 				<Link
-					to="/admin/profile/settings"
+					to="/profile"
 					onClick={() => {
 						setStateActiveNow('account');
 						setActiveItemDrop('kyc');

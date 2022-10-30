@@ -99,7 +99,7 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress) => {
 								Enviar
 							</span>
 						</div>
-				
+						<br />
 						<p className="footer__news__title">REDES SOCIAIS</p>
 						<div className="footer__news__list-icon ">
 							<div className="footer__news__list-icon__item  ">

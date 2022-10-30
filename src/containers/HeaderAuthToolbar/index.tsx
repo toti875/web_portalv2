@@ -58,7 +58,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 					<div className={classItemTitle} onClick={() => setStateActiveNow('Dashboard')} >
 					<img src={IconDashboard} className="subheader__right-menu__item__title__svg" style={{width: '20px',}} />
 
-						<Link to="/admin/dashboard/default">Painel de controle
+						<Link to="/dashboard">Painel de controle
 						</Link>
 					</div>
 				</div>
@@ -79,7 +79,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 					</span>
 					<div className="subheader__right-menu__dropdown__wrap__content" style={{width: '100px',}}>
 						<Link
-							to="/admin/dashboard/default"
+							to="/dashboard"
 							onClick={() => {
 								setStateActiveNow('dashboard');
 								setActiveItemDrop('dashboard');
@@ -87,19 +87,20 @@ export const HeaderAuthToolbar: React.FC = () => {
 						>
 							<div className={classActiveItemDrop('dashboard')} style={{width: '300px',}}>
 								<FaStar className="mr-2" />
-								{translate('page.body.homepage.header.dashboard_item')}
+								{/*{translate('page.body.homepage.header.dashboard_item')}*/}
+								Dashboard
 							</div>
 						</Link>
 						<Link
-							to="/history"
+							to="/security"
 							onClick={() => {
 								setStateActiveNow('dashboard');
 								setActiveItemDrop('history');
 							}}
 						>
 							<div className={classActiveItemDrop('history')}>
-								<FaHistory className="subheader__right-menu__dropdown__wrap__content__title__icon mr-2" />
-								{translate('page.body.homepage.header.history')}
+								<FaStar className="subheader__right-menu__dropdown__wrap__content__title__icon mr-2" />
+								Segurança
 							</div>
 						</Link>
 					</div>
@@ -140,20 +141,20 @@ export const HeaderAuthToolbar: React.FC = () => {
 							}}
 						>
 							<div className={classActiveItemDrop('transaction')}>
-								<FaHistory className="subheader__right-menu__dropdown__wrap__content__title__icon mr-2" />
+								<FaStar className="subheader__right-menu__dropdown__wrap__content__title__icon mr-2" />
 								{translate('page.body.homepage.header.transaction')}
 							</div>
 						</Link>
 						<Link
-							to="/dashboard"
+							to="/deposit"
 							onClick={() => {
 								setStateActiveNow('finance');
 								setActiveItemDrop('deposit');
 							}}
 						>
-							
+
 							<div className={classActiveItemDrop('deposit')}>
-								<FaHistory className="subheader__right-menu__dropdown__wrap__content__title__icon mr-2" />
+								<FaStar className="subheader__right-menu__dropdown__wrap__content__title__icon mr-2" />
 								{translate('page.body.homepage.header.deposit')}
 							</div>
 						</Link>
@@ -165,7 +166,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 							}}
 						>
 							<div className={classActiveItemDrop('withdraw')}>
-								<FaHistory className="subheader__right-menu__dropdown__wrap__content__title__icon mr-2" />
+								<FaStar className="subheader__right-menu__dropdown__wrap__content__title__icon mr-2" />
 								{translate('page.body.homepage.header.withdraw')}
 							</div>
 						</Link>
