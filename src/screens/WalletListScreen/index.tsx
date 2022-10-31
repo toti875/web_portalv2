@@ -16,7 +16,7 @@ import {
 	selectAllChildCurrencies,
 } from '../../modules';
 import NP from 'number-precision';
-import './WalletListScreen.pcss'
+//import './WalletListScreen.pcss'
 NP.enableBoundaryChecking(false); // default param is true
 
 
@@ -197,7 +197,7 @@ export const WalletListScreen = () => {
 	};
 
 	return (
-		<div id="wallet-list-screen">
+		<div id="wallet-list-screen w-container">
 			<div
 				className="container-fluid"
 				style={{

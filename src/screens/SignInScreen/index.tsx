@@ -135,14 +135,14 @@ class SignIn extends React.Component<Props, SignInState> {
 				isLoading={loading}
 				onSubmit={this.handle2FASignIn}
 				title={this.props.intl.formatMessage({ id: 'page.password2fa' })}
-				label={this.props.intl.formatMessage({ id: 'page.body.wallets.tabs.withdraw.content.code2fa' })}
+				//label={this.props.intl.formatMessage({ id: 'page.body.wallets.tabs.withdraw.content.code2fa' })}
 				buttonLabel={this.props.intl.formatMessage({ id: 'page.header.signIn' })}
 				message={this.props.intl.formatMessage({ id: 'page.password2fa.message' })}
-				codeFocused={codeFocused}
+				//codeFocused={codeFocused}
 				otpCode={otpCode}
-				error={error2fa}
+				//error={error2fa}
 				handleOtpCodeChange={this.handleChangeOtpCode}
-				handleChangeFocusField={this.handle2faFocus}
+				//handleChangeFocusField={this.handle2faFocus}
 				handleClose2fa={this.handleClose}
 			/>
 		);

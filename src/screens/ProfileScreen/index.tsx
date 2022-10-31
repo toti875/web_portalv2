@@ -7,7 +7,6 @@ import Container from 'react-bootstrap/Container';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-
 export const ProfileQuickContainer: React.FC = () => {
 	const userActivity = useSelector(selectUserActivity);
 	const user = useSelector(selectUserInfo);
@@ -55,7 +54,7 @@ export const ProfileScreen: React.FC = () => {
 	}, []);
 
 	return (
-		<div className="td-pg-profile-investor">
+		<div className="td-pg-profile">
 			<ProfileQuickContainer />
 			<Container fluid>
 				<ProfileActiveStep />
