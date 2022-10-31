@@ -10,14 +10,14 @@
 
 @import 'default/variables';
 @import 'default/mixins';
-@import 'default/reset';
+//@import 'default/reset';
 @import 'default/typography';
 @import 'default/extend';
 @import 'default/animations';
 @import 'default/shortcode';
 @import 'default/spacing';
 @import 'default/common';
-@import 'default/forms';
+//@import 'default/forms';
 
 
 /**************************************
@@ -39,13 +39,13 @@
     Elements Styles
 ***************************************/
 @import 'elements/sctiontitle';
-@import 'elements/button';
+//@import 'elements/button';
 @import 'elements/breadcrumb';
 @import 'elements/accordion';
 @import 'elements/service';
 @import 'elements/card';
-@import 'elements/progressbar';
-@import 'elements/counter';
+//@import 'elements/progressbar';
+//@import 'elements/counter';
 @import 'elements/portfolio';
 @import 'elements/social';
 @import 'elements/team';

@@ -16,7 +16,7 @@ import {
 	selectAllChildCurrencies,
 } from '../../modules';
 import NP from 'number-precision';
-//import './WalletListScreen.pcss'
+import './WalletListScreen.pcss';
 NP.enableBoundaryChecking(false); // default param is true
 
 
@@ -129,8 +129,8 @@ export const WalletListScreen = () => {
 			const total = NP.plus(wallet.balance || 0, wallet.locked || 0);
 			const currency_icon = (
 				<img
-					width="30px"
-					height="30px"
+					width="36px"
+					height="36px"
 					src={wallet.iconUrl ? wallet.iconUrl : findIcon(wallet.currency)}
 					alt={wallet.currency + '_icon'}
 				/>
@@ -189,7 +189,7 @@ export const WalletListScreen = () => {
 		});
 
 	const renderTable = () => {
-		return <ReactTable columns={columns} data={[...data]} headColor="#222B42" />;
+		return <ReactTable columns={columns} data={[...data]} headColor="#555555" />;
 	};
 
 	const onChange = e => {
@@ -197,9 +197,9 @@ export const WalletListScreen = () => {
 	};
 
 	return (
-		<div id="wallet-list-screen w-container">
+		<div id="wallet-list-screen-fortem w-container">
 			<div
-				className="container-fluid"
+				className="w-container"
 				style={{
 					backgroundColor: 'transparent',
 			

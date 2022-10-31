@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { usePagination, useTable } from 'react-table';
 import EmptySVG from './empty.svg';
+//import './ReactTable.pcss';
 
 interface ReacTableProps {
 	columns: any;
