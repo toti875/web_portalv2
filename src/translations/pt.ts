@@ -855,9 +855,9 @@ export const pt = {
 
 	'server.internal_error': 'Internal Server Error',
 
-	'password.strength.tip.influence': 'Aumente a força da sua senha',
-	'password.strength.tip.number.characters': '- Use no mínimo 8 caracteres',
-	'password.strength.tip.letter': '- Use no mínimo 1 Letra Maiúscula e 1 letra minúscula',
+	'password.strength.tip.influence': 'Aumente a força da sua senha \'t ',
+	'password.strength.tip.number.characters': '- Use no mínimo 8 caracteres\'t ',
+	'password.strength.tip.letter': '- Use no mínimo 1 Letra Maiúscula e 1 letra minúscula \'t ',
 	'password.strength.tip.digit': '- Use no mínimo 1 dígito',
 
 	'stake.list.item.button.goStake': 'Go Stake',

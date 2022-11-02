@@ -48,14 +48,14 @@ export const PasswordStrengthMeter: React.FunctionComponent<PasswordStrengthMete
 	return (
 		<div className="pg-password-strength">
 			{props.passwordExist ? renderPasswordStrengthMeter(passwordStrengthMeterLength) : null}
-			{renderPasswordStrengthTip(props, passwordStrengthMeterLength)}
+			{renderPasswordStrengthTip(props, passwordStrengthMeterLength)} <br />
 		</div>
 	);
 };
 
 const renderPasswordStrengthMeter = (passwordStrengthMeterLength: number) => (
 	<div className="pg-password-strength-meter">
-		<div className={`pg-password-strength-meter__block ${passwordStrengthClassName(passwordStrengthMeterLength)}`}></div>
+		<div className={`pg-password-strength-meter__block ${passwordStrengthClassName(passwordStrengthMeterLength)}`}></div><br />
 	</div>
 );
 
@@ -63,7 +63,7 @@ const renderPasswordStrengthTip = (props: PasswordStrengthMeterProps, passwordSt
 	props.passwordPopUp ? (
 		<div className="pg-password-pop-up">
 				<div className={`pg-password-pop-up__strength-status ${passwordStrengthClassName(passwordStrengthMeterLength)}`}>
-					{passwordStrengthStatus(passwordStrengthMeterLength, props.translate)}
+					{passwordStrengthStatus(passwordStrengthMeterLength, props.translate)}<br />
 				</div>
 			
 			<PasswordStrengthTip
