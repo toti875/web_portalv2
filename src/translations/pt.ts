@@ -302,7 +302,7 @@ export const pt = {
 	'page.body.profile.header.account.content.twoFactorAuthentication.modalBody': 'Please сontact administrator to disable',
 	'page.body.profile.header.account.content.twoFactorAuthentication.modalHeader': 'Two-factor authentication is enabled',
 
-	'page.body.profile.header.account.profile': 'Profile Verification',
+	'page.body.profile.header.account.profile': 'Status do cadastro',
 	'page.body.profile.header.account.profile.email.title': 'Email verified',
 	'page.body.profile.header.account.profile.email.message': 'Deposit/Withdraw enabled',
 	'page.body.profile.header.account.profile.phone.unverified.title': 'Phone verification',

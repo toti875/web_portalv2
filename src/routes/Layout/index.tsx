@@ -81,7 +81,7 @@ import {
 	MagicLink,
 	MaintenanceScreen,
 	OrdersTabScreen,
-	ProfileScreen, 
+	 
 	ProfileTwoFactorAuthScreen,
 	Referral,
 	RegisterScreen,
@@ -95,6 +95,7 @@ import {
 	QuickExchange,
 	LandingScreen,
 	DocumentationScreen,
+	ProfileScreen,
 } from '../../screens';
 
 //import {WalletsScreen} from '../../v2/src/screens/WalletsScreen';
@@ -104,7 +105,7 @@ import {
 //import { LogInScreen } from '../../screens/LogInScreen'
 
 
-import { WalletsScreen } from '../../v2/src/screens/WalletsScreen'
+import { WalletsScreen } from '../../v2/src/screens'
 
 
 import Default from "../../ui_vision/layouts/Admin";

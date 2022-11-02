@@ -265,7 +265,7 @@ class WalletsComponent extends React.Component<Props, WalletsState> {
                         precision={selectedWalletPrecision}
                     />
                 </div>
-                <ProfileScreen></ProfileScreen>
+                
             </React.Fragment>
         );
     }

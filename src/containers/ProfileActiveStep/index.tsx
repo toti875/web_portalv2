@@ -41,8 +41,9 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 	};
 
 	return (
-		<div>
-			<span className="td-pg-profile__active-step__title d-flex">Inicie a sua jornada de investimentos</span>
+		<div className="td-pg-profile--radius td-pg-profile__active-step">
+			<h1 className="td-pg-profile__active-step__tile">Plataforma Fortem ONE - Ativos Digitais</h1>
+			<span className="td-pg-profile__active-step__desc">Status da sua conta</span>
 			<div className="td-pg-profile__active-step__content d-flex">
 				<div className="td-pg-profile__active-step__content__item">
 					<span
@@ -62,17 +63,17 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 					>
 						{user.otp ? svgActive : '2'}
 					</span>
-					<h5 className="td-pg-profile__active-step__content__item__title">2FA</h5>
+					<h5 className="td-pg-profile__active-step__content__item__title"> Habilitação do 2FA</h5>
 					<span className="td-pg-profile--color--second td-pg-profile__active-step__content__item__desc">
-						Aumente a segurança da sua conta com o duplo fator de auteticação
+					A Fortem exige autenticação em duas etapas para manter a segurança da sua conta. Além da senha, use o seu celular ou um aplicativo autenticador para garantir que ninguém mais consiga entrar na sua conta.
 					</span>
 					{!user.otp ? (
 						<Button
-							size="lg"
+							size="sm"
 							className="td-pg-profile__active-step__content__item__action mt-3"
 							onClick={handleNavigateTo2fa}
 						>
-							Habilitar
+							Verificar
 						</Button>
 					) : null}
 				</div>
@@ -84,9 +85,9 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 					>
 						{isExistBalance ? svgActive : '3'}
 					</span>
-					<h5 className="td-pg-profile__active-step__content__item__title">Deposite</h5>
+					<h5 className="td-pg-profile__active-step__content__item__title">Depositar Reais (R$)</h5>
 					<span className="td-pg-profile--color--second td-pg-profile__active-step__content__item__desc">
-						Deposite cripto ou reais e inicie seus investimentos
+						Adicione reais ou cripto em sua carteira Fortem para iniciar seus investimentos digitais
 					</span>
 					{user.otp && !isExistBalance ? (
 						<Button
@@ -94,7 +95,7 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 							className="td-pg-profile__active-step__content__item__action mt-3"
 							onClick={handleToWallet}
 						>
-							Depositar
+							To Wallet
 						</Button>
 					) : null}
 				</div>

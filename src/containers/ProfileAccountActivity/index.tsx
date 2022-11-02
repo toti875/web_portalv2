@@ -97,7 +97,7 @@ export const ProfileAccountActivity: React.FC<ProfileAccountActivityProps> = () 
 	];
 
 	return (
-		
+		<div className="td-pg-profile--bg td-pg-profile--radius td-pg-profile__content__item td-pg-profile__activity">
 			<NewTabPanel defaultActiveKey={tabKeyActiveState} onChange={onChangeTabKey}>
 				{TAB_LIST_INFO.map(tabInfo => (
 					<TabPane key={tabInfo.label} tab={tabInfo.label}>
@@ -105,6 +105,6 @@ export const ProfileAccountActivity: React.FC<ProfileAccountActivityProps> = () 
 					</TabPane>
 				))}
 			</NewTabPanel>
-	
+		</div>
 	);
 };

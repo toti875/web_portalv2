@@ -613,7 +613,6 @@
       background: transparent !important;
       
       outline: none !important;
-      border-bottom: 2px solid #FDA736;
     }.pg-wallet .cr-wallet-item--active .cr-wallet-item__icon,
       .pg-wallet .cr-wallet-item--active .cr-wallet-item__icon-code {
         background-color: #var(--beneficiaries-primary-0-06);  
@@ -2186,9 +2185,9 @@
 	}
     {/*RegisterScreen*/}
     .pg-sign-up-screen {
-	padding-top: 50px;
+	padding-top: 30px;
     margin: 0 auto;
-	height: 780px;;
+	height: 860px;;
 
 	justify-content: center !important;
 	margin-top: 60px !important;
