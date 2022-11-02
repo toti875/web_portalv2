@@ -100,7 +100,7 @@ class FormRegister extends React.Component<Props> {
 	private geetestCaptchaRef;
 
 	public componentDidMount() {
-		setDocumentTitle('Sign Up');
+		setDocumentTitle('Cadastro');
 		const localReferralCode = localStorage.getItem('referralCode');
 		const refId = this.extractRefIDs(this.props.location.search);
 		const referralCode = refId || localReferralCode || '';
@@ -473,7 +473,7 @@ class FormRegister extends React.Component<Props> {
 	private renderModalFooter = () => {
 		return (
 			<div className="pg-exchange-modal-submit-footer">
-				<Button block={true} onClick={this.closeModal} size="lg" variant="primary">
+				<Button block={true} onClick={this.closeModal} size="lg" variant="signup">
 					{this.props.intl.formatMessage({ id: 'page.header.signUp.modal.footer' })}
 				</Button>
 			</div>

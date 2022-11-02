@@ -231,7 +231,7 @@ export const Register = (props: RegisterFormProps) => {
 
 	const logo = (
 		<div className="cr-sign-in-form__option-inner __selected-sigin">
-			<img src={image} />
+			<img src={image} style={{width: '260px'}}/>
 		</div>
 	);
 
@@ -266,7 +266,7 @@ export const Register = (props: RegisterFormProps) => {
 						<div
 							data-bn-type="text"
 							style={{
-								fontSize: '17px',
+								fontSize: '22px',
 								fontWeight: 'bold' ,
 								letterSpacing: '1px',
 								wordSpacing: '2px',
@@ -275,12 +275,12 @@ export const Register = (props: RegisterFormProps) => {
 								color: '#595959',
 							}}
 						>
-							Bem vindo à Fortem ONE
+							Bem-vindo à Fortem ONE
 						</div>
 						<div
 							data-bn-type="text"
 							style={{
-								fontSize: '15px',
+								fontSize: '18px',
 							
 								color: '#595959',
 								bottom: '20px',
@@ -323,6 +323,12 @@ export const Register = (props: RegisterFormProps) => {
 						/>
 						{confirmationError && <div className={'cr-sign-up-form__error'}>{confirmationError}</div>}
 					</div>
+					<div className={refIdGroupClass}>
+						<p style={{ cursor: 'pointer' }} onClick={handleDropdown}>
+							Código de indicação (Opcionals) <CaretDownOutlined />
+						</p>
+						{renderFormInput()}
+					</div>
 
 					<Form className="cr-sign-up-form2_group" onClick={e => props.clickCheckBox(e)}>
 						<Form.Check
@@ -341,24 +347,24 @@ export const Register = (props: RegisterFormProps) => {
 							disabled={disableButton()}
 							onClick={e => handleClick(undefined, e)}
 							size="lg"
-							variant="primary"
+							variant="sign-up"
 						>
-							{isLoading ? 'Loading...' : labelSignUp ? labelSignUp : 'Sign up'}
+							{isLoading ? 'Loading...' : labelSignUp ? labelSignUp : 'Cadastro'}
 						</Button>
 
-						<div style={{ textAlign: 'center', marginTop: '20px', fontSize: '13px', color: '#595959', }}>
+						<div style={{ textAlign: 'center', marginTop: '20px', fontSize: '15px', color: '#595959', }}>
 							Já possui conta?
 							<span
 								data-bn-type="link"
 								className="cr-sign-up-form2__button-wrapper__login"
 								onClick={onSignIn}
 								style={{
-									fontSize: '14px',
+									fontSize: '16px',
 									marginLeft: '6px',
 									color: '#18988F',
 								}}
 							>
-								Entrar
+								Acessar plataforma
 							</span>
 						</div>
 					</div>

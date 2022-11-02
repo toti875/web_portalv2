@@ -1,15 +1,280 @@
-.pg-code-verification {
+.pg-password-strength {
+    position: relative;
+  }
+  
+    .pg-password-strength-meter {
+      align-items: center;
+      background: var(--password-strength-meter-background);
+      display: flex;
+      height: 7px;
+      padding: 0 1px 0;
+    }
+  
+    .pg-password-strength-meter__block {
+        display: flex;
+        height: 5px;
+        transition: all 1s ease;
+      }
+  
+    .pg-password-strength-meter__block.too-weak {
+          background: var(--password-strength-meter-too-weak);
+          width: 20%;
+        }
+  
+    .pg-password-strength-meter__block.weak {
+          background: var(--password-strength-meter-weak);
+          width: 40%;
+        }
+  
+    .pg-password-strength-meter__block.good {
+          background: var(--password-strength-meter-good);
+          width: 60%;
+        }
+  
+    .pg-password-strength-meter__block.strong {
+          background: var(--password-strength-meter-strong);
+          width: 80%;
+        }
+  
+    .pg-password-strength-meter__block.very-strong {
+          background: var(--password-strength-meter-very-strong);
+          width: 100%;
+        }
+  
+  .pg-password-pop-up {
+    background: transparent;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 10px 15px var(--shadow-color-level-2);
+    padding: 14px 9px 14px;
+    position: absolute;
+    width: 100%;
+    z-index: 6;
+  }
+  
+  .pg-password-pop-up__strength {
+      height: 32px;
+    }
+  
+  .pg-password-pop-up__strength-title {
+        color: var(--secondary-contrast-cta-color);
+      }
+  
+  .pg-password-pop-up .too-weak,
+    .pg-password-pop-up .weak,
+    .pg-password-pop-up .good,
+    .pg-password-pop-up .strong,
+    .pg-password-pop-up .very-strong {
+      font-weight: bold;
+    }
+  
+  .pg-password-pop-up .too-weak {
+      color: var(--password-strength-meter-too-weak);
+    }
+  
+  .pg-password-pop-up .weak {
+      color: var(--password-strength-meter-weak);
+    }
+  
+  .pg-password-pop-up .good {
+      color: var(--password-strength-meter-good);
+    }
+  
+  .pg-password-pop-up .strong {
+      color: var(--password-strength-meter-strong);
+    }
+  
+  .pg-password-pop-up .very-strong {
+      color: var(--password-strength-meter-very-strong);
+    }
+  
+  .cr-sign-up-form__label {
+    color: darkgrey;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 12px;
+    text-transform: none;
+    
+}
+  
+  .cr-sign-up-form2__label {
+    color: darkgrey;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 12px;
+    text-transform: none;
+    
+    
+
+}
+  
+  .custom-control-label {
+    font-size: 12px !important;
+    text-transform: none;
+    margin-top: -26px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+  
+  .cr-sign-up-form2__group {
+    display: inline;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    margin-left: 0;
+    margin-right: 0;
+}
+  
+  .cr-sign-up-form__group {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    margin-left: 0;
+    margin-right: 0;
+}
+  
+  .cr-sign-up-form2__group {
+
+    
+}
+  
+  .cr-sign-up-form__input {
+
+    min-width: 380px !important;
+    margin: 0 auto !important;
+
+}
+  
+  .cr-sign-up-form2__input {
+
+    min-width: 380px !important;
+    margin: 0 auto !important;
+
+}
+  
+  .cr-sign-up-form__recaptcha {
+
+    display: flex !important;
+    align-items: center !important;
+    margin-top: 30px !important;
+    backgound: transparent !important;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 40px;
+    justify-content: center;   
+    text-align: center !important;
+    
+}
+  
+  .cr-sign-up-form2__button-wrapper__login {
+
+    font-size: 15px !important;
+
+}
+  
+  .btn-2FA {
+	
+	border: 2px solid #009991 !important;
+    border-radius: 5px !important;
+    width: 100% !important;
+
+	color: var(--button-primary-cta-text-color);
+	font-weight: var(--button-font-weight);
+	transition: 0.2s;
+}
+  
+  .btn-2FA:hover {
+		background-color: #00d0b8;
+		color: var(--button-primary-cta-text-color-hover);
+		transition: 0.2s;
+	}
+  
+  .btn-primary:active,
+	.btn-primary:focus {
+		background: #00d0b8;
+		border: none;
+		box-shadow: none;
+		color: var(--button-primary-cta-text-color-active);
+	}
+  
+  .btn-sign-up:disabled {
+		background: #535353 !important;
+		border: none;
+		color: var(--button-primary-cta-text-color-disabled);
+		cursor: not-allowed;
+	}
+  
+  .btn-sign-up:not(:disabled):not(.disabled):active:focus {
+	background: #535353;
+	box-shadow: none;
+	color: var(--button-primary-cta-text-color-active);
+}
+  
+  .btn-sign-up {
+	
+	border: 2px solid #009991 !important;
+    border-radius: 5px !important;
+    width: 100% !important;
+
+	color: var(--button-primary-cta-text-color);
+	font-weight: var(--button-font-weight);
+	transition: 0.2s;
+}
+  
+  .btn-sign-up:hover {
+		background-color: #00d0b8;
+		color: var(--button-primary-cta-text-color-hover);
+		transition: 0.2s;
+	}
+  
+  .btn-sign-up:active,
+	.btn-sign-up:focus {
+		background: #00d0b8;
+		border: none;
+		box-shadow: none;
+		color: var(--button-primary-cta-text-color-active);
+	}
+  
+  .btn-sign-up:disabled {
+		background: #535353 !important;
+		border: none;
+		color: var(--button-primary-cta-text-color-disabled);
+		cursor: not-allowed;
+	}
+  
+  .btn-sign-up:not(:disabled):not(.disabled):active:focus {
+	background: #535353;
+	box-shadow: none;
+	color: var(--button-primary-cta-text-color-active);
+}
+  
+  .cr-email-form__cros-icon {
+    cursor: pointer;
+    display: inline-block;
+    height: calc(var(--gap) * 2.5);
+    margin-left: calc(var(--gap) * 2.6);
+    margin-top: -1px;
+    position: absolute;
+    width: calc(var(--gap) * 2.5);
+  }
+  
+  .pg-code-verification {
+    
     width: 100%;
   }
   
-    .pg-code-verification__wrapper {
+  .pg-code-verification__wrapper {
       display: flex;
       justify-content: space-between;
+      margin-top: 30px !important;
+      margin-bottom: 30px !important;
     }
   
-    .pg-code-verification__wrapper-item {
+  .pg-code-verification__wrapper-item {
         align-items: center;
-        background: var(--input-background-color);
+        background: transparent !important;
         border: 1px solid var(--input-border-color);
         border-radius: 4px;
         color: var(--text-color);
@@ -23,42 +288,42 @@
         width: 50px;
       }
   
-    .pg-code-verification__wrapper-item:first-child {
+  .pg-code-verification__wrapper-item:first-child {
           margin-left: 0;
         }
   
-    .pg-code-verification__wrapper-item:last-child {
+  .pg-code-verification__wrapper-item:last-child {
           margin-right: 0;
         }
   
-    .pg-code-verification__wrapper-item-placeholder {
+  .pg-code-verification__wrapper-item-placeholder {
           color: var(--text-color-opacity-12);
           font-weight: normal;
         }
   
-    .pg-code-verification__wrapper-item-placeholder-border {
+  .pg-code-verification__wrapper-item-placeholder-border {
             background: var(--body-background-color);
-            border: 2px solid var(--primary-cta-color);
+            border: 2px solid #009991;
             border-radius: 4px;
           }
   
-    .pg-code-verification__wrapper-item-placeholder-border-hidden {
+  .pg-code-verification__wrapper-item-placeholder-border-hidden {
             border-bottom: none;
           }
   
-    .pg-code-verification__input {
+  .pg-code-verification__input {
       height: 50px;
       margin-top: -50px;
       width: 100%;
     }
   
-    .pg-code-verification__input input {
+  .pg-code-verification__input input {
         height: 50px;
         opacity: 0;
         width: 100%;
       }
   
-    .pg-code-verification__paste {
+  .pg-code-verification__paste {
       cursor: pointer;
       display: flex;
       font-weight: bolder;
@@ -89,22 +354,38 @@
   }
   
   .cr-email-form {
-    background: var(--body-background-color);
-    border-radius: 3px;
-    box-shadow: 0 10px 15px var(--shadow-color-level-2);
+
+    margin-top: 20px;
+    backdrop-filter: blur(10px) saturate(135%);
+    -webkit-backdrop-filter: blur(10px) saturate(135%);
+    background-color: transparent !important;
+    border-radius: 10px !important;
+    border: 2px solid rgba(209, 213, 219, 0.3);
+
+    
+    box-shadow: 0 10px 15px var(--shadow-color-level-1);
     max-width: 424px;
     min-height: 350px;
     position: relative;
   }
   
   .cr-email-form__options-group {
-      border-bottom: 2px solid var(--divider-color-level-2);
+      border-bottom: 2px solid var(--divider-color-level-1);
       height: 58px;
       width: 100%;
+
+      backdrop-filter: blur(10px) saturate(135%);
+      -webkit-backdrop-filter: blur(10px) saturate(135%);
+      background-color: transparent !important;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom: 1px solid rgba(209, 213, 219, 0.3); 
     }
   
   .cr-email-form__option {
-      background: var(--subheader-background-color);
+      
+        
+
       display: inline-block;
       height: 58px;
       width: 100%;
@@ -199,9 +480,19 @@
   
   .cr-email-form__button-wrapper {
       display: flex;
-      flex-direction: column;
       justify-content: center;
+      border: 2px solid #009991 !important;
+      border-radius: 5px;
+      align-vertical: center !important;
     }
+  
+  .cr-email-form__button-wrapper__button-wrapper .btn-primary {
+            background: #00a693;
+            border: none;
+            color: var(--button-primary-cta-text-color);
+            font-weight: var(--button-font-weight);
+            transition: 0.2s;
+        }
   
   .cr-email-form__button-wrapper--empty {
       justify-content: flex-end;
@@ -245,16 +536,12 @@
     }
   
     .cr-email-form__form-content {
-      background: var(--body-background-color);
-      position: static;
-    }
-  
-    .cr-email-form__button-wrapper {
+      background: unset;
       position: static;
     }
   
       .cr-email-form__button-wrapper button {
-        font-size: 14px;
+        font-size: 16px;
         height: 41px;
         text-transform: uppercase;
       }
@@ -315,8 +602,8 @@
   .cr-sign-in-form__button-wrapper {
       background: transparent;
       display: flex;
-      flex-direction: column;
       justify-content: space-between;
+
     }
   
   .cr-sign-in-form__button-wrapper--empty {
@@ -359,7 +646,7 @@
     }
   
   .pg-sign-in-screen .cr-sign-in-form {
-      background: var(--body-background-color);
+      background: transparent !important;
       display: flex;
       flex-direction: column;
     }
@@ -376,7 +663,7 @@
       }
   
   .pg-sign-in-screen .cr-sign-in-form__option {
-        background: var(--subheader-background-color);
+        background: transparent !important;
       }
   
   .pg-sign-in-screen .cr-sign-in-form__option .__selected {
@@ -1370,88 +1657,6 @@
   
   .pg-beneficiaries__dropdown .fiat-body .item__left:first-child {
 					margin-right: 30px;
-				}
-  
-  .pg-beneficiaries .cr-email-form {
-		background: transparent !important;
-		border-bottom-left-radius: 3px;
-		border-bottom-right-radius: 3px;
-		border-radius: 20px !important;
-		box-shadow: 0 8px 25px var(--shadow-color-level-3);
-	}
-  
-  .pg-beneficiaries .cr-email-form__option {
-			background: var(--subheader-background-color);
-			border-top-left-radius: 3px;
-			border-top-right-radius: 3px;
-		}
-  
-  .pg-beneficiaries .cr-email-form__option-inner {
-				color: var(--primary-text-color);
-				font-size: 16px;
-				font-style: normal;
-				font-weight: normal;
-				line-height: 60px;
-				text-transform: lowercase;
-			}
-  
-  .pg-beneficiaries .cr-email-form__option-inner::first-letter {
-					text-transform: uppercase;
-				}
-  
-  .pg-beneficiaries .cr-email-form__option-inner__close {
-					cursor: pointer;
-					position: absolute;
-					right: 1rem;
-					top: -1rem;
-				}
-  
-  .pg-beneficiaries .cr-email-form__label {
-			background: var(--input-background-color);
-		}
-  
-  .pg-beneficiaries .cr-email-form__input {
-			background: transparent;
-			border-radius: 4px;
-		}
-  
-  .pg-beneficiaries .cr-email-form__input input {
-				border: 1px solid var(--input-border-color) !important;
-				color: var(--input-text-color);
-			}
-  
-  .pg-beneficiaries .cr-email-form__group--focused .cr-email-form__label {
-				color: var(--input-legend-color-active);
-			}
-  
-  .pg-beneficiaries .cr-email-form__group--focused input {
-				background: var(--input-background-color);
-				border: 1px solid var(--input-border-color-active) !important;
-			}
-  
-  .pg-beneficiaries .cr-email-form__button {
-			align-items: center;
-			display: flex;
-			justify-content: center;
-			margin-top: 10px;
-			outline: none;
-			width: 100%;
-		}
-  
-  .pg-beneficiaries .cr-email-form__button--disabled {
-				color: var(--beneficiaries-primary-0-8) !important;
-			}
-  
-  .pg-beneficiaries .beneficiaries-add-address-modal .cr-email-form__form-content .cr-email-form__group--optional .cr-email-form__input {
-					background: var(--beneficiaries-primary-0-04);
-				}
-  
-  .pg-beneficiaries .beneficiaries-add-address-modal .cr-email-form__form-content .cr-email-form__submit-button-wrapper {
-				width: 100%;
-			}
-  
-  .pg-beneficiaries .beneficiaries-add-address-modal .cr-email-form__form-content .cr-email-form__submit-button-wrapper button {
-					width: 100%;
 				}
   
   .pg-beneficiaries .beneficiaries-fail-modal .cr-email-form {

@@ -1744,6 +1744,7 @@ color: #dde1e7 !important;
       padding: 0 var(--email-form-padding) var(--email-form-padding);
     }.pg-profile-page__level {
     margin-left: calc(var(--gap) * 2) !important;
+  
   }.pg-profile-page__vertical-line {
     background: var(--profile-box-header-line);
     height: calc(var(--gap) * 6.4);

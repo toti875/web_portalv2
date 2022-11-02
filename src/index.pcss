@@ -1,13 +1,282 @@
+.pg-password-strength {
+    position: relative;
+  
+    &-meter {
+      align-items: center;
+      background: var(--password-strength-meter-background);
+      display: flex;
+      height: 7px;
+      padding: 0 1px 0;
+  
+      &__block {
+        display: flex;
+        height: 5px;
+        transition: all 1s ease;
+  
+        &.too-weak {
+          background: var(--password-strength-meter-too-weak);
+          width: 20%;
+        }
+  
+        &.weak {
+          background: var(--password-strength-meter-weak);
+          width: 40%;
+        }
+  
+        &.good {
+          background: var(--password-strength-meter-good);
+          width: 60%;
+        }
+  
+        &.strong {
+          background: var(--password-strength-meter-strong);
+          width: 80%;
+        }
+  
+        &.very-strong {
+          background: var(--password-strength-meter-very-strong);
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+  .pg-password-pop-up {
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 10px 15px var(--shadow-color-level-2);
+    padding: 14px 9px 14px;
+    position: absolute;
+    width: 100%;
+    z-index: 6;
+  
+    &__strength {
+      height: 32px;
+  
+      &-title {
+        color: var(--secondary-contrast-cta-color);
+      }
+    }
+  
+    .too-weak,
+    .weak,
+    .good,
+    .strong,
+    .very-strong {
+      font-weight: bold;
+    }
+  
+    .too-weak {
+      color: var(--password-strength-meter-too-weak);
+    }
+  
+    .weak {
+      color: var(--password-strength-meter-weak);
+    }
+  
+    .good {
+      color: var(--password-strength-meter-good);
+    }
+  
+    .strong {
+      color: var(--password-strength-meter-strong);
+    }
+  
+    .very-strong {
+      color: var(--password-strength-meter-very-strong);
+    }
+  }
+  
+
+
+
+.cr-sign-up-form__label {
+    color: darkgrey;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 12px;
+    text-transform: none;
+    
+}
+
+
+.cr-sign-up-form2__label {
+    color: darkgrey;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 12px;
+    text-transform: none;
+    
+    
+
+}
+
+.custom-control-label {
+    font-size: 12px !important;
+    text-transform: none;
+    margin-top: -26px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+.cr-sign-up-form2__group {
+    display: inline;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.cr-sign-up-form__group {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.cr-sign-up-form2__group {
+
+    
+}
+
+.cr-sign-up-form__input {
+
+    min-width: 380px !important;
+    margin: 0 auto !important;
+
+}
+
+.cr-sign-up-form2__input {
+
+    min-width: 380px !important;
+    margin: 0 auto !important;
+
+}
+
+.cr-sign-up-form__recaptcha {
+
+    display: flex !important;
+    align-items: center !important;
+    margin-top: 30px !important;
+    backgound: transparent !important;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 40px;
+    justify-content: center;   
+    text-align: center !important;
+    
+}
+
+.cr-sign-up-form2__button-wrapper__login {
+
+    font-size: 15px !important;
+
+}
+
+.btn-2FA {
+	
+	border: 2px solid #009991 !important;
+    border-radius: 5px !important;
+    width: 100% !important;
+
+	color: var(--button-primary-cta-text-color);
+	font-weight: var(--button-font-weight);
+	transition: 0.2s;
+}
+
+.btn-2FA:hover {
+		background-color: #00d0b8;
+		color: var(--button-primary-cta-text-color-hover);
+		transition: 0.2s;
+	}
+
+
+.btn-primary:active,
+	.btn-primary:focus {
+		background: #00d0b8;
+		border: none;
+		box-shadow: none;
+		color: var(--button-primary-cta-text-color-active);
+	}
+    
+.btn-sign-up:disabled {
+		background: #535353 !important;
+		border: none;
+		color: var(--button-primary-cta-text-color-disabled);
+		cursor: not-allowed;
+	}
+.btn-sign-up:not(:disabled):not(.disabled):active:focus {
+	background: #535353;
+	box-shadow: none;
+	color: var(--button-primary-cta-text-color-active);
+}
+
+.btn-sign-up {
+	
+	border: 2px solid #009991 !important;
+    border-radius: 5px !important;
+    width: 100% !important;
+
+	color: var(--button-primary-cta-text-color);
+	font-weight: var(--button-font-weight);
+	transition: 0.2s;
+}
+
+.btn-sign-up:hover {
+		background-color: #00d0b8;
+		color: var(--button-primary-cta-text-color-hover);
+		transition: 0.2s;
+	}
+
+
+.btn-sign-up:active,
+	.btn-sign-up:focus {
+		background: #00d0b8;
+		border: none;
+		box-shadow: none;
+		color: var(--button-primary-cta-text-color-active);
+	}
+    
+.btn-sign-up:disabled {
+		background: #535353 !important;
+		border: none;
+		color: var(--button-primary-cta-text-color-disabled);
+		cursor: not-allowed;
+	}
+.btn-sign-up:not(:disabled):not(.disabled):active:focus {
+	background: #535353;
+	box-shadow: none;
+	color: var(--button-primary-cta-text-color-active);
+}
+
+
+
+.cr-email-form__cros-icon {
+    cursor: pointer;
+    display: inline-block;
+    height: calc(var(--gap) * 2.5);
+    margin-left: calc(var(--gap) * 2.6);
+    margin-top: -1px;
+    position: absolute;
+    width: calc(var(--gap) * 2.5);
+  }
+
 .pg-code-verification {
+    
     width: 100%;
   
     &__wrapper {
       display: flex;
       justify-content: space-between;
+      margin-top: 30px !important;
+      margin-bottom: 30px !important;
   
       &-item {
         align-items: center;
-        background: var(--input-background-color);
+        background: transparent !important;
         border: 1px solid var(--input-border-color);
         border-radius: 4px;
         color: var(--text-color);
@@ -34,7 +303,7 @@
   
           &-border {
             background: var(--body-background-color);
-            border: 2px solid var(--primary-cta-color);
+            border: 2px solid #009991;
             border-radius: 4px;
           }
   
@@ -94,21 +363,37 @@
 
  
   .cr-email-form {
-    background: var(--body-background-color);
-    border-radius: 3px;
-    box-shadow: 0 10px 15px var(--shadow-color-level-2);
+
+    margin-top: 20px;
+    backdrop-filter: blur(10px) saturate(135%);
+    -webkit-backdrop-filter: blur(10px) saturate(135%);
+    background-color: transparent !important;
+    border-radius: 10px !important;
+    border: 2px solid rgba(209, 213, 219, 0.3);
+
+    
+    box-shadow: 0 10px 15px var(--shadow-color-level-1);
     max-width: 424px;
     min-height: 350px;
     position: relative;
   
     &__options-group {
-      border-bottom: 2px solid var(--divider-color-level-2);
+      border-bottom: 2px solid var(--divider-color-level-1);
       height: 58px;
       width: 100%;
+
+      backdrop-filter: blur(10px) saturate(135%);
+      -webkit-backdrop-filter: blur(10px) saturate(135%);
+      background-color: transparent !important;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom: 1px solid rgba(209, 213, 219, 0.3); 
     }
   
     &__option {
-      background: var(--subheader-background-color);
+      
+        
+
       display: inline-block;
       height: 58px;
       width: 100%;
@@ -205,8 +490,22 @@
   
     &__button-wrapper {
       display: flex;
-      flex-direction: column;
       justify-content: center;
+      border: 2px solid #009991 !important;
+      border-radius: 5px;
+      align-vertical: center !important;
+
+
+      &__button-wrapper  {
+        .btn-primary {
+            background: #00a693;
+            border: none;
+            color: var(--button-primary-cta-text-color);
+            font-weight: var(--button-font-weight);
+            transition: 0.2s;
+        }
+  
+      }
     }
   
     &__button-wrapper--empty {
@@ -254,15 +553,14 @@
     }
   
     .cr-email-form__form-content {
-      background: var(--body-background-color);
+      background: unset;
       position: static;
     }
   
     .cr-email-form__button-wrapper {
-      position: static;
   
       button {
-        font-size: 14px;
+        font-size: 16px;
         height: 41px;
         text-transform: uppercase;
       }
@@ -334,8 +632,8 @@
     &__button-wrapper {
       background: transparent;
       display: flex;
-      flex-direction: column;
       justify-content: space-between;
+
     }
   
     &__button-wrapper--empty {
@@ -378,7 +676,7 @@
     }
   
     .cr-sign-in-form {
-      background: var(--body-background-color);
+      background: transparent !important;
       display: flex;
       flex-direction: column;
 
@@ -395,7 +693,7 @@
       }
   
       &__option {
-        background: var(--subheader-background-color);
+        background: transparent !important;
   
         .__selected {
           border-bottom: 2px solid var(--primary-cta-color);
@@ -1376,95 +1674,7 @@
 		}
 	}
 
-	.cr-email-form {
-		background: transparent !important;
-		border-bottom-left-radius: 3px;
-		border-bottom-right-radius: 3px;
-		border-radius: 20px !important;
-		box-shadow: 0 8px 25px var(--shadow-color-level-3);
 
-		&__option {
-			background: var(--subheader-background-color);
-			border-top-left-radius: 3px;
-			border-top-right-radius: 3px;
-
-			&-inner {
-				color: var(--primary-text-color);
-				font-size: 16px;
-				font-style: normal;
-				font-weight: normal;
-				line-height: 60px;
-				text-transform: lowercase;
-
-				&::first-letter {
-					text-transform: uppercase;
-				}
-
-				&__close {
-					cursor: pointer;
-					position: absolute;
-					right: 1rem;
-					top: -1rem;
-				}
-			}
-		}
-
-		&__label {
-			background: var(--input-background-color);
-		}
-
-		&__input {
-			background: transparent;
-			border-radius: 4px;
-
-			input {
-				border: 1px solid var(--input-border-color) !important;
-				color: var(--input-text-color);
-			}
-		}
-
-		&__group--focused {
-			.cr-email-form__label {
-				color: var(--input-legend-color-active);
-			}
-
-			input {
-				background: var(--input-background-color);
-				border: 1px solid var(--input-border-color-active) !important;
-			}
-		}
-
-		&__button {
-			align-items: center;
-			display: flex;
-			justify-content: center;
-			margin-top: 10px;
-			outline: none;
-			width: 100%;
-
-			&--disabled {
-				color: var(--beneficiaries-primary-0-8) !important;
-			}
-		}
-	}
-
-	.beneficiaries-add-address-modal {
-		.cr-email-form__form-content {
-			.cr-email-form__group--optional {
-				.cr-email-form__input {
-					background: var(--beneficiaries-primary-0-04);
-				}
-			}
-
-			.cr-email-form__submit-button-wrapper {
-				width: 100%;
-
-				button {
-					width: 100%;
-				}
-			}
-		}
-	}
 
 	.beneficiaries-fail-modal {
 		.cr-email-form {

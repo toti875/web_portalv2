@@ -65,13 +65,13 @@ export const TwoFactorAuthComponent: React.FC<TwoFactorAuthProps> = ({
                                 isMobile={isMobile}
                             />
                         </div>
-                        <div className="cr-email-form__button-wrapper">
+                        <div >
                             <Button
                                 disabled={isLoading || otpCode.length < 6}
                                 onClick={onSubmit}
                                 size="lg"
-                                variant="primary">
-                                {isLoading ? 'Loading...' : buttonLabel ? buttonLabel : 'Sign in'}
+                                variant="2FA">
+                                {isLoading ? 'Carregando...' : buttonLabel ? buttonLabel : 'Acessar'}
                             </Button>
                         </div>
                     </div>
