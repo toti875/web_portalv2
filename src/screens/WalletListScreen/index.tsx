@@ -197,7 +197,7 @@ export const WalletListScreen = () => {
 	};
 
 	return (
-		<div id="wallet-list-screen-fortem w-container">
+		<div id="wallet-list-screen-fortem">
 			<div
 				className="w-container"
 				style={{

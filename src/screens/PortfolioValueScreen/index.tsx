@@ -20,7 +20,7 @@ NP.enableBoundaryChecking(false); // default param is true
 
 
 export const PortfolioValueScreen = () => {
-	setDocumentTitle('Wallets');
+	setDocumentTitle('Minhas carteiras');
 	const intl = useIntl();
 
 	// state

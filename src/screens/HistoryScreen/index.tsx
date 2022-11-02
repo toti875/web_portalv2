@@ -319,8 +319,8 @@ export const HistoryScreen = () => {
 	};
 
 	return (
-		<div className="history-screen history-screen-container">
-			<div className="history-screen__title">History</div>
+		<div className="history-screen-fortem history-screen-container">
+			<div className="history-screen__title">Extrato de movimentações</div>
 			{renderFilterBar()}
 			<div className="history-screen__tabs ">
 				<div className="history-screen__tabs__label   d-flex">{renderTabsLabel()}</div>

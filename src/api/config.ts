@@ -38,7 +38,7 @@ export const defaultConfig: Config = {
 	usernameEnabled: true,
 	sessionCheckInterval: '15000',
 	balancesFetchInterval: '3000',
-	passwordEntropyStep: 14,
+	passwordEntropyStep: 7,
 	showLanding: true,
 	sentryEnabled: false,
 

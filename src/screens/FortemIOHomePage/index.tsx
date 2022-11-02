@@ -472,7 +472,7 @@ function scrollRotate() {
 										<span>para todas as suas necessidades</span>
 										<span className="color-accent">.</span>
 									</h2>
-									<p style={{fontSize: '26px'}}>Dos investimentos em tokens à conta digital. Aqui você tem o controle integrado de toda a sua vida financeira.</p>
+									<p style={{fontSize: '26px'}}>Dos investimentos em tokens à conta digital. Aqui você tem o controle integrado para todas as suas necessidades financeiras.</p>
 								</Parallax>
 								
 								</div>
@@ -1058,7 +1058,7 @@ function scrollRotate() {
 					<span className="color-accent">.</span>
 				</h3>
 				<p className="mg-bottom-0">
-					"Quam facilisi gravida in morbi blandit imperdiet urna ut metus pharetra orci ut cursus diam ut urna mi pharetra nibh neque mi cursus nec donec morbi non hendrerit "
+					"As APIs da Fortem foram projetadas para fornecerem diferentes canais e formas de interação com os serviços da plataforma, de acordo com as necessidades específicas de cada cliente. Disponibilizamos os principais padrões e tecnologias já amplamente utilizadas pelo mercado financeiro, facilitando as integrações entre diferentes sistemas e habilitando o acesso ao novo mercado digital de forma segura e descomplicada."
 					<span className="text-no-wrap">in gravida .</span>
 				</p>
 			</div>

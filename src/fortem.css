@@ -2202,6 +2202,9 @@
 	box-shadow: -3px -3px 7px #ffffff73,
 				2px 2px 5px rgba(94, 104, 121, 0.288) !important;
 }
+.cr-sign-up-form2__button-wrapper{
+    margin-top: 20px;
+}
     .pg-sign-up-screen .cr-sign-up-form2__group {
             font-size: 15px !important;
 			
@@ -2215,7 +2218,11 @@
 				
 			}.pg-sign-up-screen .cr-sign-up-form2__group--focused input {
 				
-			}.pg-sign-up-screen .cr-sign-up-form2__title {
+			}
+            
+
+            
+            .pg-sign-up-screen .cr-sign-up-form2__title {
 
 
 		}{/*table*/}.cr-table-container {

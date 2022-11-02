@@ -162,7 +162,7 @@ export const DepositInfo: React.FC<DepositInfoProps> = (props: DepositInfoProps)
 							isClearable={false}
 							onChange={handleChange}
 							options={options.filter(option => !allChildCurrencies.map(cur => cur.id).includes(option.value))}
-							placeholder="Search Coin/Token Name"
+							placeholder="Localizar ativo"
 							styles={SelectStyles}
 							tabSelectsValue={false}
 							value={options.filter(option => option.value.toLowerCase() === currency_id.toLowerCase())}
