@@ -23,7 +23,7 @@ export const defaultConfig: Config = {
 		downstreamURL: 'wss://www.fortem1.com.br/api/public/',
 	},
 	*/
-	minutesUntilAutoLogout: '60',
+	minutesUntilAutoLogout: '2',
 	rangerReconnectPeriod: '1', 
 	withCredentials: false,
 	storage: {},

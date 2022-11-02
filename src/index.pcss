@@ -1739,15 +1739,15 @@
 	}
 
 	.modal-content {
-		background: var(--form-background-color);;
-		border-radius: 20px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);		border-radius: 20px;
 		box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.15);
 		max-width: 424px;
 		overflow: hidden;
 
 		.modal-header {
-			background: transparent;
-			border-bottom: 2px solid var(--divider-color-level-2);
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);			border-bottom: 2px solid var(--divider-color-level-2);
 			padding-left: 23px;
 			padding-right: 23px;
 
@@ -1778,8 +1778,8 @@
 		}
 
 		.modal-body {
-			background: #fff;
-			padding-bottom: 35px;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);			padding-bottom: 35px;
 			padding-left: 23px;
 			padding-right: 23px;
 			padding-top: 30px;
@@ -1792,11 +1792,11 @@
 
 			.td-email-form__group--focused {
 				.td-email-form__label {
-					color: pink !important;
+					color: #fff !important;
 				}
 
 				input {
-					border-color: green !important;
+					border-color: gray !important;
 				}
 			}
 		}
