@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getTotalBuyers, SaleItem, selectTotalBuyers } from '../../../../modules';
 
 //import Stack from '@mui/material/Stack';
-import LinearProgress from '@mui/material/LinearProgress';
+//import LinearProgress from '@mui/material/LinearProgress';
 
 import { localeDate } from '../../../../helpers/localeDate';
 
@@ -166,7 +166,7 @@ export const SaleInfo: React.FC<SaleInfoProps> = (props: SaleInfoProps) => {
 					<p style={{color: '#fff', fontSize: '18px'}}>Lote mínimo:</p><span style={{color: '#009991', fontSize: '18px'}}>{`${props.sale.min_buy} ${ 'tokens ' }${props.sale.currency_id.toUpperCase()}`}</span>
 				</div>
 				<div className="col-12" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-					<p style={{color: '#fff', fontSize: '18px'}}>Total de tokens emitidos:</p><span style={{color: '#009991', fontSize: '18px'}}>{props.sale.total_ieo}</span>
+					<p style={{color: '#fff', fontSize: '18px'}}>Total de tokens emitidos:</p><span style={{color: '#009991', fontSize: '18px'}}>{props.sale.total_ieo}</span><br />
 					<p style={{color: '#fff', fontSize: '18px'}}>Total de tokens restantes:</p><span style={{color: '#009991', fontSize: '18px'}}>{props.sale.remains}</span><br/>
 
 				</div>
