@@ -945,6 +945,9 @@ export const pt = {
 'page.body.trading.header.orderBook.header.title.price': 'Preço unitário',
 'page.body.trading.header.orderBook.header.title.amount': 'Qtd.',
 'page.body.trading.header.orderBook.header.title.sum': 'Vol financeiro',
+'page.body.trading.header.orderBook.header.title': 'Livro de ofertas',
+
+
 
 	...nationalitiesNames,
 	...customTranslations,

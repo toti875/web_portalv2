@@ -225,7 +225,7 @@ const OrderBookContainer = props => {
 		},
 	);
 
-	const classNameTableReverse = classNameTable + ' td-reverse-table-body';
+	const classNameTableReverse = classNameTable + 'td-reverse-table-body';
 
 	return (
 		<div className="cnt-order-book ">
@@ -241,7 +241,7 @@ const OrderBookContainer = props => {
 								<Col className="p-0 d-flex align-items-center"></Col>
 							</div>
 						</div>
-						<div className="td-order-book-tbheader">
+						<div className={classNameTableReverse}>
 							<div className="p-0">
 								{`${formatMessage({ id: 'page.body.trading.header.orderBook.header.title.price' })}${
 									currentMarket ? `(${quoteUnit})` : ''

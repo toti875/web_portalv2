@@ -21,7 +21,7 @@ export const pgRoutes = (isLoggedIn: boolean, isLight?: boolean): string[][] => 
 
 export const DEFAULT_CCY_PRECISION = 2;
 export const STORAGE_DEFAULT_LIMIT = 100;
-export const ORDER_BOOK_DEFAULT_SIDE_LIMIT = 25;
+export const ORDER_BOOK_DEFAULT_SIDE_LIMIT = 10;
 export const DEFAULT_TRADING_VIEW_INTERVAL = '30';
 export const VALUATION_PRIMARY_CURRENCY = 'BRL';
 export const VALUATION_SECONDARY_CURRENCY = 'USDT';
@@ -48,7 +48,7 @@ export const DEFAULT_MARKET = {
 export const colors = {
 	light: {
 		chart: {
-			primary: '#fff',
+			primary: '#0b1426',
 			up: '#54B489',
 			down: '#E85E59',
 		},
@@ -61,7 +61,7 @@ export const colors = {
 			bids: 'var(--bids-level-4)',
 		},
 		depth: {
-			fillAreaAsk: '#fa5252',
+			fillAreaAsk: '#eb4d5c, opacity 40.0%',
 			fillAreaBid: '#12b886',
 			gridBackgroundStart: '#1a243b',
 			gridBackgroundEnd: '#1a243b',
@@ -73,7 +73,7 @@ export const colors = {
 	},
 	basic: {
 		chart: {
-			primary: 'var(--rgb-body-background-color)',
+			primary: '#0b1426',
 			up: 'var(--rgb-bids)',
 			down: 'var(--rgb-asks)',
 		},
