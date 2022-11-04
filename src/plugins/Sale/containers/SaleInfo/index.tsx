@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { ProgressBar } from 'react-bootstrap';
+import { ProgressLinear } from 'ui-neumorphism';
+import 'ui-neumorphism/dist/index.css';
+
 import Countdown from 'react-countdown';
 import './SaleInfo.css';
 
@@ -8,7 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getTotalBuyers, SaleItem, selectTotalBuyers } from '../../../../modules';
 
 //import Stack from '@mui/material/Stack';
-//import LinearProgress from '@mui/material/LinearProgress';
+import LinearProgress from '@mui/material/LinearProgress';
 
 import { localeDate } from '../../../../helpers/localeDate';
 
@@ -135,7 +137,7 @@ export const SaleInfo: React.FC<SaleInfoProps> = (props: SaleInfoProps) => {
 		</div>
 		<div className="row d-flex justify-content-between">
 			<p style={{marginLeft: '50px'}}><Countdown date={countdownTime} renderer={renderer} /></p>
-			<div style={{ width: 120, height: 120, marginRight: '50px' }}>
+			<div style={{ width: '120px', height: '120px'}} >
 			<CircularProgressbar
         		value={percentage}
         		text={`${percentage}%`}
@@ -169,15 +171,12 @@ export const SaleInfo: React.FC<SaleInfoProps> = (props: SaleInfoProps) => {
 
 				</div>
 				<div >
-					<ProgressBar
-						animated
-						striped
-						variant="info"
-						now={((props.sale.total_ieo - props.sale.remains) / props.sale.total_ieo) * 100}
-						label={`Progresso da captação: ${((props.sale.total_ieo - props.sale.remains) / props.sale.total_ieo) * 100}% `}
-						style={{ height: '30px', fontSize: '1rem', fontWeight: 'bold', color: '#fff' }}
-					/>				
-				</div>
+					<ProgressLinear 
+						
+						height={20} 
+						color='#009991'
+						value={Math.floor(((props.sale.total_ieo - props.sale.remains) / props.sale.total_ieo) * 100)}
+					 />				</div>
 				<div className="col-12" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginTop: '20px' }}>
 					<p style={{color: '#fff', fontSize: '18px'}}>Total de compradores:</p><span style={{color: '#009991', fontSize: '18px'}}>{totalBuyersSelector.payload.totalBuyers}</span>
 				</div>

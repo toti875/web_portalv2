@@ -115,7 +115,7 @@ export const WrapperTabPage: React.FC<WrapperTabPageProps> = props => {
 	};
 
 	return (
-		<div className="td-cpn-wrapper-tab-page">
+		<div className="td-cpn-wrapper-tab-page" style={{background: 'transparent !important'}}>
 			{renderHeader()}
 			<div
 				style={{ position: 'relative', paddingRight: '0px', paddingLeft: '0px' }}

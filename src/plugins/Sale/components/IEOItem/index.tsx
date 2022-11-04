@@ -105,7 +105,7 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 
 	switch (props.type) {
 		case 'ongoing':
-			saleBadgeColor = '#0C9D58ff';
+			saleBadgeColor = '#009991 ';
 			saleBadgeDescription = 'Em captação';
 			break;
 		case 'upcoming':
@@ -279,7 +279,7 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 					<div className="font-weight-500 text-extra-dark-gray ">
 						<ul className="list-style-03">
 
-							<div className="font-weight-500 text-extra-dark-gray" style={{fontSize: '15px', display: 'flex', }}>
+							<div className="font-weight-500 text-extra-dark-gray mt--5 mb--5" style={{fontSize: '15px', display: 'flex', }}>
 								<span>Descrição</span>
 							</div>
 							<div className="inner-container font-weight-500 text-extra-dark-gray mb--15" style={{fontSize: '14px', display: 'flex', justifyContent: 'flex-start', textAlign: 'left', height: '80px'}}>

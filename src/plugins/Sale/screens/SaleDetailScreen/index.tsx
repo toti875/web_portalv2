@@ -4,9 +4,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router';
 import { findSalebyId, selectSaleItem, selectUserInfo } from '../../../../modules';
 import { BuyersHistory, BuyHistory, SaleBuy, SaleDetail, SaleInfo, SaleSocial } from '../../containers';
-import './SaleDetailScreen.css';
+import './SaleDetailScreen.pcss';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import SectionTitle from "../../../../template_react/doob/src/elements/sectionTitle/SectionTitle";
+
+
 
 
 export const SaleDetailScreen: React.FC = () => {
@@ -120,7 +122,7 @@ export const SaleDetailScreen: React.FC = () => {
 			);
 		} else {
 			return (
-				<div id="sale-detail-screen" style={{marginTop: '80px'}}>
+				<div id="sale-detail-screen" style={{marginTop: '80px', marginBottom: '80px'}}>
 
 <div className="rwt-advance-tab-area "  >
                     <div className="" >

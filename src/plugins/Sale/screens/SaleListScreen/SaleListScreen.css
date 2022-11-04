@@ -19,7 +19,7 @@
   }
   .banner video {
 	position: absolute;
-	opacity: 0.8;
+	opacity: 0.85;
 	top: -200px;
 	left: 0;
 	object-fit: cover;
