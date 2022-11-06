@@ -16,17 +16,17 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 	left: 0;
 	bottom: 0;
 	right: 0;
-	height: calc(100% - 6px);
+	height: calc(60% - 6px);
 	color: white;
 	/* padding: 0 10px; */
 	.td-order-book {
 		height: 100%;
 		padding-bottom: 15px;
 		&-item__negative {
-			color: green;
+			color: #D92121;
 		}
 		&-item__positive {
-			color: red;
+			color: #00CC99;
 		}
 		&-tooltip {
 			bottom: 200px;
@@ -37,7 +37,7 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 			svg {
 				cursor: pointer;
 			}
-			background-color: var(--trading-header-background);
+			background-color: transparent;
 			&__title {
 				h3 {
 					font-weight: bold;
@@ -50,6 +50,7 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 		&-tbheader {
 			height: ${OrderBookStyleVar.tbHeadHeight};
 			padding: 6px 10px;
+			margin-bottom: 30px;
 			font-size: 14px;
 			color: #848e9c;
 			> div {
@@ -64,15 +65,16 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 		&-ticker {
 			height: ${OrderBookStyleVar.tickerHeight};
 			padding: 10px;
-			background-color: var(--trading-header-background);
+			background-color: transparent;
 			font-size: 14px;
+			text-align: center;
 			&__last-price {
 				font-size: 18px;
 				line-height: 25px;
 			}
 			&__usd {
 				color: #848e9c;
-				padding-left: 1.5rem !important;
+				padding-left: 10px !important;
 			}
 		}
 		&-table {
@@ -113,8 +115,8 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 				}
 			}
 			tbody {
-				height: 100%;
-				overflow-y: scroll;
+				height: 50%;
+				overflow-y: hidden;
 				tr {
 					margin-top: 1px;
 					margin-bottom: 1px;

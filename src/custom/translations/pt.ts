@@ -1,12 +1,12 @@
 export const pt = {
-	'page.body.wallet.history.header': 'Wallet history',
+	'page.body.wallet.history.header': 'Histórico',
 	/**Trade history */
 	'page.body.trade.tab.myTrades': 'Ordens executadas',
 	'page.body.trade.tab.marketTrades': 'Últimos negócios',
 	/**New Order */
-	'page.body.trade.header.newOrder.content.buyWith': 'Buy With',
-	'page.body.trade.header.newOrder.content.title.buy': 'Buy',
-	'page.body.trade.header.newOrder.content.title.sell': 'Sell',
+	'page.body.trade.header.newOrder.content.buyWith': 'Comprar com',
+	'page.body.trade.header.newOrder.content.title.buy': 'Comprar',
+	'page.body.trade.header.newOrder.content.title.sell': 'Vender',
 	/**Logger */
 	'page.body.user.loggin': 'Entrar',
 	'page.body.user.register': 'Criar conta',

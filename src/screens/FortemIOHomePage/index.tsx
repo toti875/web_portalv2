@@ -472,7 +472,7 @@ function scrollRotate() {
 										<span>para todas as suas necessidades</span>
 										<span className="color-accent">.</span>
 									</h2>
-									<p style={{fontSize: '26px'}}>Dos investimentos em tokens à conta digital. Aqui você tem o controle integrado para todas as suas necessidades financeiras.</p>
+									<p style={{fontSize: '26px'}}>Dos investimentos em tokens à conta digital. Aqui você tem o controle integrado de todas as suas necessidades financeiras.</p>
 								</Parallax>
 								
 								</div>

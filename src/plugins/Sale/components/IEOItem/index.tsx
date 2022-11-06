@@ -300,7 +300,7 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 								<span>Formas de pagamento</span>
 							</div>
 							<div className="font-weight-500 text-extra-dark-gray mt--5" style={{fontSize: '14px', display: 'flex', justifyContent: 'space-between'}}>
-								<span>Reais (R$)</span><span style={{}}><img style={{ width: '26px', height: '26px', marginLeft: '1rem', }} src="http://pics.fortem.fra1.cdn.digitaloceanspaces.com/BRL%20%281%29.svg"/></span>
+								<span>Reais (R$)</span><span style={{}}><img style={{ width: '26px', height: '26px', marginLeft: '1rem', }} src="https://fortem.fra1.digitaloceanspaces.com/BRL%20%281%29.svg"/></span>
 							</div>
 							<div className="font-weight-500 text-extra-dark-gray mt--5" style={{fontSize: '14px', display: 'flex', justifyContent: 'space-between'}}>
 								<span>Cripto </span><span style={{fontSize: '13px'}}><img style={{ width: '26px', height: '26px', marginLeft: '1rem', }} src={findIcon('ETH')}

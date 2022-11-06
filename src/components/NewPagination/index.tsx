@@ -24,7 +24,7 @@ export const NewPagination: React.FC<NewPaginationProps> = ({ page = 1, total = 
 				{'<'}
 			</button>{' '}
 			<span>
-				Page{' '}
+				Página{' '}
 				<strong className="d-flex justify-center: center">
 					<div className="mr-1 ml-1" style={{ color: '#ced4da' }}>
 						{page}

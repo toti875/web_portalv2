@@ -80,7 +80,7 @@ const ProductsDropdown = () => {
                   <Icon />Negociação instantânea
               </a><br/>
               <a href="/markets" style={{fontSize: '16px'}}>
-                  <Icon />Negociação avançada
+                  <Icon />Negociação avançada (Excahnge Pro)
               </a>
             </div>
           </li>

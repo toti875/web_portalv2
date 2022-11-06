@@ -1,3 +1,41 @@
+.td-cpn-pagination {
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	padding: 10px 0;
+	padding-left: 0;
+
+	button {
+		background-color: transparent;
+		border: 1px solid #666;
+		border-radius: 2px;
+		color: #faf9f9;
+		font-family: 'Poppins', sans-serif;
+		margin: 0 6px;
+		padding: 4px 12px;
+
+		&[disabled] {
+			border: 1px solid #444;
+			color: #fae2f9;
+		}
+
+		&:not([disabled]) {
+			&:hover {
+				background: transparent;
+				border: 1px solid #fff;
+        backdrop-filter: blur(10px);
+				color: #fff;
+				outline: none;
+			}
+		}
+	}
+
+	span {
+		align-items: center;
+		display: flex;
+	}
+}
 
 .history-screen-fortem {
 	background: var(--body-background-color);
@@ -1036,7 +1074,7 @@
   `
 
   .cr-combined-order-book {
-  height: 100%;
+  height: 50%;
   position: relative;
 
   .cr-table {
@@ -1079,17 +1117,17 @@
     }
 
     &-negative {
-      color: var(--asks);
+      color: red;
     }
 
     &-positive {
-      color: var(--bids);
+      color: green;
     }
   }
 
   .cr-order-book {
     td {
-      color: var(--order-book-table-text-color);
+      color: gray;
     }
   }
 
@@ -1131,7 +1169,7 @@
 
     .cr-order-book {
       height: 154px;
-      overflow-y: scroll;
+      overflow-y: hidden !important;
 
       &:first-child {
         border-bottom: 1px solid var(--order-book-last-market-price-border-color);
@@ -1170,12 +1208,12 @@
 	}
 
 	&--bg {
-		background: rgb(49, 52, 69);
+		background: transparent;
 		box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.15);
 	}
 
 	&--bg--second {
-		background: rgb(49, 52, 69);
+		background: transparent;
 		box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.15);
 	}
 
@@ -1899,14 +1937,15 @@
 	}
 
 	.modal-content {
-    background: rgba(255,255,255,0.2);
-    backdrop-filter: blur(10px);		border-radius: 20px;
+    background: transparent;
+    backdrop-filter: blur(10px);		
+    border-radius: 10px;
 		box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.15);
 		max-width: 424px;
 		overflow: hidden;
 
 		.modal-header {
-      background: rgba(255,255,255,0.2);
+      background: transparent;
       backdrop-filter: blur(10px);			border-bottom: 2px solid var(--divider-color-level-2);
 			padding-left: 23px;
 			padding-right: 23px;
@@ -1931,6 +1970,7 @@
 			}
 
 			.close {
+        background: transparent !important;
 				span:first-child {
 					font-size: 25px;
 				}
@@ -1938,7 +1978,7 @@
 		}
 
 		.modal-body {
-      background: rgba(255,255,255,0.2);
+      background: transparent;
       backdrop-filter: blur(10px);			padding-bottom: 35px;
 			padding-left: 23px;
 			padding-right: 23px;
@@ -1966,7 +2006,7 @@
 
 .cr-modal {
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: transparent;
     bottom: 0;
     display: flex;
     flex-direction: column;

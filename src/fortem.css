@@ -1,3 +1,107 @@
+
+
+
+.td-cpn-wrapper-tab-page__header {
+    background-color: #313445;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.15);
+    margin-top: 42px;
+    padding-bottom: 1rem;
+    padding-left: 15px;
+    padding-top: 1rem;
+}.td-cpn-wrapper-tab-page__header__h3 {
+        color: #fff;
+        font-size: 35px;
+        font-weight: 500;
+        line-height: 41px;
+        margin-bottom: 29px;
+    }.td-cpn-wrapper-tab-page__header__search {
+        background: rgba(196, 196, 196, 0.28);
+        border: 0.5px solid #848e9c;
+        border-radius: 3px;
+        box-sizing: border-box;
+        display: flex;
+        height: 45px;
+        position: relative;
+        width: 20rem;
+    }.td-cpn-wrapper-tab-page__header__search input {
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            height: 100%;
+            outline: none;
+            padding-left: 2rem;
+            width: 80%;
+        }.td-cpn-wrapper-tab-page__header__search .icon-search {
+            background: transparent;
+            width: 20%;
+        }.td-cpn-wrapper-tab-page__header__search ::-webkit-input-placeholder {
+            color: rgba(196, 196, 196, 0.28);
+        }.td-cpn-wrapper-tab-page__header__search ::placeholder {
+            color: rgba(196, 196, 196, 0.28);
+        }.td-cpn-wrapper-tab-page__header__search svg {
+            position: absolute;
+            right: 4%;
+            top: 30%;
+        }.td-cpn-wrapper-tab-page__header__buttons {
+        background: rgba(132, 142, 156, 0.35);
+        border-radius: 3px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+    }.td-cpn-wrapper-tab-page__header__buttons-btn {
+            align-items: center;
+            background-color: transparent;
+            border: 1px solid rgba(196, 196, 196, 0.28);
+            box-sizing: border-box;
+            color: #fff;
+            display: flex;
+            font-size: 17px;
+            font-weight: normal;
+            justify-content: center;
+            line-height: 20px;
+            margin: 0;
+            min-height: 45px;
+            outline: none;
+            padding: 3px 7px;
+            text-align: center;
+            transition: ease-in-out 0.1s;
+            width: 25%;
+            z-index: 100;
+        }.td-cpn-wrapper-tab-page__header__buttons__all {
+            background: #c7c7c7;
+        }.td-cpn-wrapper-tab-page__header__buttons__upcoming {
+            background: #e06211;
+        }.td-cpn-wrapper-tab-page__header__buttons__running {
+            background: #2fb67e;
+        }.td-cpn-wrapper-tab-page__header__buttons__ended {
+            background-color: #bd3421;
+        }.td-cpn-wrapper-tab-page__body {
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 15%) 0 4px 8px -2px;
+    padding: 3rem 0;
+}.td-cpn-wrapper-tab-page .pagination .page-item .page-link {
+            background-color: transparent !important;
+            border: none;
+            border-radius: 4px;
+            color: #848e9c;
+            font-size: 14px;
+            line-height: 16px;
+            margin: 3px;
+            min-width: 30px;
+            text-align: center;
+        }.td-cpn-wrapper-tab-page .pagination .page-item .page-link#active {
+                background: transparent !important;
+                color: transparent;
+            }.td-cpn-wrapper-tab-page .pagination .page-item .page-link#non-active {
+                background: transparent !important;
+            }/* stylelint-disable */.pg-mobile-app .pg-change-forgotten-password-screen {
+    background: unset;
+    height: auto;
+}
+
 .form-control {
 
 background: transparent !important;
@@ -38,7 +142,7 @@ background: transparent !important;
 				color: var(--system-red);
 			}.cr-order-input__crypto-icon {
 		align-items: center;
-		background-color: var(--input-background-color);
+		background-color: transparent;
 		border: 1px solid var(--input-border-color);
 		border-left: none;
 		display: flex;
@@ -91,7 +195,7 @@ background: transparent !important;
 		font-size: 1em;
 		font-weight: lighter;
 	}.cr-markets .cr-table {
-		background: var(--body-background-color);
+		background: transparent;
 	}.cr-markets .cr-table tbody tr:hover {
 					background: var(--market-selector-table-row-selector) !important;
 				}.cr-markets .cr-table tbody tr:hover td {
@@ -107,10 +211,10 @@ background: transparent !important;
 			font-size: 0.83em;
 		}.cr-markets .cr-table .__positive {
 			background: var(--transparent);
-			color: green;
+			color: #00CC99;
 		}.cr-markets .cr-table .__negative {
 			background: var(--transparent);
-			color: red;
+			color: #D92121;
 		}.cr-markets .cr-table th:first-child,
 		.cr-markets .cr-table td:first-child {
 			padding-left: calc(var(--gap) * 2);
@@ -137,15 +241,15 @@ background: transparent !important;
 			}.cr-markets .cr-table__row--selected td {
 					color: var(--market-selector-table-text-color-active) !important;
 				}.cr-markets .cr-search {
-		background: var(--body-background-color);
+		background: transparent;
 		margin: 0;
 		margin-top: var(--gap);
 		padding: 0;
 		width: 100%;
 	}.cr-markets .cr-search__icon {
-			background: var(--body-background-color);
+			background: transparent;
 		}.cr-markets .cr-search input {
-			background: var(--input-background-color);
+			background: transparent;
 			border-bottom: 1px solid var(--divider-color-level-3);
 			color: var(--input-text-color);
 			font-weight: lighter;
@@ -184,7 +288,7 @@ background: transparent !important;
 	justify-content: flex-end;
 	padding: calc(var(--gap) * 2.5) 0 0;
 }.pg-history-elem__pagination button {
-		background: none;
+		background: transparent !important;
 		border: none;
 		cursor: pointer;
 		margin-left: calc(var(--gap) * 4.5);
@@ -198,7 +302,7 @@ background: transparent !important;
 		position: relative;
 		width: 100%;
 	}.cr-desktop-table__pagination ul.pagination li .page-link {
-				background-color: rgb(49, 52, 69);
+				background-color: transparent !important;
 				border: none;
 			}.cr-desktop-table__pagination ul.pagination li:first-child {
 			left: 0;
@@ -214,15 +318,15 @@ background: transparent !important;
 			}.cr-table-container {
 	position: relative;
 }.cr-table {
-	background: var(--table-background-color);
+	background: transparent !important;
 	border-collapse: collapse;
 	position: relative;
 	text-align: center;
 	width: 100%;
 }.cr-table__head {
-		background: var(--table-background-color);
+		background: transparent !important;
 	}.cr-table__head tr {
-			background: var(--table-background-color);
+			background: transparent !important;
 		}.cr-table__head tr th {
 				color: var(--table-text-color);
 				font-size: calc(var(--gap) * 4);
@@ -235,30 +339,30 @@ background: transparent !important;
 		flex-grow: 1;
 		max-height: 100%;
 		overflow-x: hidden;
-		overflow-y: scroll;
+		overflow-y: hidden;
 		overflow-y: auto;
 	}.cr-table__body__order-row-background {
 			padding: calc(var(--gap) * 2.6);
 		}.cr-table__body__order td {
-			background: transparent;
+			background: transparent !important;
 			font-size: 1em !important;
 			padding-bottom: calc(var(--gap) * 1.38) !important;
 			padding-top: calc(var(--gap) * 1.38) !important;
 		}.cr-table__body {
 		background: var(--table-background-color);
 	}.cr-table__body tr {
-			background: var(--table-background-color);
+			background: transparent !important;
 		}.cr-table__body tr td {
 				color: var(--table-text-color);
 				padding: 12px 8px;
 				position: relative;
 				z-index: 10;
 			}.cr-table__body tr:nth-child(even) {
-			background-color: var(--table-background-color);
+			background-color: transparent !important;
 		}.cr-table__row--selected {
 			background: var(--table-row-selector-color);
 		}.cr-table-background {
-	background: var(--table-background-color);
+	background: transparent !important;
 	display: flex;
 	flex-direction: column;
 	left: 0;
@@ -276,7 +380,7 @@ background: transparent !important;
 		padding: 19px;
 		width: 30%;
 	}.cr-table__filter {
-	background: var(--table-background-color);
+	background: transparent !important;
 	cursor: pointer;
 	font-size: 15px;
 	margin: 0 5px;
@@ -284,11 +388,11 @@ background: transparent !important;
 }.cr-table__filter--active {
 		color: var(--primary-cta-color);
 	}.cr-table__filters {
-	background: var(--table-background-color);
+	background: transparent;
 	display: flex;
 }.cr-table-header__content {
 	align-items: center;
-	background: var(--table-background-color);
+	background: transparent !important;
 	display: flex;
 	height: 2.5em !important;
 	justify-content: space-between;
@@ -296,7 +400,7 @@ background: transparent !important;
 }.cr-table-header__content-empty {
 	display: none;
 }.cr-title-component {
-	background: var(--subheader-background-color);
+	background: transparent !important;
 	color: var(--primary-text-color);
 	font-size: calc(var(--gap) * 4);
 }
@@ -360,14 +464,14 @@ background-color: var(--color-darker)!important;
 }
 
 #sale-history div div div div div div div div table thead tr th {
-	background-color: #1f1f1f !important;
+	background-color: transparent !important;
 	text-align: center;
 	font-weight: bold;
 	color: #bac6cf;
 }
 
 #sale-history div div div div div div div div table tbody tr {
-	background-color: #1f1f1f !important;
+	background-color: transparent !important;
 	text-align: center;
 }
 
@@ -515,7 +619,7 @@ background-color: var(--color-darker)!important;
 			//padding: 10px 15px;
 			//vertical-align: middle;
                     padding: 10px 15px;
-					background: rgba(255,255,255,0.2);
+					background: transparent !important;
 					backdrop-filter: blur(3px);
                     border-radius: 10px;
                     color: var(--yellow);
@@ -557,7 +661,7 @@ background-color: var(--color-darker)!important;
 
 
 .trading-layout {
-	background: var(--main-background-color);
+	background: transparent !important;
 }
 
 .pg-wallet {
@@ -784,6 +888,7 @@ background-color: var(--color-darker)!important;
       position: relative;
       width: 100%;
       .custom-input {
+        background: transparent !important;
 
 
       }
@@ -797,10 +902,11 @@ background-color: var(--color-darker)!important;
         color: var(--primary-text-color) !important;
       }.pg-wallet .cr-withdraw__group__address .custom-input, .pg-wallet .cr-withdraw__group__amount .custom-input, .pg-wallet .cr-withdraw__group__code .custom-input {
         margin-top: 10px;
-        background-color: yellow !important;
+        background-color: transparent !important;
         
        
       }.pg-wallet .cr-withdraw__group__amount .input-group, .pg-wallet .cr-withdraw__group__code .input-group {
+        background: transparent !important;
    
              
       }.pg-wallet .cr-withdraw__group__amount,
@@ -831,7 +937,7 @@ background-color: var(--color-darker)!important;
         color: var(--primary-text-color) !important;
 
       }.pg-wallet .cr-withdraw__group__address--focused input, .pg-wallet .cr-withdraw__group__amount--focused input, .pg-wallet .cr-withdraw__group__code--focused input {
-        border-color: green !important;
+        border-color: white !important;
   
       }.pg-wallet .cr-withdraw__divider {
       background-color: yelllow;
@@ -849,7 +955,7 @@ background-color: var(--color-darker)!important;
       
      
     }.pg-wallet .cr-withdraw .input-group {
-        color: blue !important;
+        color: white !important;
            
     }.pg-wallet .cr-tab {
     background-color: transparent  !important;
@@ -886,23 +992,23 @@ background-color: var(--color-darker)!important;
             border-color: #18988F !important;
           }.pg-wallet .cr-copyable-text-field .cr-deposit-crypto__copyable fieldset:focus-within legend {
               color: var(--input-legend-color-active);
-              background-color: green  !important;
+              background-color: transparent  !important;
             }.pg-wallet .cr-copyable-text-field .cr-deposit-crypto__copyable .cr-deposit-crypto__copyable-area {
       
           display: flex !important;
           flex-direction: flex-start !important;
         }.pg-wallet .cr-copyable-text-field .cr-deposit-crypto__copyable .cr-deposit-crypto__copyable-area .custom-input .input-group {
               border: none !important;
-              background: blue !important;
+              background: transparent !important;
             }.pg-wallet .cr-copyable-text-field .cr-deposit-crypto__copyable .cr-deposit-crypto__copyable-area .custom-input label {
               margin-top: -15px;
-              background-color: green  !important;
+              background-color: transparent !important;;
             }.pg-wallet .cr-copyable-text-field .cr-deposit-crypto__copyable .cr-deposit-crypto__copyable-area .input-group .custom-input {
               border: none !important;
-              background: blue !important;
+              background: transparent !important;
             }.pg-wallet .cr-copyable-text-field .cr-deposit-crypto__copyable .cr-deposit-crypto__copyable-area .input-group label {
               margin-top: -15px;
-              background-color: green  !important;
+              background-color: transparent !important;
             }.pg-wallet .cr-copyable-text-field .cr-deposit-crypto__copyable .cr-deposit-info {
 
         width: 100% !important;
@@ -999,7 +1105,7 @@ background-color: var(--color-darker)!important;
       outline: none !important;
     }.pg-wallet .cr-wallet-item--active .cr-wallet-item__icon,
       .pg-wallet .cr-wallet-item--active .cr-wallet-item__icon-code {
-        background-color: #var(--beneficiaries-primary-0-06);  
+        background-color: var(--beneficiaries-primary-0-06);  
         color: var(--wallet-item-active-color) !important;
       }.pg-wallet .cr-wallet-item--active .cr-wallet-item__icon img, .pg-wallet .cr-wallet-item--active .cr-wallet-item__icon-code img {
           background-color: transparent;
@@ -1025,7 +1131,7 @@ background-color: var(--color-darker)!important;
   }.pg-wallet__otp-code {
     margin-left: calc(var(--gap) * 5);
   }.pg-wallet__otp-code label {
-      color: green !important;
+      color: gray !important;
       display: block;
     }.pg-wallet__otp-code .cr-input {
       border-bottom: 1px solid #fff !important;
@@ -1033,7 +1139,7 @@ background-color: var(--color-darker)!important;
       width: calc(var(--gap) * 20);
     }.pg-wallet__otp-code .cr-input input {
         color: var(--input-text-color);
-        background: green !important;
+        background: transparent !important;
         font-size: 14px;
         padding: var(--gap) 0;
         text-align: left;
@@ -1056,13 +1162,13 @@ background-color: var(--color-darker)!important;
 		height: 100%;
 		padding-bottom: 15px;
 	}.cnt-order-book .td-order-book-item__negative {
-			color: var(--header-positive-text-color);
+			color: #D92121;
 		}.cnt-order-book .td-order-book-item__positive {
-			color: var(--header-negative-text-color);
+			color: #00CC99;
 		}.cnt-order-book .td-order-book-tooltip {
 			bottom: 200px;
 		}.cnt-order-book .td-order-book-header {
-			background-color: var(--trading-header-background);
+			background-color: transparent !important;
 			height: 42px;
 			padding: 10px;
 		}.cnt-order-book .td-order-book-header svg {
@@ -1081,7 +1187,7 @@ background-color: var(--color-darker)!important;
 		}.cnt-order-book .td-order-book-tbheader > div {
 				flex: 1;
 			}.cnt-order-book .td-order-book-ticker {
-			background-color: var(--trading-header-background);
+			background-color: transparent !important;
 			font-size: 14px;
 			height: 40px;
 			padding: 10px;
@@ -1108,7 +1214,7 @@ background-color: var(--color-darker)!important;
 					display: flex;
 					justify-content: space-between;
 				}.cnt-order-book .td-order-book-table thead tr:hover, .cnt-order-book .td-order-book-table tbody tr:hover {
-						background-color: #4e5463;
+						background-color: transparent !important;
 					}.cnt-order-book .td-order-book-table thead tr th, .cnt-order-book .td-order-book-table tbody tr th {
 						display: flex;
 					}.cnt-order-book .td-order-book-table thead tr td, .cnt-order-book .td-order-book-table tbody tr td {
@@ -1137,7 +1243,7 @@ background-color: var(--color-darker)!important;
 	position: relative;
 	z-index: 5;
 }.cnt-order-book-tr__show-percent-right {
-		background: red;
+		background: #00CC99;
 		height: 100%;
 		left: unset;
 		position: absolute;
@@ -1145,7 +1251,7 @@ background-color: var(--color-darker)!important;
 		top: 0;
 		z-index: -5;
 	}.cnt-order-book-tr__show-percent-left {
-		background: green;
+		background: #D92121;
 		height: 100%;
 		left: 0;
 		position: absolute;
@@ -1473,7 +1579,7 @@ background-color: var(--color-darker)!important;
 					margin-right: 10px;
 					width: 11px;
 				}.pg-beneficiaries__dropdown__body__add:hover, .pg-beneficiaries__dropdown__body .add:hover {
-					background-color: var(--beneficiaries-primary-0-1);
+					background-color: transparent !important;
 				}.pg-beneficiaries__dropdown .fiat-body {
 			top: 165px;
 		}.pg-beneficiaries__dropdown .fiat-body .item__left {
@@ -1487,7 +1593,7 @@ background-color: var(--color-darker)!important;
 		border-radius: 20px !important;
 		box-shadow: 0 8px 25px var(--shadow-color-level-3);
 	}.pg-beneficiaries .cr-email-form__option {
-			background: #333333 !important;
+			background: transparent !important;
 			border-top-left-radius: 3px;
 			border-top-right-radius: 3px;
 		}.pg-beneficiaries .cr-email-form__option-inner {
@@ -1651,7 +1757,7 @@ background-color: var(--color-darker)!important;
 				padding-bottom: calc(var(--gap) * 2.5);
 			}.cr-combined-order-book__small .cr-order-book {
 			height: 154px;
-			overflow-y: scroll;
+			overflow-y: hidden;
 		}.cr-combined-order-book__small .cr-order-book:first-child {
 				border-bottom: 1px solid var(--order-book-last-market-price-border-color);
 				height: 208px;
@@ -1785,7 +1891,7 @@ background-color: var(--color-darker)!important;
 		border-color: var(--input-border-color);
 		background: transparent !important;
 	}.custom-input label {
-		background: #fff !important;
+		background: transparent !important;
 		color: #fff;
 		font-size: 12px;
 		left: 2%;
@@ -1796,14 +1902,14 @@ background-color: var(--color-darker)!important;
 		z-index: 5;
 	}.custom-input input,
 	.custom-input input:focus {
-		background: #fff !important;
+		background: transparent !important;
 		box-shadow: none;
 		color: var(--input-text-color);
 	}.custom-input input:focus-within {
 		border-color: var(--input-border-color-active);
 	}.custom-input input:focus-within label {
 			color: var(--input-label-color-active);
-			background: pink !important;
+			background: transparent !important;
 		}.custom-input input:-webkit-autofill,
 	.custom-input input:-webkit-autofill:hover,
 	.custom-input input:-webkit-autofill:focus {
@@ -1828,18 +1934,18 @@ background-color: var(--color-darker)!important;
 		align-items: center;
 		justify-content: center !important;
 		padding-top: calc(var(--gap) * 2);
-        color: blue !important;
+        color: white !important;
 	}
     
     .cr-deposit-crypto__create-btn {
 		align-items: center;
 		justify-content: center !important;
 		padding-top: calc(var(--gap) * 2);
-        color: blue !important;
+        color: white !important;
 
         .btn {
 
-            color: blue !important;
+            color: white !important;
         }
 
 	}
@@ -1847,7 +1953,7 @@ background-color: var(--color-darker)!important;
     
     
     .cr-deposit-crypto .cr-deposit-info {
-		background-color: yellow !important;
+		background-color: transparent !important;
 		
 		line-height: 40px;
 		margin: auto;
@@ -1866,9 +1972,9 @@ background-color: var(--color-darker)!important;
 					border-color: var(--input-border-color-active) !important;
 				}.cr-deposit-crypto__copyable .custom-input {
 			width: 100%;
-            background: yellow !important;
+            background: transparent !important;
 		}.cr-deposit-crypto__copyable-title {
-			background-color: green !important;
+			background-color: transparent !important;
 			color: var(--table-text-color);
 			font-size: calc(var(--gap) * 2);
 			margin-left: var(--gap);
@@ -1882,7 +1988,7 @@ background-color: var(--color-darker)!important;
 						.cr-deposit-crypto__copyable-area .input-group:first-child:focus-within legend {
 							color: var(--input-legend-color-active);
 						}.cr-deposit-crypto__copyable .cr-copyable-text-field__input {
-				background: inherit;
+				background: transparent !important;
 			}.cr-deposit-crypto__copyable .cr-copyable-text-field__input input {
 					background: unset;
 					color: var(--input-background-color);
@@ -1971,7 +2077,7 @@ background-color: var(--color-darker)!important;
 		width: 100%;
 	}.cr-dropdown .dropdown-toggle {
 			align-items: center;
-			background: var(--input-background-color) !important;
+			background: transparent !important;
 			border: 1px solid var(--input-border-color);
 			color: var(--input-placeholder-color);
 			display: flex;
@@ -2003,7 +2109,7 @@ background-color: var(--color-darker)!important;
 				top: 0;
 				transition: 0.2s;
 			}.cr-dropdown .dropdown-menu {
-			background: var(--dropdown-background-color);
+			background: transparent !important;
 			padding: 0;
 			width: 100%;
 		}.cr-dropdown .dropdown-item {
@@ -2029,7 +2135,7 @@ background-color: var(--color-darker)!important;
 				color: var(--primary-cta-color);
 				height: 34px;
 			}.cr-dropdown--mobile .dropdown-toggle {
-				background: var(--tab-panel-background-color) !important;
+				background: transparent !important;
 				color: var(--primary-cta-color);
 				display: flex;
 				font-size: 14px;
@@ -2066,7 +2172,7 @@ background-color: var(--color-darker)!important;
 	width: 100%;
 }.fee-table .head {
 		align-items: center;
-		background: #28334e;
+		background: transparent !important;
 		border: solid 1px white;
 		height: 4em;
 	}.fee-table .head th {
@@ -2077,7 +2183,7 @@ background-color: var(--color-darker)!important;
 			text-align: center;
 		}.fee-table .body {
 		align-items: center;
-		background: #0e2436;
+		background: transparent !important;
 		border: solid 1px white;
 		font-size: 1.5em;
 		font-weight: 700;
@@ -2096,18 +2202,18 @@ background-color: var(--color-darker)!important;
 	outline: none;
 	width: 6rem;
 }.market__fiat__active {
-	color: var(--yellow);
+	color: var(--white);
 	cursor: pointer;
 	outline: none;
 	width: 6rem;
 }{/*//filterEllementOrdersHishotry*/}.history-screen__filter {
-	background: var(--tab-panel-background-color);
+	background: transparent !important;
 	color: white;
 	padding-bottom: 20px;
 	padding-left: calc(var(--gap) * 3);
 	padding-top: 0;
 }.history-screen__filter input {
-		background: #2b2e3d;
+		background: transparent !important;
 		border: 1px solid #545e73;
 		border-radius: 5px;
 		box-sizing: border-box;
@@ -2144,7 +2250,7 @@ background-color: var(--color-darker)!important;
 				        transform: scale(0.95);
 			}.history-screen__filter__search__btn {
 
-			background-color: #333d56;
+			background-color: transparent !important;
 			border: none;
 			border-radius: 5px;
 			height: 30px;
@@ -2325,7 +2431,7 @@ background-color: var(--color-darker)!important;
 		position: absolute;
 		width: 97.5%;
 	}.cr-sign-in-form__bottom-section .cr-sign-in-form__bottom-section-password {
-			background: transparent;
+			background: transparent !important;
 			color: #595959;
 			cursor: pointer;
 			font-size: 14px;
@@ -2348,14 +2454,14 @@ background-color: var(--color-darker)!important;
 	height: 100%;
 	max-width: 100%;
 }{/*//markets*/}.cr-markets {
-	background: var(--body-background-color);
+	background: transparent !important;
 	padding-bottom: 0;
 }.cr-markets .cr-title-component {
 		color: var(--primary-text-color);
 		font-size: 1em;
 		font-weight: lighter;
 	}.cr-markets .cr-table {
-		background: var(--body-background-color);
+		background: transparent !important;
 	}.cr-markets .cr-table tbody tr:hover {
 					background: var(--market-selector-table-row-selector) !important;
 				}.cr-markets .cr-table tbody tr:hover td {
@@ -2370,11 +2476,11 @@ background-color: var(--color-darker)!important;
 			color: var(--table-text-color);
 			font-size: 0.83em;
 		}.cr-markets .cr-table .__positive {
-			background: var(--transparent);
-			color: #00CC99;
+			background: transparent !important;
+			color: #00CC99 !important;
 		}.cr-markets .cr-table .__negative {
-			background: var(--transparent);
-			color: #ED0A3F;
+			background: transparent !important;
+			color: #ED0A3F !important;
 		}.cr-markets .cr-table th:first-child,
 		.cr-markets .cr-table td:first-child {
 			padding-left: calc(var(--gap) * 2);
@@ -2384,7 +2490,7 @@ background-color: var(--color-darker)!important;
 			padding-right: calc(var(--gap) * 2);
 			text-align: right;
 		}.cr-markets .cr-table tr:nth-child(even) {
-			background: var(--body-background-color);
+			background: transparent !important;
 		}.cr-markets .cr-table__filters {
 			max-width: 100%;
 			overflow-x: auto;
@@ -2401,15 +2507,15 @@ background-color: var(--color-darker)!important;
 			}.cr-markets .cr-table__row--selected td {
 					color: var(--market-selector-table-text-color-active) !important;
 				}.cr-markets .cr-search {
-		background: var(--body-background-color);
+		background: transparent !important;
 		margin: 0;
 		margin-top: var(--gap);
 		padding: 0;
 		width: 100%;
 	}.cr-markets .cr-search__icon {
-			background: var(--body-background-color);
+			background: transparent !important;
 		}.cr-markets .cr-search input {
-			background: var(--input-background-color);
+			background: transparent !important;
 			border-bottom: 1px solid var(--divider-color-level-3);
 			color: var(--input-text-color);
 			font-weight: lighter;
@@ -2419,14 +2525,14 @@ background-color: var(--color-darker)!important;
 			}.cr-markets .cr-search input::placeholder {
 				color: var(--input-placeholder-color);
 			}{/*//markets*/}.cr-markets {
-	background: var(--body-background-color);
+	background: transparent !important;
 	padding-bottom: 0;
 }.cr-markets .cr-title-component {
 		color: var(--primary-text-color);
 		font-size: 1em;
 		font-weight: lighter;
 	}.cr-markets .cr-table {
-		background: var(--body-background-color);
+		background: transparent !important;
 	}.cr-markets .cr-table tbody tr:hover {
 					background: var(--market-selector-table-row-selector) !important;
 				}.cr-markets .cr-table tbody tr:hover td {
@@ -2441,11 +2547,11 @@ background-color: var(--color-darker)!important;
 			color: var(--table-text-color);
 			font-size: 0.83em;
 		}.cr-markets .cr-table .__positive {
-			background: var(--transparent);
-			color: #00CC99;
+			background: transparent !important;
+			color: #00CC99 !important;
 		}.cr-markets .cr-table .__negative {
-			background: var(--transparent);
-			color: #ED0A3F;
+			background: transparent !important;
+			color: #ED0A3F !important;
 		}.cr-markets .cr-table th:first-child,
 		.cr-markets .cr-table td:first-child {
 			padding-left: calc(var(--gap) * 2);
@@ -2455,7 +2561,7 @@ background-color: var(--color-darker)!important;
 			padding-right: calc(var(--gap) * 2);
 			text-align: right;
 		}.cr-markets .cr-table tr:nth-child(even) {
-			background: var(--body-background-color);
+			background: transparent !important;
 		}.cr-markets .cr-table__filters {
 			max-width: 100%;
 			overflow-x: auto;
@@ -2472,15 +2578,15 @@ background-color: var(--color-darker)!important;
 			}.cr-markets .cr-table__row--selected td {
 					color: var(--market-selector-table-text-color-active) !important;
 				}.cr-markets .cr-search {
-		background: var(--body-background-color);
+		background: transparent !important;
 		margin: 0;
 		margin-top: var(--gap);
 		padding: 0;
 		width: 100%;
 	}.cr-markets .cr-search__icon {
-			background: var(--body-background-color);
+			background: transparent !important;
 		}.cr-markets .cr-search input {
-			background: var(--input-background-color);
+			background: transparent !important;
 			border-bottom: 1px solid var(--divider-color-level-3);
 			color: var(--input-text-color);
 			font-weight: lighter;
@@ -2491,7 +2597,7 @@ background-color: var(--color-darker)!important;
 				color: var(--input-placeholder-color);
 			}{/*//modal*/}.cr-modal {
 	align-items: center;
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: transparent !important;
 	bottom: 0;
 	display: flex;
 	flex-direction: column;
@@ -2503,7 +2609,7 @@ background-color: var(--color-darker)!important;
 	top: 0;
 	z-index: 99999;
 }.cr-modal__container {
-		background-color: var(--background);
+		background-color: transparent !important;
 		display: flex;
 		flex-direction: column;
 		margin: 0 auto;
@@ -2531,7 +2637,7 @@ background-color: var(--color-darker)!important;
 			max-width: 100%;
 		}{/*newcopyableTextField*/}.td-copyable-text-field {
 	align-items: center;
-	background: var(--input-background-color);
+	background: transparent !important;
 	background: inherit;
 	border: none;
 	border-radius: calc(var(--gap) * 0.66);
@@ -2540,14 +2646,14 @@ background-color: var(--color-darker)!important;
 	justify-content: space-between;
 	padding: 0;
 }.td-copyable-text-field legend {
-		background: var(--input-legend-color);
+		background: transparent !important;
 		margin-bottom: auto;
 		margin-top: calc(var(--gap) * -1.5);
 		position: absolute;
 		width: -webkit-max-content;
 		width: max-content;
 	}.td-copyable-text-field__input {
-		background: var(--input-background-color);
+		background: transparent !important;
 		background: inherit;
 		color: var(--input-text-color);
 		display: flex;
@@ -2560,7 +2666,7 @@ background-color: var(--color-darker)!important;
 		}.td-copyable-text-field .td-copyable-text-field {
 		padding: 0;
 	}.td-copyable-text-field input {
-		background: var(--input-background-color);
+		background: transparent !important;
 		border-radius: 0;
 		border-style: none;
 		color: var(--input-text-color);
@@ -2764,7 +2870,7 @@ background-color: var(--color-darker)!important;
 			margin-bottom: 6px;
 		}.pg-upload-file__content__form {
 			align-items: flex-start;
-			background: var(--body-background-color);
+			background: transparent !important;
 			border: 1px dashed var(--input-border-color);
 			border-radius: 4px;
 			display: flex;
@@ -3534,7 +3640,7 @@ a:-webkit-any-link {
   outline: none !important;
   border: none !important;
   color: #595959 !important;
-  background: #dde1e7 !important;
+  background: transparent !important;
   border-radius: 5px !important;
   box-shadow: inset 2px 2px 5px #babecc,
               inset -5px -5px 10px #ffffff73 !important;
@@ -5029,7 +5135,7 @@ max-height: 862px;
 									}#marketList .cx-market-item .rc-tabs .rc-tabs-content-holder .rc-tabs-content-top .market__pair__fiat div {
 								padding-top: 8px;
 							}#udon-market__pagination {
-	background: #172b4c;
+	background: transparent !important;
 	border-top: 1px solid var(--header-background-color);
 	padding: 40px 0 20px 0;
 	width: 100%;
