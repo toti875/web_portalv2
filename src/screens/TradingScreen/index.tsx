@@ -8,6 +8,7 @@ import * as React from 'react';
 import isEqual from 'react-fast-compare';
 import { useDispatch, useSelector } from 'react-redux';
 import { HeaderToolbar } from './HeaderToolbar';
+//import './TradingScreen.css'
 
 // tslint:disable-next-line: no-empty-interface
 interface TradingScreenProps {}

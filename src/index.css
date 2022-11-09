@@ -1,3 +1,269 @@
+.pg-combined-order-book {
+	height: 100%;
+	overflow: hidden;
+}
+
+	.pg-combined-order-book-loader {
+		align-items: center;
+		display: flex;
+		height: 100%;
+		justify-content: center;
+		padding-bottom: calc(var(--gap) * 4.5);
+	}
+
+	.pg-combined-order-book--no-data-first .cr-order-book:first-child .cr-table__body tr td:nth-child(2) {
+								bottom: 0;
+								color: var(--secondary-contrast-cta-color);
+								left: 0;
+								padding-left: 0 !important;
+								padding-right: 0 !important;
+								position: absolute;
+								right: 0;
+								text-align: center !important;
+								width: 100% !important;
+							}
+
+	.pg-combined-order-book--no-data-second .cr-order-book:last-child .cr-table__body tr td:nth-child(2) {
+								color: var(--secondary-contrast-cta-color);
+								left: 0;
+								padding-left: 0 !important;
+								padding-right: 0 !important;
+								position: absolute;
+								right: 0;
+								text-align: center !important;
+								width: 100% !important;
+							}
+
+	.pg-combined-order-book .cr-table__head th {
+				width: 33% !important;
+			}
+
+	.pg-combined-order-book .cr-table__head th:last-child {
+				text-align: center !important;
+			}
+
+	.pg-combined-order-book .cr-table__body td {
+				color: var(--table-text-color);
+				width: 33% !important;
+			}
+
+	.pg-combined-order-book .cr-table__body td span:first-child.cr-decimal__opacity {
+					opacity: 0.6;
+				}
+
+	.pg-combined-order-book .cr-combined-order-book .cr-table__head th:first-child {
+					text-align: right;
+				}
+
+	.pg-combined-order-book .cr-combined-order-book .cr-table__head th:nth-child(2) {
+					text-align: right;
+				}
+
+	.pg-combined-order-book .cr-combined-order-book .cr-table__body td:first-child {
+					text-align: right;
+				}
+
+	.pg-combined-order-book .cr-combined-order-book .cr-table__body td:nth-child(2) {
+					text-align: right;
+				}
+
+	@media screen and (max-width: 768px) {
+					.pg-combined-order-book .cr-combined-order-book .cr-table__body td {
+						padding-top: calc(var(--gap) * 0.7) !important;
+					}
+				}
+
+	.pg-combined-order-book .cr-combined-order-book .cr-table-background__row {
+					min-width: 1px;
+					padding: 22px 0;
+				}
+
+	.pg-combined-order-book .cr-combined-order-book__small {
+			height: 100%;
+			position: relative;
+		}
+
+	.pg-combined-order-book .cr-combined-order-book__small .cr-combined-order-book__market {
+				left: 0;
+				margin-top: 0;
+				position: absolute;
+				right: 0;
+				top: calc(50% - 10px) !important;
+			}
+
+	.pg-combined-order-book .cr-combined-order-book__small .cr-order-book {
+				border-bottom: 1px solid var(--order-book-last-market-price-border-color);
+				display: flex;
+				height: calc(50% - 25px) !important;
+				position: absolute;
+			}
+
+	.pg-combined-order-book .cr-combined-order-book__small .cr-order-book .cr-table thead {
+						display: table;
+						position: fixed;
+						top: 50px;
+						width: 100%;
+						z-index: 2222;
+					}
+
+	.pg-combined-order-book .cr-combined-order-book__small .cr-order-book .cr-table__body {
+						cursor: pointer;
+					}
+
+	@media screen and (max-width: 768px) {
+							.pg-combined-order-book .cr-combined-order-book__small .cr-order-book .cr-table__body td {
+								padding-top: calc(var(--gap) * 2.5) !important;
+							}
+						}
+
+	.pg-combined-order-book .cr-combined-order-book__small .cr-order-book:first-child {
+					flex-direction: column-reverse;
+					left: 0;
+					overflow-x: hidden;
+					right: 0;
+					top: 0;
+				}
+
+	.pg-combined-order-book .cr-combined-order-book__small .cr-order-book:first-child .cr-table td {
+							width: 33% !important;
+						}
+
+	.pg-combined-order-book .cr-combined-order-book__small .cr-order-book:first-child .cr-table-background {
+							left: 0;
+							right: 0;
+							top: calc(var(--gap) * 7);
+						}
+
+	.pg-combined-order-book .cr-combined-order-book__small .cr-order-book:first-child .cr-table tbody::before {
+							content: '';
+							display: block;
+							height: calc(var(--gap) * 7);
+						}
+
+	.pg-combined-order-book .cr-combined-order-book__small .cr-order-book:first-child .cr-table-container {
+							margin-top: auto;
+							width: 100%;
+						}
+
+	.pg-combined-order-book .cr-combined-order-book__small .cr-order-book:last-child {
+					border-top: 1px solid var(--order-book-last-market-price-border-color);
+					left: 0;
+					right: 0;
+					top: calc(50% + 35px);
+				}
+
+	.pg-combined-order-book .cr-combined-order-book__small .cr-order-book:last-child .cr-table-container {
+							width: 100%;
+						}
+
+	.pg-combined-order-book .cr-combined-order-book__small .cr-order-book:last-child tbody::after {
+						content: '';
+						display: block;
+						height: calc(var(--gap) * 7);
+					}
+
+	.pg-combined-order-book .cr-combined-order-book__small .cr-table-background__row {
+					padding-bottom: calc(var(--gap) * 1.5);
+				}
+
+	.pg-combined-order-book .cr-combined-order-book__large {
+			height: calc(100% - 85px);
+			overflow-y: scroll;
+		}
+
+	.pg-combined-order-book .cr-combined-order-book__large .cr-order-book {
+				padding-right: 0;
+			}
+
+	.pg-combined-order-book .cr-combined-order-book__large .cr-table__head {
+					display: table;
+					position: fixed;
+					width: 50%;
+					z-index: 222;
+				}
+
+	.pg-combined-order-book .cr-combined-order-book__large .cr-table__head th:first-child {
+						text-align: left;
+					}
+
+	.pg-combined-order-book .cr-combined-order-book__large .cr-table tbody td:first-child {
+						text-align: left;
+					}
+
+	.pg-combined-order-book .cr-combined-order-book__large .cr-table tbody::before {
+						content: '';
+						display: block;
+						height: calc(var(--gap) * 6);
+					}
+
+	.pg-combined-order-book .cr-combined-order-book__large-market {
+				border-top: 1px solid var(--order-book-last-market-price-border-color);
+				position: fixed;
+			}
+
+	.pg-combined-order-book .cr-combined-order-book__large .cr-table-background {
+				top: 36px;
+			}
+
+	.pg-combined-order-book .cr-combined-order-book__large .cr-table-background__row {
+					margin-right: 1px;
+					padding-bottom: calc(var(--gap) * 1.5);
+				}
+
+	.pg-combined-order-book .head-text {
+		font-size: 20px;
+		font-weight: 500;
+	}
+
+	.pg-combined-order-book .change-icon {
+		margin-right: 0.5em;
+	}
+
+@-webkit-keyframes flash_red {
+	from { background-color: #ef5350  ; }
+	to { background-color: transparent; }
+  }
+
+@keyframes flash_red {
+	from { background-color: #ef5350 ; }
+	to { background-color: transparent; }
+  }
+
+@-webkit-keyframes flash_green {
+	from { background-color: #13b887 ; }
+	to { background-color: transparent; }
+  }
+
+@keyframes flash_green {
+	from { background-color: #13b887; }
+	to { background-color: transparent; }
+  }
+
+@-webkit-keyframes flashX {
+	from { background-color: #FDA736; }
+	to { background-color: transparent; }
+  }
+
+@keyframes flashX {
+	from { background-color: #FDA736; }
+	to { background-color: transparent; }
+  }
+
+.flash_green {
+	-webkit-animation: flash_green 2s ; /* Safari 4+ */ /* Fx 5+ */ /* Opera 12+ */
+	animation:         flash_green 2s ; /* IE 10+ */
+  }
+
+.flash_red {
+	-webkit-animation: flash_red 2s ; /* Safari 4+ */ /* Fx 5+ */ /* Opera 12+ */
+	animation:         flash_red 2s ; /* IE 10+ */
+  }
+
+.flashX {
+	-webkit-animation: flashX 2s ; /* Safari 4+ */ /* Fx 5+ */ /* Opera 12+ */
+	animation:         flashX 2s ; /* IE 10+ */
+  }
+
 .td-cpn-pagination {
 	border-radius: 10px;
 	display: flex;
@@ -7,7 +273,7 @@
 	padding-left: 0;
 }
 
-	.td-cpn-pagination button {
+.td-cpn-pagination button {
 		background-color: transparent;
 		border: 1px solid #666;
 		border-radius: 2px;
@@ -17,12 +283,12 @@
 		padding: 4px 12px;
 	}
 
-	.td-cpn-pagination button[disabled] {
+.td-cpn-pagination button[disabled] {
 			border: 1px solid #444;
 			color: #fae2f9;
 		}
 
-	.td-cpn-pagination button:not([disabled]):hover {
+.td-cpn-pagination button:not([disabled]):hover {
 				background: transparent;
 				border: 1px solid #fff;
         -webkit-backdrop-filter: blur(10px);
@@ -31,7 +297,7 @@
 				outline: none;
 			}
 
-	.td-cpn-pagination span {
+.td-cpn-pagination span {
 		align-items: center;
 		display: flex;
 	}

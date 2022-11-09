@@ -120,17 +120,19 @@ const OrderBookContainer = props => {
 			const total = accumulateVolume(bids);
 
 			return arrBidsElm.map((item, i) => (
+				<div className="flash_green"> 
 				<TrStyle
-					color="rgba(47,182,126,0.4)"
+					color="#13b887"
 					placement="right"
 					percentWidth={(item[3] as number) || 0}
 					key={i}
 					onClick={() => handleOnSelectBids(i.toString(), total[i])}
 				>
-					<td className="td-order-book-item__positive">{item[0]}</td>
+					<td className="td-order-book-item__positive flash_green">{item[0]}</td>
 					<td>{item[1]}</td>
 					<td>{item[2]}</td>
 				</TrStyle>
+				</div>
 			));
 		}
 
@@ -141,17 +143,19 @@ const OrderBookContainer = props => {
 			const total = accumulateVolume(asks);
 
 			return arrAsksElm.map((item, i) => (
+				<div className="flash_red"> 
 				<TrStyle
-					color="rgba(224,30,90,0.2)"
+					color="#ef5350"
 					placement="left"
 					percentWidth={(item[3] as number) || 0}
 					key={i}
 					onClick={() => handleOnSelectAsks(i.toString(), total[i])}
 				>
-					<td className="td-order-book-item__negative">{item[0]}</td>
+					<td className="td-order-book-item__negative flash_red">{item[0]}</td>
 					<td>{item[1]}</td>
 					<td>{item[2]}</td>
 				</TrStyle>
+				</div>
 			));
 		}
 
@@ -164,7 +168,7 @@ const OrderBookContainer = props => {
 		render: () => JSX.Element;
 	}> = [
 		{
-			labelTooltip: 'Order Book',
+			labelTooltip: 'Livro de Ordens',
 			key: 'all',
 			render: () => (
 				<OrderBookSvg
@@ -177,7 +181,7 @@ const OrderBookContainer = props => {
 			),
 		},
 		{
-			labelTooltip: 'Buy',
+			labelTooltip: 'Compradores',
 			key: 'buy',
 			render: () => (
 				<OrderBookBuySvg
@@ -190,7 +194,7 @@ const OrderBookContainer = props => {
 			),
 		},
 		{
-			labelTooltip: 'Sell',
+			labelTooltip: 'Vendedores',
 			key: 'sell',
 			render: () => (
 				<OrderBookSellSvg
@@ -260,7 +264,7 @@ const OrderBookContainer = props => {
 							>
 								{Decimal.formatRemoveZero(
 									+get(currentTicker, 'last', 0),
-									get(currentMarket, 'price_precision', 0),
+									get(currentMarket, 2, 0),
 								)}
 								{cls === 'positive' ? <img src={upSvg} /> : <img src={downSvg} />}
 							</Col>

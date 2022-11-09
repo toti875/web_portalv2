@@ -48,7 +48,7 @@ export const DEFAULT_MARKET = {
 export const colors = {
 	light: {
 		chart: {
-			primary: '#0b1426',
+			primary: '#fff',
 			up: '#54B489',
 			down: '#E85E59',
 		},
@@ -57,12 +57,12 @@ export const colors = {
 			moon: 'var(--primary-text-color)',
 		},
 		orderBook: {
-			asks: 'var(--asks-level-4)',
-			bids: 'var(--bids-level-4)',
+			asks: '#ef5350',
+			bids: '#13b887',
 		},
 		depth: {
-			fillAreaAsk: '#eb4d5c, opacity 40.0%',
-			fillAreaBid: '#12b886',
+			fillAreaAsk: '#ef5350',
+			fillAreaBid: '#13b887',
 			gridBackgroundStart: '#1a243b',
 			gridBackgroundEnd: '#1a243b',
 			strokeAreaAsk: '#fa5252',
@@ -73,7 +73,7 @@ export const colors = {
 	},
 	basic: {
 		chart: {
-			primary: '#0b1426',
+			primary: 'var(--rgb-body-background-color)',
 			up: 'var(--rgb-bids)',
 			down: 'var(--rgb-asks)',
 		},

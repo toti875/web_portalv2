@@ -21,7 +21,6 @@ import {
 } from '../../modules';
 import { OrderBookTableRow } from './OrderBookTableRow';
 
-
 // render big/small breakpoint
 const breakpoint = 448;
 

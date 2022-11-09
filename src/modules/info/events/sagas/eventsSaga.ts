@@ -5,7 +5,7 @@ import { call, put } from 'redux-saga/effects';
 import { eventData, eventError, EventFetch } from '../actions';
 
 const createOptions = (csrfToken?: string): RequestOptions => {
-	return { apiVersion: 'info', headers: { 'X-CSRF-Token': csrfToken } };
+	return { apiVersion: 'core', headers: { 'X-CSRF-Token': csrfToken } };
 };
 
 export function* eventFetchSaga(action: EventFetch) {
