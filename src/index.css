@@ -3,7 +3,7 @@
   align-items: center !important;
 		
 		margin: 0 auto !important;
-    width: 840px !important;
+    max-width: 860px !important;
     padding: 0 !important;
     
 		
@@ -14,7 +14,7 @@
 
 
 	#wallet-list-screen .deposit-button {
-		font-size: 13px !important;
+		font-size: 14px !important;
 		background: transparent !important;
 		border: 2px solid #1EDED0 !important;
 		border-radius: 5px !important;
@@ -22,11 +22,11 @@
 		display: inline-block !important;
 		margin-left: 5px !important;
 		outline: none !important;
-		padding: 0.5rem 1.5rem !important;
+		padding: 5px 10px !important;
 		text-align: center !important;
 		text-decoration: none !important;
 		transition: all 0.2s !important;
-		width: 105px !important;
+		width: 110px !important;
 	}
 
 
@@ -43,26 +43,26 @@
 	#wallet-list-screen .deposit-button:disabled {
 			background: #555555 !important;
 			cursor: not-allowed !important;
-			border: 2px solid #555555 !important;
+			border: 2px solid #a7a8af !important;
 		}
 
 
 	#wallet-list-screen .withdraw-button {
-		font-size: 13px !important;
+		font-size: 14px !important;
 		background: transparent !important;
 		border: 2px solid #1EDED0 !important;
 		border-radius: 5px !important;
 
 		color: white !important;
 		display: inline-block !important;
-		margin-right: 10px !important;
+		margin-right: 0px !important;
     margin-left: 10px !important;
 		outline: none !important;
-		padding: 0.5rem 1.5rem !important;
+		padding: 5px 10px !important;
 		text-align: center !important;
 		text-decoration: none !important;
 		transition: all 0.2s !important;
-		width: 105px !important;
+		width: 110px !important;
 	}
 
 
@@ -79,25 +79,30 @@
 	#wallet-list-screen .withdraw-button:disabled {
 			background: #555555 !important;
 			cursor: not-allowed !important;
-			border: 2px solid #555555 !important;
+			border: 2px solid #a7a8af !important;
 		}
 
 
 	#wallet-list-screen .checkbox-input {
 		align-items: center !important;
-		display: inline-block !important;
+		display: flex !important;
+    flex-direction: row;
+    vertical-align: middle;
+    
 		
-		justify-content: center !important;
+		
 		font-size: 13px !important;
 	}
 
 
 	#wallet-list-screen .checkbox-input .checkbox {
 			--background: transparent !important;
-			--border: 0.5px solid #1EDED0 !important;
-			--border-hover: #1EDED0 !important;
-			--border-active: #1EDED0 !important;
+			--border: 0.5px solid #a7a8af !important;
+			--border-hover: #a7a8af !important;
+			--border-active: #a7a8af !important;
 			--tick: #fff !important;
+      top: 15px;
+      left: 5px;
 
 			position: relative !important;
 		}
@@ -115,7 +120,7 @@
 				-webkit-appearance: none !important;
 				-moz-appearance: none !important;
 				background: var(--background) !important;
-				border: 2px solid #1EDED0 !important;
+				border: 2px solid #a7a8af !important;
 				border-radius: 5px !important;
 				box-shadow: inset 0 0 0 var(--s, 1px) var(--b, var(--border)) !important;
 				cursor: pointer !important;
@@ -128,7 +133,7 @@
 
 
 	#wallet-list-screen .checkbox-input .checkbox input:hover {
-					--s: 2px !important;
+					--s: 1px !important;
 					--b: var(--border-hover) !important;
 				}
 
@@ -156,7 +161,7 @@
 
 
 	#wallet-list-screen .checkbox-input .checkbox.path input:checked {
-						--s: 2px;
+						--s: 1px;
 
 						transition-delay: 0.4s;
 					}
@@ -236,7 +241,7 @@
 	#wallet-list-screen .search-input {
 		background-color: #555555;
     display: flex;
-		border: 1px solid #1EDED0;
+		border: 1px solid #a7a8af;
 		border-radius: 5px;
 		color: #fff;
 		font-size: 13px;
@@ -251,7 +256,7 @@
 
 
 	#wallet-list-screen .search-input:focus {
-			border: 1px solid #1EDED0;
+			border: 1px solid #a7a8af;
 			width: 60%;
 		}
 
@@ -625,22 +630,28 @@
 
 
 .history-screen-fortem {
-	background: var(--body-background-color);
-	margin: 0 auto;
-	margin-top: 10px;
+	background: transparent;
+	margin: 0 auto !important;
+	margin-top: 10px !important;
 	max-width: 1140px !important;
 }
 
 
 .history-screen-fortem__title {
-		background: var(--tab-panel-background-color);
-		color: white;
-		font-size: 18px;
+		background: transparent !important;
+		color: white !important;
+		font-size: 18px !important;
 		font-weight: 400;
 		line-height: 27px;
 		padding-bottom: 30px;
 		padding-left: calc(var(--gap) * 2);
 		padding-top: 26px;
+	}
+
+
+.history-screen-fortem__tabs {
+    display: flex !important;
+    flex-direction: row !important;
 	}
 
 
@@ -657,20 +668,20 @@
 
 
 .history-screen-fortem__tabs__label__item--active {
-					border-bottom: 3px solid #0069e4;
+					border-bottom: 3px solid #FDA736 !important;
 					color: white;
 					padding-bottom: 10px;
 				}
 
 
 .history-screen-fortem__tabs__content__table {
-				background: var(--tab-panel-background-color);
+				background: transparent;
 				width: 100%;
 			}
 
 
 .history-screen-fortem__tabs__content__table__header {
-					background: var(--main-background-color);
+					background: transparent;
 					text-align: center;
 				}
 

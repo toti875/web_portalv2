@@ -1,5 +1,6 @@
 #react-table {
 	padding-bottom: 200px;
+    padding-right: 0 !important;
 }#react-table table {
 		border-spacing: 5;
 		height: 35px;
@@ -12,35 +13,41 @@
 			color: #fff;
 			cursor: pointer;
 			font-size: 14px;
-			margin: 0;
-			padding-bottom: 7px;
-            padding-top: 7px;
+			margin: 0 auto !important;
+			padding-bottom: 10px;
+            padding-top: 10px;
 			padding-left: 10px;
-			padding-right: 10px;
+			padding-right: 0px !important;
 			
-			text-align: justify;
-            vertical-align: center;
+			text-align: justify !important;
+            vertical-align: center !important;
 			transition: all 0.2s;
 		}#react-table table tr {
 			border-top: 1px solid #a7a8af;
-            padding-bottom: 7px;
-            padding-top: 7px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            padding-right: 0px !important;
+            text-align: justify !important;
 
 		}#react-table table th {
 			background-color: transparent !important;
 			color: #fff;
+            font-size: 14px !important;
+            font-weight: 600 !important;
+            justify-content: justify !important;
+            text-align: center !important;
 		}th#react-table table:not(:first-child) {
 			text-align: center;
 		}tr td#react-table table:not(:first-child) {
 			text-align: center;
 		}tr#react-table table:hover td {
-			background-color: #41455c;
+			background-color: #41455c !important;
 			color: #fff;
 		}th#react-table table:last-child {
 			text-align: center;
 		}#react-table .pagination {
 		display: flex;
-		font-size: 14;
+		font-size: 12;
 		justify-content: space-between;
 		margin-top: 10px;
 	}#react-table .pagination .pagination-page_number,
@@ -54,7 +61,7 @@
 				border: 1px solid #fff;
 				border-radius: 5px;
 				color: #fff;
-				font-size: 14;
+				font-size: 12;
 		
 				outline: none;
 				padding: 0.3rem 0.5rem 0.3rem 0.5rem;
@@ -65,7 +72,7 @@
 					border: 1px solid #fff;
 					width: 200px;
 				}#react-table .pagination .pagination-button-box button {
-				background-color: #555555;
+				background-color: #555555 !important;
 				border: none;
 				border-radius: 5px;
 				color: #fff;
@@ -76,8 +83,8 @@
 				transition: ease-in-out 0.3s;
 				width: 25px;
 			}#react-table .pagination .pagination-button-box button:disabled {
-					background-color: #313445;
-					color: #49619e;
+					background-color: #555555;
+					color: #fff;
 					cursor: not-allowed;
 				}#react-table .empty {
 		background-color: transparent;
