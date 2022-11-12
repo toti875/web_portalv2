@@ -613,7 +613,10 @@
 	}
 }
 
-.history-screen-fortem {
+.history-screen__tabs {
+ 
+}
+.history-screen {
 	background: transparent;
 	margin: 0 auto !important;
 	margin-top: 10px !important;
@@ -631,10 +634,9 @@
 	}
 
 	&__tabs {
-    display: flex !important;
-    flex-direction: row !important;
+  
 		&__label {
-			background: var(--tab-panel-background-color);
+			background: transparent;
 			padding-left: calc(var(--gap) * 3);
 
 			&__item {
@@ -642,7 +644,7 @@
 				margin-right: 30px;
 
 				&--active {
-					border-bottom: 3px solid #FDA736 !important;
+					border-bottom: 2px solid #FDA736 !important;
 					color: white;
 					padding-bottom: 10px;
 				}
@@ -653,9 +655,10 @@
 			&__table {
 				background: transparent;
 				width: 100%;
+        font-size: 13px !important;
 
 				&__header {
-					background: transparent;
+					background: transparent !important;
 					text-align: center;
 
 					tr th {
@@ -674,6 +677,7 @@
 					}
 
 					&__item {
+            font-size: 13px !important;
 						&--icon {
 							span {
 								color: white;
