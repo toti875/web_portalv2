@@ -110,7 +110,7 @@ import { WalletsScreen } from '../../v2/src/screens'
 
 import Default from "../../ui_vision/layouts/Admin";
 
-import SignInBasic from "../../ui_vision/layouts/Banner";
+import Profile from "../../ui_vision/views/Pages/Profile/Wallets";
 import SignUpBasic from "../../ui_vision/layouts/Banner";
 
 import ConfirmBasic from "../../ui_vision/layouts/Banner";
@@ -531,7 +531,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					{/* OLD Profile Page */}
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={ProfileScreen} />
 					{/* NEW Profile Page */}
-					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/account/settings" component={Default} />
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/account/wallets" component={Profile} />
 					
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/profile/settings" component={Default} />
 					
@@ -540,7 +540,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets" exact component={WalletListScreen} />					
 					
 					{/*Profile Test Page */}
-					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/pages/profile/overview" component={Default} />
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/pages/profile/overview" component={Default} />
 					
 					
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets/deposit/:currency_id"

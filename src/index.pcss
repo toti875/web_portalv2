@@ -1,3 +1,224 @@
+#wallet-list-screen {
+  display: flex !important;
+  align-items: center !important;
+		
+		margin: 0 auto !important;
+    width: 840px !important;
+    padding: 0 !important;
+    
+		
+    
+		
+		justify-content: center !important;
+
+
+	.deposit-button {
+		font-size: 13px !important;
+		background: transparent !important;
+		border: 2px solid #1EDED0 !important;
+		border-radius: 5px !important;
+		color: white !important;
+		display: inline-block !important;
+		margin-left: 5px !important;
+		outline: none !important;
+		padding: 0.5rem 1.5rem !important;
+		text-align: center !important;
+		text-decoration: none !important;
+		transition: all 0.2s !important;
+		width: 105px !important;
+
+ 
+		&:focus { 
+			outline: none !important;
+		}
+
+		&:hover {
+			background: #2eafa0 !important;
+		}
+
+		&:disabled {
+			background: #555555 !important;
+			cursor: not-allowed !important;
+			border: 2px solid #555555 !important;
+		}
+	}
+
+	.withdraw-button {
+		font-size: 13px !important;
+		background: transparent !important;
+		border: 2px solid #1EDED0 !important;
+		border-radius: 5px !important;
+
+		color: white !important;
+		display: inline-block !important;
+		margin-right: 10px !important;
+    margin-left: 10px !important;
+		outline: none !important;
+		padding: 0.5rem 1.5rem !important;
+		text-align: center !important;
+		text-decoration: none !important;
+		transition: all 0.2s !important;
+		width: 105px !important;
+
+		&:focus {
+			outline: none !important;
+		}
+
+		&:hover {
+			background: #2eafa0 !important;
+		}
+
+		&:disabled {
+			background: #555555 !important;
+			cursor: not-allowed !important;
+			border: 2px solid #555555 !important;
+		}
+	}
+
+	.checkbox-input {
+		align-items: center !important;
+		display: inline-block !important;
+		
+		justify-content: center !important;
+		font-size: 13px !important;
+    
+		.checkbox {
+			--background: transparent !important;
+			--border: 0.5px solid #1EDED0 !important;
+			--border-hover: #1EDED0 !important;
+			--border-active: #1EDED0 !important;
+			--tick: #fff !important;
+
+			position: relative !important;
+
+			input,
+			svg {
+				display: block !important;
+				height: 21px !important;
+				width: 21px !important;
+			}
+
+			input {
+				-webkit-appearance: none !important;
+				-moz-appearance: none !important;
+				background: var(--background) !important;
+				border: 2px solid #1EDED0 !important;
+				border-radius: 5px !important;
+				box-shadow: inset 0 0 0 var(--s, 1px) var(--b, var(--border)) !important;
+				cursor: pointer !important;
+				margin: 0 !important;
+				outline: none !important;
+				padding: 0 !important;
+				position: relative !important;
+				transition: box-shadow 0.3s !important;
+
+				&:hover {
+					--s: 2px !important;
+					--b: var(--border-hover) !important;
+				}
+
+				&:checked {
+					--b: var(--border-active) !important;
+				}
+			}
+
+			svg {
+				fill: none;
+				height: 21px;
+				left: 0;
+				pointer-events: none;
+				position: absolute;
+				stroke: var(--stroke, var(--border-active));
+				stroke-linecap: round;
+				stroke-linejoin: round;
+				stroke-width: 2px;
+				top: 0;
+				transform: scale(var(--scale, 1)) translateZ(0);
+				width: 21px;
+			}
+
+			&.path {
+				input {
+					&:checked {
+						--s: 2px;
+
+						transition-delay: 0.4s;
+
+						& + svg {
+							--a: 16.1 86.12;
+							--o: 102.22;
+						}
+					}
+				}
+
+				svg {
+					stroke-dasharray: var(--a, 86.12);
+					stroke-dashoffset: var(--o, 86.12);
+					transition: stroke-dasharray 0.6s, stroke-dashoffset 0.6s;
+				}
+			}
+
+			&.bounce {
+				font-size: 13px;
+				--stroke: var(--tick);
+
+				input {
+					&:checked {
+						--s: 11px;
+
+						& + svg {
+							animation: bounce 0.4s linear forwards 0.2s;
+						}
+					}
+				}
+
+				svg {
+					--scale: 0;
+				}
+			}
+		}
+
+		@keyframes bounce {
+			50% {
+				transform: scale(1.2);
+			}
+
+			75% {
+				transform: scale(0.9);
+			}
+
+			100% {
+				transform: scale(1);
+			}
+		}
+	}
+
+	.search-input {
+		background-color: #555555;
+    display: flex;
+		border: 1px solid #1EDED0;
+		border-radius: 5px;
+		color: #fff;
+		font-size: 13px;
+		outline: none;
+		padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+		-webkit-transition: width 0.4s ease-in-out;
+		transition: all 0.2s ease-in-out;
+		width: 200px;
+
+		/* When the input field gets focus, change its width to 100% */
+		&:focus {
+			border: 1px solid #1EDED0;
+			width: 60%;
+		}
+
+		&::placeholder {
+			color: #fff;
+		}
+	}
+}
+
+
 .pg-combined-order-book {
 	height: 100%;
 	overflow: hidden;

@@ -16,10 +16,9 @@ import {
 	selectAllChildCurrencies,
 } from '../../modules';
 import NP from 'number-precision';
-import './WalletListScreen.pcss';
+
+import './WalletListScreen.pcss'
 NP.enableBoundaryChecking(false); // default param is true
-
-
 
 export interface WalletItem {
 	key: string;
@@ -133,7 +132,7 @@ export const WalletListScreen = () => {
 					height="36px"
 					src={wallet.iconUrl ? wallet.iconUrl : findIcon(wallet.currency)}
 					alt={wallet.currency + '_icon'}
-				/>
+				style={{verticalAlign: 'center'}}/>
 			);
 			const isWithdrawEnabled = wallet.type === 'fiat' || wallet.balance;
 			const { fixed } = wallets.find(w => w.currency === wallet.currency) || { fixed: 8 };
@@ -151,9 +150,9 @@ export const WalletListScreen = () => {
 					</Decimal>
 				),
 				available: (
-					<span className="pisca3">
-						<Decimal key={index} fixed={fixed} >
-							{wallet.balance > 0 ? wallet.balance : 0 }
+					<span>
+						<Decimal key={index} fixed={fixed}>
+							{wallet.balance > 0 ? wallet.balance : 0}
 						</Decimal>
 					</span>
 				),
@@ -197,12 +196,12 @@ export const WalletListScreen = () => {
 	};
 
 	return (
-		<div id="wallet-list-screen-fortem">
+		<div id="wallet-list-screen">
 			<div
-				className="w-container"
+				className="container-fluid"
 				style={{
 					backgroundColor: 'transparent',
-			
+					verticalAlign: 'center',
 					minHeight: '100vh',
 					
 				
@@ -242,8 +241,8 @@ export const WalletListScreen = () => {
 						</div>
 					</div>
 				</div>
-				<div className="row mt-3">
-					<div className="col-12">{renderTable()}</div>
+				<div className="row mt-6">
+					<div className="col-16">{renderTable()}</div>
 				</div>
 			</div>
 		</div>

@@ -1,3 +1,95 @@
+#react-table {
+	padding-bottom: 200px;
+}#react-table table {
+		border-spacing: 5;
+		height: 35px;
+		position: relative;
+		width: 100%;
+		font-size: 14px;
+	}#react-table table th,
+		#react-table table td {
+			background-color: transparent !important;
+			color: #fff;
+			cursor: pointer;
+			font-size: 14px;
+			margin: 0;
+			padding-bottom: 7px;
+            padding-top: 7px;
+			padding-left: 10px;
+			padding-right: 10px;
+			
+			text-align: justify;
+            vertical-align: center;
+			transition: all 0.2s;
+		}#react-table table tr {
+			border-top: 1px solid #a7a8af;
+            padding-bottom: 7px;
+            padding-top: 7px;
+
+		}#react-table table th {
+			background-color: transparent !important;
+			color: #fff;
+		}th#react-table table:not(:first-child) {
+			text-align: center;
+		}tr td#react-table table:not(:first-child) {
+			text-align: center;
+		}tr#react-table table:hover td {
+			background-color: #41455c;
+			color: #fff;
+		}th#react-table table:last-child {
+			text-align: center;
+		}#react-table .pagination {
+		display: flex;
+		font-size: 14;
+		justify-content: space-between;
+		margin-top: 10px;
+	}#react-table .pagination .pagination-page_number,
+		#react-table .pagination .pagination-page_select {
+			color: #fff;
+		}#react-table .pagination .pagination-page_number select,
+			#react-table .pagination .pagination-page_number input,
+			#react-table .pagination .pagination-page_select select,
+			#react-table .pagination .pagination-page_select input {
+				background-color: #555555;
+				border: 1px solid #fff;
+				border-radius: 5px;
+				color: #fff;
+				font-size: 14;
+		
+				outline: none;
+				padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+				padding: 0.5rem;
+				transition: all 0.2s ease-in-out;
+				width: 200px;
+			}/* When the input field gets focus, change its width to 100% */#react-table .pagination .pagination-page_number select:focus, #react-table .pagination .pagination-page_number input:focus, #react-table .pagination .pagination-page_select select:focus, #react-table .pagination .pagination-page_select input:focus {
+					border: 1px solid #fff;
+					width: 200px;
+				}#react-table .pagination .pagination-button-box button {
+				background-color: #555555;
+				border: none;
+				border-radius: 5px;
+				color: #fff;
+				cursor: pointer;
+				height: 25px;
+				margin-right: 5px;
+				outline: none;
+				transition: ease-in-out 0.3s;
+				width: 25px;
+			}#react-table .pagination .pagination-button-box button:disabled {
+					background-color: #313445;
+					color: #49619e;
+					cursor: not-allowed;
+				}#react-table .empty {
+		background-color: transparent;
+		height: 200px;
+		left: 0;
+		padding: 50px 0;
+		position: absolute;
+		top: 35px;
+		width: 100%;
+		display: none;
+	}
+
 .cr-modal {
 	align-items: center;
 	background-color: transparent;
@@ -1134,9 +1226,9 @@ background-color: var(--color-darker)!important;
       height: 120px;
       margin-left: -10px;
       margin-top: 94px;
-      max-width: 180px;
+      max-width: 565px;
     }.pg-wallet .cr-tab-content .pg-blur-deposit-crypto .pg-blur__content__text {
-        max-width: 180px;
+        max-width: 565px;
       }.pg-wallet .cr-tab-content .pg-blur-deposit-crypto--active {
         height: 245px !important;
       }.pg-wallet .cr-tab-content .pg-blur-deposit-fiat,
@@ -1144,9 +1236,9 @@ background-color: var(--color-darker)!important;
       height: 320px !important;
       margin-left: -10px;
       margin-top: 94px;
-      width: 29.7%;
+      max-width: 565px;
     }.pg-wallet .cr-tab-content .pg-blur-deposit-fiat .pg-blur__content__text, .pg-wallet .cr-tab-content .pg-blur-withdraw .pg-blur__content__text {
-        max-width: 180px;
+        max-width: 565px;
       }.pg-wallet .cr-tab-content .pg-blur-withdraw {
       height: 370px;
     }.pg-wallet .cr-wallet-item > * {

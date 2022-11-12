@@ -7,7 +7,6 @@
     padding: 0 !important;
     
 		
-		justify-content: center !important;
     
 		
 		justify-content: center !important;
@@ -21,7 +20,7 @@
 		border-radius: 5px !important;
 		color: white !important;
 		display: inline-block !important;
-		margin-right: 5px !important;
+		margin-left: 5px !important;
 		outline: none !important;
 		padding: 0.5rem 1.5rem !important;
 		text-align: center !important;
@@ -42,9 +41,9 @@
 
 
 	#wallet-list-screen .deposit-button:disabled {
-			background: #4e5363 !important;
+			background: #555555 !important;
 			cursor: not-allowed !important;
-			border: 2px solid #4e5363 !important;
+			border: 2px solid #555555 !important;
 		}
 
 
@@ -56,7 +55,8 @@
 
 		color: white !important;
 		display: inline-block !important;
-		margin-right: 5px !important;
+		margin-right: 10px !important;
+    margin-left: 10px !important;
 		outline: none !important;
 		padding: 0.5rem 1.5rem !important;
 		text-align: center !important;
@@ -77,26 +77,26 @@
 
 
 	#wallet-list-screen .withdraw-button:disabled {
-			background: #4e5363 !important;
+			background: #555555 !important;
 			cursor: not-allowed !important;
-			border: 2px solid #4e5363 !important;
+			border: 2px solid #555555 !important;
 		}
 
 
 	#wallet-list-screen .checkbox-input {
 		align-items: center !important;
-		display: flex !important;
-		flex-direction: row !important;
+		display: inline-block !important;
+		
 		justify-content: center !important;
 		font-size: 13px !important;
 	}
 
 
 	#wallet-list-screen .checkbox-input .checkbox {
-			--background: #fff !important;
-			--border: #d1d6ee !important;
-			--border-hover: #bbc1e1 !important;
-			--border-active: #182034 !important;
+			--background: transparent !important;
+			--border: 0.5px solid #1EDED0 !important;
+			--border-hover: #1EDED0 !important;
+			--border-active: #1EDED0 !important;
 			--tick: #fff !important;
 
 			position: relative !important;
@@ -115,8 +115,8 @@
 				-webkit-appearance: none !important;
 				-moz-appearance: none !important;
 				background: var(--background) !important;
-				border: 2px solid #5d76b5 !important;
-				border-radius: 4px !important;
+				border: 2px solid #1EDED0 !important;
+				border-radius: 5px !important;
 				box-shadow: inset 0 0 0 var(--s, 1px) var(--b, var(--border)) !important;
 				cursor: pointer !important;
 				margin: 0 !important;
@@ -234,9 +234,10 @@
 
 
 	#wallet-list-screen .search-input {
-		background-color: #4e5363;
-		border: 1px solid #5d76b5;
-		border-radius: 2px;
+		background-color: #555555;
+    display: flex;
+		border: 1px solid #1EDED0;
+		border-radius: 5px;
 		color: #fff;
 		font-size: 13px;
 		outline: none;
@@ -250,7 +251,7 @@
 
 
 	#wallet-list-screen .search-input:focus {
-			border: 1px solid #4e5363;
+			border: 1px solid #1EDED0;
 			width: 60%;
 		}
 

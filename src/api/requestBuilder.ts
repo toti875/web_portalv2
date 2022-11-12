@@ -54,6 +54,7 @@ const buildRequest = (request: Request, configData: RequestOptions) => {
 
 	const defaultHeaders = {
 		'content-type': contentType,
+		'Access-Control-Allow-Origin': '*',
 	};
 
 	const apiUrl = api[apiVersion];
@@ -61,11 +62,10 @@ const buildRequest = (request: Request, configData: RequestOptions) => {
 	const requestConfig: AxiosRequestConfig = {
 		baseURL: apiUrl,
 		data: body,
-		//headers: { defaultHeaders },
+		headers: { defaultHeaders },
 		method,
 		url,
-		withCredentials: false,
-	};
+		withCredentials: withCredentials(),	};
 
 	return requestConfig;
 };
@@ -73,7 +73,7 @@ const buildRequest = (request: Request, configData: RequestOptions) => {
 export const defaultResponse: Partial<AxiosError['response']> = {
 	status: 500,
 	data: {
-		error: 'Erro interno',
+		error: 'Bloqueado por segurança',
 	},
 };
 
