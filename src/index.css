@@ -683,6 +683,9 @@
 .history-screen__tabs__content__table__header {
 					background: transparent !important;
 					text-align: center;
+          font-size: 15px;
+          top:20px;
+          padding-top: 20px;
 				}
 
 
@@ -706,12 +709,12 @@
 
 
 .history-screen__tabs__content__table__header__item {
-            font-size: 13px !important;
+            font-size: 14px !important;
 					}
 
 
 .history-screen__tabs__content__table__header__item--icon span {
-								color: white;
+								color: #009991;
 								cursor: pointer;
 							}
 
@@ -722,15 +725,23 @@
 
 
 .history-screen__tabs__content__table__body {
-					color: white;
+				
 					text-align: center;
 				}
 
 
 .history-screen__tabs__content__table__body tr td a {
-								color: inherit;
+								color: #009991;;
 								text-decoration: none;
+                font-size: 10px;
 							}
+
+
+.history-screen__tabs__content__table__body tr td a:hover {
+                  color: #1EDED0;
+                  text-decoration: underline;
+  
+								}
 
 
 .history-screen__tabs__content__table__body tr td {
@@ -748,6 +759,7 @@
 								padding-left: calc(var(--gap) * 3);
 								text-align: left;
 								width: calc(var(--big-gap) * 4);
+                color: #009991;
 							}
 
 
@@ -755,6 +767,8 @@
 								padding-bottom: 10px;
 								padding-right: calc(var(--gap) * 3);
 								text-align: right;
+                color: #F5F5F5;
+                opacity: 0.81;
 							}
 
 

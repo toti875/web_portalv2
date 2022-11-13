@@ -104,7 +104,7 @@ export const Pagination = (paginationProps: PaginationProps) => {
 					{renderFirstPage()}
 					{renderPrevPage()}
 					<div className="ml-2">
-						Page <span className="text-white">{pageIndex}</span>
+						Página <span className="text-white">{pageIndex}</span>
 					</div>
 					{renderNextPage()}
 					{renderLastPage()}

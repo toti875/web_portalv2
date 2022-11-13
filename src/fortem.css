@@ -4551,12 +4551,13 @@ margin-left: 20px;
 
 						background-color: #555555;
 						box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-                        border-radius: 5px;
+                        border-radius: 5px !important;
 						display: none;
 						left: 50% !important;
                         font-size: 16px;
 						min-width: 200px;
 						position: absolute;
+                        margin-top: 40px !important;
 						right: auto !important;
 						text-align: center !important;
 						-webkit-transform: translate(-50%, 0) !important;

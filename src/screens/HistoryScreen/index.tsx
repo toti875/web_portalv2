@@ -320,7 +320,7 @@ export const HistoryScreen = () => {
 
 	return (
 		<div className="history-screen history-screen-container">
-			<div className="history-screen__title">Extrato de movimentações</div>
+			<div className="history-screen__title">Extrato das suas movimentações</div>
 			{renderFilterBar()}
 			<div className="history-screen__tabs ">
 				<div className="history-screen__tabs__label   d-flex">{renderTabsLabel()}</div>
