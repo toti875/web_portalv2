@@ -42,7 +42,7 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 
 	return (
 		<div className="td-pg-profile--radius td-pg-profile__active-step">
-			<h1 className="td-pg-profile__active-step__tile">Plataforma Fortem ONE - Ativos Digitais</h1>
+			<h5 className="td-pg-profile__active-step__tile">Plataforma Fortem ONE - Ativos Digitais</h5>
 			<span className="td-pg-profile__active-step__desc">Status da sua conta</span>
 			<div className="td-pg-profile__active-step__content d-flex">
 				<div className="td-pg-profile__active-step__content__item">
@@ -53,7 +53,7 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 					>
 						{isLoggedIn ? svgActive : '1'}
 					</span>
-					<h5 className="td-pg-profile__active-step__content__item__title">Criação da conta</h5>
+					<h6 className="td-pg-profile__active-step__content__item__title">Criação da conta</h6>
 				</div>
 				<div className="td-pg-profile__active-step__content__item">
 					<span
