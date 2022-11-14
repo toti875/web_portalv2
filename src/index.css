@@ -1757,13 +1757,19 @@
 	}
 
 .td-pg-profile--bg {
-		background: transparent !important;
+		
 		box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--wallets-item-border-color);
+    border-radius: 10px;
+    background: #181819;
 	}
 
 .td-pg-profile--bg--second {
-		background: transparent;
+		
 		box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--wallets-item-border-color);
+    border-radius: 10px;
+    background: #181819;
 	}
 
 .td-pg-profile--radius {
@@ -1779,6 +1785,7 @@
     border: 1px solid var(--wallets-item-border-color);
     border-radius: 10px;
     background: #181819;
+    max-width:920px;
 	}
 
 .td-pg-profile__quick__inner {
@@ -3357,8 +3364,12 @@
 	}
 
 .td-pg-profile--bg--second {
-		background: rgb(49, 52, 69);
-		box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--wallets-item-border-color) !important;
+    border-radius: 10px;
+    background: #181819 !important;
+    box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.15) !important;
+    max-width: 980px !important;
+
 	}
 
 .td-pg-profile--radius {
@@ -3655,9 +3666,9 @@
 	padding: 20px;
 	position: relative;
   
-  border: 1px solid var(--wallets-item-border-color);
-  border-radius: 10px;
-  background: #181819;
+    border: 1px solid var(--wallets-item-border-color);
+    border-radius: 10px;
+    background: #181819;
 }
 
 .td-pg-profile__active-step__mask-icon {

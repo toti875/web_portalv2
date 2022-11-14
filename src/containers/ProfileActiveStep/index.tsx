@@ -53,7 +53,7 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 					>
 						{isLoggedIn ? svgActive : '1'}
 					</span>
-					<h6 className="td-pg-profile__active-step__content__item__title">Criação da conta</h6>
+					<span className="td-pg-profile__active-step__content__item__title">Criação da conta</span>
 				</div>
 				<div className="td-pg-profile__active-step__content__item">
 					<span
