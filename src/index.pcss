@@ -1,3 +1,33 @@
+.cr-search {
+	margin: var(--gap);
+	padding: var(--gap);
+	width: calc(100% - var(--gap) * 5);
+
+	&__icon {
+		padding: var(--gap);
+
+		img {
+			height: 17px;
+			width: 17px;
+		}
+	}
+
+	&__input {
+		border: none;
+		border-bottom: 1px solid #F5F5F5;
+		color: #F5F5F5;
+		padding: var(--gap);
+
+		&::placeholder {
+			color: #F5F5F5;
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
 #wallet-list-screen {
   display: flex !important;
   align-items: center !important;

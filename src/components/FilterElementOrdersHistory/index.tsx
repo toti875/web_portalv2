@@ -87,7 +87,7 @@ export const FilterElement: React.FC<Props> = props => {
 					onChangeValueForm(e.target.value, e.target.name);
 				}}
 			>
-				<option value="all">All</option>
+				<option value="all">Todos</option>
 				{marketsData.map(e => {
 					return (
 						<option value={e.id} key={e.id}>
@@ -103,16 +103,16 @@ export const FilterElement: React.FC<Props> = props => {
 		<div className="history-screen__filter">
 			<form className="d-flex align-items-center">
 				<div className="history-screen__filter__date d-flex align-items-center">
-					<div className="history-screen__filter__date__desc">Date</div>
+					<div className="history-screen__filter__date__desc">Data</div>
 					{renderInputDate('date_from')}
 					{renderInputDate('date_to')}
 				</div>
 				<div className="history-screen__filter__select d-flex align-items-center">
-					<div className="history-screen__filter__select__desc">Pair</div>
+					<div className="history-screen__filter__select__desc">Mercado</div>
 					<div className="mr-3 history-screen__filter__select__choose">{renderSelection()}</div>
 				</div>
 				<div className="history-screen__filter__select d-flex align-items-center">
-					<div className="history-screen__filter__select__desc">Type</div>
+					<div className="history-screen__filter__select__desc">Tipo</div>
 					<div className="history-screen__filter__select__choose">
 						<select
 							id="inputOrderType"
@@ -123,9 +123,9 @@ export const FilterElement: React.FC<Props> = props => {
 								onChangeValueForm(e.target.value, e.target.name);
 							}}
 						>
-							<option value="all">All</option>
-							<option value="buy">Buy</option>
-							<option value="sell">Sell</option>
+							<option value="all">Todos</option>
+							<option value="buy">Compra</option>
+							<option value="sell">Venda</option>
 						</select>
 					</div>
 				</div>
@@ -137,10 +137,10 @@ export const FilterElement: React.FC<Props> = props => {
 							onSearch();
 						}}
 					>
-						Search
+						Filtrar
 					</button>
 					<button className="history-screen__filter__search__btn" type="reset" value="Reset" onClick={onRestForm}>
-						Reset
+						Limpar
 					</button>
 				</div>
 			</form>
