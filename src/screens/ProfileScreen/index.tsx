@@ -25,19 +25,19 @@ export const ProfileQuickContainer: React.FC = () => {
 					</div>
 					<div className="td-pg-profile__quick__info d-flex flex-column align-items-start">
 						<div className="td-pg-profile__quick__info--top d-flex align-items-center">
-							<div className="td-pg-profile__quick__info--top__email mr-2">{user.email}</div>
+							<div className="td-pg-profile__quick__info--top__email mr-2" style={{marginRight: '15px'}}>{user.email}</div>
 							<div className="td-pg-profile__quick__info--top__user-id">
 								<span className="td-pg-profile--color--second td-pg-profile__quick__info--top__user-id--label mr-1">
-									User Id:
+									Fortem ID:
 								</span>
-								<span className="td-pg-profile__quick__info--top__user-id--content">{user.uid}</span>
+								<span className="td-pg-profile__quick__info--top__user-id--content" style={{marginLeft: '10px'}}>{user.uid}</span>
 							</div>
 						</div>
 						<div className="td-pg-profile--color--second td-pg-profile__quick__info--bottom">
 							<span className="td-pg-profile__quick__info--bottom__last-login--time mr-2">
-								Last login time {time}
+								Seu último login: {time}
 							</span>
-							<span className="td-pg-profile__quick__info--bottom__last-login--ip">IP : {ip}</span>
+							<span className="td-pg-profile__quick__info--bottom__last-login--ip" style={{marginLeft: '10px'}}>IP : {ip}</span>
 						</div>
 					</div>
 				</div>
