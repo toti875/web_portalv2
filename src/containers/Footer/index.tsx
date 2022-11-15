@@ -87,6 +87,7 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress) => {
 						<p className="footer__news__title">NEWSLETTER</p>
 
 						<div className="footer__news__take-email">
+							
 							<div className="footer__news__take-email__label">Receba nossa newsletter</div>
 							<input
 								className="footer__news__take-email__input"

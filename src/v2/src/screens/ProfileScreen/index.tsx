@@ -32,8 +32,7 @@ class ProfileComponent extends React.Component<RouterProps, IntlProps> {
                     <div className="row">
                         <div className="col-12 col-md-6 mx-0">
                             <div className="row col-12 mx-0">
-                                <ProfileAuthDetails/>
-                                <ReferralProgram/>
+                       
                             </div>
                         </div>
                         <div className="col-12 col-md-6">
@@ -43,10 +42,10 @@ class ProfileComponent extends React.Component<RouterProps, IntlProps> {
                 </div>
                 <div className="row">
                     <div className="col-12">
-                        <ProfileApiKeys/>
+                     
                     </div>
                     <div className="col-12">
-                        <ProfileAccountActivity/>
+                       
                     </div>
                 </div>
             </div>
@@ -54,7 +53,7 @@ class ProfileComponent extends React.Component<RouterProps, IntlProps> {
     }
 }
 
-export const ProfileScreen = compose(
+export const ProfileScreen2 = compose(
     injectIntl,
     withRouter,
 )(ProfileComponent) as React.ComponentClass;

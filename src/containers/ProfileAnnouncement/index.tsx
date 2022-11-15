@@ -10,7 +10,7 @@ export const ProfileAnnouncement: React.FC<ProfileAnnouncementProps> = () => {
 	return (
 		<div className="td-pg-profile--bg td-pg-profile--radius td-pg-profile__content__item td-pg-profile__announcement">
 			<Link to="/announcement" className="td-pg-profile__content__item__header td-pg-profile__content__item__header--link">
-				<div className="td-pg-profile__content__item__header__title">Announcements</div>
+				<div className="td-pg-profile__content__item__header__title">Novidades</div>
 				<div className="td-pg-profile__content__item__header__to-page">
 					<svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path

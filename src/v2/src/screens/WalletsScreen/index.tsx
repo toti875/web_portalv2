@@ -16,6 +16,7 @@ import {
     WalletList,
 } from '../../components';
 import {ProfileScreen} from '../../../../screens/ProfileScreen';
+import { ProfileVerification, ProfileVerificationLabels} from '../../../../containers';
 import { DEFAULT_CCY_PRECISION } from '../../constants';
 import { Withdraw, WithdrawProps } from '../../containers';
 import { ModalWithdrawConfirmation } from '../../containers/ModalWithdrawConfirmation';
@@ -51,6 +52,8 @@ import {
 } from '../../modules';
 
 //import './WalletsScreen.pcss';
+
+import {ProfileScreen2} from '../ProfileScreen'
 
 
 interface ReduxProps {
@@ -269,7 +272,15 @@ class WalletsComponent extends React.Component<Props, WalletsState> {
                         precision={selectedWalletPrecision}
                     />
                 </div>
+ 
+                <div className='kyc'>
+                    <ProfileVerification />
+                    <br />
+                    <ProfileVerificationLabels />
+                    
+                </div>
                 
+   
             </React.Fragment>
         );
     }

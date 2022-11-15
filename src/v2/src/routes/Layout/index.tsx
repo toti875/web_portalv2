@@ -73,7 +73,6 @@ import {
     MagicLink,
     MaintenanceScreen,
     OrdersTabScreen,
-    ProfileScreen,
     ProfileTwoFactorAuthScreen,
     RestrictedScreen,
     SignInScreen,
@@ -81,6 +80,8 @@ import {
     TradingScreen,
     VerificationScreen,
     WalletsScreen,
+    ProfileScreen2,
+
 } from '../../screens';
 
 
@@ -98,6 +99,8 @@ interface ReduxProps {
     user: User;
     userLoading?: boolean;
 }
+
+
 
 interface DispatchProps {
     fetchConfigs: typeof configsFetch;
@@ -360,7 +363,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/orders" component={OrdersTabScreen} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/history" component={HistoryScreen} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/confirm" component={ConfirmScreen} />
-                    <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={ProfileScreen} />
+                    <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={ProfileScreen2} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets" component={WalletsScreen} />
                     <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/security/2fa" component={ProfileTwoFactorAuthScreen} />
                     <Route path="**"><Redirect to="/trading/" /></Route>

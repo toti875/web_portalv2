@@ -16,33 +16,32 @@ export const ProfileQuickContainer: React.FC = () => {
 	const time = lastLogin ? localeDate(lastLogin.created_at, 'fullDate') : '';
 
 	return (
-		<div className="td-pg-profile--bg--second td-pg-profile--bg td-pg-profile__quick">
-			<Container fluid>
+		<div className="td-pg-profile --bg--second td-pg-profile--bg td-pg-profile__quick" style={{width: '1168px'}}>
+			<span className="d-flex align-items-center" style={{marginLeft: '30px', marginTop: '30px', fontSize: '18px', textAlign: 'center'}}>Plataforma Fortem ONE - Ativos Digitais</span>
 				<div className="td-pg-profile__quick__inner d-flex align-items-center">
 					<div className="td-pg-profile__quick__logo">
-						<img src={require('assets/images/profile/avatar.svg')} alt="" />
-						{user.email && <div className="td-pg-profile__quick__logo__name">{user.email[0]}</div>}
+						<img src={require('./profile_avatar.gif')} alt="" style={{width: '150px'}}/>
+						
 					</div>
 					<div className="td-pg-profile__quick__info d-flex flex-column align-items-start">
 						<div className="td-pg-profile__quick__info--top d-flex align-items-center">
-							<div className="td-pg-profile__quick__info--top__email mr-2" style={{marginRight: '15px'}}>{user.email}</div>
+							<div className="td-pg-profile__quick__info--top__email mr-2" style={{marginRight: '15px', fontSize: '16px'}}>{user.email}</div>
 							<div className="td-pg-profile__quick__info--top__user-id">
-								<span className="td-pg-profile--color--second td-pg-profile__quick__info--top__user-id--label mr-1">
+								<span className="td-pg-profile--color--second td-pg-profile__quick__info--top__user-id--label mr-1" style={{fontSize: '16px'}}>
 									Fortem ID:
 								</span>
-								<span className="td-pg-profile__quick__info--top__user-id--content" style={{marginLeft: '10px'}}>{user.uid}</span>
+								<span className="td-pg-profile__quick__info--top__user-id--content" style={{marginLeft: '10px', fontSize: '16px'}}>{user.uid}</span>
 							</div>
 						</div>
 						<div className="td-pg-profile--color--second td-pg-profile__quick__info--bottom">
-							<span className="td-pg-profile__quick__info--bottom__last-login--time mr-2">
+							<span className="td-pg-profile__quick__info--bottom__last-login--time mr-2" style={{fontSize: '16px'}}>
 								Seu último login: {time}
 							</span>
-							<span className="td-pg-profile__quick__info--bottom__last-login--ip" style={{marginLeft: '10px'}}>IP : {ip}</span>
+							<span className="td-pg-profile__quick__info--bottom__last-login--ip" style={{marginLeft: '10px', fontSize: '16px'}}>IP : {ip}</span>
 						</div>
 					</div>
 				</div>
-			</Container>
-		</div>
+			</div>
 	);
 };
 
@@ -56,7 +55,7 @@ export const ProfileScreen: React.FC = () => {
 	return (
 		<div className="td-pg-profile">
 			<ProfileQuickContainer />
-			<Container fluid>
+			
 				<ProfileActiveStep />
 				<div className="td-pg-profile__content">
 					<ProfileAccountActivity />
@@ -81,7 +80,7 @@ export const ProfileScreen: React.FC = () => {
 					</Link>
 					<ProfileApiKeys />
 				</div>
-			</Container>
+			
 		</div>
 	);
 };
