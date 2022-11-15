@@ -43,7 +43,7 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 	return (
 		<div className="td-pg-profile--radius td-pg-profile__active-step">
 			<h5 className="td-pg-profile__active-step__tile">Plataforma Fortem ONE - Ativos Digitais</h5>
-			<span className="td-pg-profile__active-step__desc">Status da sua conta</span>
+			<span className="td-pg-profile__active-step__desc" style={{fontSize: '16px'}}>Comece com apenas 3 passos:</span>
 			<div className="td-pg-profile__active-step__content d-flex">
 				<div className="td-pg-profile__active-step__content__item">
 					<span
@@ -53,7 +53,7 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 					>
 						{isLoggedIn ? svgActive : '1'}
 					</span>
-					<span className="td-pg-profile__active-step__content__item__title">Criação da conta</span>
+					<span className="td-pg-profile__active-step__content__item__title" style={{fontSize: '16px'}}>Criação da conta</span>
 				</div>
 				<div className="td-pg-profile__active-step__content__item">
 					<span
@@ -63,7 +63,7 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 					>
 						{user.otp ? svgActive : '2'}
 					</span>
-					<h5 className="td-pg-profile__active-step__content__item__title"> Habilitação do 2FA</h5>
+					<span className="td-pg-profile__active-step__content__item__title" style={{fontSize: '16px'}}> Habilitar Duplo Fator de Segurança (2FA)</span>
 					<span className="td-pg-profile--color--second td-pg-profile__active-step__content__item__desc">
 					A Fortem exige autenticação em duas etapas para manter a segurança da sua conta. Além da senha, use o seu celular ou um aplicativo autenticador para garantir que ninguém mais consiga entrar na sua conta.
 					</span>
@@ -85,7 +85,7 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 					>
 						{isExistBalance ? svgActive : '3'}
 					</span>
-					<h5 className="td-pg-profile__active-step__content__item__title">Depositar Reais (R$)</h5>
+					<span className="td-pg-profile__active-step__content__item__title" style={{fontSize: '16px'}}>Depositar Reais (R$)</span>
 					<span className="td-pg-profile--color--second td-pg-profile__active-step__content__item__desc">
 						Adicione reais ou cripto em sua carteira Fortem para iniciar seus investimentos digitais
 					</span>

@@ -1750,6 +1750,8 @@
 .td-pg-profile {
 	color: #fff;
 	font-size: 12px;
+  width: 920px !important;
+  margin: 0 auto !important;
 }
 
 .td-pg-profile--color--second {
@@ -1778,6 +1780,7 @@
 
 .td-pg-profile .container-fluid {
 		padding: 0 30px;
+    max-width: 920px !important;
 	}
 
 .td-pg-profile__quick {
@@ -1785,7 +1788,7 @@
     border: 1px solid var(--wallets-item-border-color);
     border-radius: 10px;
     background: #181819;
-    max-width:920px;
+    width:1200px !important;
 	}
 
 .td-pg-profile__quick__inner {
