@@ -851,7 +851,7 @@ background-color: var(--color-darker)!important;
 
 
 
-.btn-cryptoAdress {
+.btn, btn-cryptoAdress {
 
     color: #F5F5F5 !important;
     border: 1px solid #009991 !important;

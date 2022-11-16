@@ -237,8 +237,8 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 
 		if (!isLoggedIn && prevProps.isLoggedIn && !userLoading) {
 			this.props.walletsReset();
-			if (!history.location.pathname.includes('/market')) {
-				history.push('/market/');
+			if (!history.location.pathname.includes('/')) {
+				history.push('/');
 			}
 		}
 
@@ -425,8 +425,8 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 						{/* new feature */}
 						<Route path="/airdrops" exact component={AirdropCoinListMobileScreen} />
 						{/* new feature */}
-						<Route path="**">
-							<Redirect to="/market/" />
+						<Route path="*">
+							<Redirect to="/" />
 						</Route>
 					</Switch>
 					{isLoggedIn && <WalletsFetch />}

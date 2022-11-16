@@ -97,10 +97,10 @@ export const SaleInfo: React.FC<SaleInfoProps> = (props: SaleInfoProps) => {
 
 	switch (props.sale.type) {
 		case 'upcoming':
-			countdownTitle = <p style={{color: '#fff', fontSize: '18px'}} >Início da captação: {localeDate(props.sale.start_date, 'fullDate', 'pt-BR')}</p>;
+			countdownTitle = <p style={{color: '#fff', fontSize: '18px'}} >Data de início do ciclo: {localeDate(props.sale.start_date, 'fullDate', 'pt-BR')}</p>;
 			break;
 		case 'ongoing':
-			countdownTitle = <p style={{color: '#fff', fontSize: '18px'}} >Fim da captação: <span style={{color: '#009991', fontSize: '18px'}}> {localeDate(props.sale.end_date, 'fullDate', 'pt-BR')}</span></p> 
+			countdownTitle = <p style={{color: '#fff', fontSize: '18px'}} >Data final do ciclo: <span style={{color: '#009991', fontSize: '18px'}}> {localeDate(props.sale.end_date, 'fullDate', 'pt-BR')}</span></p> 
 			break;
 		default:
 			countdownTitle = <p style={{color: '#fff', fontSize: '18px'}} > Captação concluída em: {localeDate(props.sale.end_date, 'fullDate', 'pt-BR')}</p>;

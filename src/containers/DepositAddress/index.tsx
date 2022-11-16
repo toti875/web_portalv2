@@ -146,8 +146,8 @@ export const DepositAddress: React.FC<DepositAddressProps> = (props: DepositAddr
 				<div>
 					<div className="row">
 						<div className="col-12 d-flex justify-content-between">
-							<h4>Deposit Network</h4>
-							<span>Average arrival time：5-10 minutes</span>
+							<h4>Rede</h4>
+							<span>Tempo médio de processamento do blockchain: 5-10 minutos</span>
 						</div>
 					</div>
 					<div className="row">
@@ -164,10 +164,10 @@ export const DepositAddress: React.FC<DepositAddressProps> = (props: DepositAddr
 				<div className="row mt-5">
 					<div className="col-12 d-flex justify-content-between">
 						<p className="pr-5">
-							<strong>Send only {selectedCurrencyID.toUpperCase()} to this deposit address.</strong>
+							<strong>Envie somente {selectedCurrencyID.toUpperCase()} para este endereço de depósito.</strong>
 							<br />
-							Sending coin or token other than {selectedCurrencyID.toUpperCase()} to this address may result in the
-							loss of your deposit.
+							Enviar outra moeda ou token diferente de {selectedCurrencyID.toUpperCase()} para este endereço resultará na perda definitiva
+							dos seus recursos.
 						</p>
 					</div>
 				</div>

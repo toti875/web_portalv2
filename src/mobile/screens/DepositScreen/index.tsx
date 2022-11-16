@@ -216,7 +216,7 @@ const DepositNotes = props => {
 					)}
 				</p>
 				<p>
-					<strong style={{ color: '#FF6400' }}>Note: </strong>Only Deposit {toUpper(currency)} to this wallet
+					<strong style={{ color: '#FF6400' }}>Atenção: </strong>Deposite somente {toUpper(currency)} nesta carteira.
 				</p>
 			</div>
 		</div>

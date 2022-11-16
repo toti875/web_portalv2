@@ -176,7 +176,7 @@ export const WithdrawInfo: React.FC<WithdrawInfoProps> = (props: WithdrawInfoPro
 				</div>
 				<div className="row mt-5">
 					<div className="col-12">
-						<h5>Go To Trade:</h5>
+						<h5>Negociar:</h5>
 					</div>
 					<div className="col-12">
 						<TradeList currency_id={currency_id} />

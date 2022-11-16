@@ -152,11 +152,11 @@ export class Withdraw extends React.Component<WithdrawProps, WithdrawState> {
 				<div className="withdrawNote">
 					<div className="withdrawNote__right">
 						<p>
-							<span>1. Min Withdraw: </span>
+							<span>1. Saque mínimo: </span>
 							<span>{this.props.minWithdrawAmount + ' ' + currency.toUpperCase()}</span>
 						</p>
 						<p>
-							<span>2. Withdraw Limit: </span>
+							<span>2. Limite de saque: </span>
 							<span>{this.props.limitWitdraw24h + ' ' + this.props.limitWitdraw24hLabel}</span>
 						</p>
 						<p>

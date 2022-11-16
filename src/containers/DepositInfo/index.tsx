@@ -99,7 +99,7 @@ export const DepositInfo: React.FC<DepositInfoProps> = (props: DepositInfoProps)
 		{ deposit_fee: Number(currency.deposit_fee) ?? 'Unavailble', currency: '%' },
 	)}`;
 
-	const textNote = `Only Deposit ${selectedCurrencyID.toUpperCase()} to this wallet.`;
+	const textNote = `Deposite somente ${selectedCurrencyID.toUpperCase()} nesta carteira.`;
 
 	// method
 	const findIcon = (code: string): string => {
@@ -216,7 +216,7 @@ export const DepositInfo: React.FC<DepositInfoProps> = (props: DepositInfoProps)
 				</div>
 				<div className="row mt-5">
 					<div className="col-12">
-						<h5>Go To Trade:</h5>
+						<h5>Negociar:</h5>
 					</div>
 					<div className="col-12">
 						<TradeList currency_id={currency_id} />

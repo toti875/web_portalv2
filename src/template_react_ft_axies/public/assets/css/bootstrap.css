@@ -5448,7 +5448,7 @@ button.close {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #fff;
+  background-color: gray;
   -webkit-background-clip: padding-box;
           background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
