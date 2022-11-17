@@ -1,3 +1,14 @@
+.form-control  input:focus {
+  border: 1px solid pink !important;
+  background: pink !important;
+}
+
+.form-control-lg  input:focus {
+  border: 1px solid pink !important;
+  background: pink !important;
+
+}
+
 
 .pg-change-password-form {
 	display: flex;
@@ -7,19 +18,19 @@
 	}
 
 	.cr-input {
-		border-bottom: 1px solid var(--input-border-color);
+		border-bottom: 1px solid #009991;
 
 		input {
-			color: var(--input-text-color);
+			color: #c0c0c0;
 		}
 	}
 
 	&__label {
-		color: var(--input-legend-color);
+		color: #c0c0c0;
 	}
 
 	&__error {
-		color: var(--system-red);
+		color: #ED0A3F;
 		margin: 0;
 		margin-left: calc(var(--gap) * 2);
 	}
@@ -27,33 +38,34 @@
 
 .cr-modal {
 	.pg-change-password-screen {
-		background-size: cover;
+		
 		display: flex;
 		justify-content: center;
 		margin: 0 auto;
 		min-height: calc(var(--big-gap) * 6.66);
 
 		.cr-email-form {
-			background: var(--body-background-color);
-			min-height: calc(var(--big-gap) * 5);
+			background: #181819 !important;
+      backdrop-filter: blur(50px);
+			min-height: calc(var(--big-gap) * 4);
 			width: 100% !important;
 
 			&__option {
-				background: var(--subheader-background-color);
-			}
+        background: #181819 !important;
+        backdrop-filter: blur(50px);			}
 
 			&__options-group {
 				/* height: calc(var(--big-gap) * 0.97); */
 				border-bottom: 2px solid var(--divider-color-level-2);
-				color: var(--primary-text-color);
+				color: #c0c0c0;
 				width: 100%;
 			}
 
 			&__header {
-				color: var(--secondary-contrast-cta-color);
+				color: #c0c0c0;
 				font-size: calc(var(--gap) * 2.33);
 				font-style: normal;
-				font-weight: normal;
+				font-weight: bolder !important;
 				height: calc(var(--gap) * 4.33);
 				line-height: calc(var(--gap) * 2.66);
 				margin: calc(var(--gap) * 0.83);
@@ -68,6 +80,7 @@
 				position: absolute;
 				right: calc(var(--gap) * 3.3);
 				width: calc(var(--gap) * 2.5);
+        color: #c0c0c0 !important;
 			}
 
 			&__button-wrapper {
@@ -76,7 +89,7 @@
 		}
 
 		.cr-email-form__option-inner {
-			background: transparent;
+			background: purple;
 			color: var(--primary-text-color);
 			font-size: calc(var(--gap) * 2.33);
 			font-style: normal;
@@ -88,11 +101,11 @@
 
 		.cr-email-form__group--focused {
 			.cr-email-form__label {
-				color: var(--input-legend-color-active);
+				color: #c0c0c0 !important;
 			}
 
 			input {
-				border-color: var(--input-legend-color-active) !important;
+				border-color: #c0c0c0 !important;
 			}
 		}
 	}
@@ -110,10 +123,9 @@
 .input-group input{
   
   
-  padding-left: 45px !important;
+  //padding-left: 45px !important;
   font-size: 15px !important;
-  outline: none !important;
-  border: none !important;
+
   color: #595959 !important;
   background: #dde1e7 !important;
   border-radius: 5px !important;
@@ -130,7 +142,7 @@
 
 .input-group  span{
   position: absolute !important;
-  width: 50px !important;
+  
   line-height: 50px !important;
   color: #595959 !important;
 }
@@ -138,8 +150,8 @@
 .input-group  label{
   position: absolute !important;
   top: 50% !important;
-  left: 45px !important;
   pointer-events: none !important;
+  left: 45px !important;
   color: #666666 !important;
   transform: translateY(-50%) !important;
 }
@@ -152,7 +164,7 @@
 
 .ant-switch{
 
-  background-color: #009991 !important;
+  background-color: #c0c0c0 !important;
   min-width: 36px !important;
   
 
@@ -164,11 +176,11 @@
   min-width: 36px !important;
 
   
-
 }
 
+  
+  .td-pg-profile__list-api-key {
 
-.td-pg-profile__list-api-key {
 	.td-pg-profile__inner {
 		padding: 20px 0;
 	}
@@ -461,14 +473,14 @@
 
 	&__input {
 		
-		background: inherit;
-		color: var(--input-text-color);
+		background: transparent !important;
+		color: #555555 !important;
 		display: flex;
 		flex: 1;
 		flex-direction: space-around !important;
-		padding: 2px !important;
-    font-size: 8px !important;
-    margin-top: 5px !important;
+		padding: 0px !important;
+    font-size: 18px !important;
+    
 
 		input {
 			background: inherit;
@@ -478,16 +490,21 @@
 	}
 
 	.td-copyable-text-field {
-	}
+
+		display: flex !important;
+		flex: 1;
+		flex-direction: space-around !important;  }
 
 	input {
-		background: var(--input-background-color);
-		border-radius: 3px !important;
-		border: none !important;
-		color: var(--input-text-color);
+		background: #c0c0c0 !important;
+		
+
+		color: #555555 !important;
 		font-size: 12.5px !important;
-    width: 315px !important;
-    margin: 0 auto !important;
+    width: 340px !important;
+    height: 110% !important;
+    margin-left: 0px !important;
+    margin-right: -20px !important;
     padding: 5px !important;
     
 	}
@@ -541,12 +558,12 @@
 				padding: var(--gap) calc(var(--gap) * 0.83) calc(var(--gap) * 0.83) var(--gap) !important;
 
 				.input-group {
-					display: flex;
-					flex-direction: row;
-					justify-content: space-between;
+					display: flex !important;
+					flex-direction: row !important;
+					justify-content: space-between !important;
 
 					.custom-input {
-						width: 100%;
+						
 
 						label {
 							margin-top: -10px;
@@ -4866,7 +4883,7 @@
 			min-height: calc(var(--big-gap) * 6);
 
 			&__form-content {
-                background: rgba(255,255,255,0.2);
+                background: #181819 !important;
                 backdrop-filter: blur(10px);
 
 				align-items: center;
@@ -4919,16 +4936,16 @@
 	}
 
 	.modal-content {
-    background: rgba(0, 0, 0, 0.15) !important;
-    color: var(--color-darker) !important;
+    background: #181819 !important; 
+    color: #c0c0c0 !important;
     backdrop-filter: blur(80px);		
-    border: solid 1px #848e9c;
+    border: solid 1px #c0c0c0 !important;
     border-radius: 10px;
 		max-width: 424px;
 		overflow: hidden;
 
 		.modal-header {
-      background: transparent;
+      background: #181819 !important; 
       backdrop-filter: blur(10px);			
       border-bottom: 2px solid var(--divider-color-level-2);
 			padding-left: 23px;
@@ -4938,7 +4955,9 @@
 			.modal-title,
 			.close {
 				align-items: center;
-				color: var(--primary-text-color);
+				color: #c0c0c0 !important;
+        background: transparent !important; 
+        border: none;
 				display: flex;
 				justify-content: center;
 			}
@@ -4955,7 +4974,8 @@
 			}
 
 			.close {
-        background: transparent !important;
+        background: transparent !important; 
+        color: #c0c0c0 !important;
 				span:first-child {
 					font-size: 25px;
 				}
@@ -4963,21 +4983,28 @@
 		}
 
 		.modal-body {
-      background: var(--color-darker);
-      backdrop-filter: blur(10px);		
+      background: #181819 !important; 
+      backdrop-filter: blur(10px);	
       padding-bottom: 35px;
 			padding-left: 23px;
 			padding-right: 23px;
 			padding-top: 30px;
 
+      .td-email-form__header {
+        margin-bottom: 10px;
+      }
+
 			.td-email-form__group {
-				background: transparent;
+        background: #181819 !important; 
 				margin-bottom: 20px;
 				position: relative;
+        backdrop-filter: blur(10px);	
+
 
 				.td-email-form__label {
 					color: #F5F5F5 !important;
           font-size: 15px !important;
+          display: none;
 				}
 
 			}
@@ -4990,7 +5017,7 @@
 
 				input {
 					border-color: #555555 !important;
-          color: var(--color-darker) !important;
+          color: #181819 !important;
 				}
 			}
 		}
@@ -5000,11 +5027,11 @@
 
 .cr-modal {
     align-items: center;
-    background-color: transparent !important;
-    backdrop-filter: blur(80px) !important;
+    background: transparent !important; 
+    backdrop-filter: blur(10px) !important;
     bottom: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     left: 0;
     padding: var(--gap);
@@ -5014,7 +5041,7 @@
     z-index: 99999;
   
     &__container {
-      background-color: transparent !important;
+      background: #181819 !important; 
       backdrop-filter: blur(10px);			
       display: flex;
       flex-direction: column;
@@ -5023,27 +5050,39 @@
       outline: 1px solid var(--base-3);
   
       &-header {
-        color: var(--base);
+        color: #c0c0c0 !important;
+       		
         font-size: var(--font-size-bigger);
-        margin-bottom: calc(var(--gap) * 3);
-        outline: 1px solid var(--base-3);
-        padding: calc(var(--gap) * 3);
+   
       }
   
       &-content {
-        color: var(--base-2);
+        color: #c0c0c0 !important;
         flex: 1;
         margin-bottom: calc(var(--gap) * 3);
         padding: calc(var(--gap) * 3);
   
         input {
-          color: var(--base-2);
+          color: #c0c0c0 !important;
         }
       }
   
       &-footer {
-        outline: 1px solid var(--base-3);
-        padding: calc(var(--gap) * 3);
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        
+
+        .pg-exchange-modal-submit-footer modal-footer__withdraw-confirm {
+          display: flex !important;
+          flex-direction: row !important;
+          justify-content: space-between !important;
+          margin-top: 20px !important;
+  
+
+
+        }
       }
     }
   
@@ -5061,7 +5100,7 @@
   {/* V2 PG-PROFILE-PAGE */}
   .pg-profile-page {
     align-items: flex-start !important;
-    color: var(--secondary-contrast-cta-color);
+    color: #c0c0c0 !important;
     flex-wrap: wrap;
     height: 100%;
     margin-bottom: 24px !important;
@@ -5085,8 +5124,8 @@
     }
   
     &__details {
-      background-color: var(--body-background-color);
-      border-radius: calc(var(--gap) * 0.66);
+      background-color: transparent;
+      border-radius: 10px;
       box-shadow: 3px 3px 10px 3px var(--shadow-color-level-1);
       margin-top: calc(var(--gap) * 2);
       width: 100%;
@@ -5108,9 +5147,9 @@
     }
   
     &-header {
-      background: var(--subheader-background-color);
+      background: transparent;
       border-bottom: 1px solid var(--divider-color-level-2);
-      border-radius: calc(var(--gap) * 0.66) calc(var(--gap) * 0.66) 0 0;
+      border-radius: 10px;
       color: var(--primary-text-color);
       display: flex;
       margin-left: 0;
@@ -5426,11 +5465,11 @@
         text-transform: capitalize;
   
         &__active {
-          color: var(--system-green);
+          color: #00CC99;
         }
   
         &__disabled {
-          color: var(--system-red);
+          color: #ED0A3F;
         }
       }
   
@@ -5442,7 +5481,7 @@
       }
   
       .secret-section {
-        color: var(--system-yellow);
+        color: #FDA736;
         font-size: calc(var(--gap) * 2.33);
         font-style: normal;
         font-weight: bold;
@@ -5503,20 +5542,20 @@
           position: relative;
   
           fieldset {
-            border: 1px solid var(--input-border-color);
+            border: 1px solid #009991;
             border-radius: var(--gap);
             padding: 0 8px 0 9px;
   
             legend {
-              color: var(--input-legend-color);
+              color: #009991;
             }
   
             &:focus-within {
-              border: 1px solid var(--input-border-color-active) !important;
+              border: 1px solid #009991 !important;
   
               legend,
               label {
-                color: var(--input-legend-color-active) !important;
+                color: #009991 !important;
               }
             }
   
@@ -6503,7 +6542,7 @@
 
       &__row.input-group > fieldset,
       &__forms__row.input-group > fieldset {
-        width: calc(50% - 6px);
+    
 
         &:first-child {
           margin-right: 6px;
@@ -6516,7 +6555,7 @@
 
       fieldset {
         background: transparent !important;
-        border: 1px solid var(--input-border-color);
+        border: 1px solid #c0c0c0;
         border-radius: 4px;
         height: 49px;
         margin-top: 24px;

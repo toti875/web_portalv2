@@ -130,7 +130,7 @@ export const pt = {
 	'page.body.wallets.tabs.withdraw': 'Sacar',
 	'page.body.wallets.tabs.withdraw.content.amount': 'Quantidade',
 	'page.body.wallets.tabs.withdraw.content.code2fa': 'Código 2FA',
-	'page.body.wallets.tabs.withdraw.content.fee': 'Taxa de saque (blockchain):  ',
+	'page.body.wallets.tabs.withdraw.content.fee': 'Taxa de rede:  ',
 	'page.body.wallets.tabs.withdraw.content.total': 'Quantidade a receber:  ',
 	'page.body.wallets.tabs.withdraw.content.button': 'Sacar',
 	'page.body.wallets.tabs.withdraw.disabled.message': 'Os saques para este ativo estào desabilitados. Em caso de dúvidas, entre em contato com o suporte.',
@@ -243,7 +243,7 @@ export const pt = {
 	'page.body.history.withdraw.header.currency': 'Ativo',
 	'page.body.history.withdraw.header.address': 'Id da transação (txID)',
 	'page.body.history.withdraw.header.amount': 'Quantidade',
-	'page.body.history.withdraw.header.fee': 'Taxa de saque',
+	'page.body.history.withdraw.header.fee': 'Taxa de rede ',
 	'page.body.history.withdraw.header.status': 'Status',
 	'page.body.history.withdraw.content.status.prepared': 'Aprovado',
 	'page.body.history.withdraw.content.status.submitted': 'Solicitado',
@@ -338,7 +338,7 @@ export const pt = {
 	'page.body.profile.apiKeys.modal.note': 'Observação',
 	'page.body.profile.apiKeys.modal.note_content': `Para prevenir acessos indesejados, não compartilhe sua Chave de Acesso e Chave Privada.\
  Caso você perca sua Chave Privada, desative a Chave de Acesso e gere uma nova Chave de API.`,
-	'page.body.profile.apiKeys.modal.title': 'Digite seu código de 6 dígitos',
+	'page.body.profile.apiKeys.modal.title': 'Código 2FA de 6 dígitos',
 	'page.body.profile.apiKeys.modal.label': 'Código 2FA',
 	'page.body.profile.apiKeys.modal.placeholder': 'Digite seu código 2FA',
 
@@ -400,7 +400,7 @@ export const pt = {
 	'page.body.profile.verification.reverify': 'Validar',
 	//'page.body.profile.verification.verify': 'Verify',
 	'page.body.profile.verification.verify': 'Validar',
-	'page.body.profile.verification.verified': 'Concluído',
+	'page.body.profile.verification.verified': 'Concluído ✓',
 	'page.body.profile.verification.progress.level': 'Nível',
 
 	/* KYC */

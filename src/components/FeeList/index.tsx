@@ -66,12 +66,12 @@ export const FeeList: React.FC<Props> = (props: Props) => {
 			<thead className="fee-table head">
 				<tr>
 					<th style={{ textAlign: 'left', paddingLeft: '1%' }}>Ativo</th>
-					<th>Min Depósito</th>
-					<th>Min Saque</th>
-					<th>Taxa de Saque</th>
+					<th>Depósito Mín</th>
+					<th>Saque Mín</th>
+					<th>Taxa de rede</th>
 					<th>Lim de saque diário</th>
-					<th>Status de depósitos</th>
-					<th>Status de saques</th>
+					<th>Processamento de depósitos</th>
+					<th>Processamento de saques</th>
 				</tr>
 			</thead>
 			<tbody className="fee-table body">{currencies[0] && currencies.map(renderItem)}</tbody>

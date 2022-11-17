@@ -1,32 +1,42 @@
+.form-control  input:focus {
+  border: 1px solid pink !important;
+  background: pink !important;
+}
+
+.form-control-lg  input:focus {
+  border: 1px solid pink !important;
+  background: pink !important;
+
+}
 
 .pg-change-password-form {
 	display: flex;
 }
 
-	.pg-change-password-form__group {
+.pg-change-password-form__group {
 		text-align: center;
 	}
 
-	.pg-change-password-form .cr-input {
-		border-bottom: 1px solid var(--input-border-color);
+.pg-change-password-form .cr-input {
+		border-bottom: 1px solid #009991;
 	}
 
-	.pg-change-password-form .cr-input input {
-			color: var(--input-text-color);
+.pg-change-password-form .cr-input input {
+			color: #c0c0c0;
 		}
 
-	.pg-change-password-form__label {
-		color: var(--input-legend-color);
+.pg-change-password-form__label {
+		color: #c0c0c0;
 	}
 
-	.pg-change-password-form__error {
-		color: var(--system-red);
+.pg-change-password-form__error {
+		color: #ED0A3F;
 		margin: 0;
 		margin-left: calc(var(--gap) * 2);
 	}
 
 .cr-modal .pg-change-password-screen {
-		background-size: cover;
+		
 		display: flex;
 		justify-content: center;
 		margin: 0 auto;
@@ -34,27 +44,30 @@
 	}
 
 .cr-modal .pg-change-password-screen .cr-email-form {
-			background: var(--body-background-color);
-			min-height: calc(var(--big-gap) * 5);
+			background: #181819 !important;
+      -webkit-backdrop-filter: blur(50px);
+              backdrop-filter: blur(50px);
+			min-height: calc(var(--big-gap) * 4);
 			width: 100% !important;
 		}
 
 .cr-modal .pg-change-password-screen .cr-email-form__option {
-				background: var(--subheader-background-color);
-			}
+        background: #181819 !important;
+        -webkit-backdrop-filter: blur(50px);
+                backdrop-filter: blur(50px);			}
 
 .cr-modal .pg-change-password-screen .cr-email-form__options-group {
 				/* height: calc(var(--big-gap) * 0.97); */
 				border-bottom: 2px solid var(--divider-color-level-2);
-				color: var(--primary-text-color);
+				color: #c0c0c0;
 				width: 100%;
 			}
 
 .cr-modal .pg-change-password-screen .cr-email-form__header {
-				color: var(--secondary-contrast-cta-color);
+				color: #c0c0c0;
 				font-size: calc(var(--gap) * 2.33);
 				font-style: normal;
-				font-weight: normal;
+				font-weight: bolder !important;
 				height: calc(var(--gap) * 4.33);
 				line-height: calc(var(--gap) * 2.66);
 				margin: calc(var(--gap) * 0.83);
@@ -69,6 +82,7 @@
 				position: absolute;
 				right: calc(var(--gap) * 3.3);
 				width: calc(var(--gap) * 2.5);
+        color: #c0c0c0 !important;
 			}
 
 .cr-modal .pg-change-password-screen .cr-email-form__button-wrapper {
@@ -76,7 +90,7 @@
 			}
 
 .cr-modal .pg-change-password-screen .cr-email-form__option-inner {
-			background: transparent;
+			background: purple;
 			color: var(--primary-text-color);
 			font-size: calc(var(--gap) * 2.33);
 			font-style: normal;
@@ -87,11 +101,11 @@
 		}
 
 .cr-modal .pg-change-password-screen .cr-email-form__group--focused .cr-email-form__label {
-				color: var(--input-legend-color-active);
+				color: #c0c0c0 !important;
 			}
 
 .cr-modal .pg-change-password-screen .cr-email-form__group--focused input {
-				border-color: var(--input-legend-color-active) !important;
+				border-color: #c0c0c0 !important;
 			}
 
 @media screen and (max-width: 768px) {
@@ -104,10 +118,9 @@
 .input-group input{
   
   
-  padding-left: 45px !important;
+  //padding-left: 45px !important;
   font-size: 15px !important;
-  outline: none !important;
-  border: none !important;
+
   color: #595959 !important;
   background: #dde1e7 !important;
   border-radius: 5px !important;
@@ -124,7 +137,7 @@
 
 .input-group  span{
   position: absolute !important;
-  width: 50px !important;
+  
   line-height: 50px !important;
   color: #595959 !important;
 }
@@ -132,8 +145,8 @@
 .input-group  label{
   position: absolute !important;
   top: 50% !important;
-  left: 45px !important;
   pointer-events: none !important;
+  left: 45px !important;
   color: #666666 !important;
   -webkit-transform: translateY(-50%) !important;
           transform: translateY(-50%) !important;
@@ -145,7 +158,7 @@
 
 .ant-switch{
 
-  background-color: #009991 !important;
+  background-color: #c0c0c0 !important;
   min-width: 36px !important;
   
 
@@ -157,7 +170,6 @@
   min-width: 36px !important;
 
   
-
 }
 
 .td-pg-profile__list-api-key .td-pg-profile__inner {
@@ -451,14 +463,13 @@
 
 .td-copyable-text-field__input {
 		
-		background: inherit;
-		color: var(--input-text-color);
+		background: transparent !important;
+		color: #555555 !important;
 		display: flex;
 		flex: 1;
 		flex-direction: space-around !important;
-		padding: 2px !important;
-    font-size: 8px !important;
-    margin-top: 5px !important;
+		padding: 0px !important;
+    font-size: 18px !important;
 	}
 
 .td-copyable-text-field__input input {
@@ -468,16 +479,21 @@
 		}
 
 .td-copyable-text-field .td-copyable-text-field {
-	}
+
+		display: flex !important;
+		flex: 1;
+		flex-direction: space-around !important;  }
 
 .td-copyable-text-field input {
-		background: var(--input-background-color);
-		border-radius: 3px !important;
-		border: none !important;
-		color: var(--input-text-color);
+		background: #c0c0c0 !important;
+		
+
+		color: #555555 !important;
 		font-size: 12.5px !important;
-    width: 315px !important;
-    margin: 0 auto !important;
+    width: 340px !important;
+    height: 110% !important;
+    margin-left: 0px !important;
+    margin-right: -20px !important;
     padding: 5px !important;
     
 	}
@@ -532,14 +548,10 @@
 			}
 
 .pg-profile-page__referral fieldset .pg-copyable-text-field__input .input-group {
-					display: flex;
-					flex-direction: row;
-					justify-content: space-between;
+					display: flex !important;
+					flex-direction: row !important;
+					justify-content: space-between !important;
 				}
-
-.pg-profile-page__referral fieldset .pg-copyable-text-field__input .input-group .custom-input {
-						width: 100%;
-					}
 
 .pg-profile-page__referral fieldset .pg-copyable-text-field__input .input-group .custom-input label {
 							margin-top: -10px;
@@ -4685,7 +4697,7 @@
 		}
 
 .pg-beneficiaries .beneficiaries-fail-modal .cr-email-form__form-content {
-                background: rgba(255,255,255,0.2);
+                background: #181819 !important;
                 -webkit-backdrop-filter: blur(10px);
                         backdrop-filter: blur(10px);
 
@@ -4730,19 +4742,19 @@
 	}
 
 .modal.td-cpn__modal .modal-content {
-    background: rgba(0, 0, 0, 0.15) !important;
-    color: var(--color-darker) !important;
+    background: #181819 !important; 
+    color: #c0c0c0 !important;
     -webkit-backdrop-filter: blur(80px);
             backdrop-filter: blur(80px);		
-    border: solid 1px #848e9c;
+    border: solid 1px #c0c0c0 !important;
     border-radius: 10px;
 		max-width: 424px;
 		overflow: hidden;
 	}
 
 .modal.td-cpn__modal .modal-content .modal-header {
-      background: transparent;
-      -webkit-backdrop-filter: blur(10px);
+      background: #181819 !important; 
+      -webkit-backdrop-filter: blur(10px); 
               backdrop-filter: blur(10px);			
       border-bottom: 2px solid var(--divider-color-level-2);
 			padding-left: 23px;
@@ -4753,7 +4765,9 @@
 .modal.td-cpn__modal .modal-content .modal-header .modal-title,
 			.modal.td-cpn__modal .modal-content .modal-header .close {
 				align-items: center;
-				color: var(--primary-text-color);
+				color: #c0c0c0 !important;
+        background: transparent !important; 
+        border: none;
 				display: flex;
 				justify-content: center;
 			}
@@ -4770,7 +4784,8 @@
 			}
 
 .modal.td-cpn__modal .modal-content .modal-header .close {
-        background: transparent !important;
+        background: transparent !important; 
+        color: #c0c0c0 !important;
 			}
 
 .modal.td-cpn__modal .modal-content .modal-header .close span:first-child {
@@ -4778,25 +4793,32 @@
 				}
 
 .modal.td-cpn__modal .modal-content .modal-body {
-      background: var(--color-darker);
-      -webkit-backdrop-filter: blur(10px);
-              backdrop-filter: blur(10px);		
+      background: #181819 !important; 
+      -webkit-backdrop-filter: blur(10px); 
+              backdrop-filter: blur(10px);	
       padding-bottom: 35px;
 			padding-left: 23px;
 			padding-right: 23px;
 			padding-top: 30px;
 		}
 
+.modal.td-cpn__modal .modal-content .modal-body .td-email-form__header {
+        margin-bottom: 10px;
+      }
+
 .modal.td-cpn__modal .modal-content .modal-body .td-email-form__group {
-				background: transparent;
+        background: #181819 !important; 
 				margin-bottom: 20px;
 				position: relative;
+        -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
 
 			}
 
 .modal.td-cpn__modal .modal-content .modal-body .td-email-form__group .td-email-form__label {
 					color: #F5F5F5 !important;
           font-size: 15px !important;
+          display: none;
 				}
 
 .modal.td-cpn__modal .modal-content .modal-body .td-email-form__group--focused .td-email-form__label {
@@ -4806,17 +4828,17 @@
 
 .modal.td-cpn__modal .modal-content .modal-body .td-email-form__group--focused input {
 					border-color: #555555 !important;
-          color: var(--color-darker) !important;
+          color: #181819 !important;
 				}
 
 .cr-modal {
     align-items: center;
-    background-color: transparent !important;
-    -webkit-backdrop-filter: blur(80px) !important;
-            backdrop-filter: blur(80px) !important;
+    background: transparent !important; 
+    -webkit-backdrop-filter: blur(10px) !important; 
+            backdrop-filter: blur(10px) !important;
     bottom: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     left: 0;
     padding: var(--gap);
@@ -4827,8 +4849,8 @@
   }
 
 .cr-modal__container {
-      background-color: transparent !important;
-      -webkit-backdrop-filter: blur(10px);
+      background: #181819 !important; 
+      -webkit-backdrop-filter: blur(10px); 
               backdrop-filter: blur(10px);			
       display: flex;
       flex-direction: column;
@@ -4838,28 +4860,39 @@
     }
 
 .cr-modal__container-header {
-        color: var(--base);
+        color: #c0c0c0 !important;
+       		
         font-size: var(--font-size-bigger);
-        margin-bottom: calc(var(--gap) * 3);
-        outline: 1px solid var(--base-3);
-        padding: calc(var(--gap) * 3);
+   
       }
 
 .cr-modal__container-content {
-        color: var(--base-2);
+        color: #c0c0c0 !important;
         flex: 1;
         margin-bottom: calc(var(--gap) * 3);
         padding: calc(var(--gap) * 3);
       }
 
 .cr-modal__container-content input {
-          color: var(--base-2);
+          color: #c0c0c0 !important;
         }
 
 .cr-modal__container-footer {
-        outline: 1px solid var(--base-3);
-        padding: calc(var(--gap) * 3);
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
       }
+
+.cr-modal__container-footer .pg-exchange-modal-submit-footer modal-footer__withdraw-confirm {
+          display: flex !important;
+          flex-direction: row !important;
+          justify-content: space-between !important;
+          margin-top: 20px !important;
+  
+
+
+        }
 
 .cr-modal .cr-email-form {
       width: 100% !important;
@@ -4874,7 +4907,7 @@
 
 .pg-profile-page {
     align-items: flex-start !important;
-    color: var(--secondary-contrast-cta-color);
+    color: #c0c0c0 !important;
     flex-wrap: wrap;
     height: 100%;
     margin-bottom: 24px !important;
@@ -4899,8 +4932,8 @@
     }
 
 .pg-profile-page__details {
-      background-color: var(--body-background-color);
-      border-radius: calc(var(--gap) * 0.66);
+      background-color: transparent;
+      border-radius: 10px;
       box-shadow: 3px 3px 10px 3px var(--shadow-color-level-1);
       margin-top: calc(var(--gap) * 2);
       width: 100%;
@@ -4920,9 +4953,9 @@
       }
 
 .pg-profile-page-header {
-      background: var(--subheader-background-color);
+      background: transparent;
       border-bottom: 1px solid var(--divider-color-level-2);
-      border-radius: calc(var(--gap) * 0.66) calc(var(--gap) * 0.66) 0 0;
+      border-radius: 10px;
       color: var(--primary-text-color);
       display: flex;
       margin-left: 0;
@@ -5224,11 +5257,11 @@
       }
 
 .pg-profile-page__api-keys__state__active {
-          color: var(--system-green);
+          color: #00CC99;
         }
 
 .pg-profile-page__api-keys__state__disabled {
-          color: var(--system-red);
+          color: #ED0A3F;
         }
 
 .pg-profile-page__api-keys__state-checkbox {
@@ -5239,7 +5272,7 @@
       }
 
 .pg-profile-page__api-keys .secret-section {
-        color: var(--system-yellow);
+        color: #FDA736;
         font-size: calc(var(--gap) * 2.33);
         font-style: normal;
         font-weight: bold;
@@ -5302,22 +5335,22 @@
         }
 
 .pg-profile-page__api-keys .cr-success-create .pg-copyable-text__section fieldset {
-            border: 1px solid var(--input-border-color);
+            border: 1px solid #009991;
             border-radius: var(--gap);
             padding: 0 8px 0 9px;
           }
 
 .pg-profile-page__api-keys .cr-success-create .pg-copyable-text__section fieldset legend {
-              color: var(--input-legend-color);
+              color: #009991;
             }
 
 .pg-profile-page__api-keys .cr-success-create .pg-copyable-text__section fieldset:focus-within {
-              border: 1px solid var(--input-border-color-active) !important;
+              border: 1px solid #009991 !important;
             }
 
 .pg-profile-page__api-keys .cr-success-create .pg-copyable-text__section fieldset:focus-within legend,
               .pg-profile-page__api-keys .cr-success-create .pg-copyable-text__section fieldset:focus-within label {
-                color: var(--input-legend-color-active) !important;
+                color: #009991 !important;
               }
 
 .pg-profile-page__api-keys .cr-success-create .pg-copyable-text__section fieldset .cr-copyable-text-field {
@@ -6264,17 +6297,6 @@
               font-size: var(--font-size) !important;
             }
 
-.pg-confirm__content-phone__row.input-group > fieldset,
-      .pg-confirm__content-phone__forms__row.input-group > fieldset,
-      .pg-confirm__content-identity__row.input-group > fieldset,
-      .pg-confirm__content-identity__forms__row.input-group > fieldset,
-      .pg-confirm__content-documents__row.input-group > fieldset,
-      .pg-confirm__content-documents__forms__row.input-group > fieldset,
-      .pg-confirm__content-address__row.input-group > fieldset,
-      .pg-confirm__content-address__forms__row.input-group > fieldset {
-        width: calc(50% - 6px);
-      }
-
 .pg-confirm__content-phone__row.input-group > fieldset:first-child, .pg-confirm__content-phone__forms__row.input-group > fieldset:first-child, .pg-confirm__content-identity__row.input-group > fieldset:first-child, .pg-confirm__content-identity__forms__row.input-group > fieldset:first-child, .pg-confirm__content-documents__row.input-group > fieldset:first-child, .pg-confirm__content-documents__forms__row.input-group > fieldset:first-child, .pg-confirm__content-address__row.input-group > fieldset:first-child, .pg-confirm__content-address__forms__row.input-group > fieldset:first-child {
           margin-right: 6px;
         }
@@ -6285,7 +6307,7 @@
 
 .pg-confirm__content-phone fieldset, .pg-confirm__content-identity fieldset, .pg-confirm__content-documents fieldset, .pg-confirm__content-address fieldset {
         background: transparent !important;
-        border: 1px solid var(--input-border-color);
+        border: 1px solid #c0c0c0;
         border-radius: 4px;
         height: 49px;
         margin-top: 24px;

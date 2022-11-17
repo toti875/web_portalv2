@@ -73,7 +73,7 @@ const buildRequest = (request: Request, configData: RequestOptions) => {
 export const defaultResponse: Partial<AxiosError['response']> = {
 	status: 500,
 	data: {
-		error: 'Bloqueado por segurança',
+		error: 'Bloqueado por segurança. Entre em contato com o suporte Fortem.',
 	},
 };
 

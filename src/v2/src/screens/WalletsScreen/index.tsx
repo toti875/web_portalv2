@@ -51,9 +51,9 @@ import {
     walletsWithdrawCcyFetch,
 } from '../../modules';
 
-//import './WalletsScreen.pcss';
+import './WalletsScreen.pcss';
 
-import {ProfileScreen2} from '../ProfileScreen'
+//import {ProfileScreen2} from '../ProfileScreen'
 
 
 interface ReduxProps {
