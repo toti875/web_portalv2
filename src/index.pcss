@@ -262,9 +262,14 @@
   }
 }
 
-.btn btn-login {
-
-  color: pink !important;
+.btn {
+	background: transparent  !important;
+	color: pink !important;
+  font-size: inherit !important;
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
 
 }
 
@@ -3623,6 +3628,19 @@
       background: transparent;
       display: flex;
       justify-content: space-between;
+      font-size: 16px !important;
+
+      .btn .btn-primary, .btn-lg {
+        margin-top: 10px !important;
+        font-size: inherit !important;
+        color: #009991  !important;
+
+        &:disabled {
+          font-size: inherit !important;
+          color: #c0c0c0 !important;
+        }
+
+      }
 
     }
   
