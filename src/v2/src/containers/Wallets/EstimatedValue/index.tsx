@@ -129,7 +129,7 @@ class EstimatedValueContainer extends React.Component<Props> {
         const pieChartOptionsCharts = {
             style: {background: 'rgba(255,255,255,0.2)', filter: 'blur(1px)'},
             labels: [sortedWallet[0].name, sortedWallet[1].name, sortedWallet[2].name],
-            colors: ["#009991", "#18988F",  "#1EDED0"],
+            colors: ["#009991", "#c0c0c0",  "#1EDED0"],
             chart: {
               width: "100px",
               stroke: {
@@ -164,7 +164,7 @@ class EstimatedValueContainer extends React.Component<Props> {
               },
             },
             fill: {
-              colors: ["#009991", "#18988F",  "#1EDED0"],
+              colors:  ["#009991", "#c0c0c0",  "#1EDED0"],
             },
             tooltip: {
               enabled: true,
@@ -175,14 +175,14 @@ class EstimatedValueContainer extends React.Component<Props> {
 
           const lineChartDataCharts = [
             {
-              name: "IBOV",
+              name: "HashDEX",
               /*data: [6.98, 0.89, 6.06, -10.10, 3.22, -11.5, 4.69, 2.70],*/
               data: [6.98, 0.89, 6.06, -10.10, 3.22, -11.5, 4.69, 2.70]
             },
             {
-              name: "Sua carteira",
+              name: "Sua carteira FORTEM",
               /*data: [2.61, 1.89, 6.37, 0.76, 4.14, 2.72, 3.85, 2.83],*/
-              data: [0, 0, 0, 0, 0, 0, 0, 0],
+              data: [3.89, 3.02, 8.41, 0.9, 4.92, -2.11, 5.36, 4.34],
             },
           ];
 
@@ -193,7 +193,7 @@ class EstimatedValueContainer extends React.Component<Props> {
               },
             },
             tooltip: {
-              theme: "light",
+              theme: "dark",
             },
             dataLabels: {
               enabled: false,
@@ -216,8 +216,8 @@ class EstimatedValueContainer extends React.Component<Props> {
               ],
               labels: {
                 style: {
-                  colors: "#A0AEC0",
-                  fontSize: "10px",
+                  colors: "#c0c0c0",
+                  fontSize: "12px",
                 },
               },
               axisBorder: {
@@ -230,8 +230,8 @@ class EstimatedValueContainer extends React.Component<Props> {
             yaxis: {
               labels: {
                 style: {
-                  colors: "#A0AEC0",
-                  fontSize: "10px",
+                  colors: "#c0c0c0",
+                  fontSize: "12px",
                 },
               },
             },
@@ -240,10 +240,10 @@ class EstimatedValueContainer extends React.Component<Props> {
             },
             grid: {
               strokeDashArray: 5,
-              borderColor: "#56577A",
+              borderColor: "#18988F",
               yaxis: {
                 lines: {
-                  show: false,
+                  show: true,
                 },
               },
               xaxis: {
@@ -255,18 +255,18 @@ class EstimatedValueContainer extends React.Component<Props> {
             fill: {
               type: "gradient",
               gradient: {
-                shade: "dark",
+                shade: "light",
                 type: "vertical",
                 shadeIntensity: 0.5,
-                gradientToColors: undefined, // optional, if not defined - uses the shades of same color in series
-                inverseColors: true,
+                
+                inverseColors: false,
                 opacityFrom: 0.8,
                 opacityTo: 0,
                 stops: [],
               },
-              colors: ["#fff", "#582CFF"],
+              colors: ["#fff", "#1EDED0"],
             },
-            colors: ["#fff", "#582CFF"],
+            colors: ["#fff", "#1EDED0"],
           };
           
         const estimatedValue = estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, wallets, markets, tickers);

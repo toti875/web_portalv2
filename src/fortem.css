@@ -1,15 +1,16 @@
+
 .form-control {
-    color: #c5c5c5;
+    color: #555555;
     line-height: 18px;
 
 }
 .form-control::-webkit-input-placeholder {
-    color: #c5c5c5;
+    color: #555555;
 }
 
 
 .form-control--focused {
-    color: #c5c5c5 !important;
+    color: #555555 !important;
     line-height: 18px;
 
 
@@ -17,7 +18,7 @@
 }
 
 .form-control--selected {
-    color: #c5c5c5 !important;
+    color: #555555 !important;
     line-height: 18px;
 
 
@@ -2000,6 +2001,7 @@ background-color: var(--color-darker)!important;
 		justify-content: center;
 	}.pg-blur__content__icon {
 			margin-bottom: 12px;
+            fill: #009991 !important;
 		}.pg-blur__content__text {
 			color: var(--primary-text-color);
 			font-size: 14px;
@@ -3900,22 +3902,29 @@ a:-webkit-any-link {
 		font-size: 40px !important;
 		margin-left: -40px;
 
-	}{/*   ***TELA DE LOGIN   *** */}*{
+	}{/*   ***TELA DE LOGIN   *** */}*
+    
+.pg-sign-in-screen-basic {
+    opacity: 0.61 !important;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif !important;
+    
 
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
-}.pg-sign-in-screen-basic__container{
+
+}
+
+.pg-sign-in-screen-basic__container{
 
 	margin-top: 5% !important;
+    max-width: 360px !important;
 
 
 
 }.content_login_form {
 
 	max-width: 360px !important;
-	
+    opacity: 1 !important;
 
-  display: grid !important;
   background: #dde1e7 !important;
   border-radius: 10px;
   padding: 30px 30px !important;
@@ -4046,7 +4055,7 @@ margin-left: 20px;
 }
 
 
-.btn, .btn-primary {
+.btn-primary {
   margin: 0 auto;
   width: 100%;
   height: 40px !important;
@@ -4085,12 +4094,13 @@ margin-left: 20px;
 }.pg-sign-in-screen-basic {
 
 	background: url(./assets/images/bg-signin.jpg);
-    opacity: 0.9;
+    
 	background-size: cover;
 	display: flex;
 	height: calc(100vh - calc(var(--gap) * 9.84));
 	justify-content: center;
 	margin: 0 auto;
+    opacity: 0.5 !important;
 
   }
   .pg-sign-in-screen-basic .pg-sign-in-screen-basic__container {
@@ -4217,26 +4227,6 @@ margin-left: 20px;
 	margin-bottom: 20px;
 }
 
-.btn-login {
-    font-family: Roboto !important;
-    color: #000 !important;
-    width: 100% !important;
-    border-radius: 5px !important;
-    box-shadow: -3px -3px 7px #ffffff73,
-              2px 2px 5px rgba(94, 104, 121, 0.288) !important;
-
-
-
-}
-
-.btn-login:hover {
-    
-    color: #1EBDB2  !important;
-    
-
-
-
-}
 
 {/*   *** HEADER PRINCIPAL *** */}.h4:hover, .a:hover {
 

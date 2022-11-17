@@ -83,7 +83,7 @@ export const ProfileApiKeys: React.FC<ProfileApiKeysProps> = () => {
 			</div>,
 			localeDate(item.created_at, 'fullDate'),
 			localeDate(item.updated_at, 'fullDate'),
-			<span className="td-pg-profile__action-delete" key={item.kid} onClick={() => handleDeleteKeyClick(item)}>
+			<span className="td-pg-profile__action-delete" key={item.kid} onClick={() => handleDeleteKeyClick(item)} style={{color: '#ED0A3F'}}>
 				X
 			</span>,
 		]);
@@ -301,10 +301,10 @@ export const ProfileApiKeys: React.FC<ProfileApiKeysProps> = () => {
 	return (
 		<div className="td-pg-profile--bg td-pg-profile--radius td-pg-profile__content__item td-pg-profile__list-api-key">
 			<div className="td-pg-profile__content__item__header">
-			
+				<div className="td-pg-profile__content__item__header__title">Minhas chaves de API</div>
 				<div className="td-pg-profile__content__item__header__action">
-					<button type="button" className="td-pg-profile--radius btn btn-success" onClick={handleCreateKeyClick}>
-						Criar
+					<button type="button" className="btnApiKey" onClick={handleCreateKeyClick}>
+						Criar chave
 					</button>
 				</div>
 			</div>

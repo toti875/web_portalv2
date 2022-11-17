@@ -61,7 +61,7 @@ export const NewCopyableTextField: React.FC<NewCopyableTextFieldProps> = props =
 					placeholder={label || ''}
 				/>
 				<InputGroup.Append>
-					<Button onClick={doCopy} disabled={disabled} size="lg" variant="primary">
+					<Button onClick={doCopy} disabled={disabled} variant="copy">
 						{copyButtonText ? copyButtonText : 'Copy'}
 					</Button>
 				</InputGroup.Append>

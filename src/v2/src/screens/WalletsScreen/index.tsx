@@ -277,6 +277,7 @@ class WalletsComponent extends React.Component<Props, WalletsState> {
                     <ProfileVerification />
                     <br />
                     <ProfileVerificationLabels />
+                 
                     
                 </div>
                 

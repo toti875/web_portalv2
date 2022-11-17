@@ -22,6 +22,7 @@ import 'antd/es/list/style/index.css';
 
 import 'antd/es/tabs/style/index.css';
 import 'antd/es/menu/style/index.css';
+import 'antd/es/switch/style/index.css';
 
 
 import * as ReactDOM from 'react-dom';

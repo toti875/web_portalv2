@@ -25,27 +25,35 @@ class ProfileComponent extends React.Component<RouterProps, IntlProps> {
             <div className="container pg-profile-page-2">
                 <div className="pg-profile-page__details">
                     <div className="row pg-profile-page-header pg-profile-page-header-first">
+                    {/*
                         <h3 className="col-12">
                             <FormattedMessage id="page.body.profile.header.account"/>
                         </h3>
+                    */}
                     </div>
                     <div className="row">
                         <div className="col-12 col-md-6 mx-0">
+                        {/*
                             <div className="row col-12 mx-0">
-                       
+                                <ProfileAccountActivity />
                             </div>
+                        */}
                         </div>
                         <div className="col-12 col-md-6">
+                        {/*
                             <ProfileVerification/>
+                        */}
                         </div>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-12">
-                     
+                     <ReferralProgram/>
                     </div>
                     <div className="col-12">
-                       
+                    {/*
+                        <ProfileAuthDetails/>
+                    */}
                     </div>
                 </div>
             </div>

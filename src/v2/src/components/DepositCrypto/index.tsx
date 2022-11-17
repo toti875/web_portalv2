@@ -8,7 +8,7 @@ import { CopyableTextField } from '../CopyableTextField';
 import { MetaMaskButton } from '../MetaMaskButton';
 import { QRCode } from '../QRCode';
 
-import './DepositCrypto.pcss'
+//import './DepositCrypto.pcss'
 
 export interface DepositCryptoProps {
     /**
@@ -85,7 +85,7 @@ const DepositCrypto: React.FunctionComponent<DepositCryptoProps> = (props: Depos
                             type="button"
                             onClick={handleGenerateAddress}
                             
-                            variant="cryptoAdress"
+                            variant="primary"
                         >
                             {buttonLabel ? buttonLabel : 'Gerar endereço de depósito'}
                         </Button>

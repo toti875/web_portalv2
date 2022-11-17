@@ -226,31 +226,29 @@ export const ProfileSecurity: React.FC<ProfileSecurityProps> = () => {
 
 	return (
 		<div className="td-pg-profile--bg td-pg-profile--radius td-pg-profile__content__item td-pg-profile__security">
+			<div className="td-pg-profile__content__item__header">
+				<div className="td-pg-profile__content__item__header__title">Segurança</div>
+			</div>
 			<div className="td-pg-profile__content__item__content">
 				<div className="td-pg-profile__inner">
 					<div className="td-pg-profile__security__row-item">
 						<div className="td-pg-profile__security__item__left">
-							<div className="td-pg-profile__security__row-item__title">Duplo Fator de Autenticação (2FA) </div>
+							<div className="td-pg-profile__security__row-item__title">Duplo Fator de Autenticação (2FA)</div>
 							<div
 								className="td-pg-profile__security__row-item__action"
 								onClick={user.otp ? handleShow2Fa : handleNavigateTo2fa}
 							>
-								{user.otp ? 'Desativar' : 'Habilitar'}
+								{user.otp ? 'Desabilitar' : 'Habilitar'}
 							</div>
 						</div>
-						<div className="td-pg-profile__security__item__right">
-							<div className="td-pg-profile__security__row-item__title">Identity Verification</div>
-							<div className="td-pg-profile__security__row-item__action">Verify</div>
 						</div>
-					</div>
 					<div className="td-pg-profile__security__row-item">
 						<div className="td-pg-profile__security__item__left">
-							<div className="td-pg-profile__security__row-item__title">Alterar Senha</div>
+							<div className="td-pg-profile__security__row-item__title">Alterar senha</div>
 							<div className="td-pg-profile__security__row-item__action" onClick={handleShowChange}>
 								Alterar
 							</div>
 						</div>
-						<div className="td-pg-profile__security__item__right"></div>
 					</div>
 				</div>
 				<NewModal

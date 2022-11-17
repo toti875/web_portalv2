@@ -234,11 +234,11 @@ const Login = React.memo((props: LogInProps) => {
 					{isMobileDevice && renderForgotButton}
 					<div className="cr-sign-in-form__button-wrapper">
 						<Button
-							block={true}
+							block={false}
 							type="button"
 							disabled={isLoading || !email.match(EMAIL_REGEX) || !password}
 							onClick={handleClick as any}
-							size="lg"
+							
 							variant="login"
 						>
 							{isLoading ? 'Loading...' : labelSignIn ? labelSignIn : 'Entrar'}

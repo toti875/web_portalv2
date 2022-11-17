@@ -43,7 +43,7 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 	return (
 		<div className="td-pg-profile--radius td-pg-profile__active-step">
 			
-			<span className="td-pg-profile__active-step__desc" style={{fontSize: '16.5px'}}>Comece com apenas 3 passos:</span>
+			<span className="td-pg-profile__active-step__desc" style={{fontSize: '16.5px', color: '#c0c0c0'}}>Inicie sua jornada digital em apenas 3 passos:</span>
 			<div className="td-pg-profile__active-step__content d-flex">
 				<div className="td-pg-profile__active-step__content__item">
 					<span
@@ -53,7 +53,7 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 					>
 						{isLoggedIn ? svgActive : '1'}
 					</span>
-					<span className="td-pg-profile__active-step__content__item__title" style={{fontSize: '15px', marginTop: '10px'}}>1. Criação da conta</span>
+					<span className="td-pg-profile__active-step__content__item__title" style={{fontSize: '14.5px', marginTop: '25px'}}>1. Criação da conta</span>
 				</div>
 				<div className="td-pg-profile__active-step__content__item">
 					<span
@@ -63,7 +63,7 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 					>
 						{user.otp ? svgActive : '2'}
 					</span>
-					<span className="td-pg-profile__active-step__content__item__title" style={{fontSize: '15px', marginTop: '10px'}}> 2. Habilitar Duplo Fator de Segurança (2FA)</span>
+					<span className="td-pg-profile__active-step__content__item__title" style={{fontSize: '14.5px', marginTop: '25px'}}> 2. Habilitar Duplo Fator de Segurança (2FA)</span>
 					<span className="td-pg-profile--color--second td-pg-profile__active-step__content__item__desc" style={{fontSize: '12.5px'}}>
 					A Fortem exige autenticação em duas etapas para manter a segurança da sua conta. Além da senha, use o seu celular ou um aplicativo autenticador para garantir que ninguém mais consiga entrar na sua conta.
 					</span>
@@ -85,7 +85,7 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 					>
 						{isExistBalance ? svgActive : '3'}
 					</span>
-					<span className="td-pg-profile__active-step__content__item__title" style={{fontSize: '15px', marginTop: '10px'}}>3. Faça seu primeiro depósito (Reais ou Cripto)</span>
+					<span className="td-pg-profile__active-step__content__item__title" style={{fontSize: '14.5px', marginTop: '25px'}}>3. Faça seu primeiro depósito (Reais ou Cripto)</span>
 					<span className="td-pg-profile--color--second td-pg-profile__active-step__content__item__desc" style={{fontSize: '12.5px'}}>
 						Adicione reais ou cripto em sua carteira Fortem para iniciar seus investimentos digitais
 					</span>

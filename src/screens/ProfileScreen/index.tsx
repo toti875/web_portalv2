@@ -1,4 +1,4 @@
-import { ProfileAccountActivity, ProfileActiveStep, ProfileAnnouncement, ProfileApiKeys, ProfileSecurity } from 'containers';
+import { ProfileAccountActivity, ProfileActiveStep, ProfileAnnouncement, ProfileApiKeys, ProfileSecurity, ReferralProgram } from 'containers';
 import { localeDate, setDocumentTitle } from 'helpers';
 import { useWalletsFetch } from 'hooks';
 import { selectUserActivity, selectUserInfo } from 'modules';
@@ -18,8 +18,8 @@ export const ProfileQuickContainer: React.FC = () => {
 	return (
 		<div className="td-pg-profile --bg--second td-pg-profile--bg td-pg-profile__quick" style={{width: '1168px'}}>
 			<span className="d-flex align-items-center" style={{marginLeft: '30px', marginTop: '30px', fontSize: '19px', textAlign: 'center', color: '#FDA736'}}>Plataforma Fortem ONE - Ativos Digitais</span>
-			<span className="d-flex align-items-center" style={{marginLeft: '30px', fontSize: '17px', textAlign: 'center', color: '#c0c0c0'}}>Dashboard</span>
-				<div className="td-pg-profile__quick__inner d-flex align-items-center">
+			<span className="d-flex align-items-center" style={{marginLeft: '30px', marginBottom: '20px', fontSize: '17px', textAlign: 'center', color: '#c0c0c0'}}>Dashboard</span>
+				<div className="td-pg-profile__quick__inner d-flex ">
 					<div className="td-pg-profile__quick__logo">
 						<img src={require('./profile_avatar.gif')} alt="" style={{width: '150px'}}/>
 						
@@ -32,6 +32,7 @@ export const ProfileQuickContainer: React.FC = () => {
 									Fortem ID:
 								</span>
 								<span className="td-pg-profile__quick__info--top__user-id--content" style={{marginLeft: '10px', fontSize: '16px'}}>{user.uid}</span>
+								
 							</div>
 						</div>
 						<div className="td-pg-profile--color--second td-pg-profile__quick__info--bottom">
@@ -39,8 +40,14 @@ export const ProfileQuickContainer: React.FC = () => {
 								Seu último login: {time}
 							</span>
 							<span className="td-pg-profile__quick__info--bottom__last-login--ip" style={{marginLeft: '10px', fontSize: '16px'}}>IP : {ip}</span>
+	
+
 						</div>
+
 					</div>
+					<span className="td-pg-profile__quick__info--referral" style={{fontSize: '16px', marginRight: '10px'}}>
+								<ReferralProgram />
+							</span>
 				</div>
 			</div>
 	);
@@ -50,7 +57,7 @@ export const ProfileScreen: React.FC = () => {
 	useWalletsFetch();
 
 	React.useEffect(() => {
-		setDocumentTitle('Profile');
+		setDocumentTitle('Perfil');
 	}, []);
 
 	return (
@@ -67,8 +74,8 @@ export const ProfileScreen: React.FC = () => {
 						className="td-pg-profile--bg td-pg-profile--radius td-pg-profile__content__item td-pg-profile__content__item--no-content td-pg-profile__task-center"
 					>
 						<div className="td-pg-profile__content__item__header">
-							<div className="td-pg-profile__content__item__header__title">Task Center</div>
-							<div className="td-pg-profile__content__item__header__desc">View tasks to win rewards</div>
+							<div className="td-pg-profile__content__item__header__title">Central de recompensas</div>
+							<div className="td-pg-profile__content__item__header__desc">Complete missões e ganhe bônus</div>
 							<div className="td-pg-profile__content__item__header__to-page">
 								<svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path

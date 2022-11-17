@@ -94,13 +94,13 @@
 .forgot-pass:hover a{
   text-decoration: underline;
 }
-/*
-.btn-primary {
+
+.btn-login {
   margin: 15px 0;
   width: 100%;
   height: 50px !important;
 
-  font-size: 16px !important;
+  font-size: 18px !important;
   font-weight: 600 !important;
 
   border: none !important;
@@ -109,14 +109,14 @@
 
 }
 
-.btn-primary-signin:focus{
+.btn-login:focus{
   color: #3498db !important;
   background: #dde1e7 !important;
   box-shadow: inset 2px 2px 5px #babecc,
               inset -5px -5px 10px #ffffff73;
 }
 
-.btn-primary-signin:enabled{
+.btn-login:enabled{
 	background: #dde1e7 !important;
 	color: #1EBDB2 !important;
 	
@@ -124,7 +124,7 @@
 	-5px -5px 10px #ffffff73;
   }
 
-*/
+
   
 
 .signup{

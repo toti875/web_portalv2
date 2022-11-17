@@ -15,7 +15,7 @@ export const ProfileAccountActivity: React.FC<ProfileAccountActivityProps> = () 
 	const dispatch = useDispatch();
 
 	const userActivity = useSelector(selectUserActivity);
-	const [tabKeyActiveState, setTabkeyActiveState] = React.useState<string>('Activity');
+	const [tabKeyActiveState, setTabkeyActiveState] = React.useState<string>('Últimos acessos');
 
 	React.useEffect(() => {
 		dispatch(getUserActivity({ page: 0, limit: 25 }));
@@ -87,13 +87,10 @@ export const ProfileAccountActivity: React.FC<ProfileAccountActivityProps> = () 
 
 	const TAB_LIST_INFO = [
 		{
-			label: 'Activity',
-			content: tabKeyActiveState === 'Activity' ? renderData('browserName') : null,
+			label: 'Últimos acessos',
+			content: tabKeyActiveState === 'Últimos acessos' ? renderData('browserName') : null,
 		},
-		{
-			label: 'Device',
-			content: tabKeyActiveState === 'Device' ? renderData('deviceName') : null,
-		},
+
 	];
 
 	return (
