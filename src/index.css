@@ -1,3 +1,4 @@
+
 .pg-change-password-form {
 	display: flex;
 }
@@ -1272,7 +1273,7 @@
 
 .pg-profile-page__label {
     color: var(--secondary-contast-cta-color);
-    font-size: calc(var(--font-size) * 1.33);
+    font-size: 15px;
     padding-bottom: var(--gap);
     padding-top: calc(var(--gap) * 2);
   }
@@ -1837,13 +1838,14 @@
       background: var(--input-background-color);
       position: absolute;
       top: 0;
+      font-size: 15px !important;
     }
 
 .cr-modal .cr-email-form__input input {
-        border: 1px solid var(--input-border-color);
-        border-radius: calc(var(--gap) * 0.66);
-        color: var(--input-text-color);
-        font-size: calc(var(--gap) * 2.33);
+        border: 1px solid pink !important;
+        border-radius: 5px!important;
+        color: pink !important;
+        font-size: 15px !important;
       }
 
 .cr-modal .cr-email-form__input input[type="number"]::-webkit-inner-spin-button,
@@ -1864,11 +1866,11 @@
     }
 
 .cr-modal .cr-email-form__group--focused .cr-sign-in-form__label {
-        color: var(--input-legend-color-active);
+        color: #009991;
       }
 
 .cr-modal .cr-email-form__group--focused input {
-        border-color: var(--input-border-color-active) !important;
+        border-color: #009991  !important;
       }
 
 .cr-modal .cr-email-form__button-wrapper {
@@ -3052,7 +3054,7 @@
     }
 
 .cr-sign-up-form__label {
-    color: darkgrey;
+    color: #555555 !important;
     font-size: 15px;
     font-style: normal;
     font-weight: 500;
@@ -3062,7 +3064,7 @@
 }
 
 .cr-sign-up-form2__label {
-    color: darkgrey;
+    color: #555555 !important;
     font-size: 15px;
     font-style: normal;
     font-weight: 500;
@@ -4776,9 +4778,10 @@
 				}
 
 .modal.td-cpn__modal .modal-content .modal-body {
-      background: transparent;
+      background: var(--color-darker);
       -webkit-backdrop-filter: blur(10px);
-              backdrop-filter: blur(10px);			padding-bottom: 35px;
+              backdrop-filter: blur(10px);		
+      padding-bottom: 35px;
 			padding-left: 23px;
 			padding-right: 23px;
 			padding-top: 30px;
@@ -4788,10 +4791,17 @@
 				background: transparent;
 				margin-bottom: 20px;
 				position: relative;
+
 			}
+
+.modal.td-cpn__modal .modal-content .modal-body .td-email-form__group .td-email-form__label {
+					color: #F5F5F5 !important;
+          font-size: 15px !important;
+				}
 
 .modal.td-cpn__modal .modal-content .modal-body .td-email-form__group--focused .td-email-form__label {
 					color: #F5F5F5 !important;
+          font-size: 16px !important;
 				}
 
 .modal.td-cpn__modal .modal-content .modal-body .td-email-form__group--focused input {

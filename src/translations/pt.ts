@@ -282,7 +282,7 @@ export const pt = {
 	'page.body.profile.header.account.content.password.dont.match': `As senhas não conferem`,
 	'page.body.profile.header.account.content.password.change.success': 'Senha alterada',
 	//'page.body.profile.header.account.content.password.change': 'Change password',
-	'page.body.profile.header.account.content.password.change': 'ALTERAR SENHA',
+	'page.body.profile.header.account.content.password.change': 'Alterar senha',
 
 	'page.body.profile.header.account.content.twoFactorAuthentication': '2FA',
 	'page.body.profile.header.account.content.twoFactorAuthentication.message.enable': 'Habilitado',
@@ -300,7 +300,7 @@ export const pt = {
 	'page.body.profile.header.account.content.twoFactorAuthentication.enable': 'HABILITAR',
 	'page.body.profile.header.account.content.twoFactorAuthentication.disable': 'DESABILITAR 2FA',
 	'page.body.profile.header.account.content.twoFactorAuthentication.modalBody': 'Por favor, entre em contato com o suporte para desabilitar',
-	'page.body.profile.header.account.content.twoFactorAuthentication.modalHeader': 'Duplo fator de autenticação (2FA) está habilitado',
+	'page.body.profile.header.account.content.twoFactorAuthentication.modalHeader': 'Duplo fator de autenticação (2FA)',
 
 	'page.body.profile.header.account.profile': 'Status do cadastro',
 	'page.body.profile.header.account.profile.email.title': 'Email verificado',
@@ -325,10 +325,10 @@ export const pt = {
 	'page.body.profile.apiKeys.modal.btn.show': 'Mostrar',
 	'page.body.profile.apiKeys.modal.btn.create': 'Confirmar',
 	'page.body.profile.apiKeys.modal.btn.copy': 'Copiar',
-	'page.body.profile.apiKeys.modal.btn.activate': 'Ativar',
-	'page.body.profile.apiKeys.modal.btn.disabled': 'Desabilitar',
-	'page.body.profile.apiKeys.modal.btn.delete': 'Apagar',
-	'page.body.profile.apiKeys.modal.header': 'Autenticação em Duas Etapas (2FA)',
+	'page.body.profile.apiKeys.modal.btn.activate': 'Habilitar chave',
+	'page.body.profile.apiKeys.modal.btn.disabled': 'Desabilitar chave',
+	'page.body.profile.apiKeys.modal.btn.delete': 'Remover chave',
+	'page.body.profile.apiKeys.modal.header': '2FA - Chave de API',
 	'page.body.profile.apiKeys.modal.created_header': 'Nova chave de API',
 	'page.body.profile.apiKeys.modal.access_key': 'Chave de Acesso',
 	'page.body.profile.apiKeys.modal.secret_key': 'Chave Privada',
@@ -339,7 +339,7 @@ export const pt = {
 	'page.body.profile.apiKeys.modal.note_content': `Para prevenir acessos indesejados, não compartilhe sua Chave de Acesso e Chave Privada.\
  Caso você perca sua Chave Privada, desative a Chave de Acesso e gere uma nova Chave de API.`,
 	'page.body.profile.apiKeys.modal.title': 'Digite seu código de 6 dígitos',
-	'page.body.profile.apiKeys.modal.label': 'Código de acesso (Google Authenticator)',
+	'page.body.profile.apiKeys.modal.label': 'Código 2FA',
 	'page.body.profile.apiKeys.modal.placeholder': 'Digite seu código 2FA',
 
 	//'page.body.profile.apiKeys.table.header.kid': 'Kid',

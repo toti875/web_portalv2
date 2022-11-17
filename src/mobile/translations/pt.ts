@@ -57,7 +57,7 @@ export const pt = {
 	'page.mobile.wallet.withdraw.modal.new.account': 'Confirm new account',
 
 	'page.mobile.userInfo.details.uid': 'UID: {uid}',
-	'page.mobile.userInfo.logout.button': 'Logout',
+	'page.mobile.userInfo.logout.button': 'Encerrar sessão',
 	'page.mobile.profileLinks.main.verification': 'Profile verification',
 	'page.mobile.profileLinks.main.2fa': 'Two-factor authentication',
 	'page.mobile.profileLinks.main.changePassword': 'Change password',
