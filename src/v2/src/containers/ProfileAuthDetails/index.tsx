@@ -194,8 +194,8 @@ class ProfileAuthDetailsComponent extends React.Component<Props, State> {
                 <div className={code2FAClass}>
                     <CustomInput
                         type="text"
-                        label="2FA code"
-                        placeholder="2FA code"
+                        label="Código 2FA"
+                        placeholder="Insira seu código 2FA"
                         defaultLabel=""
                         handleFocusInput={this.handleClickFieldFocus('code2FAFocus')}
                         handleChangeInput={this.handleChange2FACode}

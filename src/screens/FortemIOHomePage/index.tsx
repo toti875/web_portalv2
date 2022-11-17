@@ -362,7 +362,7 @@ export const FortemIOHomePage = () => {
 		history.push('/register');
 	};
 	const redirectTrading = () => {
-		history.push('/trade');
+		history.push('/tokens');
 	};
 
 	{/*
@@ -425,7 +425,7 @@ function scrollRotate() {
 										</Zoom>
 
 										{isLogin ? (
-								<button className="btn-Register btn-none" onClick={redirectTrading} style={{position: 'absolute',   bottom: '370px', left: '60%'}}>
+								<button className="btnRegister" onClick={redirectTrading} style={{position: 'absolute',   bottom: '370px', left: '60%'}}>
 									{translate('page.homePage.trade.btn.trade')}
 								</button>
 							) : (
@@ -873,7 +873,7 @@ function scrollRotate() {
 						<span className="text-no-wrap">dos melhores criadores e marcas.</span>
 					</p>
 					
-					<button className='btn-Register' > 
+					<button className='btnRegister' > 
 						<span>Abra sua conta</span> 
 					</button> 
 						

@@ -355,7 +355,7 @@ class ProfileApiKeysComponent extends React.Component<Props, ProfileApiKeysState
                         type="number"
                         label={this.t('page.body.profile.apiKeys.modal.label')}
                         placeholder={this.t('page.body.profile.apiKeys.modal.placeholder')}
-                        defaultLabel="2FA code"
+                        defaultLabel="Código 2FA"
                         handleChangeInput={this.handleOtpCodeChange}
                         inputValue={otpCode || ''}
                         handleFocusInput={this.handleChangeFocusField}

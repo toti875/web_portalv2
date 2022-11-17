@@ -312,7 +312,7 @@ export const pt = {
 	'page.body.profile.header.account.profile.identity.title': 'Identidade verificada',
 	'page.body.profile.header.account.profile.identity.message': 'Saques estão habilitados',
 
-	'page.body.profile.header.referralProgram': 'Link do seu código de indicação',
+	'page.body.profile.header.referralProgram': 'Link do seu código de indicação:',
 	'page.body.profile.content.copyLink': 'Copiar',
 
 	'page.body.profile.apiKeys.header': 'Minhas chaves de API',
@@ -928,7 +928,7 @@ export const pt = {
 
 	'page.referral.link.copy.success': 'Copiado com sucesso',
 
-	'page.homePage.trade.btn.trade': 'Negociar',
+	'page.homePage.trade.btn.trade': 'Marketplace',
 
 	'page.homePage.trade.btn.signup': 'Abra sua conta',
 

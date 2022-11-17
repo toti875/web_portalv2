@@ -65,13 +65,13 @@ export const FeeList: React.FC<Props> = (props: Props) => {
 		<table className="fee-table">
 			<thead className="fee-table head">
 				<tr>
-					<th style={{ textAlign: 'left', paddingLeft: '1%' }}>Coin Name</th>
-					<th>Min Deposit</th>
-					<th>Min Withdraw</th>
-					<th>Withdraw Fee</th>
-					<th>Withdraw Daily Limit</th>
-					<th>Deposit Status</th>
-					<th>Withdraw Status</th>
+					<th style={{ textAlign: 'left', paddingLeft: '1%' }}>Ativo</th>
+					<th>Min Depósito</th>
+					<th>Min Saque</th>
+					<th>Taxa de Saque</th>
+					<th>Lim de saque diário</th>
+					<th>Status de depósitos</th>
+					<th>Status de saques</th>
 				</tr>
 			</thead>
 			<tbody className="fee-table body">{currencies[0] && currencies.map(renderItem)}</tbody>

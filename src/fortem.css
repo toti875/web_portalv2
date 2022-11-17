@@ -734,7 +734,7 @@ background: transparent !important;
     padding: 0 !important;
 }
 
-.btn, .btn-medium, .btn-round-edge {
+.btn-medium, .btn-round-edge {
 
     color: dark !important;
     border: 1px solid #000;
@@ -3907,7 +3907,7 @@ a:-webkit-any-link {
 	}{/*   ***TELA DE LOGIN   *** */}*
     
 .pg-sign-in-screen-basic {
-    opacity: 0.61 !important;
+    
     box-sizing: border-box;
     font-family: 'Inter', sans-serif !important;
     
@@ -3925,7 +3925,6 @@ a:-webkit-any-link {
 }.content_login_form {
 
 	max-width: 360px !important;
-    opacity: 1 !important;
 
   background: #dde1e7 !important;
   border-radius: 10px;
@@ -4057,32 +4056,6 @@ margin-left: 20px;
 }
 
 
-.btn-primary {
-  margin: 0 auto;
-  width: 100%;
-  height: 40px !important;
-  background: transparent !important;
-
-  font-size: 14px !important;
-  font-weight: 400 !important;
-  border-radius: 5px;
-  padding: 10px;
-  border: 1px solid #1EDED0;
-  color: #fff;
-  outline: none !important;
-
-  cursor: pointer !important;
-
-}
-
-.btn-primary:hover {
-		color: #1EDED0;
-		opacity: 0.6;
-		transition: 0.4s;
-	}
-
-
-    
 
   .signup{
   font-size: 16px;
@@ -4102,7 +4075,7 @@ margin-left: 20px;
 	height: calc(100vh - calc(var(--gap) * 9.84));
 	justify-content: center;
 	margin: 0 auto;
-    opacity: 0.5 !important;
+    opacity: 0.91 !important;
 
   }
   .pg-sign-in-screen-basic .pg-sign-in-screen-basic__container {
@@ -5002,45 +4975,46 @@ margin-left: 20px;
  
 		padding: 10px;
 	}.btn-mainPage-Register:hover {
-		color: #1EDED0;
-		opacity: 0.6;
-		transition: 0.4s;
-	}.btn-Register {
+        
+	}
+.btnRegister {
 
 	margin: 0 auto;
-	
-	border: 1px solid #1EDED0;
+	backdrop-filter: blur(10px);
+	border: 1px solid #009991 ;
 	border-radius: 5px;
 	background: transparent;
 	width: 220px;
-	color: #fff;
 	font-size: 21px;
 	padding: 10px;
-}.btn-Register span {
+    color: #F5F5F5 !important;
+    opacity: 0.71 !important;
+    transition: 0.4s;
+}.btnRegister span {
 
 		padding: 10px;
-	}.btn-Register:hover {
-		color: #1EDED0;
-		opacity: 0.6;
+	}.btnRegister:hover {
+		
+		opacity: 0.95 !important;
 		transition: 0.4s;
 	}.btn-Options {
 
 	margin: 0 auto;
     margin-top: 20px;
-	
-	border: 1px solid #1EDED0;
+	border: 1px solid #009991;
 	border-radius: 5px;
 	background: transparent;
 	width: 269px;
-	color: #fff;
+	color: #F5F5F5;
 	font-size: 21px;
 	padding: 10px;
+    opacity: 0.71 !important;
+    transition: 0.4s;
 }.btn-Options span {
 
 		padding: 10px;
 	}.btn-Options:hover {
-		color: #1EDED0;
-		opacity: 0.6;
+		opacity: 0.95 !important;
 		transition: 0.4s;
 	}@media (min-width: 48em)
 .brandhub-cta-strap {
@@ -6334,32 +6308,6 @@ max-height: 862px;
 
   }
   
-  .btn-primary {
-    background: var(--button-primary-cta-background-color);
-    border: none;
-    color: var(--button-primary-cta-text-color);
-    font-weight: var(--button-font-weight);
-    transition: 0.2s;
-  }.btn-primary:hover {
-      background-color: var(--button-primary-cta-background-color-hover);
-      color: var(--button-primary-cta-text-color-hover);
-      transition: 0.2s;
-    }.btn-primary:active,
-    .btn-primary:focus {
-      background: var(--button-primary-cta-background-color-active);
-      border: none;
-      box-shadow: none;
-      color: var(--button-primary-cta-text-color-active);
-    }.btn-primary:disabled {
-      background: var(--button-primary-cta-background-color-disabled);
-      border: none;
-      color: var(--button-primary-cta-text-color-disabled);
-      cursor: not-allowed;
-    }.btn-primary:not(:disabled):not(.disabled):active:focus {
-    background: var(--button-primary-cta-background-color-active);
-    box-shadow: none;
-    color: var(--button-primary-cta-text-color-active);
-  }
   
   .btn-success {
     background: var(--button-bids-background-color);

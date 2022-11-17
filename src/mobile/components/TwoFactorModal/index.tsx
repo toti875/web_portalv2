@@ -35,8 +35,8 @@ export const TwoFactorModalComponent: React.FC<TwoFactorModalComponentProps> = p
 				<div className={code2FAClass}>
 					<CustomInput
 						type="text"
-						label="2FA code"
-						placeholder="2FA code"
+						label="Código 2FA"
+						placeholder="Insira seu código 2FA"
 						defaultLabel=""
 						handleFocusInput={() => setCode2FAFocus(true)}
 						handleChangeInput={setCode2FA}

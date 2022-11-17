@@ -214,7 +214,7 @@ export const NewSignInMobileScreen: FC = () => {
 					/>
 					{renderForm()}
 				</div>
-				<div className="td-mobile-screen-signin__footer">© 2022 fortem.website. All rights reserved</div>
+				<div className="td-mobile-screen-signin__footer">© 2022 www.fortem1.com.br | Marca Registrada</div>
 			</div>
 		</div>
 	);
