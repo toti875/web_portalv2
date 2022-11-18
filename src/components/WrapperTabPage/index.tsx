@@ -136,7 +136,7 @@ export const WrapperTabPage: React.FC<WrapperTabPageProps> = props => {
 								/>
 							</div>
 							<div className="w-100 text-center mt-2">
-								<h5>No Data</h5>
+								<h5>Nenhum registro encontrado</h5>
 							</div>
 						</React.Fragment>
 					)}

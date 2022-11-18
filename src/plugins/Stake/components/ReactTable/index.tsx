@@ -62,7 +62,7 @@ export const ReactTable: React.FC<ReacTableProps> = (props: ReacTableProps) => {
 					<div className="text-center empty">
 						<img className="text-center" width="100px" src={EmptySVG} alt="empty" />
 						<br />
-						<p>No Data</p>
+						<p>Nenhum registro encontrado</p>
 					</div>
 				) : (
 					<tbody {...getTableBodyProps()}>

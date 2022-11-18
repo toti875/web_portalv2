@@ -13,7 +13,7 @@ export const EmptyData = (props: EmptyDataProps) => {
 				/>
 			</div>
 			<p className="col-12 text-center text-white h5" style={{ padding: '1rem' }}>
-				No Data
+			Nenhum registro encontrado
 			</p>
 		</div>
 	);

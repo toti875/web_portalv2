@@ -16,6 +16,7 @@ import {
     WalletList,
 } from '../../components';
 import {ProfileScreen} from '../../../../screens/ProfileScreen';
+import {ProfileScreen2} from '../../../../screens/ProfileScreen2';
 import { ProfileVerification, ProfileVerificationLabels} from '../../../../containers';
 import { DEFAULT_CCY_PRECISION } from '../../constants';
 import { Withdraw, WithdrawProps } from '../../containers';
@@ -232,6 +233,16 @@ class WalletsComponent extends React.Component<Props, WalletsState> {
             <React.Fragment>
                 <div className="pg-container pg-wallet w-container">
                     <ProfileScreen/>
+   
+                </div>
+                <div className="pg-container pg-wallet w-container">
+                <div className='kyc'>
+                        <ProfileVerification />
+                        <br />
+                        <ProfileVerificationLabels />
+                 
+                    
+                    </div>
                 </div>
                 {wallets.length && <EstimatedValue wallets={wallets} />}
                 <div className="pg-container pg-wallet w-container">
@@ -239,6 +250,10 @@ class WalletsComponent extends React.Component<Props, WalletsState> {
                     <div className="text-center">
                         {walletsLoading && <Spinner animation="border" variant="primary" />}
                     </div>
+
+
+
+
                     <div className={`row no-gutters pg-wallet__tabs-content ${!historyList.length && 'pg-wallet__tabs-content-height'}`} >
                         <div className={`col-md-5 col-sm-12 col-12 ${mobileWalletChosen && 'd-none d-md-block'}`} >
                             <WalletList
@@ -272,14 +287,12 @@ class WalletsComponent extends React.Component<Props, WalletsState> {
                         precision={selectedWalletPrecision}
                     />
                 </div>
- 
-                <div className='kyc'>
-                    <ProfileVerification />
-                    <br />
-                    <ProfileVerificationLabels />
-                 
-                    
+
+                <div className="pg-container pg-wallet w-container">
+                    <ProfileScreen2/>
                 </div>
+              
+
                 
    
             </React.Fragment>

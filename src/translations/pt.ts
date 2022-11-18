@@ -106,7 +106,7 @@ export const pt = {
 	//'page.body.wallets.tabs.deposit.ccy.message.depositfee': '3. Taxa: {deposit_fee} {currency}',
 	'page.body.wallets.tabs.deposit.ccy.message.depositfee': '3. Taxa de depósito: 0 %',
 	'page.body.wallets.tabs.deposit.ccy.message.address': 'Endereço da carteira',
-	'page.body.wallets.tabs.deposit.ccy.message.button': 'Copiar endereço',
+	'page.body.wallets.tabs.deposit.ccy.message.button': 'Copiar',
 	'page.body.wallets.tabs.deposit.ccy.message.success': 'Endereço copiado',
 	'page.body.wallets.tabs.deposit.ccy.message.error': 'Gerando endereço de depósito',
 	'page.body.wallets.tabs.deposit.ccy.button.generate': 'Gerar endereço para depósito de ',
@@ -133,7 +133,7 @@ export const pt = {
 	'page.body.wallets.tabs.withdraw.content.fee': 'Taxa de rede:  ',
 	'page.body.wallets.tabs.withdraw.content.total': 'Quantidade a receber:  ',
 	'page.body.wallets.tabs.withdraw.content.button': 'Sacar',
-	'page.body.wallets.tabs.withdraw.disabled.message': 'Os saques para este ativo estào desabilitados. Em caso de dúvidas, entre em contato com o suporte.',
+	'page.body.wallets.tabs.withdraw.disabled.message': 'Os saques para este ativo estão desabilitados. Em caso de dúvidas, entre em contato com o suporte.',
 
 	'page.body.wallets.tabs.withdraw.amount.larger': 'Quantidade deve ser maior do que ',
 	'page.body.wallets.tabs.withdraw.2FA.missing': 'Insira seu código 2FA',
@@ -536,7 +536,7 @@ export const pt = {
 	'page.header.signUp.confirmPassword.message.error': `As senhas não são iguais`,
 	'page.header.signUp.referalCode': 'Código de indicação (caso tenha sido convidado)',
 	'page.header.signUp.terms': 'Li e aceito os Termos de uso e a Política de Privacidade',
-	'page.header.signUp.modal.header': 'ÓTIMO! SEU CADASTRO FOI INICIADO',
+	'page.header.signUp.modal.header': 'ÓTIMO. SEU CADASTRO FOI INICIADO.',
 	'page.header.signUp.modal.body':
 		'Seu cadastro foi inicado com sucesso. ' +
 		'Agora, verifique seu email para ativar a sua conta ' +

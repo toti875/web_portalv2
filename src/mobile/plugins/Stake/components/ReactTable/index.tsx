@@ -44,7 +44,7 @@ export const ReactTable: React.FC<ReactTableProps> = (props: ReactTableProps) =>
 				<div className="text-center empty">
 					<img className="text-center" width="100px" src={EmptySVG} alt="empty" />
 					<br />
-					<div>No Data</div>
+					<div>Nenhum registro encontrado</div>
 				</div>
 			);
 		}
