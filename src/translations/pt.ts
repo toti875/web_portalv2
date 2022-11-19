@@ -111,13 +111,13 @@ export const pt = {
 	'page.body.wallets.tabs.deposit.ccy.message.error': 'Gerando endereço de depósito',
 	'page.body.wallets.tabs.deposit.ccy.button.generate': 'Gerar endereço para depósito de ',
 	'page.body.wallets.tabs.deposit.ccy.button.address': ' ',
-	'page.body.wallets.tabs.deposit.ccy.message.submit': 'Faça seu depósito utilizando o endereço de carteira abaixo ou utilize o QR Code gerado. Seu depósito será creditado após {confirmations} confirmações de rede',
+	'page.body.wallets.tabs.deposit.ccy.message.submit': 'Faça seu depósito utilizando o endereço de carteira abaixo ou utilize o QR Code gerado. Seu depósito será creditado após {confirmations} confirmações de rede.',
 	'page.body.wallets.tabs.deposit.ccy.message.pending': 'Gerando endereço de depósito',
 
 
 	'page.body.wallets.tabs.deposit.fiat.message1': 'Depósito por PIX',
 	'page.body.wallets.tabs.deposit.fiat.message2':
-		'Certifique-se de que o nome e o número de CPF na sua conta bancária corresponde com o nome legal associado à sua Fortem. Seu depósito será creditado em sua carteira Fortem em até 1 hora.',
+		'Certifique-se de que o nome e o número de CPF na sua conta bancária corresponde com o nome legal associado à sua conta Fortem. Seu depósito será creditado em sua carteira Fortem em até 1 hora.',
 	'page.body.wallets.tabs.deposit.fiat.bankName': 'CNPJ',
 	'page.body.wallets.tabs.deposit.fiat.accountNumber': 'Nome do titular da conta',
 	'page.body.wallets.tabs.deposit.fiat.accountName': 'Código do banco',
