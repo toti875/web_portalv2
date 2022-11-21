@@ -1679,8 +1679,9 @@ th#react-table table:last-child {
 
   }
 
-.btn-primary .btn btn-primary btn-block btn-lg,.btn-block .btn btn-primary btn-block btn-lg{ 
-    margin-left: 50% auto !important;
+.btn-primary .col-12 m-0 > .btn, .btn-block .col-12 m-0 > .btn { 
+    margin-left: 500px auto !important;
+    background: pink !important;
 
   }
 
