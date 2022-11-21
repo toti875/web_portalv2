@@ -86,7 +86,7 @@ const TradingWrapper = props => {
             },
             {
                 i: 3,
-                render: () => <OrderBook size={orderBookComponentResized} />,
+                render: () => <OrderComponent size={orderComponentResized} />,
             },
             {
                 i: 4,

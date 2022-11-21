@@ -10,7 +10,7 @@ export const HotAnnouncement: React.FC = () => {
   const renderAnnouncementright = () => {
 	return(
 		<div className="article">
-		<div className="hot-article-header">Hot List</div>
+		<div className="hot-article-header">Comunicados Internos</div>
 		{
 			announcements.data.slice(0, 5).map((announcement, index) => {
 			return (

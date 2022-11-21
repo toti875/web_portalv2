@@ -38610,6 +38610,7 @@ div.ant-typography-edit-content.ant-typography-rtl {
 			padding-right: 10px;
 		}.history-screen__filter__select__choose {
 			width: 150px;
+      line-height: 18px !important;
 		}.history-screen__filter__search__btn--search {
 				background-color: #2fb67e;
 			}.history-screen__filter__search__btn:hover {

@@ -35,7 +35,7 @@ type Props = DispatchProps & ProfileVerificationProps & ReduxProps;
 
 class ProfileVerificationComponent extends React.Component<Props, State> {
 	public state = {
-		isMouseTooltipVisible: false,
+		isMouseTooltipVisible: true,
 	};
 
 	public componentDidMount() {
@@ -63,12 +63,22 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 							</div>
 							
 							<div className="pg-profile-page-verification-labels__step__info__subtitle">
+								<div style={{textDecoration: 'underline'}}>
+									Funcionalidades:
+								</div>
 								<div></div>
-								 Negociação de criptoativos
+								 Compra e venda de criptomoedas
 								<div></div>
-								Transações bancárias
+								Negociação de criptomoedas (Exchange Pro)
 								<div></div>
-								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle`} />
+								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle`} /><div></div>
+								<div></div>
+								<div style={{textDecoration: 'underline'}}>
+									<br />Limites:
+								</div>
+								
+								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle2`} /><div></div>
+								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle3`} />
 							</div>
 						</div>
 						<div className="pg-profile-page-verification-labels__step__label pg-profile-page-verification-labels__step__label--verified">
@@ -91,12 +101,22 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
 							</div>
 							<div className="pg-profile-page-verification-labels__step__info__subtitle">
-							<div></div>
-								 Negociação de criptoativos
+							<div style={{textDecoration: 'underline'}}>
+									Funcionalidades:
+								</div>
 								<div></div>
-								Transações bancárias
-								<div></div>								
+								 Compra e venda de criptomoedas
+								<div></div>
+								Negociação de criptomoedas (Exchange Pro)
+								<div></div>
 								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle`} />
+								<div></div>
+								<div style={{textDecoration: 'underline'}}>
+									<br />Limites:
+								</div>
+								
+								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle2`} />
+								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle3`} />
 							</div>
 						</div>
 						<div className="pg-profile-page-verification-labels__step__label pg-profile-page-verification-labels__step__label--pending">
@@ -116,12 +136,22 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
 							</div>
 							<div className="pg-profile-page-verification-labels__step__info__subtitle">
-							<div></div>
-								 Negociação de criptoativos
+							<div style={{textDecoration: 'underline'}}>
+									Funcionalidades:
+								</div>
 								<div></div>
-								Transações bancárias
+								 Compra e venda de criptomoedas
+								<div></div>
+								Negociação de criptomoedas (Exchange Pro)
 								<div></div>
 								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle`} />
+								<div></div>
+								<div style={{textDecoration: 'underline'}}>
+									<br />Limites:
+								</div>
+								
+								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle2`} /><div></div>
+								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle3`} /><div></div>
 							</div>
 						</div>
 						<div
@@ -129,7 +159,7 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 							onMouseEnter={e => this.handleHoverTooltipIcon()}
 							onMouseLeave={e => this.handleToggleTooltipVisible()}
 						>
-							<Link to="/banner/authentication/confirm/basic">
+							<Link to="/confirm">
 								<FormattedMessage id="page.body.profile.verification.reverify" />
 							</Link>
 							<CrossIcon />
@@ -150,16 +180,26 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
 							</div>
 							<div className="pg-profile-page-verification-labels__step__info__subtitle">
-							<div></div>
-								 Negociação de criptoativos
+							<div style={{textDecoration: 'underline'}}>
+									Funcionalidades:
+								</div>
 								<div></div>
-								Transações bancárias
+								 Compra e venda de criptomoedas
 								<div></div>
-								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle`} />
+								Negociação de criptomoedas (Exchange Pro)
+								<div></div>
+								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle`} /><div></div>
+								<div></div>
+								<div style={{textDecoration: 'underline'}}>
+									<br />Limites:
+								</div>
+								
+								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle2`} /><div></div>
+								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle3`} />
 							</div>
 						</div>
 						<div className="pg-profile-page-verification-labels__step__button pg-profile-page-verification-labels__step__button--blocked">
-							<Link to="/banner/authentication/confirm/basic">
+							<Link to="/confirm">
 								<FormattedMessage id="page.body.profile.verification.verify" />
 							</Link>
 						</div>
@@ -176,16 +216,26 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
 							</div>
 							<div className="pg-profile-page-verification-labels__step__info__subtitle">
-							<div></div>
-								 Negociação de criptoativos
+							<div style={{textDecoration: 'underline'}}>
+									Funcionalidades:
+								</div>
 								<div></div>
-								Transações bancárias
+								 Compra e venda de criptomoedas
 								<div></div>
-								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle`} />
+								Negociação de criptomoedas (Exchange Pro)
+								<div></div>
+								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle`} /><div></div>
+								<div></div>
+								<div style={{textDecoration: 'underline'}}>
+									<br />Limites:
+								</div>
+								
+								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle2`} /><div></div>
+								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.subtitle3`} />
 							</div>
 						</div>
 						<div className="pg-profile-page-verification-labels__step__button pg-profile-page-verification-labels__step__button--active">
-							<Link to="/banner/authentication/confirm/basic">
+							<Link to="/confirm">
 								<FormattedMessage id="page.body.profile.verification.verify" />
 							</Link>
 						</div>

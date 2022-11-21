@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { IntlProps } from '../../../';
 import { formatWithSeparators, WalletItem } from '../../../components';
 import { VALUATION_PRIMARY_CURRENCY, VALUATION_SECONDARY_CURRENCY } from '../../../constants';
+import { Charts } from '../../../containers';
 import { estimateUnitValue, estimateValue } from '../../../helpers/estimateValue';
 import {
     currenciesFetch,
@@ -119,6 +120,7 @@ class EstimatedValueContainer extends React.Component<Props> {
             ...wallet,
             name: wallet.currency.toUpperCase(),
             value: Number(wallet.balance),
+            
         }));
 
         var sortedWallet = formattedWallet.sort((a,b) => 
@@ -168,7 +170,7 @@ class EstimatedValueContainer extends React.Component<Props> {
             },
             tooltip: {
               enabled: true,
-              theme: "light",
+              theme: "dark",
             },
           };
 
@@ -236,7 +238,7 @@ class EstimatedValueContainer extends React.Component<Props> {
               },
             },
             legend: {
-              show: false,
+              show: true,
             },
             grid: {
               strokeDashArray: 5,
@@ -255,9 +257,9 @@ class EstimatedValueContainer extends React.Component<Props> {
             fill: {
               type: "gradient",
               gradient: {
-                shade: "light",
+                shade: "dark",
                 type: "vertical",
-                shadeIntensity: 0.5,
+                shadeIntensity: 1,
                 
                 inverseColors: false,
                 opacityFrom: 0.8,
@@ -303,11 +305,15 @@ class EstimatedValueContainer extends React.Component<Props> {
                 
                 </span>
 
+                
 
 
 
             </div>
+   
+
             </div>
+            
         );
     }
 

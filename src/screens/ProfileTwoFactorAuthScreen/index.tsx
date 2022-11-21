@@ -8,8 +8,7 @@ import { withRouter } from 'react-router-dom';
 import { compose } from 'redux';
 import { IntlProps } from '../../';
 import { CloseIcon } from '../../assets/images/CloseIcon';
-import { NewCopyableTextField, CustomInput } from '../../components';
-
+import { CopyableTextField, CustomInput } from '../../components';
 import { copy, setDocumentTitle } from '../../helpers';
 import { alertPush, RootState, selectMobileDeviceState } from '../../modules';
 import {
@@ -51,7 +50,7 @@ class ToggleTwoFactorAuthComponent extends React.Component<Props, State> {
     };
 
     public componentDidMount() {
-        setDocumentTitle('Two factor authentication');
+        setDocumentTitle('2FA');
         const enable2fa = this.get2faAction();
         if (enable2fa) {
             this.props.generateQR();
@@ -102,7 +101,7 @@ class ToggleTwoFactorAuthComponent extends React.Component<Props, State> {
         return (
             <div className="container mt-5 pg-profile-two-factor-auth__form p-0">
                 <div className="row m-0 pg-profile-two-factor-auth__header">
-                    <div className="col-11 col-lg-7 offset-lg-4 mt-0 p-0 pl-3">
+                    <div className="col-11 col-lg-7 mt-0 p-0 pl-3">
                         {this.translate('page.body.profile.header.account.content.twoFactorAuthentication.header')}
                     </div>
                     <div className="col-1 mx-0 p-0 px-1" onClick={this.goBack}>
@@ -116,9 +115,9 @@ class ToggleTwoFactorAuthComponent extends React.Component<Props, State> {
                             <div className="d-inline">
                                 <span className="cr-item-number">1   </span>
                                 <span className="cr-item-text">{this.translate('page.body.profile.header.account.content.twoFactorAuthentication.message.1')}</span>
-                                <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/app/google-authenticator/id388497605?mt=8">AppStore</a>
+                                <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/app/google-authenticator/id388497605?mt=8">App Store</a>
                                 <span className="cr-item-text"> {this.translate('page.body.profile.header.account.content.twoFactorAuthentication.message.or')}</span>
-                                <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl">Google play</a>
+                                <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl">Google Play</a>
                             </div>
                         </div>
                         <div className="row col-12 pg-profile-two-factor-auth__body--text--group">
@@ -196,7 +195,7 @@ class ToggleTwoFactorAuthComponent extends React.Component<Props, State> {
             <div className="pg-profile-two-factor-auth__copyablefield__container">
                 <legend>{this.translate('page.body.profile.header.account.content.twoFactorAuthentication.message.mfa')}</legend>
                 <fieldset onClick={this.doCopy}>
-                    {secret && <NewCopyableTextField
+                    {secret && <CopyableTextField
                       value={secret}
                       fieldId="secret-2fa"
                       label=""
@@ -237,7 +236,7 @@ class ToggleTwoFactorAuthComponent extends React.Component<Props, State> {
     };
 
     private handleNavigateToProfile = () => {
-        this.props.history.push('/admin/account/settings');
+        this.props.history.push('/profile');
     };
 
     private get2faAction = () => {

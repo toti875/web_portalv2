@@ -62,7 +62,7 @@ class ConfirmComponent extends React.Component<Props> {
 		const containerClass = classnames('pg-confirm');
 
 		return (
-			<div className={containerClass}>
+			<div className="pg-confirm">
 				<div className="pg-confirm__logo">
 					<img src={Logo} alt="" className="pg-logo__img" />
 					

@@ -94,7 +94,7 @@ export const pt = {
 	/* Wallets */
 	'page.body.wallets.estimated_value_dolar': 'Valor aproximado em Reais: ',
 	'page.body.wallets.estimated_value_btc': 'Valor aproximado em BTC: ',
-	'page.body.wallets.estimated_value': 'Patrimônio aproximado: ',
+	'page.body.wallets.estimated_value': 'Patrimônio total aproximado: ',
 
 	'page.body.wallets.locked': 'Saldo bloqueado (em uso)',
 	'page.body.wallets.balance': 'Saldo disponível',
@@ -141,7 +141,7 @@ export const pt = {
 	'page.body.wallets.tabs.withdraw.beneficiary.incorrect': 'Endereço de destino incorreto',
 	'page.body.wallets.tabs.withdraw.limit24': 'Limite de saque 24h excedido',
 
-	'page.body.wallets.tabs.withdraw.waiting': `Por favor, aguarde. Não feche esta janela`,
+	'page.body.wallets.tabs.withdraw.waiting': `Por favor, aguarde o processamento... Não feche esta janela.`,
 
 	'page.body.wallets.tabs.withdraw.modal.confirmation': 'Confirmação',
 	'page.body.wallets.tabs.withdraw.modal.message1': 'Você receberá ',
@@ -150,7 +150,7 @@ export const pt = {
 	'page.body.wallets.tabs.withdraw.modal.button.cancel': 'Cancelar',
 	'page.body.wallets.tabs.withdraw.modal.button.withdraw': 'Sacar',
 
-	'page.body.wallets.tabs.withdraw.content.enable2fa': 'Para sacar, você precisa habilitar o 2FA',
+	'page.body.wallets.tabs.withdraw.content.enable2fa': 'Para sacar, você precisa habilitar o 2FA.',
 	'page.body.wallets.tabs.withdraw.content.enable2faButton': 'Habilitar 2FA',
 
 	'success.beneficiaries.created': 'Destinatários: criado com sucesso',
@@ -287,7 +287,7 @@ export const pt = {
 	'page.body.profile.header.account.content.twoFactorAuthentication': '2FA',
 	'page.body.profile.header.account.content.twoFactorAuthentication.message.enable': 'Habilitado',
 	'page.body.profile.header.account.content.twoFactorAuthentication.message.disable': 'Desabilitado',
-	'page.body.profile.header.account.content.twoFactorAuthentication.header': 'AUTENTICAÇÃO EM DUAS ETAPAS (2FA)',
+	'page.body.profile.header.account.content.twoFactorAuthentication.header': 'AUTENTICAÇÃO EM DUAS ETAPAS',
 	'page.body.profile.header.account.content.twoFactorAuthentication.message.1':
 		'Baixe e instale no seu celular a última versão do app Google Authenticator disponível na ',
 	'page.body.profile.header.account.content.twoFactorAuthentication.message.or': 'ou ',
@@ -380,7 +380,9 @@ export const pt = {
 	/* Profile - verification */
 	//'page.body.profile.verification.email.title': 'Email address',
 	'page.body.profile.verification.email.title': 'Validação do email',
-	'page.body.profile.verification.email.subtitle': 'Limite de R$ 5.000,00 / mês',
+	'page.body.profile.verification.email.subtitle': ' ',
+	'page.body.profile.verification.email.subtitle2': 'Saques de criptoativos: até R$ 5.000,00 / mês',
+	'page.body.profile.verification.email.subtitle3': ' ',
 	'page.body.profile.verification.email.functionality': 'Saques habilitados',
 	'page.body.profile.verification.email.rejected.tooltip': 'Email inválido / não confirmado',
 	'page.body.profile.verification.phone.title': 'Verify Phone number',
@@ -388,10 +390,16 @@ export const pt = {
 	'page.body.profile.verification.phone.rejected.tooltip': 'Your phone was rejected',
 	//'page.body.profile.verification.profile.title': 'Complete your profile',
 	'page.body.profile.verification.profile.title': 'Validação dos dados pessoais',
-	'page.body.profile.verification.profile.subtitle': 'Limite de R$ 50.000,00 / mês',
+	'page.body.profile.verification.profile.subtitle': 'Compra e venda de tokens',
+	'page.body.profile.verification.profile.subtitle2': 'Saques e depósitos de criptoativos: até R$ 100.000,00 / mês',
+	'page.body.profile.verification.profile.subtitle3': 'Saques e depósitos na rede bancária: até R$ 50.000,00 / mês',
 	'page.body.profile.verification.profile.rejected.tooltip': 'Validação do seu perfil não aprovada',
 	'page.body.profile.verification.document.title': 'Validação do documento de identidade',
-	'page.body.profile.verification.document.subtitle': 'Limite de R$ 100.000,00 / mês',
+	'page.body.profile.verification.document.subtitle': 'Compra e venda de tokens',
+	'page.body.profile.verification.document.subtitle2': 'Saques e depósitos de criptoativos: ilimitado',
+	'page.body.profile.verification.document.subtitle3': 'Saques e depósitos na rede bancária: até R$ 100.000,00 / mês',
+	
+
 	'page.body.profile.verification.document.rejected.tooltip': 'Sua identidade não foi aprovada',
 	'page.body.profile.verification.address.title': 'Validação do comprovante de Residência',
 	'page.body.profile.verification.address.subtitle': 'Limite de R$ 500.000,00 / mês',
@@ -409,7 +417,7 @@ export const pt = {
 	'page.confirm.subtitle.email': '(Verifique a caixa postal do email utilizado no cadastro)',
 	'page.confirm.title.phone': 'Get Verified your phone number',
 	'page.confirm.title.profile': 'Informe seus dados pessoais',
-	'page.confirm.subtitle.profile': '(Certifique que as informações estejam iguais ao seu documento)',
+	'page.confirm.subtitle.profile': '(Certifique-se de que as informações sejam iguais ao seu documento)',
 	'page.confirm.title.document': 'Valide seu documento de identificação',
 	'page.confirm.title.address': 'Validação de endereço',
 
@@ -479,8 +487,8 @@ export const pt = {
 	'page.body.kyc.phone.head': 'Verify Phone',
 	'page.body.kyc.phone.enterPhone': 'Enter phone number',
 	'page.body.kyc.phone.enterCode': 'Enter confirmation code',
-	'page.body.kyc.identity.firstName': 'Nome',
-	'page.body.kyc.identity.lastName': 'Sobrenome',
+	'page.body.kyc.identity.firstName': 'Nome civil completo',
+	'page.body.kyc.identity.lastName': 'Sobrenome civil completo',
 	'page.body.kyc.identity.dateOfBirth': 'Data de Nascimento',
 	'page.body.kyc.identity.dateOfBirth.placeholder': 'DD / MM / AAAA',
 	'page.body.kyc.identity.cpf': 'CPF',

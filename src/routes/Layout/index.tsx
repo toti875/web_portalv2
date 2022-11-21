@@ -93,10 +93,19 @@ import {
 	FortemIOHomePage,
 	PortfolioScreen,
 	QuickExchange,
-	LandingScreen,
-	DocumentationScreen,
+	
 	ProfileScreen,
 } from '../../screens';
+
+import { LandingScreen, DocumentationScreen } from '../../v2/src/screens';
+
+import { LandingScreenMobile } from '../../v2/src/mobile/screens';
+
+
+
+
+
+
 
 //import {WalletsScreen} from '../../v2/src/screens/WalletsScreen';
 
@@ -495,8 +504,9 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					<PublicRoute path="/500" component={MaintenanceScreen} />
 					<PublicRoute exact={false} path="/market/:market?" component={TradingScreen} />
 					<PublicRoute exact={true} path="/" component={FortemIOHomePage} />
-					{/*<Route exact={true} path="/landing" component={LandingScreen} />*/}
-					<PublicRoute exact={true} path="/doc" component={DocumentationScreen} />
+					<Route exact={true} path="/landing" component={LandingScreenMobile} />
+					
+					<PrivateRoute exact={true} loading={userLoading} isLogged={isLoggedIn} path="/docs" component={DocumentationScreen} />
 
 					<PublicRoute exact={false} path="/fee" component={AssetsFeeScreen} />
 					<PublicRoute path="/markets" component={MarketsList} />
@@ -526,7 +536,6 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/orders" component={OrdersTabScreen} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/history" component={HistoryScreen} />
-					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/banner/authentication/confirm/basic" component={ConfirmBasic} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/confirm" component={ConfirmScreen} />
 					{/* OLD Profile Page */}
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={ProfileScreen} />
@@ -574,6 +583,9 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 						component={PortfolioScreen}
 					/>
 					<PublicRoute path="/holder/starting" exact component={HolderStartingScreen} />
+
+
+					<Route exact={true} path="/app" component={HomePageScreenMobile} />
 
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/quick-exchange" component={QuickExchange} />
 

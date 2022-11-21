@@ -53,9 +53,9 @@ flex-direction: row !important;
 
 
 .form-control {
-    color: #464a4c !important;
-    line-height: 25px;
-    font-size: 16px !important;
+    color:  #F5F5F5;
+    
+    
     boder: 1px solid #c0c0c0 !important;
     boder-color: #c0c0c0 !important;
     background-color: transparent !important;
@@ -82,7 +82,8 @@ flex-direction: row !important;
     boder: 1px solid #c0c0c0 !important;
     boder-color: #c0c0c0 !important;
     border-radius: 5px !important;
-    background-color: transparent !important;
+    background-color: #dde1e7 !important;
+    
 
 
 }
@@ -445,6 +446,7 @@ flex-direction: row !important;
 			padding-right: 23px;
 			padding-top: 30px;
 		}.modal.td-cpn__modal .modal-content .modal-body .td-email-form__group {
+            
             background: #181819 !important;
                 backdrop-filter: blur(10px);
 				margin-bottom: 20px;
@@ -453,6 +455,7 @@ flex-direction: row !important;
 					color: #c0c0c0;
 				}.modal.td-cpn__modal .modal-content .modal-body .td-email-form__group--focused input {
 					border-color: #c0c0c0 !important;
+                    background: #dde1e7 !important;
 				}
 
 
@@ -481,7 +484,7 @@ flex-direction: row !important;
         position: relative;
         width: 20rem;
     }.td-cpn-wrapper-tab-page__header__search input {
-            background: transparent;
+            background: #dde1e7 !important;
             border: none;
             color: #F5F5F5;
             font-size: 16px;
@@ -494,8 +497,10 @@ flex-direction: row !important;
             width: 20%;
         }.td-cpn-wrapper-tab-page__header__search ::-webkit-input-placeholder {
             color: rgba(196, 196, 196, 0.28);
+            background: #dde1e7 !important;
         }.td-cpn-wrapper-tab-page__header__search ::placeholder {
             color: rgba(196, 196, 196, 0.28);
+            background: #dde1e7 !important;
         }.td-cpn-wrapper-tab-page__header__search svg {
             position: absolute;
             right: 4%;
@@ -1475,7 +1480,7 @@ flex-direction: row !important;
             border-color: #18988F !important;
           }.pg-wallet .cr-copyable-text-field .cr-deposit-crypto__copyable fieldset:focus-within legend {
               color: #18988F !important;
-              background-color: 18988F  !important;
+              background-color: #18988F  !important;
             }.pg-wallet .cr-copyable-text-field .cr-deposit-crypto__copyable .cr-deposit-crypto__copyable-area {
       
           display: flex !important;
@@ -1562,14 +1567,14 @@ flex-direction: row !important;
       font-weight: bold !important;
 
     }.pg-wallet .cr-wallet-item__amount-locked {
-      font-size: 16px !important;
+      font-size: 17px !important;
  
       font-weight: bold !important;
     }.pg-wallet .cr-wallet-item__amount-locked-icon {
         display: inline-block ;
         margin-right: calc(var(--gap) * 1) ;
       }.pg-wallet .cr-wallet-item__balance {
-      font-size: 16px !important;
+      font-size: 17px !important;
       font-weight: bold !important;
 
     }.pg-wallet .cr-wallet-item__balance-amount {
@@ -1630,8 +1635,12 @@ flex-direction: row !important;
         width: 100%;
         
       }.pg-wallet__enable-2fa-message {
-    font-size: calc(var(--gap) * 3);
+    font-size: 16px;
+    font-weight: 500;
     text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
   }
   
   .cnt-order-book {
@@ -2264,8 +2273,8 @@ flex-direction: row !important;
 	background: transparent;
 	border-bottom: 1px solid var(--divider-color-level-2);
 	display: flex;
-	margin: 0 calc(var(--gap) * 3);
-	padding: 0 0 calc(var(--gap) * 4);
+	margin: 0;
+	padding: 0 0 calc(var(--gap) * 6);
 }.cr-wallet-item__single-balance {
 		display: flex;
 		flex-grow: 2;
@@ -2388,7 +2397,7 @@ flex-direction: row !important;
 	}.custom-input input,
 	.custom-input input:focus {
 		background: #dde1e7 !important;
-        border-color: #c0c0c0 !important;
+        border-color: #c0c0c0;
          
 		
 		color: var(--input-text-color);
@@ -9610,7 +9619,7 @@ Copyright (c) 2015 Daniel Eden
 
 		li {
 			.page-link {
-				background-color: rgb(49, 52, 69);
+				background-color: transparent;
 				border: none;
 			}
 		}
@@ -9635,4 +9644,18 @@ Copyright (c) 2015 Daniel Eden
 			}
 		}
 	}
+}
+
+
+
+.pg-layout--mobile {
+    background: var(--mobile-main-background-color);
+    max-width: 100vw;
+    min-height: calc(100vh - 3.75em);
+    min-width: 100vw;
+    padding-bottom: 6em;
+    padding-top: 0;
+    width: 100vw;
+}.trading-layout {
+background: black;
 }

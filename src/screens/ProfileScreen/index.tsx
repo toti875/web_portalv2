@@ -17,8 +17,8 @@ export const ProfileQuickContainer: React.FC = () => {
 
 	return (
 		<div className="td-pg-profile --bg--second td-pg-profile--bg td-pg-profile__quick" style={{width: '1168px'}}>
-			<span className="d-flex align-items-center" style={{marginLeft: '30px', marginTop: '30px', fontSize: '19px', textAlign: 'center', color: '#FDA736'}}>Plataforma Fortem ONE - Ativos Digitais</span>
-			<span className="d-flex align-items-center" style={{marginLeft: '30px', marginBottom: '20px', fontSize: '17px', textAlign: 'center', color: '#c0c0c0'}}>Dashboard</span>
+			<span className="d-flex align-items-center" style={{marginLeft: '30px', marginTop: '30px', fontSize: '21px', textAlign: 'center', color: '#FDA736'}}>PLATAFORMA FORTEM ONE - ATIVOS DIGITAIS</span>
+			<span className="d-flex align-items-center" style={{marginLeft: '30px', marginBottom: '20px', fontSize: '18px', textAlign: 'center', color: '#c0c0c0'}}>DASHBOARD</span>
 				<div className="td-pg-profile__quick__inner d-flex ">
 					<div className="td-pg-profile__quick__logo">
 						<img src={require('./profile_avatar.gif')} alt="" style={{width: '150px'}}/>

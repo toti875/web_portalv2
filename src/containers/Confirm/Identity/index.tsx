@@ -97,7 +97,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 
 		if ((!prev.editSuccess && editSuccess) || (!prev.sendSuccess && sendSuccess)) {
 			this.props.labelFetch();
-			history.push('admin/pages/profile/overview');
+			history.push('/profile');
 		}
 	}
 
@@ -172,7 +172,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 		return (
 			<div className="pg-confirm__content-identity">
 				<div className="pg-confirm__content-identity__forms">
-					<div className="pg-confirm__content-identity__forms__row input-group">
+					<div className="pg-confirm__content-identity__forms__row input-group-lg">
 						<fieldset className={firstNameGroupClass}>
 							<CustomInput
 								type="string"
@@ -185,6 +185,8 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 								handleFocusInput={this.handleFieldFocus('firstName')}
 							/>
 						</fieldset>
+					</div>
+					<div className="pg-confirm__content-identity__forms__row input-group-lg">
 						<fieldset className={lastNameGroupClass}>
 							<CustomInput
 								type="string"
@@ -197,7 +199,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 							/>
 						</fieldset>
 					</div>
-					<div className="pg-confirm__content-identity__forms__row, input-group">
+					<div className="pg-confirm__content-identity__forms__row ">
 						<fieldset className={dateOfBirthGroupClass}>
 							<div className="custom-input">
 								<label>{this.translate('page.body.kyc.identity.dateOfBirth')}</label>
@@ -233,7 +235,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 							</div>
 						</fieldset>
 					</div>
-					<div className="pg-confirm__content-identity__forms__row">
+					{/*<div className="pg-confirm__content-identity__forms__row">
 						<div className="pg-confirm__content-identity__forms__row__content">
 							<DropdownComponent
 								className="pg-confirm__content-identity__forms__row__content-number-dropdown"
@@ -242,8 +244,8 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 								placeholder={this.translate('page.body.kyc.identity.CoR')}
 							/>
 						</div>
-					</div>
-					<div className="pg-confirm__content-identity__forms__row">
+					</div>*/}
+					<div className="pg-confirm__content-identity__forms__row input-group-lg">
 						<fieldset className={residentialAddressGroupClass}>
 							<CustomInput
 								type="string"
