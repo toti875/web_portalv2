@@ -70,10 +70,10 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 					{!user.otp ? (
 						<Button
 							size="sm"
-							className="td-pg-profile__active-step__content__item__action mt-3"
+							className="td-pg-profile__active-step__content__item__action mt-5"
 							onClick={handleNavigateTo2fa}
 						>
-							Verificar
+							Habilitar
 						</Button>
 					) : null}
 				</div>

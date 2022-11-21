@@ -6681,6 +6681,7 @@ th#react-table table:last-child {
 	padding: 20px;
 	position: relative;
   opacity: 0.81;
+  height: 500px;
 
   
     border: 1px solid var(--wallets-item-border-color);

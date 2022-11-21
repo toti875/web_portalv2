@@ -161,7 +161,7 @@ class ToggleTwoFactorAuthComponent extends React.Component<Props, State> {
                     </div>
                 </div>
                 <div className="row p-5">
-                    <div className="col-12 m-0">
+                    <div className="col-12 m-0 text-center" style={{}}>
                         <Button
                             onClick={submitHandler}
                             size="lg"
