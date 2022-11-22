@@ -100,7 +100,7 @@ class SignUp extends React.Component<Props> {
 	private geetestCaptchaRef;
 
 	public componentDidMount() {
-		setDocumentTitle('Sign Up');
+		setDocumentTitle('Nova Conta');
 		const localReferralCode = localStorage.getItem('referralCode');
 		const refId = this.extractRefID(this.props.location.search);
 		const referralCode = refId || localReferralCode || '';

@@ -7,16 +7,16 @@ const panels = [
 		content: <div className={'tabs-content'}>LEGAL NOTES</div>,
 	},
 	{
-		label: 'PRIVACY POLICY',
+		label: 'POLÍTICA DE PRIVACIDADE',
 		content: (
 			<div id="privacy-policy" className="tabs-content">
-				PRIVACY POLICY
+				POLÍTICA DE PRIVACIDADE
 			</div>
 		),
 	},
 	{
-		label: 'TERM OF SERVICE',
-		content: <div className={'tabs-content'}>TERM OF SERVICE</div>,
+		label: 'TERMOS DE USO',
+		content: <div className={'tabs-content'}>TERMOS DE USO</div>,
 	},
 ];
 

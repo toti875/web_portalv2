@@ -18,7 +18,7 @@ import {
 } from '../../modules';
 
 export const DepositScreen = () => {
-	setDocumentTitle('Deposit');
+	setDocumentTitle('Depositar');
 	const { currency_id } = useParams<{ currency_id: string }>();
 
 	const [selectedCurrencyID, setSelectedCurrencyID] = React.useState('');
@@ -86,12 +86,12 @@ export const DepositScreen = () => {
 			style={{
 				position: 'relative',
 				padding: '20px 6% 20px 6%',
-				marginTop: '-7px',
-				backgroundColor: '#2D2E3D',
-				color: '#fff',
+				marginTop: '10px',
+				backgroundColor: '#181819',
+				color: '#F5F5F5',
 			}}
 		>
-			<div className="row" style={{ padding: '0 1rem', backgroundColor: '#313445' }}>
+			<div className="row" style={{ padding: '0 1rem', backgroundColor: '#181819' }}>
 				<div className="col-6" style={{ padding: '20px 2%' }}>
 					<DepositInfo
 						currency_id={currency_id}

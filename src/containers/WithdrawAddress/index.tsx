@@ -172,7 +172,7 @@ export const WithdrawAddress: React.FC<WithdrawAddressProps> = (props: WithdrawA
 				<p className="pg-wallet__enable-2fa-message">
 					{intl.formatMessage({ id: 'page.body.wallets.tabs.withdraw.content.enable2fa' })}
 				</p>
-				<Button block={true} onClick={redirectToEnable2fa} size="lg" variant="primary">
+				<Button block={true} onClick={redirectToEnable2fa} size="lg" variant="2FA">
 					{intl.formatMessage({ id: 'page.body.wallets.tabs.withdraw.content.enable2faButton' })}
 				</Button>
 			</React.Fragment>
@@ -276,7 +276,7 @@ export const WithdrawAddress: React.FC<WithdrawAddressProps> = (props: WithdrawA
 				<div>
 					<div className="row">
 						<div className="col-12">
-							<h4>Withdrawal Network</h4>
+							<span>Blockchain: </span>
 						</div>
 					</div>
 					<div className="row">

@@ -22,6 +22,7 @@ const mockConfig: Config2 = {
     isResizable: false,
     isDraggable: false,
     showLanding: true,
+    captcha_type: 'none',
     sentryEnabled: false,
     captchaLogin: false,
     usernameEnabled: false,

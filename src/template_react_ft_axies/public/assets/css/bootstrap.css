@@ -2885,37 +2885,24 @@ tbody.collapse.show {
 }
 
 .input-group-addon {
-  padding: 0.5rem 0.75rem;
-  margin-bottom: 0;
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.25;
-  color: #464a4c;
-  text-align: center;
-  background-color: #eceeef;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem;
+  
 }
 
 .input-group-addon.form-control-sm,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .input-group-addon.btn {
-  padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
-  border-radius: 0.2rem;
+  
 }
 
 .input-group-addon.form-control-lg,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .input-group-addon.btn {
-  padding: 0.75rem 1.5rem;
-  font-size: 1.25rem;
-  border-radius: 0.3rem;
+  
 }
 
 .input-group-addon input[type="radio"],
 .input-group-addon input[type="checkbox"] {
-  margin-top: 0;
+  
 }
 
 .input-group .form-control:not(:last-child),
@@ -2925,8 +2912,6 @@ tbody.collapse.show {
 .input-group-btn:not(:last-child) > .dropdown-toggle,
 .input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
 }
 
 .input-group-addon:not(:last-child) {
@@ -2940,40 +2925,33 @@ tbody.collapse.show {
 .input-group-btn:not(:first-child) > .dropdown-toggle,
 .input-group-btn:not(:last-child) > .btn:not(:first-child),
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn {
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
 }
 
 .form-control + .input-group-addon:not(:first-child) {
-  border-left: 0;
+
 }
 
 .input-group-btn {
-  position: relative;
-  font-size: 0;
-  white-space: nowrap;
 }
 
 .input-group-btn > .btn {
 }
 
 .input-group-btn > .btn + .btn {
-  margin-left: -1px;
+
 }
 
 .input-group-btn > .btn:focus, .input-group-btn > .btn:active, .input-group-btn > .btn:hover {
-  z-index: 3;
+
 }
 
 .input-group-btn:not(:last-child) > .btn,
 .input-group-btn:not(:last-child) > .btn-group {
-  margin-right: -1px;
+
 }
 
 .input-group-btn:not(:first-child) > .btn,
 .input-group-btn:not(:first-child) > .btn-group {
-  z-index: 2;
-  margin-left: -1px;
 }
 
 .input-group-btn:not(:first-child) > .btn:focus, .input-group-btn:not(:first-child) > .btn:active, .input-group-btn:not(:first-child) > .btn:hover,
@@ -2984,29 +2962,16 @@ tbody.collapse.show {
 }
 
 .custom-control {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  min-height: 1.5rem;
-  padding-left: 1.5rem;
-  margin-right: 1rem;
-  cursor: pointer;
+
 }
 
 .custom-control-input {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
 }
 
 .custom-control-input:checked ~ .custom-control-indicator {
 }
 
 .custom-control-input:focus ~ .custom-control-indicator {
-  -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 3px #0275d8;
-          box-shadow: 0 0 0 1px #fff, 0 0 0 3px #0275d8;
 }
 
 .custom-control-input:active ~ .custom-control-indicator {
@@ -3050,8 +3015,7 @@ tbody.collapse.show {
 }
 
 .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-indicator {
-  background-color: #0275d8;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='%23fff' d='M0 2h4'/%3E%3C/svg%3E");
+
 }
 
 .custom-radio .custom-control-indicator {

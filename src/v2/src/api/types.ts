@@ -28,6 +28,7 @@ declare global {
         };
         languages: string[];
         kycSteps: string[];
+        captcha_type: 'recaptcha' | 'geetest' | 'none';
     }
 
     interface Window2 {

@@ -72,8 +72,9 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 							size="sm"
 							className="td-pg-profile__active-step__content__item__action mt-5"
 							onClick={handleNavigateTo2fa}
+							variant="sign-up"
 						>
-							Habilitar
+							Habilitar 2FA
 						</Button>
 					) : null}
 				</div>

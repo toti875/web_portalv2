@@ -99,7 +99,7 @@ export const pt = {
 	'page.body.wallets.locked': 'Saldo bloqueado (em uso)',
 	'page.body.wallets.balance': 'Saldo disponível',
 	'page.body.wallets.tabs.deposit': 'Depositar',
-	'page.body.wallets.tabs.deposit.disabled.message': 'Depósitos para este ativo estão desabilitados',
+	'page.body.wallets.tabs.deposit.disabled.message': 'Os depósitos para este ativo estão desabilitados',
 	'page.body.wallets.tabs.deposit.ccy.message.confirmation':
 		'1. Os ativos serão creditados após {confirmations} confirmações de rede (blockchain).',
 	'page.body.wallets.tabs.deposit.ccy.message.mindeposit': '2. Min Depósito: {min_deposit_amount} {currency}',
@@ -535,7 +535,7 @@ export const pt = {
 	'page.header.signIn.resetPassword.error': 'Dados incompletos ou inválidos',
 
 	'page.header.signUp': 'Criar conta',
-	'page.header.signUp.email': 'Seu email',
+	'page.header.signUp.email': 'Informe seu email',
 	'page.header.signUp.email.message.error': 'Email inválido',
 	'page.header.signUp.password': 'Crie sua senha de acesso',
 	'page.header.signUp.password.message.error':
@@ -543,7 +543,7 @@ export const pt = {
 	'page.header.signUp.confirmPassword': 'Confirme sua senha',
 	'page.header.signUp.confirmPassword.message.error': `As senhas não são iguais`,
 	'page.header.signUp.referalCode': 'Código de indicação (caso tenha sido convidado)',
-	'page.header.signUp.terms': 'Li e aceito os Termos de uso e a Política de Privacidade',
+	'page.header.signUp.terms': 'Li e aceito os Termos de Uso e a Política de Privacidade',
 	'page.header.signUp.modal.header': 'ÓTIMO. SEU CADASTRO FOI INICIADO.',
 	'page.header.signUp.modal.body':
 		'Seu cadastro foi inicado com sucesso. ' +
@@ -561,7 +561,7 @@ export const pt = {
 	'page.forgotPassword.message': 'Digite o email utilizado na criação da sua conta Fortem e enviaremos um link de reinicialização de senha.',
 	'page.password2fa': 'Autenticação em Duas Etapas (2FA)',
 	'page.password2fa.message': 'Digite seu código 2FA de 6 dígitos',
-	'page.forgotPassword.email': 'Seu email',
+	'page.forgotPassword.email': 'Digite seu email utilizado no cadastro',
 	'page.forgotPassword.send': 'Enviar',
 	'page.noDataToShow': 'Sem dados',
 

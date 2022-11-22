@@ -37,6 +37,7 @@ import { sentryEnabled } from './api/config';
 import { App } from './App';
 import './fortem.css';
 import './index.css';
+//import './index.css.backup';
 //import './index2.css';
 import './template_react/doob/src/assets/scss/style.scss';
 import './blockchain.css';

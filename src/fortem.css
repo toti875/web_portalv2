@@ -1,3 +1,153 @@
+{/* SIGNUP FORM */}
+.cr-sign-up-form {
+
+	max-width: 424px;
+	height: 630px !important;
+	position: relative;
+
+
+	display: grid !important;
+	background: #dde1e7 !important;
+	border-radius: 10px !important;
+	padding: 40px 30px !important;
+	box-shadow: -3px -3px 7px #ffffff73,
+				2px 2px 5px rgba(94, 104, 121, 0.288) !important;
+}.cr-sign-up-form__options-group {
+		border-bottom: 2px solid var(--divider-color-level-2);
+		height: 58px !important;
+		width: 100% !important;
+	}.cr-sign-up-form__option {
+		
+		display: inline-block;
+		height: 58px !important;
+		width: 50% !important;
+	}.cr-sign-up-form__option .__selected {
+			border-bottom: 2px solid var(--primary-cta-color) !important;
+			color: var(--primary-text-color) !important;
+		}.cr-sign-up-form__option-inner {
+		background: transparent;
+		color: var(--secondary-contrast-cta-color); 
+		cursor: pointer;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 500;
+		height: 58px;
+		letter-spacing: 0.0357143em;
+		line-height: 58px;
+		margin: 0 auto;
+		text-align: center;
+		text-transform: uppercase;
+		width: 75%;
+	}.cr-sign-up-form__title {
+
+		width: 200px !important;
+	}.cr-sign-up-form__form-content {
+		bottom: 23px;
+		box-sizing: border-box;
+		left: 23px;
+		position: absolute;
+		right: 23px;
+		top: 30px !important;
+		background-color: #dde1e7 !important;
+
+
+	}.cr-sign-up-form__form-content__title {
+
+			width: 20px !important;
+		}.cr-sign-up-form__form-content .custom-control {
+
+			background-color: #dde1e7 !important;
+		}.cr-sign-up-form__form-content .custom-control-input {
+				background-color: #595959 !important;
+				border-color: #dde1e7 !important;
+			}.cr-sign-up-form__form-content .custom-control-input:checked ~ .custom-control-label::before {
+						background-color: #595959;
+						border-color: #dde1e7;
+						transition: 0.2s;
+					}.cr-sign-up-form__form-content .custom-control-input:focus ~ .custom-control-label::before {
+						border-color: #dde1e7;
+						box-shadow: 0 0 0 0.2rem #595959;
+					}.cr-sign-up-form__form-content .custom-control-label {
+			}.cr-sign-up-form__form-content .custom-control-label::before {
+					
+				}.cr-sign-up-form__form-content .custom-control-label::after {
+					height: 18px;
+					width: 18px;
+				}.cr-sign-up-form__form-content .custom-control-label:hover {
+					cursor: pointer;
+				}.cr-sign-up-form > * {
+		background: transparent;
+	}.cr-sign-up-form__group {
+		background: transparent;
+		
+		
+		
+		
+	}.cr-sign-up-form__group .custom-input label {
+		
+			}.cr-sign-up-form__error {
+		background: transparent;
+		color: var(--system-red);
+		margin-top: 5px;
+	}.cr-sign-up-form__error-message {
+		align-items: center;
+		background: transparent;
+		color: var(--system-red);
+		display: flex;
+		flex: 1;
+		font-size: calc(var(--gap) * 2.5);
+		justify-content: center;
+		min-height: calc(var(--gap) * 6);
+	}.cr-sign-up-form__button-wrapper {
+		background: transparent;
+		bottom: 0px;
+		left: 0;
+		position: absolute;
+		right: 0;
+	}.cr-sign-up-form__button-wrapper--empty {
+		background: transparent;
+		bottom: 0 !important;
+		left: 0;
+		position: absolute;
+		right: 0;
+	}.cr-sign-up-form__loader {
+		background: transparent;
+		min-height: calc(var(--gap) * 6);
+	}.cr-sign-up-form__input {
+		width: 100%;
+		margin-top: 20px;
+	}.cr-sign-up-form__input input {
+			border: 1px solid var(--input-border-color);
+			border-radius: 4px;
+			box-sizing: border-box;
+			color: var(--input-text-color);
+			font-size: 12px;
+			height: 50px;
+			padding: 0 10px;
+			width: 100%;
+		}.cr-sign-up-form__footer {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+	}.cr-sign-up-form__footer > * {
+			background: transparent;
+		}.cr-sign-up-form__footer-create {
+			color: #595959;
+		}.cr-sign-up-form__footer-signin {
+			cursor: pointer;
+			padding-left: 10px;
+		}.cr-sign-up-form2__recaptcha {
+		display: flex;
+		justify-content: center;
+		left: 0;
+		position: absolute;
+		top: 20px !important;
+		right: 0;
+		top: 10px;
+		z-index: 2;
+	}
+
+
 .cr-modal__container-footer {
 
 display: flex;
@@ -2161,7 +2311,7 @@ flex-direction: row !important;
 	align-items: center;
 	-webkit-backdrop-filter: blur(10px);
 	        backdrop-filter: blur(10px);
-	background: var(--body-background-color-level-6);
+            background: rgba(196, 196, 196, 0.28) !important;
 	display: flex;
 	height: 100%;
 	justify-content: center;
@@ -2175,7 +2325,7 @@ flex-direction: row !important;
 		justify-content: center;
 	}.pg-blur__content__icon {
 			margin-bottom: 12px;
-            fill: #009991 !important;
+            fill: #1EDED0 !important;
 		}.pg-blur__content__text {
 			color: var(--primary-text-color);
 			font-size: 14px;
@@ -2281,7 +2431,8 @@ flex-direction: row !important;
 		justify-content: space-between;
 	}.cr-wallet-item__single__image-icon {
 		margin-right: calc(var(--gap) * 3) !important;
-		height: calc(var(--gap) * 10) !important;
+		height: 60px !important;
+        border-radius: 50px !important;
 	}.cr-wallet-item__single .cr-wallet-item__icon-code {
 			background: transparent;
 			color: var(--primary-text-color);
@@ -2948,12 +3099,12 @@ flex-direction: row !important;
 		}.cr-sign-in-form__bottom-section .cr-sign-in-form__bottom-section-password:hover {
 				color: var(--primary-text-color);
 			}.cr-sign-in-form__bottom-section .cr-sign-in-form__bottom-section-signup {
-			color: #1EBDB2 !important;
+			color: #009991 !important;
 			cursor: pointer;
 			font-size: 14px;
 			font-weight: 600px;
 		}.cr-sign-in-form__bottom-section .cr-sign-in-form__bottom-section-signup:hover {
-				color: #1EDED0 !important;
+				color: #009991  !important;
 			}{/*//marketDepths*/}.cr-market-depths {
 	box-sizing: border-box;
 	height: 100%;
@@ -4349,12 +4500,12 @@ margin-left: 20px;
 		}.cr-sign-in-form__bottom-section .cr-sign-in-form__bottom-section-password:hover {
 				color: var(--primary-text-color);
 			}.cr-sign-in-form__bottom-section .cr-sign-in-form__bottom-section-signup {
-			color: #1EBDB2 !important;
+			color: #009991  !important;
 			cursor: pointer;
 			font-size: 14px;
 			font-weight: 600px;
 		}.cr-sign-in-form__bottom-section .cr-sign-in-form__bottom-section-signup:hover {
-				color: #1EDED0 !important;
+				color: #009991  !important;
 			}.marketSlick {
 
 	margin-bottom: 20px;
@@ -6271,9 +6422,9 @@ max-height: 862px;
   --button-percentage-text-color-active: var(--primary-text-color);
 
   /* primary cta color (blue) button  */
-  --button-primary-cta-background-color: var(--primary-cta-color-level-7);
+  --button-primary-cta-background-color: #009991;
   --button-primary-cta-text-color: var(--cta-layer-color-level-7);
-  --button-primary-cta-background-color-hover: var(--primary-cta-color);
+  --button-primary-cta-background-color-hover: #18988F;
   --button-primary-cta-text-color-hover: var(--cta-layer-color);
   --button-primary-cta-background-color-active: var(--primary-cta-color);
   --button-primary-cta-text-color-active: var(--cta-layer-color);

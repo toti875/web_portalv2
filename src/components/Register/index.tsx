@@ -116,8 +116,8 @@ export const Register = (props: RegisterFormProps) => {
 						handleChangeInput={props.handleChangeRefId}
 						inputValue={refId}
 						handleFocusInput={props.handleFocusRefId}
-						classNameLabel="cr-sign-up-form2__label"
-						classNameInput="cr-sign-up-form2__input"
+						classNameLabel="cr-sign-up-form__label2"
+						classNameInput="cr-sign-up-form__input"
 						autoFocus={false}
 					/>
 				</React.Fragment>
@@ -139,8 +139,8 @@ export const Register = (props: RegisterFormProps) => {
 	};
 
 	const renderPasswordInput = () => {
-		const passwordGroupClass = cr('cr-sign-up-form2__group', {
-			'cr-sign-up-form2__group--focused': passwordFocused,
+		const passwordGroupClass = cr('cr-sign-up-form__group', {
+			'cr-sign-up-form__group--focused': passwordFocused,
 		});
 
 		return (
@@ -153,8 +153,8 @@ export const Register = (props: RegisterFormProps) => {
 					handleChangeInput={props.handleChangePassword}
 					inputValue={password}
 					handleFocusInput={props.handleFocusPassword}
-					classNameLabel="cr-sign-up-form2__label"
-					classNameInput="cr-sign-up-form2__input"
+					classNameLabel="cr-sign-up-form__label"
+					classNameInput="cr-sign-up-form__input"
 					autoFocus={false}
 				/>
 				{password ? (
@@ -207,10 +207,10 @@ export const Register = (props: RegisterFormProps) => {
 
 	const renderLogIn = () => {
 		return (
-			<div className="pg-sign-up-screen2__login">
+			<div className="pg-sign-up-screen__login">
 				<span>
 					{intl.formatMessage({ id: 'page.header.signUp.alreadyRegistered' })}
-					<span onClick={() => history.push('/login')} className="pg-sign-up-screen2__login-button">
+					<span onClick={() => history.push('/login')} className="pg-sign-up-screen__login-button">
 						{intl.formatMessage({ id: 'page.mobile.header.signIn' })}
 					</span>
 				</span>
@@ -218,15 +218,15 @@ export const Register = (props: RegisterFormProps) => {
 		);
 	};
 
-	const emailGroupClass = cr('cr-sign-up-form2__group', {
-		'cr-sign-up-form2__group--focused': emailFocused,
+	const emailGroupClass = cr('cr-sign-up-form__group', {
+		'cr-sign-up-form__group--focused': emailFocused,
 	});
 
-	const confirmPasswordGroupClass = cr('cr-sign-up-form2__group', {
-		'cr-sign-up-form2__group--focused': confirmPasswordFocused,
+	const confirmPasswordGroupClass = cr('cr-sign-up-form__group', {
+		'cr-sign-up-form__group--focused': confirmPasswordFocused,
 	});
-	const refIdGroupClass = cr('cr-sign-up-form2__group', {
-		'cr-sign-up-form2__group--focused': refIdFocused,
+	const refIdGroupClass = cr('cr-sign-up-form__group', {
+		'cr-sign-up-form__group--focused': refIdFocused,
 	});
 
 	const logo = (
@@ -237,11 +237,11 @@ export const Register = (props: RegisterFormProps) => {
 
 	return (
 		<form>
-			<div className="cr-sign-up-form2" onKeyPress={handleEnterPress}>
-				{/* {!isMobileDevice && <div className="cr-sign-up-form__options-group">
+			<div className="cr-sign-up-form" onKeyPress={handleEnterPress}>
+				{!isMobileDevice && <div className="cr-sign-up-form__options-group">
                   <div className="cr-sign-up-form__option">
                     <div className="cr-sign-up-form__option-inner cr-sign-in-form__tab-signin" onClick={onSignIn}>
-                        {labelSignIn || 'Sign In'}
+                        {'Sign In'}
                     </div>
                   </div>
                   <div className="cr-sign-up-form__option">
@@ -250,8 +250,8 @@ export const Register = (props: RegisterFormProps) => {
                     </div>
                   </div>
                 </div>
-                } */}
-				<div className="cr-sign-up-form2__form-content">
+                } 
+				<div className="cr-sign-up-form__form-content">
 					{logo}
 					<div
 						data-bn-type="text"
@@ -309,11 +309,13 @@ export const Register = (props: RegisterFormProps) => {
 					
 					<div className={confirmPasswordGroupClass}>
 					{renderPasswordInput()}
+			
+					<div className={cr('cr-sign-up-form__group', {'cr-sign-up-form__group--focused': passwordFocused,})}>
 						<FormInput
 							type="password"
-							label={confirmPasswordLabel || 'Confirm Password'}
-							placeholder={confirmPasswordLabel || 'Confirm Password'}
-							defaultLabel="Confirm Password"
+							label={confirmPasswordLabel || 'Confirme sua senha'}
+							placeholder={confirmPasswordLabel || 'Confirme sua senha'}
+							defaultLabel="Confirme sua senha"
 							handleChangeInput={props.handleChangeConfirmPassword}
 							inputValue={confirmPassword}
 							handleFocusInput={props.handleFocusConfirmPassword}
@@ -321,26 +323,27 @@ export const Register = (props: RegisterFormProps) => {
 							classNameInput="cr-sign-up-form__input"
 							autoFocus={false}
 						/>
+						</div>
 						{confirmationError && <div className={'cr-sign-up-form__error'}>{confirmationError}</div>}
 					</div>
 					<div className={refIdGroupClass}>
-						<p style={{ cursor: 'pointer' }} onClick={handleDropdown}>
-							Código de indicação (Opcionals) <CaretDownOutlined />
+						<p style={{ cursor: 'pointer', fontSize: '14px', color: '#888888', marginTop: '20px', marginBottom: '-30px' }} onClick={handleDropdown} >
+							Código de indicação (Opcional) <CaretDownOutlined />
 						</p>
 						{renderFormInput()}
 					</div>
 
-					<Form className="cr-sign-up-form2_group" onClick={e => props.clickCheckBox(e)}>
+					<Form className="cr-sign-up-form_group" onClick={e => props.clickCheckBox(e)}>
 						<Form.Check
 							type="checkbox"
 							custom
 							id="agreeWithTerms"
 							checked={hasConfirmed}
-							label={termsMessage ? termsMessage : 'I  agree all statements in terms of service'}
+							label={termsMessage ? termsMessage : 'Li e aceito os Termos de uso e a Política de Privacidade'}
 						/>
 					</Form>
 					{props.renderCaptcha}
-					<div className="cr-sign-up-form2__button-wrapper">
+					<div className="cr-sign-up-form__button-wrapper">
 						<Button
 							block={true}
 							type="button"
@@ -352,16 +355,16 @@ export const Register = (props: RegisterFormProps) => {
 							{isLoading ? 'Loading...' : labelSignUp ? labelSignUp : 'Cadastro'}
 						</Button>
 
-						<div style={{ textAlign: 'center', marginTop: '20px', fontSize: '15px', color: '#595959', }}>
+						<div style={{ textAlign: 'center', marginTop: '20px', fontSize: '15.5px', color: '#595959', }}>
 							Já possui conta?
 							<span
 								data-bn-type="link"
-								className="cr-sign-up-form2__button-wrapper__login"
+								className="cr-sign-up-form__button-wrapper__login"
 								onClick={onSignIn}
 								style={{
 									fontSize: '16px',
 									marginLeft: '6px',
-									color: '#18988F',
+									color: '#009991',
 								}}
 							>
 								Acessar plataforma

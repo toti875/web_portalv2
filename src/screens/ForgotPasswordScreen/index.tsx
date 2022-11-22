@@ -37,7 +37,7 @@ class ForgotPasswordComponent extends React.Component<Props, ForgotPasswordState
 	}
 
 	public componentDidMount() {
-		setDocumentTitle('Forgot password');
+		setDocumentTitle('Reset de senha');
 	}
 
 	public render() {

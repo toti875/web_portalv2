@@ -97,7 +97,7 @@ import {
 	ProfileScreen,
 } from '../../screens';
 
-import { LandingScreen, DocumentationScreen } from '../../v2/src/screens';
+import { LandingScreen, DocumentationScreen, SignUpScreen } from '../../v2/src/screens';
 
 import { LandingScreenMobile } from '../../v2/src/mobile/screens';
 
@@ -496,6 +496,9 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					
 					<PublicRoute path="/login" component={LogInScreen} />
 					<PublicRoute path="/register" component={RegisterScreen} />
+					<PublicRoute path="/signup" component={SignUpScreen} />
+
+					
 					
 
 							

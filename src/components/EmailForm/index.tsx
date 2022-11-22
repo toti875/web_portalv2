@@ -99,9 +99,9 @@ const EmailForm = React.memo((props: EmailFormProps) => {
 							disabled={isLoading || !email.match(EMAIL_REGEX)}
 							onClick={e => handleClick(undefined, e)}
 							size="lg"
-							variant="primary"
+							variant="sign-up"
 						>
-							{isLoading ? 'Loading...' : buttonLabel ? buttonLabel : 'Send'}
+							{isLoading ? 'Loading...' : buttonLabel ? buttonLabel : 'Enviar link'}
 						</Button>
 					</div>
 				</div>

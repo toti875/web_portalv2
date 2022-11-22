@@ -206,14 +206,14 @@ export const WalletListScreen = () => {
 					
 				
 				}}
-			>{/*}
+			>{
 				<div className="row">
 					<div className="col-12">
-						<EstimatedValue wallets={wallets} />
+						<p style={{fontSize: '19px', color: '#f5f5f5', fontWeight: 600, paddingBottom: '40px', paddingTop: '40px', }}>Minhas Carteiras </p>
 					</div>
 				</div>
 
-			*/}
+			}
 				<div className="row mt-3">
 					<div className="col-12 d-flex justify-content-between align-items-center flex-row">
 						<input

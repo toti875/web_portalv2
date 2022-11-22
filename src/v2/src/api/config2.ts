@@ -2,7 +2,7 @@
 export const defaultConfig2: Config2 = {
     
     api2: {
-        authUrl: '',
+        authUrl: 'http://www.fortem1.com.br/api/v2/barong',
         tradeUrl: '',
         applogicUrl: '',
         rangerUrl: '',
@@ -10,13 +10,14 @@ export const defaultConfig2: Config2 = {
     },
     finex: false,
     withCredentials: false,
-    incrementalOrderBook: false,
+    incrementalOrderBook: true,
     isResizable: false,
     isDraggable: false,
     showLanding: true,
     sentryEnabled: false,
     captchaLogin: false,
-    usernameEnabled: false,
+    captcha_type: 'none',
+    usernameEnabled: true,
     gaTrackerKey: '',
     minutesUntilAutoLogout: '5',
     msAlertDisplayTime: '5000',
@@ -27,7 +28,7 @@ export const defaultConfig2: Config2 = {
         defaultStorageLimit: '50',
         orderBookSideLimit: '25'
     },
-    languages: ['pt', 'ru'],
+    languages: ['pt', 'en'],
     kycSteps: [
         'email',
         'phone',
@@ -57,6 +58,7 @@ export const isFinexEnabled = (): boolean => Cryptobase2.config2.finex ;
 export const showLanding = (): boolean => Cryptobase2.config2.showLanding;
 export const sentryEnabled = (): boolean => Cryptobase2.config2.sentryEnabled;
 export const captchaLogin = (): boolean => Cryptobase2.config2.captchaLogin;
+export const captchaType = () => Cryptobase2.config2.captcha_type;
 export const minutesUntilAutoLogout = (): string => Cryptobase2.config2.minutesUntilAutoLogout;
 export const sessionCheckInterval = (): string => Cryptobase2.config2.sessionCheckInterval;
 export const balancesFetchInterval = (): string => Cryptobase2.config2.balancesFetchInterval;

@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
 import { CustomInput, PasswordStrengthMeter } from '../';
 import { isUsernameEnabled } from '../../api';
+import { captchaType, passwordEntropyStep } from '../../api/config2';
 import {
     EMAIL_REGEX,
     ERROR_LONG_USERNAME,
@@ -57,13 +58,11 @@ export interface SignUpFormProps {
     usernameFocused: boolean;
     emailFocused: boolean;
     passwordFocused: boolean;
-    captchaType: 'recaptcha' | 'geetest' | 'none';
     renderCaptcha: JSX.Element | null;
     reCaptchaSuccess: boolean;
     geetestCaptchaSuccess: boolean;
     captcha_response?: string | GeetestCaptchaResponse;
     currentPasswordEntropy: number;
-    minPasswordEntropy: number;
     passwordErrorFirstSolved: boolean;
     passwordErrorSecondSolved: boolean;
     passwordErrorThirdSolved: boolean;
@@ -89,10 +88,9 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
     passwordFocused,
     referalCodeLabel,
     termsMessage,
-    captchaType,
-    geetestCaptchaSuccess,
+    //geetestCaptchaSuccess,
     hasConfirmed,
-    reCaptchaSuccess,
+    //reCaptchaSuccess,
     currentPasswordEntropy,
     passwordPopUp,
     password,
@@ -108,7 +106,6 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
     handleChangePassword,
     passwordErrorThirdSolved,
     handleFocusPassword,
-    minPasswordEntropy,
     refIdFocused,
     validateForm,
     onSignUp,
@@ -128,15 +125,19 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
     const { formatMessage } = useIntl();
 
     const disableButton = React.useMemo((): boolean => {
+        const captchaTypeValue = captchaType();
+
         if (!hasConfirmed || isLoading || !email.match(EMAIL_REGEX) || !password || !confirmPassword ||
             (isUsernameEnabled() && !username.match(USERNAME_REGEX))) {
 
             return true;
         }
-        if (captchaType === 'recaptcha' && !reCaptchaSuccess) {
+
+        if (captchaTypeValue === 'recaptcha') {
             return true;
         }
-        if (captchaType === 'geetest' && !geetestCaptchaSuccess) {
+
+        if (captchaTypeValue === 'geetest' ) {
             return true;
         }
 
@@ -146,11 +147,11 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
         confirmPassword,
         username,
         email,
-        geetestCaptchaSuccess,
+        
         hasConfirmed,
         isLoading,
         password,
-        reCaptchaSuccess,
+       
     ]);
 
     const renderPasswordInput = React.useCallback(() => {
@@ -163,7 +164,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                 <CustomInput
                     type="password"
                     label={passwordLabel || 'Password'}
-                    placeholder={passwordLabel || 'Password'}
+                    placeholder={passwordFocused ? '' : passwordLabel || 'Password'}
                     defaultLabel="Password"
                     handleChangeInput={handleChangePassword}
                     inputValue={password}
@@ -171,10 +172,11 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                     classNameLabel="cr-sign-up-form__label"
                     classNameInput="cr-sign-up-form__input"
                     autoFocus={false}
+                    labelVisible={passwordFocused}
                 />
                 {password ? (
                     <PasswordStrengthMeter
-                        minPasswordEntropy={minPasswordEntropy}
+                        minPasswordEntropy={passwordEntropyStep()}
                         currentPasswordEntropy={currentPasswordEntropy}
                         passwordExist={password !== ''}
                         passwordErrorFirstSolved={passwordErrorFirstSolved}
@@ -194,7 +196,6 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
         passwordPopUp,
         handleChangePassword,
         handleFocusPassword,
-        minPasswordEntropy,
         passwordErrorFirstSolved,
         passwordErrorSecondSolved,
         passwordErrorThirdSolved,
@@ -229,7 +230,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
     );
 
     const handleEnterPress = React.useCallback(
-        (event: React.KeyboardEvent<HTMLInputElement>) => {
+        (event: React.KeyboardEvent<HTMLDivElement>) => {
             if (event.key === 'Enter') {
                 event.preventDefault();
 
@@ -259,20 +260,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
     return (
         <form>
             <div className="cr-sign-up-form" onKeyPress={handleEnterPress}>
-                {!isMobileDevice && (
-                    <div className="cr-sign-up-form__options-group">
-                        <div className="cr-sign-up-form__option">
-                            <div
-                                className="cr-sign-up-form__option-inner cr-sign-in-form__tab-signin"
-                                onClick={onSignIn}>
-                                {labelSignIn || 'Sign In'}
-                            </div>
-                        </div>
-                        <div className="cr-sign-up-form__option">
-                            <div className="cr-sign-up-form__option-inner __selected">{labelSignUp || 'Sign Up'}</div>
-                        </div>
-                    </div>
-                )}
+                
                 <div className="cr-sign-up-form__form-content">
                     {image ? (
                         <h1 className="cr-sign-up-form__title">
@@ -283,13 +271,13 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                         <div
                             className={cr('cr-sign-up-form__group', {
                                 'cr-sign-up-form__group--focused': usernameFocused,
-                                'cr-sign-up-form__group--errored': username.length &&
-                                !usernameFocused && !username.match(USERNAME_REGEX),
+                                'cr-sign-up-form__group--errored':
+                                    username.length && !usernameFocused && !username.match(USERNAME_REGEX),
                             })}>
                             <CustomInput
                                 type="text"
                                 label={usernameLabel || 'Username'}
-                                placeholder={usernameLabel || 'Username'}
+                                placeholder={usernameFocused ? '' : usernameLabel || 'Username'}
                                 defaultLabel="Username"
                                 handleChangeInput={handleChangeUsername}
                                 inputValue={username}
@@ -297,11 +285,10 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                                 classNameLabel="cr-sign-up-form__label"
                                 classNameInput="cr-sign-up-form__input"
                                 autoFocus={!isMobileDevice}
+                                labelVisible={usernameFocused}
                             />
                             {!username.match(USERNAME_REGEX) && !usernameFocused && username.length ? (
-                                <div className="cr-sign-up-form__error">
-                                    {renderUsernameError(username)}
-                                </div>
+                                <div className="cr-sign-up-form__error">{renderUsernameError(username)}</div>
                             ) : null}
                         </div>
                     ) : null}
@@ -312,7 +299,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                         <CustomInput
                             type="email"
                             label={emailLabel || 'Email'}
-                            placeholder={emailLabel || 'Email'}
+                            placeholder={emailFocused ? '' :emailLabel || 'Email'}
                             defaultLabel="Email"
                             handleChangeInput={handleChangeEmail}
                             inputValue={email}
@@ -320,6 +307,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                             classNameLabel="cr-sign-up-form__label"
                             classNameInput="cr-sign-up-form__input"
                             autoFocus={!isUsernameEnabled() && !isMobileDevice}
+                            labelVisible={emailFocused}
                         />
                         {emailError && <div className="cr-sign-up-form__error">{emailError}</div>}
                     </div>
@@ -331,7 +319,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                         <CustomInput
                             type="password"
                             label={confirmPasswordLabel || 'Confirm Password'}
-                            placeholder={confirmPasswordLabel || 'Confirm Password'}
+                            placeholder={confirmPasswordFocused ? '' :confirmPasswordLabel || 'Confirm Password'}
                             defaultLabel="Confirm Password"
                             handleChangeInput={handleChangeConfirmPassword}
                             inputValue={confirmPassword}
@@ -339,6 +327,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                             classNameLabel="cr-sign-up-form__label"
                             classNameInput="cr-sign-up-form__input"
                             autoFocus={false}
+                            labelVisible={confirmPasswordFocused}
                         />
                         {confirmationError && <div className={'cr-sign-up-form__error'}>{confirmationError}</div>}
                     </div>
@@ -349,7 +338,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                         <CustomInput
                             type="text"
                             label={referalCodeLabel || 'Referral code'}
-                            placeholder={referalCodeLabel || 'Referral code'}
+                            placeholder={refIdFocused ? '' : referalCodeLabel || 'Referral code'}
                             defaultLabel="Referral code"
                             handleChangeInput={handleChangeRefId}
                             inputValue={refId}
@@ -357,6 +346,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                             classNameLabel="cr-sign-up-form__label"
                             classNameInput="cr-sign-up-form__input"
                             autoFocus={false}
+                            labelVisible={refIdFocused}
                         />
                     </div>
                     <Form className="cr-sign-up-form__group" onClick={clickCheckBox}>

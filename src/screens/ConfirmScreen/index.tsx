@@ -63,17 +63,19 @@ class ConfirmComponent extends React.Component<Props> {
 
 		return (
 			<div className="pg-confirm">
+				<div className="pg-confirm-inner">
 				<div className="pg-confirm__logo">
 					<img src={Logo} alt="" className="pg-logo__img" />
 					
 				</div>
-				<h3 className="pg-confirm__title">
+				<p className="pg-confirm__title">
 					<FormattedMessage id={`page.confirm.title.${step}`} />
-				</h3>
-				<h6 className="pg-confirm__subtitle">
+				</p>
+				<p className="pg-confirm__subtitle">
 					<FormattedMessage id={`page.confirm.subtitle.${step}`} />
-				</h6>
+				</p>
 				<div className="pg-confirm__content">{this.renderVerificationStep(step)}</div>
+				</div>
 			</div>
 		);
 	}

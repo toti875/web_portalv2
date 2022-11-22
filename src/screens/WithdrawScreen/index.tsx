@@ -20,7 +20,7 @@ import {
 } from '../../modules';
 
 export const WithdrawScreen = () => {
-	setDocumentTitle('Withdraw');
+	setDocumentTitle('Sacar');
 
 	const { currency_id } = useParams<{ currency_id: string }>();
 
@@ -88,12 +88,12 @@ export const WithdrawScreen = () => {
 			style={{
 				position: 'relative',
 				padding: '20px 6% 20px 6%',
-				marginTop: '-7px',
-				backgroundColor: '#2D2E3D',
-				color: '#fff',
+				marginTop: '10px',
+				backgroundColor: '#181819',
+				color: '#F5F5F5',
 			}}
 		>
-			<div className="row" style={{ padding: '0 1rem', backgroundColor: '#313445' }}>
+			<div className="row" style={{ padding: '0 1rem', backgroundColor: '#181819' }}>
 				<div className="col-6" style={{ padding: '20px 2%' }}>
 					<WithdrawInfo
 						wallets={wallets}
@@ -117,7 +117,7 @@ export const WithdrawScreen = () => {
 					<WithdrawHistory currency_id={currency_id.toLowerCase()} />
 				</div>
 			</div>
-			<div style={{ position: 'fixed', top: '10%', left: '2rem' }}>
+			<div style={{ position: 'fixed', top: '140px', left: '20px' }}>
 				<img
 					style={{ cursor: 'pointer' }}
 					src="https://img.icons8.com/fluent/48/000000/circled-left.png"
