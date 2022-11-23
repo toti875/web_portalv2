@@ -287,16 +287,16 @@ export const pt = {
 	'page.body.profile.header.account.content.twoFactorAuthentication': '2FA',
 	'page.body.profile.header.account.content.twoFactorAuthentication.message.enable': 'Habilitado',
 	'page.body.profile.header.account.content.twoFactorAuthentication.message.disable': 'Desabilitado',
-	'page.body.profile.header.account.content.twoFactorAuthentication.header': 'AUTENTICAÇÃO EM DUAS ETAPAS',
+	'page.body.profile.header.account.content.twoFactorAuthentication.header': 'AUTENTICAÇÃO EM DUAS ETAPAS (2FA)',
 	'page.body.profile.header.account.content.twoFactorAuthentication.message.1':
-		'Baixe e instale no seu celular a última versão do app Google Authenticator disponível na ',
+		'Baixe gratuitamente e instale no seu celular a última versão do aplicativo Google Authenticator disponível na ',
 	'page.body.profile.header.account.content.twoFactorAuthentication.message.or': 'ou ',
-	'page.body.profile.header.account.content.twoFactorAuthentication.message.2': 'Scanei o QR code ao lado ou digite o código MFA apresentado abaixo:',
+	'page.body.profile.header.account.content.twoFactorAuthentication.message.2': 'Crie uma nova conta, digitalize o QR code ao lado ou digite o CÓDIGO MFA apresentado abaixo.',
 	'page.body.profile.header.account.content.twoFactorAuthentication.message.3':
 		'* Salve este código em um local seguro.',
-	'page.body.profile.header.account.content.twoFactorAuthentication.message.mfa': 'Código MFA',
-	'page.body.profile.header.account.content.twoFactorAuthentication.message.4': 'Digite o código de 6 dígitos no campo ao lado:',
-	'page.body.profile.header.account.content.twoFactorAuthentication.subHeader': 'Código 2FA',
+	'page.body.profile.header.account.content.twoFactorAuthentication.message.mfa': 'CÓDIGO MFA',
+	'page.body.profile.header.account.content.twoFactorAuthentication.message.4': 'Insira seu código de autenticação de 6 dígitos do aplicativo Google Authenticator no campo ao lado:',
+	'page.body.profile.header.account.content.twoFactorAuthentication.subHeader': 'Código de 6 dígitos',
 	'page.body.profile.header.account.content.twoFactorAuthentication.enable': 'HABILITAR',
 	'page.body.profile.header.account.content.twoFactorAuthentication.disable': 'DESABILITAR 2FA',
 	'page.body.profile.header.account.content.twoFactorAuthentication.modalBody': 'Por favor, entre em contato com o suporte para desabilitar',
@@ -719,8 +719,8 @@ export const pt = {
 	'authz.invalid_api_key_headers': 'Blank or missing API Key headers',
 	'authz.permission_denied': 'Path is denylisted',
 	'authz.unexistent_apikey': 'X-Auth-Apikey header is invalid',
-	'authz.client_session_mismatch': 'Session mismatch',
-	'authz.csrf_token_mismatch': 'CSRF token mismatch',
+	'authz.client_session_mismatch': 'Sessão inválida',
+	'authz.csrf_token_mismatch': 'Token de autenticação inválido',
 
 	// validation errors
 	// identity module
@@ -728,8 +728,8 @@ export const pt = {
 	'identity.user.empty_email': 'Email inválido',
 	'identity.user.missing_password': 'Insira sua senha',
 	'identity.user.empty_password': 'Insira sua senha',
-	'identity.user.missing_token': 'Insira seu token de acesso',
-	'identity.user.empty_token': 'Insira seu token de acesso',
+	'identity.user.missing_token': 'Insira seu token 2FA',
+	'identity.user.empty_token': 'Insira seu token de 2FA',
 	'identity.user.missing_reset_password_token': 'Token de reset de senha inválido',
 	'identity.user.empty_reset_password_token': 'Token de reset de senha inválido',
 	'identity.user.missing_confirm_password': 'Insira a confirmação da senha',
@@ -740,8 +740,8 @@ export const pt = {
 	'identity.session.invalid_captcha_format': 'Formato do captcha inválido',
 
 	// resource module
-	'resource.otp.missing_code': 'Insira seu token de acesso',
-	'resource.otp.empty_code': 'Insira seu token de acesso',
+	'resource.otp.missing_code': 'Insira seu token 2FA',
+	'resource.otp.empty_code': 'Insira seu token 2FA',
 
 	'resource.labels.missing_key': 'Key is missing',
 	'resource.labels.empty_key': 'Key is missing or empty',

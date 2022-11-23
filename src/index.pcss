@@ -6,6 +6,93 @@ color: #F5F5F5 !important;
 
 }
 
+.cr-email-form__label {
+
+
+	background: transparent !important;
+
+}
+
+
+{/* TELA DE CONFIRMAÇÃO DO EMAIL NO CADASTRO */}
+.pg-emailverification-container {
+	align-items: center;
+	background-size: cover;
+	display: flex;
+	border-radius: 10px !important;
+	height: calc(100vh - calc(var(--gap) * 9.84));
+	justify-content: center;
+	width: 100%;
+
+	.pg-emailverification {
+		align-items: center;
+		background: #dde1e7 !important;
+		
+		border-radius: 10px !important;
+		box-shadow: 0 10px 15px var(--shadow-color-level-2) 10px !important;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: calc(var(--big-gap) * 7.07);
+
+		&-title {
+			align-items: center;
+			background: #dde1e7 !important;
+			border-bottom: 2px solid #888888;
+			color: #555555;
+			display: flex;
+			font-size: 18px;
+			font-weight: 600;
+			height: var(--big-gap);
+			justify-content: center;
+			text-transform: uppercase;
+			width: 100%;
+		}
+
+		&-body {
+			background: #dde1e7 !important;
+			display: flex;
+			flex-direction: column;
+			height: calc(var(--big-gap) * 3.6);
+			justify-content: space-around;
+
+			&-text {
+				align-items: center;
+				color: #666666;
+				display: flex;
+				font-size: calc(var(--big-gap) * 0.27);
+				justify-content: center;
+				padding: 0 calc(var(--big-gap) * 0.9);
+				text-align: center;
+			}
+
+			&-container {
+				align-items: center;
+				display: flex;
+				justify-content: center;
+
+				&-button {
+					background: none;
+					border: none;
+					color: var(--secondary-contrast-cta-color);
+					cursor: pointer;
+					font-size: calc(var(--big-gap) * 0.23);
+					outline: none;
+					text-decoration: underline;
+					transition: 0.2s;
+
+					&:hover {
+						color: var(--primary-text-color);
+						transition: 0.2s;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
 .cr-wallet-item__single {
 	align-items: center;
 	background: transparent;
@@ -1019,7 +1106,7 @@ color: #F5F5F5 !important;
   min-width: 380px !important;
   max-height: 100% !important;
 
-  .input-group input, input-focused{
+  .input-group input, input-focused {
     //padding-left: 45px !important;
     font-size: 15px !important;
     color: #595959 !important;
@@ -1064,7 +1151,7 @@ color: #F5F5F5 !important;
   }
 
 
-  .input-group-lg input, input-focused{
+  .input-group-lg input, input-focused {
     //padding-left: 45px !important;
     font-size: 15px !important;
     color: #595959 !important;
@@ -1095,88 +1182,86 @@ color: #F5F5F5 !important;
 
 .cr-copyable-text-field {
   align-items: center;
-  background: var(--input-background-color);
-  background: inherit;
-  border: none;
+  
+  
+  
   border-radius: calc(var(--gap) * 0.66);
   display: flex;
   flex-grow: 1;
   justify-content: space-between;
-  padding: 0;
+  
+  
+  height: 101% !important;
+  padding: 10px !important;
+  vertical-align: middle !important;
+  
 
   legend {
-    background: var(--input-legend-color);
+    background: transparent !important;
     margin-bottom: auto;
     margin-top: calc(var(--gap) * -1.5);
     position: absolute;
-    width: max-content;
+    
+	
   }
 
   &__input {
-    background: var(--input-background-color);
-    background: inherit;
-    color: var(--input-text-color);
+    background: #dde1e7 !important;
+    color: #555555;
     display: flex;
-    flex: 1;
+    flex: 2;
     flex-direction: row;
     padding: calc(var(--gap) * 1.67) calc(var(--gap) * 0.83) calc(var(--gap) * 0.83) var(--gap) !important;
+	width: 110% !important;
 
     input {
       background: unset;
-      color: var(--input-text-color);
+	  
+      
     }
   }
 
   .cr-copyable-text-field {
-    padding: 0;
+    
   }
 
   input {
-    background: var(--input-background-color);
-    border-radius: 0;
+    background: transparent;
+    
     border-style: none;
     color: var(--input-text-color);
     outline: none;
     width: 100%;
+	
   }
 }
 
 .pg-profile-two-factor-auth {
-  display: block;
-  margin: 0 auto;
-  width: 535px;
-  background: #181819 !important;
   
-  border-radius: 5px !important;
-
-
+  margin: 0 auto !important;
+  max-width: 680px;
   
   
-
+  
+  
+  
+  
   &__header {
     display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    align-text: center !important;
-    
-    
-    margin: 0 auto !important;
-    
-    background: #181819 !important;
+  
+    justify-content: space-around;
+	padding-left: 23% !important;
+  
+    background: transparent !important;
     
     border-bottom: 2px solid var(--divider-color-level-2);
     color: var(--primary-text-color);
     font-size: calc(var(--gap) * 2.33);
-    font-style: normal;
+    font-weight: 600;
     height: calc(var(--gap) * 9.66);
     line-height: calc(var(--gap) * 9.66);
-    text-transform: uppercase;
+    
 
-    img {
-      cursor: pointer;
-      margin-right: -100px !important;
-      align-items: right  !important;
-    }
   }
 
   &__copyablefield {
@@ -1184,87 +1269,104 @@ color: #F5F5F5 !important;
     justify-content: space-between;
     padding-left: calc(var(--gap) * 11.5);
     position: relative;
+	
 
     &__container {
       position: relative;
       width: 100%;
-      background-color: #181819 !important;
+	  
+	  padding: 0px !important;
 
       legend {
-        background: var(--input-background-color);
-        font-size: calc(var(--gap) * 2.33);
-        left: 3%;
-        padding: 0 3px;
-        position: absolute;
-        top: -10px;
-        width: auto;
+        
+        font-size: 15px;
+        left: 15%;
+        
+        position: relative;
+        top: 32px;
+        
         z-index: 5;
       }
 
       &:focus-within {
         legend {
-          color: var(--input-legend-color-active);
+			background: transparent !important;
+          
         }
       }
     }
 
     fieldset {
       background: inherit;
-      border: 1px solid var(--input-border-color);
-      border-radius: calc(var(--gap) * 0.66);
+      border: 1px dotted #c0c0c0;
+      border-radius: 5px;
       flex-grow: 1;
       overflow: hidden;
-      position: relative;
-      width: 100%;
+	  
+      
+      width: 500px !important;
+	  margin: 0 auto !important;
 
       .cr-copyable-text-field {
-        padding: calc(var(--gap) * 0.83) calc(var(--gap) * 0.83) calc(var(--gap) * 0.83) var(--gap);
-        height: 48px;
+        
+        height: 40px;
 
+		
         .input-group {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
 
+
           .custom-input {
-            width: 70%;
+            
+			display: none !important;
 
             label {
-              margin-top: -18px;
+				display: none !important;
+			  
             }
+
+			
+
           }
 
           .btn-primary {
-            border-radius: 0.3rem;
+            border-radius: 5px;
+			font-size: 14px !important;
+			bottom: 5px  !important;
+			padding-left: 20px  !important;
+			padding-right: 20px  !important;
           }
         }
       }
 
       &:focus-within {
-        border: 1px solid var(--input-border-color-active) !important;
+        
         border-radius: calc(var(--gap) * 0.66);
         overflow: hidden;
 
         legend {
-          color: var(--input-legend-color-active) !important;
+          color: #F5F5F5 !important;
+		  background: transparent !important;
         }
       }
 
       .cr-deposit-crypto__copyable-title {
-        margin-top: calc(var(--gap) * -1.5);
-        position: absolute;
-        width: max-content;
+        
+        position: relative;
+        width:100px !important;
       }
 
       .pg-copyable-text-field {
         &__input {
-          border: none;
-          padding: calc(var(--gap) * 0.83) calc(var(--gap) * 0.83) calc(var(--gap) * 0.83) var(--gap) !important;
+          border: none !important;
+          
 
           input {
-            background: transparent;
-            box-sizing: border-box;
-            color: var(--input-text-color);
+            
+            
+            
           }
         }
       }
@@ -1274,56 +1376,60 @@ color: #F5F5F5 !important;
   &__body {
     &--text {
       background: #181819 !important;
-
-      display: flex;
+	  padding-left: 30px !important;
+      display: flex !important;
       flex-direction: column;
-      justify-content: space-between;
+      
 
       &--last {
-        justify-content: center;
+
 
         span {
-          font-size: calc(var(--font-size) * 3);
+
         }
       }
 
       span {
-        font-size: calc(var(--font-size) * 3);
+        
       }
 
       &--group {
-        align-items: center;
-        display: flex;
-        margin: calc(var(--gap) * 2) 0;
-        justify-content: space-between;
+        align-items: center !important;
+        display: flex !important;
+        margin: calc(var(--gap) * 3) 0;
+        justify-content: space-between !important;
 
         a {
-          color: var(--primary-cta-color);
+          color: #1EDED0 !important;
         }
 
         span {
           font-size: var(--font-size);
+		  
         }
 
         div {
-          padding: 0 calc(var(--gap) * 1.5) 0 calc(var(--gap) * 4.16);
+			
         }
 
         .cr-email-form__group {
           padding: 0;
-          max-width: 45%;
+          width: 30% !important;
           margin-bottom: 0 !important;
 
           .custom-input {
-            padding: 0;
-            margin-bottom: 0 !important;
+            
+            
 
             label {
-              left: 36px !important;
+            
+			
             }
-
+			
             input {
-              height: 48px;
+              height: 180px !important;
+			  font-size: 80px !important;
+
             }
           }
         }
@@ -1331,31 +1437,42 @@ color: #F5F5F5 !important;
     }
 
     .pg-profile-two-factor-auth__qr {
-      height: 120px;
+      height: 160px !important;
+	  margin-top: 30px !important;
+	  margin-left: 15px !important;
+	  
+	  
     }
 
     .cr-input {
-      width: 100%;
-
+	  
       input {
-        color: var(--input-text-color);
-        font-size: var(--font-size);
-        text-align: left;
-        width: 100%;
+        
+        
+        
+        
+		
       }
     }
   }
 
   &__form {
     background: #181819 !important;
-    
+    margin: auto !important;
+	margin-top: 60px !important;
     box-shadow: 0 10px 15px #000;
+	border: 1px solid #c0c0c0;
+	border-radius: 10px;
+	
 
     .cr-copyable-text-field {
       border: none;
 
       input {
-        margin: 0;
+        
+		margin: 0 auto !important;
+		width: 380px !important;
+		letter-spacing: 0.07em;
       }
     }
   }
@@ -1369,15 +1486,13 @@ color: #F5F5F5 !important;
   }
 
   .cr-copyable-text-field {
-    border-color: var(--input-border-color);
+
 
     input {
-      color: var(--input-text-color);
-      font-size: var(--font-size);
     }
 
     .input-group-append {
-      right: 1px;
+      
     }
   }
 }
@@ -2259,7 +2374,8 @@ color: #F5F5F5 !important;
 
 .pg-profile-page__referral {
 	
-  height: 120px !important;
+  height: 180px !important;
+  width: 420px !important;
   color: #c0c0c0 !important;
   font-size: 14px !important;
   margin-right: 30px !important;  
@@ -2276,6 +2392,11 @@ color: #F5F5F5 !important;
 		background: inherit;
 		border: 1px dotted #c0c0c0;
 		border-radius: 5px;
+		height: content;
+		padding-top: 10px !important;
+		padding-bottom: 20px!important;
+		padding-left: 5px !important;
+		padding-right: 5px !important;
 
 		overflow: hidden;
 		
@@ -5119,7 +5240,6 @@ color: #F5F5F5 !important;
     
 .btn-sign-up:disabled {
 		background: #535353 !important;
-		border: none;
 		color: var(--button-primary-cta-text-color-disabled);
 		cursor: not-allowed;
     border: none !important;
@@ -5127,8 +5247,7 @@ color: #F5F5F5 !important;
 	}
 .btn-sign-up:not(:disabled):not(.disabled):active:focus {
 	background: #535353;
-	box-shadow: none;
-	color: var(--button-primary-cta-text-color-active);
+	box-shadow: none !important;
   border: none !important;
   
 }
@@ -5152,6 +5271,7 @@ color: #F5F5F5 !important;
 		
 		color: #F5F5F5 !important;
 		transition: 0.2s !important;
+		border: none !important;
     opacity: 0.98 !important;
     -webkit-filter: brightness(120%);
 	}
@@ -5160,8 +5280,8 @@ color: #F5F5F5 !important;
 .btn-sign-up:active,
 	.btn-sign-up:focus {
 		background: #009991;
-		box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgb(94 104 121 / 29%) !important;
-		box-shadow: none;
+		
+		box-shadow: none !important;
 		color: #F5F5F5 !important;
     opacity: 0.91 !important;
 	}
@@ -7067,7 +7187,7 @@ color: #F5F5F5 !important;
         min-height: 20%;
   
         .cr-copyable-text-field {
-          background: var(--input-background-color);
+          background: transparent;
           border: none;
           width: 70%;
   
@@ -7076,7 +7196,7 @@ color: #F5F5F5 !important;
           }
   
           input {
-            color: var(--input-text-color);
+            color: #c0c0c0;
           }
         }
   
@@ -7299,7 +7419,7 @@ color: #F5F5F5 !important;
   
         .pg-copyable-text__section {
           margin: auto;
-          max-width: calc(var(--big-gap) * 6.33);
+          
           overflow: hidden;
           padding: calc(var(--gap) * 4) 0 calc(var(--gap) * 2) 0;
           position: relative;
@@ -7310,15 +7430,15 @@ color: #F5F5F5 !important;
             padding: 0 8px 0 9px;
   
             legend {
-              color: #009991;
+              color: #c0c0c0;
             }
   
             &:focus-within {
-              border: 1px solid #009991 !important;
+              border: 1px solid #c0c0c0 !important;
   
               legend,
               label {
-                color: #009991 !important;
+                color: #c0c0c0 !important;
               }
             }
   
@@ -7520,12 +7640,12 @@ color: #F5F5F5 !important;
   
   .cr-modal {
     .cr-email-form {
-      background: var(--body-background-color);
+      background: blue;
       min-height: calc(var(--big-gap) * 5);
       width: calc(var(--big-gap) * 7.06);
   
       &__option {
-        background: var(--subheader-background-color);
+        background: blue;
         border-bottom: 2px solid var(--divider-color-level-2);
       }
   
@@ -7535,7 +7655,7 @@ color: #F5F5F5 !important;
       }
   
       &__label {
-        background: var(--input-background-color);
+        background: yellow;
         position: absolute;
         top: 0;
       }
@@ -7568,11 +7688,11 @@ color: #F5F5F5 !important;
   
       &__group--focused {
         .cr-sign-in-form__label {
-          color: var(--input-legend-color-active);
+          color: #c0c0c0;
         }
   
         input {
-          border-color: #009991  !important;
+          border-color: #c0c0c0!important;
         }
       }
   
@@ -8039,6 +8159,7 @@ color: #F5F5F5 !important;
 
 
 				&:hover {
+					border: none !important;
 					
 				}
 			}

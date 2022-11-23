@@ -117,7 +117,7 @@ class ToggleTwoFactorAuthComponent extends React.Component<Props, State> {
                                 <span className="cr-item-text">{this.translate('page.body.profile.header.account.content.twoFactorAuthentication.message.1')}</span>
                                 <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/app/google-authenticator/id388497605?mt=8">App Store</a>
                                 <span className="cr-item-text"> {this.translate('page.body.profile.header.account.content.twoFactorAuthentication.message.or')}</span>
-                                <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl">Google Play</a>
+                                <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl">Google Play.</a>
                             </div>
                         </div>
                         <div className="row col-12 pg-profile-two-factor-auth__body--text--group">
@@ -139,7 +139,7 @@ class ToggleTwoFactorAuthComponent extends React.Component<Props, State> {
                 <div className="row m-0 pg-profile-two-factor-auth__body">
                     <div className="col-12 pl-2 pg-profile-two-factor-auth__body--text d-inline-block">
                         <div className="row col-12 pg-profile-two-factor-auth__body--text--group">
-                            <div className="col-12 col-sm-5">
+                            <div className="col-12 col-sm-6">
                                 <span className="cr-item-number">3.   </span>
                                 <span className="cr-item-text">{this.translate('page.body.profile.header.account.content.twoFactorAuthentication.message.4')}</span>
                             </div>
@@ -147,7 +147,7 @@ class ToggleTwoFactorAuthComponent extends React.Component<Props, State> {
                                 <CustomInput
                                     handleChangeInput={this.handleOtpCodeChange}
                                     handleFocusInput={() => this.handleFieldFocus('otpCodeFocus')}
-                                    type="tel"
+                                    type="otp"
                                     inputValue={otpCode}
                                     placeholder={this.translate('page.body.profile.header.account.content.twoFactorAuthentication.subHeader')}
                                     onKeyPress={this.handleEnterPress}

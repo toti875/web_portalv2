@@ -191,7 +191,7 @@ const SignInComponent = React.memo((props: SignInProps) => {
 							disabled={isLoading || !email.match(EMAIL_REGEX) || !password}
 							onClick={handleClick as any}
 							size="lg"
-							variant="primary"
+							variant="sign-up"
 						>
 							{isLoading ? 'Loading...' : labelSignIn ? labelSignIn : 'Sign in'}
 						</Button>
