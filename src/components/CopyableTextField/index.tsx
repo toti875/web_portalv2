@@ -21,7 +21,7 @@ export interface CopyableTextFieldProps {
      */
     fieldId: string;
     /**
-     * @default 'Copy'
+     * @default 'Copiar'
      *  Renders text of the label of copy button component
      */
     copyButtonText?: string;
@@ -76,7 +76,7 @@ class CopyableTextField extends React.Component<CopyableTextFieldProps> {
                             size="lg"
                             variant="primary"
                         >
-                            {copyButtonText ? copyButtonText : 'Copy'}
+                            {copyButtonText ? copyButtonText : 'Copiar'}
                         </Button>
                     </InputGroup.Append>
                 </InputGroup>

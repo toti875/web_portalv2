@@ -1,4 +1,6 @@
 
+
+
 {/* LEGENDA DO GRÁFICO UI VISION DO DASHBOARD */}
 .apexcharts-legend-text {
 
@@ -9,8 +11,21 @@ color: #F5F5F5 !important;
 
 
 	background: transparent !important;
+	left: -5px !important;
+	color: #c0c0c0 !important;
 
 }
+.cr-email-form__input input {
+
+	font-size: 18px !important;
+	border: none !important;
+
+}
+.cr-copyable-text-field .input-group .input-group input {
+
+				border: none !important;
+
+			}
 {/* TELA DE CONFIRMAÇÃO DO EMAIL NO CADASTRO */}
 .pg-emailverification-container {
 	align-items: center;
@@ -4187,32 +4202,28 @@ th#react-table table:last-child {
 .btn-sign-up {
 	
   background: #009991 !important;
-	border: 2px solid #009991!important;
+  border: none !important;
   border-radius: 5px !important;
   width: 100% !important;
   margin-top: 20px !important;
-	color: #fff !important;
-	font-weight: var(--button-font-weight);
-	transition: 0.2s !important;
-  -webkit-transition: 300ms ease !important;
+  color: #fff !important;
+  font-weight: var(--button-font-weight);
+  transition: 0.2s !important;
   opacity: 0.71 !important;
   
 }
 .btn-sign-up:hover {
-		
-		color: #F5F5F5 !important;
+		background: #19baaf !important;
+		color: #fff !important;
 		transition: 0.2s !important;
 		border: none !important;
-    opacity: 0.98 !important;
-    -webkit-filter: brightness(120%);
+       	
 	}
 .btn-sign-up:active,
 	.btn-sign-up:focus {
-		background: #009991;
-		
-		box-shadow: none !important;
-		color: #F5F5F5 !important;
-    opacity: 0.91 !important;
+		background: #18988F;
+		color: #fff !important;
+    	
 	}
 .cr-email-form__cros-icon {
     cursor: pointer;
@@ -6980,24 +6991,27 @@ th#react-table table:last-child {
   height: 100% !important;
   justify-content: flex-start !important;
   border-radius: 10px;
-  width: 620px !important;
+  max-width: 600px !important;
+  box-sizing: border-box !important;
+
+  vertical-align: middle !important;
 
   padding: 30px 30px !important;
   box-shadow: -3px -3px 7px #ffffff73,
               2px 2px 5px rgba(94, 104, 121, 0.288) !important;
   
-
-  margin: 0px auto !important;
-	color: #c0c0c0 !important;
+ 
+  opacity: 0.71;
 }
 .pg-confirm__logo {
 
-	margin: 0 auto !important;
-  margin-top: -20px !important;
+	
+  	 margin-top: -30px !important;
+	 opacity: 0.5;
 
   }
 .pg-confirm__logo img {
-      margin: 0 auto !important;
+      
       width: 200px !important;
 
     }
@@ -7008,38 +7022,38 @@ th#react-table table:last-child {
     display: flex !important;
     flex-direction: column !important;
     height: 100% !important;
+	width: 100% !important;
     justify-content: flex-start !important;
-    
+    padding: 10px !important;
     border-radius: 10px;
-    width: 540px !important;
+    
   
-    padding: 30px 30px !important;
+    
     box-shadow: -3px -3px 7px #ffffff73,
                 2px 2px 5px rgba(94, 104, 121, 0.288) !important;
     
   
     margin: 0px auto !important;
-    margin-top: 40px !important;
-    color: #c0c0c0 !important;
+    
+    color: #888888 !important;
   
   }
 .pg-confirm__title,.pg-confirm  {
     align-items: center;
-    color: var(--primary-text-color);
+    color: #555555;
     display: flex;
     font-size: 18px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 540;
     justify-content: center;
-    letter-spacing: 0.25px;
+    letter-spacing: 0.45px;
     line-height: 30px;
-    margin: 0;
-    -webkit-margin-after: 0;
-            margin-block-end: 0;
-    -webkit-margin-before: 0;
-            margin-block-start: 0;
+    margin: 0px auto;
+    
+    
     margin-bottom: 10px;
-    margin-top: 0px !important;
+    
+	margin-top: -20px !important;
 	
     -webkit-margin-end: 0;
 	
@@ -7060,9 +7074,9 @@ th#react-table table:last-child {
 .pg-confirm__subtitle,.pg-confirm  {
     align-items: center;
     
-    color: #c0c0c0;
+    color: #888888;
     display: flex;
-    font-size: 14px !important;
+    font-size: 15px !important;
     font-style: normal;
     font-weight: 500;
     letter-spacing: 0 !important;
@@ -7078,13 +7092,12 @@ th#react-table table:last-child {
     display: flex;
     flex-direction: row !important;
     justify-content: center;
-    width: 580px !important;
   }
 .pg-confirm__content-phone,
     .pg-confirm__content-identity,
     .pg-confirm__content-documents,
     .pg-confirm__content-address {
-      max-width: 540px;
+      max-width: 520px;
       padding: 0 10px;
     }
 .pg-confirm__content-phone__row,
@@ -7109,10 +7122,10 @@ th#react-table table:last-child {
         }
 .pg-confirm__content-phone__row__content--focused, .pg-confirm__content-phone__forms__row__content--focused, .pg-confirm__content-identity__row__content--focused, .pg-confirm__content-identity__forms__row__content--focused, .pg-confirm__content-documents__row__content--focused, .pg-confirm__content-documents__forms__row__content--focused, .pg-confirm__content-address__row__content--focused, .pg-confirm__content-address__forms__row__content--focused {
             border: none !important;
-            color: var(--primary-cta-color) !important;
+            color: #888888 !important;
           }
 .pg-confirm__content-phone__row__content--focused label, .pg-confirm__content-phone__forms__row__content--focused label, .pg-confirm__content-identity__row__content--focused label, .pg-confirm__content-identity__forms__row__content--focused label, .pg-confirm__content-documents__row__content--focused label, .pg-confirm__content-documents__forms__row__content--focused label, .pg-confirm__content-address__row__content--focused label, .pg-confirm__content-address__forms__row__content--focused label {
-              color: var(--primary-cta-color) !important;
+              color: #888888 !important;
             }
 .pg-confirm__content-phone__row__content--wrong, .pg-confirm__content-phone__forms__row__content--wrong, .pg-confirm__content-identity__row__content--wrong, .pg-confirm__content-identity__forms__row__content--wrong, .pg-confirm__content-documents__row__content--wrong, .pg-confirm__content-documents__forms__row__content--wrong, .pg-confirm__content-address__row__content--wrong, .pg-confirm__content-address__forms__row__content--wrong {
             border: 1px solid var(--asks) !important;

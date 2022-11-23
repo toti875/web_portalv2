@@ -1437,7 +1437,7 @@ const renderBlog = () => (
                                 <div className="tab-content">
                                     <div className="inner">
                                         <div className="thumbnail">
-teste3                                        </div>
+[EM BREVE]                                        </div>
                                     </div>
                                 </div>
                             </TabPanel>

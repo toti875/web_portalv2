@@ -41,7 +41,7 @@ import './index.css';
 //import './index2.css';
 import './template_react/doob/src/assets/scss/style.scss';
 import './blockchain.css';
-import './fortem.css';
+//import './fortem.css';
 
 
 //import './themes/bootstrap/bootstrap-utilities.css';

@@ -92,9 +92,9 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 					</span>
 					{user.otp && !isExistBalance ? (
 						<Button
-							size="sm"
 							className="td-pg-profile__active-step__content__item__action"
 							onClick={handleToWallet}
+							variant="sign-up"
 						>
 							Minhas carteiras
 						</Button>
