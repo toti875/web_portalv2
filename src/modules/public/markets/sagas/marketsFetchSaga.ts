@@ -20,7 +20,8 @@ const tickersOptions: RequestOptions = {
 export function* marketsFetchSaga(action: MarketsFetch) {
     try {
         const payload = action.payload;
-        const request = payload && payload.type ? `/public/markets?type=${payload.type}` : '/public/markets';
+        //const request = payload && payload.type ? `/public/markets?type=${payload.type}` : '/public/markets';
+        const request =  '/public/markets';
 
         const markets = yield call(API.get(payload ? tickersOptions : marketsRequestOptions), request);
         yield put(marketsData(markets));

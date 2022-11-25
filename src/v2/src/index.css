@@ -1685,8 +1685,7 @@
 }
 .pg-emailverification-container .pg-emailverification {
     align-items: center;
-    background: var(--body-background-color);
-    border-radius: calc(var(--big-gap) * 0.05);
+    border-radius: 10px !important;
     box-shadow: 0 10px 15px var(--shadow-color-level-2);
     display: flex;
     flex-direction: column;
@@ -6713,12 +6712,12 @@ header {
         max-width: 9px;
       }
 .pg-profile-page-verification__progress-bar__step:first-child {
-        border-bottom-left-radius: 3px;
-        border-top-left-radius: 3px;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
       }
 .pg-profile-page-verification__progress-bar__step:last-child {
-        border-bottom-right-radius: 3px;
-        border-top-right-radius: 3px;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
       }
 .pg-profile-page-verification__progress-bar__step--verified {
         background: var(--system-green);

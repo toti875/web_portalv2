@@ -7,7 +7,7 @@ import 'antd/es/pagination/style/index.css';
 import 'antd/es/modal/style/index.css';
 //import 'antd/es/row/style/index.css';
 //import 'antd/es/col/style/index.css';
-import 'antd/es/button/style/index.css';
+//import 'antd/es/button/style/index.css';
 import 'antd/es/dropdown/style/index.css';
 import 'antd/es/form/style/index.css';
 import 'antd/es/tooltip/style/index.css';
@@ -41,7 +41,8 @@ import './index.css';
 //import './index2.css';
 import './template_react/doob/src/assets/scss/style.scss';
 import './blockchain.css';
-//import './fortem.css';
+import './fortem.css';
+import './button.css';
 
 
 //import './themes/bootstrap/bootstrap-utilities.css';

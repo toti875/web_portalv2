@@ -2,10 +2,10 @@ import React, { useCallback, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useIntl } from 'react-intl';
 import { Button, Spinner } from 'react-bootstrap';
-//import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { msPricesUpdates } from '../../api';
 import { useCurrenciesFetch } from '../../hooks';
-//import { CanCan } from '../../containers';
+import { CanCan } from '../../containers';
 import {
     marketsFetch,
     selectMarkets,
@@ -15,7 +15,8 @@ import {
     selectMarketPrice,
     selectMarketPriceFetchSuccess,
     createQuickExchangeFetch,
-    
+    selectAbilities,
+    selectAbilitiesSuccess,
 } from '../../modules'
 import { SwipeIcon } from '../../assets/images/swipe';
 import { Decimal, CurrencyIcon, QuickExchangeForm, DropdownComponent, Timer } from '../../components';
@@ -28,9 +29,8 @@ import {
     getBaseAmount,
     getQuoteAmount,
 } from './helpers';
-import { ssToMMSS } from '../../helpers/ssToMMSS';
-
-import {precisionRegExp} from '../../helpers'
+import { precisionRegExp } from '../../helpers';
+import { ssToMMSS } from './ssToMMSS';
 import { ArrowRight, WarningIcon } from './icons';
 
 interface QuickExchangeTimer {
@@ -65,7 +65,7 @@ export const QuickExchangeContainer = () => {
 
     const { formatMessage } = useIntl();
     const dispatch = useDispatch();
-    //const history = useHistory();
+    const history = useHistory();
 
     const wallets = useSelector(selectWallets) || [];
     const markets = useSelector(selectMarkets) || [];
@@ -87,6 +87,7 @@ export const QuickExchangeContainer = () => {
     React.useEffect(() => {
         const seconds = +msPricesUpdates() / 1000;
         setTime(ssToMMSS(seconds));
+
 
         dispatch(walletsFetch());
         dispatch(marketsFetch({type: 'market'}));
@@ -315,7 +316,7 @@ export const QuickExchangeContainer = () => {
                         {translate('page.body.quick.exchange.label.exchange')}
                     </div>
                     <div className="cr-quick-exchange__body-summary-currency-value">
-                        <Decimal fixed={basePrecision} thousSep=".">{base.amount}</Decimal> {base.currency.toUpperCase()}
+                        <Decimal fixed={basePrecision} thousSep=",">{base.amount}</Decimal> {base.currency.toUpperCase()}
                     </div>
                 </div>
                 <div className="cr-quick-exchange__body-summary-icons">
@@ -328,7 +329,7 @@ export const QuickExchangeContainer = () => {
                         {translate('page.body.quick.exchange.label.receive')}
                     </div>
                     <div className="cr-quick-exchange__body-summary-currency-value">
-                        <Decimal fixed={quotePrecision} thousSep=".">{quote.amount}</Decimal> {quote.currency.toUpperCase()}
+                        <Decimal fixed={quotePrecision} thousSep=",">{quote.amount}</Decimal> {quote.currency.toUpperCase()}
                     </div>
                 </div>
             </div>
@@ -342,9 +343,7 @@ export const QuickExchangeContainer = () => {
     ), []);
 
     const renderPriceBlock = React.useMemo(() => {
-        if (!base.currency || !marketPrice.price) {
-            return null;
-        }
+        
 
         return (
             <div className="cr-quick-exchange__body-info">
@@ -361,7 +360,7 @@ export const QuickExchangeContainer = () => {
 
     return (
         <React.Fragment>
-           
+            
                 <div className="cr-quick-exchange">
                     <div className="cr-quick-exchange__header">
                         {translate('page.body.quick.exchange.header')}
@@ -385,7 +384,7 @@ export const QuickExchangeContainer = () => {
                         </div>
                     </div>
                 </div>
-   
+            
         </React.Fragment>
     );
 };

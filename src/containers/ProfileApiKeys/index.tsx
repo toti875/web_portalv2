@@ -1,6 +1,6 @@
 import { Empty, Switch } from 'antd';
 import classnames from 'classnames';
-import { CustomInput, NewCopyableTextField, NewModal } from 'components';
+import { CodeVerification, NewCopyableTextField, NewModal } from 'components';
 import { localeDate } from 'helpers';
 import {
 	alertPush,
@@ -254,19 +254,18 @@ export const ProfileApiKeys: React.FC<ProfileApiKeysProps> = () => {
 			<div className="td-email-form">
 				<div className="td-email-form__header">{translate('page.body.profile.apiKeys.modal.title')}</div>
 				<div className={emailGroupClass}>
-					<CustomInput
-						type="number"
-						label={translate('page.body.profile.apiKeys.modal.label')}
-						placeholder={translate('page.body.profile.apiKeys.modal.placeholder')}
-						defaultLabel="2FA code"
-						handleChangeInput={handleOtpCodeChange}
-						inputValue={otpCode || ''}
-						handleFocusInput={handleChangeFocusField}
-						classNameLabel="td-email-form__label"
-						classNameInput="td-email-form__input"
-						autoFocus={true}
-						onKeyPress={handleEnterPress}
-					/>
+				<CodeVerification
+                        code={otpCode}
+                        onChange={handleOtpCodeChange}
+                        onSubmit={handleEnterPress}
+                        codeLength={6}
+                        type="text"
+                        placeholder="X"
+                        inputMode="decimal"
+                        showPaste2FA={true}
+                        isMobile={false}
+                    />
+
 				</div>
 				<div className="td-email-form__button-wrapper">{button}</div>
 			</div>

@@ -21,12 +21,12 @@ export function* marketPriceSaga(action: MarketPriceFetch) {
 
       
     try {
-        const price = 22000;
-        const ftkPrice = yield axios.get('http://demo.fortem-financial.io/api/v2/fortem/public/markets/btcusd/tickers');
+        //const price = 22000;
+        //const ftkPrice = yield axios.get('http://demo.fortem-financial.io/api/v2/fortem/public/markets/btcusd/tickers');
 
         const payload = action.payload ? `/${buildQueryString(action.payload)}` : '';
-        //const price = yield call(API.get(marketPriceRequestOptions), `/public/markets${payload}`);
-        yield put(marketPriceData(ftkPrice.data.ticker.last));
+        const price = yield call(API.get(marketPriceRequestOptions), `/public/markets${payload}`);
+        yield put(marketPriceData(price.data.ticker.last));
        
     } catch (error) {
         console.log("Erro ao buscar preço MarketPriceSaga")

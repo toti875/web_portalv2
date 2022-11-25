@@ -87,7 +87,7 @@ const CodeVerification: FC<CodeVerificationProps> = (props: CodeVerificationProp
                     onChange={onCodeChange}
                     onKeyPress={onSubmit}
                 />
-                {isMobile && showPaste2FA && <div className="pg-code-verification__paste" onClick={() => paste2FA()}>Paste 2FA</div>}
+                {isMobile && showPaste2FA && <div className="pg-code-verification__paste" onClick={() => paste2FA()}>Colar 2FA</div>}
             </div>
         </div>
     );

@@ -18,14 +18,14 @@ export function* getPrice(action: GetPrice) {
 			price.data[key] = Number(price.data[key]);
 		});
 		let newPrice = { ...price.data };
-		const ftkPrice = yield axios.get('http://demo.fortem-financial.io/api/v2/fortem');
+		const ftkPrice = yield axios.get('http://www.fortem1.com.br/api/v2/peatio/public/markets/ftkusd/tickers');
 
 		newPrice = {
 			...newPrice,
 			// KOBE: Number(kobePrice.data.ticker.last),
 			// ESC: Number(escPrice.data.ticker.last),
 			// SWP: Number(swpPrice.data.ticker.last),
-			CX: Number(ftkPrice.data.ticker.last),
+			FTK: Number(ftkPrice.data.ticker.last),
 		};
 		yield put(
 			priceData({

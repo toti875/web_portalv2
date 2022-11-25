@@ -1,4 +1,14 @@
+
 {/* SIGNUP FORM */}
+
+
+
+.cr-email-form__form-content {
+
+    display: flex;
+    flex-direction: column;
+}
+
 .cr-sign-up-form {
 
 	max-width: 424px;
@@ -1247,9 +1257,12 @@ flex-direction: row !important;
     width: 5px;
     justify-content: center;
   }.pg-wallet .cr-crypto-icon {
-    color: var(--primary-text-color) ;
-    opacity: 1 ;
-    left: 10px  ;
+    color: #f5f5f5;
+
+    opacity: 1;
+    left: 10px;
+    width: 60px !important;
+    height: 60px !important;
   }.pg-wallet .cr-crypto-icon img {
       margin-right: 5px;
       width: 64px ;
@@ -1708,6 +1721,7 @@ flex-direction: row !important;
     display: flex !important;
   }.pg-wallet .cr-wallet-item__balance {
     margin-right: calc(var(--gap) * 3);
+
   
   }.pg-wallet__error {
     color: var(--system-red);
@@ -4308,13 +4322,17 @@ margin-left: 20px;
 	height: calc(100vh - calc(var(--gap) * 9.84));
 	justify-content: center;
 	margin: 0 auto;
-    opacity: 0.91 !important;
+    opacity: 0.71 !important;
+    -webkit-backdrop-filter: blur(17px) saturate(70%) !important;
+    backdrop-filter: blur(10px) saturate(135%) !important;
 
   }
   .pg-sign-in-screen-basic .pg-sign-in-screen-basic__container {
 	  background: transparent;
 	  margin-top: calc(var(--gap) * 3.33);
 	  width: calc(var(--gap) * 70.66);
+
+
 	}.pg-sign-in-screen-basic__container 
     
     @media screen and (max-width: 768px) {
@@ -4737,7 +4755,7 @@ margin-left: 20px;
                     stroke-dashoffset: 150;
                     transition: 1s ease-in-out;
                   }.headerDesktop-screen .header__right-menu__item__title .header-btn-border-signIn-svg:hover  {
-                        border: 1px solid #1EDED0;
+                        border: 1px solid #18988F;
 
                         stroke-dashoffset: -480;
     
@@ -4746,10 +4764,10 @@ margin-left: 20px;
                     outline: none;
                     text-decoration: none;
                 }.headerDesktop-screen .header__right-menu__item__title link:hover {
-                        color: #1EDED0;
+                        color: #18988F;
                     }.headerDesktop-screen .header__right-menu__item__title--active a,
                     .headerDesktop-screen .header__right-menu__item__title--active span {
-                        color: #1EDED0;
+                        color: #18988F;
                     }.headerDesktop-screen .header__right-menu__item__title {	
 
                 font-size: 18px;
