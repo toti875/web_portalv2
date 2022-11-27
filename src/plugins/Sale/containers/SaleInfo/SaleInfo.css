@@ -8,8 +8,15 @@
 }
 
 .sale-info-tick {
+	display: flex;
+	flex-direction: row !important;
 	font-size: 18px;
 	font-weight: 700;
+	vertical-align: middle !important;
+	margin-top: -60px !important;
+	margin-left: 90px !important;
+	position: relative !important;
+	width: 100% !important;
 
 
 	

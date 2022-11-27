@@ -311,10 +311,10 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 	if (props.uid) {
 		buyButton = (
 			<Button
-				type="primary"
+				type="default"
 				size="large"
 				block
-				style={{ height: '3rem', color: 'white', background: '#13b887' }}
+				style={{ height: '3rem', color: '#f5f5f5', background: '#009991', margin: '0 auto',  textTransform: 'uppercase', padding: '10px, 15px', borderRadius: '5px', width: '100%', fontSize: '16px' }}
 				disabled={handleBuyDisabled()}
 				onClick={showBuyConfirmModal}
 			>Comprar Tokens
@@ -323,7 +323,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 		);
 	} else {
 		buyButton = (
-			<a className="btn-default btn-icon icon-btn-wrap" href="/signin" style={{ width: '100%',  border: '1px solid #1EDED0',  fontSize: '17px', position: 'absolute',  background: 'transparent'}}>Acessar plataforma <i className="icon"><FiLogIn /></i></a>
+			<a className="btn-default btn-icon icon-btn-wrap" href="/signin" style={{ width: '100%',  border: '1px solid #009991 ',  fontSize: '17px', position: 'absolute',  background: 'transparent'}}>Acessar plataforma <i className="icon"><FiLogIn /></i></a>
 		);
 	}
 
@@ -354,7 +354,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 						)}
 					</div>
 					<div className="price">
-						<span style={{ fontSize: '14px', color: 'white',
+						<span style={{ fontSize: '14px', color: '#f5f5f5',
 						 background: 'transparent' }}>Ao preço unitário de:</span>
 						<Input
 							size="large"
@@ -445,7 +445,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 	return (
 		<React.Fragment>
 			<div id="sale-buy" >
-				<h2 className="sale-buy__title" style={{color: '#fff'}}>Comprar <span style={{color: 'rgb(252,208,0)'}}>{currency_id.toUpperCase()}</span></h2>
+				<h2 className="sale-buy__title" style={{color: '#fff'}}>Comprar <span style={{color: '#FDA736'}}>{currency_id.toUpperCase()}</span></h2>
 				<h3 className="sale-buy__subtitle">{`Saldo atual: ${baseBalance} ${currency_id.toUpperCase()}`}</h3>
 				<div className="buy-box" >
 					{showSelectCurrencyForm()}

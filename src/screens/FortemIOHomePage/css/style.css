@@ -688,7 +688,7 @@ input[type="radio"]:checked + label span:after { position: absolute; top: 0; lef
     06. Button
 ====================================== */
 
-.btn { display:inline-block; border:2px solid transparent; border-radius: 0; text-transform: uppercase; width: auto; font-family: 'Poppins', sans-serif; font-weight: 500; }
+.btn { display:inline-block; text-transform: uppercase; width: auto; }
 .btn.active.focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn:active:focus, .btn:focus { outline: medium none; outline-offset: 0; }
 input.btn:focus { border-width: 2px; }
 .btn.active, .btn:active, .btn:focus { box-shadow: none; }

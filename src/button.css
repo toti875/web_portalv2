@@ -1,0 +1,86 @@
+
+
+.btn-default btn-icon icon-btn-wrap {
+	
+    border: 2px solid #009991 !important;
+    border-radius: 5px !important;
+    width: 100% !important;
+
+    color: var(--button-primary-cta-text-color);
+    font-weight: var(--button-font-weight);
+    transition: 0.2s;
+}
+
+
+.btn-default:active,
+.btn-default:focus {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    color: var(--button-primary-cta-text-color-active);
+
+}
+
+.btn-default:hover {
+border-color: #00d0b8;
+border: 2px solid #00d0b8 !important;
+color: var(--button-primary-cta-text-color-hover);
+transition: 0.2s;
+}
+
+.btn-default:disabled {
+background: #535353 !important;
+border-color: #535353 !important;
+
+color: var(--button-primary-cta-text-color-disabled);
+cursor: not-allowed;
+
+background-color: #00d0b8;
+color: var(--button-primary-cta-text-color-hover);
+transition: 0.2s;
+}
+
+
+.btn-primary {
+
+    border: 2px solid #009991 !important;
+    border-radius: 5px !important;
+    width: 100% !important;
+
+    color: var(--button-primary-cta-text-color);
+    font-weight: var(--button-font-weight);
+    transition: 0.2s;
+}
+
+.btn-primary:active,
+.btn-primary:focus {
+    
+    border: 2px solid #009991 !important;
+    border-radius: 5px !important;
+    width: 100% !important;
+
+    color: var(--button-primary-cta-text-color);
+    font-weight: var(--button-font-weight);
+    transition: 0.2s;
+}
+
+
+
+.btn-primary:hover {
+        border-color: #00d0b8;
+        border: 2px solid #00d0b8 !important;
+        color: var(--button-primary-cta-text-color-hover);
+        transition: 0.2s;
+    }
+
+    .btn-primary:disabled {
+        background: #535353 !important;
+        border-color: #535353 !important;
+        
+        color: var(--button-primary-cta-text-color-disabled);
+        cursor: not-allowed;
+        
+        background-color: #00d0b8;
+        color: var(--button-primary-cta-text-color-hover);
+        transition: 0.2s;
+    }

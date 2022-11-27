@@ -42,7 +42,8 @@ import './index.css';
 import './template_react/doob/src/assets/scss/style.scss';
 import './blockchain.css';
 import './fortem.css';
-import './button.css';
+//import './buttons.pcss';
+//import './button.css';
 
 
 //import './themes/bootstrap/bootstrap-utilities.css';

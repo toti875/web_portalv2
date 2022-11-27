@@ -988,7 +988,7 @@
       }
 }
 .pg-change-forgotten-password-screen {
-  background: url(assets/images/background.svg);
+  
   background-size: cover;
   display: flex;
   height: calc(100vh - (var(--big-gap) * 0.9834));

@@ -976,12 +976,6 @@ flex-direction: row !important;
     padding: 0 !important;
 }
 
-.btn-medium, .btn-round-edge {
-
-    color: dark !important;
-    border: 1px solid #000;
-
-}
 
 #sale-info,
 #sale-social,
@@ -4269,10 +4263,9 @@ margin-left: 20px;
 	z-index: -9999 !important;
 
 
-}.icon-btn-wrap:hover {
+}
 
-        color: #009991 !important;
-    }.btn-marketplace {
+.btn-marketplace {
 
 
 	background: transparent !important;

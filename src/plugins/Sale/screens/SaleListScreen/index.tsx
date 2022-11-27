@@ -78,22 +78,16 @@ export const SaleListScreen: React.FC = () => {
 		<React.Fragment>
 
 			{renderEvent()}	
-			<Parallax opacity={[1, 0]} scale={[1.3, 0.5]} easing="easeInOutCirc">
 
-			<div className="banner" >
-				<video id="background-video" autoPlay  loop muted  style={{ opacity: '0.9', width: '100%', }}>
-					<source src={GlobeAnimated}  type="video/mp4" style={{height: '600px'}}/>
-				</video>
-	
-				<h1 style={{marginTop: '220px', marginLeft: '120px', fontSize: '36px'}} >Seja bem-vindo ao marketplace de tokens da Fortem ONE</h1>
-
+			<div style={{ position: 'relative', padding: '0 5%' }}>
+				<img style={{ width: '100%', margin: 0 }} src="https://i.imgur.com/2yZzXcQ.jpg" alt="ieo_banner" />
+			
 			</div>
 
-			</Parallax>
 
 			<div id="sale-list" className="container-fluid">
 				
-			<Parallax opacity={[0, 1]} scale={[0, 1]} easing="easeInOutCirc">
+			
 				<div className="row">
 					<div className="col-12 text-center">
 						<h1  className="sale-list__title">Seja bem-vindo ao marketplace de tokens da Fortem ONE</h1>
@@ -102,7 +96,7 @@ export const SaleListScreen: React.FC = () => {
 						</h2>
 					</div>
 				</div>
-				</Parallax>
+			
 
 				<div className="mt-3">
 					<SaleListTables />

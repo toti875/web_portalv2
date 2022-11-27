@@ -49,9 +49,9 @@ Table of contents
     02. Reset
 ====================================== */
 
-html { font-size: 14px; }
+html { font-size: 16px; }
 *, *::after, *::before { box-sizing: border-box; }
-body { font-size: 15px; line-height: 30px; font-weight: 400; color: #c0c0c0; font-family: 'Inter', sans-serif; padding: 0; margin: 0; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; word-break: break-word }
+body { font-size: 16px; line-height: 30px; font-weight: 400; color: #c0c0c0; font-family: 'Inter', sans-serif; padding: 0; margin: 0; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; word-break: break-word }
 body, html { -moz-osx-font-smoothing: grayscale; }
 a { text-decoration: none; }
 a:hover, a:focus { text-decoration: none; outline: none; outline-offset:0; color: #c0c0c0; }

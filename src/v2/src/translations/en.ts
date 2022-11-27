@@ -548,9 +548,9 @@ export const en = {
     'page.header.signIn.receiveConfirmation': 'Didn\'t receive your confirmation email?',
     'page.header.signIn.forgotPassword': 'Forgot your password?',
     'page.header.signIn.resetPassword.title': 'Reset password',
-    'page.header.signIn.resetPassword.newPassword': 'New password',
-    'page.header.signIn.resetPassword.repeatPassword': 'Repeat password',
-    'page.header.signIn.resetPassword.button': 'Change',
+    'page.header.signIn.resetPassword.newPassword': 'Nova senha',
+    'page.header.signIn.resetPassword.repeatPassword': 'Confirme sua nova senha',
+    'page.header.signIn.resetPassword.button': 'Alterar senha',
     'page.header.signIn.resetPassword.error': 'Fields are empty or don`t matches',
 
     'page.header.signUp': 'Sign Up',

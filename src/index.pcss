@@ -1,4 +1,58 @@
+@import './buttons.pcss';
 
+.currency-icon {
+	vertical-align: middle !important;
+
+}
+
+.ant-input-group-addon {
+
+	padding: 0px !important;
+	
+	width: 40px !important;
+	vertical-align: middle;
+	background: #dde1e7 !important;
+
+}
+
+.ant-input-wrapper, .ant-input-group {
+
+	height: 40px !important;
+
+
+}
+
+.ant-input, .ant-input-lg {
+
+	height: 40px !important;
+	background: #dde1e7 !important;
+
+}
+
+
+.td-pg-profile__security__row-item__action:hover {
+    color: #009991;
+    cursor: pointer;
+	filter: brightness(115%);
+	-webkit-filter: brightness(115%);
+}
+
+.close-icon {
+
+	cursor: pointer !important;
+
+}
+
+.pg-change-forgotten-password-screen {
+
+	display: flex !important;
+	height: calc(100vh - (var(--big-gap) * 0.9834)) !important;
+	justify-content: center !important;
+	margin: 0 auto !important;
+	margin-top: 60px;
+
+  }
+  
 
 .cr-wallet-item__balance-amount {
 
@@ -41,6 +95,7 @@
 
 .pg-alerts {
 	position: fixed;
+	backdrop-filter: blur(10px);
 	right: calc(var(--gap) * 2);
 	top: calc(var(--gap) * 8);
 	z-index: 100000;
@@ -3301,10 +3356,11 @@ color: #F5F5F5 !important;
       legend {
         
         font-size: 15px;
-        left: 15%;
-        
-        position: relative;
-        top: 32px;
+
+		
+        position: absolute;
+        top: 10px;
+		left: 10%;
         
         z-index: 5;
       }
@@ -3319,10 +3375,12 @@ color: #F5F5F5 !important;
 
     fieldset {
       background: inherit;
-      border: 1px dotted #c0c0c0;
+      border: 1px dotted #009991 ;
       border-radius: 5px;
       flex-grow: 1;
       overflow: hidden;
+	  padding-top: 20px;
+	  padding-bottom: 20px;
 	  
       
       width: 500px !important;
@@ -3353,18 +3411,17 @@ color: #F5F5F5 !important;
           }
 
           .btn-primary {
-            border-radius: 5px;
+            
 			font-size: 14px !important;
-			bottom: 5px  !important;
-			padding-left: 20px  !important;
-			padding-right: 20px  !important;
+			
+			;
           }
         }
       }
 
       &:focus-within {
         
-        border-radius: calc(var(--gap) * 0.66);
+        
         overflow: hidden;
 
         legend {
@@ -3384,11 +3441,6 @@ color: #F5F5F5 !important;
           border: none !important;
           
 
-          input {
-            
-            
-            
-          }
         }
       }
     }
@@ -3405,14 +3457,8 @@ color: #F5F5F5 !important;
       &--last {
 
 
-        span {
-
-        }
       }
 
-      span {
-        
-      }
 
       &--group {
         align-items: center !important;
@@ -3421,7 +3467,7 @@ color: #F5F5F5 !important;
         justify-content: space-between !important;
 
         a {
-          color: #1EDED0 !important;
+          color: #009991  !important;
         }
 
         span {
@@ -3429,9 +3475,6 @@ color: #F5F5F5 !important;
 		  
         }
 
-        div {
-			
-        }
 
         .cr-email-form__group {
           padding: 0;
@@ -3442,10 +3485,6 @@ color: #F5F5F5 !important;
             
             
 
-            label {
-            
-			
-            }
 			
             input {
               height: 180px !important;
@@ -3459,22 +3498,12 @@ color: #F5F5F5 !important;
 
     .pg-profile-two-factor-auth__qr {
       height: 160px !important;
-	  margin-top: 30px !important;
+	  margin-top: 40px !important;
 	  margin-left: 15px !important;
 	  
 	  
     }
 
-    .cr-input {
-	  
-      input {
-        
-        
-        
-        
-		
-      }
-    }
   }
 
   &__form {
@@ -3509,12 +3538,6 @@ color: #F5F5F5 !important;
   .cr-copyable-text-field {
 
 
-    input {
-    }
-
-    .input-group-append {
-      
-    }
   }
 }
 
@@ -4305,19 +4328,7 @@ color: #F5F5F5 !important;
   }
 }
 
-.btn {
-	background: transparent  !important;
-	color: #F5F5F5 !important;
-  font-size: inherit !important;
-  padding-top: 6px !important;
-  padding-bottom: 6px !important;
-  padding-left: 15px !important;
-  padding-right: 15px !important;
-  
-  
-  
 
-}
 
 .btnApiKey {
 
@@ -4889,37 +4900,6 @@ color: #F5F5F5 !important;
 
 }
 
-.btn-primary, .btn-block {
-
-  
-  border: 1px solid #009991  !important;
-  border-radius: 5px !important;
-  font-size: inherit !important;
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
-  padding-left: 20px !important;
-  padding-right: 20px !important;
-  color: #F5F5F5 !important;
-  opacity: 0.71 !important;
-  -webkit-transition: all 0.3s ease-in-out;
-  width: 100%;
-  
-
-  &:hover {
-    
-    opacity: 0.98 !important;
-    -webkit-filter: brightness(115%) !important;
-
-  }
-
-  .col-12 m-0 > .btn { 
-    margin-left: 500px auto !important;
-    background: pink !important;
-
-  }
-
-
-}
 .kyc {
   width: 1168px;
   margin: 0 auto;
@@ -5662,7 +5642,7 @@ color: #F5F5F5 !important;
   }
 
   &__close {
-    cursor: pointer;
+    cursor: pointer !important;
     display: inline-block;
     height: calc(var(--gap) * 2.5);
     margin-left: calc(var(--gap) / 1.33);
@@ -5895,7 +5875,7 @@ color: #F5F5F5 !important;
 
     .pg-profile-page__close {
       cursor: pointer;
-      display: inline-block;
+      display: inline-block !important;
       height: calc(var(--gap) * 2.5);
       margin-top: calc(var(--gap) * 2.6);
       overflow: hidden;
@@ -7232,146 +7212,6 @@ color: #F5F5F5 !important;
 
 }
 
-.btn-2FA {
-	
-	border: 2px solid #009991 !important;
-    border-radius: 5px !important;
-    width: 100% !important;
-
-	color: var(--button-primary-cta-text-color);
-	font-weight: var(--button-font-weight);
-	transition: 0.2s;
-}
-
-
-.btn-2FA:active {
-	
-	border: 2px solid #009991 !important;
-    border-radius: 5px !important;
-    width: 100% !important;
-
-	color: var(--button-primary-cta-text-color);
-	font-weight: var(--button-font-weight);
-	transition: 0.2s;
-}
-
-.btn-2FA:hover {
-		border-color: #00d0b8;
-		border: 2px solid #00d0b8 !important;
-		color: var(--button-primary-cta-text-color-hover);
-		transition: 0.2s;
-	}
-
-	.btn-2FA:disabled {
-		background: #535353 !important;
-		border-color: #535353 !important;
-		
-		color: var(--button-primary-cta-text-color-disabled);
-		cursor: not-allowed;
-		
-		background-color: #00d0b8;
-		color: var(--button-primary-cta-text-color-hover);
-		transition: 0.2s;
-	}
-
-
-.btn-primary:active,
-	.btn-primary:focus {
-		background: transparent;
-		border: none;
-		box-shadow: none;
-		color: var(--button-primary-cta-text-color-active);
-    
-	}
-
-	.btn-primary {
-	
-		border: 2px solid #009991 !important;
-		border-radius: 5px !important;
-		width: 100% !important;
-	
-		color: var(--button-primary-cta-text-color);
-		font-weight: var(--button-font-weight);
-		transition: 0.2s;
-	}
-	
-	
-	.btn-primary:active,
-	.btn-primary:focus {
-		
-		border: 2px solid #009991 !important;
-		border-radius: 5px !important;
-		width: 100% !important;
-	
-		color: var(--button-primary-cta-text-color);
-		font-weight: var(--button-font-weight);
-		transition: 0.2s;
-	}
-	
-	.btn-primary:hover {
-			border-color: #00d0b8;
-			border: 2px solid #00d0b8 !important;
-			color: var(--button-primary-cta-text-color-hover);
-			transition: 0.2s;
-		}
-	
-		.btn-primary:disabled {
-			background: #535353 !important;
-			border-color: #535353 !important;
-			
-			color: var(--button-primary-cta-text-color-disabled);
-			cursor: not-allowed;
-			
-			background-color: #00d0b8;
-			color: var(--button-primary-cta-text-color-hover);
-			transition: 0.2s;
-		}
-	
-    
-.btn-sign-up:disabled {
-		background: #535353 !important;
-		color: var(--button-primary-cta-text-color-disabled);
-		cursor: not-allowed;
-    border: none !important;
-    
-	}
-.btn-sign-up:not(:disabled):not(.disabled):active:focus {
-	background: #535353;
-	box-shadow: none !important;
-  border: none !important;
-  
-}
-
-.btn-sign-up {
-	
-  background: #009991 !important;
-  border: none !important;
-  border-radius: 5px !important;
-  width: 100% !important;
-  margin-top: 20px !important;
-  color: #fff !important;
-  font-weight: var(--button-font-weight);
-  transition: 0.2s !important;
-  opacity: 0.71 !important;
-  
-}
-
-.btn-sign-up:hover {
-		background: #19baaf !important;
-		color: #fff !important;
-		transition: 0.2s !important;
-		border: none !important;
-       	
-	}
-
-
-.btn-sign-up:active,
-	.btn-sign-up:focus {
-		background: #18988F;
-		color: #fff !important;
-    	
-	}
-    
 
 .cr-email-form__cros-icon {
     cursor: pointer;

@@ -687,11 +687,11 @@ input[type="radio"]:checked + label span:after { position: absolute; top: 0; lef
     06. Button
 ====================================== */
 
-.btn { display:inline-block; border:2px solid transparent; border-radius: 0; text-transform: uppercase; width: auto; font-family: 'Poppins', sans-serif; font-weight: 500; }
+.btn { display:inline-block; font-weight: 500; }
 .btn.active.focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn:active:focus, .btn:focus { outline: medium none; outline-offset: 0; }
 input.btn:focus { border-width: 2px; }
 .btn.active, .btn:active, .btn:focus { box-shadow: none; }
-.btn i { vertical-align: middle; position: relative; top: -1px }
+.btn i { vertical-align: middle; position: relative;}
 
 /* button size */
 .btn.btn-very-small { font-size:10px; padding: 6px 16px; }
@@ -706,7 +706,6 @@ input.btn:focus { border-width: 2px; }
 
 /* rounded button */
 .btn.btn-round-edge-small { border-radius: 2px; }
-.btn.btn-rounded { border-radius: 50px; }
 .btn.btn-rounded.btn-very-small { padding: 6px 20px; }
 .btn.btn-rounded.btn-small { padding: 8px 26px }
 .btn.btn-rounded.btn-medium { padding: 10px 32px; }

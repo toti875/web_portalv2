@@ -227,40 +227,15 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 						value={Math.floor(((props.sale.total_ieo - props.sale.remains) / props.sale.total_ieo) * 100)}
 					 />
 							<div className="pricing-footer margin-5px-top mb--10 mt--15">
-								<a className="btn btn-medium  btn-round-edge "  onClick={() => setFlip(!flip)}>Mais informações <i className="icon"><FiArrowRight /></i></a>
-
-								<a className="btn btn-medium  btn-dark-gray modal-popup wow animate__fadeIn" onClick={handleDetailClick}>Comprar Token</a>
-								{/*<a className="btn btn-medium  btn-dark-gray modal-popup wow animate__fadeIn"onClick={() => setShow(true)}>Modal</a>*/}
+								<a className="btn btn-more"  onClick={() => setFlip(!flip)}>Mais informações <i className="icon"><FiArrowRight /></i></a>
+								<br />
+								<br />
+								<a className="btn-default" onClick={handleDetailClick}>Comprar Token</a>
+							
 
 								
-								<Modal
-        show={show}
-        onHide={() => setShow(false)}
-        dialogClassName="modal-90w"
-        aria-labelledby="example-custom-modal-styling-title"
-      >
-        <Modal.Header closeButton>
-          <Modal.Title id="example-custom-modal-styling-title">
-            Custom Modal Styling
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <p>
-            Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde
-            commodi aspernatur enim, consectetur. Cumque deleniti temporibus
-            ipsam atque a dolores quisquam quisquam adipisci possimus
-            laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod
-            accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia
-            reiciendis porro quo magni incidunt dolore amet atque facilis ipsum
-            deleniti rem!
-          </p>
-        </Modal.Body>
-      </Modal>
-								<div id="modal-popup" className="col-11 col-xl-3 col-lg-6 col-md-8 col-sm-9 mx-auto bg-white text-center modal-popup-main padding-4-half-rem-all mfp-hide border-radius-6px sm-padding-2-half-rem-lr">
-                            <span className="text-extra-dark-gray text-uppercase alt-font text-extra-large font-weight-600 margin-15px-bottom d-block">Simple modal popup</span>
-                            <p>Lorem ipsum is simply dummy text of the printing and typesetting industry lorem ipsum has been the industry's standard dummy text ever.</p>
-                            <a className="btn btn-fancy btn-small btn-transparent-light-gray popup-modal-dismiss" href="#">Dismiss</a>
-                        </div>							</div>
+								
+														</div>
 						</ul>
 					</div>
 				</div>
@@ -332,8 +307,10 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 							percent={Math.floor(((props.sale.total_ieo - props.sale.remains) / props.sale.total_ieo) * 100)}
 						/>*/}
 							<div className="pricing-footer margin-5px-top mb--10 mt--15">
-								<a className="btn btn-medium  btn-round-edge" onClick={() => setFlip(!flip)}><i className="icon"><FiArrowLeft /></i> Voltar</a>
-								<a className="btn btn-medium  btn-dark-gray modal-popup wow animate__fadeIn" onClick={handleDetailClick}>Comprar Token</a>
+								<a className="btn-more" onClick={() => setFlip(!flip)}><i className="icon"><FiArrowLeft /></i> Voltar</a>
+								<br />
+								<br />
+								<a className="btn-default" onClick={handleDetailClick}>Comprar Token</a>
 
 								{/*<a className="btn btn-medium  btn-fast-gray modal-popup wow animate__fadeIn" href="#modal-popup">Comprar Modal</a>*/}
 								<div id="modal-popup" className="col-11 col-xl-3 col-lg-6 col-md-8 col-sm-9 mx-auto bg-white text-center modal-popup-main padding-4-half-rem-all mfp-hide border-radius-6px sm-padding-2-half-rem-lr">
