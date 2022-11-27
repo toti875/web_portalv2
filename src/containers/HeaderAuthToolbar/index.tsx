@@ -10,10 +10,12 @@ import { logoutFetch, selectUserLoggedIn } from '../../modules';
 
 import { NavBar } from '../NavBar';
 
-import './HeaderAuthToolbar.pcss';
+//import './HeaderAuthToolbar.pcss';
 
 const IconWallet = require('../../assets/svg/wallet2.svg');
 const IconDashboard = require('../../assets/svg/dashboard2.svg');
+const IconPerfil = require('../../assets/svg/profile2.svg');
+const IconFinance = require('../../assets/svg/finance.svg');
 
 export const HeaderAuthToolbar: React.FC = () => {
 	const history = useHistory();
@@ -56,7 +58,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 			isLoggedIn && (
 				<div className="subheader__right-menu__item__title">
 					<div className={classItemTitle} onClick={() => setStateActiveNow('Dashboard')} >
-					<img src={IconDashboard} className="subheader__right-menu__item__title__svg" style={{width: '20px',}} />
+					<img src={IconFinance} className="subheader__right-menu__item__title__svg" style={{width: '20px',}} />
 
 						<Link to="/dashboard">Painel de controle
 						</Link>
@@ -116,7 +118,9 @@ export const HeaderAuthToolbar: React.FC = () => {
 			
 				<div className="subheader__right-menu__dropdown__wrap">
 					<span className={classLinkActiveTitleDrop('finance')}>
-					<img src={IconWallet} className="subheader__right-menu__item__title__svg" style={{width: '20px',}} />
+					
+					<img src={IconFinance} className="subheader__right-menu__item__title__svg" style={{width: '30px',}} />
+
 						{translate('page.body.homepage.header.finance')}
 						<div className="subheader__right-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div>
 					</span>
@@ -129,7 +133,8 @@ export const HeaderAuthToolbar: React.FC = () => {
 							}}
 						>
 							<div className={classActiveItemDrop('wallets')}>
-								<FaStar className="mr-2" />
+								
+								<img src={IconWallet} className="mr-2 subheader__right-menu__item__title__svg" style={{width: '20px',}} />
 								{translate('page.body.homepage.header.wallet')}
 							</div>
 						</Link>
@@ -224,6 +229,8 @@ export const HeaderAuthToolbar: React.FC = () => {
 				<>
 					<div className="subheader__right-menu__dropdown__wrap">
 						<span className={classLinkActiveTitleDrop('account')}>
+							
+							<img src={IconPerfil} className="subheader__right-menu__item__title__svg" style={{width: '20px',}} />
 							{translate('page.body.homepage.header.account')}
 							<div className="subheader__right-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div>
 						</span>
@@ -313,8 +320,10 @@ export const HeaderAuthToolbar: React.FC = () => {
 					<div className="subheader__left-menu d-flex flex-row align-items-center">
 					
 						{renderUnLogin()}
+						{renderProfileTab()}
 						{renderDashboardTab()}
 						{renderFinanceTab()}
+						
 						
 					
 
