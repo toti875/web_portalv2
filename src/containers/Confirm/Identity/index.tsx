@@ -27,7 +27,7 @@ import {
 } from '../../../modules';
 import { IdentityData } from '../../../modules/user/kyc/identity/types';
 
-import * as countries from 'i18n-iso-countries';
+//import * as countries from 'i18n-iso-countries';
 
 interface ReduxProps {
 	editSuccess?: string;
@@ -162,12 +162,12 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 		});
 
 		/* tslint:disable */
-		languages.map((l: string) => countries.registerLocale(require(`i18n-iso-countries/langs/${l}.json`)));
+		//languages.map((l: string) => countries.registerLocale(require(`i18n-iso-countries/langs/${l}.json`)));
 
 		/* tslint:enable */
 
-		const dataCountries = Object.values(countries.getNames(lang));
-		const onSelectCountry = value => this.selectCountry(dataCountries[value]);
+		//const dataCountries = Object.values(countries.getNames(lang));
+		//const onSelectCountry = value => this.selectCountry(dataCountries[value]);
 
 		return (
 			<div className="pg-confirm__content-identity">
@@ -286,7 +286,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 				</div>
 				{sendSuccess && !editSuccess && <p className="pg-confirm__success">{this.translate(sendSuccess)}</p>}
 				{editSuccess && !sendSuccess && <p className="pg-confirm__success">{this.translate(editSuccess)}</p>}
-				<div className="pg-confirm__content-deep">
+				<div className="pg-confirm__content-deep" style={{marginTop: '30px !important'}}>
 					<Button
 						onClick={this.sendData}
 						disabled={this.handleCheckButtonDisabled()}
@@ -396,7 +396,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 
 	private selectCountry = (value: string) => {
 		this.setState({
-			countryOfBirth: countries.getAlpha2Code(value, this.props.lang),
+			//countryOfBirth: countries.getAlpha2Code(value, this.props.lang),
 		});
 	};
 
@@ -453,7 +453,6 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 			!lastNameValid ||
 			!cpfValid ||
 			!residentialAddressValid ||
-			!countryOfBirth ||
 			!cityValid ||
 			!postcodeValid ||
 			!dateOfBirthValid
@@ -473,7 +472,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 			address: this.state.residentialAddress,
 			postcode: this.state.postcode,
 			city: this.state.city,
-			country: this.state.countryOfBirth,
+			country: 'Brasil',
 			confirm: true,
 		};
 		const isIdentity =

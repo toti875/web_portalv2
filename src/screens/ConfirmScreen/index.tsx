@@ -58,11 +58,11 @@ class ConfirmComponent extends React.Component<Props> {
 	public render() {
 		const { isSidebarOpen } = this.props;
 		const step = this.handleGetVerificationStep();
-		const Logo = require('../../assets/images/logo_branca_bandeira_verde.svg');
+		const Logo = require('../../assets/images/logo_preta_bandeira_verde.svg');
 		const containerClass = classnames('pg-confirm');
 
 		return (
-			<div className="pg-confirm">
+			<div className="pg-confirm" style={{marginTop: '40px'}}>
 				<div className="pg-confirm-inner">
 				<div className="pg-confirm__logo">
 					<img src={Logo} alt="" className="pg-logo__img" />

@@ -445,7 +445,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 	return (
 		<React.Fragment>
 			<div id="sale-buy" >
-				<h2 className="sale-buy__title" style={{color: '#fff'}}>Comprar <span style={{color: '#FDA736'}}>{currency_id.toUpperCase()}</span></h2>
+				<h2 className="sale-buy__title" style={{color: '#fff'}}>Comprar <span style={{color: '#EEB73F'}}>{currency_id.toUpperCase()}</span></h2>
 				<h3 className="sale-buy__subtitle">{`Saldo atual: ${baseBalance} ${currency_id.toUpperCase()}`}</h3>
 				<div className="buy-box" >
 					{showSelectCurrencyForm()}

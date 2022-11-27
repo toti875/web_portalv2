@@ -10384,20 +10384,23 @@ th#react-table table:last-child {
               2px 2px 5px rgba(94, 104, 121, 0.288) !important;
   
  
-  opacity: 0.71;
+  opacity: 0.92;
+  margin: 0 auto !important;
+  margin-top: 30px !important;
 }
 
 .pg-confirm__logo {
 
 	
-  	 margin-top: -30px !important;
-	 opacity: 0.5;
+  	 
+	 opacity: 0.91;
 
   }
 
 .pg-confirm__logo img {
       
       width: 200px !important;
+	  margin-top: -10px!important;
 
     }
 
@@ -10425,7 +10428,7 @@ th#react-table table:last-child {
   
   }
 
-.pg-confirm__title,.pg-confirm  {
+.pg-confirm__title {
     align-items: center;
     color: #555555;
     display: flex;
@@ -10450,18 +10453,18 @@ th#react-table table:last-child {
     text-align: center;
   }
 
-.pg-confirm__title__icon, .pg-confirm__icon {
+.pg-confirm__title__icon {
       cursor: pointer;
       height: 15px;
       margin-left: 10px;
       width: 15px;
     }
 
-.pg-confirm__title__icon path, .pg-confirm__icon path {
+.pg-confirm__title__icon path {
         fill: #009991;
       }
 
-.pg-confirm__subtitle,.pg-confirm  {
+.pg-confirm__subtitle {
     align-items: center;
     
     color: #888888;
@@ -10742,8 +10745,8 @@ th#react-table table:last-child {
             
             
             margin: 0 auto !important;
-            margin-top: -20px !important;
-            margin-left: -120px !important;
+            margin-top: -10px !important;
+            margin-left: 15px !important;
           }
 
 .pg-confirm__content-phone fieldset .custom-input input, .pg-confirm__content-identity fieldset .custom-input input, .pg-confirm__content-documents fieldset .custom-input input, .pg-confirm__content-address fieldset .custom-input input {
