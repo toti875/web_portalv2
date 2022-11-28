@@ -365,8 +365,8 @@ export const pt = {
 	'page.body.profile.header.accountActivity.content.result': 'Resultado',
 	'page.body.profile.header.accountActivity.content.userAgent': 'Dispositivo',
 
-	'page.body.profile.content.action.login': 'Entrar',
-	'page.body.profile.content.action.logout': 'Sair',
+	'page.body.profile.content.action.login': 'Entrar na plataforma',
+	'page.body.profile.content.action.logout': 'Sair da plataforma',
 	'page.body.profile.content.action.request2fa': 'Solicitar QR code para 2FA',
 	'page.body.profile.content.action.enable2fa': 'Habilitar 2FA',
 	'page.body.profile.content.action.login.2fa': 'Acessar com 2FA',

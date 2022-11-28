@@ -13,9 +13,19 @@ import { NavBar } from '../NavBar';
 //import './HeaderAuthToolbar.pcss';
 
 const IconWallet = require('../../assets/svg/wallet2.svg');
-const IconDashboard = require('../../assets/svg/dashboard2.svg');
+const IconDashboard = require('../../assets/svg/trading.svg');
+const IconDash = require('../../assets/svg/dashboard2.svg');
 const IconPerfil = require('../../assets/svg/profile2.svg');
+const IconAccountProfile = require('../../assets/svg/profileSubmenu.svg');
 const IconFinance = require('../../assets/svg/finance.svg');
+const IconConvert = require('../../assets/svg/convert.svg');
+const IconToken = require('../../assets/svg/hexagon.svg');
+const IconExchange = require('../../assets/svg/exchange.svg');
+const IconHistory = require('../../assets/svg/history.svg');
+const IconProfileVerification = require('../../assets/svg/cadastro.svg');
+const IconOrders = require('../../assets/svg/orders.svg');
+const IconLogout = require('../../assets/svg/logout.svg');
+const IconReferral = require('../../assets/svg/referral.svg');
 
 export const HeaderAuthToolbar: React.FC = () => {
 	const history = useHistory();
@@ -58,7 +68,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 			isLoggedIn && (
 				<div className="subheader__right-menu__item__title">
 					<div className={classItemTitle} onClick={() => setStateActiveNow('Dashboard')} >
-					<img src={IconFinance} className="subheader__right-menu__item__title__svg" style={{width: '20px',}} />
+					<img src={IconFinance} className="mr-2 subheader__right-menu__item__title__svg" style={{width: '26px',}} />
 
 						<Link to="/dashboard">Painel de controle
 						</Link>
@@ -75,36 +85,50 @@ export const HeaderAuthToolbar: React.FC = () => {
 			
 				<div className="subheader__right-menu__dropdown__wrap">
 					<span className={classLinkActiveTitleDrop('dashboard')}>
-					<img src={IconDashboard} className="subheader__right-menu__item__title__svg" style={{width: '20px',}} />
-						{translate('page.body.homepage.header.dashboard')}
+					<img src={IconDashboard} className="mr -2 subheader__right-menu__item__title__svg" style={{width: '26px',}} />
+						{/* {translate('page.body.homepage.header.dashboard')} */}
+						Negociação
 						<div className="subheader__right-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div>
 					</span>
 					<div className="subheader__right-menu__dropdown__wrap__content" style={{width: '100px',}}>
 						<Link
-							to="/dashboard"
+							to="/tokens"
 							onClick={() => {
 								setStateActiveNow('dashboard');
-								setActiveItemDrop('dashboard');
+								setActiveItemDrop('tokens');
 							}}
 						>
-							<div className={classActiveItemDrop('dashboard')} style={{width: '300px',}}>
-								<FaStar className="mr-2" />
+							<div className={classActiveItemDrop('tokens')} style={{width: '300px',}}>
+							<img src={IconToken} className="mr-2 subheader__right-menu__item__title__svg" style={{width: '26px',}} />
 								{/*{translate('page.body.homepage.header.dashboard_item')}*/}
-								Dashboard
+								Comprar tokens
 							</div>
 						</Link>
 						<Link
-							to="/security"
+							to="/quick-exchange"
 							onClick={() => {
 								setStateActiveNow('dashboard');
-								setActiveItemDrop('history');
+								setActiveItemDrop('quick');
 							}}
 						>
-							<div className={classActiveItemDrop('history')}>
-								<FaStar className="subheader__right-menu__dropdown__wrap__content__title__icon mr-2" />
-								Segurança
+							<div className={classActiveItemDrop('quick')}>
+							<img src={IconConvert} className="subheader__right-menu__item__title__svg" style={{width: '22px',}} />
+								Negociar cripto - Instantâneo
 							</div>
 						</Link>
+						<Link
+							to="/market/btcusd"
+							onClick={() => {
+								setStateActiveNow('dashboard');
+								setActiveItemDrop('exchange');
+							}}
+						>
+							<div className={classActiveItemDrop('exchange')}>
+							<img src={IconExchange} className="mr -2 subheader__right-menu__item__title__svg" style={{width: '26px',}} />
+								Negociar cripto - Exchange Pro
+							</div>
+						</Link>
+
 					</div>
 				</div>
 			
@@ -119,7 +143,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 				<div className="subheader__right-menu__dropdown__wrap">
 					<span className={classLinkActiveTitleDrop('finance')}>
 					
-					<img src={IconFinance} className="subheader__right-menu__item__title__svg" style={{width: '30px',}} />
+					<img src={IconFinance} className="subheader__right-menu__item__title__svg" style={{width: '26px',}} />
 
 						{translate('page.body.homepage.header.finance')}
 						<div className="subheader__right-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div>
@@ -134,7 +158,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 						>
 							<div className={classActiveItemDrop('wallets')}>
 								
-								<img src={IconWallet} className="mr-2 subheader__right-menu__item__title__svg" style={{width: '20px',}} />
+								<img src={IconWallet} className="mr-2 subheader__right-menu__item__title__svg" style={{width: '22px',}} />
 								{translate('page.body.homepage.header.wallet')}
 							</div>
 						</Link>
@@ -146,8 +170,20 @@ export const HeaderAuthToolbar: React.FC = () => {
 							}}
 						>
 							<div className={classActiveItemDrop('transaction')}>
-								<FaStar className="subheader__right-menu__dropdown__wrap__content__title__icon mr-2" />
+							<img src={IconHistory} className="mr-2 subheader__right-menu__item__title__svg" style={{width: '26px',}} />
 								{translate('page.body.homepage.header.transaction')}
+							</div>
+						</Link>
+						<Link
+							to="/orders"
+							onClick={() => {
+								setStateActiveNow('finance');
+								setActiveItemDrop('transaction');
+							}}
+						>
+							<div className={classActiveItemDrop('transaction')}>
+							<img src={IconOrders} className="mr-2 subheader__right-menu__item__title__svg" style={{width: '26px',}} />
+								Ordens abertas - Exchange Pro
 							</div>
 						</Link>
 						<Link
@@ -197,7 +233,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 				}}
 			>
 				<div className="subheader__right-menu__dropdown__wrap__content__title d-flex align-items-center">
-					<FaSignOutAlt className="subheader__right-menu__dropdown__wrap__content__title__icon mr-2" />
+				<img src={IconLogout} className="mr-2 subheader__right-menu__item__title__svg" style={{width: '26px',}} />
 					<FormattedMessage id={'page.body.profile.content.action.logout'} />
 				</div>
 			</Link>
@@ -215,13 +251,57 @@ export const HeaderAuthToolbar: React.FC = () => {
 					}}
 				>
 					<div className={classActiveItemDrop('profile')}>
-						<FaUserCircle className="subheader__right-menu__dropdown__wrap__content__title__icon mr-2" />
+						<img src={IconAccountProfile} className="mr-2 subheader__right-menu__item__title__svg" style={{width: '26px',}} />
+						
 						<FormattedMessage id={'page.header.navbar.profile'} />
 					</div>
 				</Link>
 			)
 		);
 	};
+
+
+	const renderProfileVerificationLink = () => {
+		return (
+			isLoggedIn && (
+				<Link
+					to="/profile"
+					onClick={() => {
+						setStateActiveNow('account');
+						setActiveItemDrop('profileVerification');
+					}}
+				>
+					<div className={classActiveItemDrop('profileVerification')}>
+						<img src={IconProfileVerification} className="mr-2 subheader__right-menu__item__title__svg" style={{width: '26px',}} />
+						
+						Cadastro
+					</div>
+				</Link>
+			)
+		);
+	};
+
+	const renderDashLink = () => {
+		return (
+			isLoggedIn && (
+				<Link
+					to="/dashboard"
+					onClick={() => {
+						setStateActiveNow('account');
+						setActiveItemDrop('dash');
+					}}
+				>
+					<div className={classActiveItemDrop('dash')}>
+						<img src={IconDash} className="mr-2 subheader__right-menu__item__title__svg" style={{width: '26px',}} />
+						
+						Dashboard
+					</div>
+				</Link>
+			)
+		);
+	};
+
+
 
 	const renderProfileTab = () => {
 		return (
@@ -236,6 +316,8 @@ export const HeaderAuthToolbar: React.FC = () => {
 						</span>
 						<div className="subheader__right-menu__dropdown__wrap__content subheader__right-menu__dropdown__wrap__content--account">
 							{renderProfileLink()}
+							{renderDashLink()}
+							{renderProfileVerificationLink()}
 							{renderReferralLink()}
 							{renderLogout()}
 						</div>
@@ -244,6 +326,8 @@ export const HeaderAuthToolbar: React.FC = () => {
 			)
 		);
 	};
+
+
 
 	const renderReferralLink = () => {
 		return (
@@ -256,7 +340,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 					}}
 				>
 					<div className={classActiveItemDrop('referral')}>
-						<FaUserPlus className="subheader__right-menu__dropdown__wrap__content__title__icon mr-2" />
+					<img src={IconReferral} className="mr -2 subheader__right-menu__item__title__svg" style={{width: '26px',}} />
 						<FormattedMessage id={'page.header.navbar.referral'} />
 					</div>
 				</Link>
@@ -336,6 +420,8 @@ export const HeaderAuthToolbar: React.FC = () => {
 						{renderUnLogin()}
 						
 						<NavBar />
+						<div className="white-line" style={{marginTop: '-12px'}}></div>
+
 					</div>
 				</nav>
 			</div>

@@ -341,17 +341,26 @@
   }
 
 .subheaderDesktop-screen {
-	background: #131313;
-	color: white;
 	
-	border-bottom: 2px solid #009991 !important;
+	background-color: #333333 !important;
+  
+    vertical-align: middle !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    padding-left: 20px !important;
+	height: 50px !important;
+    width: 100% !important;
+	border-bottom: 3px solid linear-gradient(90deg, #fff 0%, #fff 47.22%, #fff 94.44%) !important;
 
-	padding: 1rem 0.5rem !important;
-	vertical-align: middle !important;
+    font-family: Inter, sans-serif !important;
+    font-size: 17px !important;
+	
+	
+	color: #f5f5f5 !important;
 }
 
 .subheaderDesktop-screen .container-subheader {
-		margin: 0 20px;
+		
 	}
 
 .subheaderDesktop-screen a {
@@ -395,17 +404,17 @@
 				}
 
 .subheaderDesktop-screen .subheader__left-menu__dropdown__wrap--active a {
-							color: #00a693 !important;
+							color: #FDA736 !important;
 						}
 
 .subheaderDesktop-screen .subheader__left-menu__dropdown__wrap__dropbtn {
 						border: none;
-						color: white;
+						color: #FDA736;
 						font-size: 16px;
 					}
 
 .subheaderDesktop-screen .subheader__left-menu__dropdown__wrap__dropbtn::before {
-							background-color: #fff;
+							background-color: #f5f5f5;
 							content: '';
 							height: 60px;
 							opacity: 0;
@@ -415,14 +424,14 @@
 						}
 
 .subheaderDesktop-screen .subheader__left-menu__dropdown__wrap__dropbtn__svg svg {
-								color: white !important;
+								color: #FDA736 !important;
 								height: 32px;
 								width: 32px;
 							}
 
 .subheaderDesktop-screen .subheader__left-menu__dropdown__wrap__dropbtn__tag-icon {
 							align-items: center;
-							background-color: #00a693;
+							background-color: #FDA736;
 							border-radius: 5px;
 							-webkit-box-align: center;
 							box-sizing: border-box;
@@ -461,12 +470,12 @@
 						}
 
 .subheaderDesktop-screen .subheader__left-menu__dropdown__wrap__content {
-						background-color: #363944;
-						box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+						background-color: #333333 !important;
+						box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2) !important;
 						display: none;
 						left: 50% !important;
-						margin-top: 18px !important;
-						min-width: 150px;
+						margin-top: 10px !important;
+						min-width: 400x !important;
 						position: absolute;
 						right: auto !important;
 						text-align: center !important;
@@ -476,7 +485,7 @@
 					}
 
 .subheaderDesktop-screen .subheader__left-menu__dropdown__wrap__content a {
-							color: white !important;
+							color: #f5f5f5 !important;
 							display: block;
 							font-size: 16px;
 							padding: 20px 16px;
@@ -484,12 +493,12 @@
 						}
 
 .subheaderDesktop-screen .subheader__left-menu__dropdown__wrap__content a:hover {
-						background-color: #363944;
+						background-color: #333333 !important;
 						color: #FDA736 !important;
 					}
 
 .subheaderDesktop-screen .subheader__left-menu__dropdown__wrap__content link:hover {
-						background-color: #363944;
+						background-color: #333333 !important;
 						color: #FDA736 !important;
 					}
 
@@ -498,7 +507,7 @@
 					}
 
 .subheaderDesktop-screen .subheader__left-menu__dropdown__wrap:hover .subheader__left-menu__dropdown__wrap__dropbtn {
-						color: #FDA736;
+						color: #FDA736 !important;
 					}
 
 .subheaderDesktop-screen .subheader__left-menu__dropdown__wrap:hover .subheader__left-menu__dropdown__wrap__dropbtn__icon-drop-down {
@@ -526,14 +535,14 @@
 
 .subheaderDesktop-screen .subheader__right-menu__dropdown__wrap__dropbtn {
 						border: none;
-						color: white;
+						color: #f5f5f5 !important;
 						font-size: 16px;
 						outline: none;
 						text-decoration: none !important;
 					}
 
 .subheaderDesktop-screen .subheader__right-menu__dropdown__wrap__dropbtn::before {
-							background-color: #363944;
+							background-color: #333333 !important;
 							content: '';
 							height: 60px;
 							opacity: 0;
@@ -543,11 +552,11 @@
 						}
 
 .subheaderDesktop-screen .subheader__right-menu__dropdown__wrap__dropbtn--active {
-							color: #FCC57D !important;
+							color: #FDA736 !important;
 						}
 
 .subheaderDesktop-screen .subheader__right-menu__dropdown__wrap__dropbtn__svg svg {
-								color: white !important;
+								color: #f5f5f5 !important;
 								height: 32px;
 								width: 32px;
 							}
@@ -571,17 +580,18 @@
 							}
 
 .subheaderDesktop-screen .subheader__right-menu__dropdown__wrap__content__title--active {
-								color: #FCC57D;
+								color: #FDA736;
 							}
 
 .subheaderDesktop-screen .subheader__right-menu__dropdown__wrap__content {
 
-						background-color: #363944;
+						background-color: #333333 !important;
 						box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 						display: none;
-						left: 50% !important;
-						margin-top: 18px;
-						min-width: 150px;
+						left: 70% !important;
+						margin-top: 10px !important;
+						width: -webkit-max-content !important;
+						width: max-content !important;
 						position: absolute;
 						right: auto !important;
 						text-align: center !important;
@@ -594,7 +604,7 @@
 }
 
 .subheaderDesktop-screen .subheader__right-menu__dropdown__wrap__content a {
-							color: white;
+							color: #f5f5f5;
 							display: block;
 							font-size: 16px;
 							padding: 20px 16px;
@@ -602,20 +612,20 @@
 						}
 
 .subheaderDesktop-screen .subheader__right-menu__dropdown__wrap__content link {
-							color: white;
+							color: #f5f5f5;
 							display: block;
 							padding: 20px 16px;
 							text-decoration: none !important;
 						}
 
 .subheaderDesktop-screen .subheader__right-menu__dropdown__wrap__content link:hover {
-						background-color: #363944;
-						color: #f9a912 !important;
+						background-color: #333333 !important;
+						color: #FDA736 !important;
 					}
 
 .subheaderDesktop-screen .subheader__right-menu__dropdown__wrap__content a:hover {
-						background-color: #363944;
-						color: #f9a912 !important;
+						background-color: #333333;
+						color: #FDA736 !important;
 					}
 
 .subheaderDesktop-screen .subheader__right-menu__dropdown__wrap:hover .subheader__right-menu__dropdown__wrap__content {
@@ -623,7 +633,7 @@
 					}
 
 .subheaderDesktop-screen .subheader__right-menu__dropdown__wrap:hover .subheader__right-menu__dropdown__wrap__dropbtn {
-						color: #f9a912 !important;
+						color: #FDA736 !important;
 						outline: none !important;
 						text-decoration: none !important;
 					}
@@ -646,7 +656,7 @@
 
 .subheaderDesktop-screen .subheader__right-menu__item__title a,
 					.subheaderDesktop-screen .subheader__right-menu__item__title span {
-						color: white;
+						color: #f5f5f5;
 						outline: none;
 						text-decoration: none;
 						display: inline-block;;
@@ -654,22 +664,22 @@
 					}
 
 .subheaderDesktop-screen .subheader__right-menu__item__title a:hover, .subheaderDesktop-screen .subheader__right-menu__item__title span:hover {
-							color: #f9a912;
+							color: #FDA736;
 						}
 
 .subheaderDesktop-screen .subheader__right-menu__item__title link {
-						color: #f9a912;
+						color: #FDA736;
 						outline: none;
 						text-decoration: none;
 					}
 
 .subheaderDesktop-screen .subheader__right-menu__item__title link:hover {
-							color: #f9a912;
+							color: #FDA736 !important;
 						}
 
 .subheaderDesktop-screen .subheader__right-menu__item__title--active a,
 						.subheaderDesktop-screen .subheader__right-menu__item__title--active span {
-							color: #f9a912;
+							color: #FDA736;
 						}
 
 .subheaderDesktop-screen .subheader__right-menu__item__title {

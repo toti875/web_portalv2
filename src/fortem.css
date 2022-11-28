@@ -4793,19 +4793,12 @@ margin-left: 20px;
 	}{/*   *** AUTENTICATED SUB-HEADER NAVBAR ***   */}.subheaderDesktop-screen {
 
     
-    background-color: #333333 !important;
-  
-    vertical-align: middle !important;
-    padding-top: 5px;
-    padding-bottom: 5px !important;
-    padding-left: 20px;
-	height: 50px;
-    width: 100%;
-	border-bottom: 3px solid linear-gradient(90deg, #fff 0%, #fff 47.22%, #fff 94.44%) !important;
+    
+}.subheaderDesktop-screen {
 
-    font-family: Inter, sans-serif !important;
-    font-size: 17px !important;
-}.subheaderDesktop-screen {/*padding: 1rem 0.5rem;*/}.subheaderDesktop-screen .container-subheader {
+}
+    
+    .subheaderDesktop-screen .container-subheader {
 
 
        
@@ -4837,33 +4830,33 @@ margin-left: 20px;
 					position: relative;
 					text-decoration: none;
 				}.subheaderDesktop-screen .subheader__left-menu__dropdown__wrap--active a {
-							color: #1EDED0 !important;
+							
 						}.subheaderDesktop-screen .subheader__left-menu__dropdown__wrap__dropbtn {
-						border: none;
-						color: white;
-						font-size: 16px;
+						
+						
+						
 					}.subheaderDesktop-screen .subheader__left-menu__dropdown__wrap__dropbtn::before {
-							background-color: #fff;
+						
 							content: '';
 							height: 60px;
 							opacity: 0;
-							position: absolute;
-							width: 100%;
-							z-index: 10;
+						
+						
+						
 						}.subheaderDesktop-screen .subheader__left-menu__dropdown__wrap__dropbtn__svg svg {
-								color: white !important;
-								height: 32px;
-								width: 32px;
+						
+						
+						
 							}.subheaderDesktop-screen .subheader__left-menu__dropdown__wrap__dropbtn__tag-icon {
-							align-items: center;
-							background-color: #1EDED0;
-							border-radius: 5px;
-							-webkit-box-align: center;
-							box-sizing: border-box;
-							color: #212822;
-							display: flex;
-							-ms-flex-align: center;
-							font-size: 12px;
+							
+							
+							
+							
+							
+							
+							
+							
+							
 							height: 18px;
 							line-height: 16px;
 							margin-left: 8px;
@@ -4873,16 +4866,15 @@ margin-left: 20px;
 							        transform: translateY(0);
 						}.subheaderDesktop-screen .subheader__left-menu__dropdown__wrap__dropbtn__tag-icon::before {
 								
-								border-left: 7px solid transparent;
-								border-right: 7px solid transparent;
-								content: '';
-								position: absolute;
-								-webkit-transform: rotate(-90deg) translateY(-12px);
-								        transform: rotate(-90deg) translateY(-12px);
-								z-index: -10;
+							
+							
+							
+							
+							
+							
+							
 							}.subheaderDesktop-screen .subheader__left-menu__dropdown__wrap__dropbtn__icon-drop-down {
-							border-bottom: 6px solid rgba(253, 253, 253, 0.788);
-							border-left: 4px solid transparent;
+
 							border-right: 4px solid transparent;
 							margin-left: 5px;
 							-webkit-transform: rotate(180deg);
@@ -4896,7 +4888,7 @@ margin-left: 20px;
 						display: none;
 						left: 50% !important;
                         font-size: 16px;
-						min-width: 200px;
+						
 						position: absolute;
                         margin-top: 40px !important;
 						right: auto !important;
@@ -4911,7 +4903,7 @@ margin-left: 20px;
                             font-family: Inter, sans-serif !important;
 							padding: 15px 15px;
 							text-decoration: none !important;
-                            min-width: 200px;
+                            min-width: 400px;
                             border-radius: 5px;
 						}.subheaderDesktop-screen .subheader__left-menu__dropdown__wrap__content a:hover {
 						background-color: #363944;
@@ -5003,7 +4995,7 @@ margin-left: 20px;
 
                             margin-right: 6px;
                         }.subheaderDesktop-screen .subheader__right-menu__dropdown__wrap__content link:hover {
-						background-color: #555555;
+						
 						color: #f9a912 !important;
 					}.subheaderDesktop-screen .subheader__right-menu__dropdown__wrap__content a:hover {
 						background-color: #555555;
