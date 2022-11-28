@@ -317,6 +317,29 @@
           
       }
 
+.cr-market-depth {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+  }
+
+.pg-market-depth {
+	margin-bottom: -20px;
+	max-height: 100%;
+	overflow-y: hidden;
+	width: 100%;
+  }
+
+.pg-market-depth .recharts-responsive-container .recharts-wrapper .recharts-surface .recharts-cartesian-grid rect {
+		fill: var(--body-background-color);
+	  }
+
+.pg-market-depth__tooltip {
+	display: flex;
+	flex-direction: column;
+  }
+
 .subheaderDesktop-screen {
 	background: #131313;
 	color: white;
@@ -1549,11 +1572,11 @@
 	}
 
 .pg-navbar {
-  align-items: center !important;
+  align-items: center;
   display: flex;
   justify-content: flex-end;
   padding: 0;
-  position: relative !important;
+  position: relative;
   backgound: transparent !important;
 }
 
@@ -2013,10 +2036,12 @@
 
 @media screen and (max-width: 768px) {
 	.pg-navbar {
+		align-items: baseline;
 		display: flex;
 		flex-direction: column;
 		height: 100vh;
 		justify-content: flex-end;
+		margin-top: calc(var(--gap) * 2);
 		width: 100%;
 	}
 
