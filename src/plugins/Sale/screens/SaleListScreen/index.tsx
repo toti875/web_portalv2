@@ -16,6 +16,8 @@ import './SaleListScreen.css';
 //const GlobeAnimated  = require ('../../../../assets/images/ticker-tape.mp4');
 const GlobeAnimated  = require ('./b.mp4');
 
+const bgF  = require ('./bg-f.png');
+
 const settingEvents = {
 	dots: false,
 	infinite: true,
@@ -80,7 +82,7 @@ export const SaleListScreen: React.FC = () => {
 			{renderEvent()}	
 
 			<div style={{ position: 'relative', padding: '0 5%' }}>
-				<img style={{ width: '100%', margin: 0 }} src="https://i.imgur.com/2yZzXcQ.jpg" alt="ieo_banner" />
+				<img style={{ width: '100%', margin: 0 }} src={bgF} alt="ieo_banner" />
 			
 			</div>
 
