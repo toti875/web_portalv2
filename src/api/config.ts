@@ -15,14 +15,14 @@ export const defaultConfig: Config = {
 
 	
 	api: {
-		authzURL: 'https://www.fortem1.com.br/api/v2/barong',
-		switchURL: 'https://www.fortem1.com.br/api/v2/applogic',
-		transactionURL: 'https://www.fortem1.com.br/api/v2/peatio',
-		ieoURL: 'https://www.fortem1.com.br/api/v2/peatio',
+		authzURL: 'http://www.fortem1.com.br/api/v2/barong',
+		switchURL: 'http://www.fortem1.com.br/api/v2/applogic',
+		transactionURL: 'http://www.fortem1.com.br/api/v2/peatio',
+		ieoURL: 'http://www.fortem1.com.br/api/v2/peatio',
 
-		infoURL: 'https://www.fortem1.com.br/api/v2/peatio',
+		infoURL: 'http://www.fortem1.com.br/api/v2/peatio',
 		//downstreamURL: 'wss://www.fortem1.com.br/api/public/',
-		downstreamURL: 'wss://www.fortem1.com.br/api/v2/ranger',
+		downstreamURL: 'ws://www.fortem1.com.br/api/v2/ranger',
 
 	},
 	
@@ -34,7 +34,7 @@ export const defaultConfig: Config = {
 	gaTrackerKey: 'G-M47QL88D4R',
 	msAlertDisplayTime: '10000',
 	msPricesUpdates: '3000',
-	incrementalOrderBook: false,
+	incrementalOrderBook: true,
 	finex: false,
 	isResizable: true,
 	isDraggable: true,

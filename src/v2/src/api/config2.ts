@@ -2,17 +2,17 @@
 export const defaultConfig2: Config2 = {
     
     api2: {
-        authUrl: 'http://www.fortem1.com.br/api/v2/barong',
-        tradeUrl: '',
-        applogicUrl: '',
-        rangerUrl: '',
+        authUrl: 'https://www.fortem1.com.br/api/v2/barong',
+        tradeUrl: 'https://www.fortem1.com.br/api/v2/peatio',
+        applogicUrl: 'https://www.fortem1.com.br/api/v2/applogic',
+        rangerUrl: 'wss://www.fortem1.com.br/api/v2/barong',
         finexUrl: ''
     },
     finex: false,
-    withCredentials: false,
+    withCredentials: true,
     incrementalOrderBook: true,
-    isResizable: false,
-    isDraggable: false,
+    isResizable: true,
+    isDraggable: true,
     showLanding: true,
     sentryEnabled: false,
     captchaLogin: false,

@@ -45,13 +45,16 @@ import './fortem.css';
 //import './buttons.pcss';
 //import './button.css';
 
-
+//import 'bootstrap/dist/css/bootstrap-grid.min.css';
+//import '@openware/react-components/build/index.css';
 //import './themes/bootstrap/bootstrap-utilities.css';
 import './Feather.svg';
 
 import { rootSaga } from './modules';
 import { rangerSagas } from './modules/public/ranger';
 import { rangerMiddleware, sagaMiddleware, store } from './store';
+
+
 
 
 if (!Intl.PluralRules) {

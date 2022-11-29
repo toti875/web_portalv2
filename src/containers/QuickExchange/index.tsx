@@ -5,7 +5,7 @@ import { Button, Spinner } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import { msPricesUpdates } from '../../api';
 import { useCurrenciesFetch } from '../../hooks';
-import { CanCan } from '../../containers';
+//import { CanCan } from '../../containers';
 import {
     marketsFetch,
     selectMarkets,
@@ -71,8 +71,9 @@ export const QuickExchangeContainer = () => {
     const markets = useSelector(selectMarkets) || [];
     const marketPrice = useSelector(selectMarketPrice);
     const updateTimer = useSelector(selectMarketPriceFetchSuccess);
+   
     //const abilities = useSelector(selectAbilities);
-    //const abilitiesSuccess = useSelector(selectAbilitiesSuccess);
+    const abilitiesSuccess = true;
 
     const translate = useCallback((id: string) => formatMessage({ id: id }), [formatMessage]);
 
@@ -88,10 +89,10 @@ export const QuickExchangeContainer = () => {
         const seconds = +msPricesUpdates() / 1000;
         setTime(ssToMMSS(seconds));
 
-
+        
         dispatch(walletsFetch());
-        dispatch(marketsFetch({type: 'market'}));
-    }, [true]);
+        dispatch(marketsFetch());
+    }, [abilitiesSuccess]);
 
     const currentSelectedMarket = React.useMemo(() => getMarket(marketID, markets), [marketID]);
 
@@ -343,7 +344,9 @@ export const QuickExchangeContainer = () => {
     ), []);
 
     const renderPriceBlock = React.useMemo(() => {
-        
+        if (!base.currency || !marketPrice.price) {
+            return null;
+        }
 
         return (
             <div className="cr-quick-exchange__body-info">
@@ -360,7 +363,7 @@ export const QuickExchangeContainer = () => {
 
     return (
         <React.Fragment>
-            
+            {!abilitiesSuccess ? renderLoader : (
                 <div className="cr-quick-exchange">
                     <div className="cr-quick-exchange__header">
                         {translate('page.body.quick.exchange.header')}
@@ -384,7 +387,7 @@ export const QuickExchangeContainer = () => {
                         </div>
                     </div>
                 </div>
-            
+            )}
         </React.Fragment>
     );
 };

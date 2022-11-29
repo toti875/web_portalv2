@@ -27,7 +27,7 @@ import {
 } from '../../../modules';
 import { IdentityData } from '../../../modules/user/kyc/identity/types';
 
-//import * as countries from 'i18n-iso-countries';
+import * as countries from 'i18n-iso-countries';
 
 interface ReduxProps {
 	editSuccess?: string;
@@ -162,17 +162,17 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 		});
 
 		/* tslint:disable */
-		//languages.map((l: string) => countries.registerLocale(require(`i18n-iso-countries/langs/${l}.json`)));
+		languages.map((l: string) => countries.registerLocale(require(`i18n-iso-countries/langs/${l}.json`)));
 
 		/* tslint:enable */
 
-		//const dataCountries = Object.values(countries.getNames(lang));
-		//const onSelectCountry = value => this.selectCountry(dataCountries[value]);
+		const dataCountries = Object.values(countries.getNames(lang));
+		const onSelectCountry = value => this.selectCountry(dataCountries[value]);
 
 		return (
 			<div className="pg-confirm__content-identity">
 				<div className="pg-confirm__content-identity__forms">
-					<div className="pg-confirm__content-identity__forms__row input-group-lg">
+					<div className="pg-confirm__content-identity__forms__row input-group">
 						<fieldset className={firstNameGroupClass}>
 							<CustomInput
 								type="string"
@@ -185,8 +185,6 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 								handleFocusInput={this.handleFieldFocus('firstName')}
 							/>
 						</fieldset>
-					</div>
-					<div className="pg-confirm__content-identity__forms__row input-group-lg">
 						<fieldset className={lastNameGroupClass}>
 							<CustomInput
 								type="string"
@@ -199,7 +197,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 							/>
 						</fieldset>
 					</div>
-					<div className="pg-confirm__content-identity__forms__row ">
+					<div className="pg-confirm__content-identity__forms__row">
 						<fieldset className={dateOfBirthGroupClass}>
 							<div className="custom-input">
 								<label>{this.translate('page.body.kyc.identity.dateOfBirth')}</label>
@@ -235,7 +233,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 							</div>
 						</fieldset>
 					</div>
-					{/*<div className="pg-confirm__content-identity__forms__row">
+					<div className="pg-confirm__content-identity__forms__row">
 						<div className="pg-confirm__content-identity__forms__row__content">
 							<DropdownComponent
 								className="pg-confirm__content-identity__forms__row__content-number-dropdown"
@@ -244,8 +242,8 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 								placeholder={this.translate('page.body.kyc.identity.CoR')}
 							/>
 						</div>
-					</div>*/}
-					<div className="pg-confirm__content-identity__forms__row input-group-lg">
+					</div>
+					<div className="pg-confirm__content-identity__forms__row">
 						<fieldset className={residentialAddressGroupClass}>
 							<CustomInput
 								type="string"
@@ -286,7 +284,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 				</div>
 				{sendSuccess && !editSuccess && <p className="pg-confirm__success">{this.translate(sendSuccess)}</p>}
 				{editSuccess && !sendSuccess && <p className="pg-confirm__success">{this.translate(editSuccess)}</p>}
-				<div className="pg-confirm__content-deep" style={{marginTop: '30px !important'}}>
+				<div className="pg-confirm__content-deep">
 					<Button
 						onClick={this.sendData}
 						disabled={this.handleCheckButtonDisabled()}
@@ -396,7 +394,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 
 	private selectCountry = (value: string) => {
 		this.setState({
-			//countryOfBirth: countries.getAlpha2Code(value, this.props.lang),
+			countryOfBirth: countries.getAlpha2Code(value, this.props.lang),
 		});
 	};
 
@@ -453,6 +451,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 			!lastNameValid ||
 			!cpfValid ||
 			!residentialAddressValid ||
+			!countryOfBirth ||
 			!cityValid ||
 			!postcodeValid ||
 			!dateOfBirthValid
@@ -472,7 +471,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 			address: this.state.residentialAddress,
 			postcode: this.state.postcode,
 			city: this.state.city,
-			country: 'Brasil',
+			country: this.state.countryOfBirth,
 			confirm: true,
 		};
 		const isIdentity =

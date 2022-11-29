@@ -7,7 +7,7 @@ export const QuickExchange: React.FC = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        setDocumentTitle('Quick Exchange');
+        setDocumentTitle('Negociação instantânea');
     }, [dispatch]);
 
     return (

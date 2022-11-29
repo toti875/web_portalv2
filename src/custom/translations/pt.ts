@@ -29,22 +29,22 @@ export const pt = {
 	'page.body.airdropCoin.claim.msg.fail': 'Claim fail',
 
     /* Quick Exchange */
-    'page.body.quick.exchange.header': 'Conversão de moedas',
+    'page.body.quick.exchange.header': 'Negociação instantânea',
 
-    'page.body.quick.exchange.label.exchange': 'You exchange',
-    'page.body.quick.exchange.label.receive': 'You receive',
-    'page.body.quick.exchange.label.currency': 'Currency',
+    'page.body.quick.exchange.label.exchange': 'Você está negociando:',
+    'page.body.quick.exchange.label.receive': 'Pelo valor de:',
+    'page.body.quick.exchange.label.currency': 'Escolha o ativo',
 
-    'page.body.quick.exchange.sublabel.min_amount': 'Min exchange amount is',
-    'page.body.quick.exchange.sublabel.balance': 'Saldo',
+    'page.body.quick.exchange.sublabel.min_amount': 'Quantidade mínima é de',
+    'page.body.quick.exchange.sublabel.balance': 'Seu saldo é de:',
 
     'page.body.quick.exchange.estimated_price': 'Valor aproximado',
-    'page.body.quick.exchange.slippage': 'Slippage is higher than 1%. Enter a lower amount to get a better price',
+    'page.body.quick.exchange.slippage': 'Atenção: O slippage nesse instante é maior do que 1%. Recomendamos negociar uma quantidade menor para obtenção de melhores preços.',
 
-    'page.body.quick.exchange.placeholder.exchange': 'You exchange',
-    'page.body.quick.exchange.placeholder.receive': 'You receive',
+    'page.body.quick.exchange.placeholder.exchange': 'Você está negociando',
+    'page.body.quick.exchange.placeholder.receive': 'Pelo valor de',
 
-    'page.body.quick.exchange.button.exchange': 'Converter',
+    'page.body.quick.exchange.button.exchange': 'Negociar',
 
     'success.quick.exchange.order.created': 'Ordem enviada com sucesso',
 

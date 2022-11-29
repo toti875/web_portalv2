@@ -4,7 +4,7 @@ import { API, RequestOptions } from '../../../../api';
 import { depthData, depthError, DepthFetch } from '../actions';
 
 const depthOptions: RequestOptions = {
-	apiVersion: 'ieo',
+	apiVersion: 'core',
 };
 
 export function* depthSaga(action: DepthFetch) {

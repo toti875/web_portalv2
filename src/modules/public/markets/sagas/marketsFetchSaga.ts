@@ -9,11 +9,11 @@ import {
 } from '../actions';
 
 const marketsRequestOptions: RequestOptions = {
-    apiVersion: 'ieo',
+    apiVersion: 'core',
 };
 
 const tickersOptions: RequestOptions = {
-    apiVersion: 'ieo',
+    apiVersion: 'core',
 };
 
 

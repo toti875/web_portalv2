@@ -8,8 +8,7 @@ import * as React from 'react';
 import isEqual from 'react-fast-compare';
 import { useDispatch, useSelector } from 'react-redux';
 import { HeaderToolbar } from './HeaderToolbar';
-import { Charts } from '../../v2/src/containers/Charts'
-//import './TradingScreen.css'
+
 
 // tslint:disable-next-line: no-empty-interface
 interface TradingScreenProps {}
@@ -53,7 +52,7 @@ const TradingComponent: React.FC<TradingScreenProps> = ({}) => {
 				<NewOrderBook />
 			</div>
 			<div className="td-pg-trading--bg td-pg-trading__item td-pg-trading--bg td-pg-trading__trading-chart">
-				<Charts />
+				<TradingChart hideHeaderContent />
 			</div>
 			<div className="td-pg-trading--bg td-pg-trading__item td-pg-trading--bg td-pg-trading__order">
 				<NewOrder />

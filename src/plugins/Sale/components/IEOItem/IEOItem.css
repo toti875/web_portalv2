@@ -40,11 +40,15 @@
 }
 
 .tokenCard {
-
 	padding: 20px;
-	background-color: '#e4ebf5' !important;
-
+	background-color: '#dde1e7' !important;
 }
+
+.tokenCard:hover {
+	padding: 20px;
+	background-color: '#dde1e7' !important;
+}
+
 
 .itemLogo {
 	position: absolute;

@@ -3,7 +3,7 @@ import { API, RequestOptions } from '../../../../api';
 import { marketsTickersData, marketsTickersError } from '../actions';
 
 const tickersOptions: RequestOptions = {
-    apiVersion: 'ieo',
+    apiVersion: 'core',
 };
 
 export function* tickersSaga() {

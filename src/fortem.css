@@ -4616,13 +4616,16 @@ margin-left: 20px;
                 display: inline-block;
                 margin-right: 20px;
                 position: relative;
-				min-height: 60px;
+				
             }.headerDesktop-screen .header__right-menu__dropdown__wrap__dropbtn {
                     border: none;
                     color: #fff;
-                    font-size: 17px;
+                    font-size: 18px !important;
                     outline: none;
                     text-decoration: none !important;
+                    margin-top: 15px;
+                    margin-left: 10px;
+                    height: 40px !important;
                 }.headerDesktop-screen .header__right-menu__dropdown__wrap__dropbtn::before {
         
                         content: '';
@@ -4632,7 +4635,7 @@ margin-left: 20px;
                         width: 100%;
                         z-index: 10;
                     }.headerDesktop-screen .header__right-menu__dropdown__wrap__dropbtn--active {
-                        color: #1EDED0 !important;
+                        color: #009991  !important;
                     }.headerDesktop-screen .header__right-menu__dropdown__wrap__dropbtn__svg svg {
                             
                             height: 32px;
@@ -4646,8 +4649,10 @@ margin-left: 20px;
                                 transform: rotate(180deg);
                         transition: all 0.4s;
                     }.headerDesktop-screen .header__right-menu__dropdown__wrap__content--account {
-                        min-width: 200px;
+                        
+                        min-width: 340px !important;
 						background-color: #000 !important;
+                        margin-right: 30px !important;
                     }.headerDesktop-screen .header__right-menu__dropdown__wrap__content {/* Header Profile Menu */}.headerDesktop-screen .header__right-menu__dropdown__wrap__content__title__icon {
                             font-size: 18px;
                             margin-right: 6px;
