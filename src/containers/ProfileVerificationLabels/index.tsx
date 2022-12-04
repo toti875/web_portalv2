@@ -130,8 +130,8 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 				return (
 					<Card>
 					<div key={index} className="pg-profile-page-verification-labels__step pg-profile-page-verification-labels__step--rejected">
-						<div className="pg-profile-page-verification-labels_step__info">
-							<div className="pg-profile-page-verification-labels_step__info__title">
+						<div className="pg-profile-page-verification-labels__step__info">
+							<div className="pg-profile-page-verification-labels__step__info__title">
 								
 								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
 							</div>
@@ -216,7 +216,7 @@ class ProfileVerificationComponent extends React.Component<Props, State> {
 								<FormattedMessage id={`page.body.profile.verification.${labelToCheck}.title`} />
 							</div>
 							<div className="pg-profile-page-verification-labels__step__info__subtitle">
-							<div style={{textDecoration: 'underline'}}>
+							<div style={{textDecoration: 'underline', color: '#dde1e7', marginBottom: '20px'}}>
 									Funcionalidades:
 								</div>
 								<div></div>

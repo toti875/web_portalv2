@@ -64,6 +64,9 @@ export const ProfileScreen2: React.FC = () => {
 		<div className="td-pg-profile">
 
 				<div className="td-pg-profile__content">
+				<ProfileQuickContainer />
+			
+			<ProfileActiveStep />
 					<ProfileAccountActivity />
 					<ProfileSecurity />
 					<ProfileAnnouncement />

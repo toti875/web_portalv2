@@ -44,7 +44,7 @@ export const pt = {
 	'error.order.create.minAmount': 'Amount is too low. Minimum amount is {amount} {currency}',
 	'error.order.create.minPrice': 'Price is too low. Minimum price is {price} {currency}',
 	'error.order.create.maxPrice': 'Price is too high. Maximum price is {price} {currency}',
-	'error.order.create.available': 'Balance exceeded. Available {available} {currency}',
+	'error.order.create.available': 'Saldo insuficiente. Seu saldo é de {available} {currency}',
 
 	'page.body.trade.header.marketDepths': 'Profundidade do mercado',
 	'page.body.trade.header.marketDepths.content.price': 'Preço:',
@@ -200,16 +200,16 @@ export const pt = {
 	'page.body.wallets.beneficiaries.tipDescription': 'Observação',
 
 	'page.body.wallets.beneficiaries.failAddModal.header': 'Atenção',
-	'page.body.wallets.beneficiaries.failAddModal.content': 'Você precisa confirmar seus dados para adicionar novo endereço',
-	'page.body.wallets.beneficiaries.failAddModal.button': 'Confirmar conta',
+	'page.body.wallets.beneficiaries.failAddModal.content': 'Você precisa concluir seu cadastro para adicionar um novo endereço.',
+	'page.body.wallets.beneficiaries.failAddModal.button': 'Concluir cadastro',
 
 	'page.body.openOrders.tab.all': 'Todas',
 	'page.body.openOrders.tab.open': 'Abertas',
 	'page.body.openOrders.header.orderType': 'Tipo de ordem',
-	'page.body.openOrders.header.orderType.buy.market': 'Mercado',
-	'page.body.openOrders.header.orderType.buy.limit': 'Buy limit',
-	'page.body.openOrders.header.orderType.sell.market': 'Sell market',
-	'page.body.openOrders.header.orderType.sell.limit': 'Sell limit',
+	'page.body.openOrders.header.orderType.buy.market': 'Compra - Ordem a mercado',
+	'page.body.openOrders.header.orderType.buy.limit': 'Compra - Ordem Limitada',
+	'page.body.openOrders.header.orderType.sell.market': 'Venda - Ordem a Mercado',
+	'page.body.openOrders.header.orderType.sell.limit': 'Venda - Ordem Limitada',
 	'page.body.openOrders.header.pair': 'Ativo',
 	'page.body.openOrders.header.amount': 'Quantidade',
 	'page.body.openOrders.header.price': 'Preço',
@@ -400,7 +400,7 @@ export const pt = {
 	'page.body.profile.verification.document.subtitle3': 'Saques e depósitos na rede bancária: até R$ 100.000,00 / mês',
 	
 
-	'page.body.profile.verification.document.rejected.tooltip': 'Sua identidade não foi aprovada',
+	'page.body.profile.verification.document.rejected.tooltip': 'Seus documentos não foram aprovados. Por favor, envie novamente seguindo as diretrizes da tela de cadastro.',
 	'page.body.profile.verification.address.title': 'Validação do comprovante de Residência',
 	'page.body.profile.verification.address.subtitle': 'Limite de R$ 500.000,00 / mês',
 	'page.body.profile.verification.address.rejected.tooltip': 'Comprovante de endereço não aprovado',
@@ -418,6 +418,7 @@ export const pt = {
 	'page.confirm.title.phone': 'Get Verified your phone number',
 	'page.confirm.title.profile': 'Informe seus dados pessoais',
 	'page.confirm.subtitle.profile': '(Certifique-se de que as informações sejam iguais ao seu documento)',
+	'page.confirm.subtitle.document': '(Certifique-se de que as informações sejam iguais ao seu documento)',
 	'page.confirm.title.document': 'Valide seu documento de identificação',
 	'page.confirm.title.address': 'Validação de endereço',
 
@@ -622,7 +623,7 @@ export const pt = {
 
 	// success messages
 	'success.addresses.accepted': 'Addresses upload was successful',
-	'success.documents.accepted': 'Documents upload was successful',
+	'success.documents.accepted': 'Documentos enviados com sucesso',
 	//'success.identity.accepted': 'Identity upload was successful',
 	'success.identity.accepted': 'Dados atualizados com sucesso',
 	'success.withdraw.action': 'Solicitação de saque recebida pela Corretora',

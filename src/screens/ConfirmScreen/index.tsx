@@ -25,7 +25,7 @@ type Props = ReduxProps & DispatchProps & RouterProps & IntlProps;
 class ConfirmComponent extends React.Component<Props> {
 	public componentDidMount() {
 		const { labels } = this.props;
-		setDocumentTitle('Confirm');
+		setDocumentTitle('Validação');
 		this.props.labelFetch();
 
 		if (labels.length) {
@@ -42,6 +42,7 @@ class ConfirmComponent extends React.Component<Props> {
 	}
 
 	public renderVerificationStep = (step: string) => {
+		console.log({step});
 		switch (step) {
 			case 'profile':
 				return <Identity />;

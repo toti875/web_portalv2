@@ -56,8 +56,8 @@ const MarketChartItem = styled.div`
 	}
 `;
 
-//const BASE_MARKET_URL = 'https://www.yellow.com/api/v2/peatio/public/markets';
-const BASE_MARKET_URL = 'https://www.fortem1.com.br/api/v2/peatio/public/markets';
+
+const BASE_MARKET_URL = 'https://www.fortem1.com.br/api/v2/trade/public/markets';
 
 export const NewMarketList: React.FC<any> = () => {
 	const defaultTicker = {

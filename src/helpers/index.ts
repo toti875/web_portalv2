@@ -45,3 +45,4 @@ export * from './getWalletTabName';
 export * from './calcWalletsData';
 export * from './validate';
 export * from './formatNumber';
+export * from './ssToMMSS';

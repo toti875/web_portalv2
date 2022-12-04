@@ -93,7 +93,6 @@ import {
 	FortemIOHomePage,
 	PortfolioScreen,
 	QuickExchange,
-	
 	ProfileScreen,
 } from '../../screens';
 
@@ -131,6 +130,7 @@ import FAQ from "../../screens/FortemFAQ/FAQ";
 import Status from "../../template_react_status/src/components/App";
 
 import spinerLoading from './spinerLoading.gif';
+import { ProfileScreen2 } from 'screens/ProfileScreen2';
 
 
 
@@ -419,6 +419,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 
 						<Route exact={false} path="/market/:market?" component={NewTradingScreenMobile} />
 						<Route exact={true} path="/" component={HomePageScreenMobile} />
+						<Route exact={true} path="/home" component={FortemIOHomePage} />
 						<Route exact={true} path="/markets" component={NewMarketsScreenMobile} />
 						<Route path="/ieo" exact component={IEOListMobileScreen} />
 						<Route path="/ieo/detail/:ieoID" exact component={IEODetailMobileScreen} />
@@ -541,7 +542,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/history" component={HistoryScreen} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/confirm" component={ConfirmScreen} />
 					{/* OLD Profile Page */}
-					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={ProfileScreen} />
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={ProfileScreen2} />
 					{/* NEW Profile Page */}
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/account/wallets" component={Profile} />
 					

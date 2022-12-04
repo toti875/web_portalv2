@@ -429,7 +429,7 @@ function scrollRotate() {
 									{translate('page.homePage.trade.btn.trade')}
 								</button>
 							) : (
-								<><a className="btn-default btn-icon icon-btn-wrap icon header__right-menu__items" href="/signin" style={{fontFamily: 'Verdana', fontWeight: 'bold', fontSize: '22px', position: 'absolute',  bottom: '370px', left: '50%', background: 'transparent'}}>Acessar plataforma <svg className="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M15 1H4a1 1 0 0 0-1 1v2h2V3h9v10H5v-1H3v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/><path  d="m4.879 10.293 1.414 1.414L10 8 6.293 4.293 4.879 5.707 6.172 7H0v2h6.172z"/></svg></a>
+								<><a className="btn-default btn-icon icon-btn-wrap icon header__right-menu__items" href="/signin" style={{fontFamily: 'Verdana', fontWeight: 'bold', fontSize: '22px', position: 'absolute',  bottom: '370px', left: '50%', background: 'transparent'}}>Acessar plataforma <svg className="icon" xmlns="http://www.w3.org/2000/svg" width="32px" viewBox="0 0 16 16"><path d="M15 1H4a1 1 0 0 0-1 1v2h2V3h9v10H5v-1H3v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/><path  d="m4.879 10.293 1.414 1.414L10 8 6.293 4.293 4.879 5.707 6.172 7H0v2h6.172z"/></svg></a>
 							
 																<button className="btn-icon btn-default" onClick={redirectSingUP} style={{fontFamily: 'Verdana', fontWeight: 'bold', fontSize: '22px',  position: 'absolute',  bottom: '370px', left: '70%'}}>
 																Conecte-se com a Fortem

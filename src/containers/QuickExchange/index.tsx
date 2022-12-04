@@ -3,9 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useIntl } from 'react-intl';
 import { Button, Spinner } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
+import { CanCan } from '../';
 import { msPricesUpdates } from '../../api';
-import { useCurrenciesFetch } from '../../hooks';
-//import { CanCan } from '../../containers';
 import {
     marketsFetch,
     selectMarkets,
@@ -29,8 +28,7 @@ import {
     getBaseAmount,
     getQuoteAmount,
 } from './helpers';
-import { precisionRegExp } from '../../helpers';
-import { ssToMMSS } from './ssToMMSS';
+import { precisionRegExp, ssToMMSS } from '../../helpers';
 import { ArrowRight, WarningIcon } from './icons';
 
 interface QuickExchangeTimer {
@@ -71,13 +69,10 @@ export const QuickExchangeContainer = () => {
     const markets = useSelector(selectMarkets) || [];
     const marketPrice = useSelector(selectMarketPrice);
     const updateTimer = useSelector(selectMarketPriceFetchSuccess);
-   
     //const abilities = useSelector(selectAbilities);
     const abilitiesSuccess = true;
 
     const translate = useCallback((id: string) => formatMessage({ id: id }), [formatMessage]);
-
-    useCurrenciesFetch();
 
     const updateMarketPrice = () => {
         if (currentSelectedMarket) {
@@ -89,9 +84,8 @@ export const QuickExchangeContainer = () => {
         const seconds = +msPricesUpdates() / 1000;
         setTime(ssToMMSS(seconds));
 
-        
         dispatch(walletsFetch());
-        dispatch(marketsFetch());
+        dispatch(marketsFetch({type: 'market'}));
     }, [abilitiesSuccess]);
 
     const currentSelectedMarket = React.useMemo(() => getMarket(marketID, markets), [marketID]);
@@ -121,8 +115,8 @@ export const QuickExchangeContainer = () => {
 
         if (walletBase && value.match(precisionRegExp(precision))) {
             const [baseAmount, quoteAmount] = key === 'base_value'
-                ? getBaseAmount(walletBase, value, marketPrice.price, base.amount, quote.amount)
-                : getQuoteAmount(walletBase, value, marketPrice.price, base.amount, quote.amount);
+                ? getBaseAmount(walletBase, value, marketPrice.price, base.amount, quote.amount, type)
+                : getQuoteAmount(walletBase, value, marketPrice.price, base.amount, quote.amount, type);
 
             const newBaseValue = {
                 ...base,
@@ -150,8 +144,8 @@ export const QuickExchangeContainer = () => {
             if (currentMarket) {
                 setType('buy');
                 setMarket(market.id);
-                setBasePrecision(currentMarket.amount_precision);
-                setQuotePrecision(currentMarket.price_precision);
+                setBasePrecision(currentMarket?.amount_precision);
+                setQuotePrecision(currentMarket?.price_precision);
             }
         } else if (marketMirrorExists) {
             market.id = (quote.currency + value).toLowerCase();
@@ -160,12 +154,12 @@ export const QuickExchangeContainer = () => {
             if (currentMarket) {
                 setType('sell');
                 setMarket(market.id);
-                setBasePrecision(currentMarket.price_precision);
-                setQuotePrecision(currentMarket.amount_precision);
+                setBasePrecision(currentMarket?.price_precision);
+                setQuotePrecision(currentMarket?.amount_precision);
             }
         }
 
-        if (base.currency !== value && base.currency !== '') {
+        if (base.currency?.toLowerCase() !== value?.toLowerCase() && base.currency !== '') {
             setQuoteData(DEFAULT_VALUE);
         }
 
@@ -188,24 +182,24 @@ export const QuickExchangeContainer = () => {
             const currentMarket = getMarket(market.id, markets);
 
             if (currentMarket) {
-                setType('buy');
+                setType('sell');
                 setMarket(market.id);
-                setBasePrecision(currentMarket.amount_precision);
-                setQuotePrecision(currentMarket.price_precision);
+                setBasePrecision(currentMarket?.amount_precision);
+                setQuotePrecision(currentMarket?.price_precision);
             }
         } else if (marketMirrorExists) {
             market.id = (value + base.currency).toLowerCase();
             const currentMarket = getMarket(market.id, markets);
 
             if (currentMarket) {
-                setType('sell');
+                setType('buy');
                 setMarket(market.id);
-                setBasePrecision(currentMarket.price_precision);
-                setQuotePrecision(currentMarket.amount_precision);
+                setBasePrecision(currentMarket?.price_precision);
+                setQuotePrecision(currentMarket?.amount_precision);
             }
         }
 
-        if (quote.currency !== value && quote.currency !== '') {
+        if (quote.currency?.toLowerCase() !== value?.toLowerCase() && quote.currency !== '') {
             setBaseData(DEFAULT_VALUE);
         }
 
@@ -219,8 +213,8 @@ export const QuickExchangeContainer = () => {
 
     const swapFields = () => {
         setType(type === 'buy' ? 'sell' : 'buy');
-        setBasePrecision(currentSelectedMarket.price_precision);
-        setQuotePrecision(currentSelectedMarket.amount_precision);
+        setBasePrecision(currentSelectedMarket?.price_precision);
+        setQuotePrecision(currentSelectedMarket?.amount_precision);
         setBaseData(quote);
         setQuoteData(base);
     };
@@ -245,7 +239,7 @@ export const QuickExchangeContainer = () => {
                             field="exchange"
                             handleChangeInput={value => handleChangeValue(value, 'base_value')}
                             value={base.amount}
-                            fixed={currentSelectedMarket ? currentSelectedMarket.price_precision : undefined}
+                            fixed={currentSelectedMarket ? currentSelectedMarket?.price_precision : undefined}
                             isDisabled={!walletBase || !walletQuote}
                         />
                     </div>
@@ -261,9 +255,10 @@ export const QuickExchangeContainer = () => {
                         <DropdownComponent
                             className="cr-quick-exchange__body-currency-block-dropdown-block-dropdown"
                             list={walletsBaseList}
-                            selectedValue={base.currency.toUpperCase()}
+                            selectedValue={base.currency?.toUpperCase()}
                             onSelect={handleChangeDropdownBase}
                             placeholder={translate('page.body.quick.exchange.label.currency')}
+                            clear={false}
                         />
                     </div>
                     {currentSelectedMarket && walletBase && (
@@ -291,15 +286,16 @@ export const QuickExchangeContainer = () => {
                     field="receive"
                     handleChangeInput={value => handleChangeValue(value, 'quote_value')}
                     value={quote.amount}
-                    fixed={currentSelectedMarket ? currentSelectedMarket.amount_precision : undefined}
+                    fixed={currentSelectedMarket ? currentSelectedMarket?.amount_precision : undefined}
                     isDisabled={!walletBase || !walletQuote}
                 />
                 <DropdownComponent
                     className="cr-quick-exchange__body-currency-block-dropdown"
                     list={walletsQuoteList}
-                    selectedValue={quote.currency.toUpperCase()}
+                    selectedValue={quote.currency?.toUpperCase()}
                     onSelect={handleChangeDropdownQuote}
                     placeholder={translate('page.body.quick.exchange.label.currency')}
+                    clear={false}
                 />
             </div>
         );
@@ -351,7 +347,7 @@ export const QuickExchangeContainer = () => {
         return (
             <div className="cr-quick-exchange__body-info">
                 <div className="cr-quick-exchange__body-info-price">
-                    {translate('page.body.quick.exchange.estimated_price')}: <span>~{marketPrice.price} {base.currency.toUpperCase()}</span>
+                    {translate('page.body.quick.exchange.estimated_price')}: <span>~{marketPrice.price} {currentSelectedMarket?.quote_unit?.toUpperCase()}</span>
                 </div>
                 <div className="cr-quick-exchange__body-info-warning">
                     <WarningIcon />
