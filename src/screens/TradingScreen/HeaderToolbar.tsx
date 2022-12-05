@@ -72,12 +72,12 @@ export const HeaderToolbarStyle = styled.div`
 				font-size: calc(var(--font-size) * 1);
 
 				&-positive {
-					color: var(--header-positive-text-color);
+					color: #00CC99;
 					font-weight: 500;
 				}
 
 				&-negative {
-					color: var(--header-negative-text-color);
+					color: #ED0A3F;
 					font-weight: 500;
 				}
 

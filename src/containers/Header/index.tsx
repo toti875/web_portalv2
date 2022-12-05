@@ -7,7 +7,7 @@ import { FaHistory, FaSignOutAlt, FaStar, FaUserCircle } from 'react-icons/fa';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
-import { logoutFetch, selectUserLoggedIn } from '../../modules';
+import { logoutFetch, selectUserLoggedIn, selectUserInfo } from '../../modules';
 
 import { ProfileActiveStepAction } from 'containers/ProfileActiveStepAction';
 
@@ -16,6 +16,7 @@ import Notifications from "react-notifications-menu";
 import './notifications.css'
 import Menu from '../../react-menu/src/AnimatedNavbar';
 import styled from "styled-components"
+import { SignUpScreen } from 'v2/src/screens';
 
 const Logo = require('../../assets/images/logo_branca_bandeira_verde.svg');
 const signinIcon = require('./signin.svg');
@@ -25,6 +26,9 @@ export const Header: React.FC = () => {
 	const intl = useIntl();
 
 	const isLoggedIn = useSelector(selectUserLoggedIn);
+
+	const user = useSelector(selectUserInfo);
+
 	const [activeNow, setActiveNow] = React.useState('');
 	const [activeItemDrop, setActiveItemDrop] = React.useState('');
 
@@ -133,7 +137,7 @@ export const Header: React.FC = () => {
 
 		return (
 			<Link
-				to=" "
+				to="/home"
 				onClick={() => {
 					dispatch(logoutFetch());
 					setStateActiveNow('');
@@ -169,26 +173,28 @@ export const Header: React.FC = () => {
 	};
 
 	const data = [{ 
-	image:     "https://cutshort-data.s3.amazonaws.com/cloudfront/public/companies/0/logo-1615367026425-logo-v6.png",
-	message: 'Nossa plataforma de lançamento de tokens está no ar. Conheça novas opções de investimentos em ativos digitais.', 
+	image:     "https://www.fortem1.com.br/favicon.ico",
+	message: 'Nosso marketplace de tokens está no ar. Conheça novas opções de investimentos em ativos digitais.', 
 	detailPage: '/tokens',
-	receivedTime: "12h ago"
+	receivedTime: "Enviado há 12h"
 }];
 
 	const renderProfileTab = () => {
 		return (
 			isLoggedIn && (
 				<>
-					< Notifications  data={data} header={{
-    title: 'Notificações',
-    option: { text: 'Ver todas', onClick: () => console.log('Clicked') },
-	classNamePrefix: 'fortem',
-  }} />
+					
+					<div className="header__right-menu__item__title">
+						< Notifications  data={data} header={{
+    	title: 'Notificações',
+    	option: { text: 'Ver todas', onClick: () => console.log('Clicked') },
+		classNamePrefix: 'fortem' }} />
+					</div>
 					<div className="header__right-menu__dropdown__wrap">
 						<span className={classLinkActiveTitleDrop('account')}>
 							<FaUserCircle className="header__right-menu__dropdown__wrap__content__title__icon mr-2" />
-							Toti
-							{/*{translate('page.body.homepage.header.account')}*/}
+							
+							{translate('page.body.homepage.header.account')}
 							<div className="header__right-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div>
 						</span>
 						<div className="header__right-menu__dropdown__wrap__content header__right-menu__dropdown__wrap__content--account">
@@ -290,7 +296,7 @@ export const Header: React.FC = () => {
 				<nav className="header d-flex flex-row justify-content-between align-items-center">
 					<div className="header__left-menu d-flex flex-row align-items-center">
 						<div className="header-logo" style={{zIndex: 99999}} onClick={() => setStateActiveNow('')}>
-							<Link to="/">
+							<Link to="/home">
 								<img src={Logo} alt=""  />
 							</Link>
 						</div>

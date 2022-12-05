@@ -22,7 +22,7 @@ const TradingComponent: React.FC<TradingScreenProps> = ({}) => {
 
 	React.useEffect(() => {
 		const { connected, withAuth } = rangerState;
-		setDocumentTitle('Trading');
+		setDocumentTitle('Trading Screen');
 		if (markets.length < 1) {
 			dispatch(marketsFetch());
 		}

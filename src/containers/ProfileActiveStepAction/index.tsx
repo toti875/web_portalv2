@@ -50,27 +50,27 @@ class ProfileActiveStepActionComponent extends React.Component<Props, State> {
 			case 1:
 				return (
 					<div>
-						Valide sua id
+						Valide seu email
 					</div>
 				);
 			case 2:
 				return (
 					<div>
-						Valide seus docs
+						Conclua seu cadastro - ID
 						<ClocksIcon />
 					</div>
 				);
 			case 3:
 				return (
 					<div>
-						Conclua seu cadastro
+						Conclua seu cadastro - Documentos
 						<CrossIcon />
 					</div>
 				);
 			default:
 				return ( 
 					<div>
-						Negocie ja
+						Cadastro verificado
 					</div>
 				);
 		}

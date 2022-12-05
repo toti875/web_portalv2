@@ -421,7 +421,7 @@ function scrollRotate() {
 											<h3 className="description justify-center animate__animated animate__bounce" style={{position: 'absolute',  top: '-220px', left: '104px',  display: 'flex', fontSize: '20px', width: '100%', }}> {data.description}</h3>
 										</Zoom>
 										<Zoom interval={20000} delay={18000} forever={false} duration={6000}>
-											<h3 className="description justify-center animate__animated animate__bounce" style={{opacity: '0.2', position: 'absolute',  top: '-180px', left: '104px',  display: 'flex', fontSize: '20px', width: '100%', }}> Re-escrevendo o futuro dos investimentos.</h3>
+											<h3 className="description justify-center animate__animated animate__bounce" style={{opacity: 0.2, position: 'absolute',  top: '-180px', left: '104px',  display: 'flex', fontSize: '20px', width: '100%', }}> Re-escrevendo o futuro dos investimentos.</h3>
 										</Zoom>
 
 										{isLogin ? (
@@ -429,9 +429,11 @@ function scrollRotate() {
 									{translate('page.homePage.trade.btn.trade')}
 								</button>
 							) : (
-								<><a className="btn-default icon header__right-menu__items" href="/signin" style={{fontFamily: 'Verdana', fontWeight: 'bold', fontSize: '22px', position: 'absolute',  bottom: '370px', left: '50%', background: 'transparent'}}>Acessar plataforma <svg className="icon" xmlns="http://www.w3.org/2000/svg" width="32px" viewBox="0 0 16 16"><path d="M15 1H4a1 1 0 0 0-1 1v2h2V3h9v10H5v-1H3v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/><path  d="m4.879 10.293 1.414 1.414L10 8 6.293 4.293 4.879 5.707 6.172 7H0v2h6.172z"/></svg></a>
+								<>
+								
+										<a className="btn-default header__right-menu__items" href="/signin" style={{paddingTop: '15px', paddingBottom: '15px', paddingLeft: '20px', paddingRight: '20px', fontFamily: 'Verdana', fontWeight: 'bold', fontSize: '22px', position: 'absolute',  bottom: '370px', left: '50%', background: 'transparent'}}>Acessar plataforma <svg xmlns="http://www.w3.org/2000/svg" className="iconSignin" fill="#f5f5f5"  width="28px" viewBox="0 0 16 16"><path d="M15 1H4a1 1 0 0 0-1 1v2h2V3h9v10H5v-1H3v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/><path  d="m4.879 10.293 1.414 1.414L10 8 6.293 4.293 4.879 5.707 6.172 7H0v2h6.172z"/></svg></a>
 							
-																<button className="btn-icon btn-default" onClick={redirectSingUP} style={{fontFamily: 'Verdana', fontWeight: 'bold', fontSize: '22px',  position: 'absolute',  bottom: '370px', left: '70%'}}>
+																<button className="btn-default header__right-menu__item__title" onClick={redirectSingUP} style={{fontFamily: 'Verdana', fontWeight: 'bold', fontSize: '22px',  position: 'absolute',  bottom: '370px', left: '70%'}}>
 																Conecte-se com a Fortem
 															</button></>
 							)}
@@ -1316,21 +1318,21 @@ const renderBlog = () => (
 			<div className="homepage-event  rn-header header-default " style={{background: '#000',  margin: '0px auto', marginLeft: '5px', display: 'flex', flexDirection: 'row', height: '36px', borderTop: '2px solid #46473E', borderBottom: '2px solid #46473E', minWidth: '100px', }}> 
 			
 				<div  className="news-event "  style={{margin: '0 auto', maxWidth: '80px', background: '#000', alignItems: 'center',  color: '#1EDED0', borderRight: '1px solid gray', fontSize: '16px',  maxHeight: '32px' }}>
-				<Pulse forever={true}>	<img src={news} style={{ marginTop: '-5px', minWidth: '30px', }}></img></Pulse>
+				<Pulse forever={true}>	<img src={news} style={{ marginTop: '0px', minWidth: '30px', }}></img></Pulse>
 									
 				</div>
 
-				<div className="container2  theme-shape-root"  style={{  background: '#000', color: '#1EDED0', alignItems: 'center',   marginLeft: '10px', height: '26px', backgroundColor: '#000'}}>
+				<div className="theme-shape-root"  style={{WebkitBackdropFilter: 'blur(10px)', backdropFilter: 'blur(17px) saturate(70%)', color: '#1EDED0', alignItems: 'center',   marginLeft: '10px', height: '26px', backgroundColor: 'transparent'}}>
 
 
 					<Slider {...settingEvents}>
 						{[...events.payload].map(event => {
 							return (
 								<div className="news-event text-center justify-content-center" style={{display: 'flex', textAlign: 'center'}}>
-									<h3  style={{opacity: '1', fontSize: '16px', color: '#F5F5F5', letterSpacing: '3px', marginTop: '-14px', background: '#000',  fontFamily: 'Raleway Dots'}} >
-									<Zoom infinite={true} appear={true} delay={4000}> 
+									<h3  style={{WebkitBackdropFilter: 'blur(10px)', backdropFilter: 'blur(17px) saturate(70%)', opacity: '1', fontSize: '16px', color: '#F5F5F5', letterSpacing: '2px', marginTop: '-14px', background: 'transparent',  fontFamily: 'Raleway Dots'}} >
+									
 										<a style={{fontFamily: 'Raleway Dots', }} href={event.ref_link}>{event.event_name}{event.description}</a>
-									</Zoom>
+									
 									</h3>
 								
 								</div>

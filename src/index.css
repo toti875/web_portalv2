@@ -323,7 +323,7 @@
       }
 
 .td-pg-trading {
-	background: black;
+	background: #181819 !important;
 	display: grid;
 	font-weight: 500 !important;
 	font-size: 13px !important;
@@ -341,11 +341,13 @@
 	}
 
 .td-pg-trading .td-pg-trading--bg {
-		background-color: #181819 !important;
+		background-color: #0b1426 !important;
 	}
 
 .td-pg-trading .td-pg-trading__header-toolbar {
 		grid-column: 1/3;
+		
+		
 	}
 
 .td-pg-trading .td-pg-trading__market-trading {
@@ -590,6 +592,13 @@
 	display: flex;
 	flex-direction: column;
   }
+
+.iconSignin {
+
+	margin-left: 12px;
+
+
+}
 
 .subheaderDesktop-screen {
 	
