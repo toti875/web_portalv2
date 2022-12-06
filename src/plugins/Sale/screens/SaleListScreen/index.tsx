@@ -16,7 +16,7 @@ import './SaleListScreen.css';
 //const GlobeAnimated  = require ('../../../../assets/images/ticker-tape.mp4');
 const GlobeAnimated  = require ('./b.mp4');
 
-const bgF  = require ('./bg-f.png');
+const bgF  = require ('./bf-fortem.png');
 
 const settingEvents = {
 	dots: false,
@@ -49,7 +49,7 @@ const renderEvent = () => {
 		<div className="homepage-event  rn-header header-default " style={{background: '#000',  margin: '0px auto', marginLeft: '5px', display: 'flex', flexDirection: 'row', height: '36px', borderTop: '2px solid #46473E', borderBottom: '2px solid #46473E', minWidth: '100px', }}> 
 		
 			<div  className="news-event "  style={{margin: '0 auto', maxWidth: '80px', background: '#000', alignItems: 'center',  color: '#1EDED0', borderRight: '1px solid gray', fontSize: '16px',  maxHeight: '32px' }}>
-			<Pulse forever={true}>	<img src={news} style={{ marginTop: '-5px', minWidth: '30px', }}></img></Pulse>
+			<Pulse forever={true}>	<img src={news} style={{ marginTop: '5px', minWidth: '30px', }}></img></Pulse>
 								
 			</div>
 
@@ -61,9 +61,9 @@ const renderEvent = () => {
 						return (
 							<div className="news-event text-center justify-content-center" style={{display: 'flex', textAlign: 'center'}}>
 								<h3  style={{opacity: '1', fontSize: '16px', color: '#F5F5F5', letterSpacing: '3px', marginTop: '-14px', background: '#000',  fontFamily: 'Raleway Dots'}} >
-								<Zoom infinite={true} appear={true} delay={4000}> 
-									<a style={{fontFamily: 'Raleway Dots', }} href={event.ref_link}>{event.event_name}{event.description}</a>
-								</Zoom>
+								
+									<a style={{fontFamily: 'Raleway Dots'}} href={event.ref_link}>{event.event_name}{event.description}</a>
+								
 								</h3>
 							
 							</div>
@@ -82,7 +82,7 @@ export const SaleListScreen: React.FC = () => {
 			{renderEvent()}	
 
 			<div style={{ position: 'relative', padding: '0 5%' }}>
-				<img style={{ width: '100%', margin: 0 }} src={bgF} alt="ieo_banner" />
+				<img style={{ width: '100%', height: '600px', margin: 0 }} src={bgF} alt="token_banner" />
 			
 			</div>
 
@@ -92,7 +92,7 @@ export const SaleListScreen: React.FC = () => {
 			
 				<div className="row">
 					<div className="col-12 text-center">
-						<h1  className="sale-list__title">Seja bem-vindo ao marketplace de tokens da Fortem ONE</h1>
+						{/*<h1  className="sale-list__title">Seja bem-vindo ao marketplace de tokens da Fortem ONE</h1>*/}
 						<h2 className="sale-list__subtitle">
 							Seu ponto de partida para investir nos produtos mais rentáveis e seguros que o blockchain tem a oferecer.
 						</h2>
