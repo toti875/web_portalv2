@@ -132,6 +132,8 @@ import Status from "../../template_react_status/src/components/App";
 import spinerLoading from './spinerLoading.gif';
 import { ProfileScreen2 } from 'screens/ProfileScreen2';
 
+import './Layout.pcss';
+
 
 
 
@@ -176,7 +178,7 @@ export type LayoutProps = ReduxProps & DispatchProps & LocationProps & IntlProps
 const renderLoader = () => (
 	<div className="pg-loader-container">
 		{/*<Spinner animation="border" variant="primary" />*/}
-		<img src={spinerLoading} style={{width: '32px', margin: '0 auto'}}></img>
+		<img src={spinerLoading} style={{width: '38px', margin: '0 auto'}}></img>
 	</div>
 );
 

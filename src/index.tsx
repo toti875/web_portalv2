@@ -7,7 +7,7 @@ import 'antd/es/pagination/style/index.css';
 import 'antd/es/modal/style/index.css';
 //import 'antd/es/row/style/index.css';
 //import 'antd/es/col/style/index.css';
-//import 'antd/es/button/style/index.css';
+import 'antd/es/slider/style/index.css';
 import 'antd/es/dropdown/style/index.css';
 import 'antd/es/form/style/index.css';
 import 'antd/es/tooltip/style/index.css';
