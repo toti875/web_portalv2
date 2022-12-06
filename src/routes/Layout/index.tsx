@@ -132,7 +132,7 @@ import Status from "../../template_react_status/src/components/App";
 import spinerLoading from './spinerLoading.gif';
 import { ProfileScreen2 } from 'screens/ProfileScreen2';
 
-import './Layout.pcss';
+//import './Layout.pcss';
 
 
 
@@ -510,6 +510,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					<PublicRoute path="/500" component={MaintenanceScreen} />
 					<PublicRoute exact={false} path="/market/:market?" component={TradingScreen} />
 					<PublicRoute exact={true} path="/" component={FortemIOHomePage} />
+					<PublicRoute exact={true} path="/home" component={FortemIOHomePage} />
 					<Route exact={true} path="/landing" component={LandingScreenMobile} />
 					
 					<PrivateRoute exact={true} loading={userLoading} isLogged={isLoggedIn} path="/docs" component={DocumentationScreen} />
@@ -591,7 +592,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					<PublicRoute path="/holder/starting" exact component={HolderStartingScreen} />
 
 
-					<Route exact={true} path="/app" component={HomePageScreenMobile} />
+					<Route exact={true} path="/mobile" component={HomePageScreenMobile} />
 
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/quick-exchange" component={QuickExchange} />
 

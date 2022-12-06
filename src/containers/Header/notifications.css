@@ -8,18 +8,11 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 15px; 
+    
     cursor: pointer;
 
     border-radius: 50%;
     background-color: #009991 !important;
     
     
-}
-
-.card, .content {
-    display: flex;
-    color: black !important;
-    align-items: center;
-    background-color: #dde1e7 !important;
 }

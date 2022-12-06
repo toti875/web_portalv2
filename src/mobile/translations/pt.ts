@@ -103,7 +103,7 @@ export const pt = {
 	'page.mobile.confirm.address': 'Residence verification',
 	'page.mobile.confirm.back': 'Back',
 
-	'page.body.profile.header.account.content.twoFactorAuthentication': 'Two-factor authentication',
+	'page.body.profile.header.account.content.twoFactorAuthentication': 'Duplo Fator de Autenticação',
 
 	'page.profile.kyc.title': '2FA',
 
