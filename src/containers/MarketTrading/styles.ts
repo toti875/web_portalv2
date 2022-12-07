@@ -12,18 +12,22 @@ export const MarketTradingStyle = styled.div`
 `;
 
 export const SearchBlockStyle = styled.div`
-	padding: 10px 10px 15px 10px;
+	padding: 10px 10px 10px 10px;
 	.search-wrapper {
 		display: flex;
+		height: 30px;
 		justify-content: center;
 		align-items: center;
-	
-		padding: 5px 0;
-		font-size: 13px;
+		border: 1px solid #555555;
+		background-color: #1f1f1f !important;
+		border-radius: 5px;
+		padding: 8px;
+		font-size: 12.5px;
 
 
 		.search-icon {
-			margin-right: 20px;
+			margin-right: 5px !important;
+			padding-top: 5px;
 		}
 		.search-input {
 			width: inherit;
@@ -31,9 +35,10 @@ export const SearchBlockStyle = styled.div`
 			outline: none;
 			background-color: transparent;
 			border: none;
-			color: #F5F5F5;
+			color: #555555;
+			padding-top: 25px;
 			::placeholder {
-				color: #848e9c;
+				color: #555555;
 			}
 		}
 	}
@@ -58,13 +63,16 @@ export const SearchBlockStyle = styled.div`
 				margin: 5px;
 			}
 			&.active {
-				border: 1px solid #009991;
+				
+				
 				::before {
 					content: '';
-					width: 6px;
-					height: 6px;
-					margin: 2px;
+					max-width: 6px;
+					max-height: 6px;
+					margin: 5px;
 					border-radius: 99999px;
+					padding: 1.5px;
+					background: #009991;
 				
 				}
 			}
@@ -85,19 +93,19 @@ export const StarBlockStyle = styled.div`
 		justify-content: center;
 		align-items: center;
 		border: none;
-		border-radius: 5%;
-		margin-right: 2px;
+		border-radius: 0px;
+		margin-right: 3px;
 		outline: none;
-		background: transparent;
+		background-color: #1f1f1f;
 		padding: 2px 6px;
-		font-weight: 500;
+		font-weight: 400;
 		
 		color: #f5f5f5;
 		:hover {
 			:not(.active) {
 				background-color: #1f1f1f;
-			
-				font-weight: 500;
+				font-weight: 400;
+				opacity: 0.84;
 			}
 			.td-markets-trading-list-dropdown-wrapper {
 				display: inline-block;
@@ -117,12 +125,14 @@ export const StarBlockStyle = styled.div`
 		.td-markets-trading-list-dropdown-wrapper {
 			display: none;
 			position: absolute;
-			top: 22px;
+			top: 20px;
+			
 			left: 0;
 			z-index: 10;
 			padding-top: 3px;
 			.td-markets-trading-list-dropdown {
-				background-color: rgb(41, 45, 63);
+				background-color: #1f1f1f;
+				width: 100%;
 				&__item {
 					display: flex;
 					align-items: center;
@@ -145,10 +155,11 @@ export const StarBlockStyle = styled.div`
 		}
 
 		&.favorite {
-			width: 30px;
+			width: 20px;
 		}
 		&.active {
 			background-color: #1f1f1f;
+			border: 0.5px solid #009991;
 		}
 	}
 `;

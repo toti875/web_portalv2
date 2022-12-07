@@ -189,14 +189,14 @@ const MarketTradingContainer: React.FC = () => {
 						onClick={() => handleChangeRadio('change')}
 					>
 						<i className={classnames({ active: radioSelectedState === 'change' })} />
-						<label className="d-flex align-items-center mb-0 mr-2" style={{fontSize: '13px'}}>Variação</label>
+						<label className="d-flex align-items-center mb-0 mr-5" style={{fontSize: '13px'}}>Variação</label>
 					</div>
 					<div
 						className="select-item d-flex align-items-center justify-content-center h-100"
 						onClick={() => handleChangeRadio('volume')}
 					>
 						<i className={classnames({ active: radioSelectedState === 'volume' })} />
-						<label className="d-flex align-items-center mb-0" style={{fontSize: '13px'}}>Volume</label>
+						<label className="d-flex align-items-center mb-0 mr-5" style={{fontSize: '13px'}}>Volume</label>
 					</div>
 				</div>
 			</SearchBlockStyle>
