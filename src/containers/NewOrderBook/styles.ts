@@ -124,7 +124,7 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 			}
 			tbody {
 				height: 100%;
-				overflow-y: scroll;
+				overflow-y: hidden;
 				animation:        flashX 2.5s ;
 				tr {
 					margin-top: 1px;
