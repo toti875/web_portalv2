@@ -180,6 +180,18 @@ flex-direction: row !important;
     
 }
 
+.form-control2 {
+    color: #181819 !important;
+    background-color: transparent !important;
+    
+    boder: none !important;
+    boder-color: unset !important;
+    border-radius: 5px !important;
+    width: 100% !important;
+    
+}
+
+
 .form-control-lg {
     color: #181819 !important;
     line-height: 25px;
@@ -211,6 +223,21 @@ flex-direction: row !important;
     font-size: 15px;
     boder: 1px solid #c0c0c0 !important;
     border-radius: 5px !important;
+
+}
+
+.form-control2::-webkit-input-placeholder {
+    color: #181819 !important;
+    line-height: 25px;
+    font-size: 14px;
+    boder: none !important;
+    border-radius: unset !important;
+
+    input {
+
+        background-color: transparent !important;
+    }
+
 
 }
 
