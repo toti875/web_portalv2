@@ -71,7 +71,7 @@ export const SearchBlockStyle = styled.div`
 					max-height: 6px;
 					margin: 5px;
 					border-radius: 99999px;
-					padding: 1.5px;
+					padding: 1px;
 					background: #009991;
 				
 				}
