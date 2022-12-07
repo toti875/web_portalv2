@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const OrderStyle = styled.div`
 	font-weight: 500;
-	font-size: 14px;
+	font-size: 13px;
 	height: 100%;
 	background-color: #0E0E0E;
 	padding: 10px;
@@ -28,8 +28,8 @@ export const OrderStyle = styled.div`
 				button {
 					outline: none;
 					padding: 5px 10px;
-					background-color: #2fb67e;
-					color: #fff;
+					background-color: #009991;
+					color: #F5F5F5;
 					border: none;
 					border-radius: 2px;
 				}
@@ -44,7 +44,7 @@ export const OrderStyle = styled.div`
 							font-weight: 600;
 							.rc-tabs-tab-btn {
 								color: #fff;
-								border-bottom: 2px solid #009991;
+								border-bottom: 2px solid #009991 ;
 							}
 						}
 						:not(:last-child) {
@@ -78,67 +78,92 @@ export const OrderStyle = styled.div`
 						padding: 10px 0;
 						.title-block {
 							.title-block-left {
-								color: #F5F5F5;
-								font-size: 14px;
+								
+								font-size: 13px;
 								display: flex;
 								align-items: center;
 							}
 							.title-block-right {
-								font-size: 14px;
+								font-size: 13px;
 								display: flex;
 								justify-content: flex-end;
 								align-items: center;
+								
 							}
 						}
-						.input-group {
-							background-color: transparent;
-							border: none;
-							border-radius: 4px;
+						.input-group-order {
+							background-color: #0E0E0E !important;
+							border: 1px solid #C0C0C0;
+							boder-radius: 4px !important;
+							display: flex;
+							flex-direction: row;
+							vertical-align: middle !important;
+							
 							input
 							 {
-								background: transparent !important;
-								font-size: 14px;
-								outline: none;
-								border: 1px solid #C0C0C0;
-								border-radius: 4px;
-								box-shadow: none !important
+								display: flex !important;
+								background-color: #0E0E0E !important;
+								font-size: 13px !important;
+								color: #C0C0C0 !important;
+								margin: 0 auto !important;
+								align-items: right !important;
+								justify-content: right !important;
+								height: 30px !important;
+								line-height: 30px !important;
+								border: none !important;
+								border-left: 1px dotted #c0c0c0 !important;
+								border-radiux: 0px !important;
+							
+								
 							}
+
+							span 
+							{
+							   background-color: #0E0E0E !important;
+							   font-size: 13px !important;
+							   display: flex !important;
+							   margin: 0 auto !important;
+							   color: #C0C0C0 !important;
+							   height: 30px !important;
+							   line-height: 30px !important;
+							   border: none !important;
+							   border-left: 1px dotted #c0c0c0 !important;
+							   border-radiux: 0px !important;
+							   align-items: center !important;
+							   justify-content: center !important;
+							   
+						   }
 							::first-child {
-								margin-bottom: 10px;
+								margin-bottom: 12px;
 							}
 							.input-group-prepend {
+								
+								
 								span {
-									color: #f5f5f5;
+									min-width: 100px !important;
+								
 								}
 							}
-							.exchange-price {
-								
-								height: unset;
+							.form-control2 {
+								color: #C0C0C0 !important;
+								height: 30px !important;
 								box-shadow: none;
-								background: transparent;
-								input {
-									color: #f5f5f5 !important;
-									background: transparent !important;
-
-								}
 							}
 							.input-group-prepend,
 							.input-group-append {
-								display: flex !important;
-								background: transparent;
-								color: #f5f5f5;
-								width: 70% !important;
-								.input-group-text2 {
+								min-width: 100px !important;
+								.input-group-text {
 									display: flex !important;
-									text-align: center;
+									text-align: center !important;
+							
+									justify-content: center !important;
 									padding: 5px 14px !important;
-									background: transparent;
 								}
 							}
 							.input-group-append {
-								width: 170px;
+								
 								span {
-									color: #848e9c;
+									min-width: 100px !important;
 								}
 							}
 						}
@@ -163,7 +188,7 @@ export const OrderStyle = styled.div`
 						}
 						.logger-order {
 							
-							border: 1px solid #009991;
+							border: 1px solid #1EBDB2;
 							border-radius: 5px;
 							height: 32px;
 							background-color: transparent;
@@ -178,7 +203,7 @@ export const OrderStyle = styled.div`
 								line-height: 32px;
 								:hover {
 									background-color: transparent;
-									color: #f5f5f5;
+									color: white;
 								}
 							}
 						}
@@ -187,7 +212,7 @@ export const OrderStyle = styled.div`
 						padding-right: 20px;
 						.submit-order {
 							background: #13b887;
-							font-weight: 400;
+							font-weight: 350;
 							font-size: 14px;
 							filter: brightness(110%);
 						}
@@ -196,7 +221,7 @@ export const OrderStyle = styled.div`
 						padding-left: 20px;
 						.submit-order {
 							background: #ef5350;
-							font-weight: 4000;
+							font-weight: 350;
 							font-size: 14px;
 							filter: brightness(110%);							
 						}

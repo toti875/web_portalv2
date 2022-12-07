@@ -899,6 +899,18 @@
 
 }
 
+#exchange-price {
+
+	color: blue !important;
+	border-bottom: 1px solid yellow !important;
+
+}
+
+.input-group span {
+	color: blue !important;
+
+}
+
 :root {
 	/*  ALL NAMES FOR VARIABLES TAKE FROM FIGMA
 *   IF YOU WANT RENAME VARIABLES, PLEASE FIRST RENAME IT IN FIGMA
@@ -5011,7 +5023,7 @@ th#react-table table:last-child {
   position: absolute !important;
   
   line-height: 50px !important;
-  color: #595959 !important;
+  color: #C0C0C0 !important;
 }
 
 .input-group  label{

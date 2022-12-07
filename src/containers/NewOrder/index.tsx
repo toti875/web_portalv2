@@ -565,9 +565,9 @@ export const NewOrder: React.FC<OrderProps> = ({}) => {
 									{type === 'buy' ? quote_unit.toUpperCase() : base_unit.toUpperCase()}
 								</div>
 							</div>
-							<div className="input-group mb-3">
+							<div className="input-group-order">
 								<div className="input-group-prepend">
-									<span className="input-group-text2" style={{color: 'blue'}}>
+									<span className="input-group-text d-flex align-items-center text-right">
 										{intl.formatMessage({ id: 'page.body.trade.header.newOrder.content.price' })}
 									</span>
 								</div>
@@ -576,17 +576,17 @@ export const NewOrder: React.FC<OrderProps> = ({}) => {
 										type="text"
 										value={price}
 										onChange={e => changePrice(e.target.value, type)}
-										className="exchange-price"
+										className="form-control2 text-right"
 									/>
 								) : (
-									<input type={'text'} value={`≈${priceMarket}`} className="exchange-price" disabled />
+									<input type={'text'} value={`≈${priceMarket}`} className="form-control2 text-right" disabled />
 								)}
 
 								<div className="input-group-append d-flex justify-content-end align-items-center">
-									<span className="input-group-text2"> {quote_unit.toUpperCase() || 'NONE'}</span>
+									<span className="input-group-text"> {quote_unit.toUpperCase() || 'NONE'}</span>
 								</div>
 							</div>
-							<div className="input-group">
+							<div className="input-group-order">
 								<div className="input-group-prepend">
 									<span className="input-group-text d-flex align-items-center text-right">
 										{intl.formatMessage({ id: 'page.body.trade.header.newOrder.content.amount' })}
@@ -594,7 +594,7 @@ export const NewOrder: React.FC<OrderProps> = ({}) => {
 								</div>
 								<input
 									type="text"
-									className="exchange-price text-right"
+									className="form-control2 text-right"
 									value={amount}
 									onChange={e => changeAmount(e.target.value, type)}
 								/>
@@ -613,7 +613,7 @@ export const NewOrder: React.FC<OrderProps> = ({}) => {
 								}}
 							/>
 							{isLoggedIn && tabTypeSelectedState === TABS_LIST_KEY[0] ? (
-								<div className="input-group">
+								<div className="input-group-order">
 									<div className="input-group-prepend">
 										<span className="input-group-text d-flex align-items-center text-right">
 											{intl.formatMessage({ id: 'page.body.trade.header.newOrder.content.total' })}
@@ -621,7 +621,7 @@ export const NewOrder: React.FC<OrderProps> = ({}) => {
 									</div>
 									<input
 										type="text"
-										className="exchange-price text-right"
+										className="form-control text-right"
 										value={total}
 										onChange={e => changeTotal(e.target.value, type)}
 									/>
@@ -645,9 +645,9 @@ export const NewOrder: React.FC<OrderProps> = ({}) => {
 								</button>
 							) : (
 								<div className="logger-order w-100 d-flex justify-content-center align-item-center">
-									<Link to="/signin"> {intl.formatMessage({ id: 'page.body.user.loggin' })}</Link>
+									<Link to="/banner/authentication/sign-in/basic"> {intl.formatMessage({ id: 'page.body.user.loggin' })}</Link>
 									<span>ou</span>
-									<Link to="register"> {intl.formatMessage({ id: 'page.body.user.register' })}</Link>
+									<Link to="/banner/authentication/sign-up/basic"> {intl.formatMessage({ id: 'page.body.user.register' })}</Link>
 								</div>
 							)}
 						</form>
@@ -672,7 +672,7 @@ export const NewOrder: React.FC<OrderProps> = ({}) => {
 		const elmExtra = (
 			<React.Fragment>
 				<span>{intl.formatMessage({ id: 'page.body.trade.header.newOrder.content.buyWith' })}</span>
-				<span>{currentMarket && currentMarket.quote_unit.toUpperCase()}</span>
+				<button>{currentMarket && currentMarket.quote_unit.toUpperCase()}</button>
 			</React.Fragment>
 		);
 

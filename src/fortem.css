@@ -217,12 +217,12 @@ flex-direction: row !important;
 }
 
 .form-control2 {
-    color: #181819 !important;
-    background-color: transparent !important;
     
-    boder: none !important;
-    boder-color: unset !important;
-    border-radius: 5px !important;
+    background-color: transparent;
+    
+    boder: none;
+    boder-color:;
+    
     width: 100% !important;
     
 }
@@ -263,15 +263,15 @@ flex-direction: row !important;
 }
 
 .form-control2::-webkit-input-placeholder {
-    color: #181819 !important;
-    line-height: 25px;
-    font-size: 14px;
-    boder: none !important;
-    border-radius: unset !important;
+    color: transparent;
+    line-height: 30px;
+    
+    boder: none ;
+    border-radius: unset ;
 
     input {
 
-        background-color: transparent !important;
+        background-color: transparent;
     }
 
 
