@@ -17,27 +17,27 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 	bottom: 0;
 	right: 0;
 	height: calc(100% - 6px);
-	color: white;
+	color: #F5F5F5;
 	
-	font-weight: 500;
+	font-weight: 400;
 	padding: 0 10px;
 	background-color: #0E0E0E;
 	.td-order-book {
 		background-color: #0E0E0E;
 		
 		height: 100%;
-		font-weight: 500;
+		font-weight: 400;
 		padding-top: 10px;
 		padding-bottom: 15px;
 		&-item__negative {
-			color: #ef5350;
+			color: #ED0A3F;
 			webkit-animation: flash_red 2.5s ; /* Safari 4+ */
 			moz-animation:    flash_red 2.5s ; /* Fx 5+ */
 			o-animation:      flash_red 2.5s ; /* Opera 12+ */
 			animation:         flash_red 2.5s ; /* IE 10+ */	
 		}
 		&-item__positive {
-			color: #13b887;
+			color: #00CC99;
 			webkit-animation: flash_green 2.5s ; /* Safari 4+ */
 			moz-animation:    flash_green 2.5s ; /* Fx 5+ */
 			o-animation:      flash_green 2.5s ; /* Opera 12+ */
@@ -70,14 +70,17 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 			}
 		}
 		&-ticker {
+			display: flex;
 			height: ${OrderBookStyleVar.tickerHeight};
-			margin: 5px 18px !important;
+			margin: auto !important;
+			align-items: center;
+			justify-content: center;
 			font-size: 14px;
 			&__last-price {
 				font-size: 18px;
 			}
 			&__usd {
-				color: #0b1426 ;
+				color: #888888;
 			}
 		}
 		&-table {
@@ -99,9 +102,9 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 					display: block;
 					background-color: transparent;
 					cursor: pointer;
-					animation:        flashX 2.5s ;
+					animation:        flashX 2.5s;
 					:hover {
-						background-color: #0b1426 ;
+						background-color: #1f1f1f;
 				
 					}
 					td,
@@ -121,7 +124,7 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 			}
 			tbody {
 				height: 100%;
-				overflow-y: hide;
+				overflow-y: scroll;
 				animation:        flashX 2.5s ;
 				tr {
 					margin-top: 1px;
