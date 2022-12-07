@@ -15,14 +15,14 @@ export const defaultConfig: Config = {
 
 	
 	api: {
-		authzURL: 'http://www.fortem1.com.br/api/v2/auth',
-		switchURL: 'http://www.fortem1.com.br/api/v2/applogic',
-		transactionURL: 'http://www.fortem1.com.br/api/v2/peatio',
-		ieoURL: 'http://www.fortem1.com.br/api/v2/peatio',
+		authzURL: 'https://www.fortem1.com.br/api/v2/auth',
+		switchURL: 'https://www.fortem1.com.br/api/v2/applogic',
+		transactionURL: 'https://www.fortem1.com.br/api/v2/peatio',
+		ieoURL: 'https://www.fortem1.com.br/api/v2/peatio',
 
-		infoURL: 'http://www.fortem1.com.br/api/v2/peatio',
+		infoURL: 'https://www.fortem1.com.br/api/v2/peatio',
 		//downstreamURL: 'wss://www.fortem1.com.br/api/public/',
-		downstreamURL: 'ws://www.fortem1.com.br/api/v2/ranger',
+		downstreamURL: 'wss://www.fortem1.com.br/api/v2/ranger',
 
 	},
 	
@@ -41,7 +41,7 @@ export const defaultConfig: Config = {
 	isDraggable: true,
 	languages: ['pt'],
 	sessionCheckInterval: '5000',
-	balancesFetchInterval: '10000',
+	balancesFetchInterval: '2000',
 	passwordEntropyStep: 14,
 	showLanding: true,
 	sentryEnabled: false,
