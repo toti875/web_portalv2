@@ -18,7 +18,7 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 	right: 0;
 	height: calc(100% - 6px);
 	color: #F5F5F5;
-	
+	font-size: 13px;
 	font-weight: 400;
 	padding: 0 10px;
 	background-color: #0E0E0E;
@@ -26,6 +26,7 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 		background-color: #0E0E0E;
 		
 		height: 100%;
+		font-size: 13px;
 		font-weight: 400;
 		padding-top: 10px;
 		padding-bottom: 15px;
@@ -57,7 +58,7 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 			padding-top: 6px;
 			padding-bottom: 6px;
 			color: #7a7e8b;
-			font-size: 13px;
+			font-size: 14px;
 			filter: brightness(110%);
 
 			> div {
@@ -66,6 +67,13 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 				&:last-child,
 				&:first-child {
 					width: 36%;
+				}
+
+				&:last-child {
+					display: flex;
+					align-items: right;
+					justify-content: right;
+					margin-right: 5px;
 				}
 			}
 		}
