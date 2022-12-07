@@ -74,9 +74,6 @@ const MarketTradingContainer: React.FC = () => {
 			key: 'USDT',
 		},
 		{
-			key: 'BTC',
-		},
-		{
 			key: 'Outros',
 			listKeyDropDown: LIST_KEY_FIAT_DROPDOWN,
 		},
@@ -181,7 +178,7 @@ const MarketTradingContainer: React.FC = () => {
 					<input
 						className="search-input"
 						type="text"
-						placeholder="Search"
+						placeholder="Localizar..."
 						value={searchFieldState}
 						onChange={searchFieldChangeHandler}
 					/>
@@ -199,7 +196,7 @@ const MarketTradingContainer: React.FC = () => {
 						onClick={() => handleChangeRadio('volume')}
 					>
 						<i className={classnames({ active: radioSelectedState === 'volume' })} />
-						<label className="d-flex align-items-center mb-0">Volume</label>
+						<label className="d-flex align-items-center mb-0" style={{fontSize: '13px'}}>Volume</label>
 					</div>
 				</div>
 			</SearchBlockStyle>

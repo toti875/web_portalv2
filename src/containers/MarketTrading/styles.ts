@@ -12,19 +12,18 @@ export const MarketTradingStyle = styled.div`
 `;
 
 export const SearchBlockStyle = styled.div`
-	
+	padding: 10px 10px 15px 10px;
 	.search-wrapper {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		
-		
+		border-bottom: 1px solid #009991;
+		padding: 5px 0;
 		font-size: 13px;
 
 
 		.search-icon {
 			margin-right: 20px;
-			color: #fff;
 		}
 		.search-input {
 			width: inherit;
