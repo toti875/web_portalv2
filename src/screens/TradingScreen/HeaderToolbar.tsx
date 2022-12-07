@@ -12,10 +12,10 @@ import styled from 'styled-components';
 export const HeaderToolbarStyle = styled.div`
 	display: flex;
 	justify-content: space-between;
-	height: 70px;
+	height: 60px;
 	padding: 15px 15px;
-	background-color: #0b1426;
-	font-size: 13px;
+	background-color: transparent;
+	font-size: 14px;
 
 	.td-header__toolbar {
 
@@ -36,7 +36,7 @@ export const HeaderToolbarStyle = styled.div`
 		}
 		&-item,
 		&-item--hightlight {
-			font-size: 13px;
+			font-size: 14px;
 			display: flex;
 			flex-flow: column;
 			justify-content: space-between;
@@ -55,41 +55,40 @@ export const HeaderToolbarStyle = styled.div`
 			}
 
 			&-title {
-				font-weight: 700;
-				font-size: 15px;
-				color: #fff;
-				margin: 0;
+				font-weight: 600;
+				font-size: 14px;
+				color: #F5F5F5;
+				
 			}
 
 			&-text {
-				color: #848e9c;
-				font-weight: 500;
-				font-size: 13px;
+				color: #C0C0C0;
+				font-weight: 600;
+				font-size: 14px;
 			}
 
 			&-value {
-				margin: 0;
-				font-size: calc(var(--font-size) * 1);
+				font-size: 14px;
 
 				&-positive {
 					color: #00CC99;
-					font-weight: 500;
+					font-weight: 600;
 				}
 
 				&-negative {
 					color: #ED0A3F;
-					font-weight: 500;
+					font-weight: 600;
 				}
 
 				&-data {
-					color: wheat;
-					font-weight: 500;
+					color: #C0C0C0;
+					font-weight: 600;
 				}
 			}
 		}
 		&-item--hightlight {
 			p:first-child {
-				font-size: calc(var(--font-size) * 1.2);
+				font-size: 14px;
 				font-weight: 600;
 			}
 		}
@@ -164,10 +163,11 @@ const HeaderToolbarContainer: React.FC = () => {
 				</div>
 			</div>
 			<div className="td-header__toolbar--right">
-				<img src={playSvg} />
+			{/*	<img src={playSvg} />
 				<a className="link-tutorial" href="/">
 					Tutorial
 				</a>
+			*/}
 			</div>
 		</HeaderToolbarStyle>
 	);

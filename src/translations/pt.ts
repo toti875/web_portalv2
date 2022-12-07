@@ -951,9 +951,9 @@ export const pt = {
 /**Order History in Tradding page */
 'page.body.trade.header.orderHistory': 'Histórico de ordens',
 /**OrderBook */
-'page.body.trading.header.orderBook.header.title.price': 'Preço unitário',
-'page.body.trading.header.orderBook.header.title.amount': 'Qtd.',
-'page.body.trading.header.orderBook.header.title.sum': 'Vol financeiro',
+'page.body.trading.header.orderBook.header.title.price': 'Preço',
+'page.body.trading.header.orderBook.header.title.amount': 'Qtd',
+'page.body.trading.header.orderBook.header.title.sum': 'Volume',
 'page.body.trading.header.orderBook.header.title': 'Livro de ofertas',
 'page.header.signIN.noAccountYet': 'Ainda náo criou sua conta?',
 

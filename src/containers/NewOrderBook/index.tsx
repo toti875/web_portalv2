@@ -120,9 +120,9 @@ const OrderBookContainer = props => {
 			const total = accumulateVolume(bids);
 
 			return arrBidsElm.map((item, i) => (
-				<div className="flash_green"> 
+				
 				<TrStyle
-					color="#13b887"
+					color="#6EAEA1"
 					placement="right"
 					percentWidth={(item[3] as number) || 0}
 					key={i}
@@ -132,7 +132,7 @@ const OrderBookContainer = props => {
 					<td>{item[1]}</td>
 					<td>{item[2]}</td>
 				</TrStyle>
-				</div>
+				
 			));
 		}
 
@@ -145,7 +145,7 @@ const OrderBookContainer = props => {
 			return arrAsksElm.map((item, i) => (
 				<div className="flash_red"> 
 				<TrStyle
-					color="#ef5350"
+					color="#A57164"
 					placement="left"
 					percentWidth={(item[3] as number) || 0}
 					key={i}

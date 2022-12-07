@@ -21,10 +21,10 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 	
 	font-weight: 500;
 	padding: 0 10px;
-	background-color: #0b1426;
+	background-color: #0E0E0E;
 	.td-order-book {
-		background-color: #0b1426;
-		animation:        flashX 2.5s ;
+		background-color: #0E0E0E;
+		
 		height: 100%;
 		font-weight: 500;
 		padding-top: 10px;
@@ -58,7 +58,7 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 			padding-bottom: 6px;
 			color: #7a7e8b;
 			font-size: 13px;
-			filter: brightness(130%);
+			filter: brightness(110%);
 
 			> div {
 				display: inline-block;
@@ -94,7 +94,7 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 			thead,
 			tbody {
 				display: block;
-				animation:        flashX 2.5s ;
+				
 				tr {
 					display: block;
 					background-color: transparent;
@@ -102,7 +102,7 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 					animation:        flashX 2.5s ;
 					:hover {
 						background-color: #0b1426 ;
-						animation:        flashX 2.5s ;
+				
 					}
 					td,
 					th {
@@ -121,12 +121,12 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 			}
 			tbody {
 				height: 100%;
-				overflow-y: scroll;
+				overflow-y: hide;
 				animation:        flashX 2.5s ;
 				tr {
 					margin-top: 1px;
 					margin-bottom: 1px;
-					animation:        flashX 2.5s ;
+					
 					
 					webkit-animation: flash_green 2.5s ; /* Safari 4+ */
 					moz-animation:    flash_green 2.5s ; /* Fx 5+ */

@@ -883,6 +883,132 @@
 
 @mentions-dropdown-bg: @popover-background;
 
+:root {
+	/*  ALL NAMES FOR VARIABLES TAKE FROM FIGMA
+*   IF YOU WANT RENAME VARIABLES, PLEASE FIRST RENAME IT IN FIGMA
+*   FOR (100% sync with FIGMA)
+*/
+
+	/* --rgb-main-background-color: 23, 28, 41;                switch to light */
+	--rgb-main-background-color: 14, 14, 14; /* switch to light */
+
+	/* --rgb-body-background-color: 30, 40, 65;                switch to light */
+	--rgb-body-background-color: 14, 14, 14; /* switch to light */
+
+	/* --rgb-header-background-color: 30, 40, 65;             /* switch to light */
+	--rgb-header-background-color: 43, 49, 57; /* switch to light */
+
+	/* --rgb-subheader-background-color: 40, 51, 78;           switch to light */
+	--rgb-subheader-background-color: 49, 52, 69; /* switch to light */
+	--rgb-dropdown-background-color: 61, 68, 98; /* switch to light */
+	--rgb-icons: 115, 127, 146; /* switch to light */
+	--rgb-primary-cta-color: 60, 120, 224;
+	--rgb-contrast-cta-color: 255, 255, 255; /* switch to light */
+	--rgb-secondary-contrast-cta-color: 115, 127, 146; /* switch to light */
+	--rgb-cta-layer-color: 255, 255, 255;
+	--rgb-system-green: 84, 180, 137;
+	--rgb-system-red: 232, 94, 89;
+	--rgb-system-yellow: 232, 175, 89;
+	--rgb-asks: 232, 94, 89;
+	--rgb-bids: 84, 180, 137;
+	--rgb-primary-text-color: 255, 255, 255; /* switch to light */
+	--rgb-text-contrast-color: 23, 28, 41; /* switch to light */
+	--rgb-input-background-color: 30, 40, 65; /* switch to light */
+	--rgb-divider-color: 255, 255, 255; /* switch to light */
+	--rgb-shadow-color: 23, 28, 41; /* switch to light */
+	--rgb-landing-background-color: 251, 251, 251;
+	--rgb-strength-meter-very-strong: 108, 239, 239;
+
+	/* BUTTON FONT WEIGHT */
+
+	--button-font-weight: 500;
+
+	/*  ALPHA TRANSPERANCY LEVEL */
+	--alpha: 0.12;
+	--alpha-level-1: var(--alpha);
+	--alpha-level-2: calc(var(--alpha) * 2);
+	--alpha-level-3: calc(var(--alpha) * 3);
+	--alpha-level-4: calc(var(--alpha) * 4);
+	--alpha-level-5: calc(var(--alpha) * 5);
+	--alpha-level-6: calc(var(--alpha) * 6);
+	--alpha-level-7: calc(var(--alpha) * 7);
+	--alpha-level-8: calc(var(--alpha) * 8);
+}
+
+.group-wWM3zP_M- {
+	background-color: #0E0E0E !important;
+}
+
+.pg-trading-chart {
+	background-color: #0E0E0E !important;
+	height: 89%;
+	left: 0;
+	position: relative;
+	top: 0;
+	width: 100%;
+}
+
+.pg-trading-chart #cryptobase_chart {
+		background: transparent  !important;
+		height: calc(100% - 39px);
+	}
+
+.pg-trading-chart .cr-title-component {
+		padding: calc(var(--gap) * 2);
+	}
+
+.pg-trading-chart--error {
+	align-items: center;
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px solid white;
+	color: var(--system-red);
+	display: flex;
+	font-size: 16px;
+	justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+	.pg-trading-chart {
+		width: 100%;
+	}
+}
+
+.title-text {
+	color: #7a7e8b !important;
+	font-size: 16px;
+	font-weight: 500;
+
+}
+
+.cr-percentage-button {
+	background: var(--button-primary);
+	border: none;
+	color: var(--base);
+	cursor: pointer;
+	font-weight: normal;
+	margin: 0 calc(var(--gap) * 0.5);
+	outline: none;
+	padding: var(--gap);
+	text-align: center;
+	width: 100%;
+}
+
+.cr-percentage-button:active {
+		background: var(--button-active);
+	}
+
+.cr-percentage-button:first-child {
+		margin-left: 0;
+	}
+
+.cr-percentage-button:last-child {
+		margin-right: 0;
+	}
+
+.cr-percentage-button:focus {
+		outline: none !important;
+	}
+
 .pg-alerts {
 	position: fixed;
 	right: calc(var(--gap) * 2);
@@ -929,7 +1055,7 @@
   }
 
 .td-pg-trading {
-	background: #181819 !important;
+	background: #000 !important;
 	display: grid;
 	font-weight: 500 !important;
 	font-size: 13px !important;
@@ -947,7 +1073,8 @@
 	}
 
 .td-pg-trading .td-pg-trading--bg {
-		background-color: #3C3C3E !important;
+		background-color: #0E0E0E !important;
+		opacity: 0.98 !important;
 	}
 
 .td-pg-trading .td-pg-trading__header-toolbar {
@@ -4902,7 +5029,6 @@ th#react-table table:last-child {
 }
 
 .td-pg-profile__list-api-key .td-pg-profile__inner {
-		padding: 20px 0;
 	}
 
 .td-pg-profile__list-api-key__table {
@@ -8631,16 +8757,16 @@ th#react-table table:last-child {
         z-index: 2222;
       }
 
-{/*ProfileScreen*/}
+{/*Dashboard*/}
 
 .td-pg-profile {
-	color: #fff;
-  width:1168px !important;
-  margin-top: 30px !important;
+	color: #fff !important;
+  	width:1168px !important;
+  	margin-top: 30px !important;
 }
 
 .td-pg-profile--color--second {
-		color: #181819;
+		color: #c0c0c0 !important;
 	}
 
 .td-pg-profile--bg {
@@ -8667,6 +8793,9 @@ th#react-table table:last-child {
 	}
 
 .td-pg-profile .container-fluid {
+
+		background: #181819 !important;
+		padding: 20px;
     
 	}
 
@@ -8716,8 +8845,8 @@ th#react-table table:last-child {
 .td-pg-profile__quick__logo {
 
 			margin: 0px auto;
-      margin-left: 0px;
-      margin-right: 0px;
+      	margin-left: 0px;
+      	margin-right: 0px;
 			position: relative;
 		}
 

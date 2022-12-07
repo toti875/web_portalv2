@@ -8,6 +8,8 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useIntl } from 'react-intl';
 
+import GradientBorder from '../../components/GradientBorder/GradientBorder';
+
 //import './KYCScreen.pcss';
 
 export const ProfileQuickContainer2: React.FC = () => {
@@ -61,17 +63,19 @@ export const KYCScreen: React.FC = () => {
 	}, []);
 
 	return (
-		<div className="td-pg-profile">
+		<div className="td-pg-profile w-container">
 		
-			<Container fluid>
-		
-				<div className="td-pg-profile__content">
-					<ProfileAccountActivity />
-					<ProfileSecurity />
+			<GradientBorder>
+				<Container fluid>
+					<div className="td-pg-profile__content">
+						<ProfileAccountActivity />
+						<ProfileSecurity />
+						<ProfileApiKeys />
+					</div>
+				</Container>
+			</GradientBorder>
 
-					<ProfileApiKeys />
-				</div>
-			</Container>
+
 		</div>
 	);
 };

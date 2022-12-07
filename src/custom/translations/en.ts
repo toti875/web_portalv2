@@ -18,9 +18,9 @@ export const en = {
 	'page.body.trade.header.orderHistory': 'Histórico de ordens',
 	/**OrderBook */
 	//'page.body.trading.header.orderBook.header.title.price': 'Price',
-	'page.body.trading.header.orderBook.header.title.price': 'Preço unitário',
-	'page.body.trading.header.orderBook.header.title.amount': 'Qtd',
-	'page.body.trading.header.orderBook.header.title.sum': 'Vol financeiro',
+	'page.body.trading.header.orderBook.header.title.price': 'Preço ',
+	'page.body.trading.header.orderBook.header.title.amount': 'Qtd ',
+	'page.body.trading.header.orderBook.header.title.sum': 'Volume ',
 	/**Vote */
 	'page.body.vote.msg.success': 'Vote success',
 	'page.body.vote.msg.fail': 'Vote fail',

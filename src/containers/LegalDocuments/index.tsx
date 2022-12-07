@@ -2,10 +2,7 @@ import * as React from 'react';
 import { Modal, TabPanel } from '../../components';
 
 const panels = [
-	{
-		label: 'LEGAL NOTES',
-		content: <div className={'tabs-content'}>LEGAL NOTES</div>,
-	},
+
 	{
 		label: 'POLÍTICA DE PRIVACIDADE',
 		content: (

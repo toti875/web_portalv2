@@ -41,7 +41,7 @@ export const defaultConfig: Config = {
 	isDraggable: true,
 	languages: ['pt'],
 	sessionCheckInterval: '5000',
-	balancesFetchInterval: '2000',
+	balancesFetchInterval: '10000',
 	passwordEntropyStep: 14,
 	showLanding: true,
 	sentryEnabled: false,

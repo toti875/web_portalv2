@@ -192,7 +192,7 @@ const MarketTradingContainer: React.FC = () => {
 						onClick={() => handleChangeRadio('change')}
 					>
 						<i className={classnames({ active: radioSelectedState === 'change' })} />
-						<label className="d-flex align-items-center mb-0 mr-2">Variação</label>
+						<label className="d-flex align-items-center mb-0 mr-2" style={{fontSize: '13px'}}>Variação</label>
 					</div>
 					<div
 						className="select-item d-flex align-items-center justify-content-center h-100"

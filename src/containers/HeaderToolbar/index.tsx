@@ -31,7 +31,7 @@ class HeaderToolbarContainer extends React.Component<Props> {
 			<div className="pg-header__toolbar">
 				<div className="pg-header__toolbar-item">
 					<p className="pg-header__toolbar-item-value pg-header__toolbar-item-value-data">
-						{currentMarket && Decimal.formatRemoveZero(Number(this.getTickerValue('low')), 6)}
+						{currentMarket && Decimal.formatRemoveZero(Number(this.getTickerValue('low')), 6) }
 					</p>
 					<p className="pg-header__toolbar-item-text">{this.translate('page.body.trade.toolBar.lowest')}</p>
 				</div>

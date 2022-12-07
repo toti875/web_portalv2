@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const MarketTradingStyle = styled.div`
-	background-color: #0b1426;
+	background-color: #0E0E0E;
 	height: 100%;
-	font-size: 12.5px;
+	font-size: 13px;
 	font-weight: 500;
 	padding: 15px 0;
 	overflow: hidden;
@@ -12,18 +12,19 @@ export const MarketTradingStyle = styled.div`
 `;
 
 export const SearchBlockStyle = styled.div`
-	padding: 10px 10px 15px 10px;
+	
 	.search-wrapper {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		border-bottom: 1px solid #848e9c;
-		padding: 5px 0;
-		font-size: 12px;
+		
+		
+		font-size: 13px;
 
 
 		.search-icon {
 			margin-right: 20px;
+			color: #fff;
 		}
 		.search-input {
 			width: inherit;
@@ -31,7 +32,7 @@ export const SearchBlockStyle = styled.div`
 			outline: none;
 			background-color: transparent;
 			border: none;
-			color: #fff;
+			color: #F5F5F5;
 			::placeholder {
 				color: #848e9c;
 			}
@@ -49,23 +50,23 @@ export const SearchBlockStyle = styled.div`
 			margin: 0px 4px 0px 0px;
 			min-width: 0px;
 			display: flex;
-			border: 1px solid #848e9c;
+			border: 1px solid #009991;
 			border-radius: 99999px;
 			::before {
 				content: '';
 				width: 6px;
 				height: 6px;
-				margin: 2px;
+				margin: 5px;
 			}
 			&.active {
-				border: 1px solid #2fb67e;
+				border: 1px solid #009991;
 				::before {
 					content: '';
 					width: 6px;
 					height: 6px;
 					margin: 2px;
 					border-radius: 99999px;
-					background-color: #2fb67e;
+				
 				}
 			}
 		}
@@ -73,11 +74,11 @@ export const SearchBlockStyle = styled.div`
 `;
 
 export const StarBlockStyle = styled.div`
-	padding: 0 10px;
+	padding: 0 8px;
 	display: flex;
 	align-items: center;
-	font-weight: 400;
-	font-size: 12.5px;	
+	font-weight: 500;
+	font-size: 13px;	
 	button {
 		position: relative;
 		height: 100%;
@@ -90,12 +91,12 @@ export const StarBlockStyle = styled.div`
 		outline: none;
 		background: transparent;
 		padding: 2px 6px;
-		font-weight: 600;
-		letter-spacing: 0.05em;
-		color: #fff;
+		font-weight: 500;
+		
+		color: #f5f5f5;
 		:hover {
 			:not(.active) {
-				background-color: rgb(41, 45, 63);
+				background-color: #1f1f1f;
 			
 				font-weight: 500;
 			}
@@ -148,7 +149,7 @@ export const StarBlockStyle = styled.div`
 			width: 30px;
 		}
 		&.active {
-			background-color: rgba(132, 142, 156, 0.35);
+			background-color: #1f1f1f;
 		}
 	}
 `;
@@ -190,6 +191,8 @@ export const MarketsListTradingStyle = styled.div`
 			thead {
 				background-color: transparent;
 				display: block;
+				font-size: 13px;
+				font-weight: 400;
 				tr {
 					background-color: transparent;
 					width: 100%;
@@ -203,6 +206,8 @@ export const MarketsListTradingStyle = styled.div`
 						text-align: left;
 						height: 1.7em;
 						width: 30%;
+						font-size: 13px;
+						font-weight: 400;
 						span {
 							height: 100%;
 							display: inline-block;
@@ -229,8 +234,8 @@ export const MarketsListTradingStyle = styled.div`
 			}
 			tbody {
 				height: 100%;
-				font-size: 11.7px;
-				font-weight: 250;
+				font-size: 13px;
+				font-weight: 400;
 				overflow-y: scroll;
 				background-color: transparent;
 				padding-bottom: 50px;
@@ -238,7 +243,7 @@ export const MarketsListTradingStyle = styled.div`
 				tr {
 					position: relative;
 					&.td-table__row--selected {
-						background-color: #4e5463;
+						background-color: #1f1f1f;
 					}
 					margin-bottom: 1px;
 					background-color: transparent;
@@ -254,11 +259,12 @@ export const MarketsListTradingStyle = styled.div`
 							display: block;
 						}
 						&:first-child {
-							color: #fff;
-							width: 40%;
+							color: #c0c0c0;
+							width: 45%;
 							> span {
 								.favorite {
 									cursor: pointer;
+									margin-right: 5px;
 								}
 								display: flex;
 								padding-left: 10px;
@@ -280,7 +286,7 @@ export const MarketsListTradingStyle = styled.div`
 						}
 					}
 					&:hover {
-						background-color: #4e5463;
+						background-color: #1f1f1f;
 					}
 				}
 			}

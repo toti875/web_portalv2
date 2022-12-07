@@ -11,7 +11,7 @@ import { LogoutIcon } from '../../assets/images/sidebar/LogoutIcon';
 import { ProfileIcon } from '../../assets/images/sidebar/ProfileIcon';
 import { SidebarIcons } from '../../assets/images/sidebar/SidebarIcons';
 import { pgRoutes } from '../../constants';
-import './Sidebar.pcss';
+//import './Sidebar.pcss';
 import {
     changeLanguage,
     changeUserDataFetch,

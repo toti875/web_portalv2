@@ -6,6 +6,8 @@ import { Market, RootState, selectCurrentMarket, selectMarkets, selectMarketTick
 import { resetLayouts } from '../../modules/public/gridLayout';
 import { MarketSelector } from './MarketSelector';
 
+import './ToolBar.pcss';
+
 interface ReduxProps {
 	currentMarket?: Market;
 	markets: Market[];

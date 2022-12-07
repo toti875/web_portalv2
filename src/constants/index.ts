@@ -4,16 +4,10 @@ export const PG_TITLE_PREFIX = 'Fortem ONE - Ativos Digitais';
 
 export const pgRoutes = (isLoggedIn: boolean, isLight?: boolean): string[][] => {
 	const routes = [
-		['page.header.navbar.trade', '/market/', `trade${isLight ? 'Light' : ''}`],
-		['page.header.navbar.dashboard', '/dashboard/', `dasboard${isLight ? 'Light' : ''}`],
-		['page.header.navbar.portfolio', '/portfolio', `wallets${isLight ? 'Light' : ''}`],
-		['page.header.navbar.openOrders', '/orders', `orders${isLight ? 'Light' : ''}`],
-		['page.header.navbar.history', '/history', `history${isLight ? 'Light' : ''}`],
+
 	];
 	const routesUnloggedIn = [
-		['page.header.navbar.signIn', '/signin', `signin${isLight ? 'Light' : ''}`],
-		['page.header.signUp', '/register', `signup${isLight ? 'Light' : ''}`],
-		['page.header.navbar.trade', '/market/', `trade${isLight ? 'Light' : ''}`],
+
 	];
 
 	return isLoggedIn ? routes : routesUnloggedIn;
@@ -21,12 +15,12 @@ export const pgRoutes = (isLoggedIn: boolean, isLight?: boolean): string[][] => 
 
 export const DEFAULT_CCY_PRECISION = 2;
 export const STORAGE_DEFAULT_LIMIT = 100;
-export const ORDER_BOOK_DEFAULT_SIDE_LIMIT = 10;
+export const ORDER_BOOK_DEFAULT_SIDE_LIMIT = 30;
 export const DEFAULT_TRADING_VIEW_INTERVAL = '30';
 export const VALUATION_PRIMARY_CURRENCY = 'BRL';
-export const VALUATION_SECONDARY_CURRENCY = 'USDT';
+export const VALUATION_SECONDARY_CURRENCY = 'USD';
 
-export const PASSWORD_ENTROPY_STEP = 6;
+export const PASSWORD_ENTROPY_STEP = 14;
 
 export const DEFAULT_KYC_STEPS = ['email', 'profile', 'document'];
 
@@ -57,8 +51,8 @@ export const colors = {
 			moon: 'var(--primary-text-color)',
 		},
 		orderBook: {
-			asks: '#ef5350',
-			bids: '#13b887',
+			asks: 'blue',
+			bids: 'green',
 		},
 		depth: {
 			fillAreaAsk: '#ef5350',

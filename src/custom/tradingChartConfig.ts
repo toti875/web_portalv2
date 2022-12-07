@@ -3,7 +3,25 @@ import { ThemeName } from '../charting_library/charting_library.min';
 import { colors } from '../constants';
 import { convertRgbToHex, getStylesValueByKey } from '../helpers';
 
-export const customWidgetParams = {};
+export const customWidgetParams = {
+
+	studies_overrides: {
+		"relative strength index.rsi.color": "var(--rgb-asks)",
+		"relative strength index.upper band.color": "var(--rgb-asks)",
+		"relative strength index.lower band.color": "var(--rgb-asks)",
+
+		"relative strength index.upper band.value": 80,
+		"relative strength index.lower band.value": 20,
+
+	},
+	studies:   {
+		id: "RSI@tv-basicstudies",
+		inputs: {
+		 length: 4
+		}
+	  },
+
+};
 
 export const customWidgetOptions = (colorTheme?: string) => {
 	if (colorTheme === 'light') {
@@ -66,6 +84,8 @@ export const customWidgetOptions = (colorTheme?: string) => {
 		studies_overrides: {
 			['volume.volume.color.0']: downColor,
 			['volume.volume.color.1']: upColor,
+			['relative strength index.rsi.color']: '#2196f3',
+
 		},
 		theme: 'Dark' as ThemeName,
 	};

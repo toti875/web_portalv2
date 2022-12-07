@@ -5707,10 +5707,7 @@ max-height: 862px;
 	outline: none;
 	width: 6rem;
 }{/*   *** TRADING SCREEN *** */}.td-pg-trading {
-	background: #181819 !important;
-	display: grid;
-	font-weight: 500 !important;
-	font-size: 13px !important;
+
 	
 	gap: 6px;
 	grid-template-columns: 4fr 8fr 4fr;
@@ -5725,7 +5722,6 @@ max-height: 862px;
 	}
 
 .td-pg-trading .td-pg-trading--bg {
-		background-color: #181819 !important;
 	}
 .td-pg-trading .td-pg-trading__header-toolbar {
 		grid-column: 1/3;
