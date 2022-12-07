@@ -93,11 +93,12 @@ export const OrderStyle = styled.div`
 						}
 						.input-group-order {
 							background-color: #0E0E0E !important;
-							border: 1px solid #C0C0C0;
+							border: 1px solid #555555;
 							boder-radius: 4px !important;
 							display: flex;
 							flex-direction: row;
 							vertical-align: middle !important;
+							margin-bottom: 20px;
 							
 							input
 							 {
@@ -111,7 +112,7 @@ export const OrderStyle = styled.div`
 								height: 30px !important;
 								line-height: 30px !important;
 								border: none !important;
-								border-left: 1px dotted #c0c0c0 !important;
+								border-left: 0.5px dotted #555555 !important;
 								border-radiux: 0px !important;
 							
 								
@@ -127,14 +128,14 @@ export const OrderStyle = styled.div`
 							   height: 30px !important;
 							   line-height: 30px !important;
 							   border: none !important;
-							   border-left: 1px dotted #c0c0c0 !important;
+							   border-left: 0.5px dotted #555555 !important;
 							   border-radiux: 0px !important;
 							   align-items: center !important;
 							   justify-content: center !important;
 							   
 						   }
 							::first-child {
-								margin-bottom: 12px;
+								margin-bottom: 20px !important;
 							}
 							.input-group-prepend {
 								
