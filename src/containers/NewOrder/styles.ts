@@ -92,14 +92,16 @@ export const OrderStyle = styled.div`
 						}
 						.input-group {
 							background-color: transparent;
-							border: 1px solid #009991;
-							border-radius: 2px;
-							input,
-							span {
-								background: transparent;
+							border: none;
+							border-radius: 4px;
+							input
+							 {
+								background: transparent !important;
 								font-size: 14px;
 								outline: none;
-								border: none;
+								border: 1px solid #C0C0C0;
+								border-radius: 4px;
+								box-shadow: none !important
 							}
 							::first-child {
 								margin-bottom: 10px;
@@ -109,29 +111,32 @@ export const OrderStyle = styled.div`
 									color: #f5f5f5;
 								}
 							}
-							.form-control {
-								color: #f5f5f5;
+							.exchange-price {
+								
 								height: unset;
 								box-shadow: none;
 								background: transparent;
 								input {
-									background: transparent;
+									color: #f5f5f5 !important;
+									background: transparent !important;
 
 								}
 							}
 							.input-group-prepend,
 							.input-group-append {
+								display: flex !important;
 								background: transparent;
-								width: 80px;
-								.input-group-text {
-									display: block;
+								color: #f5f5f5;
+								width: 70% !important;
+								.input-group-text2 {
+									display: flex !important;
 									text-align: center;
-									padding: 5px 14px;
+									padding: 5px 14px !important;
 									background: transparent;
 								}
 							}
 							.input-group-append {
-								width: 70px;
+								width: 170px;
 								span {
 									color: #848e9c;
 								}
@@ -158,7 +163,7 @@ export const OrderStyle = styled.div`
 						}
 						.logger-order {
 							
-							border: 1px solid #1EBDB2;
+							border: 1px solid #009991;
 							border-radius: 5px;
 							height: 32px;
 							background-color: transparent;
@@ -173,7 +178,7 @@ export const OrderStyle = styled.div`
 								line-height: 32px;
 								:hover {
 									background-color: transparent;
-									color: white;
+									color: #f5f5f5;
 								}
 							}
 						}
@@ -182,7 +187,7 @@ export const OrderStyle = styled.div`
 						padding-right: 20px;
 						.submit-order {
 							background: #13b887;
-							font-weight: 350;
+							font-weight: 400;
 							font-size: 14px;
 							filter: brightness(110%);
 						}
@@ -191,7 +196,7 @@ export const OrderStyle = styled.div`
 						padding-left: 20px;
 						.submit-order {
 							background: #ef5350;
-							font-weight: 350;
+							font-weight: 4000;
 							font-size: 14px;
 							filter: brightness(110%);							
 						}

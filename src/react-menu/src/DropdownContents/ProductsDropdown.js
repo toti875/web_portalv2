@@ -79,7 +79,7 @@ const ProductsDropdown = () => {
               <a href="/quick-exchange" style={{fontSize: '16px',}}>
                   <Icon />Negociação instantânea
               </a><br/>
-              <a href="https://exchange.fortem1.com.br/market/btcusd" style={{fontSize: '16px'}} target="_blank" rel="noopener noreferrer">
+              <a href="/market/btcusd" style={{fontSize: '16px'}} target="_blank" rel="noopener noreferrer">
                   <Icon />Negociação avançada (Exchange Pro)
               </a>
             </div>

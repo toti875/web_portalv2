@@ -1,7 +1,43 @@
+.exchange-price input {
+
+    background: transparent !important;
+
+    .input {
+
+        background: transparent !important;
+
+    }
+
+  }
+
+.input-group-append {
+
+    background: transparent !important;
+
+    
+
+    .input-group input  {
+
+        background: transparent !important;
+
+    }
+
+  }
+
+  .input-group-prepend {
+
+    background: transparent !important;
+
+    .exchange-price, .input-group input  {
+
+        background: transparent !important;
+        
+    }
+
+  }
+
 
 {/* SIGNUP FORM */}
-
-
 
 .cr-email-form__form-content {
 
@@ -5932,7 +5968,7 @@ max-height: 862px;
         content: "";
     }.footerDesktop-screen {
     background-color: #181819 !important;
-	color: white;
+	color: #F5F5F5;
 	font-size: 15px;
 	margin-bottom: -20px;
     margin-top: 60px !important;

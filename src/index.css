@@ -883,6 +883,22 @@
 
 @mentions-dropdown-bg: @popover-background;
 
+.exchange-price input {
+
+	width: 60px !important;
+	color: blue !important;
+	border-bottom: 1px solid yellow;
+
+}
+
+#exchange-price input {
+
+	width: 60px !important;
+	color: blue !important;
+	border-bottom: 1px solid yellow;
+
+}
+
 :root {
 	/*  ALL NAMES FOR VARIABLES TAKE FROM FIGMA
 *   IF YOU WANT RENAME VARIABLES, PLEASE FIRST RENAME IT IN FIGMA
@@ -913,7 +929,7 @@
 	--rgb-bids: 84, 180, 137;
 	--rgb-primary-text-color: 255, 255, 255; /* switch to light */
 	--rgb-text-contrast-color: 23, 28, 41; /* switch to light */
-	--rgb-input-background-color: 30, 40, 65; /* switch to light */
+
 	--rgb-divider-color: 255, 255, 255; /* switch to light */
 	--rgb-shadow-color: 23, 28, 41; /* switch to light */
 	--rgb-landing-background-color: 251, 251, 251;
@@ -1060,12 +1076,12 @@
 	font-weight: 500 !important;
 	font-size: 13px !important;
 	
-	gap: 6px;
+	gap: 10px !important;
 	grid-template-columns: 4fr 8fr 4fr;
 	grid-template-rows: 70px 520px minmax(-webkit-min-content, 300px) 350px;
 	grid-template-rows: 70px 520px minmax(min-content, 300px) 350px;
-	margin-bottom: 6px;
-	margin-top: 6px;
+	margin-bottom: 10px !important;
+	margin-top: 10px !important;
 }
 
 .td-pg-trading .td-pg-trading__item {

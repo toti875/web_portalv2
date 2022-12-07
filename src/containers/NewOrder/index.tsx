@@ -567,7 +567,7 @@ export const NewOrder: React.FC<OrderProps> = ({}) => {
 							</div>
 							<div className="input-group mb-3">
 								<div className="input-group-prepend">
-									<span className="input-group-text d-flex align-items-center text-right">
+									<span className="input-group-text2" style={{color: 'blue'}}>
 										{intl.formatMessage({ id: 'page.body.trade.header.newOrder.content.price' })}
 									</span>
 								</div>
@@ -576,14 +576,14 @@ export const NewOrder: React.FC<OrderProps> = ({}) => {
 										type="text"
 										value={price}
 										onChange={e => changePrice(e.target.value, type)}
-										className="form-control2 text-right"
+										className="exchange-price"
 									/>
 								) : (
-									<input type={'text'} value={`≈${priceMarket}`} className="form-control text-right" disabled />
+									<input type={'text'} value={`≈${priceMarket}`} className="exchange-price" disabled />
 								)}
 
 								<div className="input-group-append d-flex justify-content-end align-items-center">
-									<span className="input-group-text"> {quote_unit.toUpperCase() || 'NONE'}</span>
+									<span className="input-group-text2"> {quote_unit.toUpperCase() || 'NONE'}</span>
 								</div>
 							</div>
 							<div className="input-group">
@@ -594,7 +594,7 @@ export const NewOrder: React.FC<OrderProps> = ({}) => {
 								</div>
 								<input
 									type="text"
-									className="form-control text-right"
+									className="exchange-price text-right"
 									value={amount}
 									onChange={e => changeAmount(e.target.value, type)}
 								/>
@@ -621,7 +621,7 @@ export const NewOrder: React.FC<OrderProps> = ({}) => {
 									</div>
 									<input
 										type="text"
-										className="form-control text-right"
+										className="exchange-price text-right"
 										value={total}
 										onChange={e => changeTotal(e.target.value, type)}
 									/>
@@ -645,9 +645,9 @@ export const NewOrder: React.FC<OrderProps> = ({}) => {
 								</button>
 							) : (
 								<div className="logger-order w-100 d-flex justify-content-center align-item-center">
-									<Link to="/banner/authentication/sign-in/basic"> {intl.formatMessage({ id: 'page.body.user.loggin' })}</Link>
+									<Link to="/signin"> {intl.formatMessage({ id: 'page.body.user.loggin' })}</Link>
 									<span>ou</span>
-									<Link to="/banner/authentication/sign-up/basic"> {intl.formatMessage({ id: 'page.body.user.register' })}</Link>
+									<Link to="register"> {intl.formatMessage({ id: 'page.body.user.register' })}</Link>
 								</div>
 							)}
 						</form>
@@ -672,7 +672,7 @@ export const NewOrder: React.FC<OrderProps> = ({}) => {
 		const elmExtra = (
 			<React.Fragment>
 				<span>{intl.formatMessage({ id: 'page.body.trade.header.newOrder.content.buyWith' })}</span>
-				<button>{currentMarket && currentMarket.quote_unit.toUpperCase()}</button>
+				<span>{currentMarket && currentMarket.quote_unit.toUpperCase()}</span>
 			</React.Fragment>
 		);
 
