@@ -288,12 +288,6 @@ class WalletsComponent extends React.Component<Props, WalletsState> {
                     />
                 </div>
 
-                <div className="pg-container pg-wallet w-container">
-                    <ProfileScreen2/>
-                </div>
-              
-
-                
    
             </React.Fragment>
         );

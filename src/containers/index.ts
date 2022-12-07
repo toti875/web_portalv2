@@ -62,4 +62,5 @@ export * from './QuickExchange';
 export * from './CanCan';
 export * from './Charts';
 export * from './OpenOrders';
+export * from './ProfileKYC';
  

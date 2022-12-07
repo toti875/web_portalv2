@@ -64,7 +64,7 @@
 	}
 
 	.td-pg-trading--bg {
-		background-color: #0b1426 !important;
+		background-color: #3C3C3E !important;
 	}
 
 	.td-pg-trading__header-toolbar {
@@ -4255,8 +4255,8 @@ color: #F5F5F5 !important;
 
 .td-pg-profile__security {
 
-  max-width: 80% ;
-  margin-left: 40px;
+  max-width: 100% ;
+  
 	.td-pg-profile__inner {
 		display: flex;
 		flex-direction: column;
@@ -4998,7 +4998,7 @@ color: #F5F5F5 !important;
 
 
 .td-pg-profile__activity {
-  min-width: 120% !important;
+  min-width: 100% !important;
   opacity: 0.91 !important;
 
 	&-result-succeed {
@@ -5551,7 +5551,7 @@ color: #F5F5F5 !important;
     border-radius: calc(var(--gap) * 0.66);
     box-shadow: 3px 3px 10px 3px var(--shadow-color-level-1);
     margin-top: calc(var(--gap) * 2);
-    width: 100%;
+    width: 100% !important;
 
     .cr-table {
       thead {
@@ -8231,8 +8231,8 @@ color: #F5F5F5 !important;
 
 	&__content {
 		display: grid;
-		grid-gap: 26px;
-		grid-template-columns: 27.5fr 27.5fr 45fr;
+		grid-gap: 30px !important;
+		grid-template-columns: 28.5fr 28.5fr 45fr;
 		grid-template-rows: repeat(8, calc(720px / 8));
 		margin-bottom: 40px;
 
@@ -8359,11 +8359,17 @@ color: #F5F5F5 !important;
 	}
 
 	&__security {
-		grid-row: 1/4;
+		grid-row: 1/5 !important;
+		grid-column: 1/2 !important;
+	}
+
+	
+	&__activity {
+		grid-row: 1/5 !important;
+		grid-column: 2/4 !important;
 	}
 
 	&__announcement {
-		grid-row: 1/4;
 
 		&__item {
 			flex: 1;
@@ -8403,12 +8409,11 @@ color: #F5F5F5 !important;
 	}
 
 	&__task-center {
-		grid-column: 2/4;
-		grid-row: 4/5;
+
 	}
 
 	&__list-api-key {
-		grid-column: 1/4;
+		grid-column: 1/6;
 		grid-row: 5/9;
 	}
 
@@ -9759,7 +9764,6 @@ color: #F5F5F5 !important;
       }
   
       &__label {
-        background: yellow;
         position: absolute;
         top: 0;
       }
@@ -9871,7 +9875,6 @@ color: #F5F5F5 !important;
   .td-pg-profile {
 
 	&--color--second {
-		color: #848e9c;
 	}
 
 	&--bg {
@@ -10027,11 +10030,11 @@ color: #F5F5F5 !important;
 	}
 
 	&__security {
-		grid-row: 1/4;
+		
 	}
 
 	&__announcement {
-		grid-row: 1/4;
+		
 
 		&__item {
 			flex: 1;
@@ -10144,7 +10147,7 @@ color: #F5F5F5 !important;
 				overflow: hidden;
 				text-overflow: ellipsis;
 				white-space: nowrap;
-				width: calc(50%);
+				width: 100% !important;
 
 				&:first-child {
 					padding-right: 1rem;

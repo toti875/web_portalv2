@@ -42,10 +42,10 @@ import './index.css';
 import './template_react/doob/src/assets/scss/style.scss';
 import './blockchain.css';
 import './button.css';
-//import './antd.css';
+import './antd.css';
 
 //import './buttons.pcss';
-//import './button.css';
+import './button.css';
 
 //import 'bootstrap/dist/css/bootstrap-grid.min.css';
 //import '@openware/react-components/build/index.css';

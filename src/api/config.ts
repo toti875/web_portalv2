@@ -22,7 +22,7 @@ export const defaultConfig: Config = {
 
 		infoURL: 'http://www.fortem1.com.br/api/v2/peatio',
 		//downstreamURL: 'wss://www.fortem1.com.br/api/public/',
-		downstreamURL: 'wss://www.fortem1.com.br/api/v2/ranger',
+		downstreamURL: 'ws://www.fortem1.com.br/api/v2/ranger',
 
 	},
 	

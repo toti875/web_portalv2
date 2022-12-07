@@ -94,6 +94,7 @@ import {
 	PortfolioScreen,
 	QuickExchange,
 	ProfileScreen,
+	KYCScreen,
 } from '../../screens';
 
 import { LandingScreen, DocumentationScreen, SignUpScreen } from '../../v2/src/screens';
@@ -545,7 +546,8 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/history" component={HistoryScreen} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/confirm" component={ConfirmScreen} />
 					{/* OLD Profile Page */}
-					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={ProfileScreen2} />
+					
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/security" component={KYCScreen} />
 					{/* NEW Profile Page */}
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/account/wallets" component={Profile} />
 					

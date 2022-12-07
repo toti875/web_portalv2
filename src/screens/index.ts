@@ -7,6 +7,7 @@ export * from './HistoryScreen';
 export * from './MagicLinkScreen';
 export * from './OrdersTabScreen';
 export * from './ProfileScreen';
+export * from './KYCScreen';
 
 
 

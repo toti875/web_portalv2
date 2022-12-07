@@ -7,6 +7,7 @@ import * as React from 'react';
 import { useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
 
+
 // tslint:disable-next-line: no-empty-interface
 interface ProfileAccountActivityProps {}
 
@@ -15,11 +16,11 @@ export const ProfileAccountActivity: React.FC<ProfileAccountActivityProps> = () 
 	const dispatch = useDispatch();
 
 	const userActivity = useSelector(selectUserActivity);
-	const [tabKeyActiveState, setTabkeyActiveState] = React.useState<string>('Últimos acessos');
+	const [tabKeyActiveState, setTabkeyActiveState] = React.useState<string>('Activity');
 
 	React.useEffect(() => {
 		dispatch(getUserActivity({ page: 0, limit: 25 }));
-	}, [dispatch]);
+	}, []);
 
 	const renderResult = (result: string) => {
 		const className = classnames({
@@ -87,17 +88,26 @@ export const ProfileAccountActivity: React.FC<ProfileAccountActivityProps> = () 
 
 	const TAB_LIST_INFO = [
 		{
-			label: 'Últimos acessos',
-			content: tabKeyActiveState === 'Últimos acessos' ? renderData('browserName') : null,
+			label: 'Activity',
+			content: tabKeyActiveState === 'Activity' ? renderData('browserName') : null,
 		},
-
+		{
+			label: 'Device',
+			content: tabKeyActiveState === 'Device' ? renderData('deviceName') : null,
+		},
 	];
 
 	return (
 		<div className="td-pg-profile--bg td-pg-profile--radius td-pg-profile__content__item td-pg-profile__activity">
 			<NewTabPanel defaultActiveKey={tabKeyActiveState} onChange={onChangeTabKey}>
 				{TAB_LIST_INFO.map(tabInfo => (
-					<TabPane key={tabInfo.label} tab={tabInfo.label}>
+					<TabPane
+						key={tabInfo.label}
+						tab={tabInfo.label}
+						style={{
+							background: '#172B4C',
+						}}
+					>
 						{tabInfo.content}
 					</TabPane>
 				))}

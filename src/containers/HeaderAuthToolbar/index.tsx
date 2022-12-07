@@ -14,7 +14,7 @@ import { NavBar } from '../NavBar';
 
 const IconWallet = require('../../assets/svg/wallet2.svg');
 const IconDashboard = require('../../assets/svg/trading.svg');
-const IconDash = require('../../assets/svg/dashboard2.svg');
+const IconDash = require('../../assets/svg/dash.svg');
 const IconPerfil = require('../../assets/svg/profile2.svg');
 const IconAccountProfile = require('../../assets/svg/profileSubmenu.svg');
 const IconFinance = require('../../assets/svg/finance.svg');
@@ -26,6 +26,7 @@ const IconProfileVerification = require('../../assets/svg/cadastro.svg');
 const IconOrders = require('../../assets/svg/orders.svg');
 const IconLogout = require('../../assets/svg/logout.svg');
 const IconReferral = require('../../assets/svg/referral.svg');
+const IconSecurity = require('../../assets/svg/security2.svg');
 
 export const HeaderAuthToolbar: React.FC = () => {
 	const history = useHistory();
@@ -260,6 +261,25 @@ export const HeaderAuthToolbar: React.FC = () => {
 		);
 	};
 
+	const renderSecurityLink = () => {
+		return (
+			isLoggedIn && (
+				<Link
+					to="/security"
+					onClick={() => {
+						setStateActiveNow('account');
+						setActiveItemDrop('security');
+					}}
+				>
+					<div className={classActiveItemDrop('security')}>
+						<img src={IconSecurity} className="mr-2 subheader__right-menu__item__title__svg" style={{width: '26px',}} />
+						
+						Segurança
+					</div>
+				</Link>
+			)
+		);
+	};
 
 	const renderProfileVerificationLink = () => {
 		return (
@@ -315,11 +335,13 @@ export const HeaderAuthToolbar: React.FC = () => {
 							<div className="subheader__right-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div>
 						</span>
 						<div className="subheader__right-menu__dropdown__wrap__content subheader__right-menu__dropdown__wrap__content--account">
-							{renderProfileLink()}
+							
 							{renderDashLink()}
+							{renderSecurityLink()}
 							{renderProfileVerificationLink()}
 							{renderReferralLink()}
 							{renderLogout()}
+							{renderProfileLink()}
 						</div>
 					</div>
 				</>
