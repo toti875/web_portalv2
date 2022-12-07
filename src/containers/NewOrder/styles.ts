@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const OrderStyle = styled.div`
 	font-weight: 500;
-	font-size: 13px;
+	font-size: 14px;
 	height: 100%;
-	background-color: #0b1426;
+	background-color: #0E0E0E;
 	padding: 10px;
 	.rc-tabs {
 		display: flex;
@@ -44,7 +44,7 @@ export const OrderStyle = styled.div`
 							font-weight: 600;
 							.rc-tabs-tab-btn {
 								color: #fff;
-								border-bottom: 2px solid #009991 ;
+								border-bottom: 2px solid #009991;
 							}
 						}
 						:not(:last-child) {
@@ -78,13 +78,13 @@ export const OrderStyle = styled.div`
 						padding: 10px 0;
 						.title-block {
 							.title-block-left {
-								color: white;
-								font-size: 13px;
+								color: #F5F5F5;
+								font-size: 14px;
 								display: flex;
 								align-items: center;
 							}
 							.title-block-right {
-								font-size: 13px;
+								font-size: 14px;
 								display: flex;
 								justify-content: flex-end;
 								align-items: center;
@@ -92,12 +92,12 @@ export const OrderStyle = styled.div`
 						}
 						.input-group {
 							background-color: transparent;
-							border: 1px solid #7a7e8b;
+							border: 1px solid #009991;
 							border-radius: 2px;
 							input,
 							span {
 								background: transparent;
-								font-size: 13px;
+								font-size: 14px;
 								outline: none;
 								border: none;
 							}
@@ -106,21 +106,28 @@ export const OrderStyle = styled.div`
 							}
 							.input-group-prepend {
 								span {
-									color: #fff;
+									color: #f5f5f5;
 								}
 							}
 							.form-control {
-								color: #fff;
+								color: #f5f5f5;
 								height: unset;
 								box-shadow: none;
+								background: transparent;
+								input {
+									background: transparent;
+
+								}
 							}
 							.input-group-prepend,
 							.input-group-append {
+								background: transparent;
 								width: 80px;
 								.input-group-text {
 									display: block;
 									text-align: center;
 									padding: 5px 14px;
+									background: transparent;
 								}
 							}
 							.input-group-append {

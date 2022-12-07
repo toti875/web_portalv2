@@ -576,7 +576,7 @@ export const NewOrder: React.FC<OrderProps> = ({}) => {
 										type="text"
 										value={price}
 										onChange={e => changePrice(e.target.value, type)}
-										className="form-control text-right"
+										className="form-control2 text-right"
 									/>
 								) : (
 									<input type={'text'} value={`≈${priceMarket}`} className="form-control text-right" disabled />

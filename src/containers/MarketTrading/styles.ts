@@ -17,7 +17,7 @@ export const SearchBlockStyle = styled.div`
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		border-bottom: 1px solid #009991;
+	
 		padding: 5px 0;
 		font-size: 13px;
 
