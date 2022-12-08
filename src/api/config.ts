@@ -29,7 +29,7 @@ export const defaultConfig: Config = {
 	
 	minutesUntilAutoLogout: '60',
 	rangerReconnectPeriod: '1', 
-	withCredentials: true,
+	withCredentials: false,
 	usernameEnabled: true,
 	storage: {},
 	gaTrackerKey: 'G-M47QL88D4R',
