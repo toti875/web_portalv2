@@ -61,12 +61,12 @@ export const ProfileScreen2: React.FC = () => {
 	}, []);
 
 	return (
-		<div className="td-pg-profile">
+		<div className="td-pg-profile w-container">
 
 				<div className="td-pg-profile__content">
 					
 			
-					                 <div className="pg-container pg-wallet w-container">
+					                 <div className="pg-container">
                 <div className='kyc'>
                         
                         <ProfileVerification />
