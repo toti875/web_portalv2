@@ -883,6 +883,156 @@
 
 @mentions-dropdown-bg: @popover-background;
 
+.td-pg-referral__banner img {
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 100%;
+		}
+
+.td-pg-referral__rank {
+		padding: 50px 0;
+	}
+
+.td-pg-referral__rank__box__row {
+				background: #313445;
+				box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+				display: flex;
+				justify-content: space-between;
+				padding: 15px;
+			}
+
+.td-pg-referral__rank__box__row__rank {
+					display: flex;
+					justify-content: center;
+				}
+
+.td-pg-referral__rank__box__row__rank__mail {
+						-webkit-box-orient: vertical;
+						color: #fff;
+						display: -webkit-box;
+						font-size: 14px;
+						-webkit-line-clamp: 1;
+						overflow: hidden;
+					}
+
+.td-pg-referral__rank__box__row__rank__commision {
+						-webkit-box-orient: vertical;
+						color: #fff;
+						display: -webkit-box;
+						font-size: 14px;
+						-webkit-line-clamp: 1;
+						overflow: hidden;
+					}
+
+.td-pg-referral__rank__box__row__commision {
+					align-items: flex-end;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					margin-bottom: -8px;
+				}
+
+.td-pg-referral__rank__box__row__commision__title {
+						color: #fff;
+						font-size: 13px;
+						line-height: 19px;
+						margin-bottom: 6px;
+					}
+
+.td-pg-referral__rank__box__row__commision__coin-name {
+						background-color: #2fb67e;
+						border-radius: 10px;
+						color: #fff;
+						font-size: 14px;
+						line-height: 21px;
+						padding: 0.3rem 0.7rem;
+					}
+
+.td-pg-referral__loggedIn__userLogIn {
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 20vh;
+
+			/* background-color: #0000;
+				opacity: .5; */
+			position: relative;
+		}
+
+.td-pg-referral__loggedIn__userLogIn__wrapper__desription {
+					color: #f5f5f5;
+					font-size: 14px;
+					line-height: 21px;
+					margin-bottom: 20px;
+				}
+
+.td-pg-referral__loggedIn__userLogIn__wrapper__login {
+					align-items: center;
+					display: flex;
+					justify-content: center;
+				}
+
+.td-pg-referral__loggedIn__userLogIn__wrapper__login button {
+						background-color: #009991 !important;
+						border: none;
+						border-radius: 5px;
+						color: #f5f5f5;
+						padding: 6px 20px;
+						text-transform: uppercase;
+					}
+
+.td-pg-referral__loggedIn__userLogIn__wrapper__login p {
+						color: #F5F5F5;
+						font-size: 13px;
+						line-height: 19px;
+						margin-bottom: 0;
+						margin-left: 10px;
+						margin-top: 0;
+					}
+
+.td-pg-referral__loggedIn__userLogIn__wrapper__login p span {
+							color: transparent;
+							cursor: pointer;
+							font-size: 13px;
+							line-height: 19px;
+							margin-left: 10px;
+						}
+
+.td-pg-referral__loggedIn__userLogIn__wrapper__login p span:hover {
+								border-bottom: 1px solid #fff;
+							}
+
+.td-pg-referral__detail {
+		background: #262938;
+		padding: 50px 0;
+	}
+
+.td-pg-referral__detail__container h2 {
+				margin-bottom: 50px;
+				text-align: center;
+			}
+
+.td-pg-referral__detail__container__notice {
+				background: transparent;
+				border: 1px solid #009991;
+				border-radius: 5px;
+				padding: 26px 60px;
+				color: #FDA736;
+			}
+
+.ant-table {
+	backgroud: transparent;
+
+}
+
+.ant-table-thead > tr > th {
+
+	color: pink;
+	border-bottom: 1px solid yellow;
+
+}
+
 .exchange-price input {
 
 	width: 60px !important;
@@ -907,7 +1057,7 @@
 }
 
 .input-group span {
-	color: blue !important;
+	color: blue;
 
 }
 
@@ -4420,7 +4570,7 @@ color: #F5F5F5 !important;
     
     border-bottom: 2px solid var(--divider-color-level-2);
     color: var(--primary-text-color);
-    font-size: calc(var(--gap) * 2.33);
+    font-size: calc(var(--gap) * 2);
     font-weight: 600;
     height: calc(var(--gap) * 9.66);
     line-height: calc(var(--gap) * 9.66);
@@ -5020,10 +5170,10 @@ th#react-table table:last-child {
 }
 
 .input-group  span{
-  position: absolute !important;
+  position: absolute;
   
-  line-height: 50px !important;
-  color: #C0C0C0 !important;
+  line-height: 50px;
+  color: #C0C0C0;
 }
 
 .input-group  label{
@@ -10904,12 +11054,15 @@ th#react-table table:last-child {
   }
 
 .td-referral-content__wrapper {
-		background: #313445;
+		background: #1f1f1f;
 		padding: 15px;
+		border: 1px solid #c0c0c0;
+		border-radius: 5px;
 	}
 
 .td-referral-content__table {
 		padding: 80px 0 100px 0;
+		background: #181819 !important;
 	}
 
 .td-referral-content__table__row__col-left {
@@ -10917,9 +11070,9 @@ th#react-table table:last-child {
 			}
 
 .td-referral-content__table__row__col-left h4 {
-					background: #313445;
-					color: #fff;
-					font-size: 18px;
+					background: #1f1f1f;
+					color: #c0c0c0;
+					font-size: 15px;
 					line-height: 27px;
 					margin-bottom: 0;
 					padding: 12px;
@@ -10948,9 +11101,9 @@ th#react-table table:last-child {
 					}
 
 .td-referral-content__table__row__col-right h4 {
-					background: #313445;
-					color: #fff;
-					font-size: 18px;
+					background: #1f1f1f;
+					color: #f5f5f5;
+					font-size: 15px;
 					line-height: 27px;
 					margin-bottom: 0;
 					padding: 12px;
@@ -10976,7 +11129,7 @@ th#react-table table:last-child {
 				background-color: transparent;
 				border: none;
 				border-radius: 50%;
-				color: #fff;
+				color: #f5f5f5;
 				cursor: pointer;
 				display: flex;
 				font-size: 14px;
@@ -10989,7 +11142,7 @@ th#react-table table:last-child {
 			}
 
 .td-referral-content__table-pagination .active {
-				background-color: rgb(47, 182, 126) !important;
+				background-color: #009991 !important;
 			}
 
 .pg-documentation {

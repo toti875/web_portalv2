@@ -125,13 +125,13 @@ export const ReferralMobileScreen: React.FC = () => {
 						>
 							<div className="referral-loggedIn-userLogIn__wrapper">
 								<div className="referral-loggedIn-userLogIn__wrapper__desription">
-									You are not logged in, please login and share with your friends.
+								Acesse a plataforma e compartilhe seu código de indicação com seus amigos.
 								</div>
 								<div className="referral-loggedIn-userLogIn__wrapper__login">
-									<button onClick={redirectToLogin}>Login</button>
+									<button onClick={redirectToLogin}>Acessar plataforma</button>
 									<p>
 										{' '}
-										Not on CX yet?<span onClick={redirectToRegister}>Register</span>
+										Ainda não possui sua conta?<span onClick={redirectToRegister}> Criar conta</span>
 									</p>
 								</div>
 							</div>

@@ -125,13 +125,13 @@ export const Referral: React.FC = () => {
 						>
 							<div className="referral-loggedIn-userLogIn__wrapper">
 								<div className="referral-loggedIn-userLogIn__wrapper__desription">
-									You are not logged in, please login and share with your friends.
+									Acesse a plataforma e compartilhe seu código de indicação com seus amigos.
 								</div>
 								<div className="referral-loggedIn-userLogIn__wrapper__login">
-									<button onClick={redirectToLogin}>Login</button>
+									<button onClick={redirectToLogin}>Acessar plataforma</button>
 									<p>
 										{' '}
-										Not on Fortem yet?<span onClick={redirectToRegister}>Register</span>
+										Ainda não possui sua conta?<span onClick={redirectToRegister}> Criar conta</span>
 									</p>
 								</div>
 							</div>
@@ -143,26 +143,26 @@ export const Referral: React.FC = () => {
 	};
 
 	const redirectToLogin = (): void | any => {
-		history.push('/login');
+		history.push('/signin');
 	};
 	const redirectToRegister = (): void | any => {
-		history.push('/signup');
+		history.push('/register');
 	};
 	const renderProgramDetail = () => {
 		return (
 			<div className="td-pg-referral__detail">
 				<div className="container">
-					<h2 className="text-white">Program Details</h2>
+					<h4 className="text-white">Informações do Programa:</h4>
 					<div className="row mt-5">
 						<div className="col-md-6 d-flex justify-content-start align-items-start">
 							<img src={Stick} alt="stick" />
-							<p className="mb-0 text-white mb-5 ml-4">Effective as of 2021/08/11 0:00 AM (UTC)</p>
+							<p className="mb-0 text-white mb-5 ml-4">Válido a partir de xx/12/2022 0:00 AM (UTC)</p>
 						</div>
 						<div className="col-md-6 d-flex justify-content-start align-items-start">
 							<img src={Stick} alt="stick" />
 							<p className="mb-0 text-white mb-5 ml-4">
-								There is no limit to the number of friends you can refer, although we do reserve the right to
-								adjust or change the referral program rules at any time.
+								Não há limite de indicações, embora reservamos o direito de
+								ajustar ou alterar as regras do Programa a qualquer momento, sem prévio aviso.
 							</p>
 						</div>
 						<div className="col-md-6 d-flex justify-content-start align-items-start">
@@ -196,14 +196,11 @@ export const Referral: React.FC = () => {
 					</div>
 					<div className="td-pg-referral__detail__container__notice">
 						<div className="row">
-							<div className="col-1">
-								<img src={Stick} alt="stick" />
-							</div>
 							<div className="col-11">
-								<p className="text-white">Important Notice:</p>
+								<p className="text-white">Aviso Importante:</p>
 								<p className="text-white">
-									Fortem reserves the right to change the terms of the referral program at any time due to changing
-									market conditions, risk of fraud, or any other factors we deem relevant.
+									A Fortem ONE se reserva no direito de alterar os termos do Programa a qualquer momento,
+									a seu único e exclusivo critério, em razão de condições de mercado, risco de fraude ou quaisquer outros fatores que julgar relevantes.
 								</p>
 							</div>
 						</div>

@@ -3,10 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { copy } from '../../helpers';
 import { alertPush, selectUserInfo } from '../../modules';
 
-import FB from './Assets/fb.svg';
-import TELE from './Assets/telegram.svg';
-import TW from './Assets/twitter.svg';
-
 import { QRCode } from 'components';
 import { format } from 'date-fns';
 import {
@@ -32,7 +28,7 @@ export const ReferralContent: React.FC = () => {
 	const estimatedCommission = useSelector(selectEstimatedCommision);
 	const [paginationFriendsState, setPaginationFriendsState] = React.useState(0);
 	const [paginationCommissionHistoryState, setPaginationCommissionHistoryState] = React.useState(0);
-	const referralLink = `${window.document.location.origin}/signup?refid=${user.uid}`;
+	const referralLink = `${window.document.location.origin}/register?refid=${user.uid}`;
 
 	const friends = useSelector(selectFriendsList);
 	const commissionHistories = useSelector(selectCommisionHistories);
@@ -62,21 +58,55 @@ export const ReferralContent: React.FC = () => {
 							</div>
 							<div className={'referral-container-content w-100 ml-5'}>
 								<table className={'w-100'}>
-									<tr>
+									<tr onClick={handleCopyText}>
 										<td>
-											<p className="font-weight-bold">My Referral ID:</p>
+											<p className="font-weight-bold">Código de indicação:</p>
 										</td>
 										<td>
-											<div className={'row'}>
-												<div className={'col-md-12'}>
-													<p className="text-white">{user.uid}</p>
+											<div className={'row w-100'}>
+											<div className={'col-md-12 col-xl-8 mb-3'}>
+											<input
+														className="text-white text-center"
+														style={{
+															backgroundColor: '#2B2E3D',
+															borderRadius: '5px',
+															border: 'none',
+															padding: '6px, 16px !important',
+															outline: 'none',
+															width: '280px',
+															height: '30px',
+															fontSize: '13px',
+														}}
+														type="text"
+														id="referral-code"
+														defaultValue={user.uid}
+														readOnly={true}
+													/>
+												</div>
+												<div className={'col-md-12 col-xl-4'}>
+													<button
+														className="text-center td-referral-content__copy-link"
+														style={{
+															backgroundColor: '#009991',
+															borderRadius: '5px',
+															padding: '6px 12px',
+															color: '#F5F5F5',
+															marginBottom: '0',
+															outline: 'none',
+															border: 'none',
+															width: '100%',
+															fontSize: '14px',
+														}}
+													>
+														Copiar Código
+													</button>
 												</div>
 											</div>
 										</td>
 									</tr>
 									<tr onClick={handleCopyText}>
 										<td>
-											<p className="font-weight-bold">Referral Link:</p>
+											<p className="font-weight-bold">Link do código de indicação:</p>
 										</td>
 										<td>
 											<div className={'row w-100'}>
@@ -87,9 +117,11 @@ export const ReferralContent: React.FC = () => {
 															backgroundColor: '#2B2E3D',
 															borderRadius: '5px',
 															border: 'none',
-															padding: '6px',
+															padding: '6px, 16px !important',
 															outline: 'none',
-															width: '100%',
+															width: '280px',
+															height: '30px',
+															fontSize: '13px',
 														}}
 														type="text"
 														id="referral-link"
@@ -101,42 +133,30 @@ export const ReferralContent: React.FC = () => {
 													<button
 														className="text-center td-referral-content__copy-link"
 														style={{
-															backgroundColor: '#2FB67E',
-															borderRadius: '4px',
-															padding: '6px 16px',
-															color: '#FFF',
+															backgroundColor: '#009991',
+															borderRadius: '5px',
+															padding: '6px 12px',
+															color: '#F5F5F5',
 															marginBottom: '0',
 															outline: 'none',
 															border: 'none',
 															width: '100%',
+															fontSize: '14px',
 														}}
 													>
-														Copy Link
+														Copiar Link
 													</button>
 												</div>
 											</div>
 										</td>
 									</tr>
-									<tr>
-										<td>
-											<p className="font-weight-bold">Share:</p>
-										</td>
-										<td>
-											<div className={'row'}>
-												<div className={'col-12'}>
-													<img src={FB} alt="facebook" />
-													<img src={TELE} alt="telegram" />
-													<img src={TW} alt="twitter" />
-												</div>
-											</div>
-										</td>
-									</tr>
+	
 								</table>
 							</div>
 						</div>
 						<div className="col-4 d-flex flex-column justify-content-around border-left border-dark">
 							<div className="referral-container__friend d-flex justify-content-between border-bottom border-dark w-100">
-								<p className="font-weight-bold">Referral friends</p>
+								<p className="font-weight-bold">Total de indicações</p>
 								<p className="text-white">{friends[0]}</p>
 							</div>
 							<div className="referral-container__Referral__Commission-value font-weight-bold">
@@ -168,10 +188,10 @@ export const ReferralContent: React.FC = () => {
 					<div className="container">
 						<div className="row td-referral-content__table__row ">
 							<div className="col-md-4 td-referral-content__table__row__col-left">
-								<h4>Referral Friends</h4>
+								<h4>Indicações</h4>
 								<div className="row mt-3">
 									<div className="col-md-6 text-left">Email</div>
-									<div className="col-md-6 text-right">Date</div>
+									<div className="col-md-6 text-right">Data</div>
 								</div>
 								<div
 									hidden={!isFriendsFetchLoading}
@@ -179,7 +199,7 @@ export const ReferralContent: React.FC = () => {
 								>
 									<div className="d-flex justify-content-center">
 										<div className="spinner-border" role="status">
-											<span className="sr-only">Loading...</span>
+											<span className="sr-only">Carreando informações...</span>
 										</div>
 									</div>
 								</div>
@@ -191,8 +211,8 @@ export const ReferralContent: React.FC = () => {
 												<ReactTooltip />
 											</div>
 											<div className="col-md-6 text-right text-white td-referral-content__table__row__col-left__friends-time">
-												<span data-tip={format(new Date(friend.time), 'MM-dd-YYY hh:mm:ss')}>
-													{format(new Date(friend.time), 'MM-dd-YYY hh:mm:ss')}
+												<span data-tip={format(new Date(friend.time), 'dd-MM-YYYY hh:mm:ss')}>
+													{format(new Date(friend.time), 'dd-MM-YYYY hh:mm:ss')}
 												</span>
 												<ReactTooltip />
 											</div>
@@ -216,11 +236,11 @@ export const ReferralContent: React.FC = () => {
 								</div>
 							</div>
 							<div className="col-md-8 td-referral-content__table__row__col-right">
-								<h4>Lastest Commission History</h4>
+								<h4>Histórico de bonificação</h4>
 								<div className="row mt-3">
-									<div className="col-md-3 text-left">Commission</div>
+									<div className="col-md-3 text-left">Bonificação</div>
 									<div className="col-md-5 text-left">Email</div>
-									<div className="col-md-4 text-right">Date</div>
+									<div className="col-md-4 text-right">Data</div>
 								</div>
 								<div
 									hidden={!isCommissionHistoryFetchLoading}
@@ -228,7 +248,7 @@ export const ReferralContent: React.FC = () => {
 								>
 									<div className="d-flex justify-content-center">
 										<div className="spinner-border" role="status">
-											<span className="sr-only">Loading...</span>
+											<span className="sr-only">Carregando informações...</span>
 										</div>
 									</div>
 								</div>

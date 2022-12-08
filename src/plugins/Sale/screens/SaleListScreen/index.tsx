@@ -31,16 +31,25 @@ const settingEvents = {
 
 const BannerData2 = [
     {
-        event_name: "Conecte-se com ",
-        description: "ativos digitais" ,
+        event_name: "Conecte-se ",
+        description: "com os ativos digitais" ,
 		ref_link: "",
     },
 	{
-        event_name: "Conecte-se com ",
-        description: "crédito" ,
+        event_name: "Conecte-se ",
+        description: "com o crédito" ,
 		ref_link: "",
     },
-    
+	{
+        event_name: "Diversifique ",
+        description: "como os grandes" ,
+		ref_link: "",
+    },    
+	{
+        event_name: "Tranforme ",
+        description: "a incerteza econômica em oportunidade." ,
+		ref_link: "",
+    },    
 ]
 
 const renderEvent = () => {
