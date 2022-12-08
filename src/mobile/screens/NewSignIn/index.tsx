@@ -142,7 +142,7 @@ export const NewSignInMobileScreen: FC = () => {
 					</div>
 					<div className="td-mobile-screen-signin__body__form__site__name">
 						<span>https://</span>
-						fortem.website
+						www.fortem1.com.br
 					</div>
 				</div>
 				<Form.Item
@@ -188,13 +188,13 @@ export const NewSignInMobileScreen: FC = () => {
 						type="primary"
 						disabled={!canSubmit()}
 					>
-						Sign In
+						Acessar Plataforma
 					</Button>
 				</Form.Item>
 
 				<div className="td-mobile-screen-signin__body__form__links">
-					<Link to="/forgot_password">Forgot Password</Link>
-					<Link to="/signup">Free registration</Link>
+					<Link to="/forgot_password">Esqueceu sua senha?</Link>
+					<Link to="/signup">Criar conta</Link>
 				</div>
 			</Form>
 		);
