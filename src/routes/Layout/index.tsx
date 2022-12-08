@@ -547,7 +547,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/confirm" component={ConfirmScreen} />
 					{/* OLD Profile Page */}
 					
-					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/security" component={KYCScreen} />
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/sec" component={KYCScreen} />
 					{/* NEW Profile Page */}
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/account/wallets" component={Profile} />
 					

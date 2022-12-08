@@ -265,7 +265,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 		return (
 			isLoggedIn && (
 				<Link
-					to="/security"
+					to="/sec"
 					onClick={() => {
 						setStateActiveNow('account');
 						setActiveItemDrop('security');
@@ -341,7 +341,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 							{renderProfileVerificationLink()}
 							{renderReferralLink()}
 							{renderLogout()}
-							{renderProfileLink()}
+							{/*{renderProfileLink()}*/}
 						</div>
 					</div>
 				</>

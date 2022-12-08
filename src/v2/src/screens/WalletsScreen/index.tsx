@@ -246,7 +246,7 @@ class WalletsComponent extends React.Component<Props, WalletsState> {
                     
                     </div>
                 </div>
-                {/*{wallets.length && <EstimatedValue wallets={wallets} />}*/}
+                {wallets.length && <EstimatedValue wallets={wallets} />}
                 <div className="pg-container pg-wallet w-container">
                     {/*
                     <div className="text-center">
