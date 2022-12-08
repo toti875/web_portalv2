@@ -1,4 +1,4 @@
-import { ProfileAccountActivity, ProfileActiveStep, ProfileAnnouncement, ProfileApiKeys, ProfileSecurity, ReferralProgram } from 'containers';
+import { ProfileVerification, ProfileVerificationLabels, ProfileAnnouncement, ProfileApiKeys, ProfileSecurity, ReferralProgram } from 'containers';
 import { localeDate, setDocumentTitle } from 'helpers';
 import { useWalletsFetch } from 'hooks';
 import { selectUserActivity, selectUserInfo } from 'modules';
@@ -64,30 +64,23 @@ export const ProfileScreen2: React.FC = () => {
 		<div className="td-pg-profile">
 
 				<div className="td-pg-profile__content">
-				<ProfileQuickContainer />
+					
 			
-			<ProfileActiveStep />
-					<ProfileAccountActivity />
-					<ProfileSecurity />
-					<ProfileAnnouncement />
-					<Link
-						to="/task-center"
-						className="td-pg-profile--bg td-pg-profile--radius td-pg-profile__content__item td-pg-profile__content__item--no-content td-pg-profile__task-center"
-					>
-						<div className="td-pg-profile__content__item__header">
-							<div className="td-pg-profile__content__item__header__title">Central de recompensas</div>
-							<div className="td-pg-profile__content__item__header__desc">Complete missões e ganhe bônus</div>
-							<div className="td-pg-profile__content__item__header__to-page">
-								<svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M2.01986 0L0.609863 1.41L5.18986 6L0.609863 10.59L2.01986 12L8.01986 6L2.01986 0Z"
-										fill="#848E9C"
-									/>
-								</svg>
-							</div>
-						</div>
-					</Link>
-					<ProfileApiKeys />
+					                 <div className="pg-container pg-wallet w-container">
+                <div className='kyc'>
+                        
+                        <ProfileVerification />
+                        
+                        <ProfileVerificationLabels /> 
+                       
+                 
+                    
+                    </div>
+                </div>
+					
+					
+					
+
 				</div>
 			
 		</div>

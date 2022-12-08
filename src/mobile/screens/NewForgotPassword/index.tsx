@@ -32,7 +32,7 @@ export const NewForgotPasswordScreen = () => {
 						</svg>
 					</div>
 					<div className="td-mobile-screen-forgot-password__body__form__title__desc">
-						For security purposes, no withdrawals are permitted for 24 hours after modification of security methods.
+						Atenção: Para proteger a sua conta, após modificar algum dos mecanismos de segurança, os saques de ativos digitais estarão desabilitados pelas 24h subsequentes.
 					</div>
 				</div>
 
@@ -47,7 +47,7 @@ export const NewForgotPasswordScreen = () => {
 					<Input
 						className="td-mobile-screen-forgot-password__body__form__label__input"
 						value={email || ''}
-						placeholder="Enter your email"
+						placeholder="Digite seu email"
 						onChange={e => setEmail(e.target.value)}
 					/>
 				</Form.Item>
@@ -59,7 +59,7 @@ export const NewForgotPasswordScreen = () => {
 						type="primary"
 						disabled={!canSubmit()}
 					>
-						Next
+						Confirmar
 					</Button>
 				</Form.Item>
 			</Form>

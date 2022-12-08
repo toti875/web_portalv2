@@ -1643,10 +1643,10 @@ flex-direction: row !important;
         display: flex !important;
         flex-direction: column !important;
       }.pg-wallet .cr-copyable-text-field .cr-deposit-crypto__copyable fieldset:focus-within {
-            border-color: #18988F !important;
+            border-color: #009991 !important;
           }.pg-wallet .cr-copyable-text-field .cr-deposit-crypto__copyable fieldset:focus-within legend {
-              color: #18988F !important;
-              background-color: #18988F  !important;
+              color: #009991 !important;
+              background-color: #009991  !important;
             }.pg-wallet .cr-copyable-text-field .cr-deposit-crypto__copyable .cr-deposit-crypto__copyable-area {
       
           display: flex !important;
@@ -4816,7 +4816,7 @@ margin-left: 20px;
                     stroke-dashoffset: 150;
                     transition: 1s ease-in-out;
                   }.headerDesktop-screen .header__right-menu__item__title .header-btn-border-signIn-svg:hover  {
-                        border: 1px solid #18988F;
+                        border: 1px solid #009991;
 
                         stroke-dashoffset: -480;
     
@@ -4825,10 +4825,10 @@ margin-left: 20px;
                     outline: none;
                     text-decoration: none;
                 }.headerDesktop-screen .header__right-menu__item__title link:hover {
-                        color: #18988F;
+                        color: #009991;
                     }.headerDesktop-screen .header__right-menu__item__title--active a,
                     .headerDesktop-screen .header__right-menu__item__title--active span {
-                        color: #18988F;
+                        color: #009991;
                     }.headerDesktop-screen .header__right-menu__item__title {	
 
                 font-size: 18px;

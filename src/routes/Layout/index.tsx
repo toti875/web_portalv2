@@ -93,7 +93,6 @@ import {
 	FortemIOHomePage,
 	PortfolioScreen,
 	QuickExchange,
-	ProfileScreen,
 	KYCScreen,
 } from '../../screens';
 
@@ -551,7 +550,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					{/* NEW Profile Page */}
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/account/wallets" component={Profile} />
 					
-					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/profile/settings" component={Default} />
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={ProfileScreen2} />
 					
 					{/*Wallets*/}
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/dashboard" exact component={WalletsScreen} />

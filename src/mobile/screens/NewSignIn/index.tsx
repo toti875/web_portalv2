@@ -127,9 +127,9 @@ export const NewSignInMobileScreen: FC = () => {
 	const renderForm = () => {
 		return (
 			<Form className="td-mobile-screen-signin__body__form w-100" layout="vertical" onFinish={onSubmit}>
-				<h4 className="td-mobile-screen-signin__body__form__title">Log In</h4>
+				<h4 className="td-mobile-screen-signin__body__form__title">Acessar Plataforma</h4>
 				<span className="td-mobile-screen-signin__body__form__description">
-					Please check that you are visiting the correct URL
+					Por segurança, certifique-se de que está acessando a URL correta:
 				</span>
 				<div className="td-mobile-screen-signin__body__form__site">
 					<div className="td-mobile-screen-signin__body__form__site__lock">
@@ -156,7 +156,7 @@ export const NewSignInMobileScreen: FC = () => {
 					<Input
 						className="td-mobile-screen-signin__body__form__label__input"
 						value={email}
-						placeholder="Enter your email"
+						placeholder="Digite seu email"
 						onChange={handleChangeEmail}
 						onClick={handleEmailFocus}
 						onBlur={handleEmailFocus}
@@ -174,7 +174,7 @@ export const NewSignInMobileScreen: FC = () => {
 					<Input.Password
 						className="td-mobile-screen-signin__body__form__label__input"
 						value={password}
-						placeholder="Enter your password"
+						placeholder="Digite sua senha"
 						onChange={handleChangePassword}
 						onClick={handlePasswordFocus}
 						onBlur={handlePasswordFocus}
