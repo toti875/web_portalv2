@@ -1272,10 +1272,6 @@ flex-direction: row !important;
 }
 
 
-.trading-layout {
-	background: transparent !important;
-}
-
 .pg-wallet {
   
   border-radius: 10px;
@@ -9811,8 +9807,4 @@ Copyright (c) 2015 Daniel Eden
     padding-bottom: 6em !important;
     padding-top: 0 !important;
     width: 100vw !important;
-}
-
-.trading-layout {
-background: black;
 }

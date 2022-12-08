@@ -1,6 +1,6 @@
 import { DropdownElem } from '../components/Order';
 
-export const PG_TITLE_PREFIX = 'Fortem ONE - Ativos Digitais';
+export const PG_TITLE_PREFIX = 'Fortem ONE';
 
 export const pgRoutes = (isLoggedIn: boolean, isLight?: boolean): string[][] => {
 	const routes = [
@@ -14,7 +14,7 @@ export const pgRoutes = (isLoggedIn: boolean, isLight?: boolean): string[][] => 
 };
 
 export const DEFAULT_CCY_PRECISION = 2;
-export const STORAGE_DEFAULT_LIMIT = 100;
+export const STORAGE_DEFAULT_LIMIT = 500;
 export const ORDER_BOOK_DEFAULT_SIDE_LIMIT = 30;
 export const DEFAULT_TRADING_VIEW_INTERVAL = '30';
 export const VALUATION_PRIMARY_CURRENCY = 'BRL';

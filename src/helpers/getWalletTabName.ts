@@ -35,5 +35,5 @@ export const getTabName = (blockchainKey: string) => {
 	];
 	const foundTab = tabNames.find(tabName => tabName.blockchain_key.toLowerCase() === blockchainKey.toLowerCase());
 
-	return foundTab ? foundTab.name : 'not found';
+	return foundTab ? foundTab.name : 'FORTEM Testnet';
 };

@@ -177,8 +177,8 @@ export type LayoutProps = ReduxProps & DispatchProps & LocationProps & IntlProps
 
 const renderLoader = () => (
 	<div className="pg-loader-container">
-		{/*<Spinner animation="border" variant="primary" />*/}
-		<img src={spinerLoading} style={{width: '38px', margin: '0 auto'}}></img>
+		<Spinner animation="border" variant="primary" />
+		{/*<img src={spinerLoading} style={{width: '38px', margin: '0 auto'}}></img>*/}
 	</div>
 );
 
@@ -448,7 +448,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 		}
 
 		return (
-			<div className={`container-fluid pg-layout`}>
+			<div className={`container-fluid pg-layout ${tradingCls}`}>
 				<Switch>
 					<PublicRoute exact={true} path="/magic-link" component={MagicLink} />
 					{/*TELA DE LOGIN*/}

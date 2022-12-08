@@ -1,6 +1,6 @@
-import downSvg from 'assets/images/trading/down.svg';
+import downSvg from 'assets/svg/down.svg';
 import { OrderBookBuySvg, OrderBookSellSvg, OrderBookSvg } from 'assets/images/trading/OrderBookSvg';
-import upSvg from 'assets/images/trading/up.svg';
+import upSvg from 'assets/svg/up.svg';
 import { ConvertUsd, Decimal } from 'components';
 import { accumulateVolume } from 'helpers';
 import { useOrderBookFetch } from 'hooks';

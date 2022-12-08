@@ -1,5 +1,5 @@
 import { incrementalOrderBook } from 'api';
-import { MarketTrading, NewOrder, NewOrderBook, TradingChart, TradingOrderHistory, TradingTradeHistory } from 'containers';
+import { MarketTrading, NewOrder, OrderBook, TradingChart, TradingOrderHistory, TradingTradeHistory } from 'containers';
 import { setDocumentTitle } from 'helpers';
 import { depthFetch, marketsFetch, selectCurrentMarket, selectMarkets, selectUserLoggedIn } from 'modules';
 import { rangerConnectFetch } from 'modules/public/ranger';
@@ -49,7 +49,7 @@ const TradingComponent: React.FC<TradingScreenProps> = ({}) => {
 				<MarketTrading />
 			</div>
 			<div className="td-pg-trading--bg td-pg-trading__item td-pg-trading--bg td-pg-trading__order-book">
-				<NewOrderBook />
+				<OrderBook />
 			</div>
 			<div className="td-pg-trading--bg td-pg-trading__item td-pg-trading--bg td-pg-trading__trading-chart">
 				<TradingChart hideHeaderContent />
