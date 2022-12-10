@@ -25,67 +25,58 @@ import Slider from 'react-slick';
 
 import {TextDecrypt} from './TextDecrypt.js';
 
-import { BannerActivation } from "../../template_react/doob/src/utils/script";
+//import { BannerActivation } from "../../template_react/doob/src/utils/script";
 
 //import '../../template_react/doob/src/assets/scss/style.scss';
 import ParticleImage, { ParticleOptions } from "react-particle-image";
 
-import Particles1 from "./circle.png";
+//import Particles1 from "./circle.png";
 
 
  
 
 //import { SaleListTables } from '../../plugins/Sale/containers/SaleListTables';
 
-import { TickerTape } from 'react-tradingview-embed';
+//import { TickerTape } from 'react-tradingview-embed';
 
 
-import Cryp from './Home/Cryp.svg'; 
-import background from './Home/background-bn.jpg';
-import Bg_p3 from './Home/Bg_p3.svg';
-import Bg_p4 from './Home/Bg_p4.svg';
-import BG_SigUp from './Home/BG_Sigup.png';
-import FaceBook from './Home/fb.svg';
+
 import Feature1 from './Home/Feature1.svg';
 import Feature2 from './Home/Feature2.svg';
 import Feature3 from './Home/Feature3.svg';
 import Feature4 from './Home/Feature4.svg';
 import Feature5 from './Home/Feature5.svg';
 import Feature6 from './Home/Feature6.svg';
-import TelegramPNG from './Home/telegram.png';
-import In from './Home/In.svg';
-import Mobile from './Home/Mobile_BG.png';
+
 import DownloadAPP from './Home/Screen1.png';
 import DownloadGG from './Home/Screen2.png';
 import Download2 from './Home/Screen3.png';
 import Download1 from './Home/Screen4.png';
-import Telegram from './Home/Telegram.svg';
-import Udon from './Home/udon-img.svg';
-import WhatApp from './Home/WhatApp.svg';
-import YouT from './Home/ytb.svg';
 
-import eventBackground from './images/banner.png'
 
-import styled from 'styled-components';
+
+
+
+
 
 import serviceBorder from './Home/Telegram.svg' ;
-import LoadingIframe from 'react-loading-iframe';
+
 
 
 import Typed from 'react-typed';
-import {Link} from "react-router-dom";
+
 import { FiArrowRight } from "react-icons/fi";
 
-//import { transactionsListFetch } from 'modules/plugins/transactions';
-//import { selectStatistics, statisticFetch } from 'modules/info/statistic';
+
+
 import { useIntl } from 'react-intl';
 
-import { Player, Controls } from '@lottiefiles/react-lottie-player';
+
 
 import ScrollAnimation from "react-animate-on-scroll";
 
 
-import ServiceOne from "../../template_react/doob/src/elements/service/ServiceOne";
+
 import ServiceA from "../../template_react/doob/src/elements/service/ServiceA";
 import ServiceB from "../../template_react/doob/src/elements/service/ServiceB";
 import ServiceC from "../../template_react/doob/src/elements/service/ServiceC";
@@ -93,32 +84,32 @@ import ServiceD from "../../template_react/doob/src/elements/service/ServiceD";
 import ServiceE from "../../template_react/doob/src/elements/service/ServiceE";
 import SectionTitle from "../../template_react/doob/src/elements/sectionTitle/SectionTitle";
 
-import AboutTwo from "../../template_react/doob/src/elements/about/AboutTwo";
-import SlipThree from "../../template_react/doob/src/elements/split/SlipThree";
-import TestimonialOne from "../../template_react/doob/src/elements/testimonial/TestimonialOne";
-import BlogList from "../../template_react/doob/src/components/blog/itemProp/BlogList";
-import FooterOne from '../../template_react/doob/src/common/footer/FooterOne';
 
-import ServiceTwo from '../../template_react/doob/src/elements/service/ServiceTwo';
+
+
+import BlogList from "../../template_react/doob/src/components/blog/itemProp/BlogList";
+
+
+
 
 import Separator from "../../template_react/doob/src/elements/separator/Separator";
-import CounterUpTwo from "../../template_react/doob/src/elements/counterup/CounterUpTwo";
-import TeamFour from '../../template_react/doob/src/elements/team/TeamFour';
-import PricingTwo from '../../template_react/doob/src/elements/pricing/PricingTwo';
+
+
+
 import CalltoActionFive from '../../template_react/doob/src/elements/calltoaction/CalltoActionFive';
 
-import { CardView } from 'smart-webcomponents-react/cardview';
+
 
 import BlogClassicData from '../../template_react/doob/src/data/blog/BlogList.json';
-import { Divider } from 'antd';
+
 
 import news from './images/news.svg';
 
-import Particles from './particles/src/App';
+
 import Token from './token.png';
 import NFT from './nft.png';
 
-import devices from './fortemDevices-Laptop.png';
+
 import deviceLaptop from './fortemDevices-Laptop.png';
 import devicePhone from './fortemDevices-iPhone.png';
 import mobile from './fortem-mobile.png';
@@ -126,15 +117,15 @@ import mobile from './fortem-mobile.png';
 
 import Flip from 'react-reveal/Flip';
 import Zoom from 'react-reveal/Zoom';
-import Flash from 'react-reveal/Flash';
+
 import Pulse from 'react-reveal/Pulse';
-import RubberBand from 'react-reveal/RubberBand';
+
 import { Parallax } from 'react-scroll-parallax';
-//import ScrollToTop from './scroll-to-top/index';
 
-import {NewMarketList} from '../../containers/NewMarKetList'
 
-import {MarketsList} from '../../containers/MarketsList'
+
+
+
 
 import { MarketsHotOnlist } from '../../components/MarketsHotOnList'
 
@@ -145,17 +136,17 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { SaleListTablesUpcoming } from '../../plugins/Sale/containers/SaleListTablesUpcoming';
 
 
-import  Parallax2  from 'ui-neumorphism';
 
-import GradientBorder from '../../components/GradientBorder/GradientBorder';
 
-import fortemSignin from './signin.svg';
+
+
+
 
 import Logo from '../../assets/images/logo_branca_bandeira_verde.svg';
 
-import Logo_Capital from '../../assets/images/svg/branco_capital_bandeira_verde.svg';
 
-import Anime1 from '../../assets/animation/Bigscene-1-.json';
+
+
 
 import mainBanner from './main_banner.jpg';
 
@@ -188,30 +179,13 @@ const particleOptions: ParticleOptions = {
 	color: ({ x, y, image }) => "#61dafb"
   };
 
-//import HomePage from './home-business.html';
-
-//import "./home-business.html";
-
-//const mainPage = require('./home-business.html');
 
 
 
 
 
 
-const Skeleton = () => {
-	return <div>Cool loading screen</div>;
-  };
- 
 
-//const logo1 = require ('url(https://doob.rainbowit.net/images/bg/bg-image-5.jpg)')
-
-//import mainPage  from "./home-business.html" as HTMLElement;
-
-
-
-
-//var mainPage = require('./home-business.html');
 
 
 
