@@ -459,7 +459,7 @@ function scrollRotate() {
 				<div className="container rn-section-gap" style={{display: 'flex', flexDirection: 'row', }}>
 							<ScrollAnimation animateIn="fadeInUp" animateOut="fadeInOut" animateOnce={false}>
 							<div className='servicesFortem'>
-							<div className=" bg_image servicesFortem-inner"  style={{  width: '470px', height: '460px', backgroundImage: `url(${serviceBorder})`, marginLeft: '-240px'  }} >
+							<div className=" bg_image servicesFortem-inner"  style={{  width: '470px', height: '460px', backgroundSize: 'cover', backgroundImage: `url(${serviceBorder})`, marginLeft: '-240px'  }} >
 								<div className="container position-relative">
 									<div className="inner" style={{display: 'flex',}}>
 						
@@ -473,7 +473,7 @@ function scrollRotate() {
 							</ScrollAnimation>
 							<ScrollAnimation animateIn="fadeInUp" animateOut="fadeInOut" animateOnce={false}>
 							<div className='servicesFortem'>
-							<div className=" bg_image servicesFortem-inner"  style={{  width: '470px', height: '460px', backgroundImage: `url(${serviceBorder})`, marginTop: '280px', marginLeft: '-140px'}}>
+							<div className=" bg_image servicesFortem-inner"  style={{  width: '470px', height: '460px',  backgroundSize: 'cover', backgroundImage: `url(${serviceBorder})`, marginTop: '280px', marginLeft: '-140px'}}>
 								<div className="container position-relative">
 									<div className="inner" style={{display: 'flex',}}>
 						
@@ -487,7 +487,7 @@ function scrollRotate() {
 							</ScrollAnimation>
 							<ScrollAnimation animateIn="fadeInUp" animateOut="fadeInOut" animateOnce={false}>
 							<div className='servicesFortem'>
-							<div className=" bg_image servicesFortem-inner"  style={{  width: '470px', height: '460px', backgroundImage: `url(${serviceBorder})`, marginLeft: '-140px'}}>
+							<div className=" bg_image servicesFortem-inner"  style={{  width: '470px', height: '460px',  backgroundSize: 'cover', backgroundImage: `url(${serviceBorder})`, marginLeft: '-140px'}}>
 								<div className="container position-relative">
 									<div className="inner" style={{display: 'flex',}}>
 						
@@ -501,7 +501,7 @@ function scrollRotate() {
 							</ScrollAnimation>
 							<ScrollAnimation animateIn="fadeInUp" animateOut="fadeInOut" animateOnce={false}>
 							<div className='servicesFortem'>
-							<div className=" bg_image servicesFortem-inner"  style={{  width: '470px', height: '460px', backgroundImage: `url(${serviceBorder})`, marginTop: '280px', marginLeft: '-140px'}}>
+							<div className=" bg_image servicesFortem-inner"  style={{  width: '470px', height: '460px',  backgroundSize: 'cover', backgroundImage: `url(${serviceBorder})`, marginTop: '280px', marginLeft: '-140px'}}>
 								<div className="container position-relative">
 									<div className="inner" style={{display: 'flex',}}>
 						
@@ -515,7 +515,7 @@ function scrollRotate() {
 							</ScrollAnimation>
 							<ScrollAnimation animateIn="fadeInUp" animateOut="fadeInOut" animateOnce={false}>
 							<div className='servicesFortem'>
-							<div className=" bg_image servicesFortem-inner"  style={{  width: '460px', height: '450px', backgroundImage: `url(${serviceBorder})`,  marginLeft: '-140px'}}>
+							<div className=" bg_image servicesFortem-inner"  style={{  width: '460px', height: '450px',  backgroundSize: 'cover',  backgroundImage: `url(${serviceBorder})`,  marginLeft: '-140px'}}>
 								<div className="container position-relative">
 									<div className="inner" style={{display: 'flex',}}>
 						

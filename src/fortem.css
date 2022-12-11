@@ -110,11 +110,10 @@
 		justify-content: center;
 		min-height: calc(var(--gap) * 6);
 	}.cr-sign-up-form__button-wrapper {
-		background: transparent;
-		bottom: 0px;
-		left: 0;
-		position: absolute;
-		right: 0;
+        
+        position: relative;
+        
+
 	}.cr-sign-up-form__button-wrapper--empty {
 		background: transparent;
 		bottom: 0 !important;

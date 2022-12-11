@@ -162,14 +162,15 @@ class FormRegister extends React.Component<Props> {
 			passwordPopUp,
 		} = this.state;
 
-		const className = cx('pg-sign-up-screen__container', { loading });
+		const className = cx('pg-sign-in-screen__container', { loading });
 
 		return (
+			<div className="pg-sign-in-screen-basic">
 			<div className="pg-sign-up-screen">
 				<div className={className}>
 					<Register
-						labelSignIn={this.props.intl.formatMessage({ id: 'page.header.signIn' })}
-						labelSignUp={this.props.intl.formatMessage({ id: 'page.header.signUp' })}
+						//labelSignIn={this.props.intl.formatMessage({ id: 'page.header.signIn' })}
+						//labelSignUp={this.props.intl.formatMessage({ id: 'page.header.signUp' })}
 						emailLabel={this.props.intl.formatMessage({ id: 'page.header.signUp.email' })}
 						passwordLabel={this.props.intl.formatMessage({ id: 'page.header.signUp.password' })}
 						confirmPasswordLabel={this.props.intl.formatMessage({ id: 'page.header.signUp.confirmPassword' })}
@@ -223,7 +224,9 @@ class FormRegister extends React.Component<Props> {
 					/>
 				</div>
 			</div>
+			</div>
 		);
+		
 	}
 
 	private translate = (key: string) => this.props.intl.formatMessage({ id: key });
@@ -475,7 +478,7 @@ class FormRegister extends React.Component<Props> {
 	private renderModalFooter = () => {
 		return (
 			<div className="pg-exchange-modal-submit-footer">
-				<Button block={true} onClick={this.closeModal} size="lg" variant="signup">
+				<Button block={false} onClick={this.closeModal} variant="sign-up">
 					{this.props.intl.formatMessage({ id: 'page.header.signUp.modal.footer' })}
 				</Button>
 			</div>

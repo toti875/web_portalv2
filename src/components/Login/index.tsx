@@ -8,7 +8,7 @@ import { useHistory } from 'react-router';
 import { FormInput } from '..';
 import { EMAIL_REGEX } from '../../helpers';
 import { selectMobileDeviceState } from '../../modules/public/globalSettings';
-//import './style.css';
+import './style.css';
 
 const Logo = require('../../assets/images/logo_preta_bandeira_verde.svg');
 
@@ -56,7 +56,7 @@ const Login = React.memo((props: LogInProps) => {
 		onSignUp,
 		image,
 		labelSignIn,
-		// labelSignUp,
+		labelSignUp,
 		emailLabel,
 		passwordLabel,
 		emailFocused,

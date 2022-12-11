@@ -16,8 +16,8 @@ export interface RegisterFormProps {
 	onSignIn?: () => void;
 	className?: string;
 	//image?: string;
-	labelSignIn?: string;
-	labelSignUp?: string;
+	//labelSignIn?: string;
+	//labelSignUp?: string;
 	emailLabel?: string;
 	passwordLabel?: string;
 	confirmPasswordLabel?: string;
@@ -78,8 +78,8 @@ export const Register = (props: RegisterFormProps) => {
 		onSignIn,
 		//image,
 		isLoading,
-		// labelSignIn,
-		// labelSignUp,
+		//labelSignIn,
+		//labelSignUp,
 		emailLabel,
 		confirmPasswordLabel,
 		passwordFocused,
@@ -238,10 +238,7 @@ export const Register = (props: RegisterFormProps) => {
 	return (
 		<form>
 			<div className="cr-sign-up-form" onKeyPress={handleEnterPress}>
-				{!isMobileDevice && <div className="cr-sign-up-form__options-group">
-
-                </div>
-                } 
+				
 				<div className="cr-sign-up-form__form-content">
 					{logo}
 					<div
@@ -336,14 +333,15 @@ export const Register = (props: RegisterFormProps) => {
 					{props.renderCaptcha}
 					<div className="cr-sign-up-form__button-wrapper">
 						<Button
-							block={true}
+							block={false}
 							type="button"
 							disabled={disableButton()}
 							onClick={e => handleClick(undefined, e)}
 							size="lg"
-							variant="sign-up"
-						>
+                            variant="default"
 							
+						>
+							CRIAR CONTA
 						</Button>
 
 						<div style={{ textAlign: 'center', marginTop: '20px', fontSize: '15.5px', color: '#595959', }}>
