@@ -173,7 +173,7 @@ export const Header: React.FC = () => {
 	};
 
 	const data = [{ 
-	image:     "http://www.fortem1.com.br/tokens",
+	image:     "https://www.fortem1.com.br/tokens",
 	message: 'Nosso marketplace de tokens está no ar. Conheça novas opções de investimentos em ativos digitais.', 
 	detailPage: '/tokens',
 	receivedTime: "Enviado há 12h"
