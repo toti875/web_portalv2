@@ -66,17 +66,8 @@ import serviceBorder from './Home/Telegram.svg' ;
 import Typed from 'react-typed';
 
 import { FiArrowRight } from "react-icons/fi";
-
-
-
 import { useIntl } from 'react-intl';
-
-
-
 import ScrollAnimation from "react-animate-on-scroll";
-
-
-
 import ServiceA from "../../template_react/doob/src/elements/service/ServiceA";
 import ServiceB from "../../template_react/doob/src/elements/service/ServiceB";
 import ServiceC from "../../template_react/doob/src/elements/service/ServiceC";
@@ -268,7 +259,7 @@ const BannerData2 = [
 
 
 export const FortemIOHomePage = () => {
-	setDocumentTitle('Homepage');
+	setDocumentTitle('Portal');
 
 
 

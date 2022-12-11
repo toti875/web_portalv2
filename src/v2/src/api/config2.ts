@@ -2,10 +2,10 @@
 export const defaultConfig2: Config2 = {
     
     api2: {
-        authUrl: 'https://www.fortem1.com.br/api/v2/auth',
-        tradeUrl: 'https://www.fortem1.com.br/api/v2/trade',
-        applogicUrl: 'https://www.fortem1.com.br/api/v2/applogic',
-        rangerUrl: 'wss://www.fortem1.com.br/api/v2/ranger',
+        authUrl: 'http://www.fortem1.com.br/api/v2/auth',
+        tradeUrl: 'http://www.fortem1.com.br/api/v2/trade',
+        applogicUrl: 'http://www.fortem1.com.br/api/v2/applogic',
+        rangerUrl: 'ws://www.fortem1.com.br/api/v2/ranger',
         finexUrl: ''
     },
     finex: false,

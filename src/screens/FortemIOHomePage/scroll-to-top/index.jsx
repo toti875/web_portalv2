@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect } from 'react';
-import './scroll-to-top.css';
+//import './scroll-to-top.css';
 import clsx from "clsx";
 import useScrollToTop from "./use-scroll-to-top";
 

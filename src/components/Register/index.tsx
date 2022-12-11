@@ -79,7 +79,7 @@ export const Register = (props: RegisterFormProps) => {
 		//image,
 		isLoading,
 		// labelSignIn,
-		labelSignUp,
+		// labelSignUp,
 		emailLabel,
 		confirmPasswordLabel,
 		passwordFocused,
@@ -239,16 +239,7 @@ export const Register = (props: RegisterFormProps) => {
 		<form>
 			<div className="cr-sign-up-form" onKeyPress={handleEnterPress}>
 				{!isMobileDevice && <div className="cr-sign-up-form__options-group">
-                  <div className="cr-sign-up-form__option">
-                    <div className="cr-sign-up-form__option-inner cr-sign-in-form__tab-signin" onClick={onSignIn}>
-                        {'Sign In'}
-                    </div>
-                  </div>
-                  <div className="cr-sign-up-form__option">
-                    <div className="cr-sign-up-form__option-inner __selected">
-                        {labelSignUp || 'Sign Up'}
-                    </div>
-                  </div>
+
                 </div>
                 } 
 				<div className="cr-sign-up-form__form-content">
@@ -352,7 +343,7 @@ export const Register = (props: RegisterFormProps) => {
 							size="lg"
 							variant="sign-up"
 						>
-							{isLoading ? 'Loading...' : labelSignUp ? labelSignUp : 'Cadastro'}
+							
 						</Button>
 
 						<div style={{ textAlign: 'center', marginTop: '20px', fontSize: '15.5px', color: '#595959', }}>

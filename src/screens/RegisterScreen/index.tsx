@@ -34,6 +34,8 @@ import {
 	signUp,
 } from '../../modules';
 
+//import './RegisterScreen.pcss';
+
 interface ReduxProps {
 	configs: Configs;
 	requireVerification?: boolean;

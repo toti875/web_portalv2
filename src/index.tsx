@@ -9,8 +9,9 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import { sentryEnabled } from './api/config';
 import { App } from './App';
+//import './index.css';
 import './index.css';
-import './index.css';
+import './index.pcss';
 import './fortem.css';
 import { rootSaga } from './modules';
 import { rangerSagas } from './modules/public/ranger';
@@ -21,10 +22,7 @@ import './antd.css';
 import './button.css';
 import './buttons.pcss';
 import './blockchain.css';
-
-
-
-
+import './template_react/doob/src/assets/scss/style.scss'
 
 if (!Intl.PluralRules) {
 	require('@formatjs/intl-pluralrules/polyfill');

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-	baseURL: 'https://www.fortem1.com.br:4500/',
+	baseURL: 'http://www.fortem1.com.br:4500/',
 	
 	// baseURL: 'http://localhost:4000/',
 	headers: {
