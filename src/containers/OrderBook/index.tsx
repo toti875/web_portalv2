@@ -21,6 +21,8 @@ import {
 } from '../../modules';
 import { OrderBookTableRow } from './OrderBookTableRow';
 
+import './OrderBook.pcss';
+
 // render big/small breakpoint
 const breakpoint = 448;
 
