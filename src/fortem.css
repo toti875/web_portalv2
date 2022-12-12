@@ -5638,7 +5638,7 @@ max-height: 862px;
 
 }.pg-trading-chart #cryptobase_chart {
 
-		height: calc(100% - 39px);
+		height: calc(100% - 59px) !important;
 	}.pg-trading-chart .cr-title-component {
 
 	}.pg-trading-chart--error {

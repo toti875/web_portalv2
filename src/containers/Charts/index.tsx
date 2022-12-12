@@ -13,7 +13,7 @@ export const Charts: FC = (): ReactElement => {
 
     const renderTabs = () => [
         {
-            content: currentTabIndex === 0 ? <TradingChart /> : null,
+            content: currentTabIndex === 0 ? <TradingChart hideHeaderContent/> : null,
             label: intl.formatMessage({ id: 'page.body.charts.tabs.chart' }),
         },
         {

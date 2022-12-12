@@ -25,6 +25,8 @@ import { widgetOptions, widgetParams } from './config';
 import { getTradingChartTimezone } from './timezones';
 import { HeaderToolbar } from '../HeaderToolbar';
 
+import './TradingChart.pcss';
+
 interface TradingChartComponentProps {
 	hideHeaderContent?: boolean;
 }
