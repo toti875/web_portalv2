@@ -6,7 +6,7 @@ import { convertRgbToHex, getStylesValueByKey } from '../helpers';
 export const customWidgetParams = {
 
 	studies_overrides: {
-		"relative strength index.rsi.color": "var(--rgb-asks)",
+		
 		"relative strength index.upper band.color": "var(--rgb-asks)",
 		"relative strength index.lower band.color": "var(--rgb-asks)",
 
@@ -24,21 +24,21 @@ export const customWidgetParams = {
 };
 
 export const customWidgetOptions = (colorTheme?: string) => {
-	if (colorTheme === 'light') {
+	if (colorTheme === 'basic') {
 		return {
-			toolbar_bg: colors.light.chart.primary,
+			toolbar_bg: colors.basic.chart.primary,
 			loading_screen: {
-				backgroundColor: colors.light.chart.primary,
+				backgroundColor: colors.basic.chart.primary,
 			},
 			overrides: {
-				['symbolWatermarkProperties.color']: colors.light.chart.primary,
+				['symbolWatermarkProperties.color']: colors.basic.chart.primary,
 				['volumePaneSize']: 'iny',
-				['mainSeriesProperties.candleStyle.upColor']: colors.light.chart.up,
-				['mainSeriesProperties.candleStyle.downColor']: colors.light.chart.down,
-				['mainSeriesProperties.candleStyle.borderUpColor']: colors.light.chart.up,
-				['mainSeriesProperties.candleStyle.borderDownColor']: colors.light.chart.down,
-				['mainSeriesProperties.candleStyle.wickUpColor']: colors.light.chart.up,
-				['mainSeriesProperties.candleStyle.wickDownColor']: colors.light.chart.down,
+				['mainSeriesProperties.candleStyle.upColor']: colors.basic.chart.up,
+				['mainSeriesProperties.candleStyle.downColor']: colors.basic.chart.down,
+				['mainSeriesProperties.candleStyle.borderUpColor']: colors.basic.chart.up,
+				['mainSeriesProperties.candleStyle.borderDownColor']: colors.basic.chart.down,
+				['mainSeriesProperties.candleStyle.wickUpColor']: colors.basic.chart.up,
+				['mainSeriesProperties.candleStyle.wickDownColor']: colors.basic.chart.down,
 				['paneProperties.background']: colors.light.chart.primary,
 				['paneProperties.vertGridProperties.color']: colors.light.chart.primary,
 				['paneProperties.vertGridProperties.style']: 1,
@@ -84,7 +84,7 @@ export const customWidgetOptions = (colorTheme?: string) => {
 		studies_overrides: {
 			['volume.volume.color.0']: downColor,
 			['volume.volume.color.1']: upColor,
-			['relative strength index.rsi.color']: '#2196f3',
+			['relative strength index.rsi.color']: 'upColor',
 
 		},
 		theme: 'Dark' as ThemeName,

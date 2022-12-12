@@ -149,9 +149,9 @@ class OrderBookContainer extends React.Component<Props, State> {
                 }
             }
 
-            const cn = classNames('flashX', {
-                'cr-combined-order-book__market-negative': priceChangeSign === 'negative',
-                'cr-combined-order-book__market-positive': priceChangeSign === 'positive',
+            const cn = classNames('flash_red, flashX', {
+                'cr-combined-order-book__market-negative, flash_red': priceChangeSign === 'negative',
+                'cr-combined-order-book__market-positive flash_green': priceChangeSign === 'positive',
             });
 
             return (

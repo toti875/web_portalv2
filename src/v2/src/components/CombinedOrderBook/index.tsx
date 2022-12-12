@@ -150,7 +150,8 @@ export class CombinedOrderBook extends React.PureComponent<CombinedOrderBookProp
                         side={'left'}
                         headers={headers}
                         data={dataAsks}
-                        rowBackgroundColor={rowBackgroundColorAsks}
+                        //rowBackgroundColor={rowBackgroundColorAsks}
+                        rowBackgroundColor={'rgba(255, 255, 255, 0.5)'}
                         maxVolume={maxVolume}
                         orderBookEntry={orderBookEntryAsks.reverse()}
                         onSelect={onSelectAsks}
@@ -161,7 +162,8 @@ export class CombinedOrderBook extends React.PureComponent<CombinedOrderBookProp
                     <OrderBook
                         side={'left'}
                         data={dataBids}
-                        rowBackgroundColor={rowBackgroundColorBids}
+                        //rowBackgroundColor={rowBackgroundColorBids}
+                        rowBackgroundColor={'rgba(255, 255, 255, 0.5)'}
                         maxVolume={maxVolume}
                         orderBookEntry={orderBookEntryBids}
                         onSelect={onSelectBids}

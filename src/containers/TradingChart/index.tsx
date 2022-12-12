@@ -77,7 +77,8 @@ export class TradingChartComponent extends React.PureComponent<Props> {
 	}
 
 	public componentDidMount() {
-		const { colorTheme, currentMarket, markets } = this.props;
+		const { currentMarket, markets } = this.props;
+		const colorTheme = 'Dark';
 
 		if (currentMarket) {
 			this.setChart(markets, currentMarket, colorTheme);

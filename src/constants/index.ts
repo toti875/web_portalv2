@@ -67,9 +67,9 @@ export const colors = {
 	},
 	basic: {
 		chart: {
-			primary: 'var(--primary-text-color)',
-			up: 'var(--rgb-bids)',
-			down: 'var(--rgb-asks)',
+			primary: 'var(--rgb-shadow-color)',
+			up: 'var(--rgb-system-green)',
+			down: 'var(--rgb-system-red)',
 		},
 		navbar: {
 			sun: 'var(--primary-text-color)',
