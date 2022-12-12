@@ -60,6 +60,8 @@ type Props = ReduxProps & DispatchProps & OwnProps & IntlProps;
 // render big/small breakpoint
 const breakpoint = 800;
 
+var cn = "";
+
 class OrderBookContainer extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props);
@@ -74,9 +76,11 @@ class OrderBookContainer extends React.Component<Props, State> {
     private orderRef;
 
     public componentDidUpdate() {
+        cn = 'flash_green';
         if (this.orderRef.current && this.state.width !== this.orderRef.current.clientWidth) {
             this.setState({
                 width: this.orderRef.current.clientWidth,
+                
             });
         }
     }
@@ -149,7 +153,7 @@ class OrderBookContainer extends React.Component<Props, State> {
                 }
             }
 
-            const cn = classNames('flash_red, flashX', {
+            cn = classNames('flash_red, flashX', {
                 'cr-combined-order-book__market-negative, flash_red': priceChangeSign === 'negative',
                 'cr-combined-order-book__market-positive flash_green': priceChangeSign === 'positive',
             });
