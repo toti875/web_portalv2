@@ -63,8 +63,8 @@ export const OrderBook = props => {
 		const currentTicker = currentMarket && getTickerValue(currentMarket, marketTickers);
 
 		if (currentMarket && currentTicker) {
-			const classnames = classNames('', {
-				'cr-combined-order-book__market-negative': currentTicker.price_change_percent.includes('-'),
+			const classnames = classNames('#flashX', {
+				'cr-combined-order-book__market-negative #flash_red': currentTicker.price_change_percent.includes('-'),
 				'cr-combined-order-book__market-positive': currentTicker.price_change_percent.includes('+'),
 			});
 

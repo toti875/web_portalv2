@@ -77,6 +77,8 @@ class OrderBookContainer extends React.Component<Props, State> {
 
     public componentDidUpdate() {
         cn = '#flash_green';
+        
+        
         if (this.orderRef.current && this.state.width !== this.orderRef.current.clientWidth) {
             this.setState({
                 width: this.orderRef.current.clientWidth,
@@ -218,8 +220,8 @@ class OrderBookContainer extends React.Component<Props, State> {
                 maxVolume={calcMaxVolume(bids, asks)}
                 orderBookEntryAsks={accumulateVolume(asks)}
                 orderBookEntryBids={accumulateVolume(bids)}
-                rowBackgroundColorAsks={colors[colorTheme].orderBook.asks}
-                rowBackgroundColorBids={colors[colorTheme].orderBook.bids}
+                rowBackgroundColorAsks={colors['dark'].orderBook.asks}
+                rowBackgroundColorBids={colors['dark'].orderBook.bids}
                 dataAsks={this.renderOrderBook(asksData, 'asks', this.props.intl.formatMessage({id: 'page.noDataToShow'}), currentMarket)}
                 dataBids={this.renderOrderBook(bids, 'bids', this.props.intl.formatMessage({id: 'page.noDataToShow'}), currentMarket)}
                 headers={this.renderHeaders()}
