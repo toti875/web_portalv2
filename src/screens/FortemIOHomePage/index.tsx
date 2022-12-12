@@ -363,9 +363,9 @@ function scrollRotate() {
 						<div className="row row--30 align-items-center">
 							<div className="col-lg-12">
 								<div className="align-items-center justify-items-center" style={{display: 'flex', justifyContent: 'center'}}>
-										<h3 className="description justify-center animate_flash" style={{fontFamily: 'Alliance1', fontSize: '40px', fontWeight: 'bold', justifyContent: 'center', position: 'absolute', left: '100px', top: '-420px', color: 'white', display: 'flex',  width: '680px', }}> Fortem ONE é a plataforma especializada em  </h3>
+										<h3 className="description justify-center animate_flash" style={{fontFamily: 'Alliance1', fontSize: '38.5px', fontWeight: 'bold', justifyContent: 'center', position: 'absolute', left: '80px', top: '-420px', color: '#f5f5f5', display: 'flex',  width: '680px', }}> Fortem ONE é a plataforma especializada em  </h3>
 										<br/>
-										<h3  className=" animate__animated animate__bounce animate__animated animate_flash" style={{opacity: '0.8', fontFamily: 'Alliance1', fontSize: '36px', fontWeight: 'bold', position: 'absolute', left: '100px', top: '-310px', width: '680px', color: '#1EDED0'}} > 
+										<h3  className=" animate__animated animate__bounce animate__animated animate_flash" style={{opacity: '0.64', fontFamily: 'Alliance1', fontSize: '32px', fontWeight: 'bold', position: 'absolute', left: '80px', top: '-310px', width: '680px', color: '#1EDED0'}} > 
 										<Typed
                                             strings={[
                                                 "ativos digitais",
@@ -383,10 +383,10 @@ function scrollRotate() {
 										</h3>
 										
 										<Zoom interval={10000} delay={10000} forever={false} duration={8000}>
-											<h3 className="description justify-center animate__animated animate__bounce" style={{position: 'absolute',  top: '-220px', left: '104px',  display: 'flex', fontSize: '20px', width: '100%', }}> {data.description}</h3>
+											<h3 className="description justify-center animate__animated animate__bounce" style={{position: 'absolute',  top: '-220px', left: '84px',  display: 'flex', fontSize: '20px', width: '100%', }}> {data.description}</h3>
 										</Zoom>
 										<Zoom interval={20000} delay={18000} forever={false} duration={6000}>
-											<h3 className="description justify-center animate__animated animate__bounce" style={{opacity: 0.2, position: 'absolute',  top: '-180px', left: '104px',  display: 'flex', fontSize: '20px', width: '100%', }}> Re-escrevendo o futuro dos investimentos.</h3>
+											<h3 className="description justify-center animate__animated animate__bounce" style={{opacity: 0.2, position: 'absolute',  top: '-180px', left: '84px',  display: 'flex', fontSize: '20px', width: '100%', }}> Re-escrevendo o futuro dos investimentos.</h3>
 										</Zoom>
 
 										{isLogin ? (

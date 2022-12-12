@@ -4026,14 +4026,6 @@ a:-webkit-any-link {
 
 	}{/*   ***TELA DE LOGIN   *** */}*
     
-.pg-sign-in-screen-basic {
-    
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif !important;
-    
-
-
-}
 
 .pg-sign-in-screen-basic__container{
 
@@ -4189,10 +4181,12 @@ margin-left: 20px;
 }.pg-sign-in-screen-basic {
 
 	background: url(./assets/images/bg-signin.jpg);
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif !important;
     
 	background-size: cover;
 	display: flex;
-	height: calc(100vh - calc(var(--gap) * 9.84));
+	height: 100% !important;
 	justify-content: center;
 	margin: 0 auto;
     opacity: 0.71 !important;
