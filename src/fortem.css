@@ -5709,29 +5709,16 @@ max-height: 862px;
 	}.group-wWM3zP_M- {
 	background-color: #181819 !important;
 }.pg-trading-chart {
-	background: #181819 !important;
 
-	height: 89%;
-	left: 0;
-	position: relative;
-	top: 0;
-	width: 100%;
 }.pg-trading-chart #cryptobase_chart {
-		background: transparent  !important;
+
 		height: calc(100% - 39px);
 	}.pg-trading-chart .cr-title-component {
-		padding: calc(var(--gap) * 2);
+
 	}.pg-trading-chart--error {
-	align-items: center;
-	background: rgba(255, 255, 255, 0.1);
-	border: 1px solid #fff;
-	color: var(--system-red);
-	display: flex;
-	font-size: 16px;
-	justify-content: center;
 }@media screen and (max-width: 768px) {
 	.pg-trading-chart {
-		width: 100%;
+
 	}
 }.title-text {
 	color: #c0c0c0 !important;

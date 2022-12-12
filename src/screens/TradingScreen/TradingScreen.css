@@ -20,17 +20,21 @@
             padding-bottom: unset;
           }
   
-          background: var(--tab-panel-background-color);
+          background: transparent !important;
           border-bottom: unset;
           box-shadow: inset 0 -1px 0 var(--divider-color-level-1);
           cursor: move;
-          margin-bottom: unset;
+          margin-bottom: 10px;
           position: sticky;
           top: 0;
           z-index: 9999;
         }
       }
     }
+  }
+
+  .pg-header__toolbar {
+    display: none !important;
   }
   
   .pg-trading-wrap {

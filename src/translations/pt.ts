@@ -957,6 +957,10 @@ export const pt = {
 'page.body.trading.header.orderBook.header.title': 'Livro de ofertas',
 'page.header.signIN.noAccountYet': 'Ainda náo criou sua conta?',
 
+'page.body.charts.tabs.chart': 'Gráfico',
+'page.body.charts.tabs.depth': 'Profundidade do livro',
+
+
 
 
 	...nationalitiesNames,

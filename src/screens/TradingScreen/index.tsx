@@ -1,5 +1,5 @@
 import { incrementalOrderBook } from 'api';
-import { MarketTrading, NewOrder, OrderBook, TradingChart, TradingOrderHistory, TradingTradeHistory } from 'containers';
+import { MarketTrading, NewOrder, OrderBook, TradingChart, TradingOrderHistory, TradingTradeHistory, Charts } from 'containers';
 import { setDocumentTitle } from 'helpers';
 import { depthFetch, marketsFetch, selectCurrentMarket, selectMarkets, selectUserLoggedIn } from 'modules';
 import { rangerConnectFetch } from 'modules/public/ranger';
@@ -8,6 +8,7 @@ import * as React from 'react';
 import isEqual from 'react-fast-compare';
 import { useDispatch, useSelector } from 'react-redux';
 import { HeaderToolbar } from './HeaderToolbar';
+import './TradingScreen.css';
 
 
 // tslint:disable-next-line: no-empty-interface
@@ -52,7 +53,7 @@ const TradingComponent: React.FC<TradingScreenProps> = ({}) => {
 				<OrderBook />
 			</div>
 			<div className="td-pg-trading--bg td-pg-trading__item td-pg-trading--bg td-pg-trading__trading-chart">
-				<TradingChart hideHeaderContent />
+				<Charts />
 			</div>
 			<div className="td-pg-trading--bg td-pg-trading__item td-pg-trading--bg td-pg-trading__order">
 				<NewOrder />
