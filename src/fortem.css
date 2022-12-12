@@ -3070,11 +3070,7 @@ flex-direction: row !important;
 			font-weight: 600px;
 		}.cr-sign-in-form__bottom-section .cr-sign-in-form__bottom-section-signup:hover {
 				color: #009991  !important;
-			}{/*//marketDepths*/}.cr-market-depths {
-	box-sizing: border-box;
-	height: 100%;
-	max-width: 100%;
-}{/*//markets*/}.cr-markets {
+			}{/*//markets*/}.cr-markets {
 	background: transparent !important;
 	padding-bottom: 0;
 }.cr-markets .cr-title-component {

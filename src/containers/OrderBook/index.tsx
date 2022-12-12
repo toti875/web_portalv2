@@ -23,7 +23,7 @@ import { OrderBookTableRow } from './OrderBookTableRow';
 
 
 // render big/small breakpoint
-const breakpoint = 600;
+const breakpoint = 800;
 
 export const OrderBook = props => {
 	const { formatMessage } = useIntl();

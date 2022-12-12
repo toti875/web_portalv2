@@ -6,9 +6,9 @@ const OrderBookTableRowComponent = props => {
 
 	if (type === 'price') {
 		return (
-			<span>
+			<span className='flash_red'>
 				<Decimal fixed={fixed} prevValue={prevValue}>
-					{price}
+				{price}
 				</Decimal>
 			</span>
 		);
