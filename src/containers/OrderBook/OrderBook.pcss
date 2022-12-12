@@ -233,7 +233,6 @@
 		&-market {
 		  border-top: 1px solid var(--order-book-last-market-price-border-color);
 		  position: fixed;
-		  background: var(--table-background-color);
 		}
   
 		.cr-table-background {
@@ -248,86 +247,3 @@
 	}
   }
   
-	.head-text {
-		font-size: 20px;
-		font-weight: 500;
-	}
-
-	.change-icon {
-		margin-right: 0.5em;
-	}
-}
-
-@-webkit-keyframes flash_red {
-	from { background-color: #ef5350  ; }
-	to { background-color: transparent; }
-  }
-  @-moz-keyframes flash_red {
-	from { background-color: #ef5350  ; }
-	to { background-color: transparent; }
-  }
-  @-o-keyframes flash_red {
-	from { background-color: #ef5350  ; }
-	
-	to { background-color: transparent; }
-  }
-  @keyframes flash_red {
-	from { background-color: #ef5350 ; }
-	to { background-color: transparent; }
-  }
-
-
-@-webkit-keyframes flash_green {
-	from { background-color: #13b887 ; }
-	to { background-color: transparent; }
-  }
-  @-moz-keyframes flash_green {
-	from { background-color: #13b887 ; }
-	to { background-color: transparent; }
-  }
-  @-o-keyframes flash_green {
-	from { background-color: #13b887 ; }
-	to { background-color: transparent; }
-  }
-  @keyframes flash_green {
-	from { background-color: #13b887; }
-	to { background-color: transparent; }
-  }
-
-  @-webkit-keyframes flashX {
-	from { background-color: #FDA736; }
-	to { background-color: transparent; }
-  }
-  @-moz-keyframes flashX {
-	from { background-color: #FDA736; }
-	to { background-color: transparent; }
-  }
-  @-o-keyframes flashX {
-	from { background-color: #FDA736; }
-	to { background-color: transparent; }
-  }
-  @keyframes flashX {
-	from { background-color: #FDA736; }
-	to { background-color: transparent; }
-  }
-
-  .flash_green {
-	-webkit-animation: flash_green 2s ; /* Safari 4+ */
-	-moz-animation:    flash_green 2s ; /* Fx 5+ */
-	-o-animation:      flash_green 2s ; /* Opera 12+ */
-	animation:         flash_green 2s ; /* IE 10+ */
-  }
-
-  .flash_red {
-	-webkit-animation: flash_red 2s ; /* Safari 4+ */
-	-moz-animation:    flash_red 2s ; /* Fx 5+ */
-	-o-animation:      flash_red 2s ; /* Opera 12+ */
-	animation:         flash_red 2s ; /* IE 10+ */
-  }
-
-  .flashX {
-	-webkit-animation: flashX 2s ; /* Safari 4+ */
-	-moz-animation:    flashX 2s ; /* Fx 5+ */
-	-o-animation:      flashX 2s ; /* Opera 12+ */
-	animation:         flashX 2s ; /* IE 10+ */
-  }

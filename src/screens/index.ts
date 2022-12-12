@@ -25,6 +25,7 @@ export * from './DepositScreen';
 export * from './WithdrawScreen';
 export * from './AnnouncementScreen';
 export * from './TradingScreen';
+export * from './TradingScreenV';
 export * from './AssetsFeeScreen';
 export * from './Referral';
 export * from './FortemIOHomePage';

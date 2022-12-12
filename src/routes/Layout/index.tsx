@@ -87,6 +87,7 @@ import {
 	RegisterScreen,
 	RestrictedScreen,
 	TradingScreen,
+	TradingScreenV,
 	VerificationScreen,
 	WalletListScreen,
 	WithdrawScreen,
@@ -538,7 +539,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 						component={AnnouncementDetail}
 					/>
 					{/* Dashboard Page */}
-					<PrivateRoute loading={userLoading}	isLogged={isLoggedIn} path="/admin/dashboard/default" exact	component={Default} />
+
 
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/orders" component={OrdersTabScreen} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/history" component={HistoryScreen} />
@@ -547,7 +548,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/sec" component={KYCScreen} />
 					{/* NEW Profile Page */}
-					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/account/wallets" component={Profile} />
+
 					
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={ProfileScreen2} />
 					
@@ -556,7 +557,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets" exact component={WalletListScreen} />					
 					
 					{/*Profile Test Page */}
-					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/pages/profile/overview" component={Default} />
+
 					
 					
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets/deposit/:currency_id"
