@@ -67,7 +67,7 @@ export const colors = {
 	},
 	basic: {
 		chart: {
-			primary: 'black)',
+			primary: 'var(--primary-text-color)',
 			up: 'var(--rgb-bids)',
 			down: 'var(--rgb-asks)',
 		},

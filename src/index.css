@@ -1113,7 +1113,7 @@
 				display: flex;
 				position: fixed !important;
 				top: 172px !important;
-				width: 33%;
+				width: 80%;
 				z-index: 222;
 			  }
 
@@ -1158,7 +1158,7 @@
 			border-top: 1px solid var(--order-book-last-market-price-border-color);
 			left: 0;
 			right: 0;
-			top: calc(50% + 35px);
+			top: calc(50% + 30px) !important;
 		  }
 
 .pg-combined-order-book .cr-combined-order-book__small .cr-order-book:last-child .cr-table-container {
