@@ -900,6 +900,131 @@
 
 @mentions-dropdown-bg: @popover-background;
 
+.cr-combined-order-book {
+	height: 100%;
+	position: relative;
+}
+
+.cr-combined-order-book .cr-table {
+		table-layout: fixed;
+	}
+
+.cr-combined-order-book .cr-table td,
+		.cr-combined-order-book .cr-table th {
+			width: 33%;
+		}
+
+.cr-combined-order-book .cr-table-background__row {
+				padding: 22px;
+			}
+
+.cr-combined-order-book--data-loading {
+		background: transparent;
+		display: block;
+	}
+
+.cr-combined-order-book__market {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+
+.cr-combined-order-book__market span {
+			font-size: 12px;
+			font-weight: normal;
+			line-height: 12px;
+			text-align: center;
+		}
+
+.cr-combined-order-book__market span:first-child {
+				font-size: 17px;
+				font-weight: bold;
+				line-height: 20px;
+			}
+
+.cr-combined-order-book__market-negative {
+			color: #ED0A3F !important;
+		}
+
+.cr-combined-order-book__market-positive {
+			color: #00CC99 !important;
+		}
+
+.cr-combined-order-book .cr-order-book td {
+			color: var(--order-book-table-text-color);
+		}
+
+.cr-combined-order-book__large {
+		display: flex;
+		overflow: unset;
+	}
+
+.cr-combined-order-book__large-market {
+			border-top: 1px solid var(--order-book-last-market-price-border-color);
+			bottom: 0;
+			left: 0;
+			position: -webkit-sticky;
+			position: sticky;
+			right: 0;
+			z-index: 25;
+		}
+
+.cr-combined-order-book__large th {
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0;
+			z-index: 2222;
+		}
+
+.cr-combined-order-book__large .cr-order-book {
+			padding-right: 1px;
+			width: 50%;
+		}
+
+.cr-combined-order-book__large .cr-table-background {
+			top: 60px;
+		}
+
+.cr-combined-order-book__large .cr-table-background__row {
+				margin-bottom: 1px;
+				padding-bottom: calc(var(--gap) * 2.5);
+			}
+
+.cr-combined-order-book__small .cr-table-background__row {
+				margin-bottom: 1px;
+				padding-bottom: calc(var(--gap) * 2.5);
+			}
+
+.cr-combined-order-book__small .cr-order-book {
+			height: 154px;
+			overflow-y: hidden;
+		}
+
+.cr-combined-order-book__small .cr-order-book:first-child {
+				border-bottom: 1px solid var(--order-book-last-market-price-border-color);
+				height: 208px;
+			}
+
+.cr-combined-order-book__small .cr-order-book:first-child .cr-table-background {
+					
+				}
+
+.cr-combined-order-book__small .cr-order-book:last-child {
+				border-top: 1px solid var(--order-book-last-market-price-border-color);
+			}
+
+.cr-combined-order-book__small .cr-order-book:last-child .cr-table-background {
+					top: 0;
+				}
+
+.cr-combined-order-book__small .cr-order-book th {
+				position: -webkit-sticky;
+				position: sticky;
+				top: 0 !important;
+				z-index: 2222;
+			}
+
 .pg-combined-order-book {
 	height: 100%;
 	overflow: hidden;
@@ -938,6 +1063,8 @@
 
 .pg-combined-order-book .cr-table__head th {
 		  width: 33% !important;
+		  font-size: 14px;
+		  font-weight: 500;
 		}
 
 .pg-combined-order-book .cr-table__body td {
@@ -976,11 +1103,12 @@
 	  }
 
 .pg-combined-order-book .cr-combined-order-book__small .cr-combined-order-book__market {
-		  left: 0;
-		  margin-top: 0;
-		  position: absolute;
-		  right: 0;
-		  top: calc(50% - 25px) !important;
+	left: 0;
+	margin-top: 0;
+	position: absolute;
+	right: 0;
+	top: calc(50% - 5px) !important;
+
 		}
 
 .pg-combined-order-book .cr-combined-order-book__small .cr-order-book {
@@ -991,11 +1119,13 @@
 		}
 
 .pg-combined-order-book .cr-combined-order-book__small .cr-order-book .cr-table thead {
-			  display: table;
-			  position: fixed;
-			  top: 32px;
+			  
 			  width: 100%;
 			  z-index: 2222;
+
+			  width: 33% !important;
+			  font-size: 14px;
+			  font-weight: 500;
 			}
 
 .pg-combined-order-book .cr-combined-order-book__small .cr-order-book .cr-table__body {
@@ -8996,169 +9126,6 @@ th#react-table table:last-child {
 
 `
 
-  .cr-combined-order-book {
-  height: 50%;
-  position: relative;
-}
-
-`
-
-  .cr-combined-order-book .cr-table {
-    table-layout: fixed;
-  }
-
-`
-
-  .cr-combined-order-book .cr-table td,
-    `
-
-  .cr-combined-order-book .cr-table th {
-      width: 33%;
-    }
-
-`
-
-  .cr-combined-order-book .cr-table-background__row {
-        padding: 22px;
-      }
-
-`
-
-  .cr-combined-order-book--data-loading {
-    background: transparent;
-    display: block;
-  }
-
-`
-
-  .cr-combined-order-book__market {
-    display: flex;
-    flex-direction: column;
-    margin-top: 5px;
-    padding-bottom: 5px;
-  }
-
-`
-
-  .cr-combined-order-book__market span {
-      font-size: 12px;
-      font-weight: normal;
-      line-height: 12px;
-      text-align: center;
-    }
-
-`
-
-  .cr-combined-order-book__market span:first-child {
-        font-size: 28px;
-        font-weight: bold;
-        line-height: normal;
-      }
-
-`
-
-  .cr-combined-order-book__market-negative {
-      color: red;
-    }
-
-`
-
-  .cr-combined-order-book__market-positive {
-      color: green;
-    }
-
-`
-
-  .cr-combined-order-book .cr-order-book td {
-      color: gray;
-    }
-
-`
-
-  .cr-combined-order-book__large {
-    display: flex;
-    overflow: unset;
-  }
-
-`
-
-  .cr-combined-order-book__large-market {
-      border-top: 1px solid var(--order-book-last-market-price-border-color);
-      bottom: 0;
-      left: 0;
-      position: -webkit-sticky;
-      position: sticky;
-      right: 0;
-      z-index: 25;
-    }
-
-`
-
-  .cr-combined-order-book__large .cr-order-book {
-      padding-right: 1px;
-      width: 50%;
-    }
-
-`
-
-  .cr-combined-order-book__large .cr-table-background {
-      top: 60px;
-    }
-
-`
-
-  .cr-combined-order-book__large .cr-table-background__row {
-        margin-bottom: 1px;
-        padding-bottom: calc(var(--gap) * 2.5);
-      }
-
-`
-
-  .cr-combined-order-book__small .cr-table-background__row {
-        margin-bottom: 1px;
-        padding-bottom: calc(var(--gap) * 2.5);
-      }
-
-`
-
-  .cr-combined-order-book__small .cr-order-book {
-      height: 154px;
-      overflow-y: hidden !important;
-    }
-
-`
-
-  .cr-combined-order-book__small .cr-order-book:first-child {
-        border-bottom: 1px solid var(--order-book-last-market-price-border-color);
-        height: 208px;
-      }
-
-`
-
-  .cr-combined-order-book__small .cr-order-book:first-child .cr-table-background {
-          top: 60px;
-        }
-
-`
-
-  .cr-combined-order-book__small .cr-order-book:last-child {
-        border-top: 1px solid var(--order-book-last-market-price-border-color);
-      }
-
-`
-
-  .cr-combined-order-book__small .cr-order-book:last-child .cr-table-background {
-          top: 0;
-        }
-
-`
-
-  .cr-combined-order-book__small .cr-order-book th {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-        z-index: 2222;
-      }
 
 {/*Dashboard*/}
 

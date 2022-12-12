@@ -63,13 +63,16 @@ export const TableBlockStyle = styled.div`
 		}
 	}
 	th {
-		font-weight: 500 !important;
+		
+		font-weight: 600 !important;
+		font-size: 14px;
 		-webkit-user-select: none;
 		-moz-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
 		white-space: nowrap;
 		text-align: right;
+		color: #c0c0c0 !important;
 	}
 	td {
 		text-align: right;
