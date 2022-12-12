@@ -1651,21 +1651,23 @@ flex-direction: row !important;
     border-bottom-right-radius: calc(var(--gap) * 0.5) !important;
     display: flex !important;
     flex-direction: column !important;
-
+    max-width: 565px !important;
    
    
     padding: calc(var(--gap) * 5) calc(var(--gap) * 2) 0 !important;
   }.pg-wallet .cr-tab-content__active {
-      display: flex ;
-    }.pg-wallet .cr-tab-content .pg-blur-deposit-crypto {
-      height: 120px;
-      margin-left: -10px;
-      margin-top: 94px;
-      max-width: 565px;
+      display: flex !important;
+      max-width: 565px !important;
+    }.pg-wallet .cr-tab-conten  .pg-blur-deposit-crypto {
+      height: 120px !important;
+      margin-left: -10px !important;
+      margin-top: 94px !important;
+      max-width: 565px !important;
     }.pg-wallet .cr-tab-content .pg-blur-deposit-crypto .pg-blur__content__text {
-        max-width: 565px;
+        max-width: 565px !important;
       }.pg-wallet .cr-tab-content .pg-blur-deposit-crypto--active {
         height: 245px !important;
+        top: 80px;
       }.pg-wallet .cr-tab-content .pg-blur-deposit-fiat,
     .pg-wallet .cr-tab-content .pg-blur-withdraw {
       height: 320px !important;
@@ -2338,16 +2340,18 @@ flex-direction: row !important;
 	background: transparent;
 	border-bottom: 1px solid var(--divider-color-level-2);
 	display: flex;
-	margin: 0;
+	margin-top: 40px;
 	padding: 0 0 calc(var(--gap) * 6);
 }.cr-wallet-item__single-balance {
 		display: flex;
 		flex-grow: 2;
 		justify-content: space-between;
+        margin-top: 40px;
 	}.cr-wallet-item__single__image-icon {
 		margin-right: calc(var(--gap) * 3) !important;
 		height: 60px !important;
         border-radius: 50px !important;
+        margin-top: 40px;
 	}.cr-wallet-item__single .cr-wallet-item__icon-code {
 			background: transparent;
 			color: var(--primary-text-color);
