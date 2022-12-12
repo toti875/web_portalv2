@@ -13,39 +13,39 @@
 //@import 'default/reset';
 @import 'default/typography';
 @import 'default/extend';
-//@import 'default/animations';
+@import 'default/animations';
 @import 'default/shortcode';
-//@import 'default/spacing';
-//@import 'default/common';
-//@import 'default/forms';
+@import 'default/spacing';
+@import 'default/common';
+@import 'default/forms';
 
 
 /**************************************
     Theme Styles
 ***************************************/
 
-//@import 'color/themebg';
+@import 'color/themebg';
 
 /**************************************
     Header Styles
 ***************************************/
-//@import 'header/header';
-//@import 'header/nav';
-//@import 'header/mobilemenu';
-//@import 'header/headertop';
+@import 'header/header';
+@import 'header/nav';
+@import 'header/mobilemenu';
+@import 'header/headertop';
 
 
 /**************************************
     Elements Styles
 ***************************************/
 @import 'elements/sctiontitle';
-//@import 'elements/button';
+@import 'elements/button';
 @import 'elements/breadcrumb';
 @import 'elements/accordion';
 @import 'elements/service';
 @import 'elements/card';
-//@import 'elements/progressbar';
-//@import 'elements/counter';
+@import 'elements/progressbar';
+@import 'elements/counter';
 @import 'elements/portfolio';
 @import 'elements/social';
 @import 'elements/team';
