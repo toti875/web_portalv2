@@ -903,136 +903,120 @@
 .cr-combined-order-book {
 	height: 100%;
 	position: relative;
-}
+  }
 
 .cr-combined-order-book .cr-table {
-		table-layout: fixed;
-		padding-top: 0 !important;
+	  table-layout: fixed;
 	}
 
 .cr-combined-order-book .cr-table td,
-		.cr-combined-order-book .cr-table th {
-			width: 33%;
-		}
+	  .cr-combined-order-book .cr-table th {
+		width: 33%;
+	  }
 
 .cr-combined-order-book .cr-table-background__row {
-				padding: 22px;
-			}
-
-.cr-combined-order-book--data-loading {
-		background: transparent;
-		display: block;
-	}
-
-.cr-combined-order-book__head {
-		margin-top: 0px !important;
-
-	}
-
-.cr-combined-order-book__head__row {
-			padding: 22px;
+		  padding: 22px;
 		}
 
+.cr-combined-order-book--data-loading {
+	  background: transparent;
+	  display: block;
+	}
+
 .cr-combined-order-book__market {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
+	  display: flex;
+	  flex-direction: column;
+	  margin-top: 5px;
+	  padding-bottom: 5px;
 	}
 
 .cr-combined-order-book__market span {
-			font-size: 12px;
-			font-weight: normal;
-			line-height: 12px;
-			text-align: center;
-		}
+		font-size: 12px;
+		font-weight: normal;
+		line-height: 12px;
+		text-align: center;
+	  }
 
 .cr-combined-order-book__market span:first-child {
-				font-size: 17px;
-				font-weight: bold;
-				line-height: 20px;
-			}
+		  font-size: 28px;
+		  font-weight: bold;
+		  line-height: normal;
+		}
 
 .cr-combined-order-book__market-negative {
-			color: #ED0A3F !important;
-		}
+		color: #ED0A3F;
+	  }
 
 .cr-combined-order-book__market-positive {
-			color: #00CC99 !important;
-		}
+		color: #00CC99;
+	  }
 
 .cr-combined-order-book .cr-order-book td {
-			color: var(--order-book-table-text-color);
-		}
+		color: var(--order-book-table-text-color);
+	  }
 
 .cr-combined-order-book__large {
-		display: flex;
-		overflow: unset;
+	  display: flex;
+	  overflow: unset;
 	}
 
 .cr-combined-order-book__large-market {
-			border-top: 1px solid var(--order-book-last-market-price-border-color);
-			bottom: 0;
-			left: 0;
-			position: -webkit-sticky;
-			position: sticky;
-			right: 0;
-			z-index: 25;
-		}
-
-.cr-combined-order-book__large th {
-			position: -webkit-sticky;
-			position: sticky;
-			top: 0;
-			z-index: 2222;
-		}
+		border-top: 1px solid var(--order-book-last-market-price-border-color);
+		bottom: 0;
+		left: 0;
+		position: -webkit-sticky;
+		position: sticky;
+		right: 0;
+		z-index: 25;
+	  }
 
 .cr-combined-order-book__large .cr-order-book {
-			padding-right: 1px;
-			width: 50%;
-		}
+		padding-right: 1px;
+		width: 50%;
+	  }
 
 .cr-combined-order-book__large .cr-table-background {
-			top: 60px;
-		}
+		top: 60px;
+	  }
 
 .cr-combined-order-book__large .cr-table-background__row {
-				margin-bottom: 1px;
-				padding-bottom: calc(var(--gap) * 2.5);
-			}
-
-.cr-combined-order-book__small .cr-table-background__row {
-				margin-bottom: 1px;
-				padding-bottom: calc(var(--gap) * 2.5);
-			}
-
-.cr-combined-order-book__small .cr-order-book {
-			height: 154px;
-			overflow-y: hidden;
+		  margin-bottom: 1px;
+		  padding-bottom: calc(var(--gap) * 2.5);
 		}
 
+.cr-combined-order-book__small .cr-table-background__row {
+		  margin-bottom: 1px;
+		  padding-bottom: calc(var(--gap) * 2.5);
+		}
+
+.cr-combined-order-book__small .cr-order-book {
+		height: 154px;
+		overflow-y: scroll;
+	  }
+
 .cr-combined-order-book__small .cr-order-book:first-child {
-				border-bottom: 1px solid var(--order-book-last-market-price-border-color);
-				height: 208px;
-			}
+		  border-bottom: 1px solid var(--order-book-last-market-price-border-color);
+		  height: 208px;
+		}
 
 .cr-combined-order-book__small .cr-order-book:first-child .cr-table-background {
-					
-				}
+			top: 60px;
+		  }
 
 .cr-combined-order-book__small .cr-order-book:last-child {
-				border-top: 1px solid var(--order-book-last-market-price-border-color);
-			}
+		  border-top: 1px solid var(--order-book-last-market-price-border-color);
+		}
 
 .cr-combined-order-book__small .cr-order-book:last-child .cr-table-background {
-					top: 0;
-				}
+			top: 0;
+		  }
 
 .cr-combined-order-book__small .cr-order-book th {
-				position: absolute !important;
-				top: 0 !important;
-				z-index: 2222;
-			}
+		  position: -webkit-sticky;
+		  position: sticky;
+		  top: 0;
+		  z-index: 2222;
+		}
 
 .pg-combined-order-book {
 	height: 100%;
@@ -1072,11 +1056,7 @@
 
 .pg-combined-order-book .cr-table__head th {
 		  width: 33% !important;
-		  font-size: 14px;
-		  font-weight: 500;
-		  margin-top: 0px;
-		  padding-top: 0;
-
+		  top: 170px !important;
 		}
 
 .pg-combined-order-book .cr-table__body td {
@@ -1115,12 +1095,11 @@
 	  }
 
 .pg-combined-order-book .cr-combined-order-book__small .cr-combined-order-book__market {
-	left: 0;
-	margin-top: 0;
-	position: absolute;
-	right: 0;
-	top: calc(50% - 5px) !important;
-
+		  left: 0;
+		  margin-top: 0;
+		  position: absolute;
+		  right: 0;
+		  top: calc(50% - 25px) !important;
 		}
 
 .pg-combined-order-book .cr-combined-order-book__small .cr-order-book {
@@ -1130,15 +1109,17 @@
 		  position: absolute;
 		}
 
-.pg-combined-order-book .cr-combined-order-book__small .cr-order-book .cr-table thead {
-			  
-			  
-			  z-index: 2222;
+.pg-combined-order-book .cr-combined-order-book__small .cr-order-book .cr-table__head {
+				display: flex;
+				position: fixed !important;
+				bottom: 10px !important;
+				width: 33%;
+				z-index: 222;
+			  }
 
-			  width: 33% !important;
-			  font-size: 14px;
-			  font-weight: 500;
-			}
+.pg-combined-order-book .cr-combined-order-book__small .cr-order-book .cr-table__head th:first-child {
+				  text-align: left;
+				}
 
 .pg-combined-order-book .cr-combined-order-book__small .cr-order-book .cr-table__body {
 			  cursor: pointer;
@@ -1239,6 +1220,80 @@
 			margin-right: 1px;
 			padding-bottom: calc(var(--gap) * 1.5);
 		  }
+
+.cr-order-book tr td:nth-child(1) {
+			text-align: left;
+		}
+
+.cr-order-book tr td:nth-child(2) {
+			width: 100%;
+		}
+
+.cr-order-book tr td:nth-child(3) {
+			text-align: right;
+		}
+
+.cr-order-book tr th:nth-child(1) {
+			text-align: left;
+		}
+
+.cr-order-book tr th:nth-child(3) {
+			text-align: right;
+		}
+
+.head-text {
+		font-size: 20px;
+		font-weight: 500;
+	}
+
+.change-icon {
+		margin-right: 0.5em;
+	}
+
+@-webkit-keyframes flash_red {
+	from { background-color: #ef5350  ; }
+	to { background-color: transparent; }
+  }
+
+@keyframes flash_red {
+	from { background-color: #ef5350 ; }
+	to { background-color: transparent; }
+  }
+
+@-webkit-keyframes flash_green {
+	from { background-color: #13b887 ; }
+	to { background-color: transparent; }
+  }
+
+@keyframes flash_green {
+	from { background-color: #13b887; }
+	to { background-color: transparent; }
+  }
+
+@-webkit-keyframes flashX {
+	from { background-color: #FDA736; }
+	to { background-color: transparent; }
+  }
+
+@keyframes flashX {
+	from { background-color: #FDA736; }
+	to { background-color: transparent; }
+  }
+
+.flash_green {
+	-webkit-animation: flash_green 2s ; /* Safari 4+ */ /* Fx 5+ */ /* Opera 12+ */
+	animation:         flash_green 2s ; /* IE 10+ */
+  }
+
+.flash_red {
+	-webkit-animation: flash_red 2s ; /* Safari 4+ */ /* Fx 5+ */ /* Opera 12+ */
+	animation:         flash_red 2s ; /* IE 10+ */
+  }
+
+.flashX {
+	-webkit-animation: flashX 2s ; /* Safari 4+ */ /* Fx 5+ */ /* Opera 12+ */
+	animation:         flashX 2s ; /* IE 10+ */
+  }
 
 .cr-tab-panel {
 	display: flex;
@@ -9138,6 +9193,169 @@ th#react-table table:last-child {
 
 `
 
+  .cr-combined-order-book {
+  height: 50%;
+  position: relative;
+}
+
+`
+
+  .cr-combined-order-book .cr-table {
+    table-layout: fixed;
+  }
+
+`
+
+  .cr-combined-order-book .cr-table td,
+    `
+
+  .cr-combined-order-book .cr-table th {
+      width: 33%;
+    }
+
+`
+
+  .cr-combined-order-book .cr-table-background__row {
+        padding: 22px;
+      }
+
+`
+
+  .cr-combined-order-book--data-loading {
+    background: transparent;
+    display: block;
+  }
+
+`
+
+  .cr-combined-order-book__market {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    padding-bottom: 5px;
+  }
+
+`
+
+  .cr-combined-order-book__market span {
+      font-size: 12px;
+      font-weight: normal;
+      line-height: 12px;
+      text-align: center;
+    }
+
+`
+
+  .cr-combined-order-book__market span:first-child {
+        font-size: 28px;
+        font-weight: bold;
+        line-height: normal;
+      }
+
+`
+
+  .cr-combined-order-book__market-negative {
+      color: red;
+    }
+
+`
+
+  .cr-combined-order-book__market-positive {
+      color: green;
+    }
+
+`
+
+  .cr-combined-order-book .cr-order-book td {
+      color: gray;
+    }
+
+`
+
+  .cr-combined-order-book__large {
+    display: flex;
+    overflow: unset;
+  }
+
+`
+
+  .cr-combined-order-book__large-market {
+      border-top: 1px solid var(--order-book-last-market-price-border-color);
+      bottom: 0;
+      left: 0;
+      position: -webkit-sticky;
+      position: sticky;
+      right: 0;
+      z-index: 25;
+    }
+
+`
+
+  .cr-combined-order-book__large .cr-order-book {
+      padding-right: 1px;
+      width: 50%;
+    }
+
+`
+
+  .cr-combined-order-book__large .cr-table-background {
+      top: 60px;
+    }
+
+`
+
+  .cr-combined-order-book__large .cr-table-background__row {
+        margin-bottom: 1px;
+        padding-bottom: calc(var(--gap) * 2.5);
+      }
+
+`
+
+  .cr-combined-order-book__small .cr-table-background__row {
+        margin-bottom: 1px;
+        padding-bottom: calc(var(--gap) * 2.5);
+      }
+
+`
+
+  .cr-combined-order-book__small .cr-order-book {
+      height: 154px;
+      overflow-y: hidden !important;
+    }
+
+`
+
+  .cr-combined-order-book__small .cr-order-book:first-child {
+        border-bottom: 1px solid var(--order-book-last-market-price-border-color);
+        height: 208px;
+      }
+
+`
+
+  .cr-combined-order-book__small .cr-order-book:first-child .cr-table-background {
+          top: 60px;
+        }
+
+`
+
+  .cr-combined-order-book__small .cr-order-book:last-child {
+        border-top: 1px solid var(--order-book-last-market-price-border-color);
+      }
+
+`
+
+  .cr-combined-order-book__small .cr-order-book:last-child .cr-table-background {
+          top: 0;
+        }
+
+`
+
+  .cr-combined-order-book__small .cr-order-book th {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 2222;
+      }
 
 {/*Dashboard*/}
 

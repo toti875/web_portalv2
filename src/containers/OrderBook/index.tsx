@@ -21,10 +21,9 @@ import {
 } from '../../modules';
 import { OrderBookTableRow } from './OrderBookTableRow';
 
-import './OrderBook.pcss';
 
 // render big/small breakpoint
-const breakpoint = 448;
+const breakpoint = 600;
 
 export const OrderBook = props => {
 	const { formatMessage } = useIntl();

@@ -26,6 +26,7 @@ import {
 } from '../../modules';
 import { OrderCommon } from '../../modules/types';
 
+
 interface ReduxProps {
     asks: string[][];
     bids: string[][];
