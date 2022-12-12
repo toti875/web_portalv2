@@ -2958,7 +2958,7 @@ flex-direction: row !important;
 		color: var(--system-red);
 		margin-top: 5px;
 	}.cr-sign-in-form__group--focused .cr-sign-in-form__label {
-			color: pink !important;
+			color: #c0c0c0 !important;
 		}.cr-sign-in-form__image {
 		margin-top: -60px !important;
 		height: 100px;
@@ -3846,7 +3846,7 @@ a:-webkit-any-link {
                 margin-bottom: 0;
             }.advance-tab-button-1 .tab-button-list .react-tabs__tab--selected .tab-button {
 
-                border-color: #pink !important;
+                border-color: #c0c0c0 !important;
             }.advance-tab-button-1 .tab-button-list .react-tabs__tab--selected .tab-button .title {
                     color: var(--color-white);
                 }.advance-tab-button-1 .tab-button-list .react-tabs__tab--selected .tab-button::before {

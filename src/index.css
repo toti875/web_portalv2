@@ -1,3 +1,5 @@
+
+
 .btn {
 
   display: flex !important;
@@ -7487,7 +7489,7 @@ th#react-table table:last-child {
 .cr-modal .cr-email-form__input input {
         border: 1px solid pink !important;
         border-radius: 5px!important;
-        color: pink !important;
+        color: #c0c0c0 !important;
         font-size: 15px !important;
       }
 
@@ -8625,7 +8627,8 @@ th#react-table table:last-child {
     }
 
 .cr-email-form__form-content {
-      display: flex !important;
+      
+		
       align-text: center !important;
       margin: 0 auto !important;
       align-content: center !important;
@@ -14952,4 +14955,76 @@ th#react-table table:last-child {
 			margin-right: 1px;
 			padding-bottom: calc(var(--gap) * 1.5);
 		  }
+
+.pg-sign-in-screen .pg-2fa___form .cr-email-form {
+		background: var(--body-background-color);
+		min-height: unset;
+	  }
+
+.pg-sign-in-screen .pg-2fa___form .cr-email-form__option {
+		  background: var(--subheader-background-color);
+		}
+
+.pg-sign-in-screen .pg-2fa___form .cr-email-form__form-content {
+		
+		display: block !important;
+		}
+
+.pg-sign-in-screen .pg-2fa___form .cr-email-form__options-group {
+		  border-bottom: 2px solid var(--divider-color-level-2);
+		  color: var(--primary-text-color);
+		  height: calc(var(--big-gap) * 0.97);
+		  width: 100%;
+		}
+
+.pg-sign-in-screen .pg-2fa___form .cr-email-form__label {
+		  margin-top: -9px;
+		}
+
+.pg-sign-in-screen .pg-2fa___form .cr-email-form__input input {
+			border: 1px solid var(--input-border-color);
+			border-radius: calc(var(--gap) * 0.66);
+			color: var(--input-text-color);
+			font-size: calc(var(--gap) * 2.33);
+		  }
+
+.pg-sign-in-screen .pg-2fa___form .cr-email-form__header {
+		  color: var(--secondary-contrast-cta-color);
+		  font-size: calc(var(--gap) * 2.33);
+		  font-style: normal;
+		  font-weight: normal;
+		  height: calc(var(--gap) * 4.33);
+		  line-height: calc(var(--gap) * 2.66);
+		  margin: calc(var(--gap) * 0.83);
+		  width: calc(var(--big-gap) * 6.3);
+		}
+
+.pg-sign-in-screen .pg-2fa___form .cr-email-form__cros-icon {
+		  cursor: pointer;
+		  display: inline-block;
+		  height: calc(var(--gap) * 2.5);
+		  margin-top: calc(var(--gap) * 0.5);
+		  position: absolute;
+		  right: calc(var(--gap) * 3.3);
+		  width: calc(var(--gap) * 2.5);
+		}
+
+.pg-sign-in-screen .pg-2fa___form .cr-email-form__group--focused .cr-email-form__label {
+			color: var(--input-legend-color-active);
+		  }
+
+.pg-sign-in-screen .pg-2fa___form .cr-email-form__group--focused input {
+			border-color: var(--input-border-color-active) !important;
+		  }
+
+.pg-sign-in-screen .pg-2fa___form .cr-email-form__button-wrapper {
+		  min-height: calc(var(--gap) * 10);
+		}
+
+@media screen and (max-width: 768px) {
+	  .pg-sign-in-screen .pg-sign-in-screen__container {
+		margin: calc(var(--gap) * 3.33) calc(var(--gap) * 1.66) 0;
+		width: 100%;
+	  }
+  }
   
