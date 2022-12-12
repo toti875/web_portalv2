@@ -7,6 +7,7 @@
 
 	.cr-table {
 		table-layout: fixed;
+		padding-top: 0 !important;
 
 		td,
 		th {
@@ -23,6 +24,13 @@
 	&--data-loading {
 		background: transparent;
 		display: block;
+	}
+	&__head {
+		margin-top: 0px !important;
+		&__row {
+			padding: 22px;
+		}
+
 	}
 
 	&__market {
@@ -125,7 +133,7 @@
 			}
 
 			th {
-				position: sticky;
+				position: absolute !important;
 				top: 0 !important;
 				z-index: 2222;
 			}
@@ -170,6 +178,9 @@
 		  width: 33% !important;
 		  font-size: 14px;
 		  font-weight: 500;
+		  margin-top: 0px;
+		  padding-top: 0;
+
 		}
   .pg-combined-order-book .cr-table__body td {
 		  color: var(--table-text-color);
@@ -214,7 +225,7 @@
 		}
   .pg-combined-order-book .cr-combined-order-book__small .cr-order-book .cr-table thead {
 			  
-			  width: 100%;
+			  
 			  z-index: 2222;
 
 			  width: 33% !important;
