@@ -9,12 +9,12 @@
 
 
 @import 'default/variables';
-//@import 'default/mixins';
+@import 'default/mixins';
 //@import 'default/reset';
 @import 'default/typography';
 @import 'default/extend';
 //@import 'default/animations';
-//@import 'default/shortcode';
+@import 'default/shortcode';
 //@import 'default/spacing';
 //@import 'default/common';
 //@import 'default/forms';
@@ -24,7 +24,7 @@
     Theme Styles
 ***************************************/
 
-@import 'color/themebg';
+//@import 'color/themebg';
 
 /**************************************
     Header Styles
@@ -72,18 +72,18 @@
     Blog Styles
 ***************************************/
 
-@import 'blog/blog';
-@import 'blog/sidebar';
-@import 'blog/blog-details';
+//@import 'blog/blog';
+//@import 'blog/sidebar';
+//@import 'blog/blog-details';
 
 
 
 /**************************************
     Footer Styles
 ***************************************/
-@import 'template/banner';
-@import 'template/portfoliodetails';
-@import 'template/splash';
+//@import 'template/banner';
+//@import 'template/portfoliodetails';
+//@import 'template/splash';
 
 
 
@@ -91,7 +91,7 @@
     Footer Styles
 ***************************************/
 
-@import 'footer/footer';
-@import 'footer/copyright';
-@import 'footer/darkmode';
+//@import 'footer/footer';
+//@import 'footer/copyright';
+//@import 'footer/darkmode';
 
