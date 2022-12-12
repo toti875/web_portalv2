@@ -63,6 +63,7 @@ export class OrderBook extends React.PureComponent<OrderBookProps> {
             if (resultData && resultData.length) {
                 return {
                     width: `${resultData[index].value}%`,
+                    webkitanimation: 'flashX, 2s'
                 };
             }
 

@@ -915,7 +915,8 @@
 	  }
 
 .cr-combined-order-book .cr-table-background__row {
-		  padding: 22px;
+		  padding: 5px;
+		  height: 16px !important;
 		}
 
 .cr-combined-order-book--data-loading {
@@ -938,7 +939,7 @@
 	  }
 
 .cr-combined-order-book__market span:first-child {
-		  font-size: 28px;
+		  font-size: 12px;
 		  font-weight: bold;
 		  line-height: normal;
 		}
@@ -955,6 +956,9 @@
 
 .cr-combined-order-book .cr-order-book td {
 		color: var(--order-book-table-text-color);
+		font-size: 13px;
+		height: 16px;
+		line-height: 16px;
 	  }
 
 .cr-combined-order-book__large {
@@ -990,6 +994,7 @@
 		  margin-bottom: 1px;
 		  padding-bottom: calc(var(--gap) * 2.5);
 		  line-heigh: 16px !important;
+		  heigh: 16px !important;
 		}
 
 .cr-combined-order-book__small .cr-order-book {
