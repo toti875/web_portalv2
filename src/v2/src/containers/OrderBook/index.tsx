@@ -76,7 +76,7 @@ class OrderBookContainer extends React.Component<Props, State> {
     private orderRef;
 
     public componentDidUpdate() {
-        cn = 'flash_green';
+        cn = '#flash_green';
         if (this.orderRef.current && this.state.width !== this.orderRef.current.clientWidth) {
             this.setState({
                 width: this.orderRef.current.clientWidth,
@@ -153,7 +153,7 @@ class OrderBookContainer extends React.Component<Props, State> {
                 }
             }
 
-            cn = classNames('flash_red, flashX', {
+            cn = classNames('#flash_red, #flashX', {
                 'cr-combined-order-book__market-negative, flash_red': priceChangeSign === 'negative',
                 'cr-combined-order-book__market-positive flash_green': priceChangeSign === 'positive',
             });
