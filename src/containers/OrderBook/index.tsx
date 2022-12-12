@@ -24,6 +24,8 @@ import {
 } from '../../modules';
 import { OrderCommon } from '../../modules/types';
 
+import './OrderBook.pcss';
+
 interface ReduxProps {
     asks: string[][];
     bids: string[][];

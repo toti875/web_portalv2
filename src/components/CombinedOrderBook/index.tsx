@@ -2,6 +2,8 @@ import * as React from 'react';
 import { OrderBook } from '../';
 import { CellData } from '../Table';
 
+import './CombinedOrderBook.pcss';
+
 export interface CombinedOrderBookProps {
 	/**
 	 * Data which is used to render Asks Table.
