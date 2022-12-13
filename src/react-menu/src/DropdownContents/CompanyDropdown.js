@@ -53,7 +53,7 @@ const CompanyDropdown = () => {
           </div> */}
             <div>
               {/*<Heading color="green">Cripto</Heading>*/}
-              <Heading style={{marginLeft: '15px', color: '#46473E', fontSize: '17px', fontWeight: 'bold'}} >Central de Suporte</Heading>
+              <Heading style={{marginTop: '20px', marginLeft: '15px', color: '#46473E', fontSize: '17px', fontWeight: 'bold'}} >Central de Suporte</Heading>
 
               <p style={{paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px' }}>Esclareça suas dúvidas, conheça mais nossos processos, produtos e serviços ou entre em contato conosco para um atendimento rápido e personalizado</p>
               <a href="https://ajuda.fortem.website/" style={{fontSize: '16px'}} target="_blank" rel="noopener noreferrer">                  <Icon />Principais dúvidas
@@ -77,8 +77,8 @@ const CompanyDropdown = () => {
               <Logo color="green" />
           </div> */}
             <div>
-            <Heading style={{marginLeft: '15px', color: '#46473E', fontSize: '17px', fontWeight: 'bold'}} >Arena do conhecimento</Heading>
-              <p style={{ paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '-30px'}}>
+            <Heading style={{marginTop: '20px', marginLeft: '15px', color: '#46473E', fontSize: '17px', fontWeight: 'bold'}} >Arena do conhecimento</Heading>
+              <p style={{ paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '20px',}}>
                 Informações, notícias e conteúdos para apoiar seu desenvolvimento sobre ativos digitais
               </p>
               <a href="/lab" style={{marginTop: '-10px', fontSize: '16px',}}>

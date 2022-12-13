@@ -61,8 +61,8 @@ const ProductsDropdown = () => {
             </div>*/}
             <div>
               <Heading style={{marginLeft: '15px', color: '#46473E', fontSize: '17px', fontWeight: 'bold'}} >Tokens</Heading>
-              <p style={{paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '-30px'}}>Invista nos tokens com os melhores rendimentos e com a segurança da blockchain</p>
-              <a href="/tokens" style={{marginTop: '-10px', fontSize: '16px',}}>
+              <p style={{paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '20px'}}>Invista nos tokens com os melhores rendimentos e com a segurança da blockchain</p>
+              <a href="/tokens" style={{marginTop: '-30px', fontSize: '16px',}}>
                   <Icon />Conheça nosso marketplace de tokens
               </a>
             </div>
@@ -75,8 +75,8 @@ const ProductsDropdown = () => {
               {/*<Heading color="green">Cripto</Heading>*/}
               <Heading style={{marginLeft: '15px', color: '#46473E', fontSize: '17px', fontWeight: 'bold'}} >Cripto</Heading>
 
-              <p style={{paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '-30px'}}>Os criptoativos mais negociados no mundo agora à sua disposição em Reais</p>
-              <a href="/quick-exchange" style={{fontSize: '16px',}}>
+              <p style={{paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '20px',}}>Os criptoativos mais negociados no mundo agora à sua disposição em Reais</p>
+              <a href="/quick-exchange" style={{marginTop: '-20px', fontSize: '16px',}}>
                   <Icon />Negociação instantânea
               </a><br/>
               {/* <a href="/market/btcusd" style={{fontSize: '16px'}} target="_blank" rel="noopener noreferrer"> */}
@@ -90,8 +90,8 @@ const ProductsDropdown = () => {
               <Logo color="teal" />
             </div>*/}
             <div>
-            <Heading style={{marginLeft: '15px', color: '#46473E', fontSize: '17px', fontWeight: 'bold'}} >NFT</Heading>
-              <p style={{ paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '-30px'}}>
+            <Heading style={{marginTop: '20px', marginLeft: '15px', color: '#46473E', fontSize: '17px', fontWeight: 'bold'}} >NFT</Heading>
+              <p style={{ paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '20px',}}>
                 Marketplace para negociação de tokens exclusivos 
               </p>
               <a href="/nft" style={{marginTop: '-10px', fontSize: '16px',}}>

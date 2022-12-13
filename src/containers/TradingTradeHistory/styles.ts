@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const MarketHistory = styled.div`
-	background color = #0b1426;
-	font-weight: 300;
-	font-size: 25px;
+	
+	font-weight: 400;
+	font-size: 14px;
 	padding: 10px;
 	padding-right: 10px;
 	height: 100%;
@@ -24,21 +24,21 @@ export const MarketHistory = styled.div`
 		.td-tabs-nav-list {
 			display: flex;
 			.td-tabs-tab {
-				font0size: 13px;
+				font0size: 14px;
 				font-weight: 500;
 				&.td-tabs-tab-active {
 					font-weight: 500;
 					.td-tabs-tab-btn {
-						color: #fff;
-						border-bottom: 2px solid #2fb67e;
+						color: #f5f5f5;
+						border-bottom: 2px solid #009991;
 					}
 				}
 				:not(:last-child) {
 					margin-right: 24px;
 				}
 				.td-tabs-tab-btn {
-					color: #848e9c;
-					font-size: 13px;
+					
+					font-size: 15px;
 					font-weight: 500;
 
 					padding: 5px 0;
@@ -49,7 +49,7 @@ export const MarketHistory = styled.div`
 		}
 		.td-tabs-content-holder {
 			font-size: 12px;
-			font-weight: 200;
+			font-weight: 400;
 			flex: 1;
 			.td-tabs-content {
 				height: 100%;
@@ -68,13 +68,13 @@ export const MarketHistory = styled.div`
 		overflow-x: hidden;
 		overflow-y: scroll;
 		position: relative;
-		font-weight: 300;
+		font-weight: 400;
 		height: 100%;
 		&__negative {
-			color: red;
+			color: #e84946;
 		}
 		&__positive {
-			color: green;
+			color: #2fb67e;
 		}
 		.td-table-container {
 			padding-top: 10px;
@@ -101,7 +101,7 @@ export const MarketHistory = styled.div`
 							width: calc(100% / 3);
 							background-color: transparent;
 							padding: 2px 0 !important;
-							font-weight: 400;
+							font-weight: 300;
 							color: #848e9c;
 							text-align: right;
 							:first-child {
@@ -111,8 +111,9 @@ export const MarketHistory = styled.div`
 					}
 				}
 				.td-table__body {
+					font-size: 13px;
 					padding-right: 15px;
-					color: #fff;
+					color: #f5f5f5;
 					background: transparent;
 					height: calc(100% - 22px);
 					::-webkit-scrollbar {
@@ -127,11 +128,13 @@ export const MarketHistory = styled.div`
 					}
 					tr {
 						background: transparent;
+						font-size: 13px;
+						font-weight: 300;
 						td.td-table__empty:nth-child(2) {
 							text-align: center;
 						}
 						td {
-							color: #fff;
+							color: #f5f5f5;
 							padding: 3px 0 !important;
 							text-align: right;
 							background-color: transparent;

@@ -15,7 +15,8 @@ const TableStyles = styled.div`
 			margin: 0;
 			cursor: pointer;
 			font-size: 14px;
-			color: #fff;
+			font-weight: 400px;
+			color: #f5f5f5;
 			text-align: justify;
 			padding-top: 15px;
 			padding-bottom: 15px;
@@ -28,7 +29,7 @@ const TableStyles = styled.div`
 			border-top: 1px solid #848e9c;
 		}
 		th {
-			color: #fff;
+			color: #f5f5f5;
 			background-color: #848e9c;
 		}
 		th:not(:first-child) {
@@ -39,7 +40,7 @@ const TableStyles = styled.div`
 		}
 		tr:hover td {
 			background-color: #3c4055;
-			color: #fff;
+			color: #f5f5f5;
 		}
 	}
 `;
@@ -60,10 +61,10 @@ const PagiantionStyle = styled.div`
 		border: 1px solid #666;
 		border-radius: 2px;
 		:focus {
-			border: 1px solid #fff;
+			border: 1px solid #c0c0c0;
 			outline: none;
 			background: #313445;
-			color: #fff;
+			color: #f5f5f5;
 		}
 	}
 	span {

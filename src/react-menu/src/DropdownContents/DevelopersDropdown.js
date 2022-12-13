@@ -30,7 +30,7 @@ const DevelopersDropdown = () => {
             </div>*/}
             <div>
               <Heading style={{marginLeft: '15px', color: '#46473E', fontSize: '17px', fontWeight: 'bold'}} >Tokenização</Heading>
-              <p style={{paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '-30px'}}>Antecipe seus recebíveis ou obtenha crédito rápido e simplficado, com as melhores taxas, tokenizando seus serviços</p>
+              <p style={{paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '20px',}}>Antecipe seus recebíveis ou obtenha crédito rápido e simplficado, com as melhores taxas, tokenizando seus serviços</p>
               <a href="" style={{marginTop: '-10px', fontSize: '16px',}}>
                   <Icon />Conheça nossa plataforma de tokenização
               </a>
@@ -41,8 +41,8 @@ const DevelopersDropdown = () => {
               <Logo style={{marginTop: '30px'}} color="blue" />
             </div>*/}
             <div>
-              <Heading style={{marginLeft: '15px', color: '#46473E', fontSize: '17px', fontWeight: 'bold'}} >Meios de pagamento</Heading>
-              <p style={{paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '-30px'}}>Aceite pagamentos com cripto e tokens com conversão para Reais e liquidação instantânea</p>
+              <Heading style={{marginTop: '20px', marginLeft: '15px', color: '#46473E', fontSize: '17px', fontWeight: 'bold'}} >Meios de pagamento</Heading>
+              <p style={{paddingLeft: '15px', borderLeft: '2px solid black', color: '#46473E', fontSize: '16px', marginTop: '20px',}}>Aceite pagamentos com cripto e tokens com conversão para Reais e liquidação instantânea</p>
               <p  style={{marginTop: '-10px', fontSize: '16px',}}>
                   <Icon />Conheça nossas soluções 
               </p>
