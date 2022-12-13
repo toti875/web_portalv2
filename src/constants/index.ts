@@ -76,7 +76,7 @@ export const colors = {
 			moon: 'var(--icons)',
 		},
 		orderBook: {
-			asks: 'var(--asks-level-4)',
+			asks: 'rgba(#009991 , 0.8)',
 			bids: 'var(--bids-level-4)',
 		},
 		depth: {
@@ -86,8 +86,8 @@ export const colors = {
 			gridBackgroundEnd: 'var(--rgb-asks)',
 			strokeAreaAsk: 'var(--rgb-asks)',
 			strokeAreaBid: 'var(--rgb-bids)',
-			strokeGrid: 'var(--rgb-secondary-contrast-cta-color)',
-			strokeAxis: 'var(--rgb-primary-text-color)',
+			strokeGrid: 'rgba(#009991 , 0.8)',
+			strokeAxis: 'rgba(#009991 , 0.8)',
 		},
 	},
 };
