@@ -86,7 +86,7 @@ const MarketTradingContainer: React.FC = () => {
 			setFavoriteKeyState(listFavoriteKey);
 		}
 
-		setDocumentTitle('Trading');
+		setDocumentTitle('Mercados');
 		const { connected, withAuth } = rangerState;
 
 		if (markets.length < 1) {

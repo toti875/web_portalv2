@@ -163,7 +163,7 @@ class OrderBookContainer extends React.Component<Props, State> {
             return (
                 <React.Fragment>
                     <span className={cn}>
-                        {Decimal.format(+(currentTicker.last), currentMarket.price_precision, ',')}&nbsp;
+                        {Decimal.format(+(currentTicker.last), currentMarket.price_precision, '.')}&nbsp;
                         {isMobileDevice ? null : currentMarket.quote_unit.toUpperCase()}
                     </span>
                     <span>{this.props.intl.formatMessage({id: 'page.body.trade.orderbook.lastMarket'})}</span>
@@ -213,18 +213,18 @@ class OrderBookContainer extends React.Component<Props, State> {
                     if (isMobileDevice) {
                         return [
                             <span key={i}>
-                                <Decimal fixed={priceFixed} thousSep="," prevValue={array[i + 1] ? array[i + 1][0] : 0}>{price}</Decimal>
+                                <Decimal fixed={priceFixed} thousSep="." prevValue={array[i + 1] ? array[i + 1][0] : 0}>{price}</Decimal>
                             </span>,
-                            <Decimal key={i} fixed={amountFixed} thousSep=",">{total[i]}</Decimal>,
+                            <Decimal key={i} fixed={amountFixed} thousSep=".">{total[i]}</Decimal>,
                         ];
                     }
 
                     return [
                         <span key={i}>
-                            <Decimal fixed={priceFixed} thousSep="," prevValue={array[i + 1] ? array[i + 1][0] : 0}>{price}</Decimal>
+                            <Decimal fixed={priceFixed} thousSep="." prevValue={array[i + 1] ? array[i + 1][0] : 0}>{price}</Decimal>
                         </span>,
-                        <Decimal key={i} fixed={amountFixed} thousSep=",">{volume}</Decimal>,
-                        <Decimal key={i} fixed={amountFixed} thousSep=",">{total[i]}</Decimal>,
+                        <Decimal key={i} fixed={amountFixed} thousSep=".">{volume}</Decimal>,
+                        <Decimal key={i} fixed={amountFixed} thousSep=".">{total[i]}</Decimal>,
                     ];
                 default:
                     if (isLarge) {
@@ -232,34 +232,34 @@ class OrderBookContainer extends React.Component<Props, State> {
                             return [
                                 <Decimal key={i} fixed={amountFixed}>{total[i]}</Decimal>,
                                 <span key={i}>
-                                    <Decimal fixed={priceFixed} thousSep="," prevValue={array[i - 1] ? array[i - 1][0] : 0}>{price}</Decimal>
+                                    <Decimal fixed={priceFixed} thousSep="." prevValue={array[i - 1] ? array[i - 1][0] : 0}>{price}</Decimal>
                                 </span>,
                             ];
                         }
 
                         return [
-                            <Decimal key={i} fixed={amountFixed} thousSep=",">{total[i]}</Decimal>,
-                            <Decimal key={i} fixed={amountFixed} thousSep=",">{volume}</Decimal>,
+                            <Decimal key={i} fixed={amountFixed} thousSep=".">{total[i]}</Decimal>,
+                            <Decimal key={i} fixed={amountFixed} thousSep=".">{volume}</Decimal>,
                             <span key={i}>
-                                <Decimal fixed={priceFixed} thousSep="," prevValue={array[i - 1] ? array[i - 1][0] : 0}>{price}</Decimal>
+                                <Decimal fixed={priceFixed} thousSep="." prevValue={array[i - 1] ? array[i - 1][0] : 0}>{price}</Decimal>
                             </span>,
                         ];
                     } else {
                         if (isMobileDevice) {
                             return [
                                 <span key={i}>
-                                    <Decimal fixed={priceFixed} thousSep="," prevValue={array[i - 1] ? array[i - 1][0] : 0}>{price}</Decimal>
+                                    <Decimal fixed={priceFixed} thousSep="." prevValue={array[i - 1] ? array[i - 1][0] : 0}>{price}</Decimal>
                                 </span>,
-                                <Decimal key={i} fixed={amountFixed} thousSep=",">{total[i]}</Decimal>,
+                                <Decimal key={i} fixed={amountFixed} thousSep=".">{total[i]}</Decimal>,
                             ];
                         }
 
                         return [
                             <span key={i}>
-                                <Decimal fixed={priceFixed} thousSep="," prevValue={array[i - 1] ? array[i - 1][0] : 0}>{price}</Decimal>
+                                <Decimal fixed={priceFixed} thousSep="." prevValue={array[i - 1] ? array[i - 1][0] : 0}>{price}</Decimal>
                             </span>,
-                            <Decimal key={i} fixed={amountFixed} thousSep=",">{volume}</Decimal>,
-                            <Decimal key={i} fixed={amountFixed} thousSep=",">{total[i]}</Decimal>,
+                            <Decimal key={i} fixed={amountFixed} thousSep=".">{volume}</Decimal>,
+                            <Decimal key={i} fixed={amountFixed} thousSep=".">{total[i]}</Decimal>,
                         ];
                     }
             }

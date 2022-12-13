@@ -91,19 +91,17 @@ button, button:focus, button:hover { outline: none; }
 .placeholder-light::-moz-placeholder { color: #fff;}
 .placeholder-light:-ms-input-placeholder { color: #fff;}
 
-.placeholder-dark::-webkit-input-placeholder { color: #232323; }
-.placeholder-dark::-moz-placeholder { color: #232323;}
-.placeholder-dark:-ms-input-placeholder { color: #232323;}
+.placeholder-dark::-webkit-input-placeholder { color: transparent; }
+.placeholder-dark::-moz-placeholder { color: transparent;}
+.placeholder-dark:-ms-input-placeholder { color: transparent;}
 
 .no-transition { transition: all 0s ease-in-out !important; -moz-transition: all 0s ease-in-out !important; -webkit-transition: all 0s ease-in-out !important; -ms-transition: all 0s ease-in-out !important; -o-transition: all 0s ease-in-out !important; }
 .transition { transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; }
 
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl { padding-right: 15px; padding-left: 15px; }
-.row { margin-right: -15px; margin-left: -15px; }
-.row>* { padding-right: 15px; padding-left: 15px; }
 .row.g-0 { margin-right: 0; margin-left: 0; }
 .row.g-0>* { padding-right: 0; padding-left: 0; }
-header [class^="container-"] [class^="col-"], header [class^="container-"] [class*=" col-"] { position: relative; padding-left: 15px; padding-right: 15px; }
+
 
 @media (prefers-reduced-motion:no-preference) {
     :root { scroll-behavior: auto }
@@ -147,7 +145,7 @@ h6 { font-size:1.80rem; line-height:2.5rem; }
 .parallax-title { padding: 16px 35px; display: inline-block }
 
 /* text color, link color and link hover color */
-.text-white, .btn-link.text-white, a.text-white-hover:hover { color:#fff; }
+.text-white, .btn-link.text-white, a.text-white-hover:hover { color:#f5f5f5; }
 .text-black, .btn-link.text-black,  a.text-black-hover:hover { color:#000; }
 .text-extra-dark-gray, .btn-link.text-extra-dark-gray, a.text-extra-dark-gray-hover:hover { color:#232323; }
 .text-dark-gray, .btn-link.text-dark-gray, a.text-dark-gray-hover:hover { color:#626262; }
@@ -560,7 +558,7 @@ blockquote footer { color: #828282; }
 .blog-image blockquote { padding: 60px; border: 0; margin: 0; }
 
 /* input box border */
-.input-border-bottom, .input-border-bottom:focus { border: 0; border-bottom: 1px solid; padding-left: 0; padding-right: 0; }
+
 
 /* input size */
 .small-input, .small-textarea { padding: 13px 15px; font-size: 14px; }
@@ -673,26 +671,11 @@ blockquote footer { color: #828282; }
 .absolute-middle-center.move-top-bottom, .absolute-middle-center.move-bottom-top { margin-left: -10px; margin-top: -10px; }
 
 /* checkbox - radio button */
-input[type="checkbox"] { width: auto; }
-input[type="checkbox"] + label { color: #939393; font-weight: normal; margin-bottom: 0; }
-input[type="checkbox"]:checked + label { color: inherit; }
-input[type="checkbox"] + label span { display:inline-block; width:15px; height:15px; margin:0 10px 0 0; vertical-align:middle; cursor:pointer; border: 1px solid #d9d9d9; border-radius: 0; position: relative; }
-input[type="checkbox"]:checked + label span:after { position: absolute; top: 0; left: 0; height: 100%; width: 100%; text-align: center; font-size: 12px; line-height: 15px; content: "\f00c"; font-family: "Font Awesome 5 Free"; font-weight: 900; }
-
-input[type="radio"] { width: auto; }
-input[type="radio"] + label { font-weight: normal; margin-bottom: 0; }
-input[type="radio"] + label span { display:inline-block; width:15px; height:15px; margin:0 10px 0 0; vertical-align:middle; cursor:pointer; border-radius: 0; position: relative; border-radius: 100%; }
-input[type="radio"]:checked + label span:after { position: absolute; top: 0; left: 0; color: #fff; height: 100%; width: 100%; text-align: center; font-size: 9px; line-height: 15px; content: "\f00c"; font-family: "Font Awesome 5 Free"; font-weight: 900; }
 
 /* ===================================
     06. Button
 ====================================== */
 
-.btn { display:inline-block; border:2px solid transparent; border-radius: 0; text-transform: uppercase; width: auto; font-family: 'Poppins', sans-serif; font-weight: 500; }
-.btn.active.focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn:active:focus, .btn:focus { outline: medium none; outline-offset: 0; }
-input.btn:focus { border-width: 2px; }
-.btn.active, .btn:active, .btn:focus { box-shadow: none; }
-.btn i { vertical-align: middle; position: relative; top: -1px }
 
 /* button size */
 .btn.btn-very-small { font-size:10px; padding: 6px 16px; }
@@ -2632,7 +2615,7 @@ button.mfp-close,.mfp-image-holder button.mfp-close, .mfp-iframe-holder button.m
     18. Header
 ====================================== */
 
-.navbar { padding: 0; }
+
 .navbar.navbar-boxed { padding-left: 35px; padding-right: 35px; }
 .navbar-brand { margin-right: 0; font-size: 0; display: inline-block; }
 .dropdown.open>.dropdown-menu { display: block; }
@@ -2640,7 +2623,7 @@ button.mfp-close,.mfp-image-holder button.mfp-close, .mfp-iframe-holder button.m
 .header-cart-icon a > i, .header-cart-icon a > i, .header-language a > i, .header-search-icon a > i, .header-push-button a > i { padding: 30px 0; display: inline-block; }
 .top-bar .header-cart-icon a > i, .top-bar .header-cart-icon a > i, .top-bar .header-language a > i, .top-bar .header-search-icon a > i, .top-bar .header-push-button a > i { padding: 14px 0; display: inline-block;}
 .header-social-icon {line-height: 12px; padding-left: 10px; }
-.navbar.navbar-dark .header-social-icon, .sticky .navbar.header-dark .header-social-icon { border-color: rgba(255,255,255,.45); }
+
 .sticky .navbar.header-light .header-social-icon { border-color: rgba(0,0,0,.22); }
 .header-search-icon, .header-cart-icon, .header-language, .header-push-button, .header-button { display: inline-block; vertical-align: middle; padding-left:17px; font-size: 17px; }
 .header-cart-icon { margin-right: 10px; }
@@ -4536,36 +4519,10 @@ aside .instafeed-grid.gutter-double-extra-large { margin-left: -20px; margin-rig
     26. Footer
 ====================================== */
 
-footer .footer-logo img { max-height: 36px; }
-footer ul {padding-left: 0; list-style: none;}
-footer ul li { margin-bottom: 7px; }
-footer ul li:last-child { margin-bottom: 0; }
-footer .footer-top ul li.media { margin-bottom: 25px; }
-footer .footer-top ul li.media:last-child { margin-bottom: 0; }
-footer .instagram-follow-api ul li {margin-bottom: 0}
-footer .footer-horizontal-link li {margin-right: 35px; list-style: none; margin-bottom: 0}
-footer .footer-horizontal-link li:last-child {margin-right: 0}
 
-/* footer dark */
-.footer-dark, .footer-dark a { color: #8890A4; }
-.footer-dark a:hover { color: #fff; }
-.footer-dark .footer-social a { color: #fff; }
-.footer-dark .footer-social a:hover { color: #8890A4; }
 
-/*footer sticky*/
-.footer-sticky { position: fixed; width: 100%; bottom: 0; left: 0; right: 0; z-index: 0; }
 
-/* scroll to top */
-.scroll-top-arrow, .scroll-top-arrow:focus { background: #fff; font-size: 17px; line-height: 34px; box-shadow: 0 0 25px rgba(23,23,23,.25); display: none; height: 34px; width: 34px; padding: 0; position: fixed; right: 45px; text-align: center; text-decoration: none; bottom: 45px; z-index: 1029; border-radius: 100%; }
-.scroll-top-arrow:hover { background: #fff; color: #828282; box-shadow: 0 0 30px rgba(23,23,23,.4);-webkit-transform: translateY(-2px); -ms-transform: translateY(-2px); transform: translateY(-2px);}
 
-/* footer instagram feed */
-footer .instafeed-grid.gutter-small { margin-left: -5px; margin-right: -5px;}
-footer .instafeed-grid.gutter-very-small { margin-left: -3px; margin-right: -3px;}
-footer .instafeed-grid.gutter-medium { margin-left: -7px; margin-right: -7px;}
-footer .instafeed-grid.gutter-large { margin-left: -10px; margin-right: -10px;}
-footer .instafeed-grid.gutter-extra-large { margin-left: -15px; margin-right: -15px;}
-footer .instafeed-grid.gutter-double-extra-large { margin-left: -20px; margin-right: -20px;}
 
 /* ===================================
     27. home and other pages

@@ -24,12 +24,7 @@ export const Charts: FC = (): ReactElement => {
 
     return (
         <div className="pg-charts">
-            <TabPanel
-                optionalHead={currentMarket?.name}
-                panels={renderTabs()}
-                currentTabIndex={currentTabIndex}
-                onCurrentTabChange={setCurrentTabIndex}
-            />
+           
         </div>
     );
 };
