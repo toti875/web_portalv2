@@ -84,7 +84,6 @@ export const customWidgetOptions = (colorTheme?: string) => {
 		studies_overrides: {
 			['volume.volume.color.0']: downColor,
 			['volume.volume.color.1']: upColor,
-			['relative strength index.rsi.color']: upColor,
 
 		},
 		theme: 'Dark' as ThemeName,
