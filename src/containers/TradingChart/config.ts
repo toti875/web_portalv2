@@ -46,6 +46,6 @@ export const widgetOptions = (colorTheme?: string) => {
 		user_id: 'public_user_id',
 		withdateranges: false,
 
-		...customWidgetOptions('Dark'),
+		...customWidgetOptions(colorTheme),
 	};
 };

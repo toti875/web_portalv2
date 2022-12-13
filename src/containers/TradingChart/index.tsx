@@ -25,8 +25,6 @@ import { widgetOptions, widgetParams } from './config';
 import { getTradingChartTimezone } from './timezones';
 import { HeaderToolbar } from '../HeaderToolbar';
 
-import './TradingChart.pcss';
-
 interface TradingChartComponentProps {
 	hideHeaderContent?: boolean;
 }
@@ -79,8 +77,7 @@ export class TradingChartComponent extends React.PureComponent<Props> {
 	}
 
 	public componentDidMount() {
-		const { currentMarket, markets } = this.props;
-		const colorTheme = 'Dark';
+		const { colorTheme, currentMarket, markets } = this.props;
 
 		if (currentMarket) {
 			this.setChart(markets, currentMarket, colorTheme);

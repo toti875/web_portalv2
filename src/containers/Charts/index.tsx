@@ -13,7 +13,7 @@ export const Charts: FC = (): ReactElement => {
 
     const renderTabs = () => [
         {
-            content: currentTabIndex === 0 ? <TradingChart hideHeaderContent/> : null,
+            content: currentTabIndex === 0 ? <TradingChart /> : null,
             label: intl.formatMessage({ id: 'page.body.charts.tabs.chart' }),
         },
         {
@@ -25,7 +25,7 @@ export const Charts: FC = (): ReactElement => {
     return (
         <div className="pg-charts">
             <TabPanel
-        
+                optionalHead={currentMarket?.name}
                 panels={renderTabs()}
                 currentTabIndex={currentTabIndex}
                 onCurrentTabChange={setCurrentTabIndex}
