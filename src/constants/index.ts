@@ -77,7 +77,7 @@ export const colors = {
 		},
 		orderBook: {
 			asks: 'var(--asks-level-4)',
-			bids: 'var(--bids-level-4)',
+			bids: 'var(--bids-level-7)',
 		},
 		depth: {
 			fillAreaAsk: 'var(--rgb-asks)',
@@ -87,7 +87,7 @@ export const colors = {
 			strokeAreaAsk: 'var(--rgb-asks)',
 			strokeAreaBid: 'var(--rgb-bids)',
 			strokeGrid: 'var(--rgb-secondary-contrast-cta-color)',
-			strokeAxis: 'var(--rgb-primary-text-color)',
+			strokeAxis: 'var(--rgb-secondary-contrast-cta-color)',
 		},
 	},
 };
