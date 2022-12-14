@@ -167,7 +167,7 @@ export const TickerTableScreen = (props: Props) => {
 							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.high' })}</th>
 							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.low' })}</th>
 							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.volume' })}</th>
-							<th scope="col">Markets</th>
+							<th scope="col">Mercados</th>
 						</tr>
 					</thead>
 					<tbody>
