@@ -1,5 +1,5 @@
 import { incrementalOrderBook } from 'api';
-import { MarketTrading, NewOrder, OrderBook, TradingChart, TradingOrderHistory, TradingTradeHistory, Charts } from 'containers';
+import { MarketTrading, OrderComponent, NewOrderBook, TradingChart, TradingOrderHistory, TradingTradeHistory, Charts } from 'containers';
 import { setDocumentTitle } from 'helpers';
 import { depthFetch, marketsFetch, selectCurrentMarket, selectMarkets, selectUserLoggedIn } from 'modules';
 import { rangerConnectFetch } from 'modules/public/ranger';
@@ -48,15 +48,18 @@ const TradingComponent: React.FC<TradingScreenProps> = ({}) => {
 			</div>
 			<div className="td-pg-trading--bg td-pg-trading__item td-pg-trading--bg td-pg-trading__market-trading">
 				<MarketTrading />
+				
+				
 			</div>
 			<div className="td-pg-trading--bg td-pg-trading__item td-pg-trading--bg td-pg-trading__order-book">
-				<OrderBook />
+				<NewOrderBook />
+				
 			</div>
 			<div className="td-pg-trading--bg td-pg-trading__item td-pg-trading--bg td-pg-trading__trading-chart">
 				<Charts />
 			</div>
 			<div className="td-pg-trading--bg td-pg-trading__item td-pg-trading--bg td-pg-trading__order">
-				<NewOrder />
+				<OrderComponent />
 			</div>
 			<div className="td-pg-trading--bg td-pg-trading__item td-pg-trading--bg td-pg-trading__recent-trade">
 				<TradingTradeHistory />

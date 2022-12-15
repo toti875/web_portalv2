@@ -9,18 +9,18 @@ const NavbarItemTitle = styled.button`
   font-family: inherit;
   font-size: 18px;
   padding: 2rem 1.5rem 1.2rem 1.5rem;
-  color: white;
+  color: #f5f5f5;
   display: flex;
   justify-content: center;
   transition: opacity 250ms;
   cursor: pointer;
   /* position above the dropdown, otherwise the dropdown will cover up the bottom sliver of the buttons */
   position: relative;
-  z-index: 9999;
+  z-index: 99999;
   &:hover, &:focus {
     opacity: 0.7;
     outline:none;
-    color: #1EDED0;
+    color: #009991;
   }
 `
 

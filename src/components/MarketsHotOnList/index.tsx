@@ -95,7 +95,7 @@ export const MarketsHotOnlist: React.FC<any> = () => {
 	const fetchMarketsKlines = async (marketId: string, from: number, to: number) => {
 		try {
 			const klines = await axios.get(
-				`${BASE_MARKET_URL}/${marketId.split('/').join('')}/k-line?period=30&time_from=${from}&time_to=${to}`,
+				`${BASE_MARKET_URL}/${marketId.split('/').join('')}/k-line?period=60&time_from=${from}&time_to=${to}`,
 			);
 
 			return klines.data.map((kline, index) => {
@@ -109,6 +109,8 @@ export const MarketsHotOnlist: React.FC<any> = () => {
 		if (marketNames) {
 			const from = Math.floor(Date.now() / 1000) - 60 * 24 * 60 * 1000;
 			const to = Math.floor(Date.now() / 1000);
+
+			
 			const drawMarketLines = async () => {
 				try {
 					for (let i = 0; i < marketNames.length; i++) {

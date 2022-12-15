@@ -2,6 +2,9 @@ import * as React from 'react';
 import { useIntl } from 'react-intl';
 import styled from 'styled-components';
 import ReactPaginate from 'react-paginate';
+
+import './UdonMarketTable.pcss';
+
 interface MarketTableProps {
 	columns: any;
 	data: any;

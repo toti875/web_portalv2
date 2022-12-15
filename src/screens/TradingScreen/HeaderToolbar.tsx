@@ -12,7 +12,7 @@ import styled from 'styled-components';
 export const HeaderToolbarStyle = styled.div`
 	display: flex;
 	justify-content: space-between;
-	height: 60px;
+	height: 50px;
 	padding: 15px 15px;
 	background-color: transparent;
 	font-size: 14px;

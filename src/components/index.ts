@@ -43,11 +43,13 @@ export * from './TwoFactorAuth';
 export * from './UploadFile';
 export * from './WalletItem';
 export * from './WalletList';
+
 export * from './QRCode';
 export * from './TickerTableScreen';
 export * from './Pagination';
 export * from './MarketTable';
 export * from './MarketsHotOnList';
+export * from './MarketsHotOnList2';
 export * from './TradeList';
 export * from './DepositBody';
 export * from './Announcement';

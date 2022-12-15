@@ -13,6 +13,7 @@ import { minutesUntilAutoLogout, sessionCheckInterval /* showLanding */ } from '
 import { AnnouncementDetail, NewModal } from '../../components';
 import { AdminAnnouncement, AnnouncementEdit, WalletsFetch } from '../../containers';
 import { MarketsList } from '../../containers/MarketsList';
+import { MarketsListExchange } from '../../containers/MarketsListExchange';
 import { toggleColorTheme } from '../../helpers';
 import { IntlProps } from '../../index';
 import { AirdropCoinListMobileScreen, StakingDetailMobileScreen, StakingListMobileScreen } from '../../mobile/plugins';
@@ -517,6 +518,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 
 					<PublicRoute exact={false} path="/fee" component={AssetsFeeScreen} />
 					<PublicRoute path="/markets" component={MarketsList} />
+					<PublicRoute path="/exchange" component={MarketsListExchange} />
 					<PublicRoute path="/announcement" exact component={AnnouncementScreen} />
 					<PublicRoute path="/referral" component={Referral} />
 

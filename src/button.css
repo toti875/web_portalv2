@@ -43,34 +43,34 @@ transition: 0.2s;
 
 .btn-primary {
 
-    border: 2px solid #009991 !important;
+    border: 2px solid inherit;
     border-radius: 5px !important;
-    width: 100% !important;
+    width: 100%;
 
     color: var(--button-primary-cta-text-color);
     font-weight: var(--button-font-weight);
-    transition: 0.2s;
+    transition: all 0.2s;
 }
 
 .btn-primary:active,
 .btn-primary:focus {
     
-    border: 2px solid #009991 !important;
+    border: 2px solid inherit;
     border-radius: 5px !important;
-    width: 100% !important;
+    width: 100%;
 
     color: var(--button-primary-cta-text-color);
     font-weight: var(--button-font-weight);
-    transition: 0.2s;
+    transition: all 0.2s;
 }
 
 
 
 .btn-primary:hover {
-        border-color: #00d0b8;
-        border: 2px solid #00d0b8 !important;
+        
+        border: 2px solid inherit;
         color: var(--button-primary-cta-text-color-hover);
-        transition: 0.2s;
+        transition: all 0.2s;
     }
 
     .btn-primary:disabled {
@@ -80,7 +80,5 @@ transition: 0.2s;
         color: var(--button-primary-cta-text-color-disabled);
         cursor: not-allowed;
         
-        background-color: #00d0b8;
-        color: var(--button-primary-cta-text-color-hover);
-        transition: 0.2s;
+        transition: all 0.2s;
     }

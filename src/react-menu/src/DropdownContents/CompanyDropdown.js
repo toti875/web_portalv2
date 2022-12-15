@@ -16,13 +16,13 @@ const Logo = styled.div`
   height: 38px;
   margin-right: 16px;
   border-radius: 100%;
-  opacity: 0.6;
   background-color: ${({ color }) => `var(--${color})`};
 `
 
 const CompanySection = styled.ul`
   li {
     display: flex;
+    z-index: 99999;
   }
 `
 

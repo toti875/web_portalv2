@@ -33,8 +33,8 @@ export const pt = {
 	'page.body.trade.header.newOrder.content.tabs.buy': 'Comprar',
 	'page.body.trade.header.newOrder.content.tabs.sell': 'Vender',
 	'page.body.trade.header.newOrder.content.orderType': 'Tipo de ordem',
-	'page.body.trade.header.newOrder.content.orderType.limit': 'Ordem Limitada',
-	'page.body.trade.header.newOrder.content.orderType.market': 'Ordem a Mercado',
+	'page.body.trade.header.newOrder.content.orderType.limit': 'Limit',
+	'page.body.trade.header.newOrder.content.orderType.market': 'Market',
 	'page.body.trade.header.newOrder.content.price': 'Preço',
 	'page.body.trade.header.newOrder.content.amount': 'Quantidade',
 	'page.body.trade.header.newOrder.content.total': 'Total',
@@ -959,6 +959,7 @@ export const pt = {
 
 'page.body.charts.tabs.chart': 'Gráfico',
 'page.body.charts.tabs.depth': 'Profundidade do livro',
+'page.marketsLists.marketsHotOnList.volume': 'Volume',
 
 
 
