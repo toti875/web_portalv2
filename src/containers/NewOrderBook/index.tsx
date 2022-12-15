@@ -123,10 +123,11 @@ const OrderBookContainer = props => {
 
 			return arrBidsElm.map((item, i) => (
 				<tr className="cnt-order-book-tr" key={i} onClick={() => handleOnSelectBids(i.toString(), total[i])}>
-					<td className="td-order-book-item__positive">{item[0]}</td>
+					<td className="td-order-book-item__positive"  key={item[0]} >{item[0]}</td>
 					<td>{item[1]}</td>
 					<td className="text-right">{item[2]}</td>
 					<td className="cnt-order-book-tr__show-percent-right" style={{ width: `${(item[3] as number) || 0}%` }}></td>
+					
 				</tr>
 			));
 		}

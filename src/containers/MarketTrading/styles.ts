@@ -170,7 +170,7 @@ export const MarketsListTradingStyle = styled.div`
 		position: relative;
 		height: 100%;
 		&__negative {
-			color: ##ED0A3FE0;
+			color: #ED0A3FE0;
 		}
 		&__positive {
 			color: #00CC99E0;
@@ -184,7 +184,7 @@ export const MarketsListTradingStyle = styled.div`
 			vertical-align: middle;
 			width: calc(0.5em * 2);
 			width: calc(var(--gap) * 2);
-			color: white;
+			color: #F5F5F5;
 		}
 		.td-table-container {
 			position: absolute;

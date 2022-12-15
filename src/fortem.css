@@ -1779,65 +1779,34 @@ flex-direction: row !important;
 	
 			}.cnt-order-book .td-order-book-table {
 		}.cnt-order-book .td-order-book-table--all {
-				height: calc((100% - 42px - 40px - 40px - 15px) / 2);
 			}.cnt-order-book .td-order-book-table--orther {
-				height: calc(100% - 42px - 40px - 40px);
 			}.cnt-order-book .td-order-book-table thead,
 			.cnt-order-book .td-order-book-table tbody {
-				display: block;
 			}.cnt-order-book .td-order-book-table thead tr, .cnt-order-book .td-order-book-table tbody tr {
-					background-color: transparent;
-					cursor: pointer;
-					display: block;
-					display: flex;
-					justify-content: space-between;
+
 				}.cnt-order-book .td-order-book-table thead tr:hover, .cnt-order-book .td-order-book-table tbody tr:hover {
-						background-color: transparent !important;
 					}.cnt-order-book .td-order-book-table thead tr th, .cnt-order-book .td-order-book-table tbody tr th {
-						display: flex;
 					}.cnt-order-book .td-order-book-table thead tr td, .cnt-order-book .td-order-book-table tbody tr td {
-						flex: 1;
-						text-align: left;
+			
 					}.cnt-order-book .td-order-book-table tbody {
-				height: 100%;
-				overflow-y: scroll;
+		
 			}.cnt-order-book .td-order-book-table tbody tr {
-					margin-bottom: 1px;
-					margin-top: 1px;
+	
 				}.cnt-order-book .td-order-book-table tbody tr td {
-						height: 100%;
 					}.cnt-order-book .td-order-book-table.td-reverse-table-body tbody {
-					-webkit-transform: rotate(180deg);
-					        transform: rotate(180deg);
+			
 				}.cnt-order-book .td-order-book-table.td-reverse-table-body tbody .td-order-book-table__empty_data {
-						-webkit-transform: rotate(180deg);
-						        transform: rotate(180deg);
+					
 					}.cnt-order-book .td-order-book-table.td-reverse-table-body tbody tr {
-						direction: rtl;
 					}.cnt-order-book .td-order-book-table.td-reverse-table-body tbody tr td {
-							-webkit-transform: rotate(180deg);
-							        transform: rotate(180deg);
+		
 						}.cnt-order-book-tr {
-	position: relative;
-	z-index: 5;
+	
 }.cnt-order-book-tr__show-percent-right {
-		background: #00CC99;
-		height: 100%;
-		left: unset;
-		position: absolute;
-		right: 0;
-		top: 0;
-		z-index: -5;
+
 	}.cnt-order-book-tr__show-percent-left {
-		background: #D92121;
-		height: 100%;
-		left: 0;
-		position: absolute;
-		right: unset;
-		top: 0;
-		z-index: -5;
+
 	}.sc-dIouRR {
-    z-index: 9999 !important;
 
 
 }.sc-ehmTmK:hover {

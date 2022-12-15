@@ -15405,13 +15405,15 @@ th#react-table table:last-child {
 .cnt-order-book {
 	bottom: 0;
 	color: #C0C0C0;
-	font-size: 12.5px;
+	font-size: 12px;
 	weight: 300;
 	height: calc(100% - 6px);
 	left: 0;
 	position: absolute;
 	right: 0;
 	top: 0;
+
+	font-weight: 300;
 }
 
 .cnt-order-book .td-order-book {
@@ -15420,13 +15422,13 @@ th#react-table table:last-child {
 	}
 
 .cnt-order-book .td-order-book-item__negative {
-			color: #ED0A3F;
-			font-weight: 200 !important;
+			color: #f5f5f5;
+			font-weight: 300 !important;
 		}
 
 .cnt-order-book .td-order-book-item__positive {
-			color: #00CC99;
-			font-weight: 300;
+			color: #f5f5f5;
+			font-weight: 300 !important;
 		}
 
 .cnt-order-book .td-order-book-tooltip {
@@ -15532,7 +15534,7 @@ th#react-table table:last-child {
 
 .cnt-order-book .td-order-book-table tbody {
 				height: 100%;
-				overflow-y: scroll;
+				overflow-y: hodden;
 			}
 
 .cnt-order-book .td-order-book-table tbody tr {
@@ -15555,7 +15557,7 @@ th#react-table table:last-child {
 					}
 
 .cnt-order-book .td-order-book-table.td-reverse-table-body tbody tr {
-						direction: rtl;
+						direction: rtl !important;
 					}
 
 .cnt-order-book .td-order-book-table.td-reverse-table-body tbody tr td {
@@ -15566,6 +15568,7 @@ th#react-table table:last-child {
 .cnt-order-book-tr {
 	position: relative;
 	z-index: 5;
+	padding: 0 !important;
 }
 
 .cnt-order-book-tr__show-percent-right {/*background: rgba(47, 182, 126, 0.4) !important;*/}
@@ -15573,11 +15576,11 @@ th#react-table table:last-child {
 .cnt-order-book-tr__show-percent-right {
 		background: #00CC9980  !important;
 		height: 100%;
-		left: unset;
+		left: 0;
 		position: absolute;
 		right: 0;
 		top: 0;
-		z-index: -5;
+		z-index: -5 !important;
 
 
  
@@ -15587,13 +15590,79 @@ th#react-table table:last-child {
 
 .cnt-order-book-tr__show-percent-left {
 		background: #ED0A3F60 !important;
+		//background: linear-gradient(90deg, rgba(232,73,70,0.7) 0%, rgba(253,29,29,0.7) 50%, rgba(237,10,63,0.7) 100%) !important;
 		height: 100%;
 		left: 0;
 		position: absolute;
-		right: unset;
+		right: 0;
 		top: 0;
-		z-index: -5;
+		z-index: -5 !important;
+		//animation: 2s linear infinite condemned_blink_effect;
 
 
  
 }
+
+.td-order-book-item__positive {
+	-webkit-animation: flash_green 1s linear 1 !important;
+	        animation: flash_green 1s linear 1 !important;
+
+
+
+}
+
+@-webkit-keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.bg-overlay2 {
+    position: relative;
+
+    
+    
+        height: 100%;
+        width: 100%;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        background-color: transparent;
+        background-image: linear-gradient(90deg, #060606 0%, #06060600 90%);
+        content: "XXXXXXXXXX";
+		-webkit-animation-name: flash_red;
+		        animation-name: flash_red;
+		-webkit-animation-duration: 4s;
+		        animation-duration: 4s;
+    
+}
+
+@-webkit-keyframes condemned_blink_effect {
+	0% {
+	  visibility: hidden;
+	}
+	50% {
+	  visibility: hidden;
+	}
+	100% {
+	  visibility: visible;
+	}
+  }
+
+@keyframes condemned_blink_effect {
+	0% {
+	  visibility: hidden;
+	}
+	50% {
+	  visibility: hidden;
+	}
+	100% {
+	  visibility: visible;
+	}
+  }
