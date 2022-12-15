@@ -15534,7 +15534,7 @@ th#react-table table:last-child {
 
 .cnt-order-book .td-order-book-table tbody {
 				height: 100%;
-				overflow-y: hodden;
+				overflow-y: hidden !important;
 			}
 
 .cnt-order-book .td-order-book-table tbody tr {
