@@ -959,7 +959,7 @@ export const pt = {
 
 'page.body.charts.tabs.chart': 'Gráfico',
 'page.body.charts.tabs.depth': 'Profundidade do livro',
-'page.marketsLists.marketsHotOnList.volume': 'Volume',
+'page.marketsLists.marketsHotOnList.volume': 'Volume: ',
 
 
 

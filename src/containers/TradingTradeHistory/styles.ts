@@ -24,7 +24,7 @@ export const MarketHistory = styled.div`
 		.td-tabs-nav-list {
 			display: flex;
 			.td-tabs-tab {
-				font0size: 14px;
+				font-size: 14px;
 				font-weight: 500;
 				&.td-tabs-tab-active {
 					font-weight: 500;
@@ -38,7 +38,7 @@ export const MarketHistory = styled.div`
 				}
 				.td-tabs-tab-btn {
 					
-					font-size: 15px;
+					font-size: 14px;
 					font-weight: 500;
 
 					padding: 5px 0;
@@ -48,7 +48,7 @@ export const MarketHistory = styled.div`
 			}
 		}
 		.td-tabs-content-holder {
-			font-size: 12px;
+			font-size: 13px;
 			font-weight: 400;
 			flex: 1;
 			.td-tabs-content {
@@ -68,13 +68,16 @@ export const MarketHistory = styled.div`
 		overflow-x: hidden;
 		overflow-y: scroll;
 		position: relative;
+		font-size: 13px;
 		font-weight: 400;
 		height: 100%;
 		&__negative {
-			color: #e84946;
+			color: #ED0A3F;
+			font-weight: 400;
 		}
 		&__positive {
-			color: #2fb67e;
+			color: #00CC99;
+			font-weight: 400;
 		}
 		.td-table-container {
 			padding-top: 10px;
@@ -92,16 +95,19 @@ export const MarketHistory = styled.div`
 				.td-table__head {
 					height: 22px;
 					display: block;
+					font-size: 13px;
 					background: transparent;
 					tr {
 						background: transparent;
 						display: flex;
 						padding-right: 20px;
+						font-size: 13px;
 						th {
 							width: calc(100% / 3);
 							background-color: transparent;
 							padding: 2px 0 !important;
-							font-weight: 300;
+							font-weight: 400;
+							font-size: 13px;
 							color: #848e9c;
 							text-align: right;
 							:first-child {
@@ -113,7 +119,7 @@ export const MarketHistory = styled.div`
 				.td-table__body {
 					font-size: 13px;
 					padding-right: 15px;
-					color: #f5f5f5;
+					color: #c0c0c0;
 					background: transparent;
 					height: calc(100% - 22px);
 					::-webkit-scrollbar {
@@ -129,12 +135,11 @@ export const MarketHistory = styled.div`
 					tr {
 						background: transparent;
 						font-size: 13px;
-						font-weight: 300;
 						td.td-table__empty:nth-child(2) {
 							text-align: center;
 						}
 						td {
-							color: #f5f5f5;
+							color: #c0c0c0;
 							padding: 3px 0 !important;
 							text-align: right;
 							background-color: transparent;

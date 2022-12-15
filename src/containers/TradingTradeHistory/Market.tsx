@@ -67,8 +67,8 @@ const RecentTradesMarketContainer: React.FC = () => {
 			const isPositive = taker_type === 'sell';
 
 			const classname = classNames({
-				'td-recent-trades__markets__positive': isPositive,
-				'td-recent-trades__markets__negative': !isPositive,
+				'td-recent-trades__markets__positive': !isPositive,
+				'td-recent-trades__markets__negative': isPositive,
 			});
 
 			return [

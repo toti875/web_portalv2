@@ -18,9 +18,9 @@ export const SearchBlockStyle = styled.div`
 		height: 30px;
 		justify-content: center;
 		align-items: center;
-		border: 1px solid #555555;
+		border-bottom: 1px solid #009991;
 		background-color: #1f1f1f !important;
-		border-radius: 5px;
+		border-radius: 0px;
 		padding: 8px;
 		font-size: 12.5px;
 
@@ -36,7 +36,7 @@ export const SearchBlockStyle = styled.div`
 			background-color: transparent;
 			border: none;
 			color: #555555;
-			padding-top: 25px;
+			padding-top: 0px;
 			::placeholder {
 				color: #555555;
 			}
@@ -71,7 +71,7 @@ export const SearchBlockStyle = styled.div`
 					max-height: 6px;
 					margin: 5px;
 					border-radius: 99999px;
-					padding: 1px;
+					padding: 0.8px;
 					background: #009991;
 				
 				}
@@ -170,10 +170,10 @@ export const MarketsListTradingStyle = styled.div`
 		position: relative;
 		height: 100%;
 		&__negative {
-			color: #ef5350;
+			color: ##ED0A3FE0;
 		}
 		&__positive {
-			color: #13b887;
+			color: #00CC99E0;
 		}
 		.sort-icon svg {
 			height: calc(0.5em * 1.67);

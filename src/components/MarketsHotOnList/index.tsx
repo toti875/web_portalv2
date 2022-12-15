@@ -19,12 +19,12 @@ const MarketChartItem = styled.div`
 	width: 340px;
 	height: 160px;
 	padding: 10px;
-	border-radius: 10px;
-	background-color: #F5F5F5;
+	border-radius: 5px;
+	background-color: #dde1e7;
 	transition: transform 1s;
 	cursor: pointer;
 	:hover {
-		opacity: 0.6;
+		opacity: 0.91;
 		transform: scale(1.1) ;
 		box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
 	}

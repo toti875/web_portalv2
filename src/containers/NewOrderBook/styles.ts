@@ -17,7 +17,7 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 	bottom: 0;
 	right: 0;
 	height: calc(100% - 6px);
-	color: #F5F5F5;
+	color: #c0c0c0;
 	font-size: 13px;
 	font-weight: 400;
 	padding: 0 10px;
@@ -31,14 +31,16 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 		padding-top: 10px;
 		padding-bottom: 15px;
 		&-item__negative {
-			color: #ED0A3F;
+			color: #ED0A3FDA;
+			font-weight: 400;
 			webkit-animation: flash_red 2.5s ; /* Safari 4+ */
 			moz-animation:    flash_red 2.5s ; /* Fx 5+ */
 			o-animation:      flash_red 2.5s ; /* Opera 12+ */
 			animation:         flash_red 2.5s ; /* IE 10+ */	
 		}
 		&-item__positive {
-			color: #00CC99;
+			color: #00CC99EE;
+			font-weight: 400;
 			webkit-animation: flash_green 2.5s ; /* Safari 4+ */
 			moz-animation:    flash_green 2.5s ; /* Fx 5+ */
 			o-animation:      flash_green 2.5s ; /* Opera 12+ */
@@ -85,7 +87,7 @@ export const OrderBookStyle = styled.div<OrderBookProps>`
 			justify-content: center;
 			font-size: 14px;
 			&__last-price {
-				font-size: 18px;
+				font-size: 16px;
 			}
 			&__usd {
 				color: #888888;
