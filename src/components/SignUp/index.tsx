@@ -267,7 +267,7 @@ export const SignUpForm = (props: SignUpFormProps) => {
 							autoFocus={false}
 						/>
 					</div>
-					<Form className="cr-sign-up-form__group" onClick={e => props.clickCheckBox(e)}>
+					<Form className="cr-sign-up-form__group2" onClick={e => props.clickCheckBox(e)}>
 						<Form.Check
 							type="checkbox"
 							custom

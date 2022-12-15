@@ -15581,6 +15581,8 @@ th#react-table table:last-child {
 		right: 0;
 		top: 0;
 		z-index: -5 !important;
+		-webkit-animation: flash_green 1s linear 1 !important;
+		        animation: flash_green 1s linear 1 !important;
 
 
  
@@ -15598,14 +15600,15 @@ th#react-table table:last-child {
 		top: 0;
 		z-index: -5 !important;
 		//animation: 2s linear infinite condemned_blink_effect;
+		-webkit-animation: flash_red 1s linear 1 !important;
+		        animation: flash_red 1s linear 1 !important;
 
 
  
 }
 
 .td-order-book-item__positive {
-	-webkit-animation: flash_green 1s linear 1 !important;
-	        animation: flash_green 1s linear 1 !important;
+	//animation: flash_green 1s linear 1 !important;
 
 
 

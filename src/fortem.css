@@ -3985,13 +3985,17 @@ a:-webkit-any-link {
 
 }.content_login_form {
 
-	max-width: 360px !important;
+  max-width: 360px !important;
 
   background: #dde1e7 !important;
   border-radius: 10px;
   padding: 30px 30px !important;
   box-shadow: -3px -3px 7px #ffffff73,
               2px 2px 5px rgba(94, 104, 121, 0.288) !important;
+
+  
+    
+    
 
  
 }.cr-sign-in-form__image {
@@ -4132,12 +4136,14 @@ margin-left: 20px;
 	background: url(./assets/images/bg-signin.jpg);
     box-sizing: border-box;
     font-family: 'Inter', sans-serif !important;
+    padding-bottom: 60px !important;
+
     
 	background-size: cover;
 	display: flex;
 	height: 100% !important;
 	justify-content: center;
-	margin: 0 auto;
+	margin: 0 auto !important;
     opacity: 0.71 !important;
     -webkit-backdrop-filter: blur(17px) saturate(70%) !important;
     backdrop-filter: blur(10px) saturate(135%) !important;
