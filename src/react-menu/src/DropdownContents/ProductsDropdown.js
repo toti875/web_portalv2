@@ -80,7 +80,7 @@ const ProductsDropdown = () => {
                   <Icon />Negociação instantânea
               </a><br/>
               {/* <a href="/market/btcusd" style={{fontSize: '16px'}} target="_blank" rel="noopener noreferrer"> */}
-              <a href="/exchange" style={{fontSize: '16px'}} >
+              <a href="/market/ethusd" style={{fontSize: '16px'}} >
                   <Icon />Negociação avançada (Exchange Pro)
               </a>
             </div>
