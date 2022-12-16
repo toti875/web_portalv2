@@ -244,7 +244,7 @@ export const HeaderNavbar: React.FC = () => {
 						<div className="header2__left-menu__dropdown flex-shrink-0">
 							<div className={classLinkActive('markets')} onClick={() => setStateActiveNow('markets')}>
 								<Link
-									to="/markets"
+									to="/exchange"
 									className="header2__left-menu__dropdown__wrap__dropbtn d-flex flex-row align-items-center"
 								>
 									Exchange Pro

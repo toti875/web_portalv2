@@ -23,7 +23,7 @@ import Typed from 'react-typed';
 import ScrollAnimation from "react-animate-on-scroll";
 import {TextDecrypt} from './TextDecrypt.js';
 
-import './MarketsList.pcss';
+//import './MarketsList.pcss';
 
 import { BannerActivation } from "../../template_react/doob/src/utils/script";
 
@@ -79,7 +79,7 @@ export const MarketsList = props => {
 		if (currentMarket) {
 			props.handleChangeCurrentMarket && props.handleChangeCurrentMarket(currentMarket);
 			dispatch(setCurrentMarket(currentMarket));
-			history.push(`https://exchange.fortem1.com.br/market/${currentMarket.id}`);
+			history.push(`https://www.fortem1.com.br/market/${currentMarket.id}`);
 		}
 	};
 
@@ -473,11 +473,12 @@ export const MarketsList = props => {
 	
 		
 
-	
-		{renderBanner()}
+		<div className='marketsHotBanner'>
+		<div>{MarketsHotOnList()}</div>
+		</div>
+		
 
-		<div id="marketList">
-			<div>{MarketsHotOnList()}</div>
+		<div className='w-container'>
 			<div>{MarketsTabs()}</div>
 		</div>
 		</div>

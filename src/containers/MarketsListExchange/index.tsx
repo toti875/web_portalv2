@@ -12,8 +12,6 @@ import { Market, selectMarkets, selectMarketTickers, setCurrentMarket } from '..
 import classNames from 'classnames';
 import { useIntl } from 'react-intl';
 
-import './MarketsListExchange.pcss';
-
 const defaultTicker = {
 	amount: '0.0',
 	last: '0.0',

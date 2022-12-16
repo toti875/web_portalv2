@@ -84,12 +84,12 @@ export const pt = {
 	'page.body.marketsTable.filter.all': 'Todos os mercados',
 	'page.body.marketsTable.header.pair': 'Mercado',
 	'page.body.marketsTable.header.lastPrice': 'Último preço',
-	'page.body.marketsTable.header.change': 'Variação (24h)',
+	'page.body.marketsTable.header.change': 'Variação % (24h)',
 	'page.body.marketsTable.header.high': 'Valor máximo (24h)',
 	'page.body.marketsTable.header.low': 'Valor mínimo (24h)',
 	'page.body.marketsTable.header.volume': 'Volume (24h)',
-	'page.body.marketsTable.header.trade': 'Negociar (Exchange)',
-	'page.marketsLists.table.body.trade': 'Negociar (Exchange)',
+	'page.body.marketsTable.header.trade': 'Negociar',
+	'page.marketsLists.table.body.trade': 'Negociar',
 
 	/* Wallets */
 	'page.body.wallets.estimated_value_dolar': 'Valor aproximado em Reais: ',

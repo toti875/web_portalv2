@@ -158,7 +158,7 @@ const HeaderToolbarContainer: React.FC = () => {
 						{translate('page.body.trade.toolBar.volume')}
 					</p>
 					<p className={`td-header__toolbar-item-value td-header__toolbar-item-value-${cls}`}>
-						{Decimal.formatRemoveZero(Number(getTickerValue('volume')), pricePrecision, '.')} {bidUnit}
+						{Decimal.formatRemoveZero(Number(getTickerValue('volume')), 2, '.')} {bidUnit}
 						
 					</p>
 				</div>

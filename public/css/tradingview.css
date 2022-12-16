@@ -15,7 +15,7 @@ html.theme-dark .group-wWM3zP_M- {
 	width: 100%;
 
 	#cryptobase_chart {
-		background: transparent;
+		background: #0E0E0E !important;
 		height: calc(100% - 39px);
 	}
 

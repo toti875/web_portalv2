@@ -2238,17 +2238,10 @@ flex-direction: row !important;
 			line-height: 22px;
 			opacity: 0.71;
 			text-align: center;
-		}{/*//buttonFiat*/}.market-pair__fiat {
-	color: #F5F5F5;
-	cursor: pointer;
-	outline: none;
-	width: 6rem;
-}.market-pair__fiat__active {
-	color: #009991;
-	cursor: pointer;
-	outline: none;
-	width: 6rem;
-}{/*//combinedOrderBook*/}.cr-combined-order-book {
+		}
+        
+
+{/*//combinedOrderBook*/}.cr-combined-order-book {
 }.cr-combined-order-book .cr-table {
 		table-layout: fixed;
 	}.cr-combined-order-book .cr-table td,

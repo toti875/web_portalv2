@@ -12,8 +12,8 @@ import { useDispatch, useSelector,  } from 'react-redux';
 import { useHistory } from 'react-router';
 import { currenciesFetch, SaleItem, selectCurrencies } from '../../../../modules';
 //import {Modal} from '../../../../components/Modal'
-import './IEOItem.css';
-import '../../../../template/html/css/style.css';
+//import './IEOItem.css';
+//import '../../../../template/html/css/style.css';
 import Separator from "../../../../template_react/doob/src/elements/separator/Separator";
 import ReactCardFlip from "react-card-flip";
 //import { BuyersHistory, BuyHistory, SaleBuy, SaleDetail, SaleInfo, SaleSocial } from '../../containers';
