@@ -15608,9 +15608,14 @@ th#react-table table:last-child {
 }
 
 .td-order-book-item__positive {
-	//animation: flash_green 1s linear 1 !important;
+	-webkit-animation: flash_green 1s linear 1 !important;
+	        animation: flash_green 1s linear 1 !important;
 
+}
 
+.td-order-book-item__negative {
+	-webkit-animation: flash_red 1s linear 1 !important;
+	        animation: flash_red 1s linear 1 !important;
 
 }
 
