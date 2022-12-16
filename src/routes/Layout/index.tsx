@@ -439,8 +439,12 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 						{/* new feature */}
 						<Route path="/airdrops" exact component={AirdropCoinListMobileScreen} />
 						{/* new feature */}
+
+						<PublicRoute path="/tokens" exact component={SaleListScreen} />
+						<PublicRoute path="/ieo/detail/:ieoID" exact component={SaleDetailScreen} />
+
 						<Route path="*">
-							<Redirect to="/" />
+							<Redirect to="/home" />
 						</Route>
 					</Switch>
 					{isLoggedIn && <WalletsFetch />}
@@ -618,6 +622,10 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					<PublicRoute path="/trading-competition/:competition_id" exact component={CompetitionDetailScreen} />
 					<PublicRoute path="/stake" exact component={StakingListScreen} />
 					<PublicRoute path="/stake/detail/:stake_id" exact component={StakingDetailScreen} />
+
+					<Route path="*">
+							<Redirect to="/home" />
+					</Route>
 
 
 				</Switch>

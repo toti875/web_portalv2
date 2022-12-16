@@ -13,8 +13,7 @@ import { Parallax } from 'react-scroll-parallax';
 
 
 import './SaleListScreen.css';
-//const GlobeAnimated  = require ('../../../../assets/images/ticker-tape.mp4');
-const GlobeAnimated  = require ('./b.mp4');
+
 
 const bgF  = require ('./bf-fortem.png');
 
@@ -91,7 +90,7 @@ export const SaleListScreen: React.FC = () => {
 			{renderEvent()}	
 
 			<div style={{ position: 'relative', padding: '0 5%' }}>
-				<img style={{ width: '100%', height: '600px', margin: 0 }} src={bgF} alt="token_banner" />
+				<img style={{ width: '100%', height: '22rem', margin: 0 }} src={bgF} alt="token_banner" />
 			
 			</div>
 
@@ -102,7 +101,7 @@ export const SaleListScreen: React.FC = () => {
 				<div className="row">
 					<div className="col-12 text-center">
 						{/*<h1  className="sale-list__title">Seja bem-vindo ao marketplace de tokens da Fortem ONE</h1>*/}
-						<h2 className="sale-list__subtitle">
+						<h2 className="sale-list__subtitle" style={{fontSize: '1.4rem'}}>
 							Seu ponto de partida para investir nos produtos mais rentáveis e seguros que o blockchain tem a oferecer.
 						</h2>
 					</div>

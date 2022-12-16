@@ -7,8 +7,7 @@
 }
 
 .banner {
-	width: 100%;
-	height: 100vh;
+
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
@@ -16,15 +15,6 @@
 	position: relative;
 	opacity: 1;
 	
-  }
-  .banner video {
-	position: absolute;
-	opacity: 0.85;
-	top: -200px;
-	left: 0;
-	object-fit: cover;
-	width: 100%;
-	blur: 100px;
   }
 
   .logoCentral {
@@ -36,7 +26,6 @@
 
 .sale-list__title,
 .sale-list__subtitle {
-	font-size: 20px;
 	padding: 1rem 0;
 	margin: 0 10rem 2rem 10rem;
 }
@@ -45,7 +34,6 @@
 	color: #ffffff;
 	line-height: 31px;
 	font-weight: 700;
-	font-size: 3rem;
 	text-align: center;
 }
 

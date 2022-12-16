@@ -10,6 +10,8 @@ import { eventFetch, selectEvents, selectUserLoggedIn} from '../../modules';
 import { useDispatch, useSelector } from 'react-redux';
 import Slider from 'react-slick';
 
+import { isMobile } from "react-device-detect";
+
 //import "./css/font-icons.min.css";
 //import "./css/theme-vendors.min.css";
 //import "./css/style.css";
@@ -353,7 +355,7 @@ function scrollRotate() {
 		
 		{BannerData.map((data, index) => (
 			<div key={1} className="single-slide">
-				<div className="bg-overlay bg_image" style={{ width: '100%', height: '800px', backgroundPosition: '1% 80%',}}>
+				<div className="bg-overlay bg_image" style={{ width: '100%', height: '80vh', backgroundPosition: '1% 80%',}}>
 				<img src={data.image_background} style={{filter: 'blur(1px)', backgroundPosition: '1% 80%', backgroundSize: 'cover', opacity: '0.2', width: '100%', height: '800px'}}/>
 				<img className="logo" src={Logo} style={{ opacity: '1 !important', position: 'absolute', color: 'white', background: 'transparent', width: '460px',  top: '210px', paddingLeft: '30px'}}  />
 					<div className="container2 position-relative">
