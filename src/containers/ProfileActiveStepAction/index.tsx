@@ -63,8 +63,7 @@ class ProfileActiveStepActionComponent extends React.Component<Props, State> {
 			case 3:
 				return (
 					<div>
-						Conclua seu cadastro - Documentos
-						<CrossIcon />
+						Revise seu cadastro  <CrossIcon />
 					</div>
 				);
 			default:

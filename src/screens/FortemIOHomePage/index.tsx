@@ -1239,7 +1239,7 @@ const renderBlog = () => (
 			return (
 				<div className="homepage-info">
 					<div>
-						<h2 className="homepage-info__number" style={{ border: `5px solid ${'#1EDED0'}`, color: `${'#fff'}` }}>
+						<h2 className="homepage-info__number" style={{ border: `5px solid ${'#1EDED0'}`, color: `${'#F5F5F5'}` }}>
 							{value}
 						</h2>
 					</div>
@@ -1251,17 +1251,17 @@ const renderBlog = () => (
 		};
 
 		return (
-			<div className="container mt-3">
+			<div className="w-container mt-3">
 				<div className="row px-3">
 					<div className="col-4">
 						{/*<InfoItem name={'Currencies'} value={statistics.currencies} color="#99FFE7" />*/}
-						<InfoItem name={'Cripto'} value={240} color="#fff" />
+						<InfoItem name={'Cripto'} value={240} color="#F5F5F5" />
 					</div>
 					<div className="col-4">
-						<InfoItem name={'Tokens'} value={8} color="#fff" />
+						<InfoItem name={'Tokens'} value={8} color="#F5F5F5" />
 					</div>
 					<div className="col-4">
-						<InfoItem name={'Mercados'} value={219} color="#fff" />
+						<InfoItem name={'Mercados'} value={219} color="#F5F5F5" />
 					</div>
 				</div>
 			</div>

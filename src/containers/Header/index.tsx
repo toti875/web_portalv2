@@ -185,16 +185,19 @@ export const Header: React.FC = () => {
 				<>
 					
 					<div className="header__right-menu__item__title">
+
+						{/*}
 						< Notifications  data={data} header={{
     	title: 'Notificações',
     	option: { text: 'Ver todas', onClick: () => console.log('Clicked') },
 		classNamePrefix: 'fortem' }} />
+						*/}
 					</div>
 					<div className="header__right-menu__dropdown__wrap">
 						<span className={classLinkActiveTitleDrop('account')}>
 							<FaUserCircle className="header__right-menu__dropdown__wrap__content__title__icon mr-2" />
-							
-							{translate('page.body.homepage.header.account')}
+							Aristóteles Guimarães Jr.
+							{/*{translate('page.body.homepage.header.account')}*/}
 							<div className="header__right-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div>
 						</span>
 						<div className="header__right-menu__dropdown__wrap__content header__right-menu__dropdown__wrap__content--account">
@@ -220,7 +223,7 @@ export const Header: React.FC = () => {
 					}}
 				>
 					<div className={classActiveItemDrop('kyc')}>
-						<FaUserCircle className="header__right-menu__dropdown__wrap__content__title__icon mr-2" />
+						<FaUserCircle className="header__right-menu__dropdown__wrap__content__title__icon" />
 						< ProfileActiveStepAction />
 						{/*<FormattedMessage id={'page.header.navbar.profile'} />*/}
 					</div>

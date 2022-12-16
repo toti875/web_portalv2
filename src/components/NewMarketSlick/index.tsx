@@ -22,7 +22,7 @@ const ChartWrap = styled.div`
 	
 
 	.market-slick {
-
+		backdrop-filter: blur(10px);
 
 
 		div{
@@ -34,6 +34,7 @@ const ChartWrap = styled.div`
 					border-bottom: 1px solid rgb(66, 66, 66);
 					background: transparent;
 					max-height: 62px !important;
+					backdrop-filter: blur(10px);
 
 
 					.slick-track {
@@ -224,12 +225,12 @@ export const NewMarketSlick: React.FC<any> = () => {
 			};
 			return ( 
 				<MarketChartItem>
-					<div className="container-ticker" onClick={() => handleRedirectToTrading(market.id)}>
+					<div className="container-ticker" style={{backdropFilter: 'blur(10px)'}} onClick={() => handleRedirectToTrading(market.id)}>
 						<div className="tickerIcon">
 							<img style={{ borderRadius: '50%' }} width="38px" height="38px" src={findIcon(baseCurrency)} />
 						</div>
 						<div className="tickerInfo" style={{borderRight: '1px solid rgb(66, 66, 66)', marginRight: '-15px', marginTop: '4px', paddingRight: '6px'}}>
-							<div style={{display: 'flex', flexDirection: 'row',  justifyContent: 'space-between',alignContent: 'space-between', fontSize: '16px', color: "whiteSmoke",}}>
+							<div style={{display: 'flex', flexDirection: 'row',  justifyContent: 'space-between',alignContent: 'space-between', fontSize: '16px', color: "f5f5f5",}}>
 
 								<span>{market.base_unit.toUpperCase()}</span>
 								<span>{last}</span>
@@ -253,7 +254,7 @@ export const NewMarketSlick: React.FC<any> = () => {
 	return (
 		<ChartWrap>
 
-				<div className='slide-track market-slick ' style={{ paddingTop: '-80px', width: '240px', height: '62px',  border: '1px solid rgb(66, 66, 66)', borderRight: 'none',  zIndex: 9999, }}>  {MarketChart(kLinesState[1], "BTC/USDT")}</div>
+				<div className='slide-track market-slick ' style={{ paddingTop: '-80px', width: '240px', height: '62px',  border: '1px solid rgb(66, 66, 66)', borderRight: 'none',  zIndex: 9999, }}>  {MarketChart(kLinesState[1], "BTC/USD")}</div>
 				<div className="market-slick " style={{ borderRadius: '1rem', marginLeft: '246px', marginTop: '-62px' }}>
 				
 					<div>

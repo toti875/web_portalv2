@@ -713,14 +713,15 @@ export const pt = {
 	'record.not_found': 'Registro não encontrado',
 	'jwt.decode_and_verify': 'Falha na decodificação do seu código de acesso',
 	'authz.invalid_session': 'Falha na decodificação do seu código de acesso',
-	'authz.user_not_active': 'Cliente ainda não ativou seu cadastro',
+	'authz.user_not_active': 'Você precisa ativar seu cadastro',
 	'authz.invalid_signature': `API Key header 'signature' inválido`,
-	'authz.apikey_not_active': `Chave de API náo habilitada`,
+	'authz.apikey_not_active': `Chave de API não habilitada`,
 	'authz.disabled_2fa': 'API Key owner has disabled 2FA',
 	'authz.invalid_api_key_headers': 'Blank or missing API Key headers',
+	'authz.invalid_permission': `Sem permissão para esta operação`,
 	'authz.permission_denied': 'Path is denylisted',
 	'authz.unexistent_apikey': 'X-Auth-Apikey header is invalid',
-	'authz.client_session_mismatch': 'Sessão inválida',
+	'authz.client_session_mismatch': 'Sessão inválida. Refaça seu login.',
 	'authz.csrf_token_mismatch': 'Token de autenticação inválido',
 
 	// validation errors

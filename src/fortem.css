@@ -4982,13 +4982,15 @@ margin-left: 20px;
 
 		}.fortem-mainPage .market .container .home-market {
 				margin: 0 auto !important;
+                margin-top: 30px !important;
+                margin-bottom: 100px !important;
 				background: transparent !important;
 
 
 
 			}.fortem-mainPage .market .container .home-market .home-market__trading-btn {
 					background: transparent;
-					border: 1px solid #1EDED0;
+					border: 1px solid #009991;
 					border-radius: 5px;
 					box-sizing: border-box;
 					color: #c4c4c4;
@@ -5167,37 +5169,9 @@ max-height: 862px;
 				font-size: 16px;
 				line-height: 19px;
 				margin-left: 10px;
-			}.homepage-info {
-	align-items: center;
-	border-radius: 5px;
-	box-shadow: 0 4px 21px rgba(0, 0, 0, 0.1);
-	display: flex;
-	flex-direction: row;
-	gap: 1rem;
-	padding: 3rem 2rem;
-	background: transparent !important;
-}.homepage-info__number {
-		align-items: center;
-		border: 5px solid #1EDED0 !important;
-		border-radius: 50%;
-		box-sizing: border-box;
-		color: #fff;
-		display: flex;
-		font-size: 26px;
-		font-weight: bold;
-		height: 8rem;
-		justify-content: center;
-		padding: 1rem;
-		text-align: center;
-		width: 8rem;
-	}.homepage-info__text {
-		align-items: center;
-		color: #fff;
-		display: flex;
-		font-size: 2rem;
-		justify-content: center;
-		text-align: center;
-	}* {
+			}
+    
+* {
     box-sizing: border-box;
 }article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
     display: block;
