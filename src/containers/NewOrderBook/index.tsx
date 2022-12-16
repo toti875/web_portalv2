@@ -272,7 +272,7 @@ const OrderBookContainer = props => {
 									+get(currentTicker, 'last', 0),
 									get(currentMarket, 'price_precision', 0),
 								)}
-								{cls === 'positive' ? <img src={upSvg} alt="" /> : <img src={downSvg} alt="" />}
+								{cls === 'positive' ? <img style={{marginLeft: '10px'}} src={upSvg} alt="" /> : <img style={{marginLeft: '10px'}} src={downSvg} alt="" />}
 							</Col>
 							<Col className={`p-0  td-order-book-ticker__usd d-flex align-items-center`} lg="auto">
 								[Último preço do mercado]

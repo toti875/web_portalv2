@@ -23,7 +23,7 @@ export const OrderStyle = styled.div`
 				justify-content: center;
 				span {
 					color: #848e9c;
-					margin-right: 5px;
+					margin-right: 50px;
 				}
 				button {
 					outline: none;

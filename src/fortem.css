@@ -5609,7 +5609,7 @@ max-height: 862px;
 				color: rgba(255, 255, 255, 0.7);
 				padding-bottom: 2px;
 }.footerDesktop-screen .footer__info__item:hover {
-					color: white;
+					color: #f5f5f5;
 					transition: all 0.4s;
 				}.footerDesktop-screen .footer__news__title {
 				font-size: 18px;
@@ -5620,17 +5620,19 @@ max-height: 862px;
 			}.footerDesktop-screen .footer__news__take-email__label {
 					color: rgba(255, 255, 255, 0.7);
 				}.footerDesktop-screen .footer__news__take-email__input::-webkit-input-placeholder {
-						color: #fff;
+						color: #f5f5f5;
 						opacity: 0.7;
 					}.footerDesktop-screen .footer__news__take-email__input::placeholder {
-						color: #fff;
+						color: #f5f5f5;
 						opacity: 0.7;
+                        font-size: 13px !important;
 					}.footerDesktop-screen .footer__news__take-email__input {
 
 					background-color: transparent;
-					border: 0.5px solid #1EDED0 !important;
-					border-radius: 5px;
-					color: #fff;
+                    border: none !important;
+					border-bottom: 1px solid #1EDED0 !important;
+					border-radius: 0px;
+					color: #f5f5f5;
 					height: 40px;
 					outline: none;
 					padding-left: 10px;

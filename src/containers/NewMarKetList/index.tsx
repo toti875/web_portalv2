@@ -177,7 +177,7 @@ export const NewMarketList: React.FC<any> = () => {
 
 		if (currentMarket) {
 			dispatch(setCurrentMarket(currentMarket));
-			history.push(`https://exchange.fortem1.com.br/market/${currentMarket.id}`);
+			history.push(`https://www.fortem1.com.br/market/${currentMarket.id}`);
 		}
 	};
 

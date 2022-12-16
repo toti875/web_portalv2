@@ -55,7 +55,7 @@ class HeaderToolbarContainer extends React.Component<Props> {
 				</div>
 				<div className="pg-header__toolbar-item">
 					<p className={`pg-header__toolbar-item-value pg-header__toolbar-item-value-${cls}`}>
-						{currentMarket && Decimal.formatRemoveZero(Number(this.getTickerValue('volume')), 4)} {bidUnit}
+						{currentMarket && Decimal.formatRemoveZero(Number(this.getTickerValue('volume')), 4, '.')} {bidUnit}
 					</p>
 					<p className="pg-header__toolbar-item-text">{this.translate('page.body.trade.toolBar.volume')}</p>
 				</div>

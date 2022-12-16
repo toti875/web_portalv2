@@ -988,8 +988,9 @@
   }
 
 #marketList {
-	background: #0E0E0E;
-	margin-bottom: 35px;
+	background: transparent;
+	margin-top: 60px;
+	margin-bottom: 60px;
 	padding: 0 10%;
 }
 
@@ -1715,41 +1716,7 @@ element.style {
 
 .ant-table {
 	backgroud: transparent;
-
-}
-
-.ant-table-thead > tr > th {
-
-	color: #c0c0c0;
-	border-bottom: 1px solid #c0c0c0;
-
-}
-
-.exchange-price input {
-
-	width: 60px !important;
-	color: blue !important;
-	border-bottom: 1px solid yellow;
-
-}
-
-#exchange-price input {
-
-	width: 60px !important;
-	color: blue !important;
-	border-bottom: 1px solid yellow;
-
-}
-
-#exchange-price {
-
-	color: blue !important;
-	border-bottom: 1px solid yellow !important;
-
-}
-
-.input-group span {
-	color: blue;
+	width: 100% !important;
 
 }
 
@@ -1760,10 +1727,10 @@ element.style {
 */
 
 	/* --rgb-main-background-color: 23, 28, 41;                switch to light */
-	--rgb-main-background-color: 14, 14, 14; /* switch to light */
+	--rgb-main-background-color: 14, 14, 14 !important;/* switch to light */
 
 	/* --rgb-body-background-color: 30, 40, 65;                switch to light */
-	--rgb-body-background-color: 14, 14, 14; /* switch to light */
+	--rgb-body-background-color: 14, 14, 14 !important; /* switch to light */
 
 	/* --rgb-header-background-color: 30, 40, 65;             /* switch to light */
 	--rgb-header-background-color: 43, 49, 57; /* switch to light */
@@ -1786,7 +1753,7 @@ element.style {
 
 	--rgb-divider-color: 255, 255, 255; /* switch to light */
 	--rgb-shadow-color: 23, 28, 41; /* switch to light */
-	--rgb-landing-background-color: 251, 251, 251;
+	--rgb-landing-background-color: 14, 14, 14;
 	--rgb-strength-meter-very-strong: 108, 239, 239;
 
 	/* BUTTON FONT WEIGHT */
@@ -14098,7 +14065,7 @@ th#react-table table:last-child {
 *	================================== */
 
 :root,
-.light-mode {
+.dark-mode {
   /*  ================================
       1. General area
     ================================ */
@@ -14514,17 +14481,17 @@ th#react-table table:last-child {
 */
 
 	/* --rgb-main-background-color: 23, 28, 41;                switch to light */
-	--rgb-main-background-color: 41, 45, 63; /* switch to light */
+	--rgb-main-background-color: 14, 14, 14 !important; /* switch to light */
 
 	/* --rgb-body-background-color: 30, 40, 65;                switch to light */
-	--rgb-body-background-color: 43, 49, 57; /* switch to light */
+	--rgb-body-background-color: 14, 14, 14; /* switch to light */
 
 	/* --rgb-header-background-color: 30, 40, 65;             /* switch to light */
-	--rgb-header-background-color: 43, 49, 57; /* switch to light */
+	--rgb-header-background-color: 14, 14, 14; /* switch to light */
 
 	/* --rgb-subheader-background-color: 40, 51, 78;           switch to light */
-	--rgb-subheader-background-color: 49, 52, 69; /* switch to light */
-	--rgb-dropdown-background-color: 61, 68, 98; /* switch to light */
+	--rgb-subheader-background-color: 14, 14, 14; /* switch to light */
+	--rgb-dropdown-background-color: 14, 14, 14; /* switch to light */
 	--rgb-icons: 115, 127, 146; /* switch to light */
 	--rgb-primary-cta-color: 60, 120, 224;
 	--rgb-contrast-cta-color: 255, 255, 255; /* switch to light */
@@ -14532,7 +14499,7 @@ th#react-table table:last-child {
 	--rgb-cta-layer-color: 255, 255, 255;
 	--rgb-system-green: 84, 180, 137;
 	--rgb-system-red: 232, 94, 89;
-	--rgb-system-yellow: 232, 175, 89;
+	--rgb-system-yellow: 253, 167, 54;
 	--rgb-asks: 232, 94, 89;
 	--rgb-bids: 84, 180, 137;
 	--rgb-primary-text-color: 255, 255, 255; /* switch to light */
