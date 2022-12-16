@@ -15,14 +15,14 @@ export const defaultConfig: Config = {
 
 	
 	api: {
-		authzURL: 'http://www.fortem1.com.br/api/v2/auth',
-		switchURL: 'http://www.fortem1.com.br/api/v2/applogic',
-		transactionURL: 'http://www.fortem1.com.br/api/v2/peatio',
-		ieoURL: 'http://www.fortem1.com.br/api/v2/peatio',
+		authzURL: 'https://www.fortem1.com.br/api/v2/auth',
+		switchURL: 'https://www.fortem1.com.br/api/v2/applogic',
+		transactionURL: 'https://www.fortem1.com.br/api/v2/peatio',
+		ieoURL: 'https://www.fortem1.com.br/api/v2/peatio',
 
-		infoURL: 'http://www.fortem1.com.br/api/v2/peatio',
+		infoURL: 'https://www.fortem1.com.br/api/v2/peatio',
 		//downstreamURL: 'wss://www.fortem1.com.br/api/public/',
-		downstreamURL: 'ws://www.fortem1.com.br/api/v2/ranger',
+		downstreamURL: 'wss://www.fortem1.com.br/api/v2/ranger',
 
 	},
 	
@@ -40,7 +40,7 @@ export const defaultConfig: Config = {
 	isResizable: true,
 	isDraggable: true,
 	languages: ['pt'],
-	sessionCheckInterval: '10000',
+	sessionCheckInterval: '5000',
 	balancesFetchInterval: '2000',
 	passwordEntropyStep: 14,
 	showLanding: true,
@@ -81,7 +81,7 @@ export const msAlertDisplayTime = (): string => Cryptobase.config.msAlertDisplay
 export const msPricesUpdates = () => Cryptobase.config.msPricesUpdates || '1000'
 export const rangerReconnectPeriod = (): number =>
 	Cryptobase.config.rangerReconnectPeriod ? Number(Cryptobase.config.rangerReconnectPeriod) : 1; 
-export const incrementalOrderBook = (): boolean => Cryptobase.config.incrementalOrderBook || false;
+export const incrementalOrderBook = (): boolean => Cryptobase.config.incrementalOrderBook || true;
 export const isResizableGrid = (): boolean => Cryptobase.config.isResizable || true;
 export const isDraggableGrid = (): boolean => Cryptobase.config.isDraggable || true;
 export const languages =
