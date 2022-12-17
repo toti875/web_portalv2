@@ -197,9 +197,10 @@ const Login = React.memo((props: LogInProps) => {
 					>
 						Faça o login com o email utilizado no cadastro
 					</div>
-
+					
 				
 					<div className="input-group">
+						<span className="input-group-text  bg-transparent" style={{marginTop: '40px', marginLeft: '0px', width: '40px', height: '38px'}}><i className="ti-user"></i></span>
   
 						<FormInput
 							
@@ -216,6 +217,7 @@ const Login = React.memo((props: LogInProps) => {
 						/>
 						{emailError && <div className={'cr-sign-in-form__error'}>{emailError}</div>}
 				
+						<span className="input-group-text  bg-transparent" style={{marginTop: '110px', marginLeft: '0px', width: '40px', height: '38px'}}><i className="ti-lock"></i></span>
 						<FormInput
 							classNameInput="input-login"
 							type="password"

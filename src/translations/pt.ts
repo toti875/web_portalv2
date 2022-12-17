@@ -547,7 +547,7 @@ export const pt = {
 	'page.header.signUp.terms': 'Li e aceito os Termos de Uso e a Política de Privacidade',
 	'page.header.signUp.modal.header': 'ÓTIMO. SEU CADASTRO FOI INICIADO.',
 	'page.header.signUp.modal.body':
-		'Seu cadastro foi inicado com sucesso. ' +
+		'Seu cadastro na Fortem ONE foi inicado com sucesso. ' +
 		'Agora, verifique seu email para ativar a sua conta ' +
 		'e ter acesso à plataforma.',
 	'page.header.signUp.modal.footer': 'OK',

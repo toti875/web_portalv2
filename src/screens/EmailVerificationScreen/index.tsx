@@ -37,7 +37,7 @@ type Props = DispatchProps & ReduxProps & OwnProps & IntlProps;
 
 class EmailVerificationComponent extends React.Component<Props> {
 	public componentDidMount() {
-		setDocumentTitle('Email verification');
+		setDocumentTitle('Confirme seu email');
 		if (!this.props.location.state || !this.props.location.state.email) {
 			this.props.history.push('/signin');
 		}

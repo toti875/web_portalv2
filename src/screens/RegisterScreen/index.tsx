@@ -166,7 +166,7 @@ class FormRegister extends React.Component<Props> {
 
 		return (
 			<div className="pg-sign-in-screen-basic">
-			<div className="pg-sign-up-screen">
+			<div className="pg-sign-up-screen cr-sign-in-form ">
 				<div className={className}>
 					<Register
 						//labelSignIn={this.props.intl.formatMessage({ id: 'page.header.signIn' })}
@@ -478,7 +478,7 @@ class FormRegister extends React.Component<Props> {
 	private renderModalFooter = () => {
 		return (
 			<div className="pg-exchange-modal-submit-footer">
-				<Button block={false} onClick={this.closeModal} variant="sign-up">
+				<Button block={false} onClick={this.closeModal} variant="login">
 					{this.props.intl.formatMessage({ id: 'page.header.signUp.modal.footer' })}
 				</Button>
 			</div>
