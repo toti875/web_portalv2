@@ -17561,6 +17561,11 @@
     "prop-types" "^15.6.0"
     "spin.js" "^2.3.2"
 
+"react-spinners@^0.13.7":
+  "integrity" "sha512-mRamn56bfxWbGcacif5RT3UbeJaXi2AttjtPwSmomuv2IcxjpbfETCzdTvaQpNDk0E33ENJsStsQeKAZFuJcpA=="
+  "resolved" "https://registry.npmjs.org/react-spinners/-/react-spinners-0.13.7.tgz"
+  "version" "0.13.7"
+
 "react-style-singleton@^2.1.0", "react-style-singleton@^2.2.1":
   "integrity" "sha512-ZWj0fHEMyWkHzKYUr2Bs/4zU6XLmq9HsgBURm7g5pAVfyn49DgUiNgY2d4lXRlYSiCif9YBGpQleewkcqddc7g=="
   "resolved" "https://registry.npmjs.org/react-style-singleton/-/react-style-singleton-2.2.1.tgz"
