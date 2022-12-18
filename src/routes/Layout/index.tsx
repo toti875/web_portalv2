@@ -93,7 +93,10 @@ import {
 	WalletListScreen,
 	WithdrawScreen,
 	FortemIOHomePage,
+	FortemIOHomePageMobile,
+
 	PortfolioScreen,
+
 	QuickExchange,
 	KYCScreen,
 } from '../../screens';
@@ -422,11 +425,18 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 						/>
 
 						<Route exact={false} path="/market/:market?" component={NewTradingScreenMobile} />
-						<Route exact={true} path="/" component={HomePageScreenMobile} />
-						<Route exact={true} path="/home" component={FortemIOHomePage} />
+						
+						{/*<Route exact={true} path="/" component={HomePageScreenMobile} />*/}
+						<Route exact={true} path="/" component={FortemIOHomePageMobile} />
+
+
+						<Route exact={true} path="/home" component={FortemIOHomePageMobile} />
+						
 						<Route exact={true} path="/markets" component={NewMarketsScreenMobile} />
-						<Route path="/ieo" exact component={IEOListMobileScreen} />
-						<Route path="/ieo/detail/:ieoID" exact component={IEODetailMobileScreen} />
+						{/*<Route path="/ieo" exact component={IEOListMobileScreen} />*/}
+						
+						<PublicRoute path="/ieo/detail/:ieoID" exact component={SaleDetailScreen} />
+						{/*<Route path="/ieo/detail/:ieoID" exact component={IEODetailMobileScreen} />*/}
 						<Route path="/trading-competition" exact component={TradingCompetionListMobileScreen} />
 						<Route
 							path="/trading-competition/:competition_id"

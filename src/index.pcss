@@ -26548,3 +26548,567 @@ html.theme-dark .group-wWM3zP_M- {
 		justify-content: center;
 		text-align: center;
 	}
+
+
+{/*   *** MOBILE TRADING SCREEN   */}
+
+.td-mobile-screen-trading {
+	min-height: 100vh;
+	padding: 0.375em var(--mobile-main-padding-size);
+
+			&__main-content {
+	> .td-tabs {
+			font-size: inherit;
+
+			> .td-tabs-nav {
+				background: var(--mobile-body-background-color);
+				box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+
+				> .td-tabs-nav-wrap {
+					justify-content: center;
+					padding-bottom: 1em;
+					padding-top: 1em;
+
+					> .td-tabs-nav-list {
+						.td-tabs-tab {
+							.td-tabs-tab-btn {
+								border-radius: 100px;
+								color: #fff;
+								font-size: 0.75em;
+								padding: 0 1.5em;
+							}
+						}
+
+						.td-tabs-tab-disabled {
+							.td-tabs-tab-btn {
+								color: #fff9;
+							}
+						}
+
+						.td-tabs-tab-active {
+							font-weight: 400;
+
+							.td-tabs-tab-btn {
+								background-color: #2fb67e;
+								box-shadow: 0 8px 8px rgba(0, 0, 0, 0.15);
+							}
+						}
+					}
+				}
+			}
+
+			> .td-tabs-content-holder {
+				padding: 0.6em 0.7em;
+			}
+		}
+	}
+}
+
+{/*   Wallets Screen   */}
+
+.td-mobile-wallets {
+	.td-mobile-cpn-estimated-value {
+		margin-bottom: 0.25em;
+	}
+
+	&__header {
+		align-items: center;
+		background-color: var(--main-background-color);
+		display: flex;
+		justify-content: space-between;
+		padding: 1em;
+		width: 100%;
+
+		&__search-box {
+			align-items: center;
+			background: rgba(196, 196, 196, 0.28);
+			border: 0.5px solid #848e9c;
+			border-radius: 0.25rem;
+			display: flex;
+			margin: 0;
+			max-width: 45%;
+			padding: 0.3em;
+
+			&__icon {
+				width: 30px;
+			}
+
+			&__input {
+				background: transparent;
+				border: none;
+				color: #fff;
+				font-size: 0.9em;
+				outline: none;
+				width: calc(100% - 30px);
+			}
+		}
+
+		&__toggle {
+			align-items: center;
+			display: flex;
+			gap: 0.5em;
+			margin: 0;
+
+			&__text {
+				font-size: 0.75em;
+				text-align: right;
+			}
+
+			&__checkbox {
+				background-color: var(--main-background-color);
+				border: #fff 1px solid;
+				border-radius: 999px;
+				height: calc(1em + 3px);
+				margin: 0;
+				position: relative;
+				width: calc(2em + 3px);
+
+				&--checked {
+					background-color: #fff !important;
+				}
+
+				&__input {
+					display: none;
+				}
+
+				&__dot {
+					background-color: #848e9c;
+					border-radius: 999px;
+					height: 1em;
+					left: 1.5px;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					transition: 0.3s ease-in-out;
+					width: 1em;
+				}
+
+				&__input:checked + &__dot {
+					left: calc(100% - 1em - 1.5px);
+				}
+			}
+		}
+	}
+
+	&__list {
+		background-color: var(--mobile-body-background-color);
+		border-radius: var(--mobile-border-radius-small-size);
+		box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.15);
+		margin: var(--mobile-main-margin-size);
+		padding: var(--mobile-main-padding-lr-size);
+
+		&__item {
+			border-bottom: 0.5px solid rgba(132, 142, 156, 0.5);
+			display: block;
+			padding: 0.9em 0;
+
+			&:hover {
+				text-decoration: none;
+			}
+
+			&:last-child {
+				border-bottom: none;
+			}
+
+			&__top {
+				align-items: center;
+				color: #fff;
+				display: flex;
+				gap: 0.5em;
+
+				&__icon {
+					border-radius: 999px;
+					height: 1.5em;
+					overflow: hidden;
+					width: 1.5em;
+
+					img {
+						max-height: 100%;
+						max-width: 100%;
+					}
+				}
+
+				&__text {
+					padding-top: 3px;
+				}
+
+				&__number {
+					flex-grow: 1;
+					padding-top: 3px;
+					text-align: right;
+					text-overflow: ellipsis;
+				}
+			}
+
+			&__bottom {
+				align-items: center;
+				color: #848e9c;
+				display: flex;
+				font-size: 0.875em;
+				gap: 0.5em;
+				padding-left: calc(1.5em + 0.5em + 3px);
+
+				&__text {
+					font-weight: 500;
+				}
+
+				&__number {
+					flex-grow: 1;
+					text-align: right;
+					text-overflow: ellipsis;
+				}
+			}
+		}
+	}
+}
+
+{/* Markets Scrren */}
+
+.td-mobile-screen-market {
+	&__header__wrapper {
+		margin-bottom: 1em;
+	}
+
+	&__header {
+		align-items: center;
+		background-color: var(--mobile-body-background-color);
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 15px;
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+		padding-top: 20px;
+
+		&__title {
+			color: #2fb67e;
+			font-size: 1.25em;
+			font-weight: 500;
+			line-height: 23, 44px;
+		}
+
+		&__search {
+			cursor: pointer;
+		}
+	}
+
+	&__header-search {
+		align-items: center;
+		background-color: var(--mobile-body-background-color);
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 15px;
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+		padding-top: 20px;
+
+		&__input {
+			span {
+				align-items: center;
+				color: #848e9c;
+				display: flex;
+				height: 25px;
+				margin-left: 5px;
+				position: absolute;
+				z-index: 10;
+			}
+
+			input[type='text'] {
+				background-color: #c4c4c438;
+				border: 0;
+				border: none; /* <-- This thing here */
+				border-radius: 1vw !important;
+				color: white;
+				height: 30px;
+				padding-left: 30px;
+
+				&:focus {
+					border-color: inherit;
+					-webkit-box-shadow: none;
+					box-shadow: none;
+					outline: none;
+				}
+
+				&::-webkit-input-placeholder {
+					/* Chrome/Opera/Safari */
+					color: #848e9c;
+					font-family: Poppins, sans-serif;
+				}
+			}
+		}
+
+		&__desc {
+			color: #2fb67e;
+			cursor: pointer;
+			font-size: 0.875em;
+			line-height: 16, 4px;
+			padding-left: 16px;
+		}
+	}
+}
+
+
+
+{/*   *** COMPONENTS   *** */}
+
+{/*   Wallet Header Component */}
+
+/* stylelint-disable */
+.td-wallet-mobile-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 87px;
+	background: var(--body-background-color);
+	margin-top: 4px;
+	margin-bottom: 4px;
+
+	img {
+		max-height: 48px;
+		max-width: 48px;
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+
+		&-currency {
+			text-transform: uppercase;
+			font-size: 16px;
+			font-weight: 600;
+			color: wheat;
+		}
+
+		&-name {
+			font-size: 14px;
+		}
+	}
+
+	.td-wallet-item__icon {
+		margin-left: 0;
+		img {
+			width: 48px;
+			margin-right: 12px;
+			height: 48px;
+		}
+	}
+}
+
+{/*   *** CUSTOM INPUT COMPONENT *** */}
+
+.mobile-custom-input {
+	padding: '1rem 0';
+
+	input {
+		border-color: var(--input-border-color);
+		font-size: 12px !important;
+	}
+
+	label {
+		background: var(--mobile-body-background-color) !important;
+		color: #fff;
+		font-size: 12px;
+		left: 2%;
+		margin-top: -8px;
+		padding: 0 calc(var(--gap) * 0.7);
+		position: absolute;
+		top: 0;
+		z-index: 5;
+	}
+
+	input,
+	input:focus {
+		background-color: rgba(196, 196, 196, 0.28) !important;
+		box-shadow: none;
+		color: #fff !important;
+	}
+
+	input:focus-within {
+		border-color: var(--input-border-color-active);
+
+		label {
+			background-color: var(--mobile-body-background-color) !important;
+			color: #fff;
+		}
+	}
+
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover,
+	input:-webkit-autofill:focus {
+		border: 1px solid var(--input-border-color);
+		-webkit-box-shadow: 0 0 0 1000px var(--input-background-color) inset;
+		-webkit-text-fill-color: var(--input-text-color);
+		transition: background-color 5000s ease-in-out 0s;
+	}
+}
+
+.pg-mobile-app .custom-input {
+	font-size: 12px;
+
+	input {
+		font-size: 12px;
+
+		&::placeholder {
+			font-size: 12px;
+		}
+	}
+}
+
+{/* Order Book Component */}
+
+.td-mobile-cpn-order-book {
+	background: transparent;
+
+	&--horizontal {
+		display: grid;
+		gap: 0 3px;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto auto;
+
+		.td-mobile-cpn-order-book__combined {
+			height: unset;
+		}
+
+		.td-mobile-cpn-order-book__market {
+			align-items: center;
+			flex-direction: row;
+			grid-column: 1/3;
+			grid-row: 1/2;
+			justify-content: center;
+
+			.td-mobile-cpn-order-book__market__last-price {
+				margin-right: 1em;
+			}
+		}
+
+		.td-mobile-cpn-order-book__header--grid-item-1 {
+			flex-direction: row-reverse;
+			grid-column: 1/2;
+			grid-row: 2/3;
+
+			div:nth-child(1) {
+				text-align: right;
+			}
+
+			div:nth-child(2) {
+				text-align: left !important;
+			}
+		}
+
+		.td-mobile-cpn-order-book__header--grid-item-2 {
+			grid-column: 2/3;
+			grid-row: 2/3;
+		}
+
+		.td-mobile-cpn-order-book__combined--grid-item-1 {
+			grid-column: 1/2;
+			grid-row: 3/4;
+
+			table tbody tr {
+				flex-direction: row-reverse;
+
+				.td-mobile-cpn-order-book__combined--bg-ask-row {
+					left: unset;
+					right: 0;
+				}
+			}
+		}
+
+		.td-mobile-cpn-order-book__combined--grid-item-2 {
+			grid-column: 2/3;
+			grid-row: 3/4;
+		}
+	}
+
+	&__header {
+		color: #848e9c;
+		display: flex;
+		font-size: 0.75em;
+		padding-bottom: 0.3em;
+
+		&__item {
+			flex: 1;
+		}
+	}
+
+	&__market {
+		color: #e84946;
+		display: flex;
+		flex-direction: column;
+		margin: 0.4em;
+
+		&__last-price {
+			font-size: 1em;
+			font-weight: 500;
+		}
+
+		&__convert-usd {
+			font-size: 0.75em;
+			font-weight: 400;
+		}
+	}
+
+	&__combined--reverse {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	&__combined {
+		color: #848e9c;
+		height: calc(1.375em * 6);
+		overflow-y: scroll;
+
+		&--ask-color {
+			color: #e84946;
+		}
+
+		&--bid-color {
+			color: #2fb67e;
+		}
+
+		table {
+			width: 100%;
+
+			tbody {
+				tr {
+					cursor: pointer;
+					display: flex;
+					justify-content: space-between;
+					position: relative;
+
+					td {
+						font-size: 0.75em;
+						line-height: 1.84em;
+						padding-bottom: unset;
+						padding-top: unset;
+
+						&:first-child {
+							padding-left: 0.4em;
+						}
+
+						&:last-child {
+							padding-right: 0.4em;
+						}
+
+						.td-mobile-cpn-order-book__combined--bg-bid-row,
+						.td-mobile-cpn-order-book__combined--bg-ask-row {
+							bottom: 0;
+							left: 0;
+							position: absolute;
+							top: 0;
+						}
+
+						.td-mobile-cpn-order-book__combined--bg-ask-row {
+							background: rgba(232, 73, 70, 0.16);
+						}
+
+						.td-mobile-cpn-order-book__combined--bg-bid-row {
+							background: rgba(47, 182, 126, 0.15);
+						}
+					}
+				}
+			}
+		}
+	}
+}

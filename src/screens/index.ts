@@ -29,6 +29,7 @@ export * from './TradingScreenV';
 export * from './AssetsFeeScreen';
 export * from './Referral';
 export * from './FortemIOHomePage';
+export * from './FortemIOHomePageMobile';
 export * from './PortfolioScreen';
 export * from './PortfolioValueScreen';
 export * from './QuickExchange';

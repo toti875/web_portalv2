@@ -44,7 +44,7 @@ export const HeaderSearch: React.FC<SearchProps> = ({ onSearch, backToAll }) => 
 	return (
 		<div className="td-mobile-screen-market__header__wrapper">
 			<div className={nonSearch}>
-				<div className="td-mobile-screen-market__header__title">Market</div>
+				<div className="td-mobile-screen-market__header__title">Mercados</div>
 
 				<div className="td-mobile-screen-market__header__search " onClick={() => openForm(true)}>
 					<FaSearch />
@@ -66,7 +66,7 @@ export const HeaderSearch: React.FC<SearchProps> = ({ onSearch, backToAll }) => 
 					/>
 				</div>
 				<div className="td-mobile-screen-market__header-search__desc" onClick={() => openForm(false)}>
-					Cancel
+					Cancelar
 				</div>
 			</div>
 		</div>

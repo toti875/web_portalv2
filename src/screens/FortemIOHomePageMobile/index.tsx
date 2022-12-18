@@ -222,7 +222,7 @@ var encode = function(svg, fill) {
 
   return `url("${dataUrl}")`;
 };
-export const SALE_UDON_CONFIG = {
+export const SALE_FTK_CONFIG = {
 	udonTotalNumber: 2 * 10 ** 12,
 	udonTotalText: '2.000.000.000.000',
 	endTime: 'Nov 5,2021',
@@ -261,7 +261,7 @@ const BannerData2 = [
 ]
 
 
-export const FortemIOHomePage = () => {
+export const FortemIOHomePageMobile = () => {
 	setDocumentTitle('Portal');
 
 
