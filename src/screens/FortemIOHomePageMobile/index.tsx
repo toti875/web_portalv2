@@ -356,19 +356,19 @@ function scrollRotate() {
 		
 		{BannerData.map((data, index) => (
 			<div key={1} className="single-slide">
-				<div className="bg-overlay bg_image" style={{ width: '100vw', height: '70vh', backgroundPosition: '1% 80%',}}>
+				<div className="bg-overlay bg_image" style={{ width: '100vw', height: '66vh', backgroundPosition: '1% 80%',}}>
 				<img src={data.image_background} style={{filter: 'blur(1px)', backgroundPosition: '1% 80%', backgroundSize: 'cover', opacity: '0.2', width: '100%', height: '100%'}}/>
 				<img className="logo" src={Logo} style={{ opacity: '1 !important', position: 'absolute', color: 'white', background: 'transparent', width: '14rem',  top: '10%', paddingLeft: '5%'}}  />
 					<div className="container2 position-relative">
 						
 						
 
-						<div className="row row--30 align-items-center">
+						<div className="row align-items-center">
 							<div className="col-lg-12">
 								<div className="align-items-center justify-items-center" style={{display: 'flex', justifyContent: 'center'}}>
-										<h3 className="description justify-center animate_flash" style={{fontFamily: 'Alliance1', fontSize: '1.2rem', fontWeight: 'bold', justifyContent: 'center', position: 'absolute', left: '5%', top: '-190%', color: '#f5f5f5', display: 'flex',  width: '50vw', }}> Fortem ONE é a plataforma especializada em  </h3>
+										<h3 className="description justify-center animate_flash" style={{fontFamily: 'Alliance1', fontSize: '1rem', fontWeight: 'bold', justifyContent: 'center', position: 'absolute', left: '5%', bottom: '40vh', color: '#f5f5f5', display: 'flex',  width: '70%', }}> Fortem ONE é a plataforma especializada em  </h3>
 										<br/>
-										<h3  className=" animate__animated animate__bounce animate__animated animate_flash" style={{opacity: '0.64', fontFamily: 'Alliance1', fontSize: '1rem', fontWeight: 'bold', position: 'absolute', left: '5%', top: '-40%', width: '680px', color: '#1EDED0'}} > 
+										<h3  className=" animate__animated animate__bounce animate__animated animate_flash" style={{opacity: '0.64', fontFamily: 'Alliance1', fontSize: '0.9rem', fontWeight: 'bold', position: 'absolute', left: '5%', bottom: '37vh', width: '60vw', color: '#1EDED0'}} > 
 										<Typed
                                             strings={[
                                                 "ativos digitais",
@@ -386,25 +386,12 @@ function scrollRotate() {
 										</h3>
 										
 										<Zoom interval={10000} delay={10000} forever={false} duration={8000}>
-											<h3 className="description justify-center animate__animated animate__bounce" style={{position: 'absolute',  top: '50%', left: '10%',  display: 'flex', fontSize: '0.6rem', width: '100%', }}> {data.description}</h3>
+											<h3 className="description justify-center animate__animated animate__bounce" style={{position: 'absolute',  bottom: '25vh', left: '5%', right:'5%',  display: 'flex', fontSize: '0.7rem', width: '90%', }}> {data.description}</h3>
 										</Zoom>
 										<Zoom interval={20000} delay={18000} forever={false} duration={6000}>
-											<h3 className="description justify-center animate__animated animate__bounce" style={{opacity: 0.2, position: 'absolute',  top: '-180px', left: '84px',  display: 'flex', fontSize: '20px', width: '100%', }}> Re-escrevendo o futuro dos investimentos.</h3>
+											<h3 className="description justify-center animate__animated animate__bounce" style={{opacity: 0.2, position: 'absolute',  bottom: '17vh', left: '5%', right: '5%',  display: 'flex', fontSize: '0.7rem', width: '90%', }}> Re-escrevendo o futuro dos investimentos.</h3>
 										</Zoom>
 
-										{isLogin ? (
-								<button className="btnRegister" onClick={redirectTrading} style={{position: 'absolute',   bottom: '370px', left: '60%'}}>
-									{translate('page.homePage.trade.btn.trade')}
-								</button>
-							) : (
-								<>
-								
-										<a className="btn-default header__right-menu__items" href="/signin" style={{paddingTop: '15px', paddingBottom: '15px', paddingLeft: '20px', paddingRight: '20px', fontFamily: 'Verdana', fontWeight: 'bold', fontSize: '22px', position: 'absolute',  bottom: '370px', left: '50%', background: 'transparent'}}>Acessar plataforma <svg xmlns="http://www.w3.org/2000/svg" className="iconSignin" fill="#f5f5f5"  width="28px" viewBox="0 0 16 16"><path d="M15 1H4a1 1 0 0 0-1 1v2h2V3h9v10H5v-1H3v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/><path  d="m4.879 10.293 1.414 1.414L10 8 6.293 4.293 4.879 5.707 6.172 7H0v2h6.172z"/></svg></a>
-							
-																<button className="btn-default header__right-menu__item__title" onClick={redirectSingUP} style={{fontFamily: 'Verdana', fontWeight: 'bold', fontSize: '22px',  position: 'absolute',  bottom: '370px', left: '70%'}}>
-																Conecte-se com a Fortem
-															</button></>
-							)}
 
 
 										</div>
@@ -412,7 +399,7 @@ function scrollRotate() {
 						</div>
 						</div>
 				</div>
-				<div style={{}} >{renderMarketSlick()}	</div>
+				<div style={{marginBottom: '0px'}} >{renderMarketSlick()}	</div>
 			</div>
 
 
@@ -1283,21 +1270,21 @@ const renderBlog = () => (
 	const renderEvent = () => {
 		return (
 		
-			<div className="homepage-event  rn-header header-default " style={{background: '#000',  margin: '0px auto', marginLeft: '5px', display: 'flex', flexDirection: 'row', height: '36px', borderTop: '2px solid #46473E', borderBottom: '2px solid #46473E', minWidth: '100px', }}> 
+			<div className="homepage-event  rn-header header-default " style={{background: '#000',  margin: '0px auto', marginLeft: '0px', display: 'flex', flexDirection: 'row', height: '1.5rem', borderTop: '1px solid #46473E', borderBottom: '1px solid #46473E', width: '100vw', marginTop: '-14px'}}> 
 			
-				<div  className="news-event "  style={{margin: '0 auto', maxWidth: '80px', background: '#000', alignItems: 'center',  color: '#1EDED0', borderRight: '1px solid gray', fontSize: '16px',  maxHeight: '32px' }}>
-				<Pulse forever={true}>	<img src={news} style={{ marginTop: '0px', minWidth: '30px', }}></img></Pulse>
+				
+				<Pulse forever={true}>	<img src={news} style={{color: '#1EDED0', width: '1.2rem', height: '1.4rem' }}></img></Pulse>
 									
-				</div>
+				
 
-				<div className="theme-shape-root"  style={{WebkitBackdropFilter: 'blur(10px)', backdropFilter: 'blur(17px) saturate(70%)', color: '#1EDED0', alignItems: 'center',   marginLeft: '10px', height: '26px', backgroundColor: 'transparent'}}>
+				<div className="theme-shape-root"  style={{color: '#1EDED0', alignItems: 'center', height: '1.4rem', backgroundColor: 'transparent'}}>
 
 
 					<Slider {...settingEvents}>
 						{[...events.payload].map(event => {
 							return (
 								<div className="news-event text-center justify-content-center" style={{display: 'flex', textAlign: 'center'}}>
-									<h3  style={{WebkitBackdropFilter: 'blur(10px)', backdropFilter: 'blur(17px) saturate(70%)', opacity: '1', fontSize: '16px', fontWeight: 400, color: '#F5F5F5', letterSpacing: '2px', marginTop: '-14px', background: 'transparent',  fontFamily: 'Raleway Dots'}} >
+									<h3  style={{ verticalAlign: 'middle', opacity: '1', fontSize: '0.52rem', fontWeight: 400, color: '#F5F5F5', letterSpacing: '1px', marginTop: '-14px', background: '#000',  fontFamily: 'Raleway Dots'}} >
 									
 										<a style={{fontFamily: 'Raleway Dots', }} href={event.ref_link}>{event.event_name}{event.description}</a>
 									
