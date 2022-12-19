@@ -75,7 +75,7 @@ export const NewWalletsMobileScreen = () => {
 				</label>
 
 				<div className="td-mobile-wallets__header__toggle">
-					<span className="td-mobile-wallets__header__toggle__text">Hide small balance</span>
+					<span className="td-mobile-wallets__header__toggle__text">Ocultar pequenas quantias</span>
 					<label
 						className={classnames('td-mobile-wallets__header__toggle__checkbox', {
 							'td-mobile-wallets__header__toggle__checkbox--checked': hideSmallBalance,

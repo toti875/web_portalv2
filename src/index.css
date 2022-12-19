@@ -28001,3 +28001,96 @@ html.theme-dark .group-wWM3zP_M- {
 							background: rgba(47, 182, 126, 0.15);
 						}
 
+.rn-progress-parent {
+    position: fixed;
+    right: 30px;
+    bottom: 320px !important;
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    display: block;
+    border-radius: 50px;
+    box-shadow: inset 0 0 0 2px #0d0d12;
+    z-index: 10000;
+    opacity: 0;
+    visibility:  hidden !important;
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+    transition: all 200ms linear;
+    enabled1: false;
+}
+
+.rn-progress-parent.rn-backto-top-active {
+        enabled: true;
+        visibility: visible !important;
+
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+
+.rn-progress-parent::after {
+        position: absolute;
+        font-family: 'feather' !important;
+        content: "^";
+                text-align: center;
+        line-height: 46px;
+        font-size: 24px;
+        color: #1EDED0;
+        left: 0;
+        top: 0;
+        height: 46px;
+        width: 46px;
+        cursor: pointer;
+        display: block;
+        z-index: 2;
+        transition: all 200ms linear;
+    }
+
+.rn-progress-parent:hover::after {
+            color: #1EDED0 !important;
+        }
+
+.rn-progress-parent::before {
+        position: absolute;
+        font-family: 'feather' !important;
+        content: "U";
+        text-align: center;
+        line-height: 46px;
+        font-size: 24px;
+        opacity: 0;
+        background: #0d0d12;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        left: 0;
+        top: 0;
+        height: 46px;
+        width: 46px;
+        cursor: pointer;
+        display: block;
+        z-index: 2;
+        transition: all 200ms linear;
+    }
+
+.rn-progress-parent:hover::before {
+            opacity: 1;
+        }
+
+.rn-progress-parent svg path {
+            fill: none;
+        }
+
+.rn-progress-parent svg.rn-back-circle path {
+                stroke: #1EDED0;
+                stroke-width: 6;
+                box-sizing: border-box;
+                transition: all 200ms linear;
+            }
+
+.rn-progress-parent svg:hover path {
+                fill: #46473E;
+            }
+
+element.style {
+}

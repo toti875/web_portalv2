@@ -19,6 +19,9 @@ import { IntlProps } from '../../index';
 import { AirdropCoinListMobileScreen, StakingDetailMobileScreen, StakingListMobileScreen } from '../../mobile/plugins';
 import { IEODetailMobileScreen, IEOListMobileScreen } from '../../mobile/plugins/IEO';
 import { TradingCompetionListMobileScreen, TradingCompetitionDetailMobileScreen } from '../../mobile/plugins/TradingCompetion';
+
+import ScaleLoader from 'react-spinners/ScaleLoader';
+
 /* import { isMobile } from "react-device-detect"; */
 import {
 	ChangeForgottenPasswordMobileScreen,
@@ -180,10 +183,12 @@ interface OwnProps {
 
 export type LayoutProps = ReduxProps & DispatchProps & LocationProps & IntlProps & OwnProps;
 
+
 const renderLoader = () => (
 	<div className="pg-loader-container">
-		<Spinner animation="border" variant="primary" />
+		{/* <Spinner animation="border" variant="primary" /> */}
 		{/*<img src={spinerLoading} style={{width: '38px', margin: '0 auto'}}></img>*/}
+		<ScaleLoader color="#009991" />
 	</div>
 );
 

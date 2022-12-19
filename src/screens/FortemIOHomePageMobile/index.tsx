@@ -356,9 +356,9 @@ function scrollRotate() {
 		
 		{BannerData.map((data, index) => (
 			<div key={1} className="single-slide">
-				<div className="bg-overlay bg_image" style={{ width: '100%', height: '80vh', backgroundPosition: '1% 80%',}}>
-				<img src={data.image_background} style={{filter: 'blur(1px)', backgroundPosition: '1% 80%', backgroundSize: 'cover', opacity: '0.2', width: '100%', height: '800px'}}/>
-				<img className="logo" src={Logo} style={{ opacity: '1 !important', position: 'absolute', color: 'white', background: 'transparent', width: '460px',  top: '210px', paddingLeft: '30px'}}  />
+				<div className="bg-overlay bg_image" style={{ width: '100vw', height: '70vh', backgroundPosition: '1% 80%',}}>
+				<img src={data.image_background} style={{filter: 'blur(1px)', backgroundPosition: '1% 80%', backgroundSize: 'cover', opacity: '0.2', width: '100%', height: '100%'}}/>
+				<img className="logo" src={Logo} style={{ opacity: '1 !important', position: 'absolute', color: 'white', background: 'transparent', width: '14rem',  top: '10%', paddingLeft: '5%'}}  />
 					<div className="container2 position-relative">
 						
 						
@@ -366,9 +366,9 @@ function scrollRotate() {
 						<div className="row row--30 align-items-center">
 							<div className="col-lg-12">
 								<div className="align-items-center justify-items-center" style={{display: 'flex', justifyContent: 'center'}}>
-										<h3 className="description justify-center animate_flash" style={{fontFamily: 'Alliance1', fontSize: '38.5px', fontWeight: 'bold', justifyContent: 'center', position: 'absolute', left: '80px', top: '-420px', color: '#f5f5f5', display: 'flex',  width: '680px', }}> Fortem ONE é a plataforma especializada em  </h3>
+										<h3 className="description justify-center animate_flash" style={{fontFamily: 'Alliance1', fontSize: '1.2rem', fontWeight: 'bold', justifyContent: 'center', position: 'absolute', left: '5%', top: '-190%', color: '#f5f5f5', display: 'flex',  width: '50vw', }}> Fortem ONE é a plataforma especializada em  </h3>
 										<br/>
-										<h3  className=" animate__animated animate__bounce animate__animated animate_flash" style={{opacity: '0.64', fontFamily: 'Alliance1', fontSize: '32px', fontWeight: 'bold', position: 'absolute', left: '80px', top: '-310px', width: '680px', color: '#1EDED0'}} > 
+										<h3  className=" animate__animated animate__bounce animate__animated animate_flash" style={{opacity: '0.64', fontFamily: 'Alliance1', fontSize: '1rem', fontWeight: 'bold', position: 'absolute', left: '5%', top: '-40%', width: '680px', color: '#1EDED0'}} > 
 										<Typed
                                             strings={[
                                                 "ativos digitais",
@@ -386,7 +386,7 @@ function scrollRotate() {
 										</h3>
 										
 										<Zoom interval={10000} delay={10000} forever={false} duration={8000}>
-											<h3 className="description justify-center animate__animated animate__bounce" style={{position: 'absolute',  top: '-220px', left: '84px',  display: 'flex', fontSize: '20px', width: '100%', }}> {data.description}</h3>
+											<h3 className="description justify-center animate__animated animate__bounce" style={{position: 'absolute',  top: '50%', left: '10%',  display: 'flex', fontSize: '0.6rem', width: '100%', }}> {data.description}</h3>
 										</Zoom>
 										<Zoom interval={20000} delay={18000} forever={false} duration={6000}>
 											<h3 className="description justify-center animate__animated animate__bounce" style={{opacity: 0.2, position: 'absolute',  top: '-180px', left: '84px',  display: 'flex', fontSize: '20px', width: '100%', }}> Re-escrevendo o futuro dos investimentos.</h3>
@@ -1641,7 +1641,7 @@ const renderBlog = () => (
 
 			<div className="white-line"></div>
 
-			<SlipThree />
+			{/* <SlipThree /> */}
 
 
 			<CalltoActionFive />

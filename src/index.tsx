@@ -21,8 +21,10 @@ import './antd.css';
 import './button.css';
 import './buttons.pcss';
 import './blockchain.css';
-import './template_react/doob/src/assets/scss/style.scss';
+
 import './mobile.pcss';
+import './template_react/doob/src/assets/scss/style.scss';
+
 
 if (!Intl.PluralRules) {
 	require('@formatjs/intl-pluralrules/polyfill');
