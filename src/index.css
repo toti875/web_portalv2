@@ -27420,7 +27420,7 @@ html.theme-dark .group-wWM3zP_M- {
 		padding: 1rem;
 		text-align: center;
 		width: 8rem;
-	}
+}
 
 .homepage-info__text {
 		align-items: center;
@@ -27429,7 +27429,25 @@ html.theme-dark .group-wWM3zP_M- {
 		font-size: 1.2em;
 		justify-content: center;
 		text-align: center;
-	}
+}
+
+.ant-slider-with-marks {
+		margin-bottom: 1.1em;
+}
+
+.ant-slider-with-marks .ant-slider-rail,
+		.ant-slider-with-marks .ant-slider-track {
+			background-color: #282b3a;
+		}
+
+.ant-slider-with-marks .ant-slider-dot {
+			background: #848e9c !important;
+		}
+
+.ant-slider-with-marks .ant-slider-handle {
+			background-color: #848e9c;
+			border: solid 3px #f5f5f5;
+		}
 
 {/*   *** MOBILE TRADING SCREEN   */}
 
@@ -27455,7 +27473,7 @@ html.theme-dark .group-wWM3zP_M- {
 
 .td-mobile-screen-trading__main-content > .td-tabs > .td-tabs-nav > .td-tabs-nav-wrap > .td-tabs-nav-list .td-tabs-tab .td-tabs-tab-btn {
 								border-radius: 100px;
-								color: #fff;
+								color: #f5f5f5;
 								font-size: 0.75em;
 								padding: 0 1.5em;
 							}
@@ -27469,7 +27487,7 @@ html.theme-dark .group-wWM3zP_M- {
 						}
 
 .td-mobile-screen-trading__main-content > .td-tabs > .td-tabs-nav > .td-tabs-nav-wrap > .td-tabs-nav-list .td-tabs-tab-active .td-tabs-tab-btn {
-								background-color: #2fb67e;
+								background-color: #009991;
 								box-shadow: 0 8px 8px rgba(0, 0, 0, 0.15);
 							}
 
@@ -27982,3 +28000,4 @@ html.theme-dark .group-wWM3zP_M- {
 .td-mobile-cpn-order-book__combined table tbody tr td .td-mobile-cpn-order-book__combined--bg-bid-row {
 							background: rgba(47, 182, 126, 0.15);
 						}
+
