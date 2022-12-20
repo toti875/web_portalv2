@@ -431,7 +431,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 
 						<Route exact={false} path="/market/:market?" component={NewTradingScreenMobile} />
 						
-						{/*<Route exact={true} path="/" component={HomePageScreenMobile} />*/}
+						<Route exact={true} path="/main" component={HomePageScreenMobile} />
 						<Route exact={true} path="/" component={FortemIOHomePageMobile} />
 
 

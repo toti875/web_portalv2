@@ -34,7 +34,7 @@ export const RowTable: React.FC<MarketItem> = ({ market, favorites, onchangeFavo
 
 	const redirectToTrading = paramMarket => {
 		dispatch(setCurrentMarket(paramMarket));
-		history.push(`/trading/${paramMarket.id}`);
+		history.push(`/market/${paramMarket.id}`);
 	};
 
 	const ticker = tickers[market.id] || defaultTicker;
@@ -85,12 +85,12 @@ export const RowTable: React.FC<MarketItem> = ({ market, favorites, onchangeFavo
 							<span className="td-mobile-cpn-market-list__body__markets__item__pairs__second">
 								/{market.name.split('/')[1]}
 							</span>
-							{/* <span className="td-mobile-cpn-market-list__body__markets__item__pairs__margin">5x</span> */}
+							<span className="td-mobile-cpn-market-list__body__markets__item__pairs__margin">5x</span>
 						</div>
 
 						<div className="td-mobile-cpn-market-list__body__markets__item__pairs__vol">
 							{intl.formatMessage({ id: 'page.mobile.currentMarketInfo.volume' })}{' '}
-							{Decimal.format(ticker.volume, 6, ',')}
+							{Decimal.format(ticker.volume, 2, ',')}
 						</div>
 					</div>
 				</div>

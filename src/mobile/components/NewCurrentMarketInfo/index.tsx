@@ -64,7 +64,7 @@ const OptionList: React.FC = () => {
 			<ListGroup className={className}>
 				<ListGroup.Item onClick={handleSelectFavorite}>
 					<MarketTradingSvg active={currentMarket && favoriteKeyState.includes(currentMarket.id)} />
-					{currentMarket && favoriteKeyState.includes(currentMarket.id) ? 'Remove from favorites' : 'Add to favorites'}
+					{currentMarket && favoriteKeyState.includes(currentMarket.id) ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}
 				</ListGroup.Item>
 			</ListGroup>
 		</div>

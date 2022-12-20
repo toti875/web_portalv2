@@ -5172,7 +5172,7 @@ max-height: 862px;
 				}.homepage-event .container2 .slick-initialized .slick-slide {
        
                 vertical-align: middle;
-                color: #f5f5f5 !important;
+                color: #fff !important;
 
                 
 
@@ -10467,3 +10467,4 @@ Copyright (c) 2015 Daniel Eden
 .ti-rss-alt:before {
 	content: "\e75f";
 }
+

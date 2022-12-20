@@ -21366,6 +21366,11 @@
   "resolved" "https://registry.npmjs.org/websocket-extensions/-/websocket-extensions-0.1.4.tgz"
   "version" "0.1.4"
 
+"webticker@^3.0.0":
+  "integrity" "sha512-q1hxfmAExF6F6zJoLQik3uCRABQXFQFkczW3W/BWxfo4Cv/TEXtfk63CLkLgC22mBnWdRE24NfpeVLuhiweR5w=="
+  "resolved" "https://registry.npmjs.org/webticker/-/webticker-3.0.0.tgz"
+  "version" "3.0.0"
+
 "whatwg-encoding@^1.0.1", "whatwg-encoding@^1.0.3", "whatwg-encoding@^1.0.5":
   "integrity" "sha512-b5lim54JOPN9HtzvK9HFXvBma/rnfFeqsic0hSpjtDbVxR3dJKLc+KB4V6GgiGOvl7CY/KNh8rxSo9DKQrnUEw=="
   "resolved" "https://registry.npmjs.org/whatwg-encoding/-/whatwg-encoding-1.0.5.tgz"
