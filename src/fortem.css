@@ -5375,13 +5375,7 @@ max-height: 862px;
 	width: 6rem;
 }{/*   *** TRADING SCREEN *** */}.td-pg-trading {
 
-	
-	gap: 6px;
-	grid-template-columns: 4fr 8fr 4fr;
-	grid-template-rows: 70px 520px minmax(-webkit-min-content, 300px) 350px;
-	grid-template-rows: 70px 520px minmax(min-content, 300px) 350px;
-	margin-bottom: 6px;
-	margin-top: 6px;
+
 }
 
 .td-pg-trading .td-pg-trading__item {

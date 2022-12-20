@@ -13,7 +13,7 @@ import ContentLoader from "react-content-loader";
 import Ticker from 'react-ticker';
 import { CryptoIcon } from '../CryptoIcon';
 
-//import '../html/main-dark/css/style.css';
+
 
 const ChartWrap = styled.div`
 
@@ -252,32 +252,27 @@ export const NewMarketSlick: React.FC<any> = () => {
 	};
 
 	return (
+		<ChartWrap>
 
-
-		<>
-					<script src="./jquery.webticker.min.js"></script>
-					<script src="./web-ticker.js"></script>		
-		<div className="box">
-						<div className="box-body tickers-block">
-							<ul id="webTicker-5">
-							  <li><i className="cc BTC"></i> BTC <span className="text-warning"> $11.039232</span></li> 
-							  <li><i className="cc ETH"></i> ETH <span className="text-warning"> $1.2792</span></li> 
-							  <li><i className="cc GAME"></i> GAME <span className="text-warning"> $11.039232</span></li> 
-							  <li><i className="cc LBC"></i> LBC <span className="text-warning"> $0.588418</span></li> 
-							  <li><i className="cc NEO"></i> NEO <span className="text-warning"> $161.511</span></li> 
-							  <li><i className="cc STEEM"></i> STE <span className="text-warning"> $0.551955</span></li> 
-							  <li><i className="cc LTC"></i> LIT <span className="text-warning"> $177.80</span></li> 
-							  <li><i className="cc NOTE"></i> NOTE <span className="text-warning"> $13.399</span></li>
-							  <li><i className="cc MINT"></i> MINT <span className="text-warning"> $0.880694</span></li> 
-							  <li><i className="cc IOTA"></i> IOT <span className="text-warning"> $2.555</span></li> 
-							  <li><i className="cc DASH"></i> DAS <span className="text-warning"> $769.22</span></li>   
-							</ul>
-						</div>
+				<div className='slide-track market-slick ' style={{ paddingTop: '-80px', width: '240px', height: '62px',  border: '1px solid rgb(66, 66, 66)', borderRight: 'none',  zIndex: 9999, }}>  {MarketChart(kLinesState[1], "BTC/USD")}</div>
+				<div className="market-slick " style={{ borderRadius: '1rem', marginLeft: '246px', marginTop: '-62px' }}>
+				
+					<div>
+					
+					<Slider {...settings}>
+				
+					
+						{kLinesState.map((kline, i) => (
+							<div key={i}>{MarketChart(kline, marketNames[i])}</div>
+						))}
+					</Slider>
 					</div>
-	
+				
+					
+				
+			</div>
 
-	
-		</>
+		</ChartWrap>
 	);
 
 

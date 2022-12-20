@@ -412,7 +412,7 @@ function scrollRotate() {
 						</div>
 						</div>
 				</div>
-				<div style={{marginBottom: '0px'}} >{renderMarketSlick()}	</div>
+				<div style={{bottom: '0px !important'}} >{renderMarketSlick()}	</div>
 			</div>
 
 
