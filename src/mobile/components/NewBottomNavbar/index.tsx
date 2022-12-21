@@ -17,10 +17,10 @@ export const BottomNavbar: React.FC = () => {
 	return (
 		<nav className="bottom-nav">
 			<ul>
-				<Link to="/" className={handleGetActiveItemClass(pathname, '/', true)}>
+				<Link to="/main" className={handleGetActiveItemClass(pathname, '/main', true)}>
 					<HomeIcon
 						className="bottom-nav__item__icon"
-						active={handleGetActiveItemClass(pathname, '/', true) !== DEFAULT_CLASSNAME}
+						active={handleGetActiveItemClass(pathname, '/main', true) !== DEFAULT_CLASSNAME}
 					/>
 					<span className="bottom-nav__item__text">Home</span>
 				</Link>
@@ -32,19 +32,19 @@ export const BottomNavbar: React.FC = () => {
 					<span className="bottom-nav__item__text">Mercados</span>
 				</Link>
 				<Link
-					to="/trading"
-					className={classnames('bottom-nav__item--middle', handleGetActiveItemClass(pathname, '/trading'))}
+					to="/market/ethusd"
+					className={classnames('bottom-nav__item--middle', handleGetActiveItemClass(pathname, '/market/ethusd'))}
 				>
 					<TradeIcon
 						className="bottom-nav__item__icon bottom-nav__item--middle__icon"
-						active={handleGetActiveItemClass(pathname, '/trading') !== DEFAULT_CLASSNAME}
+						active={handleGetActiveItemClass(pathname, '/market/ethusd') !== DEFAULT_CLASSNAME}
 					/>
 					<span className="bottom-nav__item__text">Negociar</span>
 				</Link>
-				<Link to="/stake" className={handleGetActiveItemClass(pathname, '/stake')}>
+				<Link to="/tokens" className={handleGetActiveItemClass(pathname, '/tokens')}>
 					<StakeIcon
 						className="bottom-nav__item__icon"
-						active={handleGetActiveItemClass(pathname, '/stake') !== DEFAULT_CLASSNAME}
+						active={handleGetActiveItemClass(pathname, '/tokens') !== DEFAULT_CLASSNAME}
 					/>
 					<span className="bottom-nav__item__text">Tokens</span>
 				</Link>

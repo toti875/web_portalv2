@@ -6,7 +6,7 @@ interface IconProps {
 }
 
 export const StakeIcon: React.FC<IconProps> = ({ className, active }) => {
-	const color = active ? '#2DAE79' : '#fff';
+	const color = active ? '#18988F' : '#fff';
 
 	return (
 		<svg xmlns="http://www.w3.org/2000/svg" width={22} height={22} viewBox="0 0 31.999 31.999" className={className}>

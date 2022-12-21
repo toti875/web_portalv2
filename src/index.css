@@ -34514,7 +34514,7 @@ element.style {
 
 .bottom-nav {
 	background-color: var(--main-background-color);
-	border-top: 2px solid #1EDED0;
+	border-top: 2px solid #18988F;
 	bottom: 0;
 	height: 4.375em;
 	left: 0;
@@ -34573,7 +34573,7 @@ element.style {
 
 .bottom-nav__item--middle::before {
 				border-radius: 999px;
-				border-top: 7px solid var(--blue);
+				border-top: 7px solid #18988F;
 				content: '';
 				height: 6em;
 				left: 0;
