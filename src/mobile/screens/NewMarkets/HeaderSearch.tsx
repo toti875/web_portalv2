@@ -59,7 +59,7 @@ export const HeaderSearch: React.FC<SearchProps> = ({ onSearch, backToAll }) => 
 					<DebounceInput
 						className="form-control w-100"
 						value={valueSearch}
-						placeholder="Search for tags"
+						placeholder="Digite o código do mercado"
 						minLength={1}
 						debounceTimeout={300}
 						onChange={onChangeInput}

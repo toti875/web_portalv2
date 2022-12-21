@@ -29,7 +29,7 @@ export const NewPagination: React.FC<NewPaginationProps> = ({ page = 1, total = 
 					<div className="mr-1 ml-1" style={{ color: '#ced4da' }}>
 						{page}
 					</div>
-					{!hideTotal && ` of ${total}`}
+					{!hideTotal && `   de   ${total}`}
 				</strong>{' '}
 			</span>
 			<button onClick={() => toPage(page + 1)} disabled={page === total || !nextPageExists}>
