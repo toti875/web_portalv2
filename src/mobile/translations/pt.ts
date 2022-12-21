@@ -1,5 +1,5 @@
 export const pt = {
-	'page.mobile.header.signIn': 'Acessar',
+	'page.mobile.header.signIn': 'Entrar',
 	'page.mobile.footer.home': 'Home',
 	'page.mobile.footer.orders': 'Ordens',
 	'page.mobile.footer.ieos': 'Tokens',
@@ -51,7 +51,7 @@ export const pt = {
 	'page.mobile.wallets.banner.lock': 'Bloqueado',
 
 	'page.mobile.copy.text': 'Copiar endereço',
-	'page.mobile.wallet.deposit.generate': 'Generate deposit address',
+	'page.mobile.wallet.deposit.generate': 'Gerar endereço de depósito',
 	'page.mobile.wallet.deposit.generating': 'Gerando endereço...',
 
 	'page.mobile.wallet.withdraw.modal.new.account': 'Confirmar nova conta',
@@ -83,7 +83,7 @@ export const pt = {
 	'page.mobile.wallets.title': 'Carteiras',
 
 	'page.mobile.profile.accountActivity.title': 'Atividades da conta',
-	'page.mobile.profile.apiKeys.title': 'My API keys',
+	'page.mobile.profile.apiKeys.title': 'Chaves de API',
 	'page.mobile.profile.theme.title': 'Tema',
 	'page.mobile.profile.language.title': 'Idioma',
 	'page.mobile.profile.changePassword.title': 'Alterar senha',
