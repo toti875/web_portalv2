@@ -29,7 +29,7 @@ export const BottomNavbar: React.FC = () => {
 						className="bottom-nav__item__icon"
 						active={handleGetActiveItemClass(pathname, '/markets') !== DEFAULT_CLASSNAME}
 					/>
-					<span className="bottom-nav__item__text">Market</span>
+					<span className="bottom-nav__item__text">Mercados</span>
 				</Link>
 				<Link
 					to="/trading"
@@ -39,21 +39,21 @@ export const BottomNavbar: React.FC = () => {
 						className="bottom-nav__item__icon bottom-nav__item--middle__icon"
 						active={handleGetActiveItemClass(pathname, '/trading') !== DEFAULT_CLASSNAME}
 					/>
-					<span className="bottom-nav__item__text">Trade</span>
+					<span className="bottom-nav__item__text">Negociar</span>
 				</Link>
 				<Link to="/stake" className={handleGetActiveItemClass(pathname, '/stake')}>
 					<StakeIcon
 						className="bottom-nav__item__icon"
 						active={handleGetActiveItemClass(pathname, '/stake') !== DEFAULT_CLASSNAME}
 					/>
-					<span className="bottom-nav__item__text">Stake</span>
+					<span className="bottom-nav__item__text">Tokens</span>
 				</Link>
 				<Link to="/wallets" className={handleGetActiveItemClass(pathname, '/wallets')}>
 					<WalletIcon
 						className="bottom-nav__item__icon"
 						active={handleGetActiveItemClass(pathname, '/wallets') !== DEFAULT_CLASSNAME}
 					/>
-					<span className="bottom-nav__item__text">Wallet</span>
+					<span className="bottom-nav__item__text">Carteiras</span>
 				</Link>
 			</ul>
 		</nav>

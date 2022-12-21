@@ -94,7 +94,7 @@ const DepositCrypto: React.FunctionComponent<DepositCryptoProps> = (props: Depos
 							<p>{textMinDeposit}</p>
 							<p>{textDepositFee}</p>
 							<p className="textnote">
-								<span className="textnote__mobile-textj">Note:</span>
+								<span className="textnote__mobile-textj">Obs.:</span>
 								<span> {textNote}</span>
 							</p>
 						</div>
@@ -126,7 +126,7 @@ const DepositCrypto: React.FunctionComponent<DepositCryptoProps> = (props: Depos
 			<div className="td-deposit-crypto__create">
 				<div className="td-deposit-crypto__create-btn">
 					<Button block={true} type="button" onClick={handleGenerateAddress} size="lg" variant="primary">
-						{buttonLabel ? buttonLabel : 'Generate deposit address'}
+						{buttonLabel ? buttonLabel : 'Gerar endereço de depósito'}
 					</Button>
 				</div>
 			</div>

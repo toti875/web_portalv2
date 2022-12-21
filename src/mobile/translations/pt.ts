@@ -14,8 +14,8 @@ export const pt = {
 	'page.mobile.charts.label.orderBook': 'Livro de ofertas',
 	'page.mobile.charts.label.trades': 'Negócios',
 
-	'page.mobile.orderButtons.buy': 'Buy {base_unit}',
-	'page.mobile.orderButtons.sell': 'Sell {base_unit}',
+	'page.mobile.orderButtons.buy': 'Comprar {base_unit}',
+	'page.mobile.orderButtons.sell': 'Vender {base_unit}',
 
 	'page.mobile.orders.tabs.open': 'Abertas',
 	'page.mobile.orders.tabs.all': 'Todas',
@@ -61,18 +61,18 @@ export const pt = {
 	'page.mobile.profileLinks.main.verification': 'Profile verification',
 	'page.mobile.profileLinks.main.2fa': 'Autenticação 2FA',
 	'page.mobile.profileLinks.main.changePassword': 'Alterar senha',
-	'page.mobile.profileLinks.main.activity': 'Account activity',
+	'page.mobile.profileLinks.main.activity': 'Atividades da conta',
 	'page.mobile.profileLinks.main.apiKeys': 'Minhas chaves de API',
-	'page.mobile.profileLinks.main.referral': 'Indicação',
+	'page.mobile.profileLinks.main.referral': 'Indicações',
 
 	'page.mobile.profileLinks.settings.language': 'Idioma',
 	'page.mobile.profileLinks.settings.theme': 'Tema',
 
 	'page.mobile.profileLinks.additional.referral': 'Link de indicação',
-	'page.mobile.profileLinks.link.referral.success': 'Successfully copied!',
-	'page.profileLinks.link.referral.success': 'Successfully copied!',
+	'page.mobile.profileLinks.link.referral.success': 'Copiado com sucesso!',
+	'page.profileLinks.link.referral.success': 'Copiado com sucesso!',
 
-	'page.mobile.profileLinks.link.verification': 'Level {level}',
+	'page.mobile.profileLinks.link.verification': 'Nível {level}',
 	'page.mobile.profileLinks.link.2fa.enabled': 'Habilitado',
 	'page.mobile.profileLinks.link.2fa.disabled': 'Desabilitado',
 	'page.mobile.profileLinks.link.referral': 'Copiar link',
@@ -82,26 +82,26 @@ export const pt = {
 
 	'page.mobile.wallets.title': 'Carteiras',
 
-	'page.mobile.profile.accountActivity.title': 'Account activity',
+	'page.mobile.profile.accountActivity.title': 'Atividades da conta',
 	'page.mobile.profile.apiKeys.title': 'My API keys',
-	'page.mobile.profile.theme.title': 'Theme',
-	'page.mobile.profile.language.title': 'Language',
+	'page.mobile.profile.theme.title': 'Tema',
+	'page.mobile.profile.language.title': 'Idioma',
 	'page.mobile.profile.changePassword.title': 'Alterar senha',
 
-	'page.mobile.profile.accountActivity.action': 'Action',
-	'page.mobile.profile.accountActivity.ip': 'IP address',
-	'page.mobile.profile.accountActivity.result': 'Result',
+	'page.mobile.profile.accountActivity.action': 'Ação',
+	'page.mobile.profile.accountActivity.ip': 'Endereço IP',
+	'page.mobile.profile.accountActivity.result': 'Resultado',
 
 	'page.mobile.profile.apiKeys.item.kid': 'Kid',
 	'page.mobile.profile.apiKeys.item.algorithm': 'Algorithm',
-	'page.mobile.profile.apiKeys.item.created': 'Created',
-	'page.mobile.profile.apiKeys.item.updated': 'Updated',
-	'page.mobile.profile.apiKeys.item.delete': 'Delete',
+	'page.mobile.profile.apiKeys.item.created': 'Criada em',
+	'page.mobile.profile.apiKeys.item.updated': 'Atualizada em',
+	'page.mobile.profile.apiKeys.item.delete': 'Remover',
 
 	'page.mobile.confirm.profile': 'Identity verification',
 	'page.mobile.confirm.document': 'ID verification',
 	'page.mobile.confirm.address': 'Residence verification',
-	'page.mobile.confirm.back': 'Back',
+	'page.mobile.confirm.back': 'Voltar',
 
 	'page.body.profile.header.account.content.twoFactorAuthentication': 'Duplo Fator de Autenticação',
 

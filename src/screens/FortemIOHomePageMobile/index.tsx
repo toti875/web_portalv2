@@ -366,7 +366,7 @@ function scrollRotate() {
 						<div className="row align-items-center">
 							<div className="col-lg-12">
 								<div className="align-items-center justify-items-center" style={{display: 'flex', justifyContent: 'center'}}>
-										<h3 className="description justify-center animate_flash" style={{fontFamily: 'Alliance1', fontSize: '1rem', fontWeight: 'bold', justifyContent: 'center', position: 'absolute', left: '5%', bottom: '40vh', color: '#f5f5f5', display: 'flex',  width: '70%', }}> Fortem ONE é a plataforma especializada em  </h3>
+										<h3 className="description justify-center animate_flash" style={{fontFamily: 'Alliance1', fontSize: '1rem', fontWeight: 'bold', justifyContent: 'center', position: 'absolute', left: '5%', bottom: '40vh', color: '#f5f5f5', display: 'flex',  width: '60vw', }}> Fortem ONE é a plataforma especializada em  </h3>
 										<br/>
 										<h3  className=" animate__animated animate__bounce animate__animated animate_flash" style={{opacity: '0.64', fontFamily: 'Alliance1', fontSize: '0.9rem', fontWeight: 'bold', position: 'absolute', left: '5%', bottom: '37vh', width: '60vw', color: '#1EDED0'}} > 
 										<Typed

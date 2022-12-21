@@ -420,7 +420,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 							loading={userLoading}
 							isLogged={isLoggedIn}
 							path="/profile/referral"
-							component={ReferralMobileScreen}
+							component={ProfileVerificationMobileScreen}
 						/>
 						<PrivateRoute
 							loading={userLoading}
@@ -438,7 +438,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 						<Route exact={true} path="/home" component={FortemIOHomePageMobile} />
 						
 						<Route exact={true} path="/markets" component={NewMarketsScreenMobile} />
-						{/*<Route path="/ieo" exact component={IEOListMobileScreen} />*/}
+						<Route path="/tokenization" exact component={IEOListMobileScreen} />
 						
 						<PublicRoute path="/ieo/detail/:ieoID" exact component={SaleDetailScreen} />
 						{/*<Route path="/ieo/detail/:ieoID" exact component={IEODetailMobileScreen} />*/}

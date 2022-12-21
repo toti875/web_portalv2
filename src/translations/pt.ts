@@ -348,8 +348,8 @@ export const pt = {
 	'page.body.profile.apiKeys.table.header.algorithm': 'Criptografia',
 	//'page.body.profile.apiKeys.table.header.state': 'State',
 	'page.body.profile.apiKeys.table.header.state': 'Status',
-	'page.body.profile.apiKeys.table.header.created': 'Criado em',
-	'page.body.profile.apiKeys.table.header.updated': 'Atualizado em',
+	'page.body.profile.apiKeys.table.header.created': 'Criada em',
+	'page.body.profile.apiKeys.table.header.updated': 'Atualizada em',
 
 	'success.api_keys.fetched': 'Chaves de API encontradas...',
 	'success.api_keys.created': 'Chave de API criada com sucesso',
@@ -365,7 +365,7 @@ export const pt = {
 	'page.body.profile.header.accountActivity.content.result': 'Resultado',
 	'page.body.profile.header.accountActivity.content.userAgent': 'Dispositivo',
 
-	'page.body.profile.content.action.login': 'Entrar na plataforma',
+	'page.body.profile.content.action.login': 'Acesso à plataforma',
 	'page.body.profile.content.action.logout': 'Sair da plataforma',
 	'page.body.profile.content.action.request2fa': 'Solicitar QR code para 2FA',
 	'page.body.profile.content.action.enable2fa': 'Habilitar 2FA',
