@@ -119,7 +119,7 @@ class Withdraw extends React.Component<DispatchProps & WithdrawProps, WithdrawSt
 					<div className="td-withdraw__divider td-withdraw__divider-one" />
 					<div className={withdrawAmountClass}>
 						<div className="d-flex flex-row justify-content-between mb-2">
-							<span className="text-white">Withdraw Amount (*)</span>
+							<span className="text-white">Quantidade a sacar: </span>
 							<span className="text-white">
 								Balance: {this.props.parentWalletBalance} {this.props.parentCurrency.toUpperCase()}
 							</span>
@@ -145,11 +145,11 @@ class Withdraw extends React.Component<DispatchProps & WithdrawProps, WithdrawSt
 								onClick={() => this.handleChangeInputAmount(this.props.parentWalletBalance ?? '')}
 								className="td-withdraw__group__amount-box__all-btn"
 							>
-								All
+								Máximo
 							</button>
 						</div>
 						<div className="text-danger" hidden={!isEmpty(amount)}>
-							(*) Please enter amount to withdraw!
+							(*) Digite a quantidade que deseja sacar
 						</div>
 					</div>
 					<div className="my-2">

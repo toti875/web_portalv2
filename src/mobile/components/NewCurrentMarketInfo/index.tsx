@@ -152,7 +152,7 @@ export const CurrentMarketInfoComponent: React.FC = () => {
 				width="85%"
 			>
 				<div className="mt-5 mb-2 td-mobile-cpn-current-market-info__drawer__header">
-					<h4>Markets</h4>
+					<h4>Mercados</h4>
 				</div>
 				<NewAllMarketList pagination={false} hideFavorite />
 			</Drawer>

@@ -20,6 +20,8 @@ export const DEFAULT_TRADING_VIEW_INTERVAL = '30';
 export const VALUATION_PRIMARY_CURRENCY = 'USD';
 export const VALUATION_SECONDARY_CURRENCY = 'USDT';
 
+export const QUOTE_CURRENCIES = ['USD'];
+
 export const PASSWORD_ENTROPY_STEP = 14;
 
 export const DEFAULT_KYC_STEPS = ['email', 'profile', 'document'];

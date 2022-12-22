@@ -19,7 +19,7 @@ export const NewModal = (props: NewModalProps) => {
 					<div className="td-mobile-new-modal__main__body">{children}</div>
 					<button type="button" className="td-mobile-new-modal__main__close-btn" onClick={onClose}>
 						<span aria-hidden="true">×</span>
-						<span className="sr-only">Close</span>
+						<span className="sr-only">Fechar</span>
 					</button>
 				</section>
 			</div>

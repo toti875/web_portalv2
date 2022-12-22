@@ -155,6 +155,12 @@ import stars from './images/stars.svg';
 import interfaces from './images/features.svg';
 import fortemCard from './fortemCard.png';
 
+import { HomeMarketHotList } from './containers/HomeMarketHotList';
+import { MarketOverview } from './containers/MarketOverview';
+//import { HomeActivityList } from './containers/HomeActivityList';
+//import { HomeBanner } from './containers/HomeBanner';
+//import { HomeMarketHotList } from './containers/HomeMarketHotList';
+
 
 
 
@@ -1317,11 +1323,14 @@ const renderBlog = () => (
 	const renderMarket = () => (
 		<div className="market bg-transparent  theme-shape-root content-wrapper bg-transparent slider-style-1">
 			<div className="container">
-								<div className="home-market">
+
+				<div className="home-market">
+					<div className="col-lg-12" >
+						<p style={{fontSize: '26px'}} className="text-center">Visão geral do mercado cripto</p>
+                    </div>
 					<HomepageMarket />
-				
-				
-					<button className="btn-mainPage-AllMarkets" onClick={RedirectMarketList}><span>Ver mais moedas</span></button>
+
+					<button className="btn-mainPage-AllMarkets" onClick={RedirectMarketList}><span>Ver todas moedas</span></button>
 				</div>
 			</div>
 		</div>
@@ -1638,6 +1647,16 @@ const renderBlog = () => (
 			</Parallax>
 
 			{renderBlog()}
+
+			
+			<div className="homepage-desktop-screen">
+				<div className="container-fluid">
+
+					<HomeMarketHotList />
+				
+					<MarketOverview />
+				</div>
+			</div>
 
 			<div className="white-line"></div>
 
