@@ -35,7 +35,7 @@ export const defaultConfig: Config = {
 	gaTrackerKey: 'G-M47QL88D4R',
 	msAlertDisplayTime: '10000',
 	msPricesUpdates: '2000',
-	incrementalOrderBook: true,
+	incrementalOrderBook: false,
 	finex: false,
 	isResizable: true,
 	isDraggable: true,

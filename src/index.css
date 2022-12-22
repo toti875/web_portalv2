@@ -13594,18 +13594,18 @@ th#react-table table:last-child {
 {/* COMPONENT - HEADER */}
 
 .pg-mobile-cpn-header {
-	background-color: #181819 !important;
+	background-color: #0E0E0E !important;
 	padding-bottom: 0.5em !important;
 }
 
 .pg-mobile-cpn-header__inner {
 		align-items: center !important;
-		background: #181819 !important;
+		background: #0E0E0E !important;
 		display: flex !important;
 		flex-direction: row !important;
-		height: 3.75em !important;
+		height: 2.25em !important;
 		justify-content: space-between !important;
-		padding: 0.625em 0.675em !important;
+		padding: 0.625em 0.1em !important;
 		width: 100% !important;
 		vertical-align: middle !important !important;
 	}
@@ -13649,7 +13649,7 @@ th#react-table table:last-child {
 				letter-spacing: 0.1px !important;
 				line-height: 1.57em !important;
 				min-width: 6.36em !important;
-				padding: 0 1.07em !important;
+				padding: 0 1.5em !important;
 			}
 
 .pg-mobile-cpn-header__account__log-in:hover {
@@ -16383,7 +16383,7 @@ th#react-table table:last-child {
 	width: 320px !important;
 	max-height: 90% !important;
 	left: 30px;
-	color: var(--color-darker);
+	font-color: rgba(6, 6, 6, 0.7) !important;
 	box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
 	padding: 0 !important;
 	
@@ -16415,11 +16415,13 @@ th#react-table table:last-child {
 .tokenCard {
 	padding: 20px;
 	background-color: '#dde1e7' !important;
+	font-color: rgba(6, 6, 6, 0.7) !important;
 }
 
 .tokenCard:hover {
 	padding: 20px;
 	background-color: '#dde1e7' !important;
+	font-color: rgba(6, 6, 6, 0.7) !important;
 }
 
 .itemLogo {
@@ -28193,7 +28195,7 @@ html.theme-dark .group-wWM3zP_M- {
 	}
 
 .td-mobile-screen-market__header__title {
-			color: #2fb67e;
+			color: #c0c0c0;
 			font-size: 1.25em;
 			font-weight: 500;
 			line-height: 23, 44px;
@@ -28219,8 +28221,8 @@ html.theme-dark .group-wWM3zP_M- {
 				align-items: center;
 				color: #848e9c;
 				display: flex;
-				height: 25px;
-				margin-left: 5px;
+				height: 20px;
+				margin-left: 25px;
 				position: absolute;
 				z-index: 10;
 			}
@@ -28230,8 +28232,8 @@ html.theme-dark .group-wWM3zP_M- {
 				border: 0;
 				border: none; /* <-- This thing here */
 				border-radius: 1vw !important;
-				color: white;
-				height: 30px;
+				color: #f5f5f5;
+				height: 20px;
 				padding-left: 30px;
 			}
 
@@ -29572,7 +29574,7 @@ html.theme-dark .group-wWM3zP_M- {
         }
 
 .pg-mobile-open-orders__header__block:last-child svg path {
-            fill: var(--primary-cta-color);
+            fill: var(--system-red);
           }
 
 .pg-mobile-open-orders__content {
@@ -29883,7 +29885,7 @@ element.style {
 		}
 
 .td-mobile-cpn-orders__optional-head svg path {
-				fill: var(--primary-cta-color);
+				fill: var(--system-red);
 			}
 
 .td-mobile-new-modal__blur {
@@ -30336,7 +30338,7 @@ element.style {
 		}
 
 .pg-mobile-orders__optional-head svg path {
-				fill: var(--primary-cta-color);
+				fill: var(--system-red);
 			}
 
 .pg-mobile-orders__content {
@@ -33184,16 +33186,18 @@ element.style {
 
 .td-mobile-cpn-current-market-info__header img {
 			cursor: pointer;
-			margin: 0;
+			
 		}
 
 .td-mobile-cpn-current-market-info__header__name {
 			color: #fff;
 			font-weight: 600;
+			margin-left: 0.5em;
+			margin-right: 0.5em;
 		}
 
 .td-mobile-cpn-current-market-info__header__percent {
-			font-size: 0.714em;
+			font-size: 0.85em;
 			font-weight: 600;
 		}
 
@@ -33668,9 +33672,9 @@ element.style {
 				border: 1px solid var(--button-asks-background-color);
 				border-radius: var(--mobile-border-radius-small-size);
 				color: #fff;
-				font-size: 0.75em;
+				font-size: 0.75em !important;
 				font-weight: 600;
-				line-height: 3em;
+				line-height: 0.85em !important;
 				margin-bottom: 1.15em;
 				outline: none;
 				padding: unset;
@@ -33817,13 +33821,13 @@ element.style {
 		}
 
 .td-mobile-cpn-order-item__balance__item {
-				font-size: 0.75em;
+				font-size: 0.91em !important;
 			}
 
 .td-mobile-cpn-order-item__balance__item__amount span {
 						color: #fff;
-						font-size: 1.167em;
-						font-weight: 600;
+						font-size: 0.91em !important;
+						font-weight: 600 !important;
 						margin-left: 0.3em;
 					}
 
@@ -33831,10 +33835,12 @@ element.style {
 					align-items: center;
 					display: flex;
 					text-transform: uppercase;
+					font-size: 0.91em !importan0t;
+					font-weight: 600 !important;
 				}
 
 .td-mobile-cpn-order-item__balance__item:not(:last-child) {
-					margin-bottom: 0.5em;
+			
 				}
 
 .td-mobile-cpn-order-book {
@@ -34087,7 +34093,7 @@ element.style {
 		}
 
 .pg-mobile-orders__optional-head svg path {
-				fill: var(--primary-cta-color) !important;
+				fill: var(--system-red) !important;
 			}
 
 .pg-mobile-orders__content {

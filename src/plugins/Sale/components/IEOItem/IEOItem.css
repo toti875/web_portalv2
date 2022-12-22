@@ -10,7 +10,8 @@
 	width: 320px !important;
 	max-height: 90% !important;
 	left: 30px;
-	color: var(--color-darker);
+	font-color: rgba(6, 6, 6, 0.7) !important;
+	
 	box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
 	padding: 0 !important;
 	
@@ -42,6 +43,7 @@
 .tokenCard {
 	padding: 20px;
 	background-color: '#dde1e7' !important;
+	font-color: rgba(6, 6, 6, 0.7) !important;
 }
 
 .tokenCard:hover {
