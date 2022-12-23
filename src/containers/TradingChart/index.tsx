@@ -17,6 +17,7 @@ import {
 	selectKline,
 	selectMarkets,
 	selectMarketTickers,
+	toggleChartRebuild,
 } from '../../modules';
 import { rangerSubscribeKlineMarket, rangerUnsubscribeKlineMarket } from '../../modules/public/ranger';
 import { periodStringToMinutes } from '../../modules/public/ranger/helpers';
@@ -44,6 +45,7 @@ interface DispatchProps {
 	unSubscribeKline: typeof rangerUnsubscribeKlineMarket;
 	klineUpdateTimeRange: typeof klineUpdateTimeRange;
 	klineUpdatePeriod: typeof klineUpdatePeriod;
+	toggleChartRebuild: typeof toggleChartRebuild;
 }
 
 type Props = ReduxProps & DispatchProps & TradingChartComponentProps;
@@ -55,6 +57,13 @@ export class TradingChartComponent extends React.PureComponent<Props> {
 	private datafeed = dataFeedObject(this, this.props.markets);
 
 	public componentWillReceiveProps(next: Props) {
+		//hot fix
+		if (this.props.currentMarket && next.currentMarket && this.props.currentMarket.id !== next.currentMarket.id) {
+			this.props.toggleChartRebuild();
+			this.updateChart(next.currentMarket);
+		}
+		//end hotfix
+
 		if (next.currentMarket && next.colorTheme && next.colorTheme !== this.props.colorTheme) {
 			this.setChart(next.markets, next.currentMarket, next.colorTheme);
 		}
@@ -229,6 +238,7 @@ const mapDispatchProps: MapDispatchToPropsFunction<DispatchProps, {}> = dispatch
 	subscribeKline: (marketId: string, periodString: string) => dispatch(rangerSubscribeKlineMarket(marketId, periodString)),
 	unSubscribeKline: (marketId: string, periodString: string) => dispatch(rangerUnsubscribeKlineMarket(marketId, periodString)),
 	klineUpdatePeriod: payload => dispatch(klineUpdatePeriod(payload)),
+	toggleChartRebuild: () => dispatch(toggleChartRebuild()),
 });
 
 export const TradingChart = connect<ReduxProps, DispatchProps, {}, RootState>(

@@ -91,7 +91,7 @@ import {
 	RegisterScreen,
 	RestrictedScreen,
 	TradingScreen,
-	TradingScreenV,
+	
 	VerificationScreen,
 	WalletListScreen,
 	WithdrawScreen,
@@ -104,46 +104,17 @@ import {
 	KYCScreen,
 } from '../../screens';
 
-import { LandingScreen, DocumentationScreen, SignUpScreen } from '../../v2/src/screens';
+import { DocumentationScreen } from '../../v2/src/screens';
 
 import { LandingScreenMobile } from '../../v2/src/mobile/screens';
 
-
-
-
-
-
-
-//import {WalletsScreen} from '../../v2/src/screens/WalletsScreen';
-
-
-//import {SignInScreen} from '../../v2/src/screens/SignInScreen'
-//import { LogInScreen } from '../../screens/LogInScreen'
-
-
 import { WalletsScreen } from '../../v2/src/screens'
-
-
-import Default from "../../ui_vision/layouts/Admin";
-
-import Profile from "../../ui_vision/views/Pages/Profile/Wallets";
-import SignUpBasic from "../../ui_vision/layouts/Banner";
-
-import ConfirmBasic from "../../ui_vision/layouts/Banner";
-
-import NFT from "../../template_react_ft_axies/src/pages/Home01";
 
 import FAQ from "../../screens/FortemFAQ/FAQ";
 
 import Status from "../../template_react_status/src/components/App";
 
-import spinerLoading from './spinerLoading.gif';
 import { ProfileScreen2 } from 'screens/ProfileScreen2';
-
-//import './Layout.pcss';
-
-
-
 
 
 interface ReduxProps {

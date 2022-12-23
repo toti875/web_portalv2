@@ -53,8 +53,8 @@ export const colors = {
 			moon: 'var(--primary-text-color)',
 		},
 		orderBook: {
-			asks: 'blue',
-			bids: 'green',
+			asks: 'var(--asks-level-4)',
+			bids: 'var(--bids-level-4)',
 		},
 		depth: {
 			fillAreaAsk: '#ef5350',
@@ -69,7 +69,7 @@ export const colors = {
 	},
 	basic: {
 		chart: {
-			primary: 'var(--rgb-shadow-color)',
+			primary: 'var(--rgb-body-background-color)',
 			up: 'var(--rgb-system-green)',
 			down: 'var(--rgb-system-red)',
 		},

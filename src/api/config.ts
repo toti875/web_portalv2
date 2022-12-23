@@ -34,7 +34,7 @@ export const defaultConfig: Config = {
 	storage: {},
 	gaTrackerKey: 'G-M47QL88D4R',
 	msAlertDisplayTime: '10000',
-	msPricesUpdates: '2000',
+	msPricesUpdates: '500',
 	incrementalOrderBook: false,
 	finex: false,
 	isResizable: true,
@@ -87,7 +87,7 @@ export const isDraggableGrid = (): boolean => Cryptobase.config.isDraggable || t
 export const languages =
 	Cryptobase.config.languages && Cryptobase.config.languages.length > 0 ? Cryptobase.config.languages : ['pt'];
 export const sessionCheckInterval = (): string => Cryptobase.config.sessionCheckInterval || '15000';
-export const balancesFetchInterval = (): string => Cryptobase.config.balancesFetchInterval || '3000';
+export const balancesFetchInterval = (): string => Cryptobase.config.balancesFetchInterval || '2000';
 export const isFinexEnabled = (): boolean => Cryptobase.config.finex || false;
 export const passwordEntropyStep = (): number => Cryptobase.config.passwordEntropyStep;
 export const showLanding = (): boolean => Cryptobase.config.showLanding;

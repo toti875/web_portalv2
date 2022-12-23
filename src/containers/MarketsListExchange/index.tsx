@@ -126,9 +126,11 @@ export const MarketsListExchange = props => {
 						last: (
 							<span style={{ color: marketChangeColor }}>
 								{market.last}
+								{/*
 								<p className="m-0" style={{ color: 'rgb(115 127 146)' }}>
 									$ <ConvertUsd value={+market.last} symbol={marketName[1]} />
 								</p>
+								*/}
 							</span>
 						),
 						open: <span style={{ color: marketChangeColor }}>{market.open}</span>,

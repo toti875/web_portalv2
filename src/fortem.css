@@ -1553,18 +1553,18 @@ flex-direction: row !important;
       
      
     }.pg-wallet .cr-withdraw .input-group {
-        color: white !important;
+        color: #f5f5f5 !important;
            
     }.pg-wallet .cr-tab {
     background-color: transparent  !important;
-    width: 100%;
+    width: 100% !important;
     justify-content: center;
     height: calc(var(--gap) * 9) !important;
     margin: 0 auto !important;
     height: 100% !important;
     display: flex !important;
     flex-direction: row !important;
-    color: #F5F5F5;
+    color: #F5F5F5 !important;
     align-items: center !important;
     text-align: center!important;
     box-shadow: none;
@@ -1609,9 +1609,8 @@ flex-direction: row !important;
               background-color: transparent !important;
             }.pg-wallet .cr-copyable-text-field .cr-deposit-crypto__copyable .cr-deposit-info {
 
-        width: 100% !important;
-        align: center !important;
-        margin-bottom: 150px;
+       
+    
     
       }.pg-wallet .cr-tab-panel__navigation-container {
     background-color: transparent  !important;
@@ -1623,9 +1622,10 @@ flex-direction: row !important;
   }.pg-wallet .cr-tab-panel__navigation-container-navigation {
       background: transparent !important;
       display: flex !important;
-    flex-direction: row !important;
-    text-align: center !important;
-      
+      flex-direction: row !important;
+      text-align: center !important;
+      justify-content: space-between !important;
+      width: 100% !important;
       
       
     }.pg-wallet .cr-tab-content {
@@ -1635,13 +1635,11 @@ flex-direction: row !important;
     display: flex !important;
     flex-direction: column !important;
     max-width: 565px !important;
-   
-   
-    padding: calc(var(--gap) * 5) calc(var(--gap) * 2) 0 !important;
+      
   }.pg-wallet .cr-tab-content__active {
       display: flex !important;
       max-width: 565px !important;
-    }.pg-wallet .cr-tab-conten  .pg-blur-deposit-crypto {
+    }.pg-wallet .cr-tab-content  .pg-blur-deposit-crypto {
       height: 120px !important;
       margin-left: -10px !important;
       margin-top: 94px !important;
@@ -2290,12 +2288,12 @@ flex-direction: row !important;
 		display: flex;
 		flex-grow: 2;
 		justify-content: space-between;
-        margin-top: 40px;
+   
 	}.cr-wallet-item__single__image-icon {
 		margin-right: calc(var(--gap) * 3) !important;
 		height: 60px !important;
         border-radius: 50px !important;
-        margin-top: 40px;
+        
 	}.cr-wallet-item__single .cr-wallet-item__icon-code {
 			background: transparent;
 			color: var(--primary-text-color);
@@ -2438,7 +2436,8 @@ flex-direction: row !important;
 			font-size: 12px;
 		}{/*//depositCrypto*/}.cr-deposit-crypto {
 	align-items: center;
-	font-size: 13px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
 }
 .cr-deposit-crypto__create {
 		align-items: center;
@@ -2464,12 +2463,14 @@ flex-direction: row !important;
     
     .cr-deposit-crypto .cr-deposit-info {
 		background-color: transparent !important;
-		
-		line-height: 40px;
-		margin: auto;
-		margin-bottom: 20px;
-		margin-top: 20px;
-		width: 80%;
+		font-size: 15px !important;
+		line-height: 25px;
+        vertical-align: middle !important;
+		display: flex;
+        align-items: center !important;
+		margin-bottom: 20px !important;
+		width: 50% !important;
+        padding: 0 20px !important;
 
 	}.cr-deposit-crypto__copyable {
 		align-items: center !important;
@@ -2489,7 +2490,6 @@ flex-direction: row !important;
 			font-size: calc(var(--gap) * 2);
 			margin-left: var(--gap);
 		}.cr-deposit-crypto__copyable-area {
-			border: 1px solid #009991;
 		}.cr-deposit-crypto__copyable-area .input-group:first-child {
 					border-radius: 0.3rem;
 				}.cr-deposit-crypto__copyable-area .input-group:first-child:focus-within {
@@ -2528,12 +2528,10 @@ flex-direction: row !important;
 		float: left;
 	}@media screen and (max-width: 768px) {
 	.cr-deposit-crypto {
-		padding: 0;
 	}
 
 		.cr-deposit-crypto .cr-deposit-info {
-			text-align: center;
-			width: 100%;
+	
 		}
 
 		.cr-deposit-crypto .cr-deposit-crypto__copyable-area {
@@ -2549,7 +2547,8 @@ flex-direction: row !important;
 				}
 
 				.cr-deposit-crypto .cr-deposit-crypto__copyable-area .input-group .input-group-append {
-					height: 2.65em;
+					max-width: 100px;
+                    font-size: 10px;
 				}
 }{/*//depositFiat*/}.cr-deposit-fiat {
 	padding: calc(var(--gap) * 3) calc(var(--gap) * 3);
@@ -2760,7 +2759,7 @@ flex-direction: row !important;
 		}.history-screen__filter__select__choose {
 			width: 150px;
 		}.history-screen__filter__search__btn--search {
-				background-color: #2fb67e;
+				background-color: #009991;
 			}.history-screen__filter__search__btn:hover {
 				-webkit-transform: scale(0.95);
 				        transform: scale(0.95);

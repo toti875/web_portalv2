@@ -70,7 +70,6 @@ export const UdonMarketTable: React.FC<MarketTableProps> = (props: MarketTablePr
 					<thead>
 						<tr>
 							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.pair' })}</th>
-							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.lastPrice' })}</th>
 							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.change' })}</th>
 							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.high' })}</th>
 							<th scope="col">{intl.formatMessage({ id: 'page.body.marketsTable.header.low' })}</th>

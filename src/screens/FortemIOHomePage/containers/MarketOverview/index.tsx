@@ -101,8 +101,8 @@ export const MarketOverview = () => {
 		<div className="home-market-overview">
 			<div className="mt-5 mb-5 d-flex justify-content-between">
 				<div className="market-overview-heading">
-					<div className="market-overview--title">Título</div>
-					<div className="market-overview--sub-title">Subtítulo</div>
+					<div className="market-overview--title">Visão geral do mercado cripto</div>
+					<div className="market-overview--sub-title">Colocar subtítulo</div>
 				</div>
 
 				{renderSearch()}
@@ -137,14 +137,14 @@ export const MarketOverview = () => {
 						);
 					})}
 				</div>
-				<div className="market-link" onClick={() => history.push('/markets')}>Ver mais</div>
+				<div className="market-link" onClick={() => history.push('/markets')}>Ver todas moedas &gt; </div>
 			</div>
 			<div className="market-table">
 				<MarketOverviewList currenciesRender={currenciesRender} currentTab={currentTab} />
 			</div>
 
 			{/*<StatisticList currencies={currenciesRender} />*/}
-			
+
 		</div>
 	);
 };

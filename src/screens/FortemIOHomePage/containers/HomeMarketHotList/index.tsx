@@ -19,8 +19,8 @@ export const DEFAULT_TICKER = {
 	avg_price: '0',
 };
 
-const MARKET_SHOW = 4;
-const BASE_CURRENCY = 'usdt';
+const MARKET_SHOW = 6;
+const BASE_CURRENCY = 'usd';
 export const HomeMarketHotList = React.memo(() => {
 	// init hooks
 	const dispatch = useDispatch();

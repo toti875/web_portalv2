@@ -16,32 +16,15 @@ import Slider from "react-slick";
 
 import news from './images/news.svg';
 
-import { eventFetch, selectEvents, selectUserLoggedIn} from '../../modules';
-
-import { NewMarketSlick } from '../../components';
-import Typed from 'react-typed';
-import ScrollAnimation from "react-animate-on-scroll";
-import {TextDecrypt} from './TextDecrypt.js';
-
-//import './MarketsList.pcss';
-
-import { BannerActivation } from "../../template_react/doob/src/utils/script";
+import { selectEvents, selectUserLoggedIn} from '../../modules';
 
 import Zoom from 'react-reveal/Zoom';
-import Flash from 'react-reveal/Flash';
+
 import Pulse from 'react-reveal/Pulse';
 
 const GlobeAnimated  = require ('./b5.mp4');
 
 const Logo = require('../../assets/images/logo_branca_bandeira_verde.svg');
-
-const Logo_Capital = require ('./bg14.gif');
-
-
-
-const renderMarketSlick = () => <NewMarketSlick />;
-
-
 
 
 const defaultTicker = {
@@ -284,9 +267,11 @@ export const MarketsList = props => {
 						last: (
 							<span style={{ color: marketChangeColor }}>
 								{market.last}
+								{/*
 								<p className="m-0" style={{ color: 'rgb(115 127 146)' }}>
 									$ <ConvertUsd value={+market.last} symbol={marketName[1]} />
 								</p>
+								*/}
 							</span>
 						),
 						open: <span style={{ color: marketChangeColor }}>{market.open}</span>,
@@ -301,6 +286,7 @@ export const MarketsList = props => {
 					};
 				})
 		: [];
+	
 	const FavoriteMarkets = formattedMarkets.filter((e: any) => marketIdsLocalState.includes(e.id));
 
 	const handldeSearchInputChange = (e: any) => {
@@ -470,15 +456,12 @@ export const MarketsList = props => {
 	return (
 		<div>
 			        			
-	
-		
-
 		<div className='marketsHotBanner'>
 		<div>{MarketsHotOnList()}</div>
 		</div>
 		
 
-		<div className='w-container'>
+		<div className='w-container marketList'>
 			<div>{MarketsTabs()}</div>
 		</div>
 		</div>
