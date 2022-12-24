@@ -194,7 +194,7 @@ const PublicRoute: React.FunctionComponent<any> = ({ component: CustomComponent,
 	if (isLogged) {
 		return (
 			<Route {...rest}>
-				<Redirect to={'/dashboard'} />
+				<Redirect to={'/dash'} />
 			</Route>
 		);
 	}
@@ -550,7 +550,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={ProfileScreen2} />
 					
 					{/*Wallets*/}
-					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/dashboard" exact component={WalletsScreen} />
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/dash" exact component={WalletsScreen} />
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/wallets" exact component={WalletListScreen} />					
 					
 					{/*Profile Test Page */}

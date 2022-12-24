@@ -71,7 +71,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 					<div className={classItemTitle} onClick={() => setStateActiveNow('Dashboard')} >
 					<img src={IconFinance} className="mr-2 subheader__right-menu__item__title__svg" style={{width: '26px',}} />
 
-						<Link to="/dashboard">Painel de controle
+						<Link to="/dash">Painel de controle
 						</Link>
 					</div>
 				</div>
@@ -305,7 +305,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 		return (
 			isLoggedIn && (
 				<Link
-					to="/dashboard"
+					to="/dash"
 					onClick={() => {
 						setStateActiveNow('account');
 						setActiveItemDrop('dash');
