@@ -15,7 +15,9 @@ const mockConfig: Config = {
 		downstreamURL: '/api/v2/downstream',
 		ieoURL: '/api/v2/ieo',
 		infoURL: '/api/v2/ieo',
+		newKycURL: '/api/v2/newKyc',
 	},
+	
 	minutesUntilAutoLogout: '30',
 	rangerReconnectPeriod: '1',
 	withCredentials: false,

@@ -8,7 +8,9 @@ interface Config {
 		downstreamURL: string;
 		ieoURL: string;
 		infoURL: string;
+		newKycURL: string;
 	};
+	
 	minutesUntilAutoLogout?: string;
 	rangerReconnectPeriod?: string;
 	withCredentials: boolean;

@@ -21,6 +21,7 @@ export const defaultConfig: Config = {
 		ieoURL: 'https://www.fortem1.com.br/api/v2/peatio',
 
 		infoURL: 'https://www.fortem1.com.br/api/v2/peatio',
+		newKycURL: 'https://www.fortem1.com.br/api/v2/newKyc',
 		//downstreamURL: 'wss://www.fortem1.com.br/api/public/',
 		downstreamURL: 'wss://www.fortem1.com.br/api/v2/ranger',
 
@@ -61,8 +62,9 @@ export const Window = {
 
 window.env = window.env || defaultConfig;
 Cryptobase.config = { ...window.env };
-Cryptobase.config.api.ieoURL = Cryptobase.config.api.ieoURL || '/api/v2/ieoURL';
-Cryptobase.config.api.infoURL = Cryptobase.config.api.infoURL || '/api/v2/infoURL';
+Cryptobase.config.api.ieoURL = Cryptobase.config.api.ieoURL || '/api/v2/ieo';
+Cryptobase.config.api.infoURL = Cryptobase.config.api.infoURL || '/api/v2/info';
+Cryptobase.config.api.newKycURL = Cryptobase.config.api.newKycURL || '/api/v2/newKyc';
 Cryptobase.config.storage = Cryptobase.config.storage || {};
 
 export const transactionURL = () => Cryptobase.config.api.transactionURL;
@@ -71,6 +73,7 @@ export const switchURL = () => Cryptobase.config.api.switchURL;
 export const ieoURL = () => Cryptobase.config.api.ieoURL;
 export const downstreamURL = () => Cryptobase.config.api.downstreamURL;
 export const infoURL = () => Cryptobase.config.api.infoURL;
+export const newKycURL = () => Cryptobase.config.api.newKycURL;
 
 export const minutesUntilAutoLogout = (): string => Cryptobase.config.minutesUntilAutoLogout || '15';
 export const withCredentials = () => Cryptobase.config.withCredentials || true;

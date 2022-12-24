@@ -1048,6 +1048,114 @@ export const pt = {
 'page.homePage.trade.title':
 	'We are set to reach 100+ cryptocurrencies including BTC, ETH, LTC,DOGE, Altcoins, Stablecoins and Platform Tokens within a year',
 
+	//--------------------------KYC-----------------------------------------
+
+	'kyc.screen.head.deading': 'Personal Verification',
+
+	'kyc.screen.current.feature.heading': 'Current Featutes',
+	'kyc.screen.current.feature.title.unverified': 'Your account is reviewing',
+	'kyc.screen.current.feature.title.verified': 'Your account is verified',
+	'kyc.screen.current.feature.title.failed': 'Your verification is failed',
+	'kyc.screen.current.feature.title.contact': 'Please contact to Octium Administrator.',
+	'kyc.screen.current.feature.desc': 'Please update Entity or corporate account verification at the verfication section',
+
+	'kyc.screen.verify.heading': 'Verified',
+	'kyc.screen.verify.title.1': 'Personal information',
+	'kyc.screen.verify.title.2': 'Government-issued ID',
+	'kyc.screen.verify.title.3': 'Facial recognition',
+
+	'kyc.screen.verify.btn.unsent': 'Verify',
+	'kyc.screen.verify.btn.verify': 'Verify',
+	'kyc.screen.verify.btn.faile': 'Verified',
+	'kyc.screen.verify.btn.process': 'Processing',
+	'kyc.screen.verify.btn.Unavailable': 'Unavailable',
+
+	'kyc.screen.verify.feture.title.1': 'Fiat Deposit & Withdrawal Limits',
+	'kyc.screen.verify.feture.content.1': '50,000 USD Daily',
+	'kyc.screen.verify.feture.title.2': 'Crypto Withdrawal Limit',
+	'kyc.screen.verify.feture.content.2': '5,000 USDT Daily',
+	'kyc.screen.verify.feture.title.3': 'P2P Transaction Limits',
+	'kyc.screen.verify.feture.content.3': 'Unlimied',
+	'kyc.screen.verify.feture.title.4': 'Other Features',
+	'kyc.screen.verify.feture.content.4': 'Airdrop/P2P',
+
+	'kyc.screen.verifyplus.heading': 'Verified Plus',
+	'kyc.screen.verifyplus.title.1': 'Proof of address',
+	'kyc.screen.verifyplus.title.2': 'Review time: 10 day',
+
+	'kyc.screen.verifyplus.btn.unavailable': 'Unavailable',
+
+	'kyc.screen.verifyplus.feture.title.1': 'Fiat Deposit & Withdrawal Limits',
+	'kyc.screen.verifyplus.feture.content.1': '100,000 USD Daily',
+	'kyc.screen.verifyplus.feture.title.2': 'Crypto Withdrawal Limit',
+	'kyc.screen.verifyplus.feture.content.2': '100,000 USDT Daily',
+	'kyc.screen.verifyplus.feture.title.3': 'P2P Transaction Limits',
+	'kyc.screen.verifyplus.feture.content.3': 'Unlimied',
+	'kyc.screen.verifyplus.feture.title.4': 'Other Features',
+	'kyc.screen.verifyplus.feture.content.4': 'Airdrop/P2P',
+
+	'kyc.screen.goNextStep': 'Continue',
+
+	'kyc.screen.IdentifyInformation.heading': 'Personal Information',
+	'kyc.screen.IdentifyInformation.title': 'Identity Information',
+	'kyc.screen.IdentifyInformation.nationally.heading': 'Nationally',
+	'kyc.screen.IdentifyInformation.nationally.choose': 'Choose your nationally',
+	'kyc.screen.IdentifyInformation.fullName': 'Full Name',
+	'kyc.screen.IdentifyInformation.dateOfBirth': 'Date Of Birth',
+
+	'kyc.screen.AddressInformation.heading': 'Personal Information',
+	'kyc.screen.AddressInformation.title': 'Additional Information',
+	'kyc.screen.AddressInformation.address': 'Residenfinal Address',
+	'kyc.screen.AddressInformation.postalCode': 'Postal Code',
+	'kyc.screen.AddressInformation.city': 'City',
+
+	'kyc.screen.IdentifyVerification.heading': 'Personal Verification',
+	'kyc.screen.IdentifyVerification.title': 'Additional Information',
+	'kyc.screen.IdentifyVerification.sub.title': 'Use a valid document-photo-type-issued document',
+	'kyc.screen.IdentifyVerification.content':
+		'Only the following documents listed below will be accepted, all other documents will be rejected.',
+	'kyc.screen.IdentifyVerification.passport': 'Passport',
+	'kyc.screen.IdentifyVerification.Driver’sLicense': 'Driver’s License',
+	'kyc.screen.IdentifyVerification.IdentityCard': 'Identity card',
+
+	'kyc.screen.IdentifyGovernment.heading': 'Identify Verification',
+	'kyc.screen.IdentifyGovernment.require.item.1': 'Government - issued',
+	'kyc.screen.IdentifyGovernment.require.item.2': 'Original full - size, undedited documents',
+	'kyc.screen.IdentifyGovernment.require.item.3': 'Place document against a single - coloured background',
+	'kyc.screen.IdentifyGovernment.require.item.4': 'Readable, well - lit, coloured images',
+	'kyc.screen.IdentifyGovernment.require.item.5': 'No black and white images',
+	'kyc.screen.IdentifyGovernment.require.item.6': 'No edited or expired documents',
+	'kyc.screen.IdentifyGovernment.photo.require': 'File size must be between 10KB and 5120KB in _ .jpg/ .jpge/ .png format',
+	'kyc.screen.IdentifyGovernment.choose.photo': 'Choose a photo',
+
+	'kyc.screen.IdentifyGovernmentPhoto.heading': 'Identify Verification',
+	'kyc.screen.IdentifyGovernmentPhoto.title': 'Take Selfie Photo',
+	'kyc.screen.IdentifyGovernmentPhoto.require.item.1': 'Take a sefli of yourseft with a neutral expression',
+	'kyc.screen.IdentifyGovernmentPhoto.require.item.2': 'Make sure your face is visible, cented and your eyes are open',
+	'kyc.screen.IdentifyGovernmentPhoto.require.item.3': 'Do not crop your ID use scree of your ID',
+	'kyc.screen.IdentifyGovernmentPhoto.require.item.4':
+		'Do not hide or after parts of your face (No hats/ beauty image/ filter)',
+	'kyc.screen.IdentifyGovernmentPhoto.photo.require': 'File size must be between 10KB and 5120KB in _ .jpg/ .jpge/ .png format',
+	'kyc.screen.IdentifyGovernmentPhoto.choose.photo': 'Choose a photo',
+
+	'kyc.screen.VerificationConfirm.heading.1': 'Your application is being reviewed',
+	'kyc.screen.VerificationConfirm.desc':
+		'Well email you the results within 48 hours. Due to high volume of KYC application current review time will take longer than usual. Sorry for the inconvenience caused!',
+	'kyc.screen.VerificationConfirm.heading.2': 'Your application is rejected',
+	'kyc.screen.VerificationConfirm.btn': 'Agree To Verify',
+	'kyc.screen.VerificationConfirm.Nationality': 'Nationality',
+	'kyc.screen.VerificationConfirm.FullName': 'Full Name',
+	'kyc.screen.VerificationConfirm.BirthDay': 'Birth Day',
+	'kyc.screen.VerificationConfirm.Missing': 'Missing',
+	'kyc.screen.VerificationConfirm.ResidentialAddress': 'Residential Address',
+	'kyc.screen.VerificationConfirm.PostalCode': 'Postal Code',
+	'kyc.screen.VerificationConfirm.City': 'City',
+	'kyc.screen.VerificationConfirm.Country': 'Country',
+	'kyc.screen.VerificationConfirm.DocumentType': 'Document Type',
+	'kyc.screen.VerificationConfirm.DocumentPhoto': 'Document Photo',
+	'kyc.screen.VerificationConfirm.SeflfiePhoto': 'Seflfie Photo',
+	'kyc.screen.VerificationConfirm.Apply': 'Apply For Tier 2 Verification',
+
 
 
 

@@ -698,12 +698,7 @@ flex-direction: row !important;
                 color: transparent;
             }.td-cpn-wrapper-tab-page .pagination .page-item .page-link#non-active {
                 background: transparent !important;
-            }/* stylelint-disable */.pg-mobile-app .pg-change-forgotten-password-screen {
-    background: unset;
-    height: auto;
-}
-
-
+            }
 
 .cr-order-input {
 	display: flex;
@@ -2426,15 +2421,9 @@ flex-direction: row !important;
 		-webkit-text-fill-color: var(--input-text-color);
 		-webkit-transition: background-color 5000s ease-in-out 0s;
 		transition: background-color 5000s ease-in-out 0s;
-	}.pg-mobile-app .custom-input {
-	font-size: 12px;
-}.pg-mobile-app .custom-input input {
-		font-size: 12px;
-	}.pg-mobile-app .custom-input input::-webkit-input-placeholder {
-			font-size: 12px;
-		}.pg-mobile-app .custom-input input::placeholder {
-			font-size: 12px;
-		}{/*//depositCrypto*/}.cr-deposit-crypto {
+	}
+    
+.cr-deposit-crypto {
 	align-items: center;
     padding-left: 20px !important;
     padding-right: 20px !important;

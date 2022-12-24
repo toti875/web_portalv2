@@ -4,6 +4,7 @@ import {
 	authzURL,
 	ieoURL,
 	infoURL,
+	newKycURL,
 
 	transactionURL,
 	withCredentials,
@@ -19,7 +20,7 @@ export interface JsonBody {
 }
 
 export interface RequestOptions {
-	apiVersion: 'switch'	| 'core'	| 'authz'	| 'ieo' |	'info'  ;
+	apiVersion: 'switch'	| 'core'	| 'authz'	| 'ieo' |	'info'  | 'newKyc';
 	withHeaders?: boolean;
 	headers?: Object;
 }
@@ -43,6 +44,7 @@ const getAPI = () => ({
 	core: transactionURL(),
 	ieo: ieoURL(),
 	info: infoURL(),
+	newKyc: newKycURL(),
 });
 
 const buildRequest = (request: Request, configData: RequestOptions) => {

@@ -83,6 +83,10 @@ import { abilitiesReducer } from './user/abilities';
 import { quickExchangeReducer } from './user/quickExchange';
 
 
+import { verifyAccountReducer } from './plugins/kyc';
+import { kycStatusReducer } from './plugins/kyc';
+
+
 export const eventsReducer = combineReducers({
 	lunar: lunarReducer,
 });
@@ -202,6 +206,12 @@ const holderReducer = combineReducers({
 	info: holderInfoReducer,
 });
 
+// added
+const kycReducer = combineReducers({
+	verifyAccount: verifyAccountReducer,
+	kycStatus: kycStatusReducer,
+});
+
 export const pluginsReducer = combineReducers({
 	staking_list: stakingListReducer,
 	stake_wallet: stakeWalletReducer,
@@ -213,4 +223,7 @@ export const pluginsReducer = combineReducers({
 	airdropCoin: airdropCoinReducer,
 	referral: referralReducer,
 	holder: holderReducer,
+
+	kyc: kycReducer,
 });
+

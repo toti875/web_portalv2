@@ -104,6 +104,8 @@ import {
 	KYCScreen,
 } from '../../screens';
 
+import { VerifyAccount } from 'plugins/KYC';
+
 import { DocumentationScreen } from '../../v2/src/screens';
 
 import { LandingScreenMobile } from '../../v2/src/mobile/screens';
@@ -539,6 +541,9 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					{/* OLD Profile Page */}
 					
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/sec" component={KYCScreen} />
+
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/kyc" component={VerifyAccount} />
+
 					{/* NEW Profile Page */}
 
 					

@@ -96,7 +96,7 @@ import { rootCompetitionRankingSaga } from './plugins/competition/ranking/sagas'
 import { HolderInfoState, HolderListState, rootHolderSaga } from './plugins/holder';
 import { QuickExchangeState, rootQuickExchangeSaga } from './user/quickExchange';
 import { AbilitiesState, rootAbilitiesSaga } from './user/abilities';
-
+import { VerifyAccountState, rootKycSaga, KycStatusState } from './plugins/kyc';
 
 export * from './airdrops/airdrop';
 export * from './airdrops/claim';
@@ -144,6 +144,7 @@ export * from './user/userActivity';
 export * from './user/wallets';
 export * from './user/withdrawLimit';
 export * from './plugins/competition';
+export * from './plugins/kyc';
 
 export * from './user/quickExchange';
 export * from './user/abilities';
@@ -269,6 +270,10 @@ export interface RootState {
 			list: HolderListState;
 			info: HolderInfoState;
 		};
+		kyc: {
+			verifyAccount: VerifyAccountState;
+			kycStatus: KycStatusState;
+		};
 	};
 }
 
@@ -348,5 +353,6 @@ export function* rootSaga() {
 		call(rootAirdropCoinSaga),
 		call(rootReferralSaga),
 		call(rootHolderSaga),
+		call(rootKycSaga),
 	]);
 }
