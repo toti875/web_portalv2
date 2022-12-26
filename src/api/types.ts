@@ -9,6 +9,7 @@ interface Config {
 		ieoURL: string;
 		infoURL: string;
 		newKycURL: string;
+		statisticUrl: string;
 	};
 	
 	minutesUntilAutoLogout?: string;

@@ -97,6 +97,7 @@ import { HolderInfoState, HolderListState, rootHolderSaga } from './plugins/hold
 import { QuickExchangeState, rootQuickExchangeSaga } from './user/quickExchange';
 import { AbilitiesState, rootAbilitiesSaga } from './user/abilities';
 import { VerifyAccountState, rootKycSaga, KycStatusState } from './plugins/kyc';
+import { rootStatisticSaga, StatisticState } from './plugins/info/statistic';
 
 export * from './airdrops/airdrop';
 export * from './airdrops/claim';
@@ -189,7 +190,7 @@ export interface RootState {
 	info: {
 		events: EventsState;
 		announcement: AnnouncementState;
-		//statistic: StatisticState;
+		statistic: StatisticState;
 	};
 
 	public: {
@@ -354,5 +355,6 @@ export function* rootSaga() {
 		call(rootReferralSaga),
 		call(rootHolderSaga),
 		call(rootKycSaga),
+		call(rootStatisticSaga),
 	]);
 }

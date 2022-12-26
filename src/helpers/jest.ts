@@ -16,6 +16,7 @@ const mockConfig: Config = {
 		ieoURL: '/api/v2/ieo',
 		infoURL: '/api/v2/ieo',
 		newKycURL: '/api/v2/newKyc',
+		statisticUrl: '/api/v2/statistic',
 	},
 	
 	minutesUntilAutoLogout: '30',

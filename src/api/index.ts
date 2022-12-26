@@ -5,7 +5,7 @@ export * from './types';
 export * from './config';
 
 export interface RequestOptions {
-	apiVersion: 'switch'	| 'core'	| 'authz'		| 'ieo' |	'info' |	'newKyc';
+	apiVersion: 'switch'	| 'core'	| 'authz'		| 'ieo' |	'info' |	'newKyc' | 'statistic';
 	withHeaders?: boolean;
 	headers?: Object;
 }

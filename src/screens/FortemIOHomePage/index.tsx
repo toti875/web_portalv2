@@ -157,6 +157,9 @@ import fortemCard from './fortemCard.png';
 
 import { HomeMarketHotList } from './containers/HomeMarketHotList';
 import { MarketOverview } from './containers/MarketOverview';
+import { selectStatistics, statisticFetch } from 'modules/plugins/info/statistic';
+
+
 //import { HomeActivityList } from './containers/HomeActivityList';
 //import { HomeBanner } from './containers/HomeBanner';
 //import { HomeMarketHotList } from './containers/HomeMarketHotList';

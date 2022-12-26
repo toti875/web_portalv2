@@ -156,6 +156,10 @@ import interfaces from './images/features.svg';
 import fortemCard from './fortemCard.png';
 
 
+import { HomeMarketHotList } from './containers/HomeMarketHotList';
+import { MarketOverview } from './containers/MarketOverview';
+
+
 
 
 var BlogListData = BlogClassicData.slice(0, 3);
@@ -1625,6 +1629,16 @@ const renderBlog = () => (
 			</Parallax>
 
 			{renderBlog()}
+
+			<div className="homepage-desktop-screen">
+				<div className="container-fluid">
+
+					<HomeMarketHotList />
+				
+					<MarketOverview />
+				</div>
+			</div>
+
 
 			<div className="white-line"></div>
 
