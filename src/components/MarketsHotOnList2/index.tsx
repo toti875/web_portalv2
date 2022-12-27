@@ -86,7 +86,7 @@ export const MarketsHotOnlist2: React.FC<any> = () => {
 		}
 	}, [markets.length]);
 
-	const BASE_MARKET_URL = 'https://www.fortem1.com.br/api/v2/trade/public/markets';
+	const BASE_MARKET_URL = 'https://www.fortem1.com.br/api/v2/peatio/public/markets';
 	//const BASE_MARKET_URL = `${window.document.location.origin}/api/v2/udonex/public/markets`;
 
 	const fetchMarketsKlines = async (marketId: string, from: number, to: number) => {

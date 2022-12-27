@@ -59,7 +59,6 @@ export * from './ProfileAuthDetails';
 export * from './ProfileInfo';
 export * from './Profile2FA';
 export * from './QuickExchange';
-export * from './CanCan';
 export * from './Charts';
 export * from './OpenOrders';
 export * from './ProfileKYC';

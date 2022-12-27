@@ -11,6 +11,7 @@ const ordersCancelOptions = (csrfToken?: string): RequestOptions => {
     };
 };
 
+
 export function* openOrdersCancelSaga(action: OpenOrdersCancelFetch) {
     try {
         const { order: { id, uuid } } = action.payload;

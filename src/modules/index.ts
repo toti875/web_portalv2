@@ -95,7 +95,7 @@ import { rootCompetitionListSaga } from './plugins/competition/list/saga';
 import { rootCompetitionRankingSaga } from './plugins/competition/ranking/sagas';
 import { HolderInfoState, HolderListState, rootHolderSaga } from './plugins/holder';
 import { QuickExchangeState, rootQuickExchangeSaga } from './user/quickExchange';
-import { AbilitiesState, rootAbilitiesSaga } from './user/abilities';
+
 import { VerifyAccountState, rootKycSaga, KycStatusState } from './plugins/kyc';
 import { rootStatisticSaga, StatisticState } from './plugins/info/statistic';
 
@@ -148,7 +148,7 @@ export * from './plugins/competition';
 export * from './plugins/kyc';
 
 export * from './user/quickExchange';
-export * from './user/abilities';
+
 
 export interface RootState {
 	airdrops: {
@@ -237,7 +237,6 @@ export interface RootState {
 		child_currencies: ChildCurrenciesState;
 		all_child_currencies: ChildCurrenciesState;
 		withdrawLimit: WithdrawLimitState;
-		abilities: AbilitiesState;
 		quickExchange: QuickExchangeState;
 
 	};

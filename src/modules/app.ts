@@ -78,7 +78,6 @@ import {
 	competitionAwardReducer,
 } from './plugins/competition';
 import { holderInfoReducer, holderListReducer } from './plugins/holder';
-import { abilitiesReducer } from './user/abilities';
 
 import { quickExchangeReducer } from './user/quickExchange';
 

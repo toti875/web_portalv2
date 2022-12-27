@@ -36,7 +36,7 @@ export const defaultConfig: Config = {
 	storage: {},
 	gaTrackerKey: 'G-M47QL88D4R',
 	msAlertDisplayTime: '10000',
-	msPricesUpdates: '500',
+	msPricesUpdates: '2000',
 	incrementalOrderBook: false,
 	finex: false,
 	isResizable: true,
@@ -87,7 +87,7 @@ export const msAlertDisplayTime = (): string => Cryptobase.config.msAlertDisplay
 export const msPricesUpdates = () => Cryptobase.config.msPricesUpdates || '1000'
 export const rangerReconnectPeriod = (): number =>
 	Cryptobase.config.rangerReconnectPeriod ? Number(Cryptobase.config.rangerReconnectPeriod) : 1; 
-export const incrementalOrderBook = (): boolean => Cryptobase.config.incrementalOrderBook || true;
+export const incrementalOrderBook = (): boolean => Cryptobase.config.incrementalOrderBook || false;
 export const isResizableGrid = (): boolean => Cryptobase.config.isResizable || true;
 export const isDraggableGrid = (): boolean => Cryptobase.config.isDraggable || true;
 export const languages =

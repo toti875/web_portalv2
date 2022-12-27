@@ -79,7 +79,7 @@ const handleSetValue = (value: string | number | undefined, defaultValue: string
 export const OrderFormComponent = (props: OrderFormProps) => {
 	const { formatMessage } = useIntl();
 
-	const [orderType, setOrderType] = React.useState<OrderFormState['orderType']>('Limit');
+	const [orderType, setOrderType] = React.useState<OrderFormState['orderType']>('limit');
 	const [price, setPrice] = React.useState<OrderFormState['price']>('');
 	const [priceMarket, setPriceMarket] = React.useState<OrderFormState['priceMarket']>(props.priceMarket);
 	const [priceFocused, setPriceFocused] = React.useState<OrderFormState['amountFocused']>(false);
@@ -122,7 +122,7 @@ export const OrderFormComponent = (props: OrderFormProps) => {
 		formatMessage,
 	]);
 
-	const total = React.useMemo(() => (orderType === 'Market' ? totalPrice : (Number(amount) || 0) * (Number(price) || 0)), [
+	const total = React.useMemo(() => (orderType === 'market' ? totalPrice : (Number(amount) || 0) * (Number(price) || 0)), [
 		orderType,
 		price,
 		totalPrice,
@@ -185,7 +185,7 @@ export const OrderFormComponent = (props: OrderFormProps) => {
 			type,
 			orderType,
 			amount,
-			price: orderType === 'Market' ? priceMarket : price,
+			price: orderType === 'market' ? priceMarket : price,
 			available: available || 0,
 		};
 
@@ -196,8 +196,8 @@ export const OrderFormComponent = (props: OrderFormProps) => {
 
 	const checkButtonIsDisabled = React.useCallback((): boolean => {
 		const invalidAmount = Number(amount) <= 0;
-		const invalidLimitPrice = Number(price) <= 0 && orderType === 'Limit';
-		const invalidMarketPrice = safePrice <= 0 && orderType === 'Market';
+		const invalidLimitPrice = Number(price) <= 0 && orderType === 'limit';
+		const invalidMarketPrice = safePrice <= 0 && orderType === 'market';
 
 		return disabled || !available || invalidAmount || invalidLimitPrice || invalidMarketPrice;
 	}, [amount, available, orderType, price, disabled, safePrice]);
@@ -215,7 +215,7 @@ export const OrderFormComponent = (props: OrderFormProps) => {
 
 	React.useEffect(() => {
 		const nextPriceLimitTruncated = Decimal.format(props.priceLimit, props.currentMarketBidPrecision);
-		if (orderType === 'Limit' && props.priceLimit && nextPriceLimitTruncated !== price) {
+		if (orderType === 'limit' && props.priceLimit && nextPriceLimitTruncated !== price) {
 			setPrice(nextPriceLimitTruncated);
 		}
 
@@ -236,7 +236,7 @@ export const OrderFormComponent = (props: OrderFormProps) => {
 					placeholder=""
 				/>
 			</div>
-			{orderType === 'Limit' ? (
+			{orderType === 'limit' ? (
 				<div className="cr-order-item">
 					<OrderInput
 						currency={from}

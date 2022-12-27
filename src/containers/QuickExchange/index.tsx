@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useIntl } from 'react-intl';
 import { Button, Spinner } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
-import { CanCan } from '../';
 import { msPricesUpdates } from '../../api';
 import {
     marketsFetch,
@@ -13,9 +12,7 @@ import {
     marketPriceFetch,
     selectMarketPrice,
     selectMarketPriceFetchSuccess,
-    createQuickExchangeFetch,
-    selectAbilities,
-    selectAbilitiesSuccess,
+    createQuickExchangeFetch,    
 } from '../../modules'
 import { SwipeIcon } from '../../assets/images/swipe';
 import { Decimal, CurrencyIcon, QuickExchangeForm, DropdownComponent, Timer } from '../../components';
